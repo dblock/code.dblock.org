@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Your Startup’s Technology: 0-60 @ Internet Week"
+redirect_from: "/your-startups-technology-0-60-internet-week"
+date: 2011-05-24 22:27:42
+tags: [speaking, art.sy, agile]
+comments: true
+---
+I’ll be presenting at [Internet Week NY](http://www.internetweekny.com) on Monday, June 6th, 2pm.
+
+![image]({{ site.url }}/images/posts/2011/2011-05-24-your-startups-technology-0-60-internet-week/image%5b3%5d.jpg)
