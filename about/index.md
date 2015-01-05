@@ -1,25 +1,13 @@
 ---
 layout: page
-title: About the Theme
-tags: [about, Jekyll, theme, responsive]
-modified: 2014-08-08T20:53:07.573882-04:00
-comments: true
-image:
-  feature: sample-image-2.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+title: About
+tags: [about, me me]
+modified: 2015-01-01T12:42:12.573882-04:00
+comments: false
 ---
 
-Minimal Mistakes is responsive Jekyll theme with large featured images and solid typography. As the name implies the styling is fairly minimal to make it easier for you to build on top of.
+Daniel Doubrovkine (aka dB.) is Head of Engineering at <a href='https://artsy.net' target='_blank'>Artsy</a> in New York and an open-source cheerleader. He maintains multiple popular Ruby projects, including <a href='https://github.com/intridea/grape' target='_blank'>Grape</a> and <a href='https://github.com/intridea/hashie' target='_blank'>Hashie</a>.
 
-## Minimal Mistakes is all about:
+In his past life, Daniel founded and sold a start-up in the early 90s and completely failed another. He was development lead at Microsoft, Director at Kleiner Perkins' Visible Path, Architect and Dev Manager at AppSecInc and more.
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers. 
-* Minimal embellishments -- content first.
-* Optional large feature images for posts and pages.
-* Simple and clear permalink structure.
-* [Custom 404 page](http://mmistakes.github.io/minimal-mistakes/404.html) to get you started.
-* Support for Disqus Comments
-
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install Minimal Mistakes Theme</a>
+Daniel is a frequent speaker and teacher.

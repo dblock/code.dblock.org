@@ -14,7 +14,7 @@ kramdown:
 owner:
   name: Daniel Doubrovkine
   avatar: blog.gif
-  bio: "Daniel Doubrovkine (aka dB.) is Head of Engineering at Artsy in New York and an open-source cheerleader."
+  bio: "aka dB., Head of Engineering at <a href='https://artsy.net' target='_blank'>artsy.net</a> in New York City, open-source cheerleader"
   email: dblock@dblock.org
   disqus-shortname: dblockdotorg
   twitter: dblockdotorg
