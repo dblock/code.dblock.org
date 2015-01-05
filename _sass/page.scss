@@ -565,7 +565,7 @@ $button-size: 1.5rem;
 	h5,
 	h6,
 	span {
-		@include font-rem(14);
+		@include font-rem(11);
 	}
 	footer {
 		@include grid(12,10);
@@ -723,5 +723,15 @@ $button-size: 1.5rem;
 	p > a,
 	li > a {
 		border-bottom-width: 0;
+	}
+}
+
+// Search Box
+// --------------------------------------------------
+.search {
+	margin-top: 10px;
+	input {
+		max-width: 125px;
+		@include font-rem(11);
 	}
 }
