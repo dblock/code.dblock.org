@@ -18,4 +18,3 @@ Anyway, Microsoft support was very helpful. So while they update the documentati
 
 You don't have to turn any registry switches or do anything magical to get FIPS-140. Good reason to stick to this simple API to get your crypto on Windows.
 
-

@@ -25,4 +25,3 @@ I remember trying to get solutions for large (over 10) boards in 1995 and my PC 
 
  
 
-

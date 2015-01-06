@@ -16,4 +16,3 @@ This doesn't work for my site at all. I need to provide a site map for a large n
 
 [My CodeProject Article](http://www.codeproject.com/KB/aspnet/dynamicsitemap.aspx) demonstrates a simpler and practical solution chosen.
 
-

@@ -24,4 +24,3 @@ At the same time, _corrosion_ is something that plagues this kind of process thr
 
 This talk is about better, more agile options. IMO, it boils down to trusting people vs. process. Slides from my talk @GA [here](http://www.slideshare.net/dblockdotorg/making-agile-technology-choices).
 
-

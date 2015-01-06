@@ -12,4 +12,3 @@ My [second article on opensource.com](http://opensource.com/life/11/1/intersecti
 
 I often meet technically oriented and like-minded people. We don’t just share the same values, but the same activities. These include selfless contributions to open-source and the endless desire to make things in a very organized and incremental manner. We use tools like DDD and "common sense". This article discusses a remarkable overlap in values between domain-driven design and open-source and I hope it will inspire you to try one or the other.
 
-

@@ -24,4 +24,3 @@ With an example of 3 disks containing the disk number you move and knowing the 
 
  
 
-

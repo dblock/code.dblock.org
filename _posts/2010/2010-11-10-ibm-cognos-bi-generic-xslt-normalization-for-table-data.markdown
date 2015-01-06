@@ -40,7 +40,6 @@ I was recently looking at a Cognos BI dataset output in the XML format. It’s a
 
 This is a rather annoying format to work with. Let's transform it, generically, into something normalized (or strongly typed). We can nest two XSLT foreach statements – for each row, for each item, output a node with the name of the item and the corresponding value. The node name cannot contain special characters and will need to have some replacements. We’ll also have to count rows and items to get the right mapping.
 
-
 ```xml
 <?xml version="1.0" encoding="iso-8859-1"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"

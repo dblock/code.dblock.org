@@ -12,4 +12,3 @@ The work-around is to grant the VMUser role the "_Acquire guest control ticket"_
 
 ![SnipImage]({{ site.url }}/images/posts/2010/2010-09-24-vmware-esxi-410-automation-insufficient-permissions-in-host-operating-system/snipimage%5b9%5d.jpg)
 
-

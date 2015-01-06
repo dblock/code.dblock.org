@@ -12,4 +12,3 @@ I am very excited about this new project because it contains the public informat
 
 ![image]({{ site.url }}/images/posts/2010/2010-11-03-teamshattercom/image%5b12%5d.jpg)
 
-

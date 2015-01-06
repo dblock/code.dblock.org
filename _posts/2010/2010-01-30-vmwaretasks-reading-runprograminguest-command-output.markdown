@@ -54,4 +54,3 @@ public ShellOutput RunCommandInGuest(string guestCommandLine)
 
 Problem solved.
 
-

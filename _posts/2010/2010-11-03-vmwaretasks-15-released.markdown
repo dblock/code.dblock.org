@@ -12,6 +12,3 @@ comments: true
 
 VMWareTasks is a VixCOM wrapper and is the de-facto standard library for interacting with VMWare virtual machines in .NET. Version 1.5 adds support for VixCOM 1.8.1 through 1.10.1. There’re also a few bug fixes and a new set of experimental MSBuild tasks.
 
-
-
-

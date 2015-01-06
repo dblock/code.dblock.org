@@ -10,4 +10,3 @@ comments: true
 
 VMWareTasks 1.2 is now RC1 [> Read More](http://vmwaretasks.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=25219)
 
-

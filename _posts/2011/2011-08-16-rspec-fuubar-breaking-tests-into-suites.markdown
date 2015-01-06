@@ -48,4 +48,3 @@ end
 
 Run `rake -T` for a list of generated tasks. We can now run `rake spec:suite:all` or individual suites with, for example, `rake spec:suite:models`.
 
-

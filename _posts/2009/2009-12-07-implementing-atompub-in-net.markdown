@@ -234,4 +234,3 @@ This was pretty easy after-all. It took less time putting this code together tha
 
 ![image]({{ site.url }}/images/posts/2009/2009-12-07-implementing-atompub-in-net/image%5b26%5d.jpg)
 
-

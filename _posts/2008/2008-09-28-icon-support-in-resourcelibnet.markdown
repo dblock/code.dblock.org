@@ -10,4 +10,3 @@ I've added icon support in [ResourceLib](https://github.com/dblock/resourcelib),
 
 Now ResourceLib can do version, string and icon resources, which are the hardest ones to implement. I hope some day ResourceLib will replace dozens of examples of reading/writing all types of file resources that are out there.
 
-

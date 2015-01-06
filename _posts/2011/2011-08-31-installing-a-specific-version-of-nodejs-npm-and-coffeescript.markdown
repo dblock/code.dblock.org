@@ -12,7 +12,6 @@ I want Node 0.5.0, the latest NPM and CoffeeScript 1.0.1.
 
 #### NodeJS 0.5.0 From a Tag
 
-
 ```
 git clone https://github.com/joyent/node.git
 cd node

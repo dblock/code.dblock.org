@@ -40,4 +40,3 @@ void MsiDatabaseUnitTests::testExecute()
 
 What could be possibly wrong here? After some wild guessing I found that Windows Installer on Windows 2003 x64 doesn’t like a GUID spelled _{GUID}_. Replacing that with an actual GUID fixes the problem.
 
-

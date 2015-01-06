@@ -80,4 +80,3 @@ end
 
 I couldn’t figure out how to wrap it up to return JSON, I keep having to raise an _:error_ to abort all subsequent middleware processors. Maybe someone can suggest a solution or a better approach altogether?
 
-

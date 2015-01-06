@@ -12,4 +12,3 @@ Something that has always frustrated me: _Why doesn't logging from an immediate 
 
 _"Note that custom actions launched by a **DoAction** ControlEvent can send a message with the [Message](http://msdn2.microsoft.com/en-us/library/aa371672(VS.85).aspx) method, but cannot send a message with [MsiProcessMessage](http://msdn2.microsoft.com/en-us/library/aa370354(VS.85).aspx). On systems prior to Windows Server 2003, custom actions launched by a DoAction ControlEvent cannot send messages with **MsiProcessMessage** or **Message**. For more information, see [Sending Messages to Windows Installer Using MsiProcessMessage](http://msdn2.microsoft.com/en-us/library/aa371614(VS.85).aspx)."_
 
-

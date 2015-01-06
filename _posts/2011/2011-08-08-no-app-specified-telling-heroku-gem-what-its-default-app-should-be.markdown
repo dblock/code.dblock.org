@@ -22,4 +22,3 @@ git config heroku.remote heroku
 
 You can now `git push heroku master` and run `heroku config` without having to specify the app. I often deploy branches, which is `git push heroku branch-name:master`.
 
-

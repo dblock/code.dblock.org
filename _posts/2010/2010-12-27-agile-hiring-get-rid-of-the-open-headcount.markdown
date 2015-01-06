@@ -60,4 +60,3 @@ If you’re the hiring manager or team lead, then focus on the next one or two p
 
 We’ll call this _agile headcount_. Thoughts?
 
-

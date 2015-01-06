@@ -12,4 +12,3 @@ I’m speaking at [Mongo Boston](http://www.10gen.com/events/mongo-boston-2011) 
 
 LMK if you’re going and if you’d like to meet, I’ll be at the conference all day.
 
-

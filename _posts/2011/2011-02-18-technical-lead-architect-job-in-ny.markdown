@@ -16,4 +16,3 @@ DbProtect is powered by the best knowledgebase out there produced by [TeamSHATTE
 
 Job description and how to apply: [http://www.appsecinc.com/aboutus/careers/Technical-Lead-Architect.shtml](http://www.appsecinc.com/aboutus/careers/Technical-Lead-Architect.shtml "http://www.appsecinc.com/aboutus/careers/Technical-Lead-Architect.shtml"). More jobs [here](http://www.appsecinc.com/aboutus/careers/positions.shtml).
 
-

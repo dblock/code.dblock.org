@@ -47,4 +47,3 @@ Rails looks like a substantial improvement. The top of the default structure cre
 
 Happy folder refactoring!
 
-

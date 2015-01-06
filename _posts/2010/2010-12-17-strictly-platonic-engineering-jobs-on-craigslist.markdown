@@ -94,4 +94,3 @@ The first kind is people with a long series of short engagements, often project-
 
 Finally, I do get resumes of really good engineers. I found that Craigslist offers few of those, but they might just be worth the time and the silly 25$ fee for posting an ad. My favorite kind is fed up with their bank jobs, are ready to take pay cuts from their lofty bonuses and want to work for a real technology company. Several are allergic to recruiters, are moving to New York or don’t have actual contacts. If you are one of those people and are looking for a job, do take a look at Craigslist.
 
-

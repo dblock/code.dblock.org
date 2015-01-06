@@ -26,4 +26,3 @@ Them: Thank you, you're so helpful.
 
 This thread is enfuriating. I mostly hate when people call software by the company name that produces it. I think it's the fault of the auto industry after-all, everybody calls their Toyota a Toyota.
 
-

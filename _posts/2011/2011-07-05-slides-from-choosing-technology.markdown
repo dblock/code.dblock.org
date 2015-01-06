@@ -10,4 +10,3 @@ Slides from today’s "Choosing Technology" that I gave at [@gnrlassembly](http:
 
 ![image]({{ site.url }}/images/posts/2011/2011-07-05-slides-from-choosing-technology/image%5b9%5d.jpg)
 
-

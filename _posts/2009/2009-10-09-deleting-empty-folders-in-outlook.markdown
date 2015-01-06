@@ -10,5 +10,3 @@ I archived 15 years of e-mail and I ended up with a lot of empty folders. Thing 
 
 Nothing that [10 lines of code](https://github.com/dblock/codeproject/tree/master/OutlookDeleteEmptyFolders/Source) can't solve. There're some quirks with MAPI and how it counts things, so it might need a few runs.
 
-
-

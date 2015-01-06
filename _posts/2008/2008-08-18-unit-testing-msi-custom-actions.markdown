@@ -67,7 +67,6 @@ MsiOpenPackage(handle, & hproduct);
 
 There're two ways of calling the custom. You can import the CustomAction table that contains the name and reference to your CA, subject of another future post. This works for all types of custom actions, but it can get a little involved since you have to import several tables: CustomAction and Binary. For simpler C++ custom actions, simply fetch the CA's entry point and pass the MSI handle obtained from MsiOpenPackage.
 
-
 ```c
 // load CustomAction.dll
 HMODULE hca = LoadLibrary(L"CustomAction.dll");
@@ -85,5 +84,4 @@ You can now integrate this method with [CppUnit](http://cppunit.sourceforge.net/
 ### Source Code
 
 I wrote a complete demo: a custom action and a small test that calls it, which you can find on [Github](https://github.com/dblock/codeproject/tree/master/UnitTestingCustomActions/Source).
-
 

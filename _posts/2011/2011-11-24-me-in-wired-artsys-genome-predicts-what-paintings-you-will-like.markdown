@@ -14,4 +14,3 @@ Also, got to love the photo taken at Haunch of Venison!
 
 We’ll be at Miami Basel Nov 30th-Dec 3rd, don’t forget to say hi!
 
-

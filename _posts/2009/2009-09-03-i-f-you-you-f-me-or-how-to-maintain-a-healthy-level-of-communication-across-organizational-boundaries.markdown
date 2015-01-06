@@ -22,4 +22,3 @@ I think this could work well in the work place where we can resolve issues, incl
 
 With an IFYYFME contract, can we reach the right frequency of communication?
 
-

@@ -23,7 +23,6 @@ First, you must add a reference to the WixDataSource extension to your Wix proje
 
 To connect to a database you need an ODBC connection. For now, we don’t have `ODBC_CONNECTION_STRING` defined, so each implementation that uses this connection will need (and does) supply its own default. For example, SQL server extensions assume that the default connection string refers to a local database with Windows authentication.
 
-
 ```xml
 <DataSource:ODBCConnection Id="DemoSQLServerConnection" ConnectionString="[ODBC_CONNECTION_STRING]" />
 ```

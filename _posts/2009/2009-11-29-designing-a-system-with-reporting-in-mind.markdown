@@ -10,4 +10,3 @@ If you're going through a painful process of dealing with a database schema that
 
 ![](https://web.archive.org/web/20110305065913/http://www.ralphkimball.com/html/articles_search/articles1997/9708d15/9708kimb.gif)
 
-

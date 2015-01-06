@@ -14,4 +14,3 @@ This qualifies Dan as an amazing open-source contributor per [opensource.com 10 
 
 Even small and silly as this one, open-source contributions are very valuable. I know how excited [Sebastian](https://github.com/sarcilav) was that his first open-source project had a pull request. I know how users will love to see a cool icon in their favorites when they use Heroku-Bartender. It’s an open-source win. Go contribute something small to any open-source project – even if it’s a favicon!
 
-

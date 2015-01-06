@@ -38,7 +38,6 @@ else if (remoteInstallResult.RebootRequired)
 }
 ```
 
-
 This is what the new configuration looks like for executable setups. The list of exit codes says to reboot on 3010, succeed on 0 and fail otherwise. MSI setups do this automatically since 3010 is a documented MSI return code that signals reboot.
 
 ```xml
@@ -57,5 +56,4 @@ This is what the new configuration looks like for executable setups. The list of
 This is what the output from a run in CruiseControl looks like. You can see the messages about a required reboot.
 
 ![image]({{ site.url }}/images/posts/2009/2009-12-08-remoteinstall-supporting-reboots-between-installers/image%5b12%5d.jpg)
-
 

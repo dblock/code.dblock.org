@@ -8,4 +8,3 @@ comments: true
 ---
 Someone finally convinced me to sign-up on Twitter, follow me:  [@dblockdotorg](http://twitter.com/dblockdotorg). I'll keep it brief.
 
-

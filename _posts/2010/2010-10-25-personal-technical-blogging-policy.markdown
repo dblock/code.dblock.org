@@ -46,4 +46,3 @@ We’ve implemented the following policy and are making a more general version o
 
 It’s basically common sense, but "please do blog" is a big positive message to send to an Engineering team. I can tell you that I had a good reaction from the engineers when I presented this at the last all-hands and half a dozen good comments in-private. Feel free to reuse this text as is and do post your comments or suggestions of how to make it better.
 
-

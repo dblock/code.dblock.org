@@ -14,4 +14,3 @@ In the long tradition of putting the words "intern" and "coffee" together, our s
 
 Read [his post for details](http://mattmcnierney.wordpress.com/2011/08/18/embedding-api-sandboxes-in-documentation/).
 
-

@@ -30,4 +30,3 @@ On the wireless front, I got a Linksys [WPS54G](http://www.linksys.com/servlet/S
 
 Easy? Ahem.
 
-

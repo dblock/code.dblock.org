@@ -25,4 +25,3 @@ end
 
 You can run `heroku rake stuff:things`.
 
-

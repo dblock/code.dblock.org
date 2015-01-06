@@ -157,7 +157,6 @@ end
 
 A simple test is to make sure we can actually render an e-mail. Here’s what my _spec/mailers/devise_mailer_spec.rb_ looks like.
 
-
 ```ruby
 require "spec_helper"
  

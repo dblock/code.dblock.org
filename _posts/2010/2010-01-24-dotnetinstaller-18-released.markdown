@@ -21,4 +21,3 @@ dotNetInstaller 1.8 was released today, January 24th, 2010. Build 1.8.7120.0 has
 
 dotNetInstaller continues being the most widely used setup bootstrapper. Please reply to [this thread](http://dotnetinstaller.codeplex.com/discussions/48275) if you’re using it too.
 
-

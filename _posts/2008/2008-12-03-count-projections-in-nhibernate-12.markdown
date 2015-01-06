@@ -30,4 +30,3 @@ IList<Login> logins = session.CreateCriteria(typeof(Login))
 
 Nice and easy.
 
-

@@ -39,4 +39,3 @@ Is it faster? Hell yeah! Download _Quadrant Standard_, a benchmark tool and comp
 
 Android 2.2 (Froyo) should make some of this obsolete. Well, definitely Wireless Tethering. We’ll see when the update hits the Galaxy S this or next month.
 
-

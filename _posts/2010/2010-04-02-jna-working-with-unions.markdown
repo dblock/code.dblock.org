@@ -31,7 +31,6 @@ public static class PLSA_FOREST_TRUST_INFORMATION extends Structure {
 
 [LSA_FOREST_TRUST_INFORMATION](http://msdn.microsoft.com/en-us/library/aa378335(VS.85).aspx) is a structure that contains a `RecordCount` number of [PLSA_FOREST_TRUST_RECORD](http://msdn.microsoft.com/en-us/library/aa378336(v=VS.85).aspx) items. Those are pointers, so `Entries` is an array of pointers. Since we want the value of a pointer, we use `ByReference` again.
 
-
 ```java
 public static class LSA_FOREST_TRUST_INFORMATION extends Structure {
     public static class ByReference extends LSA_FOREST_TRUST_INFORMATION
@@ -121,5 +120,4 @@ In our case we override `read()` and set the type depending on the `ForestTrustT
 #### Notes
 
 Committed to JNA under `com.sun.jna.platform.win32`.
-
 

@@ -64,7 +64,6 @@ attributeTypes: ( 1.2.840.113556.1.8000.2554.999999.1 NAME 'serviceUri'
 
 Our _Service_ type is defined as follows: an object with a common name (cn), a humanly readable name (name), an object class (Service), a unique identifier (uid) and an url to the service (serviceUri).
 
-
 ```opends
 objectClasses: ( 1.2.840.113556.1.8000.2554.999999.2 NAME 'Service'
     DESC 'a SOAP Service' SUP top
@@ -155,7 +154,6 @@ Here’s what we have in the directory now (this is the _Manage Entries_ UI from
 #### Retrieving from the Directory
 
 In order to retrieve a strongly typed object from the directory we must supply an object factory. When the factory encounters an object with an `objectClass=Service`, it will create an instance of such.
-
 
 ```java
 package com.example.jndi;

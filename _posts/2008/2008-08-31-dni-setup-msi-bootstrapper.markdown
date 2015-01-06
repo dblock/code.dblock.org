@@ -21,4 +21,3 @@ DNI's design is not the best and a lot of things could be done better. But it's 
 - [Original CodeProject Article](http://www.codeproject.com/KB/install/dotNetInstaller.aspx)
 - [dotNetInstaller on Github](https://github.com/dblock/dotnetinstaller)
 
-

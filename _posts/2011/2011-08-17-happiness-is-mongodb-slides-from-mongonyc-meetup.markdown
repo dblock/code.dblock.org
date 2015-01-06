@@ -10,4 +10,3 @@ comments: true
 
 Slides [here](http://www.slideshare.net/dblockdotorg/2011-0816-mongonyc). Video [here](https://www.mongodb.com/presentations/happiness-mongodb).
 
-

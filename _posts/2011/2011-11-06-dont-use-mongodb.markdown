@@ -16,4 +16,3 @@ Few remember how Oracle came to dominate the database market - it was a thousand
 
 10gen has now raised enough funding to possibly repeat Oracle’s story with a document store. Oracle clearly feels threatened. So from here to the near term future MongoDB is only going to get better with relatively little legacy to worry about. As a customer spending money on MongoDB I think it’s a great place to be – the MongoDB release cycle is very short and release after release we’re seeing increased reliability, better performance and all the features we’d ever want from a conceptually more suitable data store to the kinds of problems we deal with now.
 
-

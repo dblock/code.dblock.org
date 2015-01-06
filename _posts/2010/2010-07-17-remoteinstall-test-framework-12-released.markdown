@@ -11,4 +11,3 @@ I’ve released the [RemoteInstaller Test Framework 1.2](https://github.com/dblo
 
 The most important features in 1.2 include support for user-defined exit codes, support for rebooting between installers and passing snapshot-specific parameters around.
 
-

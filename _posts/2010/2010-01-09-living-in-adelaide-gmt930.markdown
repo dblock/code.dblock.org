@@ -34,4 +34,3 @@ And finally, ask someone in Adelaide to test this for me.
 
 ![image]({{ site.url }}/images/posts/2010/2010-01-09-living-in-adelaide-gmt930/image%5b20%5d.jpg)
 
-

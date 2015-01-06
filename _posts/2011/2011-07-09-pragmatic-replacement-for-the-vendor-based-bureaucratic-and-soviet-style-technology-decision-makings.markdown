@@ -22,4 +22,3 @@ It doesn’t have to be this way. Instead of always struggling to make the absol
 
 How do you make decisions? Listen to other smart, non-partisan people and let them pitch you the software they use. Ask questions. Find trustworthy peers rather than salesmen and pay attention to whether they use the words _awesome_, _easy_ and _elegant_. Become part of a community of craftsmen. Read [Hacker News](http://news.ycombinator.com) and watch [InfoQ](http://infoq.com) videos. Go to tech meet-ups. Take a few classes. Learn to be a more pragmatic software architect.
 
-

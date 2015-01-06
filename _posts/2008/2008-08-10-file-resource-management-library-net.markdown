@@ -16,4 +16,3 @@ This implementation is a framework that enumerates resources and implements both
 
 ResourceLib which started as the above-mentioned article can be found on <a href='https://github.com/dblock/resourcelib' target='_blank'>Github</a>.
 
-

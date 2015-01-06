@@ -8,4 +8,3 @@ comments: true
 ---
 I feel like I live in this presentation by Mary Poppendieck: [The Tyranny of the Plan](http://www.infoq.com/presentations/tyranny-of-plan).
 
-

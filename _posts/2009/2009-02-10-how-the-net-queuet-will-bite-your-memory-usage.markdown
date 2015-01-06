@@ -29,7 +29,6 @@ public void Enqueue(T item) {
     SetCapacity(newcapacity);
   }
 
-
   _array[_tail] = item;
   _tail = (_tail + 1) % _array.Length;
   _size++;
@@ -51,5 +50,4 @@ public void TrimExcess() {
 The issue for our implementation is that the queue space isn't ever reclaimed automatically. We're using the queue in its processing sense: blocking, thread-safe and bounded. Hence if we had a million items in the queue once, we would keep an array of a million items until `TrimExcess` is called. That is just a lot of memory to hang onto.
 
 A more efficient implementation for our needs was a double-queue. Inserting happens on the "in" queue while retrieving happens from the "out" queue. When the "out" queue is empty, it is dropped (reclaiming the memory in the next GC) the "in" queue is flipped with the "out" queue, and the "in" queue is re-created. The only lock taken is during the flip.
-
 

@@ -30,4 +30,3 @@ When a small group of people truly collaborates, their feature branches make it 
 
 Maybe someone can use this idea to build a nice feature to measure a Github _project density_?
 
-

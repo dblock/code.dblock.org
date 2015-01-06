@@ -10,4 +10,3 @@ comments: true
 
 Everyone managing people should watch [Daniel H Pink's RSA intro](http://www.youtube.com/watch?v=u6XAPnuFjJc&feature=player_embedded).
 
-

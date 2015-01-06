@@ -42,4 +42,3 @@ end
 
 I feel dirty. Is there a better way?
 
-

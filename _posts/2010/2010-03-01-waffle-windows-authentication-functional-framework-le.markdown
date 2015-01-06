@@ -20,4 +20,3 @@ _The long story:_
 
 If nothing else, this code serves as a clean and working example for everything related to [LogonUser](http://msdn.microsoft.com/en-us/library/aa378184(VS.85).aspx), [InitializeSecurityContext](http://msdn.microsoft.com/en-us/library/aa375506(VS.85).aspx) and [AcceptSecurityContext](http://msdn.microsoft.com/en-us/library/aa374703(VS.85).aspx) APIs.
 
-

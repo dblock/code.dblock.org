@@ -14,4 +14,3 @@ One of my projects, [RemoteInstall](https://github.com/dblock/remoteinstall), wa
 
 Seems like ThisWeekInTest.tv is no more.
 
-

@@ -77,7 +77,6 @@ for(String localGroup : localGroups) {
 
 This is the sweetest waffle, both the client and the server-side of the Negotiate protocol made super easy. You would typically split this code in two halves and do the work of transmitting the tokens between client and server. In the end, the user is logged on to the server side and you can examine his local and domain groups.
 
-
 ```java
 String securityPackage = "Negotiate";
 // client credentials handle

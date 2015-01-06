@@ -10,4 +10,3 @@ comments: true
 
 I’ve uploaded [a PowerPoint presentation](http://www.slideshare.net/dblockdotorg/single-signon-with-waffle) about Waffle that I made to my team. It can be a good start for talking points and a presentation about Windows authentication in Tomcat, Jetty, etc.
 
-

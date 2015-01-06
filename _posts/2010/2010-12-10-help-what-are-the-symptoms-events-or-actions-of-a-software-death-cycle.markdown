@@ -14,4 +14,3 @@ I am working on a [talk for the DDD meet-up in January in NYC](http://www.dddnyc
 
 Please answer [on StackExchange](http://programmers.stackexchange.com/questions/25181/what-are-the-symptoms-events-or-actions-of-a-software-death-cycle).
 
-

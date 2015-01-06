@@ -137,4 +137,3 @@ s3i.copy(args[:from], key, args[:to], key, :copy, { 'x-amz-acl' => 'public-read'
 
 Please suggest any improvements!
 
-
