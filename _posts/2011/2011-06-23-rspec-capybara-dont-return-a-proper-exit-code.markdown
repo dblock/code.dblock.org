@@ -20,6 +20,6 @@ The culprit turned out to be a bug in Ruby ([#4400](http://redmine.ruby-lang.org
 
 There’s also a fun part to the story: [@febuiles](http://twitter.com/febuiles) who I had the pleasure to work with for a bit, tweeted this:
 
-![image]({{ site.url }}/images/posts/2011/2011-06-23-rspec-capybara-dont-return-a-proper-exit-code/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-06-23-rspec-capybara-dont-return-a-proper-exit-code/image%5b5%5d.jpg)
 
 That’s what I love about open-source, it’s a small world that enables quick and meaningful impact.

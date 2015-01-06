@@ -34,7 +34,7 @@ SSPI allows you to do all this with any protocol or SSPI provider. There’s an 
 
 You can now guess how this works.
 
-![image]({{ site.url }}/images/posts/2010/2010-03-26-jna-acquirecredentialshandle-initializesecuritycontext-and-acceptsecuritycontext-establishing-an-authenticated-connection/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-03-26-jna-acquirecredentialshandle-initializesecuritycontext-and-acceptsecuritycontext-establishing-an-authenticated-connection/image%5b4%5d.jpg)
 
 #### Structures
 

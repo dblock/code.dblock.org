@@ -1,0 +1,45 @@
+---
+layout: post
+title: "Mentoring 101"
+redirect_from: "/mentoring-101"
+date: 2013-06-12 12:54:20
+tags: [teams, teaching, technology, art.sy, people]
+comments: true
+---
+This year my colleagues at [Artsy](http://artsy.net) created a formal fellowship program. We went out to many US colleges to recruit some of the brightest seniors. From thousands of applications we’ve selected a dozen people that will be joining the arts and tech teams. A few have already graduated and might get full time job offers at the end, others will go back to finish school. We assign everyone a mentor. Today I gave a "Mentoring 101" talk to the team, which seems to have turned out great, thanks to the excellent material sourced from the fellow members of the [New York CTO Club](http://www.linkedin.com/groups/New-York-CTO-Club-45712/about), a group that combines several generations of management experience. Slides [here](http://www.slideshare.net/dblockdotorg/mentoring-101-the-artsy-way).
+
+![]({{ site.url }}/images/posts/2013/2013-06-12-mentoring-101/image%5b7%5d.jpg)
+
+#### What is Mentoring?
+
+Good companies value people over product. It’s not a coincidence that most successful CEOs prioritize hiring the best people over making the best product or money. Getting the strongest people at any level and keeping them is probably the single hardest thing in any organization.
+
+And so, to help build the best company, _mentoring_ is putting people’s goals first, before their work. It’s unlike _managing_, which is making sure the right things get done. Mentoring is a process of developing people, and helping them achieve their goals. Successful people will, in turn, do the _right things_, and make the company successful. And so, good personal goals align with company’s goals to a large extent.
+
+Mentoring is a huge responsibility and the mentor is directly responsible for the mentee’s success or failure.
+
+#### What does a Mentor Do?
+
+Most interns and apprentices come prepared with some domain knowledge. Our Art fellows know a thousand times more than me about art. Our Engineering fellows know more about technology than many of our art team members. Yet, none of them have any idea about how our company operates and, therefore, don’t know how to behave. Mentees will try to constantly adjust and to fit expectations. A mentor’s job is to provide an environment in which the mentee can succeed, including telling them what’s expected, what can, should or should not be done.
+
+Start by setting expectations. I expect an Engineering fellow to deliver the same software quality as any experienced engineer, but over a longer timeframe, with a lot more help and with a smaller scope. I want my Engineering fellows to write code indistinguishable from the code of the most experienced Engineers on the team. I don’t care about how much of it they write, how long it takes and how much we’re going back-and-forth,  I just want to see progress, learning and keep them accountable to the same level of quality as I do for myself or anybody else on the team.
+
+You want your mentee to stay on track. Set goals. These can be as simple as becoming fluent in a specific framework or language or as specific as building an end-to-end feature that spans a front-end and a back-end. Create frequent milestones, always being very verbose about what should come next. A good first milestone for a software Engineer is to get a working local system running and to commit documentation updates to the _Getting Started_ guide that is always slightly out-of-date. Next, they could fix a bug. Then build a tiny feature that is mostly copy-paste from another similar feature. Deploy it to production. See someone use it.
+
+The complexity of what the mentee is working on should escalate, but not overwhelm. There should be enough latitude to be a bit creative, too. Success must be easily achievable, and failure put in a positive light. On that note, failing is probably the single hardest thing to teach. I look for opportunities in which the mentee can make a mistake, and have a nice, controlled landing and a positive outcome. Either way, it must be made clear that the individual has complete control and ownership over what they are doing, the responsibility for doing their best, your support and trust. You’ve got their back, too.
+
+Mentoring is a big time sink and a mentor must make the mentee a priority. I will generally stop what I am doing when interrupted by a mentee, whereas I’m likely to tell my boss to talk to me later. Answer questions, unless the answer may be found on the first page of a Google search. Use these interruptions as an opportunity to remind the mentee what’s important and always suggest ways for them to focus. Return the favor and interrupt them if they have been going on a tangent or if they look or sound frustrated. Redirect frequently and help the mentee finish what they started. At our sprint demos everyone presents what they worked on to the entire team, including mentees. It takes courage to stand in front of a big group and show a tiny feature.
+
+Don’t keep the mentee in a bubble. Expose them to as many people as possible, and take them to meet a client.
+
+Praise the mentee when they have done a good job. Take responsibility and protect them when they create a mess.
+
+Finally, mentoring is a learning experience for the mentor. Encourage your mentee to give you feedback. A good way to start is to discuss existing practices and obstacles, making it about things, not people. Eventually, a productive dialog may yield feedback about your actual mentorship.
+
+Finally, your mentee will go places and you might create a long lasting working relationship.
+
+#### Are you a Mentor?
+
+In technology there’re two classic career paths. The first, is a technical one – an Engineer becomes an Architect, becomes a CTO. The second is a management one – the Engineer becomes a Team Lead, a Development Manager and a VP of Engineering. I knew I was a manager when I was able to choose people responsibilities over exciting new technology, without looking back.
+
+Mentoring is a first concrete step towards managing, but it’s not for everybody. Delegating is hard. Interacting with people is hard. Try it out, rise to the challenge.

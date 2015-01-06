@@ -8,7 +8,7 @@ comments: true
 ---
 This thread just popped up on the MongoDB users list: [[JOB]Full time Developer w/ MongoDB experience for a Fortune 1000 client in NYC!](http://www.meetup.com/New-York-MongoDB-User-Group/messages/22530452/).
 
-![image]({{ site.url }}/images/posts/2011/2011-09-09-just-say-no-to-mailing-list-spam-by-recruiters/image6.jpg)
+![]({{ site.url }}/images/posts/2011/2011-09-09-just-say-no-to-mailing-list-spam-by-recruiters/image6.jpg)
 
 The moderator is wondering whether people want to see job postings on the list. I think we do, but not this kind.
 

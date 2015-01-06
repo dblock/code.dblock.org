@@ -8,7 +8,7 @@ comments: true
 ---
 I want to talk about your scope of influence as a Software Engineer and how to expand it.
 
-![image]({{ site.url }}/images/posts/2012/2012-04-22-how-to-cross-the-chasms-of-your-technology-career/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-04-22-how-to-cross-the-chasms-of-your-technology-career/image%5b5%5d.jpg)
 
 Your scope of influence in your first piece of software is a function. You are parachuted in a well isolated world and are told to implement a simple algorithm. As you find your marks, you develop a component. Eventually they let you take on a small project. The entire company now knows about you. You switch jobs and become a familiar face in the city. You talk at a big conference and people from all over the world follow you on Twitter. You might, one day, invent something major and make an impact on humanity. Your life as a Software Engineer has just flashed in front of you.
 

@@ -6,7 +6,7 @@ date: 2011-09-03 11:44:13
 tags: [barista, coffeescript, open source]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2011/2011-09-03-barista-custom-preambles-in-coffeescript-javascript/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-09-03-barista-custom-preambles-in-coffeescript-javascript/image%5b4%5d.jpg)
 
 You know I love coffee. My coffee is supported by [Vibiemme hardware](http://www.dblock.org/new-toys-vibiemme-domobar-mazzer-mini) and [Barista software](https://github.com/Sutto/barista). We even have [interns writing coffee](/embedding-api-sandboxes-in-documentation). Yeah, take that corporate internship! How much coffee-script did _you_ write this summer?
 

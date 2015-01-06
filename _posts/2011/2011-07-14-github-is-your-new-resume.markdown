@@ -6,7 +6,7 @@ date: 2011-07-14 14:30:13
 tags: [github, git, organizations, people]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2011/2011-07-14-github-is-your-new-resume/image%5b12%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-07-14-github-is-your-new-resume/image%5b12%5d.jpg)
 
 I have a friend who lives on the West Coast and has been thinking about moving to New York. He has a solid resume that speaks in lengths about the many years of his exceptional software career in the depths of the Enterprise. He wants to press the reset button, learn Ruby or Python and find a job with some web scale. At some point I advised him to get a [Github](http://github.com) account. Turned out that all the jobs he had been considering were already asking for it! Increasingly companies are asking to see a Github account, followed by references. A resume has become nothing more than a formality to weed out people flipping jobs too often.
 

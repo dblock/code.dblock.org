@@ -12,7 +12,7 @@ Most Tomcat users begin by implement Form-based authentication. Those deploying 
 
 _How do we give users a way to logon either way?_
 
-![image]({{ site.url }}/images/posts/2010/2010-05-27-tomcat-single-sign-on-mixed-with-form-authentication-w-waffle/image2.jpg)
+![]({{ site.url }}/images/posts/2010/2010-05-27-tomcat-single-sign-on-mixed-with-form-authentication-w-waffle/image2.jpg)
 
 You can accomplish this with the Waffle _MixedAuthenticator_.
 

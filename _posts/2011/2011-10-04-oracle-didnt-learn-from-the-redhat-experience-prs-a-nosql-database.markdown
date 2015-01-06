@@ -10,7 +10,7 @@ I just came back from Mongo Boston and I am really excited for [10gen](http://ww
 
 But back to the point. Check out this graph.
 
-![image]({{ site.url }}/images/posts/2011/2011-10-04-oracle-didnt-learn-from-the-redhat-experience-prs-a-nosql-database/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-10-04-oracle-didnt-learn-from-the-redhat-experience-prs-a-nosql-database/image%5b4%5d.jpg)
 
 Replace Red Hat with 10gen. This picture comes from [this 2007 Brent C. Williams presentation](http://stephesblog.blogs.com/presentations/BrentWilliamsEclipseConV02.pdf) on Open Source business models. Oracle released "Unbreakable Linux" right in the middle of that graph, therefore validating the entire space. Few people adopted Oracle’s distribution and everyone went to buy the support contracts from people who actually knew something about the software – Redhat. Right now all Oracle DBAs are signing up for NoSQL training. That’s a huge win for companies like 10gen.
 

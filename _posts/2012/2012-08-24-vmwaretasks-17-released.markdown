@@ -6,7 +6,7 @@ date: 2012-08-24 15:35:45
 tags: [open source, vmware]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2012/2012-08-24-vmwaretasks-17-released/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-08-24-vmwaretasks-17-released/image%5b4%5d.jpg)
 
 The VMWare SDK, specifically VixCOM, offers a rich set of programmable interfaces that enable developers to drive virtual machines programmatically with an asynchronous, job-based programming model. Unfortunately that turns out to be too complicated for most scenarios where developers want to use a simple object-oriented interface for common VMWare virtual machine automation tasks. The VMWareTasks is a commercial-grade library that implements this simple interface and makes programming against virtual machines a no-brainer.
 

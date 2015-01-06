@@ -10,7 +10,7 @@ So I’ve been playing with Ruby. Yes, I am using a Windows 7 64-bit laptop and 
 
 One of the problems I ran into was the infamous _"The program can’t start because msvcrt-ruby18.dll is missing from your computer."_ error message.
 
-![image]({{ site.url }}/images/posts/2011/2011-01-14-the-program-cant-start-because-msvcrt-ruby18dll-is-missing-from-your-computer/image3.jpg)
+![]({{ site.url }}/images/posts/2011/2011-01-14-the-program-cant-start-because-msvcrt-ruby18dll-is-missing-from-your-computer/image3.jpg)
 
 I can’t believe how hard it is to find information about the real cause of this error! The only sensible information comes from [this](http://stackoverflow.com/questions/4572753/getting-the-error-msvcrt-ruby18-dll-is-missing-when-running-watir-scripts-after) thread: _You've probably installed some binary gems that was built against msvcrt-ruby18.dll._ Aha, there’s a native library that was built against the C runtime that ships with Ruby 1.8 (that obviously doesn’t exist with 1.9.2). Let's get rid of it, but instead of hunting down a gem by guessing, we can automate this process.
 

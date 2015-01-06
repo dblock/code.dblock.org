@@ -8,7 +8,7 @@ comments: true
 ---
 I’m speaking at NYC.rb tonight @ Pivotal Labs, [RSVP](http://www.meetup.com/NYC-rb/events/28968081/).
 
-![image]({{ site.url }}/images/posts/2011/2011-11-08-nycrb-building-restful-apis-w-grape/image%5b9%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-11-08-nycrb-building-restful-apis-w-grape/image%5b9%5d.jpg)
 
 #### Update
 

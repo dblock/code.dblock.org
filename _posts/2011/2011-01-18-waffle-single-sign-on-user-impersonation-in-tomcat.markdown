@@ -6,7 +6,7 @@ date: 2011-01-18 14:21:02
 tags: [tomcat, waffle, jna, security, java, active directory, win32]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2011/2011-01-18-waffle-single-sign-on-user-impersonation-in-tomcat/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-01-18-waffle-single-sign-on-user-impersonation-in-tomcat/image%5b3%5d.jpg)
 
 A generous contributor (Nicolas Guillaumin, [@nguillaumin](http://www.codeplex.com/site/users/view/nguillaumin) who works for a company called [Funnelback](http://www.funnelback.com/)), has committed the much requested impersonation support to Waffle. This is pretty exciting, since it fills in a bunch of squares in the puzzle that we’re trying to assemble with the [Waffle project](https://github.com/dblock/waffle).
 

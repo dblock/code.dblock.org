@@ -6,7 +6,7 @@ date: 2011-03-17 14:21:58
 tags: []
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2011/2011-03-17-agile-estimating-dont-ask-how-long-it-takes-sell-it/image%5b7%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-03-17-agile-estimating-dont-ask-how-long-it-takes-sell-it/image%5b7%5d.jpg)
 
 A product manager asks: _How long will it take to build this feature?_
 

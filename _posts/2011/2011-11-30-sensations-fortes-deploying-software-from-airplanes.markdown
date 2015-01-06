@@ -10,6 +10,6 @@ I remember bringing a 14Kbps modem from the U.S. back to Europe in mid-nineties.
 
 So I just redeployed our production site with a few minor bug fixes from my seat on a Delta flight to Miami – going to Art Basel with the entire Art.sy team!
 
-![image]({{ site.url }}/images/posts/2011/2011-11-30-sensations-fortes-deploying-software-from-airplanes/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-11-30-sensations-fortes-deploying-software-from-airplanes/image%5b4%5d.jpg)
 
-![image]({{ site.url }}/images/posts/2011/2011-11-30-sensations-fortes-deploying-software-from-airplanes/image%5b12%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-11-30-sensations-fortes-deploying-software-from-airplanes/image%5b12%5d.jpg)

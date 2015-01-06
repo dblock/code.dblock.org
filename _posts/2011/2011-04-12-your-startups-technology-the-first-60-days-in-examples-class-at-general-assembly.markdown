@@ -8,7 +8,7 @@ comments: true
 ---
 I’m teaching [a class at General Assembly on April 20th](http://yourtechnology.eventbrite.com).
 
-![image]({{ site.url }}/images/posts/2011/2011-04-12-your-startups-technology-the-first-60-days-in-examples-class-at-general-assembly/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-04-12-your-startups-technology-the-first-60-days-in-examples-class-at-general-assembly/image%5b3%5d.jpg)
 
 _Wednesday, April 20th from 6:00 pm to 7:30 pm._
 

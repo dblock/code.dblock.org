@@ -6,7 +6,7 @@ date: 2012-12-21 14:11:45
 tags: [startups, technology, people, agile]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2012/2012-12-21-treat-every-line-of-code-as-if-its-going-to-be-thrown-away-one-day/image%5b8%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-12-21-treat-every-line-of-code-as-if-its-going-to-be-thrown-away-one-day/image%5b8%5d.jpg)
 
 It’s incredible to see talented people succeed at building great things.
 

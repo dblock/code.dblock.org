@@ -18,11 +18,11 @@ Consider the following situation. My team has four team leads and a total of abo
 
 Let’s illustrate this as a hypothetical steadily growing organization (the kind we all want to be in).
 
-![image]({{ site.url }}/images/posts/2010/2010-12-27-agile-hiring-get-rid-of-the-open-headcount/image6.jpg)
+![]({{ site.url }}/images/posts/2010/2010-12-27-agile-hiring-get-rid-of-the-open-headcount/image6.jpg)
 
 Let’s zoom into the picture of available vacancies.
 
-![image]({{ site.url }}/images/posts/2010/2010-12-27-agile-hiring-get-rid-of-the-open-headcount/image28.jpg)
+![]({{ site.url }}/images/posts/2010/2010-12-27-agile-hiring-get-rid-of-the-open-headcount/image28.jpg)
 
 To arrive at this chart and list we went through a decision making process.
 
@@ -46,7 +46,7 @@ So why are we applying the waterfall process to open headcount?
 
 What if we created a backlog of positions to hire and picked from the top, for the entire company or at least a division? If I only could hire 2 positions out of a backlog of 5, wouldn’t I be better off hiring a priority 3 and a priority 5 versus hiring nobody at all?
 
-![image]({{ site.url }}/images/posts/2010/2010-12-27-agile-hiring-get-rid-of-the-open-headcount/image29.jpg)
+![]({{ site.url }}/images/posts/2010/2010-12-27-agile-hiring-get-rid-of-the-open-headcount/image29.jpg)
 
 Ask yourself one question: _how am I doing right now against the fixed amount of money or personnel that I have available for hiring, today?_
 

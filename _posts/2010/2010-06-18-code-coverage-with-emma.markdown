@@ -6,7 +6,7 @@ date: 2010-06-18 12:24:02
 tags: [emma, waffle, testing, java]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2010/2010-06-18-code-coverage-with-emma/image%5b9%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-06-18-code-coverage-with-emma/image%5b9%5d.jpg)
 
 I’ve written an unusually high number of unit tests for the Java portion of [Waffle](https://github.com/dblock/waffle/), mostly because the project became popular really fast with all those Java people trying to do Windows authentication. Some have succeeded and some filed several rather complicated bug reports that dealt with concurrency, sessions across HTTP requests, etc. It all needed to be unit-tested in order to make industrial-grade software.
 
@@ -78,7 +78,7 @@ Finally, we want to get a nice HTML document that summarizes coverage.
 ```
 Here’s an output.
 
-![image]({{ site.url }}/images/posts/2010/2010-06-18-code-coverage-with-emma/image%5b10%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-06-18-code-coverage-with-emma/image%5b10%5d.jpg)
 
 I see a lot of red. Emma doesn’t think I am doing such a great job after-all.
 

@@ -16,7 +16,7 @@ Mechanics are important, because not all code review systems are created equal.
 
 We have a master repository on Github that every member of the team makes a fork of. Developers make pull requests into that repo. Each pull request is code reviewed by any team member chosen by the requester at random. A typical pull request will be titled hash-rocket-style. In the following example, I’m making a pull request to @maxis about a few reticulated splines. In practice I’d write a longer explanation, but reticulating splines is a well understood concept in 2012.
 
-![image]({{ site.url }}/images/posts/2012/2012-06-28-why-i-love-code-reviews/image4.jpg)
+![]({{ site.url }}/images/posts/2012/2012-06-28-why-i-love-code-reviews/image4.jpg)
 
 The code reviewer will look at the diff line-by-line, ask questions and comment on the pull request as a whole if they choose to do so. The reviewer will then merge the code with the magical green button or will send the code back to me with a list of "must haves", "should haves" and "nice to haves". Anyone else can comment on the pull request at any time. I would fix all the "must haves", open bugs for "should haves" in PivotalTracker and consider "nice to haves". I’d generally want my code reviewer to be happy, so I’ll make more changes than I have to.
 
@@ -58,6 +58,6 @@ The best code reviewers point out the good stuff as often as they point out the 
 
 [@gib](https://github.com/gib) made a pull request getting rid of `#!` in one of our projects. It spanned 79 commits with 150 files changed. Phew. The comments were overwhelming.
 
-![image]({{ site.url }}/images/posts/2012/2012-06-28-why-i-love-code-reviews/image%5b14%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-06-28-why-i-love-code-reviews/image%5b14%5d.jpg)
 
 Tell me these aren’t awesome!

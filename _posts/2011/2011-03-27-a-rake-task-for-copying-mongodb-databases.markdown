@@ -10,7 +10,7 @@ Now that we have a staging and a production environment, we want to copy all pro
 
 The entire continuous integration and continuous deployment process looks like this.
 
-![image]({{ site.url }}/images/posts/2011/2011-03-27-a-rake-task-for-copying-mongodb-databases/image%5b16%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-03-27-a-rake-task-for-copying-mongodb-databases/image%5b16%5d.jpg)
 
 The interesting part is that we copy the production database to staging before code is deployed so that we can see the results of automated migrations in staging. If things go south, we can make code changes and try again with a clean copy of production data.
 

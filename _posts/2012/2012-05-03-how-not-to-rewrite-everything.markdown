@@ -10,7 +10,7 @@ I wrote a blog post yesterday about [How to Start Small With Big Data and Google
 
 _Why do so many companies write a homegrown pageviews tracking system? Between Google Analytics, Kissmetrics and many others, isn’t that a completely solved problem?_
 
-![image]({{ site.url }}/images/posts/2012/2012-05-03-how-not-to-rewrite-everything/image%5b7%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-05-03-how-not-to-rewrite-everything/image%5b7%5d.jpg)
 
 _this is a solved problem, too_
 

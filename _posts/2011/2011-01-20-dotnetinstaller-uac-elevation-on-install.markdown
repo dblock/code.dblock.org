@@ -14,7 +14,7 @@ Until now you had to mark your Setup.exe to elevate in the manifest and the user
 
 Check out the GUI from the sample packaged setup.
 
-![image]({{ site.url }}/images/posts/2011/2011-01-20-dotnetinstaller-uac-elevation-on-install/image%5b11%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-01-20-dotnetinstaller-uac-elevation-on-install/image%5b11%5d.jpg)
 
 Note the elevation icon next to the install button!
 

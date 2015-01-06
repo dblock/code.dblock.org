@@ -8,6 +8,6 @@ comments: true
 ---
 I’m at [QConSF 2011](http://qconsf.com/sf2011/).
 
-![image]({{ site.url }}/images/posts/2011/2011-11-17-at-qconsf-2011/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-11-17-at-qconsf-2011/image%5b3%5d.jpg)
 
 The keynote was in the form of a trial with a dressed judge and witnesses. A penguin, a ball and a UML object were the accused. Brian Foote, a software ethnologist, talked about _reuse_. He argued that the American reusable space shuttle wasted a ton of energy vs. the Soviet Союз space program that left everything except a small module with cosmonauts behind. That's enough energy and metal to build out a Stanley Kubrick space wheel a mile in diameter. Joshua Kerievsky made a parallel between object inheritance and real life. Having a vasectomy to avoid having children is the kind of discipline objects could use.

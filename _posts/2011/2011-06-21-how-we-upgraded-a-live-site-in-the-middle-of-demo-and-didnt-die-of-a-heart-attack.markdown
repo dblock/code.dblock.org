@@ -6,7 +6,7 @@ date: 2011-06-21 14:24:53
 tags: [art.sy, testing, agile]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2011/2011-06-21-how-we-upgraded-a-live-site-in-the-middle-of-demo-and-didnt-die-of-a-heart-attack/image%5b9%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-06-21-how-we-upgraded-a-live-site-in-the-middle-of-demo-and-didnt-die-of-a-heart-attack/image%5b9%5d.jpg)
 
 Last week I got to experience Art Basel from the inside. [Art.sy](https://artsy.net) was presented at the "most exclusive event" at the Beyeler Foundation, to quote [an article](http://www.artinfo.com/news/story/37897/from-christian-marclay-to-will-ferrell-see-the-stars-at-the-elite-and-highly-eclectic-bash-for-the-launch-of-artsy-in-basel/). Behind all the hype, we were very nervous. I had high confidence in the mountain of work that was put into the site by our A-team of 5 engineers, but it was really the first time we were showing it live to so many partners. There was no plan B, it just had to work. Then we  had to upgrade the site on-the-fly during the big demo.
 

@@ -6,7 +6,7 @@ date: 2011-07-25 07:27:54
 tags: [organizations, people]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2011/2011-07-25-enginelopers-and-devengeers-how-do-you-title-engineering-hires/image%5b14%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-07-25-enginelopers-and-devengeers-how-do-you-title-engineering-hires/image%5b14%5d.jpg)
 
 "What would you call such an animal?", asked someone at work about a future new hire in our engineering team. A rather artsy discussion ensued – working with a bunch of creative people across art and technology disciplines often sparks fun conversations. Next thing you know I am reading [rickwebb’s tumble on engineering titles](http://rickwebb.tumblr.com/post/7938077259/whats-the-worse-piece-of-advice-youve-ever-received).
 

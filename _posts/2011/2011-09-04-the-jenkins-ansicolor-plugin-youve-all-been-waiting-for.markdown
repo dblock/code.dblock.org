@@ -12,15 +12,15 @@ How long have you been waiting? Years. This question seems to popup regularly on
 
 #### Install
 
-![image]({{ site.url }}/images/posts/2011/2011-09-04-the-jenkins-ansicolor-plugin-youve-all-been-waiting-for/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-09-04-the-jenkins-ansicolor-plugin-youve-all-been-waiting-for/image%5b5%5d.jpg)
 
 #### Enable in Your Build
 
-![image]({{ site.url }}/images/posts/2011/2011-09-04-the-jenkins-ansicolor-plugin-youve-all-been-waiting-for/image%5b13%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-09-04-the-jenkins-ansicolor-plugin-youve-all-been-waiting-for/image%5b13%5d.jpg)
 
 #### See Color
 
-![image]({{ site.url }}/images/posts/2011/2011-09-04-the-jenkins-ansicolor-plugin-youve-all-been-waiting-for/image%5b23%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-09-04-the-jenkins-ansicolor-plugin-youve-all-been-waiting-for/image%5b23%5d.jpg)
 
 #### Links
 

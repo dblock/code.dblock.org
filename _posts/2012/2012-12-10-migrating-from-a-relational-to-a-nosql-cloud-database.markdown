@@ -6,7 +6,7 @@ date: 2012-12-10 02:35:04
 tags: [scale, performance, technology, art.sy, mysql, mongodb, databases]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2012/2012-12-10-migrating-from-a-relational-to-a-nosql-cloud-database/image%5b10%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-12-10-migrating-from-a-relational-to-a-nosql-cloud-database/image%5b10%5d.jpg)
 
 I was recently quoted in a [TechRepublic article](http://www.techrepublic.com/blog/datacenter/migrating-from-a-relational-to-a-nosql-cloud-database/5904), making rather sweeping general statements about how the free open-source NoSQL databases are the best thing since both SQL and sliced bread. I think some context may have been lost there, so it’s worth talking about it.
 

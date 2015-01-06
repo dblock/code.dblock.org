@@ -16,7 +16,7 @@ This is the general distribution of about 150 resumes I have received via Craigs
 
 The detached pie slice represents about 4% of actual good resumes, worth my time.
 
-![image]({{ site.url }}/images/posts/2010/2010-12-17-strictly-platonic-engineering-jobs-on-craigslist/image3.jpg)
+![]({{ site.url }}/images/posts/2010/2010-12-17-strictly-platonic-engineering-jobs-on-craigslist/image3.jpg)
 
 Enjoy.
 

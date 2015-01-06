@@ -8,7 +8,7 @@ comments: true
 ---
 En route to Boston, speaking at [Mongo Boston](http://www.10gen.com/events/mongo-boston-2011) tomorrow, Monday. I’m going to talk about our history with MongoDB at [Art.sy](https://artsy.net), the challenges and, of course, about how much we like it.
 
-![image]({{ site.url }}/images/posts/2011/2011-10-02-mongo-boston-2011/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-10-02-mongo-boston-2011/image%5b3%5d.jpg)
 
 If you’re in Boston today or going to the conference tomorrow and want to meet, drop me a note (dblock[at]dblock[dot]org).
 

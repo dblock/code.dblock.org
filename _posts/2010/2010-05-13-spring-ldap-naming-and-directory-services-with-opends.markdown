@@ -6,7 +6,7 @@ date: 2010-05-13 09:45:02
 tags: [opends, spring, jndi, java]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2010/2010-05-13-spring-ldap-naming-and-directory-services-with-opends/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-05-13-spring-ldap-naming-and-directory-services-with-opends/image%5b4%5d.jpg)
 
 In a [previous post](/jndi-naming-and-directory-services-with-opends) I’ve described an initial implementation of OpenDS as a naming and directory service, including extending the directory schema and reading and writing directory objects with JNDI. As actual (read: competent) Java developers took over my prototype, they switched from JNDI to [spring-ldap](http://www.springsource.org/ldap). The resulting code is much more pleasant, and I got to learn a bit more about Spring.
 

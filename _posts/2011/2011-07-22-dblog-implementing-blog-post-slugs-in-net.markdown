@@ -116,6 +116,6 @@ Here’s a URL that I get after running a task to re-slug all existing posts to 
 
 The URL has changed, yet Discus comments are fine (phew.) – they use my unique identifier. The twitter RT count is lost though and is reset at zero, since Twitter is a URL-based system. Too bad, here’s a screenshot for the memories.
 
-![image]({{ site.url }}/images/posts/2011/2011-07-22-dblog-implementing-blog-post-slugs-in-net/image%5b7%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-07-22-dblog-implementing-blog-post-slugs-in-net/image%5b7%5d.jpg)
 
 314 RTs, holy crap! This blog’s source code is available under the MIT license [on Github](http://github.com/dblock/dblog).

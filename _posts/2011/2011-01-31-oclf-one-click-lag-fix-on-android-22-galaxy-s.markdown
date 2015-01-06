@@ -6,7 +6,7 @@ date: 2011-01-31 04:08:41
 tags: [android]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2011/2011-01-31-oclf-one-click-lag-fix-on-android-22-galaxy-s/image%5b2%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-01-31-oclf-one-click-lag-fix-on-android-22-galaxy-s/image%5b2%5d.jpg)
 
 Continuing to play with things I don’t need on my phone today. Applying the One Click Lag Fix (OCLF in the Market) was a bit harder. I got _OneClickLagFix V2.2+ failed with error: Could not mv playlogos1 to playlogosnow – mv: can’t rename ‘/system/bin/playlogos1’: Read-only file system_.
 

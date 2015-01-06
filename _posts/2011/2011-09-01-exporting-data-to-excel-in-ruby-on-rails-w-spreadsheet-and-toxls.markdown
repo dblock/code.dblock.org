@@ -6,7 +6,7 @@ date: 2011-09-01 23:32:35
 tags: [excel, rails, ruby]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2011/2011-09-01-exporting-data-to-excel-in-ruby-on-rails-w-spreadsheet-and-toxls/image%5b7%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-09-01-exporting-data-to-excel-in-ruby-on-rails-w-spreadsheet-and-toxls/image%5b7%5d.jpg)
 
 We’re going to export data to Excel from our RoR application, in about five lines of code. There’re many options available out there and it’s all pretty confusing. People try to export CSV and XML formats.
 
@@ -64,7 +64,7 @@ Add a link on the users view. Here’s what I added to _app/views/users.html.ham
 
 We added some styles, so here’s what the export button looks like next to another one.
 
-![image]({{ site.url }}/images/posts/2011/2011-09-01-exporting-data-to-excel-in-ruby-on-rails-w-spreadsheet-and-toxls/image%5b17%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-09-01-exporting-data-to-excel-in-ruby-on-rails-w-spreadsheet-and-toxls/image%5b17%5d.jpg)
 
 You get real XLS documents, book & al.
 

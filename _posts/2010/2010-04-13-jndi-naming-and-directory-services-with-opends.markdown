@@ -149,7 +149,7 @@ ctx.rebind("cn=demoService,o=Services", demoService);
 
 Here’s what we have in the directory now (this is the _Manage Entries_ UI from the control panel tool that comes with OpenDS).
 
-![image]({{ site.url }}/images/posts/2010/2010-04-13-jndi-naming-and-directory-services-with-opends/image%5b14%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-04-13-jndi-naming-and-directory-services-with-opends/image%5b14%5d.jpg)
 
 #### Retrieving from the Directory
 

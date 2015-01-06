@@ -6,7 +6,7 @@ date: 2012-10-01 12:03:19
 tags: [teams, deployment, testing, organizations, agile]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2012/2012-10-01-5-ways-to-avoid-feature-branches/image%5b11%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-10-01-5-ways-to-avoid-feature-branches/image%5b11%5d.jpg)
 
 This is an actual pull request. It’s a merge from a feature branch, which includes some (excellent) work done by several people over the course of 3 weeks. Someone started a prototype, then we all pooled for a week to finish it and decided not to waste time and keep hacking on a feature branch. A week turned into two for perfectly good business reasons. Then into three because of external influences. Some bugs required heavy lifting and a lot of code. Small improvements became big changes.
 

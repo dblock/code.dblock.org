@@ -33,7 +33,7 @@ I had to do some wrestling with JavaScript and the Facebook API at login. Most o
 
 I registered [an application](http://www.facebook.com/#!/developers/apps.php), which gave me an API key and a shared secret. The first is public, but the latter is going to be stored on the back-end and used to verify login signatures or make authenticated calls to Facebook. You would typically store both in some configuration file, SnCore has a settings framework that lets you store both public information and "password"-like settings accessible to the back-end only.
 
-![image]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image%5b3%5d.jpg)
 
 #### Single Sign On
 
@@ -62,7 +62,7 @@ A logged-in user is now returned to FacebookConnect.aspx with a number of parame
 
 Facebook JavaScript can process all that into cookies. The cookie names start with the API key. You can find a lot more detail about cookies [here](http://wiki.developers.facebook.com/index.php/Verifying_The_Signature#Signatures_and_Facebook_Connect_Sites).
 
-![image]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image%5b9%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image%5b9%5d.jpg)
 
 Invoking this JavaScript gave me a lot of headache – I was properly redirected to FacebookConnect.aspx, but no cookies were set. The problem was that you need to initialize the Facebook API, then synchronously wait for it to set the cookies and therefore complete.
 
@@ -205,7 +205,7 @@ return acct.Id;
 
 That’s a lot of private information that you gave me with a single click! Let's look at the created account.
 
-![image]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image%5b25%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image%5b25%5d.jpg)
 
 Try it! Signup to FoodCandy with a Facebook account.
 

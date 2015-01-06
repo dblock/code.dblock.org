@@ -14,7 +14,7 @@ Otherwise known as _process becomes automation_.
 
 You need a lot of patience when operating a manual change on a live system. You’re always _this_ close to dropping the _users_ table. So I learned a decent way to prevent mistakes: always run commands in a test environment, first. But that’s the same as walking on a cable between two chairs, before trying it between two skyscrapers – there’s still no safety net.
 
-![image]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image%5b3%5d.jpg)
 
 _"first, he tried it at home between two chairs"_
 
@@ -40,7 +40,7 @@ end
 
 It’s pretty concise. Unfortunately, _user.reminded?_ has a bug and you now have a communication disaster on your hands.
 
-![image]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image%5b18%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image%5b18%5d.jpg)
 
 "he just reminded a million users that their delinquent account is about to be suspended"
 
@@ -108,7 +108,7 @@ Why do something today when you can do it tomorrow?
 
 It’s Friday night and happy hour is about to start. Plan that next deploy for Monday morning, when everybody is in the office.
 
-![image]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image%5b22%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image%5b22%5d.jpg)
 
 _"she just spent her week-end undoing Friday’s mess"_
 
@@ -118,7 +118,7 @@ Spending a week-end in the office fixing what you (or someone else) broke on a F
 
 I firmly believe in under-promising and over-delivering.
 
-![image]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image%5b26%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image%5b26%5d.jpg)
 
 _"he over-promised and under-delivered"_
 
@@ -132,7 +132,7 @@ The person on the receiving end is juggling a hundred things too, and generally 
 
 As the team via the team lead when you need a feature.
 
-![image]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image%5b30%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image%5b30%5d.jpg)
 
 _"she will gladly implement your feature request, right now"_
 

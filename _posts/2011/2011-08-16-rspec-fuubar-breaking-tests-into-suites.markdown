@@ -10,7 +10,7 @@ Inspired by [this post](http://kpumuk.info/ruby-on-rails/my-top-7-rspec-best-pra
 
 We’re rapidly approaching 2000 tests in our main project, adding about 100 tests every week. Everyone got really crafty at figuring out the optimal terminal window width to make the twenty or so rows of green and yellow dots from RSpec progress to align nicely. So we replaced the RSpec formatter with the awesome [Fuubar](https://github.com/jeffkreeftmeijer/fuubar) (see [introductory post](http://jeffkreeftmeijer.com/2010/fuubar-the-instafailing-rspec-progress-bar-formatter/)) which now gives us ETA and shows error details as they appear. Nice.
 
-![image]({{ site.url }}/images/posts/2011/2011-08-16-rspec-fuubar-breaking-tests-into-suites/image%5b11%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-08-16-rspec-fuubar-breaking-tests-into-suites/image%5b11%5d.jpg)
 
 The really annoying part of RSpec is that tests can run in any order. This depends on file timestamps as RSpec globs the files. What I’d really want is to run short domain model tests first and long UI Capybara tests last. This way I’ll be catching errors sooner. Let's break the tests up into suites. Add _lib/tasks/test_suites.rake_. Note that _pattern_ can take an array and that this actually generates Rake tasks.
 

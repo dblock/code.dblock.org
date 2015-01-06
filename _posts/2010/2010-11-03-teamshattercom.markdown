@@ -10,5 +10,5 @@ comments: true
 
 I am very excited about this new project because it contains the public information from our entire vulnerability knowledgebase. It’s called the [threat finder](http://www.teamshatter.com/threat-finder) and gives you a real live view of the known vulnerabilities each database vendor has acknowledged and fixed. In addition, we’re now publishing a regular feed of information related to data fraud and theft, something we’ve had internally for a very long time. We also hope to include more general articles that talk about security, risk and compliance.
 
-![image]({{ site.url }}/images/posts/2010/2010-11-03-teamshattercom/image%5b12%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-11-03-teamshattercom/image%5b12%5d.jpg)
 

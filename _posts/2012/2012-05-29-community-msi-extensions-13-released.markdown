@@ -8,7 +8,7 @@ comments: true
 ---
 [http://dblock.github.com/msiext/](http://dblock.github.com/msiext/)
 
-![image]({{ site.url }}/images/posts/2012/2012-05-29-community-msi-extensions-13-released/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-05-29-community-msi-extensions-13-released/image%5b3%5d.jpg)
 
 Community MSI Extensions is a collection of MSI custom actions and WIX extensions that extend Windows installer, originally developed by [Application Security Inc.](http://www.appsecinc.com/) for a large Enterprise product, and open-sourced in 2009. The project grew and continues growing incrementally implementing everything that WIX didn't have out of the box. All custom actions and extensions are fully unit-tested.
 

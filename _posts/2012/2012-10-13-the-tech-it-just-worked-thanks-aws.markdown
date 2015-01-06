@@ -6,7 +6,7 @@ date: 2012-10-13 22:35:11
 tags: [aws, art.sy, heroku, architecture]
 comments: true
 ---
-![image]({{ site.url }}/images/posts/2012/2012-10-13-the-tech-it-just-worked-thanks-aws/image3.jpg)
+![]({{ site.url }}/images/posts/2012/2012-10-13-the-tech-it-just-worked-thanks-aws/image3.jpg)
 
 _The NYT warned us about the traffic firehose  ..._
 

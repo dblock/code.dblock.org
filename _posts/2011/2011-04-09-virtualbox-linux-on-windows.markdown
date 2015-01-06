@@ -25,6 +25,6 @@ Overall this was a good experience turned real sour, real fast. But I still need
 
 Here’s how it looks.
 
-![image]({{ site.url }}/images/posts/2011/2011-04-09-virtualbox-linux-on-windows/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-04-09-virtualbox-linux-on-windows/image%5b5%5d.jpg)
 
 See that shell window in the back, that’s Ubuntu. And my Windows LiveWriter window is Windows. Pretty awesome!

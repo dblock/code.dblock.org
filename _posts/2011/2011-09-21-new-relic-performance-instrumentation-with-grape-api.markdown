@@ -40,8 +40,8 @@ Examining the source code for NewRelic’s Rack module, we can make a few small 
 
 A breakdown per API. We got _api/v1/search _and _api/v1/me._
 
-![image]({{ site.url }}/images/posts/2011/2011-09-21-new-relic-performance-instrumentation-with-grape-api/image%5b31%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-09-21-new-relic-performance-instrumentation-with-grape-api/image%5b31%5d.jpg)
 
 Drilling through the top entry we can see the performance breakdown (including the MongoDB instrumentation that comes from the [rpm_contrib gem](https://github.com/newrelic/rpm_contrib)).
 
-![image]({{ site.url }}/images/posts/2011/2011-09-21-new-relic-performance-instrumentation-with-grape-api/image%5b21%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-09-21-new-relic-performance-instrumentation-with-grape-api/image%5b21%5d.jpg)

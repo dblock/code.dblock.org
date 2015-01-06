@@ -79,6 +79,6 @@ run Acme::API
 
 Run the application with _bundle exec rackup_.
 
-![image]({{ site.url }}/images/posts/2012/2012-01-30-grape-api-mounted-on-rack-w-static-pages/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-01-30-grape-api-mounted-on-rack-w-static-pages/image%5b4%5d.jpg)
 
 Full [source on Github](https://github.com/dblock/grape-on-rack).

@@ -50,8 +50,8 @@ Run the demo as a non-admin user (if you have log4jna source you can do _ant run
 
 Windows Event Log requires a registered event source to fire events to. The NTEventLogAppender attempts to create one automatically, but doesn’t have enough registry permissions to do so. In order to run software as a non-admin, we must create the registry key at software installation time when we do have those registry permissions. In our case, we need to create a _demo_ key under _HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\eventlog\Application_.
 
-![image]({{ site.url }}/images/posts/2010/2010-10-14-log4jna-log4jerror-could-not-register-event-source-access-is-denied/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-10-14-log4jna-log4jerror-could-not-register-event-source-access-is-denied/image%5b4%5d.jpg)
 
 This is sufficient for the application to run and to fire an event without errors. I’ll explain what’s going with the event text in my next post.
 
-![image]({{ site.url }}/images/posts/2010/2010-10-14-log4jna-log4jerror-could-not-register-event-source-access-is-denied/image%5b17%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-10-14-log4jna-log4jerror-could-not-register-event-source-access-is-denied/image%5b17%5d.jpg)

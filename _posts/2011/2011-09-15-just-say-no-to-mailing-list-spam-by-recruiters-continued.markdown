@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Just Say "No" To Mailing List Spam by Recruiters (Continued)"
+title: "Just Say 'No' To Mailing List Spam by Recruiters (Continued)"
 redirect_from: "/just-say-no-to-mailing-list-spam-by-recruiters-continued"
 date: 2011-09-15 15:25:08
 tags: [jobs, people]
