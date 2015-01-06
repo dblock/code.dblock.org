@@ -1,0 +1,15 @@
+---
+layout: post
+title: "JNA 3.5.0 Released"
+redirect_from: "/jna-350-released"
+date: 2012-10-20 19:48:34
+tags: [open source, jna, java]
+comments: true
+---
+![image]({{ site.url }}/images/posts/2012/2012-10-20-jna-350-released/image%5b7%5d.jpg)
+
+JNA 3.5.0 has been quietly released last week. JNA stands for Java Native Access and probably powers tens of thousands of applications that need to access native library functions without the hassle of JNI. Check out the 3.5.0 [CHANGELOG](https://github.com/twall/jna/blob/master/CHANGES.md) and get it from [Github](https://github.com/twall/jna) or [Java.net Maven](https://maven.java.net/index.html#nexus-search;quick~jna).
+
+> [https://github.com/twall/jna](https://github.com/twall/jna)
+
+Since the project has moved to Github we’ve seen some strong contributions. Thank you! The release is a good opportunity to remind you that we want your platform API signatures with tests. A vast proportion of the Win32 API has been mapped by now, for example, but there’re still people maintaining their own mappings, often with hard to find bugs. Please consider forking the project, writing a unit test and submitting a pull request. Check out the [contributing](https://github.com/twall/jna/blob/master/www/Contributing.md) section.
