@@ -13,14 +13,14 @@ I’ve recently had to deal with code that raises exceptions in a bunch of unpre
 ```ruby
 # trap all exceptions and fail gracefuly with a 500 and a proper message
 class ApiErrorHandler < Grape::Middleware::Base
-  def call!(env)
-    @env = env
-    begin
-      @app.call(@env)
-    rescue Exception => e
-      throw :error, :message => e.message || options[:default_message], :status => 500
-    end
-  end  
+  def call!(env)
+    @env = env
+    begin
+      @app.call(@env)
+    rescue Exception => e
+      throw :error, :message => e.message || options[:default_message], :status => 500
+    end
+  end
 end
 ```
 
@@ -28,14 +28,14 @@ This can be injected into the middleware stack, a construct I find quite elegant
 
 ```ruby
 require 'api_error_handler'
- 
+
 class Api_v1 < Grape::API
-  prefix 'api'
-  version 'v1'
-  
-  use ApiErrorHandler
-  
-  ...
+  prefix 'api'
+  version 'v1'
+
+  use ApiErrorHandler
+
+  ...
 end
 ```
 
@@ -43,38 +43,38 @@ To be good citizens we’ll write an RSpec test, heavily inspired by Grape’s s
 
 ```ruby
 require 'spec_helper'
- 
+
 describe "ApiErrorHandler" do
- 
-  subject { Class.new(Grape::API) }  
-  def app; subject end
-  
-  describe "error" do
-  
-    before do
-      subject.prefix 'api'
-      subject.use ApiErrorHandler
-      subject.get :error do
-        raise "api error"
-      end
-      subject.get :hello do
-        { hello: "world" }
-      end
-    end
- 
-    it "should return world when asked hello" do    
-      get '/api/hello'
-      JSON.parse(response.body).should == { "hello" => "world" }
-      response.status.should == 200
-    end
-    
-    it "should return a 500 when an exception is raised" do    
-      get '/api/error'
-      response.status.should == 500
-      response.body.should == "api error"
-    end
-    
-  end
+
+  subject { Class.new(Grape::API) }
+  def app; subject end
+
+  describe "error" do
+
+    before do
+      subject.prefix 'api'
+      subject.use ApiErrorHandler
+      subject.get :error do
+        raise "api error"
+      end
+      subject.get :hello do
+        { hello: "world" }
+      end
+    end
+
+    it "should return world when asked hello" do
+      get '/api/hello'
+      JSON.parse(response.body).should == { "hello" => "world" }
+      response.status.should == 200
+    end
+
+    it "should return a 500 when an exception is raised" do
+      get '/api/error'
+      response.status.should == 500
+      response.body.should == "api error"
+    end
+
+  end
 end
 ```
 

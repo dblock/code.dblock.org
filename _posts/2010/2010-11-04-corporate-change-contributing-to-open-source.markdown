@@ -86,7 +86,7 @@ With this success I finally had an opportunity to make contributing to open-sour
 > For example, a test tool is a good candidate, while the core IP service XYZ is not.
 >
 > #### Steps
-> 
+>
 > 1. Identify a project clearly, in writing. If the software has already been written, specify which artifacts you wish to open-source, specifically source code in SVN.
 > 2. Prepare a 1-2 slide presentation to clearly explain the project. A sample presentation can be found at ... .
 > 3. Email the presentation to your manager and get their approval.
@@ -108,7 +108,7 @@ The second clarifies the rules of engagement with existing open-source projects.
 >
 > You must notify your manager and clear, in writing, your plans to contribute to an open-source project. Describe the purpose of your efforts.
 >
-> Usually, but not always, such projects directly benefit the Company. Those are typically directly or indirectly used by a Company product, service or partner and  often require improvements to further benefit the company.
+> Usually, but not always, such projects directly benefit the Company. Those are typically directly or indirectly used by a Company product, service or partner and  often require improvements to further benefit the company.
 >
 > You may also be a contributor to free and open-source projects that improve your technical skills and further your career as an engineer or help with networking among peers that work for other companies. A percentage of your work time may be allocated to such contributions with your manager's approval.
 >
@@ -132,4 +132,4 @@ The second clarifies the rules of engagement with existing open-source projects.
 
 I gave a talk about our new policies at the last Engineering all-hands, including one on personal technical blogging. There were skeptics and there were supporters. Then, several people contacted me in private to say how excited they were by these changes, how they got the "become a craftsman, learn from other craftsmen" message. That alone deserves another blog post.
 
-Today I am sitting in a much different <a href="http://www.appsecinc.com/">AppSecInc.</a> office on Madison Ave., one with hope and some level of renewed enthusiasm. Enabling engineers to contribute to open source was a major shift for a company which has Database Security, Risk and Compliance as primary business. We employ the world’s <a href="http://www.teamshatter.com/">best database security research team</a> and we know how to keep our mouths shut. We are advised and trusted by the world’s most secretive organizations. We sit on critical zero-day vulnerabilities for months before vendors fix them. Open-source was so remote for us two years ago, yet we’re now more open than ever. Now, my engineers will grow active soldiers of an army of hundreds of thousands, with opportunities to work with the best technologists while still making  a tremendous impact on the software which both pays their bills and solves real business problems. The open source initiative will benefit the company in a big way, affecting hearts and minds, those priceless bits of individual motivation.
+Today I am sitting in a much different <a href="http://www.appsecinc.com/">AppSecInc.</a> office on Madison Ave., one with hope and some level of renewed enthusiasm. Enabling engineers to contribute to open source was a major shift for a company which has Database Security, Risk and Compliance as primary business. We employ the world’s <a href="http://www.teamshatter.com/">best database security research team</a> and we know how to keep our mouths shut. We are advised and trusted by the world’s most secretive organizations. We sit on critical zero-day vulnerabilities for months before vendors fix them. Open-source was so remote for us two years ago, yet we’re now more open than ever. Now, my engineers will grow active soldiers of an army of hundreds of thousands, with opportunities to work with the best technologists while still making  a tremendous impact on the software which both pays their bills and solves real business problems. The open source initiative will benefit the company in a big way, affecting hearts and minds, those priceless bits of individual motivation.

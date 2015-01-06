@@ -10,7 +10,7 @@ comments: true
 
 Here’re a few helpful tricks for setting up a build environment, finding the most recent version of [NUnit](http://www.nunit.org/) and using it with [MSBuild Community Tasks](http://msbuildtasks.tigris.org/) programmatically (assuming you’re not checking in NUnit alongside your source code, which you probably should).
 
-We wrap build into a _build.cmd_ that sets up a basic build environment. This avoids users the headache of launching anything except a command prompt upfront. We want a certain version of Visual Studio, targeting  a certain version of .NET Framework and NUnit. This is a typical project setup.
+We wrap build into a _build.cmd_ that sets up a basic build environment. This avoids users the headache of launching anything except a command prompt upfront. We want a certain version of Visual Studio, targeting  a certain version of .NET Framework and NUnit. This is a typical project setup.
 
 #### Finding Program Files
 

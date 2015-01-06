@@ -22,22 +22,22 @@ My current blog implementation supports ATOM. This is done by using an asp:Repea
     <ItemTemplate>
       <entry>
         <id>Post/<%# Eval("Id") %></id>
-        <title><%# Renderer.Render(Eval("Title")) %></title>
-        <created><%# ((DateTime) Eval("Created")).ToString("s") %></created>
-        <modified><%# ((DateTime) Eval("Modified")).ToString("s") %></modified>
-        <issued><%# ((DateTime) Eval("Created")).ToString("s") %></issued>
-        <author>
-          <name>author</name>
-        </author>
-        <content type="text/html" mode="xhtml">
+        <title><%# Renderer.Render(Eval("Title")) %></title>
+        <created><%# ((DateTime) Eval("Created")).ToString("s") %></created>
+        <modified><%# ((DateTime) Eval("Modified")).ToString("s") %></modified>
+        <issued><%# ((DateTime) Eval("Created")).ToString("s") %></issued>
+        <author>
+          <name>author</name>
+        </author>
+        <content type="text/html" mode="xhtml">
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <![CDATA[
+            <![CDATA[
               <%# Eval("Body") %>
-            ]]>
+            ]]>
           </body>
-        </content>
-        <link rel="alternate" type="text/html" href='ShowPost.aspx?Id=<%# Eval("Id") %>' />
-        <link rel="edit" href='AtomPost.aspx?Id=<%# Eval("Id") %>' />
+        </content>
+        <link rel="alternate" type="text/html" href='ShowPost.aspx?Id=<%# Eval("Id") %>' />
+        <link rel="edit" href='AtomPost.aspx?Id=<%# Eval("Id") %>' />
       </entry>
     </ItemTemplate>
   </asp:Repeater>
@@ -48,12 +48,12 @@ This works fine for generating feeds, but in order to consume ATOM posts I will 
 
 ```cs
 Response.ContentType = "application/atom+xml;charset=\"utf-8\"";
- 
+
 AtomFeed feed = new AtomFeed();
 feed.Title = new AtomTextConstruct(Title);
- 
+
 List<Posts> posts = SessionManager.BlogService.GetPosts();
- 
+
 foreach (TransitPost post in posts)
 {
   AtomEntry atomEntry = new AtomEntry();
@@ -208,15 +208,15 @@ image.Id = RequestId;
 image.Name = string.Format("{0}.jpg", Request.Headers["Slug"]);
 image.Data = new byte[Request.InputStream.Length];
 Request.InputStream.Read(image.Data, 0, (int)Request.InputStream.Length);
- 
+
 image.Id = SessionManager.BlogService.CreateOrUpdateImage(SessionManager.Ticket, image);
- 
+
 Response.ContentType = "application/atom+xml;type=entry;charset=\"utf-8\"";
 Response.StatusCode = 201;
 Response.StatusDescription = "Created";
 string location = string.Format("AtomImage.aspx?id={0}", image.Id);
 Response.Headers.Add("Location", location);
- 
+
 AtomEntry atomEntry = GetImage(image);
 atomEntry.Save(Response.OutputStream);
 Response.End();

@@ -12,15 +12,15 @@ It's not hard, but rather frustrating to find :) [This post](http://forum.instal
 Set installer = CreateObject("WindowsInstaller.Installer")
 On Error Resume Next
 For Each prod In installer.ProductsEx("", "", 7)
-   sLocalPkg = prod.InstallProperty("LocalPackage")
-   set oDB = installer.OpenDataBase(sLocalPkg, 0)
-   sQuery = "SELECT `Value` FROM `Property` WHERE `Property` = 'UpgradeCode'"
-   Set oView = oDB.OpenView(sQuery)
-   oView.Execute
-   Set oRecord = oView.Fetch
-   If Not (oRecord is Nothing) Then
-    sUpgradeCode = oRecord.StringData(1)
-    WScript.Echo sUpgradeCode & ": " & prod.InstallProperty("ProductName") & " - " & prod.ProductCode
-   End If
+   sLocalPkg = prod.InstallProperty("LocalPackage")
+   set oDB = installer.OpenDataBase(sLocalPkg, 0)
+   sQuery = "SELECT `Value` FROM `Property` WHERE `Property` = 'UpgradeCode'"
+   Set oView = oDB.OpenView(sQuery)
+   oView.Execute
+   Set oRecord = oView.Fetch
+   If Not (oRecord is Nothing) Then
+    sUpgradeCode = oRecord.StringData(1)
+    WScript.Echo sUpgradeCode & ": " & prod.InstallProperty("ProductName") & " - " & prod.ProductCode
+   End If
 Next
 ```

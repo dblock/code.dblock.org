@@ -6,20 +6,20 @@ date: 2011-03-16 21:39:46
 tags: [ruby]
 comments: true
 ---
-This is going to heavily quote [http://www.rubyfleebie.com/enumerations-and-ruby/](http://www.rubyfleebie.com/enumerations-and-ruby/),  please read that first. The proposed implementation lets you iterate over enumerated values, which is quite awesome. But it offers little in terms of reuse. Let's improve upon it and split the methods in a way that lets us include an Enum implementation with all its class methods along the way. Full Enum.rb at the end.
+This is going to heavily quote [http://www.rubyfleebie.com/enumerations-and-ruby/](http://www.rubyfleebie.com/enumerations-and-ruby/),  please read that first. The proposed implementation lets you iterate over enumerated values, which is quite awesome. But it offers little in terms of reuse. Let's improve upon it and split the methods in a way that lets us include an Enum implementation with all its class methods along the way. Full Enum.rb at the end.
 
 ```ruby
 module Enum
- 
-  ... instance methods ...
-  
-  def self.included(base)
-    base.extend(ClassMethods)    
-  end
- 
-  module ClassMethods
-    ... class methods ...
-  end
+
+  ... instance methods ...
+
+  def self.included(base)
+    base.extend(ClassMethods)
+  end
+
+  module ClassMethods
+    ... class methods ...
+  end
 end
 ```
 
@@ -29,10 +29,10 @@ To define a gender enumeration we can now write the following.
 
 ```ruby
 class Gender
-  include Enum
-  
-  Gender.define :MALE, "male"
-  Gender.define :FEMALE, "female"
+  include Enum
+
+  Gender.define :MALE, "male"
+  Gender.define :FEMALE, "female"
 end
 ```
 
@@ -46,51 +46,51 @@ I want to be able to write `define :MALE = "male"` inside `Gender` class and I w
 
 ```ruby
 module Enum
-  def initialize(key, value)
-    @key = key
-    @value = value
-  end
- 
-  def key
-    @key
-  end
- 
-  def value
-    @value
-  end
-  
-  def self.included(base)
-    base.extend(ClassMethods)    
-  end
- 
-  module ClassMethods
-    def define(key, value)
-      @hash ||= {}
-      @hash[key] = self.new(key, value)
-    end
- 
-    def const_missing(key)
-      @hash[key].value
-    end    
- 
-    def each
-      @hash.each do |key, value|
-        yield key, value
-      end
-    end
- 
-    def all
-      @hash.values
-    end
- 
-    def all_to_hash
-      hash = {}
-      each do |key, value|
-        hash[key] = value.value
-      end
-      hash
-    end
-  end
+  def initialize(key, value)
+    @key = key
+    @value = value
+  end
+
+  def key
+    @key
+  end
+
+  def value
+    @value
+  end
+
+  def self.included(base)
+    base.extend(ClassMethods)
+  end
+
+  module ClassMethods
+    def define(key, value)
+      @hash ||= {}
+      @hash[key] = self.new(key, value)
+    end
+
+    def const_missing(key)
+      @hash[key].value
+    end
+
+    def each
+      @hash.each do |key, value|
+        yield key, value
+      end
+    end
+
+    def all
+      @hash.values
+    end
+
+    def all_to_hash
+      hash = {}
+      each do |key, value|
+        hash[key] = value.value
+      end
+      hash
+    end
+  end
 end
 ```
 

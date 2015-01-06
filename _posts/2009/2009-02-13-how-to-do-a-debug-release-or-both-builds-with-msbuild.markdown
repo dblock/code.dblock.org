@@ -22,7 +22,7 @@ Let's define a property for the default configuration, ie. when no Configuration
 
 ### Multiple Configurations
 
-What if multiple configurations were specified? For example, _Debug;Release_. We want to transform a single property into an array of task parameters. There's a brain-twisting way of doing this with MSBuild.
+What if multiple configurations were specified? For example, _Debug;Release_. We want to transform a single property into an array of task parameters. There's a brain-twisting way of doing this with MSBuild.
 
 ```xml
 <Target Name="configurations">

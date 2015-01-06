@@ -36,7 +36,7 @@ When the site undergoes maintenance it can be down or in read-only mode over an 
 
 ![image]({{ site.url }}/images/posts/2011/2011-06-20-jna-is-now-a-githubber/image5%5b1%5d.jpg)
 
-Seriously? You _may_ be able to access the site in read-only mode over the week-end? Otherwise you get this experience.  It should just say "Not Working".
+Seriously? You _may_ be able to access the site in read-only mode over the week-end? Otherwise you get this experience.  It should just say "Not Working".
 
 ![image]({{ site.url }}/images/posts/2011/2011-06-20-jna-is-now-a-githubber/image%5b19%5d.jpg)
 

@@ -10,9 +10,9 @@ Yet again I have to deal with 3rd party licenses, this time in RoR. It’s a pre
 
 ```ruby
 Gem.loaded_specs.each do |key, spec|
-    spec.licenses.each do |license|
-        puts "#{spec} => #{license}"
-    end
+    spec.licenses.each do |license|
+        puts "#{spec} => #{license}"
+    end
 end
 ```
 
@@ -24,28 +24,28 @@ Here’s a Rake task I added to our project. It generates a list of gems and lic
 
 ```ruby
 require 'gem_licenses'
- 
+
 task :licenses do
-  Gem.licenses.each do |license, gems|
-    puts "#{license}"
-    gems.sort_by { |gem| gem.name }.each do |gem|
-      puts "\* #{gem.name} #{gem.version} (#{gem.homepage}) - #{gem.summary}"
-    end
-  end
+  Gem.licenses.each do |license, gems|
+    puts "#{license}"
+    gems.sort_by { |gem| gem.name }.each do |gem|
+      puts "\* #{gem.name} #{gem.version} (#{gem.homepage}) - #{gem.summary}"
+    end
+  end
 end
 ```
 
-Finally, if you are a gem author, please take the time  to specify which license your project is published under in the .gemspec. If you’re using Jeweler, specify _gem.license_.
+Finally, if you are a gem author, please take the time  to specify which license your project is published under in the .gemspec. If you’re using Jeweler, specify _gem.license_.
 
 ```ruby
 Jeweler::Tasks.new do |gem|
-  gem.name = "gem-licenses"
-  gem.homepage = "http://github.com/dblock/gem-licenses"
-  gem.license = "MIT"
-  gem.summary = "List all gem licenses."
-  gem.description = "Attempts to figure out what licenses various gems use."
-  gem.email = "dblock@dblock.org"
-  gem.authors = ["Daniel Doubrovkine"]
+  gem.name = "gem-licenses"
+  gem.homepage = "http://github.com/dblock/gem-licenses"
+  gem.license = "MIT"
+  gem.summary = "List all gem licenses."
+  gem.description = "Attempts to figure out what licenses various gems use."
+  gem.email = "dblock@dblock.org"
+  gem.authors = ["Daniel Doubrovkine"]
 end
 ```
 

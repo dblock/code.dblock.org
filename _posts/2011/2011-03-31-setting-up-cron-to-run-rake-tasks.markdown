@@ -12,7 +12,7 @@ This is the last piece of the dev-ops puzzle. We want our [MongoDB backup](http:
 
 ```ruby
 task :cron => :environment do
-  Rake::Task['db:production:backup'].invoke
+  Rake::Task['db:production:backup'].invoke
 end
 ```
 
@@ -20,9 +20,9 @@ We are going ot use [whenever](https://github.com/javan/whenever) to avoid the u
 
 ```ruby
 set :output, "/tmp/cron_log.log"
- 
+
 every 1.day, :at => '3:30 am' do
-  rake 'cron'
+  rake 'cron'
 end
 ```
 

@@ -6,7 +6,7 @@ date: 2008-12-26 14:00:00
 tags: [vmware]
 comments: true
 ---
-Looking at the source code of [another VMWare C# wrapper on CodePlex](http://www.codeplex.com/VixCOMWrapper), turns out that most VMWare interfaces represent VMWare handles. This is a good decision from the design point of view, but the implementation in VMWare VIX API is wrong: it should be returning objects that implement multiple interfaces, instead it returns one of the interfaces that you can happily cast to another.
+Looking at the source code of [another VMWare C# wrapper on CodePlex](http://www.codeplex.com/VixCOMWrapper), turns out that most VMWare interfaces represent VMWare handles. This is a good decision from the design point of view, but the implementation in VMWare VIX API is wrong: it should be returning objects that implement multiple interfaces, instead it returns one of the interfaces that you can happily cast to another.
 
 This does answer the question of how to get the display name of a VMWare snapshot.
 

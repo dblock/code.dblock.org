@@ -16,11 +16,11 @@ I tried to reproduce at no avail. After-all, it’s not that complicated to disp
 
 Looks like a MAC. That’s the problem! It’s a conspiracy of Apple against Microsoft. There must be code in Safari that changes 6:30 to 6:00 every time it hits a website written in .NET.
 
-![image]({{ site.url }}/images/posts/2010/2010-01-09-living-in-adelaide-gmt930/image%5b11%5d.jpg) 
+![image]({{ site.url }}/images/posts/2010/2010-01-09-living-in-adelaide-gmt930/image%5b11%5d.jpg)
 
 The screenshots are convincing. The problem exists. And the cause is right there on the screen. The browser' time zone is _Adelaide (GMT+09:30)_. Adelaide, turns out, is the capital of South Australia and has a population of just over a million people. It has a superb climate and cheap housing. It also has a time zone that is nine and a half hours away from UTC. Nine and a half? That’s weird, I’ve never paid attention to half-hour time zones. Turns out there’re others, including Kathmandu, GMT+5:45. Debugging the code it was clear that my entire time-zone system was rounding hours. And now I remember why.
 
-When I started dealing with time zones, I added code that let the user choose which time zone he’s in and defaulted the value to the browser time zone. The latter comes from a browser cookie, x-VisitorTimeZoneOffset. I wrongly assumed that the offset is an int, so it did int.Parse. That was the first mistake because in Adelaide the browser time zone would be +9.5. I wanted this value to become a TimeSpan, but this is not serializable,  hence all methods that needed the user’s time zone offset took an int. Adelaide time zone offset would be 9 and all the times, stored in UTC and converted to the user’s time zone were wrong by 30 minutes.
+When I started dealing with time zones, I added code that let the user choose which time zone he’s in and defaulted the value to the browser time zone. The latter comes from a browser cookie, x-VisitorTimeZoneOffset. I wrongly assumed that the offset is an int, so it did int.Parse. That was the first mistake because in Adelaide the browser time zone would be +9.5. I wanted this value to become a TimeSpan, but this is not serializable,  hence all methods that needed the user’s time zone offset took an int. Adelaide time zone offset would be 9 and all the times, stored in UTC and converted to the user’s time zone were wrong by 30 minutes.
 
 In order to fix this I had to make a few changes.
 

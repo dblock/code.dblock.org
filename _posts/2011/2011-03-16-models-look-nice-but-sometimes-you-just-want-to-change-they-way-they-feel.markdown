@@ -10,12 +10,12 @@ MongoId models provide an excellent level of abstraction. Consider a _User_ mode
 
 ```ruby
 class User
-  include Mongoid::Document
-  
-  devise :invitable, :database_authenticatable, ...
- 
-  field :name, :type => String
-  field :email, :type => String
+  include Mongoid::Document
+
+  devise :invitable, :database_authenticatable, ...
+
+  field :name, :type => String
+  field :email, :type => String
 end
 ```
 
@@ -23,7 +23,7 @@ We have derived an _Admin _type from it.
 
 ```ruby
 class Admin < User
- 
+
 end
 ```
 
@@ -35,8 +35,8 @@ We have to change the internal `_type` field. So far I found only one way, reach
 
 ```ruby
 def self.promote!(user)
-    users = Mongoid.master.collection('users')
-    users.update( { :"_id" => user.id }, { :"$set" => { :"_type" => "Admin" }})
+    users = Mongoid.master.collection('users')
+    users.update( { :"_id" => user.id }, { :"$set" => { :"_type" => "Admin" }})
 end
 ```
 

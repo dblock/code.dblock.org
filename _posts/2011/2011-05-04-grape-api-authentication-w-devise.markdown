@@ -23,7 +23,7 @@ No authentication is easy. We don’t do anything.
 
 ```ruby
 get "ping" do
-  "pong"
+  "pong"
 end
 ```
 
@@ -33,8 +33,8 @@ A previously logged in user is authenticated with Devise (based on Warden). Ther
 
 ```ruby
 get "me" do
-  authenticated_user
-  current_user.as_json
+  authenticated_user
+  current_user.as_json
 end
 ```
 
@@ -42,15 +42,15 @@ The authenticated_user method uses warden.
 
 ```ruby
 def authenticated
-  if warden.authenticated?
-    return true
-  else
-    error!('401 Unauthorized', 401)
-  end
+  if warden.authenticated?
+    return true
+  else
+    error!('401 Unauthorized', 401)
+  end
 end
 
 def current_user
-  warden.user
+  warden.user
 end
 ```
 
@@ -64,52 +64,52 @@ Before we hookup user authentication, note that we have multiple authentication 
 
 ```ruby
 class AccessGrant
-  include Mongoid::Document
-  include Mongoid::Timestamps
-  
-  field :code, :type => String
-  field :access_token, :type => String
-  field :refresh_token, :type => String
-  field :access_token_expires_at, :type => Time
- 
-  referenced_in :user
-  referenced_in :application, :class_name => "ClientApplication"
- 
-  def self.find_access(access_token)
-    where(:access_token => access_token).
-      any_of(
-             {:access_token_expires_at => nil},
-             {:access_token_expires_at.gt => Time.now}).first
-  end
- 
-  before_create :gen_tokens
-  
-  def self.prune!
-    where(:created_at.lt => 3.days.ago).delete_all
-  end
- 
-  def self.authenticate(code, application_id)
-    where(:code => code, :application_id => application_id).first
-  end
- 
-  def start_expiry_period!
-    self.update_attribute(:access_token_expires_at, 2.days.from_now)
-  end
- 
-  def redirect_uri_for(redirect_uri)
-    if redirect_uri =~ /\?/
-      redirect_uri + "&code=#{code}&response_type=code"
-    else
-      redirect_uri + "?code=#{code}&response_type=code"
-    end
-  end
- 
-  protected
-  
-  def gen_tokens
-    self.code, self.access_token, self.refresh_token = SecureRandom.hex(16), SecureRandom.hex(16), SecureRandom.hex(16)
-  end
- 
+  include Mongoid::Document
+  include Mongoid::Timestamps
+
+  field :code, :type => String
+  field :access_token, :type => String
+  field :refresh_token, :type => String
+  field :access_token_expires_at, :type => Time
+
+  referenced_in :user
+  referenced_in :application, :class_name => "ClientApplication"
+
+  def self.find_access(access_token)
+    where(:access_token => access_token).
+      any_of(
+             {:access_token_expires_at => nil},
+             {:access_token_expires_at.gt => Time.now}).first
+  end
+
+  before_create :gen_tokens
+
+  def self.prune!
+    where(:created_at.lt => 3.days.ago).delete_all
+  end
+
+  def self.authenticate(code, application_id)
+    where(:code => code, :application_id => application_id).first
+  end
+
+  def start_expiry_period!
+    self.update_attribute(:access_token_expires_at, 2.days.from_now)
+  end
+
+  def redirect_uri_for(redirect_uri)
+    if redirect_uri =~ /\?/
+      redirect_uri + "&code=#{code}&response_type=code"
+    else
+      redirect_uri + "?code=#{code}&response_type=code"
+    end
+  end
+
+  protected
+
+  def gen_tokens
+    self.code, self.access_token, self.refresh_token = SecureRandom.hex(16), SecureRandom.hex(16), SecureRandom.hex(16)
+  end
+
 end
 ```
 
@@ -121,28 +121,28 @@ To get an XApp token one would call the _xapp_token_ API method with the client 
 
 ```ruby
 get "xapp_token" do
-  application = ClientApplication.authenticate(params[:client_id], params[:client_secret])
-  error!("401 Unauthorized", 401) if application.nil?
-  AccessGrant.prune!
-  access_grant = AccessGrant.create(:application => application)
-  error!("401 Unauthorized", 401) if access_grant.new_record?
-  access_grant.start_expiry_period!
-  {
-      :xapp_token => access_grant.access_token,
-      :refresh_token => access_grant.refresh_token,
-      :expires_in => access_grant.access_token_expires_at
-  }
+  application = ClientApplication.authenticate(params[:client_id], params[:client_secret])
+  error!("401 Unauthorized", 401) if application.nil?
+  AccessGrant.prune!
+  access_grant = AccessGrant.create(:application => application)
+  error!("401 Unauthorized", 401) if access_grant.new_record?
+  access_grant.start_expiry_period!
+  {
+      :xapp_token => access_grant.access_token,
+      :refresh_token => access_grant.refresh_token,
+      :expires_in => access_grant.access_token_expires_at
+  }
 end
 
 def authenticated
-  if warden.authenticated?
-    return true
-  elsif params[:xapp_token] and
-      AccessGrant.find_access(params[:xapp_token])
-    return true
-  else
-    error!('401 Unauthorized', 401)
-  end
+  if warden.authenticated?
+    return true
+  elsif params[:xapp_token] and
+      AccessGrant.find_access(params[:xapp_token])
+    return true
+  else
+    error!('401 Unauthorized', 401)
+  end
 end
 ```
 
@@ -158,15 +158,15 @@ Let's start from the the tail-end. Assume the client application has gotten some
 
 ```ruby
 def self.find_for_token_authentication(params = {})
-  access = AccessGrant.find_access(params["access_token"])
-  return access.user if access
+  access = AccessGrant.find_access(params["access_token"])
+  return access.user if access
 end
 ```
 
 How does a user obtain such a token with OAuth2? We’ll need two routes.
 
 ```ruby
-match '/oauth2/authorize'    => 'oauth#authorize',    :via => [:get, :post]
+match '/oauth2/authorize'    => 'oauth#authorize',    :via => [:get, :post]
 match '/oauth2/access_token' => 'oauth#access_token', :via => [:get, :post]
 ```
 
@@ -174,41 +174,41 @@ OAuth2 starts by redirecting users to _/oauth2/authorize?client_id=[client id]&r
 
 ```ruby
 class OauthController < ApplicationController
- 
-  before_filter :authenticate_user!, :except => [:access_token]
-  skip_before_filter :verify_authenticity_token, :only => [:access_token]
- 
-  def authorize
-    AccessGrant.prune!
-    access_grant = current_user.access_grants.create(:application => get_application)
-    redirect_to access_grant.redirect_uri_for(params[:redirect_uri])
-  end
- 
-  def access_token
-    application = ClientApplication.authenticate(params[:client_id], params[:client_secret])
-    if application.nil?
-      render :json => {:error => "Could not find application"}
-      return
-    end
-    access_grant = AccessGrant.authenticate(params[:code], application.id)
-    if access_grant.nil?
-      render :json => {:error => "Could not authenticate access code"}
-      return
-    end
-    access_grant.start_expiry_period!
-    render :json => {
-        :access_token => access_grant.access_token,
-        :refresh_token => access_grant.refresh_token,
-        :expires_in => access_grant.access_token_expires_at
-    }
-  end
- 
-  protected
- 
-  def get_application
-    @application ||= ClientApplication.where(:app_id => params[:client_id]).first
-  end
- 
+
+  before_filter :authenticate_user!, :except => [:access_token]
+  skip_before_filter :verify_authenticity_token, :only => [:access_token]
+
+  def authorize
+    AccessGrant.prune!
+    access_grant = current_user.access_grants.create(:application => get_application)
+    redirect_to access_grant.redirect_uri_for(params[:redirect_uri])
+  end
+
+  def access_token
+    application = ClientApplication.authenticate(params[:client_id], params[:client_secret])
+    if application.nil?
+      render :json => {:error => "Could not find application"}
+      return
+    end
+    access_grant = AccessGrant.authenticate(params[:code], application.id)
+    if access_grant.nil?
+      render :json => {:error => "Could not authenticate access code"}
+      return
+    end
+    access_grant.start_expiry_period!
+    render :json => {
+        :access_token => access_grant.access_token,
+        :refresh_token => access_grant.refresh_token,
+        :expires_in => access_grant.access_token_expires_at
+    }
+  end
+
+  protected
+
+  def get_application
+    @application ||= ClientApplication.where(:app_id => params[:client_id]).first
+  end
+
 end
 ```
 
@@ -216,38 +216,38 @@ Finally, we can rewrite our API authenticate method appropriately and implement 
 
 ```ruby
 helpers do
-  def warden
-    env['warden']
-  end
-  def authenticated
-    if warden.authenticated?
-      return true
-    elsif params[:access_token] and
-        User.find_for_token_authentication("access_token" => params[:access_token])
-      return true
-    elsif params[:xapp_token] and
-        AccessGrant.find_access(params[:xapp_token])
-      return true
-    else
-      error!('401 Unauthorized', 401)
-    end
-  end
-  def current_user
-    warden.user || User.find_for_token_authentication("access_token" => params[:access_token])
-  end
-  def is_admin?
-    current_user && current_user.is_admin?
-  end
-  # returns 401 if there's no current user
-  def authenticated_user
-    authenticated
-    error!('401 Unauthorized', 401) unless current_user
-  end
-  # returns 401 if not authenticated as admin
-  def authenticated_admin
-    authenticated
-    error!('401 Unauthorized', 401) unless is_admin?
-  end
+  def warden
+    env['warden']
+  end
+  def authenticated
+    if warden.authenticated?
+      return true
+    elsif params[:access_token] and
+        User.find_for_token_authentication("access_token" => params[:access_token])
+      return true
+    elsif params[:xapp_token] and
+        AccessGrant.find_access(params[:xapp_token])
+      return true
+    else
+      error!('401 Unauthorized', 401)
+    end
+  end
+  def current_user
+    warden.user || User.find_for_token_authentication("access_token" => params[:access_token])
+  end
+  def is_admin?
+    current_user && current_user.is_admin?
+  end
+  # returns 401 if there's no current user
+  def authenticated_user
+    authenticated
+    error!('401 Unauthorized', 401) unless current_user
+  end
+  # returns 401 if not authenticated as admin
+  def authenticated_admin
+    authenticated
+    error!('401 Unauthorized', 401) unless is_admin?
+  end
 end
 ```
 

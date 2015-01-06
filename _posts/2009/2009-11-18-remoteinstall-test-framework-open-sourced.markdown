@@ -16,10 +16,10 @@ In the meantime we were authoring MSI installers like crazy. We had to deal with
 ```
 for each virtual machine {
   for each snapshot {
-    restore the snapshot
-    install the software
-    report success or failure
-  }
+    restore the snapshot
+    install the software
+    report success or failure
+  }
 }
 ```
 

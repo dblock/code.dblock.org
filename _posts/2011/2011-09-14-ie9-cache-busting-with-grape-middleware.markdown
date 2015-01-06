@@ -30,7 +30,7 @@ And, trying to get muscle memory for good habits, a test.
 
 ```ruby
 require 'spec_helper'
- 
+
 describe ApiCacheBuster do
   it "sets cache headers" do
     get "/api/v1/ping"

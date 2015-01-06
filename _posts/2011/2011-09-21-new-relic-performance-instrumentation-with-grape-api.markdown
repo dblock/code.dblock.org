@@ -14,7 +14,7 @@ Add the [newrelic_rpm](https://github.com/newrelic/rpm) gem to Gemfile. It will 
 
 ```ruby
 group :production do
-  gem "newrelic_rpm", "3.1.2"
+  gem "newrelic_rpm", "3.1.2"
 end
 ```
 #### Rack Up

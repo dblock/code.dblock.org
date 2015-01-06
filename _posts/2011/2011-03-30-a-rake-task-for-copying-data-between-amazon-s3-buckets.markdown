@@ -20,7 +20,7 @@ end
 def s3i_open
   s3_config = YAML.load_file(Rails.root.join("config/heroku.yml")).symbolize_keys
   s3_key_id = s3_config[:production]['config']['S3_ACCESS_KEY_ID']
-  s3_access_key = s3_config[:production]['config']['S3_SECRET_ACCESS_KEY']    
+  s3_access_key = s3_config[:production]['config']['S3_SECRET_ACCESS_KEY']
   RightAws::S3Interface.new(s3_key_id, s3_access_key, { logger: Rails.logger })
 end
 ```
@@ -37,16 +37,16 @@ s3i.incrementally_list_bucket(args[:from]) do |response|
 end
 ```
 
-My first implementation used the S3 bucket object, which turned out to be very slow. The enumeration with S3Interface takes roughly 30 seconds per 1000 items, cool.  The rest is easy: we’ll walk the source hash, copy any new or changed items and then walk the target hash to delete any old items.
+My first implementation used the S3 bucket object, which turned out to be very slow. The enumeration with S3Interface takes roughly 30 seconds per 1000 items, cool.  The rest is easy: we’ll walk the source hash, copy any new or changed items and then walk the target hash to delete any old items.
 
 Here’s the full Rake task. Edit your bucket names and run _rake s3:sync:production:to_staging_.
 
 ```ruby
 require 'logger'
- 
+
 namespace :s3 do
   namespace :sync
- 
+
     def s3i
       @@s3 ||= s3i_open
     end
@@ -54,7 +54,7 @@ namespace :s3 do
     def s3i_open
       s3_config = YAML.load_file(Rails.root.join("config/heroku.yml")).symbolize_keys
       s3_key_id = s3_config[:production]['config']['S3_ACCESS_KEY_ID']
-      s3_access_key = s3_config[:production]['config']['S3_SECRET_ACCESS_KEY']    
+      s3_access_key = s3_config[:production]['config']['S3_SECRET_ACCESS_KEY']
       RightAws::S3Interface.new(s3_key_id, s3_access_key, { logger: Rails.logger })
     end
 
@@ -65,12 +65,12 @@ namespace :s3 do
         Rake::Task["s3:sync:syncObjects"].execute({ from: "production", to: "staging" })
       end
     end
- 
+
     desc "Sync two s3 buckets."
     task :syncObjects, [:from, :to] => :environment do |t, args|
       start_time = Time.now
       logger.info("[#{Time.now}] synchronizing from #{args[:from]} to #{args[:to]}")
-    
+
       logger.info("[#{Time.now}] fetching keys from #{args[:from]}")
       source_objects_hash = Hash.new
       s3i.incrementally_list_bucket(args[:from]) do |response|
@@ -78,7 +78,7 @@ namespace :s3 do
           source_objects_hash[source_object[:key]] = source_object
         end
       end
- 
+
       logger.info("[#{Time.now}] fetching keys from #{args[:to]}")
       target_objects_hash = Hash.new
       s3i.incrementally_list_bucket(args[:to]) do |response|
@@ -86,9 +86,9 @@ namespace :s3 do
           target_objects_hash[target_object[:key]] = target_object
         end
       end
- 
+
       logger.info("[#{Time.now}] synchronizing #{source_objects_hash.size} => #{target_objects_hash.size} object(s)")
-    
+
       source_objects_hash.each do |key, source_object|
         target_object = target_objects_hash[key]
         if (target_object.nil?)
@@ -101,14 +101,14 @@ namespace :s3 do
           logger.info(" #{key}: skip")
         end
       end
-    
+
       target_objects_hash.each_key do |key|
         if (! source_objects_hash.has_key?(key))
           logger.info(" #{key}: delete")
           s3i.delete(args[:to], key)
         end
       end
-    
+
       logger.info("[#{Time.now}] done (#{Time.now - start_time})")
     end
   end

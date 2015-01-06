@@ -6,32 +6,32 @@ date: 2011-07-23 19:17:36
 tags: [rails, ruby, architecture]
 comments: true
 ---
-A lot of people ask me whether we use Rails controllers for our API. We don’t, we use [Grape](https://github.com/intridea/grape). Grape is a Rack-based system and a DSL that provides a cleaner separation, some API-specific  functionality and generally a better syntax. Now that we have [dealt with exceptions](/grape-trapping-all-exceptions-within-the-api) and [authentication](/grape-api-authentication-w-devise) we realized that the amount of functionality exposed in the API has grown exponentially in one single Ruby file. Let's refactor it into modules.
+A lot of people ask me whether we use Rails controllers for our API. We don’t, we use [Grape](https://github.com/intridea/grape). Grape is a Rack-based system and a DSL that provides a cleaner separation, some API-specific  functionality and generally a better syntax. Now that we have [dealt with exceptions](/grape-trapping-all-exceptions-within-the-api) and [authentication](/grape-api-authentication-w-devise) we realized that the amount of functionality exposed in the API has grown exponentially in one single Ruby file. Let's refactor it into modules.
 
 Here’s our current code from API v1.
 
 ```ruby
 class Api_v1 < Grape::API
-    prefix 'api'
-    version 'v1'
-    rescue_from :all, :backtrace => true
-    error_format :json
-    helpers do
-        def authenticated
-            if warden.authenticated?
-                return true
-            else
-                error!('401 Unauthorized', 401)
-            end
-        end
-    end
-    namespace :me do
-        # GET /api/v1/me/info
-        get "info" do
-            authenticated
-            current_user.as_json({properties: :self})
-        end
-    end
+    prefix 'api'
+    version 'v1'
+    rescue_from :all, :backtrace => true
+    error_format :json
+    helpers do
+        def authenticated
+            if warden.authenticated?
+                return true
+            else
+                error!('401 Unauthorized', 401)
+            end
+        end
+    end
+    namespace :me do
+        # GET /api/v1/me/info
+        get "info" do
+            authenticated
+            current_user.as_json({properties: :self})
+        end
+    end
 end
 ```
 
@@ -39,9 +39,9 @@ We want a separate file for helpers and for the _me_ API. We can move the helper
 
 ```ruby
 module ApiAuth
-  def authenticated
-    ...
-  end
+  def authenticated
+    ...
+  end
 end
 ```
 
@@ -49,14 +49,14 @@ The namespace DSL is a bit tricky. Those _namespace_ and _get_ are actually name
 
 ```ruby
 module Api_v1_Me
-  def self.included(api)
-    api.namespace :me do
-      # GET /api/v1/me/info
-      get "info" do
-        ...
-      end
-    end    
-  end
+  def self.included(api)
+    api.namespace :me do
+      # GET /api/v1/me/info
+      get "info" do
+        ...
+      end
+    end
+  end
 end
 ```
 
@@ -64,14 +64,14 @@ Let's combine all of this into an API class.
 
 ```ruby
 class Api_v1 < Grape::API
-  prefix 'api'
-  version 'v1'
-  rescue_from :all, :backtrace => true
-  error_format :json
-  helpers do
-    include ApiAuth
-  end
-  include Api_v1_Me
+  prefix 'api'
+  version 'v1'
+  rescue_from :all, :backtrace => true
+  error_format :json
+  helpers do
+    include ApiAuth
+  end
+  include Api_v1_Me
 end
 ```
 
@@ -79,13 +79,13 @@ The nice thing about this implementation is that we can now compose an API v2 wi
 
 ```ruby
 module Api_v1_Me
-    include Grape::APIModule
-    namespace :me do
-        # GET /api/v1/me/info
-        get "info" do
-        ...
-        end
-    end    
+    include Grape::APIModule
+    namespace :me do
+        # GET /api/v1/me/info
+        get "info" do
+        ...
+        end
+    end
 end
 ```
 

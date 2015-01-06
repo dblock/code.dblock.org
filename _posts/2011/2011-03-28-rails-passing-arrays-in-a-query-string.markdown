@@ -18,8 +18,8 @@ Here’s what Rails parses from this query string.
 
 ```
 {
-    :widget => ["first-widget",  "another widget"],
-    :gadget => ["a-gadget"]
+    :widget => ["first-widget",  "another widget"],
+    :gadget => ["a-gadget"]
 }
 ```
 

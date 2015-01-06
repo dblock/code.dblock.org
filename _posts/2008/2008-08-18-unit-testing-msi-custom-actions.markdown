@@ -8,11 +8,11 @@ comments: true
 ---
 ### Prologue
 
-I've been doing a lot of [Wix](http://wixtoolset.org/) lately. Actually for the past six years or so: I was a believer since my last couple of years at [The Evil Empire](http://www.microsoft.com). [Wix](http://wixtoolset.org/) is easy, but custom actions aren't so much. Unit testing custom actions is the topic of this post.
+I've been doing a lot of [Wix](http://wixtoolset.org/) lately. Actually for the past six years or so: I was a believer since my last couple of years at [The Evil Empire](http://www.microsoft.com). [Wix](http://wixtoolset.org/) is easy, but custom actions aren't so much. Unit testing custom actions is the topic of this post.
 
 My team at my real job has been rebuilding deployment and installation for a rather large application and had to write three large installers and many custom actions that don't exist in the wix toolset. We started a long time ago, all the work is in C++. And since many prior fiascos have left me a believer in agile practices, I wanted to figure out how to unit test these many custom actions.
 
-A coworker wrote a shim that implemented some MSI functions. With clever conditional compilation we built unit tests for all simple CAs. But once we started writing more complex deferred custom actions coffee conversations at Casa Cupcake turned into providing a SQL engine in the shim vs. parsing SQL. It smelled too complex, cumbersome and sounded like a lot of work, which would have taken away from coffee time!
+A coworker wrote a shim that implemented some MSI functions. With clever conditional compilation we built unit tests for all simple CAs. But once we started writing more complex deferred custom actions coffee conversations at Casa Cupcake turned into providing a SQL engine in the shim vs. parsing SQL. It smelled too complex, cumbersome and sounded like a lot of work, which would have taken away from coffee time!
 
 After some research I found a much better model: creating a hosting a real MSI, which I will demonstrate in this post.
 
@@ -65,7 +65,7 @@ MsiOpenPackage(handle, & hproduct);
 
 ### Calling a Custom Action
 
-There're two ways of calling the custom. You can import the CustomAction table that contains the name and reference to your CA, subject of another future post. This works for all types of custom actions, but it can get a little involved since you have to import several tables: CustomAction and Binary. For simpler C++ custom actions, simply fetch the CA's entry point and pass the MSI handle obtained from MsiOpenPackage.
+There're two ways of calling the custom. You can import the CustomAction table that contains the name and reference to your CA, subject of another future post. This works for all types of custom actions, but it can get a little involved since you have to import several tables: CustomAction and Binary. For simpler C++ custom actions, simply fetch the CA's entry point and pass the MSI handle obtained from MsiOpenPackage.
 
 ```c
 // load CustomAction.dll

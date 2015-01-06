@@ -18,11 +18,11 @@ A simple page has a name and some content.
 
 ```ruby
 class Page
-  include Mongoid::Document
-  include Mongoid::Timestamps
- 
-  field :name, type: String
-  field :content, type: String
+  include Mongoid::Document
+  include Mongoid::Timestamps
+
+  field :name, type: String
+  field :content, type: String
 end
 ```
 
@@ -34,8 +34,8 @@ Assume _:content_ is in a wiki (markdown) format. No need to stand on your head 
 
 ```haml
 %div
-  :markdown
-    #{@page.content}
+  :markdown
+    #{@page.content}
 ```
 
 #### Embed
@@ -46,14 +46,14 @@ You can now create pages and link them together by using markdown by their relat
 class Page
   def self.content_by_name(name)
     p = Page.find(:first, conditions: { name: name })
-    p ? p.content : ''
+    p ? p.content : ''
   end
 end
 ```
 
 ```haml
 :markdown
-  #{Page.content_by_name('footer')}
+  #{Page.content_by_name('footer')}
 ```
 
 In my example we introduced a convention that a footer page should be called _footer_. In the footer page I’ll place a `[Contact](/pages/Contact)` line to link the _Contact_ page. Someone from marketing can create and edit that.

@@ -10,16 +10,16 @@ Let’s say you have some Ruby file that you want to run on [Heroku](http://hero
 
 ```ruby
 namespace :stuff do
- 
-  require 'logger'
-  
-  desc 'Run stuff/things.rb'
-  task :things => :environment do
-    file = File.join(Rails.root, 'stuff', 'things.rb')
-    puts "Runnng #{file}"
-    load(file) if File.exist?(file)
-  end
- 
+
+  require 'logger'
+
+  desc 'Run stuff/things.rb'
+  task :things => :environment do
+    file = File.join(Rails.root, 'stuff', 'things.rb')
+    puts "Runnng #{file}"
+    load(file) if File.exist?(file)
+  end
+
 end
 ```
 

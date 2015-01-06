@@ -86,7 +86,7 @@ Remove the following line of code.
 
 ```jsp
 <%
-    response.setHeader("WWW-Authenticate", "Basic realm=\"Tomcat Manager Application\"");
+    response.setHeader("WWW-Authenticate", "Basic realm=\"Tomcat Manager Application\"");
 %>
 ```
 

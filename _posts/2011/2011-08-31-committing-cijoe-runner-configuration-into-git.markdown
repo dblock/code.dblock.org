@@ -30,11 +30,11 @@ We can also have two scripts, _git-config/build-worked_ and _git-config/build-fa
 #!/bin/sh
 echo "
 Visit http://ci.example.com:9000/ for details
- 
-Author:  $AUTHOR
+
+Author:  $AUTHOR
 Message:
 $MESSAGE
- 
+
 $OUTPUT
 " | mail -s "[example] BUILD FAILED $SHA" --to dev@example.com
 ```

@@ -76,7 +76,7 @@ namespace :db do
   task :backup => :environment do
     Rake::Task["db:backupDatabase"].execute({env: Rails.env.to_sym})
   end
- 
+
   desc "Backup a MongoDB database to Amazon S3."
   task :backupDatabase, [:env] => :environment do |t, args|
     env = args[:env] || Rails.env

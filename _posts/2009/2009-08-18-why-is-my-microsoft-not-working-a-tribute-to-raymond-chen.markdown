@@ -6,7 +6,7 @@ date: 2009-08-18 12:15:00
 tags: [people]
 comments: true
 ---
-I was reading [Raymond Chen's "The Old New Thing"](http://blogs.msdn.com/oldnewthing) on my way home in the NY subway yesterday. I met Raymond once @ MSFT, and he probably doesn't remember me, but over the last few years I came to realize that I really enjoy his blog. Most of his posts are related to some old or new technology but put in a more humanly digestible context. Hence, [You can use Coke as your password, but not a Pepsi one](http://blogs.msdn.com/oldnewthing/archive/2009/07/02/9812315.aspx).
+I was reading [Raymond Chen's "The Old New Thing"](http://blogs.msdn.com/oldnewthing) on my way home in the NY subway yesterday. I met Raymond once @ MSFT, and he probably doesn't remember me, but over the last few years I came to realize that I really enjoy his blog. Most of his posts are related to some old or new technology but put in a more humanly digestible context. Hence, [You can use Coke as your password, but not a Pepsi one](http://blogs.msdn.com/oldnewthing/archive/2009/07/02/9812315.aspx).
 
 So, in a classic tribute I have my own little story. All names are fictional.
 

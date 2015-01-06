@@ -123,7 +123,7 @@ InstallerLinker.exe /Output:Setup.exe /Template:htmlInstaller.exe /Configuration
 
 This produces Setup.exe that includes all the HTML files and our picture in the _Samples\HtmlSetup\Picture_ folder. Note that the HTML UI resized the component selector automatically to insert the picture, as expected.
 
-![image]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image%5b25%5d.jpg) 
+![image]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image%5b25%5d.jpg)
 
 #### Creating a Basic Workflow
 

@@ -16,29 +16,29 @@ We’ve implemented the following policy and are making a more general version o
 >
 > **Technical Blogging**
 >
-> Technical blogging includes general software problems that you may have encountered at work.  For example, if you solved the complex problem of reversing a string in Java, by all means do write a post on your personal blog about the solution that you found and lessons learned.
+> Technical blogging includes general software problems that you may have encountered at work.  For example, if you solved the complex problem of reversing a string in Java, by all means do write a post on your personal blog about the solution that you found and lessons learned.
 >
 > **Common Sense**
 >
-> When blogging, exercise common sense.  A simple Litmus test: _would you and the Company be OK if your blog posts or comments were posted on a top news site?_
+> When blogging, exercise common sense.  A simple Litmus test: _would you and the Company be OK if your blog posts or comments were posted on a top news site?_
 >
-> Do not engage in personal or sexual harassment, unfounded accusations, or remarks that would contribute to a hostile workplace (racial, sexual, religious, etc.).  Avoid discussing your employer or other specific stakeholders, or incidents that have occurred in the workplace and that are not generally known outside the workplace.  Do not show images of Company premises or property.  When you are addressing controversial issues, emphasize the issue and underlying principles of debate rather than specific parties involved.  Do not appear in, forward or repeat pornography.  Do not engage in other activities that are illegal (such as spam, piracy).  Include a conspicuous disclaimer that any opinions are strictly the associate’s own.  Do not post in a public space any material which could cause a reasonable person (especially a client or customer) to question your fitness for the job that you have, or your belief in your own fitness.
+> Do not engage in personal or sexual harassment, unfounded accusations, or remarks that would contribute to a hostile workplace (racial, sexual, religious, etc.).  Avoid discussing your employer or other specific stakeholders, or incidents that have occurred in the workplace and that are not generally known outside the workplace.  Do not show images of Company premises or property.  When you are addressing controversial issues, emphasize the issue and underlying principles of debate rather than specific parties involved.  Do not appear in, forward or repeat pornography.  Do not engage in other activities that are illegal (such as spam, piracy).  Include a conspicuous disclaimer that any opinions are strictly the associate’s own.  Do not post in a public space any material which could cause a reasonable person (especially a client or customer) to question your fitness for the job that you have, or your belief in your own fitness.
 >
 > **Blogging Confidential Information**
 >
-> Protect Company confidential information and trade secrets.  Do not ever post or discuss the intellectual property, demographic or financial status of the Company.
+> Protect Company confidential information and trade secrets.  Do not ever post or discuss the intellectual property, demographic or financial status of the Company.
 >
-> Unless you are an authorized Company spokesperson, cleared by your manager and the legal department, you should not disclose or comment on Company confidential data in any form, including blogging.  Do not talk about any specifics that relate to the Company’s products, partners or employees that are not available on public websites.
+> Unless you are an authorized Company spokesperson, cleared by your manager and the legal department, you should not disclose or comment on Company confidential data in any form, including blogging.  Do not talk about any specifics that relate to the Company’s products, partners or employees that are not available on public websites.
 >
 > **Identify Yourself**
 >
-> You may identify yourself as an employee of the Company where you deem appropriate and where you believe either you or the Company would benefit from it.  For example, you may mention it on your blog's About page or refer to a real software or technology problem that you had at work.
+> You may identify yourself as an employee of the Company where you deem appropriate and where you believe either you or the Company would benefit from it.  For example, you may mention it on your blog's About page or refer to a real software or technology problem that you had at work.
 >
 > **Source Code**
 >
 > You may use boilerplate snippets to explain a solution to a generic problem.
 >
-> You may not include any Company source code in your posts identified as such.  Never post complete files or working examples that are used as-is in the products developed at work.
+> You may not include any Company source code in your posts identified as such.  Never post complete files or working examples that are used as-is in the products developed at work.
 >
 > **When in Doubt**
 >

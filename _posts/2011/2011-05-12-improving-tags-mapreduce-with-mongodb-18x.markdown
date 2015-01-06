@@ -12,9 +12,9 @@ MongoDB 1.7.4 introduced inline results within map/reduce. It avoids creating a 
 
 ```ruby
 if collection.db.connection.server_version >= '1.7.4'
-  # supports inline map/reduce
+  # supports inline map/reduce
 else
-  # doesn't support inline map/reduce
+  # doesn't support inline map/reduce
 end
 ```
 
@@ -23,20 +23,20 @@ Let's also learn to declare JavaScript functions inline. It’s prettier than a 
 ```ruby
 map = <<-EOS
   function() {
-    if (this.tags != null) {
+    if (this.tags != null) {
       this.tags.forEach(function(t) {
-        emit(t, 1);
+        emit(t, 1);
       });
-    }
+    }
   }
 EOS
- 
+
 reduce = <<-EOS
-  function(key, values) {
+  function(key, values) {
     var count = 0;
     values.forEach(function(v) { count += v; });
     return count;
-  }
+  }
 EOS
 ```
 
@@ -46,7 +46,7 @@ To make the tags update incremental, let's collect all the tags upfront into a h
 
 ```ruby
 tags_before = Hash[*Tag.all.collect { |tag|
-  [tag.name, tag]
+  [tag.name, tag]
 }.flatten]
 ```
 
@@ -55,12 +55,12 @@ The incremental update takes care of creating new tags or updating counts.
 ```ruby
 tag = tags_before[name]
 if ! tag
-  Tag.create!(name: name, count: tag_mapreduce['value'].to_i)
+  Tag.create!(name: name, count: tag_mapreduce['value'].to_i)
 else
-  tag_mapreduce_count = tag_mapreduce['value'].to_i
-  if (tag_mapreduce_count != tag.count)
+  tag_mapreduce_count = tag_mapreduce['value'].to_i
+  if (tag_mapreduce_count != tag.count)
     tag.update_attribute(:count, tag_mapreduce_count)
-  end
+  end
 end
 ```
 
@@ -68,7 +68,7 @@ We’ll also have to remember to delete tags that no longer exist.
 
 ```ruby
 (tags_before.values - tags_after).each do |tag|
-  tag.delete
+  tag.delete
 end
 ```
 

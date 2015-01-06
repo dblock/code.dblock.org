@@ -14,14 +14,14 @@ In Ruby we use the [mongoid-slug](https://github.com/papercavalier/mongoid-slug)
 
 ```ruby
 class Artwork
-  include Mongoid::Document
-  include Mongoid::Slug
-  
-  field :title, type: String  
-  slug :title, index: true
-  
-  ...
- 
+  include Mongoid::Document
+  include Mongoid::Slug
+
+  field :title, type: String
+  slug :title, index: true
+
+  ...
+
 end
 ```
 
@@ -36,14 +36,14 @@ I decided to implement the same thing for this blog, which is a bit obsolete arc
 /// <returns></returns>
 public static string ToSlug(string s)
 {
-    s = s.ToLower();
-    // invalid chars, make into spaces
-    s = Regex.Replace(s, @"[^a-z0-9\s-]", "");
-    // convert multiple spaces/hyphens into one space       
-    s = Regex.Replace(s, @"[\s-]+", " ").Trim();
-    // hyphens
-    s = Regex.Replace(s, @"\s", "-");
-    return s;
+    s = s.ToLower();
+    // invalid chars, make into spaces
+    s = Regex.Replace(s, @"[^a-z0-9\s-]", "");
+    // convert multiple spaces/hyphens into one space
+    s = Regex.Replace(s, @"[\s-]+", " ").Trim();
+    // hyphens
+    s = Regex.Replace(s, @"\s", "-");
+    return s;
 }
 ```
 
@@ -52,25 +52,25 @@ Slugs are unique, so we must avoid duplicates. While there’re more effective a
 ```cs
 public void GenerateSlug(ISession session)
 {
-    if (! string.IsNullOrEmpty(Slug))
-        return;
- 
-    String slug_base = Renderer.ToSlug(Title);
-    String slug_candidate = "";
-    int slug_count = 0;
-    Post existing_post = null;
- 
-    do
-    {
-        slug_candidate = slug_base + (slug_count == 0 ? "" : string.Format("-{0}", slug_count));
-        existing_post = session.CreateCriteria(typeof(Post))
-            .Add(Expression.Eq("Slug", slug_candidate))
-            .Add(Expression.Not(Expression.Eq("Id", this.Id)))
-            .UniqueResult<Post>();
-        slug_count += 1;
-    } while (existing_post != null);
- 
-    Slug = slug_candidate;
+    if (! string.IsNullOrEmpty(Slug))
+        return;
+
+    String slug_base = Renderer.ToSlug(Title);
+    String slug_candidate = "";
+    int slug_count = 0;
+    Post existing_post = null;
+
+    do
+    {
+        slug_candidate = slug_base + (slug_count == 0 ? "" : string.Format("-{0}", slug_count));
+        existing_post = session.CreateCriteria(typeof(Post))
+            .Add(Expression.Eq("Slug", slug_candidate))
+            .Add(Expression.Not(Expression.Eq("Id", this.Id)))
+            .UniqueResult<Post>();
+        slug_count += 1;
+    } while (existing_post != null);
+
+    Slug = slug_candidate;
 }
 ```
 
@@ -80,16 +80,16 @@ The routing is a bit trickier. Until now the posts were accessible as _ShowPost.
 string path = Request.Path.Substring(Request.ApplicationPath.Length).Trim("/".ToCharArray());
 if (! string.IsNullOrEmpty(path))
 {
-    // rewrite a slug link to a ShowPost.aspx internal url
-    if (path.IndexOf('.') < 0)
-    {
-        string[] parts = Request.Path.Split('/');
-        string slug = parts[parts.Length - 1];
-        if (! String.IsNullOrEmpty(slug))
-        {
-            HttpContext.Current.RewritePath(string.Format("ShowPost.aspx?slug={0}", slug));
-        }
-    }
+    // rewrite a slug link to a ShowPost.aspx internal url
+    if (path.IndexOf('.') < 0)
+    {
+        string[] parts = Request.Path.Split('/');
+        string slug = parts[parts.Length - 1];
+        if (! String.IsNullOrEmpty(slug))
+        {
+            HttpContext.Current.RewritePath(string.Format("ShowPost.aspx?slug={0}", slug));
+        }
+    }
 }
 ```
 
@@ -101,12 +101,12 @@ Secondly, we’d like to permanently redirect anyone with a _ShowPost.aspx?id=In
 // rewrite ShowPost.aspx link to a slug
 if (path == "ShowPost.aspx" && !string.IsNullOrEmpty(Request["id"]))
 {
-    // fetch the post, its slug and permanently redirect to it
+    // fetch the post, its slug and permanently redirect to it
 }
 // rewrite a slug link
 else if (path == "ShowPost.aspx" && !string.IsNullOrEmpty(Request["slug"]))
 {
-    Response.RedirectPermanent(Request["slug"]);
+    Response.RedirectPermanent(Request["slug"]);
 }
 ```
 

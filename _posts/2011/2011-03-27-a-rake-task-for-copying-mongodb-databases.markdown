@@ -114,7 +114,7 @@ namespace :db do
    uri = URI.parse(url)
    [uri, uri.path.gsub("/", "")]
   end
- 
+
   namespace :production do
    desc "Copy production data to staging"
    task :to_staging => :environment do
@@ -125,7 +125,7 @@ namespace :db do
     Rake::Task["db:copy:copyDatabase"].execute({ from: get_mongohq_url(:production), to: "mongodb://localhost:27017/development" })
    end
   end
- 
+
   namespace :staging do
    desc "Copy staging data to local"
    task :to_local => :environment do

@@ -6,7 +6,7 @@ date: 2009-02-10 13:45:00
 tags: [.net]
 comments: true
 ---
-I was profiling an application at my real job with [MemProfiler](http://memprofiler.com/). It yielded a very high number of instances in a .NET `Queue<T>`. What was abnormal is a constant growth of the numbers over time.
+I was profiling an application at my real job with [MemProfiler](http://memprofiler.com/). It yielded a very high number of instances in a .NET `Queue<T>`. What was abnormal is a constant growth of the numbers over time.
 
 I narrowed this down to the .NET Queue class. If you [examine the .NET Queue source code](http://blogs.msdn.com/sburke/archive/2008/01/16/configuring-visual-studio-to-debug-net-framework-source-code.aspx), you will notice that it grows infinitely by design in a rotating window pattern. Enqueue means incrementing the pointer modulo the length of the array and Dequeue means decrement the pointer, except when on a collision and needing to resize. In this case everything is copied to a larger array that grows by a factor.
 
@@ -47,7 +47,7 @@ public void TrimExcess() {
 }
 ```
 
-The issue for our implementation is that the queue space isn't ever reclaimed automatically. We're using the queue in its processing sense: blocking, thread-safe and bounded. Hence if we had a million items in the queue once, we would keep an array of a million items until `TrimExcess` is called. That is just a lot of memory to hang onto.
+The issue for our implementation is that the queue space isn't ever reclaimed automatically. We're using the queue in its processing sense: blocking, thread-safe and bounded. Hence if we had a million items in the queue once, we would keep an array of a million items until `TrimExcess` is called. That is just a lot of memory to hang onto.
 
-A more efficient implementation for our needs was a double-queue. Inserting happens on the "in" queue while retrieving happens from the "out" queue. When the "out" queue is empty, it is dropped (reclaiming the memory in the next GC) the "in" queue is flipped with the "out" queue, and the "in" queue is re-created. The only lock taken is during the flip.
+A more efficient implementation for our needs was a double-queue. Inserting happens on the "in" queue while retrieving happens from the "out" queue. When the "out" queue is empty, it is dropped (reclaiming the memory in the next GC) the "in" queue is flipped with the "out" queue, and the "in" queue is re-created. The only lock taken is during the flip.
 

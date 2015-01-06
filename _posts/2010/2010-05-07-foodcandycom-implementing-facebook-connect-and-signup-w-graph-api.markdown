@@ -205,7 +205,7 @@ return acct.Id;
 
 That’s a lot of private information that you gave me with a single click! Let's look at the created account.
 
-![image]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image%5b25%5d.jpg) 
+![image]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image%5b25%5d.jpg)
 
 Try it! Signup to FoodCandy with a Facebook account.
 

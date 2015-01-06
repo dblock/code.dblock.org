@@ -39,7 +39,7 @@ task :uploadToS3, [:to] => :environment do |t, args|
       existing_assets_hash[previous_asset_hash] ||= DateTime.parse(existing_object[:last_modified])
     end
   end
- 
+
   logger.info("[#{Time.now}] #{existing_assets_hash.count} existing asset(s)")
   previous_hash = nil
   existing_assets_hash.each_pair do |asset_hash, last_modified|
@@ -47,7 +47,7 @@ task :uploadToS3, [:to] => :environment do |t, args|
     previous_hash = asset_hash unless (previous_hash and existing_assets_hash[previous_hash] > last_modified)
   end
   logger.info("[#{Time.now}] keeping #{previous_hash}") if previous_hash
- 
+
   logger.info("[#{Time.now}] copying from #{from} to s3:#{to} @ #{hash}")
   Dir.glob(from + "/\*\*/\*").each do |entry|
     next if File::directory?(entry)

@@ -8,7 +8,7 @@ comments: true
 ---
 Before I start writing anything serious here, I got to get some credibility :)
 
-My name is Daniel Doubrovkine, aka dB. I've had a blog ([www.dblock.org](http://www.dblock.org)) since 1994 or something like that and I've been in technology for slightly longer than that. I've founded several companies, worked for [The Evil Empire](http://www.microsoft.com) for five years and several other businesses since. You can read my non-updated resume from 06' [here](http://dblock.org/Bric-a-brac/resume/Daniel-Doubrovkine-Resume-2006.pdf).
+My name is Daniel Doubrovkine, aka dB. I've had a blog ([www.dblock.org](http://www.dblock.org)) since 1994 or something like that and I've been in technology for slightly longer than that. I've founded several companies, worked for [The Evil Empire](http://www.microsoft.com) for five years and several other businesses since. You can read my non-updated resume from 06' [here](http://dblock.org/Bric-a-brac/resume/Daniel-Doubrovkine-Resume-2006.pdf).
 
 Today I am Development Manager of Products at [Application Security Inc.](http://www.appsecinc.com). I have a team of three dozen people shipping two products: [AppDetectivePro](http://www.appsecinc.com/products/appdetective/) and [DbProtect](http://www.appsecinc.com/products/dbprotect/index.shtml). I contribute to a variety of open-source projects as well on my free time and have posted a few articles on [CodeProject](http://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=913212).
 

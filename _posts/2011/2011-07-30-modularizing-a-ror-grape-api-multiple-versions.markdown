@@ -12,11 +12,11 @@ We’ll start by declaring an API class the way we would like to see it.
 
 ```ruby
 class Api < Grape::API
-  prefix 'api'
-  rescue_from :all, :backtrace => true
-  error_format :json
-  include Api_v1  
-  include Api_v2
+  prefix 'api'
+  rescue_from :all, :backtrace => true
+  error_format :json
+  include Api_v1
+  include Api_v2
 end
 ```
 
@@ -27,15 +27,15 @@ match '/api/v1/\*other' => Api
 match '/api/v2/\*other' => Api
 ```
 
-What does _Api_v1_ or _Api_v2_ look like? It’s  a little tricky. We need to include api modules into the parent Grape API, like this.
+What does _Api_v1_ or _Api_v2_ look like? It’s  a little tricky. We need to include api modules into the parent Grape API, like this.
 
 ```ruby
 module Api_v1
-  def self.included(api)
-    api.version 'v1'
-    api.include Api_v1_Me
-    ...
-  end
+  def self.included(api)
+    api.version 'v1'
+    api.include Api_v1_Me
+    ...
+  end
 end
 ```
 
@@ -43,20 +43,20 @@ Unfortunately _Module::include_ is private. Let’s expose it as _module_ by ext
 
 ```ruby
 module ApiModule
-  module ClassMethods
-    def module(mod)
-      include mod
-    end
-  end
-  def self.included(api)
-    api.extend ClassMethods
-  end
+  module ClassMethods
+    def module(mod)
+      include mod
+    end
+  end
+  def self.included(api)
+    api.extend ClassMethods
+  end
 end
 
 class Api < Grape::API
-  include ApiModule
-  prefix 'api'
-  ...
+  include ApiModule
+  prefix 'api'
+  ...
 end
 ```
 
@@ -64,10 +64,10 @@ The Api_v1 will use _module_ instead of _include_.
 
 ```ruby
 module Api_v1
-  def self.included(api)
-    api.version 'v1'
-    api.module Api_v1_Me
-  end
+  def self.included(api)
+    api.version 'v1'
+    api.module Api_v1_Me
+  end
 end
 ```
 
@@ -75,12 +75,12 @@ Don’t forget to write some tests. I’ve made [a pull request](https://github.
 
 ```ruby
 require 'spec_helper'
- 
+
 describe Api do
-  describe "version" do
-    it "includes version 1 and 2" do
-      Api::versions.should == ['v1', 'v2']
-    end
-  end
+  describe "version" do
+    it "includes version 1 and 2" do
+      Api::versions.should == ['v1', 'v2']
+    end
+  end
 end
 ```

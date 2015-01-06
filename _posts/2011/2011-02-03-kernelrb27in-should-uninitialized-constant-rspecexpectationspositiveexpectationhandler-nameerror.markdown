@@ -17,8 +17,8 @@ The problem was that you need to configure the expectations framework in _spec\s
 
 ```ruby
 RSpec.configure do |config|
-    config.mock_with :rspec
-    config.expect_with :rspec
+    config.mock_with :rspec
+    config.expect_with :rspec
 end
 ```
 

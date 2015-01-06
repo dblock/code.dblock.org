@@ -213,7 +213,7 @@ public EventLogRecord next() {
 }
 ```
 
-Finally, the actual `read`. Do nothing, for as long as there’re bytes in the current buffer and read the next block otherwise. Apply the same logic for resizing the buffer and for finishing the iteration.
+Finally, the actual `read`. Do nothing, for as long as there’re bytes in the current buffer and read the next block otherwise. Apply the same logic for resizing the buffer and for finishing the iteration.
 
 ```java
 private boolean read() {

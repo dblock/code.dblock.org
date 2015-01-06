@@ -10,20 +10,20 @@ I've been playing with [VMware](http://www.vmware.com/) lately, both Workstation
 
 #### What do we use this for?
 
-We (at my [day job](http://www.appsecinc.com/aboutus/index.shtml)) developed a tool (in C#) that runs MSI installers to make sure the product installs on various knownly good or bad environments, sort of unit testing installers. We also have an ESX environment that we share.
+We (at my [day job](http://www.appsecinc.com/aboutus/index.shtml)) developed a tool (in C#) that runs MSI installers to make sure the product installs on various knownly good or bad environments, sort of unit testing installers. We also have an ESX environment that we share.
 
 #### VMWare Programming APIs
 
 There're two types of APIs.
 
-- **VMWare Virtual Infrastructure SDK** : a set of tools and APIs to manage a VMWare Infrastructure environment. A toolkit has also been released that contains managed wrappers on top of the SOAP interface provided by a VMWare deployment. It's focused on VMWare ESX or VirtualCenter management and is beyond the scope of this post.
+- **VMWare Virtual Infrastructure SDK** : a set of tools and APIs to manage a VMWare Infrastructure environment. A toolkit has also been released that contains managed wrappers on top of the SOAP interface provided by a VMWare deployment. It's focused on VMWare ESX or VirtualCenter management and is beyond the scope of this post.
 
-- **VMWare VIX API**. The VIX API allows you to write programs and scripts that automate virtual machine operations, as well as the guests within virtual machines. It runs on both Windows and Linux and supports management of VMware Server, Workstation, and Virtual Infrastructure (both ESX and vCenter). Bindings are provided for C, Perl, and COM (Visual Basic, VBscript, C#). In this post I'll focus on the C# implementation.
+- **VMWare VIX API**. The VIX API allows you to write programs and scripts that automate virtual machine operations, as well as the guests within virtual machines. It runs on both Windows and Linux and supports management of VMware Server, Workstation, and Virtual Infrastructure (both ESX and vCenter). Bindings are provided for C, Perl, and COM (Visual Basic, VBscript, C#). In this post I'll focus on the C# implementation.
 
 #### What do you need?
 
 - Either VMWare [Workstation 6.5](http://www.vmware.com/download/ws/), a VI environment (I use ESX), or both.
-- VMWare ViX. This is the SDK, obtained from  [<u>http://www.vmware.com/download/sdk/vmauto.html</u>](http://www.vmware.com/download/sdk/vmauto.html). The new 1.6.2 version is required for VI support.
+- VMWare ViX. This is the SDK, obtained from  [<u>http://www.vmware.com/download/sdk/vmauto.html</u>](http://www.vmware.com/download/sdk/vmauto.html). The new 1.6.2 version is required for VI support.
 
 #### Connecting to a VMWare Workstation or ESX Server
 

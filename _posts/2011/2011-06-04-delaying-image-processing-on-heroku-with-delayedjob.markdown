@@ -21,13 +21,13 @@ We’ll use a simple example as our geometry processor. It reads the image and e
 
 ```ruby
 def get_geometry
-    himage = ::Magick::Image::read(@file).first
-    begin
-     geometry = [himage.columns, himage.rows]
-    ensure
-      himage.destroy! if himage
-    end
-    geometry
+    himage = ::Magick::Image::read(@file).first
+    begin
+     geometry = [himage.columns, himage.rows]
+    ensure
+      himage.destroy! if himage
+    end
+    geometry
 end
 ```
 
@@ -35,18 +35,18 @@ Previously we would run this method before saving the image, making our users wa
 
 ```ruby
 class ImageGeometryProcessor
-  def process(id, file)
-    himage = ::Magick::Image::read(file).first
-    begin
-      image = Image.find(id)
-      image.update_attributes!({
-          :best_width => himage.columns,
-          :best_height => himage.rows
-      })
-    ensure
-      himage.destroy! if himage
-    end
-  end  
+  def process(id, file)
+    himage = ::Magick::Image::read(file).first
+    begin
+      image = Image.find(id)
+      image.update_attributes!({
+          :best_width => himage.columns,
+          :best_height => himage.rows
+      })
+    ensure
+      himage.destroy! if himage
+    end
+  end
 end
 ```
 
@@ -58,18 +58,18 @@ We will now write a self-contained processor that gets the image url from the im
 
 ```ruby
 class ImageGeometryProcessor
-  def process(id)
-    image = Image.find(id)
-    himage = ::Magick::Image::read(image.image_url).first
-    begin
-      image.update_attributes!({
-          :best_width => himage.columns,
-          :best_height => himage.rows
-      })
-    ensure
-      himage.destroy! if himage
-    end
-  end  
+  def process(id)
+    image = Image.find(id)
+    himage = ::Magick::Image::read(image.image_url).first
+    begin
+      image.update_attributes!({
+          :best_width => himage.columns,
+          :best_height => himage.rows
+      })
+    ensure
+      himage.destroy! if himage
+    end
+  end
 end
 ```
 
@@ -77,14 +77,14 @@ Let's trigger the geometry processor from the _after_save_ callback of our image
 
 ```ruby
 class Image
-  after_save :saved
-  
-  def saved
-    if image.file?
-      # delay processing of image geometry
-      ImageGeometryProcessor.new.delay.process(id)
-    end
-  end 
+  after_save :saved
+
+  def saved
+    if image.file?
+      # delay processing of image geometry
+      ImageGeometryProcessor.new.delay.process(id)
+    end
+  end
 end
 ```
 
@@ -96,22 +96,22 @@ Finally, the geometry processor can take some final shape.
 
 ```ruby
 class ImageGeometryProcessor
-  
-  def process(id)
-    image = Image.find(id)
-    himage = ::Magick::Image::read(image.image_url).first
-    begin
-      Image.without_callbacks([:saved]) do
-        image.update_attributes!({
-          :best_width => himage.columns,
-          :best_height => himage.rows
-        })
-      end
-    ensure
-      himage.destroy! if himage
-    end
-  end
-  
+
+  def process(id)
+    image = Image.find(id)
+    himage = ::Magick::Image::read(image.image_url).first
+    begin
+      Image.without_callbacks([:saved]) do
+        image.update_attributes!({
+          :best_width => himage.columns,
+          :best_height => himage.rows
+        })
+      end
+    ensure
+      himage.destroy! if himage
+    end
+  end
+
 end
 ```
 

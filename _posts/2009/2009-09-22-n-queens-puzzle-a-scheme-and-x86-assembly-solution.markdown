@@ -23,5 +23,5 @@ I remember trying to get solutions for large (over 10) boards in 1995 and my PC 
 (128570) 11 1 3 5 12 2 15 13 18 14 4 6 19 16 10 7 20 8 17 9
 ```
 
- 
+
 

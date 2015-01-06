@@ -16,7 +16,7 @@ The following things made Alla very successful.
 
 1. Alla would spend a lot of time helping customers outside of crisis, earning credits that could be spent in bad times. She had a relationship with every customer, free, small or large.
 2. Alla had clear ownership of support problems. She would deal with issues, immediately and was the only point of contact and voice.
-3. Alla always got back to customers via e-mail to make sure all their issues were resolved.  She was proactive in reaching out and tracked dissatisfied customers offering her time and expertise.
+3. Alla always got back to customers via e-mail to make sure all their issues were resolved.  She was proactive in reaching out and tracked dissatisfied customers offering her time and expertise.
 4. Alla was honest in her communication. She never made promises or refer to another person in charge. She never offered apologies or excessive sympathy. She always stated hard facts.
 
 This combination made Alla our number one employee. In fact, she was regularly cited by customers that communicated with sales as one of the most competent support people that they ever had to interact with. She was also asked on a couple of dates. True story.

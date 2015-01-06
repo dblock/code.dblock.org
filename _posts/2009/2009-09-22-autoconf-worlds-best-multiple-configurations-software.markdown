@@ -6,7 +6,7 @@ date: 2009-09-22 22:49:25
 tags: [vestris]
 comments: true
 ---
-This was my first commercial product. It has been available for a while with [full x86 assembly source code](https://github.com/dblock/autoconf). It's useful if you still run a DOS system ;)
+This was my first commercial product. It has been available for a while with [full x86 assembly source code](https://github.com/dblock/autoconf). It's useful if you still run a DOS system ;)
 
 [http://www.vestris.com/software/autoconf.html](https://web.archive.org/web/20040222160628/http://www.vestris.com/software/autoconf.html)
 

@@ -16,7 +16,7 @@ The really annoying part of RSpec is that tests can run in any order. This depen
 
 ```ruby
 require 'rspec/core/rake_task'
- 
+
 SPEC_SUITES = [
   { :id => :models, :title => 'model tests', :pattern => "spec/models/\*\*/\*_spec.rb" },
   { :id => :api, :title => 'api tests', :pattern => "spec/api/\*\*/\*_spec.rb" },
@@ -25,7 +25,7 @@ SPEC_SUITES = [
   { :id => :misc, :title => 'misc tests',
       :pattern => ["spec/lib/\*\*/\*_spec.rb", "spec/mailers/\*\*/\*_spec.rb"] },
 ]
- 
+
 namespace :spec do
   namespace :suite do
     SPEC_SUITES.each do |suite|

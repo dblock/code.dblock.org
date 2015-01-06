@@ -23,7 +23,7 @@ Place all the JARs in _waffle/lib_ and added the folder to the common class load
 common.loader=...,${catalina.base}/waffle/lib/*.jar
 ```
 
-Grant JNA permissions for your web applications in _conf/catalina.policy _and allow it to load a native library from a temporary location. JNA also tries to unpack _jnidispatch.dll_ for the proper platform into a temporary location from its own JAR, and then load it.  If the load fails you typically get a _"java.lang.UnsatisfiedLinkError: jnidispatch (/com/sun/jna/win32-x86/jnidispatch.dll) not found in resource path"_ exception.
+Grant JNA permissions for your web applications in _conf/catalina.policy _and allow it to load a native library from a temporary location. JNA also tries to unpack _jnidispatch.dll_ for the proper platform into a temporary location from its own JAR, and then load it.  If the load fails you typically get a _"java.lang.UnsatisfiedLinkError: jnidispatch (/com/sun/jna/win32-x86/jnidispatch.dll) not found in resource path"_ exception.
 
 The grants in my _conf/catalina.policy_ look like this.
 

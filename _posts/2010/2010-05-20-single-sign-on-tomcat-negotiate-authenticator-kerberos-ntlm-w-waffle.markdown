@@ -109,20 +109,20 @@ In the logs you will see the following output for a successful logon.
 
 ```
 1. FINE: logged in user: dblock-green\dblock (S-1-5-21-3442045183-1395134217-4167419351-1000)
-2. FINE:  group: dblock-green\None
-3. FINE:  group: Everyone
-4. FINE:  group: dblock-green\HelpLibraryUpdaters
-5. FINE:  group: dblock-green\HomeUsers
-6. FINE:  group: BUILTIN\Administrators
-7. FINE:  group: BUILTIN\Users
-8. FINE:  group: NT AUTHORITY\INTERACTIVE
-9. FINE:  group: CONSOLE LOGON
-10. FINE:  group: NT AUTHORITY\Authenticated Users
-11. FINE:  group: NT AUTHORITY\This Organization
-12. FINE:  group: S-1-5-5-0-442419
-13. FINE:  group: LOCAL
-14. FINE:  group: NT AUTHORITY\NTLM Authentication
-15. FINE:  group: Mandatory Label\Medium Mandatory Level
+2. FINE:  group: dblock-green\None
+3. FINE:  group: Everyone
+4. FINE:  group: dblock-green\HelpLibraryUpdaters
+5. FINE:  group: dblock-green\HomeUsers
+6. FINE:  group: BUILTIN\Administrators
+7. FINE:  group: BUILTIN\Users
+8. FINE:  group: NT AUTHORITY\INTERACTIVE
+9. FINE:  group: CONSOLE LOGON
+10. FINE:  group: NT AUTHORITY\Authenticated Users
+11. FINE:  group: NT AUTHORITY\This Organization
+12. FINE:  group: S-1-5-5-0-442419
+13. FINE:  group: LOCAL
+14. FINE:  group: NT AUTHORITY\NTLM Authentication
+15. FINE:  group: Mandatory Label\Medium Mandatory Level
 16. INFO: successfully logged in user: dblock-green\dblock
 ```
 

@@ -58,7 +58,7 @@ Here’s our mail templates admin page with a link to the preview (_mail_templat
 
 ```haml
 %h1 Mail Templates
- 
+
 %table
   %tr
     %th Class Name
@@ -66,7 +66,7 @@ Here’s our mail templates admin page with a link to the preview (_mail_templat
     %th Subject
     %th
     %th
- 
+
   - @mail_templates.each do |mail_template|
     %tr
       %td= mail_template.class_name

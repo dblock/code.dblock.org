@@ -6,7 +6,7 @@ date: 2009-10-29 12:00:00
 tags: [vestris]
 comments: true
 ---
-In the spirt of winding down the rest of Vestris Inc., I've published the source code for all of the commercial software.
+In the spirt of winding down the rest of Vestris Inc., I've published the source code for all of the commercial software.
 
 - [Base C++ Library](https://github.com/dblock/baseclasses)
 - [aGNeS BBS](https://github.com/dblock/agnes)

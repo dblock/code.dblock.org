@@ -6,7 +6,7 @@ date: 2009-11-20 18:15:00
 tags: [codeproject, msi, wix]
 comments: true
 ---
-I am pleased to announce the open-sourcing of [AppSecInc. MSI Extensions](https://github.com/dblock/msiext).
+I am pleased to announce the open-sourcing of [AppSecInc. MSI Extensions](https://github.com/dblock/msiext).
 
 AppSecInc. MSI Extensions is a collection of MSI custom actions and WIX extensions that extend Windows installer, originally developed by [Application Security Inc.](http://www.appsecinc.com). for a large enterprise product, and now open-sourced under the Eclipse Public License. The project grew incrementally implementing everything that wix didn't have out of the box. Code is fully unit-tested.
 

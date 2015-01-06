@@ -25,12 +25,12 @@ I have two users, _dblock-gray\dblock_ and _dblock-gray\test_. I am running the 
 
 This means that while I am logged in as the test user (`request.getRemoteUser()` returns _dblock-gray\test_), the Windows thread identity is the same one as of the Tomcat server (_dblock-gray\dblock_).
 
-Let’s add _impersonate_ into  web.xml.
+Let’s add _impersonate_ into  web.xml.
 
 ```xml
 <filter>
   <filter-name>SecurityFilter</filter-name>
-  <filter-class>waffle.servlet.NegotiateSecurityFilter</filter-class>   
+  <filter-class>waffle.servlet.NegotiateSecurityFilter</filter-class>
   <init-param>
     <param-name>impersonate</param-name>
     <param-value>true</param-value>

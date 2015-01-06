@@ -17,14 +17,14 @@ Let's add a _MailTemplate_ that can render itself to HTML using [Sanitize](https
 ```ruby
 class MailTemplate
   include Mongoid::Document
- 
+
   field :class_name, :type => String
   field :method_name, :type => String
   field :subject, :type => String
   field :content, :type => String
 
   attr_accessible :content, :subject
- 
+
   def to_html(context)
     template = ERB.new(content, 0, "%<>")
     template_result = template.result(context)
@@ -56,7 +56,7 @@ There’re a lot of mailers, so having to create each template by hand doesn’t
 
 ```ruby
 module Mailers
- 
+
   ALL = {
     "Devise::Mailer" => [
       "confirmation_instructions",
@@ -65,7 +65,7 @@ module Mailers
       "invitation_instructions"
     ]
   }
- 
+
   def self.template_for(klass, method_name)
     method_name = method_name.to_s.gsub("_email", "")
     path = "#{Rails.root}/app/views/#{klass.to_s.underscore}/#{method_name.to_s}.md"
@@ -97,7 +97,7 @@ module Mailers
       end
     end
   end
- 
+
 end
 ```
 
@@ -106,7 +106,7 @@ It’s all pretty straightforward. You can add other mailers to _Mailers.ALL_. A
 ```md
 Hello <%=@resource.email%>!
 ```
- 
+
 Someone has requested a link to change your password, and you can do this through the link below.
 
 ```md
@@ -122,7 +122,7 @@ We want to override the Devise mailer and fetch the mail template, if available.
 
 ```ruby
 class DeviseMailer < Devise::Mailer
- 
+
   def template_paths
     "devise/mailer"
   end
@@ -159,7 +159,7 @@ A simple test is to make sure we can actually render an e-mail. Here’s what my
 
 ```ruby
 require "spec_helper"
- 
+
 describe DeviseMailer do
   before(:each) do
     @user = Fabricate(:user)

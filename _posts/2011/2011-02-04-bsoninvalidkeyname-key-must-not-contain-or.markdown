@@ -10,10 +10,10 @@ I ran into an error from Mongo, _BSON::InvalidKeyName: key must not contain '.'_
 
 ```ruby
 begin
-    # offending code
+    # offending code
 rescue Exception => e
-    puts e.backtrace
-    raise $!
+    puts e.backtrace
+    raise $!
 end
 ```
 

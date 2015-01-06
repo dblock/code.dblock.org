@@ -31,14 +31,14 @@ Add a _as_xls_ method to any model that you want to export that contains the fie
 
 ```ruby
 def as_xls(options = {})
-  {
-      "Id" => id.to_s,
-      "Name" => name,
-      "E-Mail" => email,
-      "Joined" => created_at,
-      "Last Signed In" => last_sign_in_at,
-      "Sign In Count" => sign_in_count
-  }
+  {
+      "Id" => id.to_s,
+      "Name" => name,
+      "E-Mail" => email,
+      "Joined" => created_at,
+      "Last Signed In" => last_sign_in_at,
+      "Sign In Count" => sign_in_count
+  }
 end
 ```
 
@@ -48,11 +48,11 @@ Add support for the .XLS format in any controller out of which you want to expor
 
 ```ruby
 def index
-  @users = User.all
-  respond_to do |format|
-    format.html
-    format.xls { send_data @users.to_xls, content_type: 'application/vnd.ms-excel', filename: 'users.xls' }
-  end
+  @users = User.all
+  respond_to do |format|
+    format.html
+    format.xls { send_data @users.to_xls, content_type: 'application/vnd.ms-excel', filename: 'users.xls' }
+  end
 end
 ```
 
@@ -72,19 +72,19 @@ We can write a spec for this controller too.
 
 ```ruby
 describe "GET index.xls" do
-  it "creates an Excel spreadsheet with all users" do      
-    user = Fabricate :user
-    get :index, :format => :xls
-    response.headers['Content-Type'].should == "application/vnd.ms-excel"
-    s = Spreadsheet.open(StringIO.new(response.body))
-    s.worksheets.count.should == 1
-    w = s.worksheet(0)
-    w.should_not be_nil
-    w.row(0)[0].should == "Id"
-    w.row(1)[0].should == user.id.to_s
-    w.row(0)[1].should == "Name"
-    w.row(1)[1].should == user.name
-  end
+  it "creates an Excel spreadsheet with all users" do
+    user = Fabricate :user
+    get :index, :format => :xls
+    response.headers['Content-Type'].should == "application/vnd.ms-excel"
+    s = Spreadsheet.open(StringIO.new(response.body))
+    s.worksheets.count.should == 1
+    w = s.worksheet(0)
+    w.should_not be_nil
+    w.row(0)[0].should == "Id"
+    w.row(1)[0].should == user.id.to_s
+    w.row(0)[1].should == "Name"
+    w.row(1)[1].should == user.name
+  end
 end
 ```
 
