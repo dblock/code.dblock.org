@@ -5,6 +5,7 @@ redirect_from: "/virtualbox-linux-on-windows/"
 date: 2011-04-09 21:10:13
 tags: [linux, virtualbox, rails, ruby, vmware]
 comments: true
+dblog_post_id: 196
 ---
 I am going to say nice things about Oracle software. Brace yourself.
 

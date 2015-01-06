@@ -5,6 +5,7 @@ redirect_from: "/appsecinc-msi-experience/"
 date: 2009-11-20 18:15:00
 tags: [msi]
 comments: true
+dblog_post_id: 64
 ---
 A couple of years ago [we](http://www.appsecinc.com/) used to have a really big problem with Windows installers. We had one guy writing InstallShield installers and a bunch of components thrown at him with the usual "just install these, please". As a result, almost every single deployment ran into some kind of hard-to-diagnose failure, force the entire thing to rollback and require creative solutions to get the customer running. More InstallScript was written at best.
 

@@ -5,6 +5,7 @@ redirect_from: "/remoteinstall-test-framework-open-sourced/"
 date: 2009-11-18 00:30:00
 tags: [codeproject, testing, dotnetinstaller, vmware, msi]
 comments: true
+dblog_post_id: 62
 ---
 
 I am pleased to announce the open sourcing of the [RemoteInstall Test Framework](https://github.com/dblock/remoteinstall).

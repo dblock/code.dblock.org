@@ -5,6 +5,7 @@ redirect_from: "/switching-comments-of-codedblockorg-to-disqus/"
 date: 2011-02-27 21:12:17
 tags: [blog]
 comments: true
+dblog_post_id: 178
 ---
 ![]({{ site.url }}/images/posts/2011/2011-02-27-switching-comments-of-codedblockorg-to-disqus/image_2.jpg)
 

@@ -5,6 +5,7 @@ redirect_from: "/oclf-one-click-lag-fix-on-android-22-galaxy-s/"
 date: 2011-01-31 04:08:41
 tags: [android]
 comments: true
+dblog_post_id: 164
 ---
 ![]({{ site.url }}/images/posts/2011/2011-01-31-oclf-one-click-lag-fix-on-android-22-galaxy-s/image_2.jpg)
 

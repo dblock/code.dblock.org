@@ -5,6 +5,7 @@ redirect_from: "/foodcandycom-pulling-the-plug/"
 date: 2011-06-28 07:00:31
 tags: [foodcandy]
 comments: true
+dblog_post_id: 224
 ---
 ![foodcandy-small_thumb[1]]({{ site.url }}/images/posts/2011/2011-06-28-foodcandycom-pulling-the-plug/foodcandy-small_thumb_1%5d_2.jpg)
 

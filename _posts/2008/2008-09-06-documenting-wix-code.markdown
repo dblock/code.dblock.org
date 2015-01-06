@@ -5,6 +5,7 @@ redirect_from: "/documenting-wix-code/"
 date: 2008-09-06 21:15:00
 tags: [wix]
 comments: true
+dblog_post_id: 13
 ---
 Two sprints into working on a large deployment project I had already created two big installers under which the .wxs and .wxi files were multiplying only slower than components and features in them. For instance, there're 30 .wxi files that compose a single enterprise component installer accounting for 8 merge modules.
 

@@ -5,6 +5,7 @@ redirect_from: "/losing-control-to-the-heroku-paas/"
 date: 2012-12-14 05:09:27
 tags: [technology, heroku, ruby, architecture]
 comments: true
+dblog_post_id: 365
 ---
 ![]({{ site.url }}/images/posts/2012/2012-12-14-losing-control-to-the-heroku-paas/image_5.jpg)
 

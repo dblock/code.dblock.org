@@ -5,6 +5,7 @@ redirect_from: "/does-your-company-have-a-policy-on-personal-tech-blogging-and-c
 date: 2010-10-12 12:24:35
 tags: [open source, organizations, people]
 comments: true
+dblog_post_id: 128
 ---
 
 ![opensource-logo]({{ site.url }}/images/posts/2010/2010-10-12-does-your-company-have-a-policy-on-personal-tech-blogging-and-contributing-to-open-source/opensource-logo_5.jpg)

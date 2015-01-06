@@ -5,6 +5,7 @@ redirect_from: "/rubber-ducky-branch/"
 date: 2011-08-08 15:32:53
 tags: [github, people]
 comments: true
+dblog_post_id: 241
 ---
 ![]({{ site.url }}/images/posts/2011/2011-08-08-rubber-ducky-branch/image_5.jpg)
 

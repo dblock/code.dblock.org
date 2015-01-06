@@ -5,6 +5,7 @@ redirect_from: "/social-coding-beyond-trolling-healthcaregov/"
 date: 2013-10-07 13:24:48
 tags: [teams, open source]
 comments: true
+dblog_post_id: 398
 ---
 I felt compelled to troll [healthcare.gov](https://www.healthcare.gov/), too. It’s an easy target: _The JavaScript assets aren’t even compressed. Look at their sheer incompetence!_ But, if you dig just a little deeper you’ll see a pretty decent v1 website, built by actual humans who aren’t bad at all at what they do. I recommend reading [this article](http://www.theatlantic.com/technology/archive/2013/06/healthcaregov-code-developed-by-the-people-and-for-the-people-released-back-to-the-people/277295/) from the Atlantic about their intentions. Then a set of excuses, which have little to do with technology, including [this interview](http://www.washingtonpost.com/blogs/the-switch/wp/2013/10/04/heres-why-getting-the-obamacare-exchanges-to-work-was-so-difficult/) in the Washington Post.
 

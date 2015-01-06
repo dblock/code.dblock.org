@@ -5,6 +5,7 @@ redirect_from: "/moving-to-new-york-a-guide-for-software-engineers/"
 date: 2011-06-29 08:31:23
 tags: [art.sy, jobs, people]
 comments: true
+dblog_post_id: 225
 ---
 This is somewhat a continuation of the unexpectedly popular [story of my commute](/dear-california-engineer-your-commute-is-killing-you-move-to-new-york).
 

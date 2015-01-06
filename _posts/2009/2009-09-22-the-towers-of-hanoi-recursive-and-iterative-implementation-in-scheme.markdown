@@ -5,6 +5,7 @@ redirect_from: "/the-towers-of-hanoi-recursive-and-iterative-implementation-in-s
 date: 2009-09-22 19:00:00
 tags: [scheme]
 comments: true
+dblog_post_id: 51
 ---
 Legend has it that a group of Eastern monks are the keepers of three towers on which sit 64 golden rings. Originally all 64 rings were stacked on one tower with each ring smaller than the one beneath. The monks are to move the rings from this first tower to the third tower one at a time but never moving a larger ring on top of a smaller one. Once the 64 rings have all been moved, the world will come to an end.
 

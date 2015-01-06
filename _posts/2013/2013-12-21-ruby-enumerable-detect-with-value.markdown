@@ -5,6 +5,7 @@ redirect_from: "/ruby-enumerable-detect-with-value/"
 date: 2013-12-21 18:39:02
 tags: [ruby, open source]
 comments: true
+dblog_post_id: 402
 ---
 Given an _Enumerable_, you can _detect_ a value that matches a condition. But what if you want the result of the evaluation? You can now use _Enumerable##detect_value _from the [enumerable-detect-value](https://github.com/dblock/enumerable-detect-value) gem.
 

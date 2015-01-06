@@ -5,6 +5,7 @@ redirect_from: "/file-resource-management-net-library/"
 date: 2009-01-06 04:00:00
 tags: [win32]
 comments: true
+dblog_post_id: 30
 ---
 ![]({{ site.url }}/images/posts/2009/2009-01-06-file-resource-management-net-library/puzzle.jpg)
 

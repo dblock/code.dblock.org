@@ -5,6 +5,7 @@ redirect_from: "/video-mentoring-engineers-and-humans/"
 date: 2014-10-07 12:12:31
 tags: [teams, teaching, speaking]
 comments: true
+dblog_post_id: 424
 ---
 My QCon 2014 talk [Mentoring Engineers and Humans](http://www.infoq.com/presentations/mentoring-cto-club-ny).
 

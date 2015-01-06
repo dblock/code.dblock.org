@@ -5,6 +5,7 @@ redirect_from: "/waffle-troubleshooting-kerberos-and-ntlm/"
 date: 2011-02-03 13:31:23
 tags: [open source, waffle, security, active directory]
 comments: true
+dblog_post_id: 166
 ---
 ![usb-toaster]({{ site.url }}/images/posts/2011/2011-02-03-waffle-troubleshooting-kerberos-and-ntlm/usb-toaster_3.jpg)
 

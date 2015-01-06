@@ -5,6 +5,7 @@ redirect_from: "/nesting-multiple-configurationelement-types-in-a-configuratione
 date: 2009-02-18 23:15:00
 tags: [.net]
 comments: true
+dblog_post_id: 34
 ---
 Today I stumbled upon an unpleasant problem with .NET configuration. I'd like to have a configuration file that looks like this.
 

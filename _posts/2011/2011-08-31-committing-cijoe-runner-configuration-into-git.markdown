@@ -5,6 +5,7 @@ redirect_from: "/committing-cijoe-runner-configuration-into-git/"
 date: 2011-08-31 18:50:18
 tags: [cijoe, git, linux, build]
 comments: true
+dblog_post_id: 251
 ---
 A nice way of telling CIJoe (or any other CI service) what to do is to commit git configuration under, for example, _git-config_.
 

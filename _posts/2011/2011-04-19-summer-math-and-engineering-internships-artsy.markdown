@@ -5,6 +5,7 @@ redirect_from: "/summer-math-and-engineering-internships-artsy/"
 date: 2011-04-19 20:14:52
 tags: [art.sy]
 comments: true
+dblog_post_id: 199
 ---
 ![artsy]({{ site.url }}/images/posts/2011/2011-04-19-summer-math-and-engineering-internships-artsy/artsy_3.jpg)
 

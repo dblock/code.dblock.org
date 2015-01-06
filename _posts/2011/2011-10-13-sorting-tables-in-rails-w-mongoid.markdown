@@ -5,6 +5,7 @@ redirect_from: "/sorting-tables-in-rails-w-mongoid/"
 date: 2011-10-13 14:29:16
 tags: [mongoid, rails, ruby]
 comments: true
+dblog_post_id: 278
 ---
 Sorting tables in Rails is a common problem. It must have been done before, right? In fact it has been done so many times that it’s really hard to find anything that "just works".  Turned out to waste a lot of time of at least two people with creative libraries that fall short in many rather trivial ways. Of the good ones, a colleague tried [sortable_table](https://github.com/thoughtbot/sortable_table), but it’s not maintained and we finally settled on the much better [handles_sortable_columns](https://github.com/dadooda/handles_sortable_columns), which needed a tiny bit of integration work for Mongoid.
 

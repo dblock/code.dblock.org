@@ -5,6 +5,7 @@ redirect_from: "/recap-of-the-strangeloop-2013-conference-in-st-louis/"
 date: 2013-09-30 13:27:30
 tags: [learning, conferences]
 comments: true
+dblog_post_id: 395
 ---
 ![](https://thestrangeloop.com/images/slider1.png)
 

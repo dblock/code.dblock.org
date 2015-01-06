@@ -5,6 +5,7 @@ redirect_from: "/howto-remote-control-copy-and-run-programs-on-a-vmware-workstat
 date: 2008-12-10 20:15:00
 tags: [vmware]
 comments: true
+dblog_post_id: 24
 ---
 I've been playing with [VMware](http://www.vmware.com/) lately, both Workstation and VMware Infrastructure (VI). The company has really stepped up with the new SDKs and the level of programmable interfaces, making some excellent implementation decisions that enable us to drive virtual machines for primarily unit-testing purposes. The doc is a little light today, so this should help.
 

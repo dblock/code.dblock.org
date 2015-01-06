@@ -5,6 +5,7 @@ redirect_from: "/new-york-times-open-source-science-fair/"
 date: 2012-11-22 14:30:45
 tags: [education, teaching, speaking, open source]
 comments: true
+dblog_post_id: 358
 ---
 ![]({{ site.url }}/images/posts/2012/2012-11-22-new-york-times-open-source-science-fair/image_15.jpg)
 

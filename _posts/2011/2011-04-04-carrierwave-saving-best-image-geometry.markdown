@@ -5,6 +5,7 @@ redirect_from: "/carrierwave-saving-best-image-geometry/"
 date: 2011-04-04 15:54:14
 tags: [rails, ruby]
 comments: true
+dblog_post_id: 194
 ---
 I recently needed to find out the geometry of the image being uploaded via Carrierwave. Images come in many different sizes and shapes. What I want is to have a "best" image and store its actual size along with my image model.
 

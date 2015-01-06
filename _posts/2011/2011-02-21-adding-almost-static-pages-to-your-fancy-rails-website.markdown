@@ -5,6 +5,7 @@ redirect_from: "/adding-almost-static-pages-to-your-fancy-rails-website/"
 date: 2011-02-21 18:34:37
 tags: [rails, ruby]
 comments: true
+dblog_post_id: 175
 ---
 So you’ve built the super amazing complicated Rails website. You are serving data from millions of documents from [MongoDB](http://www.mongodb.org/), rendering complex objects using [HAML](http://haml-lang.com/) and generally doing a bunch of hardcore stuff. Then someone asks you a pretty simple question: _how do I change the "Contact Us" page that’s linked at the bottom? _
 

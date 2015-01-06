@@ -5,6 +5,7 @@ redirect_from: "/the-safety-net-removing-barriers-to-test-automation/"
 date: 2012-10-23 23:52:06
 tags: [teams, testing, people, agile]
 comments: true
+dblog_post_id: 356
 ---
 ![]({{ site.url }}/images/posts/2012/2012-10-23-the-safety-net-removing-barriers-to-test-automation/image_6.jpg)
 

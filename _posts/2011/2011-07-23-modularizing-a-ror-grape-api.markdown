@@ -5,6 +5,7 @@ redirect_from: "/modularizing-a-ror-grape-api/"
 date: 2011-07-23 19:17:36
 tags: [rails, ruby, architecture]
 comments: true
+dblog_post_id: 236
 ---
 A lot of people ask me whether we use Rails controllers for our API. We don’t, we use [Grape](https://github.com/intridea/grape). Grape is a Rack-based system and a DSL that provides a cleaner separation, some API-specific  functionality and generally a better syntax. Now that we have [dealt with exceptions](/grape-trapping-all-exceptions-within-the-api) and [authentication](/grape-api-authentication-w-devise) we realized that the amount of functionality exposed in the API has grown exponentially in one single Ruby file. Let's refactor it into modules.
 

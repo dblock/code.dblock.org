@@ -5,6 +5,7 @@ redirect_from: "/10-largest-collections-in-a-mongodb-database-w-mongoid/"
 date: 2013-08-04 16:47:44
 tags: [mongoid, mongodb]
 comments: true
+dblog_post_id: 390
 ---
 
 ```ruby

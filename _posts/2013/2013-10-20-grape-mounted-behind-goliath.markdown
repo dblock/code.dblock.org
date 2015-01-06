@@ -5,6 +5,7 @@ redirect_from: "/grape-mounted-behind-goliath/"
 date: 2013-10-20 14:02:10
 tags: [performance, ruby]
 comments: true
+dblog_post_id: 399
 ---
 Got a chance to play with [Goliath](http://postrank-labs.github.io/goliath/) for a bit. You don’t need to do much work to mount [Grape](https://github.com/intridea/grape) behind it. Grape figures out content-negotiation and formatting for you, so just stream the response through Goliath.
 

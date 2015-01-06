@@ -5,6 +5,7 @@ redirect_from: "/mongo-boston-2011/"
 date: 2011-10-02 09:30:20
 tags: [speaking, art.sy, mongodb]
 comments: true
+dblog_post_id: 274
 ---
 En route to Boston, speaking at [Mongo Boston](http://www.10gen.com/events/mongo-boston-2011) tomorrow, Monday. I’m going to talk about our history with MongoDB at [Art.sy](https://artsy.net), the challenges and, of course, about how much we like it.
 

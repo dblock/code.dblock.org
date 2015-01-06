@@ -5,6 +5,7 @@ redirect_from: "/msbuild-setting-up-a-build-environment-w-nunit/"
 date: 2010-11-18 14:25:27
 tags: [nunit, testing, .net, build, msbuild]
 comments: true
+dblog_post_id: 144
 ---
 ![crane]({{ site.url }}/images/posts/2010/2010-11-18-msbuild-setting-up-a-build-environment-w-nunit/crane_5.jpg)
 

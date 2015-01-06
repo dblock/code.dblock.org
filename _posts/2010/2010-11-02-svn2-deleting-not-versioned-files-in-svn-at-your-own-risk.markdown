@@ -5,6 +5,7 @@ redirect_from: "/svn2-deleting-not-versioned-files-in-svn-at-your-own-risk/"
 date: 2010-11-02 15:26:34
 tags: [subversion]
 comments: true
+dblog_post_id: 133
 ---
 
 I often need to delete not-versioned files in SVN. Although I am supposed to create projects that place all output outside of the SVN client structure, it’s not always practical. So all those pesky generated files are hard to get rid of and pollute my _svn status_. I frequently dump the output of `svn status | findstr "^?_"` into a .cmd file and edit it replacing all ? with `del /Q`.

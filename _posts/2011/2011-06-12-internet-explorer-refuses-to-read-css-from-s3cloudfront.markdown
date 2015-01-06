@@ -5,6 +5,7 @@ redirect_from: "/internet-explorer-refuses-to-read-css-from-s3cloudfront/"
 date: 2011-06-12 20:22:15
 tags: [cloudfront, s3]
 comments: true
+dblog_post_id: 218
 ---
 One of the issues that we ran to with implementing S3/CloudFront was that Internet Explorer refused to read CSS files from our CDN URL. The site would work beautifully in Chrome or Firefox and would ignore stylesheets in IE. Fortunately, IE9 has some good developer tools. This is what IE says in its console.
 

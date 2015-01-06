@@ -5,6 +5,7 @@ redirect_from: "/mslu-is-well-alive-or-how-to-run-on-windows-9598-without-carryi
 date: 2009-07-21 04:00:00
 tags: [win32]
 comments: true
+dblog_post_id: 43
 ---
 I accidentally broke support for Windows 95/98/ME in [dotNetInstaller](https://github.com/dblock/dotnetinstaller). I was even more surprised that someone cared. A developer reported the bug, and then my friends in Botswana are saying that Windows 95/98/ME is alive and well all over the place. How can I say no to African children?!
 

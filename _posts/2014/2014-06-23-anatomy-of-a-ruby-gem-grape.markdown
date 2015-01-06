@@ -5,6 +5,7 @@ redirect_from: "/anatomy-of-a-ruby-gem-grape/"
 date: 2014-06-23 14:34:39
 tags: [rack, grape, speaking, ruby]
 comments: true
+dblog_post_id: 416
 ---
 I’ve recorded a screencast during the [Anatomy of a Ruby Gem meetup](http://www.meetup.com/Anatomy-of-a-Ruby-Gem/events/187424252/) in New York. It’s a deep dive into [Grape](https://github.com/intridea/grape) internals.
 

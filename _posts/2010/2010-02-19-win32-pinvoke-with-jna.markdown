@@ -5,6 +5,7 @@ redirect_from: "/win32-pinvoke-with-jna/"
 date: 2010-02-19 02:20:03
 tags: [jna, java, win32]
 comments: true
+dblog_post_id: 83
 ---
 One of the main reasons I never liked JAVA is because of it's cross-platform philosophy. The idea is that everything needs to be so generic and portable, that you can’t get anything actually done. Running applications in the real world means integrating with the operating system. In my own experience I needed to get the username of the user logged into Windows, so I’ve generated everything from [JNI](http://java.sun.com/j2se/1.5.0/docs/guide/jni/) monstrosities, C# libraries with COM wrappers invoked via [Jacob](http://danadler.com/jacob/) to making remote service calls from [CXF](http://cxf.apache.org/) to [WCF](http://msdn.microsoft.com/en-us/netframework/aa663324.aspx). Can someone please provide a solution that doesn’t make me feel retarded debugging SOAP messages for a local call to GetUserNameW?!
 

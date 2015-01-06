@@ -5,6 +5,7 @@ redirect_from: "/icon-support-in-resourcelibnet/"
 date: 2008-09-28 19:15:00
 tags: [win32]
 comments: true
+dblog_post_id: 18
 ---
 I've added icon support in [ResourceLib](https://github.com/dblock/resourcelib), an open source C# File Resource Management library. This lets you programmatically enumerate and change icons in an executable/dll. I needed this for [dotNetInstaller](https://github.com/dblock/dotnetinstaller).
 

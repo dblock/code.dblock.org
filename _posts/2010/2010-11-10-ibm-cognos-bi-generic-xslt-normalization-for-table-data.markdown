@@ -5,6 +5,7 @@ redirect_from: "/ibm-cognos-bi-generic-xslt-normalization-for-table-data/"
 date: 2010-11-10 16:21:11
 tags: [xslt, xml, cognos]
 comments: true
+dblog_post_id: 143
 ---
 I was recently looking at a Cognos BI dataset output in the XML format. It’s a pretty generic approach for data sets that don’t know what type of data they are looking at upfront. It looks like this.
 

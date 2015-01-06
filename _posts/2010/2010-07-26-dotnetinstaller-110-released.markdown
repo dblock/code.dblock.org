@@ -5,6 +5,7 @@ redirect_from: "/dotnetinstaller-110-released/"
 date: 2010-07-26 00:43:40
 tags: [dotnetinstaller]
 comments: true
+dblog_post_id: 117
 ---
 
 ![dni]({{ site.url }}/images/posts/2010/2010-07-26-dotnetinstaller-110-released/dni_3.jpg)

@@ -5,6 +5,7 @@ redirect_from: "/slow-rails-server-in-development-railsdevelopmentboost/"
 date: 2011-05-19 15:06:07
 tags: [rails]
 comments: true
+dblog_post_id: 207
 ---
 ![]({{ site.url }}/images/posts/2011/2011-05-19-slow-rails-server-in-development-railsdevelopmentboost/image_4.jpg)
 

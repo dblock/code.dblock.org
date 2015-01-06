@@ -5,6 +5,7 @@ redirect_from: "/thinking-open-source-how-startups-destroy-a-culture-of-fear/"
 date: 2011-05-03 15:37:33
 tags: [art.sy, heroku, open source]
 comments: true
+dblog_post_id: 202
 ---
 ![]({{ site.url }}/images/posts/2011/2011-05-03-thinking-open-source-how-startups-destroy-a-culture-of-fear/image_4.jpg)
 

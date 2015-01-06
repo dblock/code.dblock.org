@@ -5,6 +5,7 @@ redirect_from: "/stuxnet/"
 date: 2010-10-03 00:31:35
 tags: [security]
 comments: true
+dblog_post_id: 126
 ---
 ![3346564112_a856a76e97]({{ site.url }}/images/posts/2010/2010-10-03-stuxnet/3346564112_a856a76e97_7.jpg)
 

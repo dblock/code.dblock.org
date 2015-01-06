@@ -5,6 +5,7 @@ redirect_from: "/implementing-my-first-jenkins-plugin-ansicolor/"
 date: 2011-09-07 12:07:05
 tags: [jenkins, java]
 comments: true
+dblog_post_id: 262
 ---
 ![jenkins]({{ site.url }}/images/posts/2011/2011-09-07-implementing-my-first-jenkins-plugin-ansicolor/jenkins_3.jpg)
 

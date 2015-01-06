@@ -5,6 +5,7 @@ redirect_from: "/intersection-of-core-values-in-open-source-and-domain-driven-de
 date: 2011-01-31 16:42:58
 tags: [ddd, open source, organizations, people]
 comments: true
+dblog_post_id: 165
 ---
 My [second article on opensource.com](http://opensource.com/life/11/1/intersection-core-values-open-source-and-domain-driven-design). You got to love the graphics that the site designer picked! It speaks to the concept of "solving complexity".
 

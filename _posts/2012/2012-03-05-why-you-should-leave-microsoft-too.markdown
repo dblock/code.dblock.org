@@ -5,6 +5,7 @@ redirect_from: "/why-you-should-leave-microsoft-too/"
 date: 2012-03-05 12:50:23
 tags: [startups, new york, hiring, technology, jobs, people]
 comments: true
+dblog_post_id: 322
 ---
 I read Bertrand’s [post on "Tales from the Evil Empire"](http://weblogs.asp.net/bleroy/archive/2012/02/29/leaving-the-evil-empire.aspx) about him leaving Microsoft this morning. Congratulations. We have never met, but your blog was in my RSS feed for a very long time. I would regularly learn valuable .NET-related lessons - my blog happened to be hand-written in .NET and I was still writing quite a bit of it myself with a few open-source projects like [dotNetInstaller](https://github.com/dblock/dotnetinstaller/) or [ResourceLib](http://github.com/dblock/resourcelib/).
 

@@ -5,6 +5,7 @@ redirect_from: "/ios-uiview-with-an-image-and-text-with-dynamic-height/"
 date: 2014-02-03 05:29:55
 tags: [objective-c, ios, ui]
 comments: true
+dblog_post_id: 407
 ---
 Last week I struggled with this rather basic problem of adjusting the height of a UIView dynamically.
 

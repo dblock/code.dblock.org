@@ -5,6 +5,7 @@ redirect_from: "/vmwaretasks-collecting-guest-os-environment-variables/"
 date: 2010-01-30 16:34:27
 tags: [vmware]
 comments: true
+dblog_post_id: 79
 ---
 All VMWare VixCOM users eventually go through a moment of being puzzled with the behavior of VixCOM ReadVariable function used with `VIX_GUEST_ENVIRONMENT_VARIABLE` ([read this thread](http://communities.vmware.com/message/1166742)). This is supposed to return values for the guest OS environment variables. You can get the value for `%TMP%`, but not for `%ProgramFiles%`. It’s probably due to the fact that VMWareTools aren’t really creating a user environment after login, but who cares, that renders the function virtually useless.
 

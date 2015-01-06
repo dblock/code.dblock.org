@@ -5,6 +5,7 @@ redirect_from: "/norails-application-design-in-times-of-apis/"
 date: 2011-10-23 15:40:54
 tags: [grape, rails, architecture]
 comments: true
+dblog_post_id: 281
 ---
 A recent post ["Rails is Not Your Application"](http://blog.firsthand.ca/2011/10/rails-is-not-your-application.html) caught my attention. It was fundamentally right, but the suggested implementation was misguided.
 

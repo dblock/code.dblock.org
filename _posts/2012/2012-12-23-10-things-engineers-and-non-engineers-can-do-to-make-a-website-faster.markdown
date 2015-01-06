@@ -5,6 +5,7 @@ redirect_from: "/10-things-engineers-and-non-engineers-can-do-to-make-a-website-
 date: 2012-12-23 18:57:38
 tags: [teams, startups, performance, technology, people, agile]
 comments: true
+dblog_post_id: 367
 ---
 ![]({{ site.url }}/images/posts/2012/2012-12-23-10-things-engineers-and-non-engineers-can-do-to-make-a-website-faster/image_3.jpg)
 

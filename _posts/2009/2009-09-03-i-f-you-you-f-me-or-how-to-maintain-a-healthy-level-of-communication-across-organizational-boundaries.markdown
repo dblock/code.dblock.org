@@ -5,6 +5,7 @@ redirect_from: "/i-f-you-you-f-me-or-how-to-maintain-a-healthy-level-of-communic
 date: 2009-09-03 00:30:00
 tags: [organizations]
 comments: true
+dblog_post_id: 47
 ---
 When I lived in Seattle and partied a lot, I ran a party mailing list. I would forward you all the cool parties in Seattle for no fee or any other interest than having you show up at the party. That is, you're cool and I want to party with you. I had hundreds of people in my list. That went both ways since I received information about cool parties. Some people were bad at forwarding me stuff though, so someone (I am not sure whether it was me) came up with the **I F Y Y F M E** concept: _I forward you, you forward me._
 

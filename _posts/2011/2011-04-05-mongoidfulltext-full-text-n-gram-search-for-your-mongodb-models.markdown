@@ -5,6 +5,7 @@ redirect_from: "/mongoidfulltext-full-text-n-gram-search-for-your-mongodb-models
 date: 2011-04-05 19:27:06
 tags: [art.sy, mongodb, rails, ruby, open source]
 comments: true
+dblog_post_id: 195
 ---
 ![ngrams]({{ site.url }}/images/posts/2011/2011-04-05-mongoidfulltext-full-text-n-gram-search-for-your-mongodb-models/ngrams_4.jpg)
 

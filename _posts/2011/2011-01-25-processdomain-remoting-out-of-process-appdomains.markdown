@@ -5,6 +5,7 @@ redirect_from: "/processdomain-remoting-out-of-process-appdomains/"
 date: 2011-01-25 19:28:17
 tags: [processdomain, appsecinc, open source, win32]
 comments: true
+dblog_post_id: 161
 ---
 ![gear]({{ site.url }}/images/posts/2011/2011-01-25-processdomain-remoting-out-of-process-appdomains/gear_5.jpg)
 

@@ -5,6 +5,7 @@ redirect_from: "/mongoid-collection-snapshot/"
 date: 2011-09-19 12:08:53
 tags: [mongodb, ruby]
 comments: true
+dblog_post_id: 269
 ---
 Another fine open-source contribution from [@aaw](https://github.com/aaw), [mongoid_collection_snapshot](https://github.com/aaw/mongoid_collection_snapshot): easy maintenance of collections of processed data in MongoDB with the Mongoid ODM.
 

@@ -5,6 +5,7 @@ redirect_from: "/building-a-dynamic-sitemap-in-aspnet-20-for-a-large-website/"
 date: 2008-08-10 18:10:23
 tags: [asp.net]
 comments: true
+dblog_post_id: 4
 ---
 ![dynamic sitemap rendered](http://www.codeproject.com/KB/aspnet/dynamicsitemap/dynamicsitemap.jpg)
 

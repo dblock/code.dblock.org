@@ -5,6 +5,7 @@ redirect_from: "/octopress-setting-up-a-blog-and-contributing-to-an-existing-one
 date: 2012-01-17 15:22:24
 tags: [octopress, technology, blog]
 comments: true
+dblog_post_id: 309
 ---
 [Octopress](http://octopress.org) documentation can be quite confusing. It took me a while to understand what the heck Octopress is doing to branches and remote origins. It’s actually pretty simple, so I am going to try to un-confuse you. I will also show you a better way to contribute to an existing blog and explain what’s happening in those Rake tasks.
 

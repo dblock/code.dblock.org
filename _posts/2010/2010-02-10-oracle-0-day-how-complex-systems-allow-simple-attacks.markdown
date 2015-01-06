@@ -5,6 +5,7 @@ redirect_from: "/oracle-0-day-how-complex-systems-allow-simple-attacks/"
 date: 2010-02-10 14:00:00
 tags: [security, databases]
 comments: true
+dblog_post_id: 80
 ---
 ![]({{ site.url }}/images/posts/2010/2010-02-10-oracle-0-day-how-complex-systems-allow-simple-attacks/image_5.jpg)
 

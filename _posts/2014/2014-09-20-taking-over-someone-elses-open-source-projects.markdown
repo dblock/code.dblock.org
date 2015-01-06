@@ -5,6 +5,7 @@ redirect_from: "/taking-over-someone-elses-open-source-projects/"
 date: 2014-09-20 00:30:00
 tags: [speaking, ruby]
 comments: true
+dblog_post_id: 422
 ---
 Thanks to the amazing crowd at [GoGoRuCo](http://gogaruco.com) 2014, San Francisco!
 

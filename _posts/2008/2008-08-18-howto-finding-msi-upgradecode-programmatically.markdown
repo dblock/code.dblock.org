@@ -5,6 +5,7 @@ redirect_from: "/howto-finding-msi-upgradecode-programmatically/"
 date: 2008-08-18 19:15:00
 tags: [msi]
 comments: true
+dblog_post_id: 8
 ---
 It's not hard, but rather frustrating to find :) [This post](http://forum.installsite.net/index.php?act=ST&f=26&t=14035) was helpful.
 

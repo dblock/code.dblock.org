@@ -5,6 +5,7 @@ redirect_from: "/jna-building-jna-on-windows-64-bit/"
 date: 2010-12-07 02:20:46
 tags: [jna, java]
 comments: true
+dblog_post_id: 150
 ---
 Let’s build [JNA](https://github.com/twall/jna/) on a Windows AMD 64. I am always confused about which Cygwin packages I actually need to do that. Every time I get it wrong. So this is what you need beyond the basic Cygwin installation: make, gcc-mingw, mingw64-i686. The latter is important, you need the i686 packages, not the cross-platform x86-64 ones.
 

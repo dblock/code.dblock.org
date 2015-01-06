@@ -5,6 +5,7 @@ redirect_from: "/can-hiring-women-in-software-organizations-save-you-money/"
 date: 2010-12-06 20:15:08
 tags: [organizations, people]
 comments: true
+dblog_post_id: 148
 ---
 ![plunger-dallas]({{ site.url }}/images/posts/2010/2010-12-06-can-hiring-women-in-software-organizations-save-you-money/plunger-dallas_3.jpg)
 

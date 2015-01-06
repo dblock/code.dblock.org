@@ -5,6 +5,7 @@ redirect_from: "/measuring-activity-in-open-source-projects-using-github-network
 date: 2011-12-12 02:05:57
 tags: [github, open source]
 comments: true
+dblog_post_id: 302
 ---
 When choosing to use an open source project you might want to know whether it’s still developed or at least maintained. For Ruby projects I used to check Rubygems release dates. Here’s [Grape’s](https://rubygems.org/gems/grape).
 

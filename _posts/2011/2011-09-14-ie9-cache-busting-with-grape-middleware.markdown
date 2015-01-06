@@ -5,6 +5,7 @@ redirect_from: "/ie9-cache-busting-with-grape-middleware/"
 date: 2011-09-14 03:45:08
 tags: [grape, rails, ruby]
 comments: true
+dblog_post_id: 266
 ---
 Ran into a series of weird bugs with IE9. Turned out that a lot of our API requests were cached on the client. I am not sure whether this is some clever plot to make things work faster, but it was rather puzzling. Nothing in our API headers indicated that the data can be cached for any duration, but nothing indicated otherwise either. Generally I’d like IE to work more like other browsers these days, not the other way around.
 

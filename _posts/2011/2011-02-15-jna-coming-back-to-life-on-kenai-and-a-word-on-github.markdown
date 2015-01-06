@@ -5,6 +5,7 @@ redirect_from: "/jna-coming-back-to-life-on-kenai-and-a-word-on-github/"
 date: 2011-02-15 18:50:19
 tags: [open source, jna, java]
 comments: true
+dblog_post_id: 173
 ---
 You might have heard about the massive controversy about [Hudson’s move to Github](http://www.infoq.com/news/2011/02/sonatype-hudson). I could have stirred a big storm in a cup for the [Java Native Access (JNA)](https://github.com/twall/jna/) project, but instead of I spent a few hours this morning resurrecting it back to some life form on [Kenai](http://kenai.com/) [[JNA-172](http://java.net/jira/browse/JNA-172)]. It was about time, even [people on Habrahabr noticed](http://habrahabr.ru/blogs/java/113436/). I heard from [@toddfast](http://java.net/people/85599-toddfast)  who is working on a 3.2.8 release too, so all will be good soon.
 

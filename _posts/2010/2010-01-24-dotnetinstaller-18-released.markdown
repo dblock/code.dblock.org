@@ -5,6 +5,7 @@ redirect_from: "/dotnetinstaller-18-released/"
 date: 2010-01-24 13:53:08
 tags: [dotnetinstaller, msi]
 comments: true
+dblog_post_id: 77
 ---
 [![](https://github.com/dblock/dotnetinstaller/raw/master/Documentation/Images/Logo.gif)](https://github.com/dblock/dotnetinstaller)
 

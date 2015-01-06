@@ -5,6 +5,7 @@ redirect_from: "/vmwaretasks-reading-runprograminguest-command-output/"
 date: 2010-01-30 16:24:10
 tags: [vmware]
 comments: true
+dblog_post_id: 78
 ---
 This is a pretty common question on the VixCOM forum: _How do I run a command in the virtual machine and collect its output?_
 

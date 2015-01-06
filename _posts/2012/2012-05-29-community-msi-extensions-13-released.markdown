@@ -5,6 +5,7 @@ redirect_from: "/community-msi-extensions-13-released/"
 date: 2012-05-29 07:48:45
 tags: [msi, wix, win32]
 comments: true
+dblog_post_id: 337
 ---
 [http://dblock.github.com/msiext/](http://dblock.github.com/msiext/)
 

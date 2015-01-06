@@ -5,6 +5,7 @@ redirect_from: "/delaying-image-processing-on-heroku-with-delayedjob/"
 date: 2011-06-04 20:11:20
 tags: [heroku, mongodb, rails, ruby]
 comments: true
+dblog_post_id: 213
 ---
 **There’s a Gem for That Too**
 

@@ -5,6 +5,7 @@ redirect_from: "/just-say-no-to-mailing-list-spam-by-recruiters-continued/"
 date: 2011-09-15 15:25:08
 tags: [jobs, people]
 comments: true
+dblog_post_id: 268
 ---
 ... read [my previous post](/just-say-no-to-mailing-list-spam-by-recruiters) first ...
 

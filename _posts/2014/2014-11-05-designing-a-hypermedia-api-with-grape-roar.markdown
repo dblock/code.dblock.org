@@ -5,6 +5,7 @@ redirect_from: "/designing-a-hypermedia-api-with-grape-roar/"
 date: 2014-11-05 12:18:32
 tags: [apis, grape, ruby]
 comments: true
+dblog_post_id: 425
 ---
 Slides from my talk last night @ [API Craft NYC](http://www.meetup.com/API-Craft-NYC/events/209294892/): [http://www.slideshare.net/dblockdotorg/designing-a-hypermedia-api-with-grape-roar](http://www.slideshare.net/dblockdotorg/designing-a-hypermedia-api-with-grape-roar).
 

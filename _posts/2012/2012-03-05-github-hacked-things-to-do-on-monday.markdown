@@ -5,6 +5,7 @@ redirect_from: "/github-hacked-things-to-do-on-monday/"
 date: 2012-03-05 02:17:03
 tags: [github, rails, shatter, security]
 comments: true
+dblog_post_id: 321
 ---
 You should take a serious look at your application and write some tests, first thing Monday.
 

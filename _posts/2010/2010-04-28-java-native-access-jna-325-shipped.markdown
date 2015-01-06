@@ -5,6 +5,7 @@ redirect_from: "/java-native-access-jna-325-shipped/"
 date: 2010-04-28 12:16:40
 tags: [jna, java, win32]
 comments: true
+dblog_post_id: 98
 ---
 ![java-logo_svg-a]({{ site.url }}/images/posts/2010/2010-04-28-java-native-access-jna-325-shipped/java-logo_svg-a_6.jpg) 3.2.5 shipped quietly last week.
 

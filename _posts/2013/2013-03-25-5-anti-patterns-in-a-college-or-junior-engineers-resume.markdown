@@ -5,6 +5,7 @@ redirect_from: "/5-anti-patterns-in-a-college-or-junior-engineers-resume/"
 date: 2013-03-25 18:46:12
 tags: [teams, teaching, learning, hiring, people]
 comments: true
+dblog_post_id: 379
 ---
 A resume is what you did, it’s not who you are.
 

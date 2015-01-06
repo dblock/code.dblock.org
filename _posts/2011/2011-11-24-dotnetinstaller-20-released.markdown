@@ -5,6 +5,7 @@ redirect_from: "/dotnetinstaller-20-released/"
 date: 2011-11-24 17:57:16
 tags: [dotnetinstaller, msi]
 comments: true
+dblog_post_id: 297
 ---
 I’ve released DNI 2.0 today. It’s a major release with a new HTML bootstrapper, better elevation support, Windows 8, etc. It has been stable for quite a while now and a few people are using this build in production.
 

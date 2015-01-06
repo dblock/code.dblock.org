@@ -5,6 +5,7 @@ redirect_from: "/three-devops-rake-tasks-i-use-daily-on-heroku-with-mongodb/"
 date: 2013-02-02 06:21:21
 tags: [deployment, mongoid, rake, heroku, mongodb]
 comments: true
+dblog_post_id: 373
 ---
 ![]({{ site.url }}/images/posts/2013/2013-02-02-three-devops-rake-tasks-i-use-daily-on-heroku-with-mongodb/image_3.jpg)
 

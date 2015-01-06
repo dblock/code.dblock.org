@@ -5,6 +5,7 @@ redirect_from: "/the-tech-it-just-worked-thanks-aws/"
 date: 2012-10-13 22:35:11
 tags: [aws, art.sy, heroku, architecture]
 comments: true
+dblog_post_id: 352
 ---
 ![]({{ site.url }}/images/posts/2012/2012-10-13-the-tech-it-just-worked-thanks-aws/image3.jpg)
 

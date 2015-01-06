@@ -5,6 +5,7 @@ redirect_from: "/grape-describing-and-documenting-an-api/"
 date: 2011-12-11 15:03:39
 tags: [grape, art.sy, rails, ruby]
 comments: true
+dblog_post_id: 301
 ---
 Building a software platform is not just an investment in the future, it’s a software architecture philosophy. A proper API is a manifestation of some of the core principles of domain driven design – spend a lot of time figuring out what your domain is, then build software that represents the immutable concepts behind an API and, finally, implement different businesses that can quickly thrive, die or pivot, on top of that. We’ve spent considerable amounts of time iterating on our own API and are constantly improving the artifacts around it as we learning from good examples of Twilio, Stripe, etc.
 

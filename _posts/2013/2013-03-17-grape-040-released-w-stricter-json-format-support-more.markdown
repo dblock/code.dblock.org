@@ -5,6 +5,7 @@ redirect_from: "/grape-040-released-w-stricter-json-format-support-more/"
 date: 2013-03-17 18:30:43
 tags: [rack, grape, ruby]
 comments: true
+dblog_post_id: 378
 ---
 I’m very excited to Release Grape 0.4.0 today. Again, thanks to the 10 (!) contributors to this release.
 

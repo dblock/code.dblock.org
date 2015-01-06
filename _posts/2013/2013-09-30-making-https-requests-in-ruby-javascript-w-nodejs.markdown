@@ -5,6 +5,7 @@ redirect_from: "/making-https-requests-in-ruby-javascript-w-nodejs/"
 date: 2013-09-30 05:33:31
 tags: [nodejs, javascript, ruby]
 comments: true
+dblog_post_id: 394
 ---
 Making HTTPs requests seems oddly difficult. Why can't an HTTP library just figure things out for me like curl does? It mostly can.
 

@@ -5,6 +5,7 @@ redirect_from: "/ruby-unlearning-oop-and-embracing-anarchy/"
 date: 2011-03-03 17:09:18
 tags: [ruby, testing, java]
 comments: true
+dblog_post_id: 180
 ---
 ![anarchy]({{ site.url }}/images/posts/2011/2011-03-03-ruby-unlearning-oop-and-embracing-anarchy/anarchy_4.jpg)
 

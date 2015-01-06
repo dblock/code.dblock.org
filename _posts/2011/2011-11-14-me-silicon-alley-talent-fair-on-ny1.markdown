@@ -5,6 +5,7 @@ redirect_from: "/me-silicon-alley-talent-fair-on-ny1/"
 date: 2011-11-14 19:42:27
 tags: [art.sy, people]
 comments: true
+dblog_post_id: 292
 ---
 I got 5 seconds around 1m20.
 

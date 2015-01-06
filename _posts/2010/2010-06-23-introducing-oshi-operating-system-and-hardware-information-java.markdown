@@ -5,6 +5,7 @@ redirect_from: "/introducing-oshi-operating-system-and-hardware-information-java
 date: 2010-06-23 01:10:34
 tags: [oshi, jna, java, hardware, win32]
 comments: true
+dblog_post_id: 112
 ---
 
 ![oshi]({{ site.url }}/images/posts/2010/2010-06-23-introducing-oshi-operating-system-and-hardware-information-java/oshi_8.jpg)

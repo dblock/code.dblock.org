@@ -5,6 +5,7 @@ redirect_from: "/implementing-atompub-in-net/"
 date: 2009-12-07 17:02:46
 tags: [syndication, codeproject, .net, asp.net, blog]
 comments: true
+dblog_post_id: 70
 ---
 I’ve been wanting to implement a POST protocol for my blog for a while. The urge got really bad since I’ve started using [LiveWriter](http://download.live.com/writer) at my [day job](http://www.appsecinc.com/). It’s such a nice piece of software compared to blogging with the online HTML editor with it’s, often too smart, HTML cleanup, struggling with embedded pictures and loosing drafts. I even considered abandoning my own creation and using [WordPress](http://wordpress.org/) or some other blogging engine. Then the "not invented here" syndrome took over. I spent a few hours implementing a large part of AtomPUB, [RFC-5023](http://tools.ietf.org/html/rfc5023).
 

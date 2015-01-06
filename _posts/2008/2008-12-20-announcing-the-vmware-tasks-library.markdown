@@ -5,6 +5,7 @@ redirect_from: "/announcing-the-vmware-tasks-library/"
 date: 2008-12-20 05:30:00
 tags: [vmware]
 comments: true
+dblog_post_id: 25
 ---
 ![VMWare](http://www.codeproject.com/KB/library/VMWareTasks/VMWareLogo.jpg)
 

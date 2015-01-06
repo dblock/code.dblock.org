@@ -5,6 +5,7 @@ redirect_from: "/being-helpful-with-ruby-exceptions-and-error-messages/"
 date: 2013-05-15 01:57:17
 tags: [ruby, open source]
 comments: true
+dblog_post_id: 383
 ---
 We talk a lot about error handling in Ruby. But we rarely talk about raising errors and creating helpful error messages that are actionable. A good error should tell the developer what went wrong and what to do about it.
 

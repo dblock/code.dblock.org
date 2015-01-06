@@ -5,6 +5,7 @@ redirect_from: "/jna-win32-platform-api-implementation/"
 date: 2010-03-18 14:08:51
 tags: [jna, java, win32]
 comments: true
+dblog_post_id: 89
 ---
 Lately I’ve been working on a native Java implementation of [Waffle](https://github.com/dblock/waffle) and contributing an increasing amount of code to the java.net [JNA](http://jna.java.net) project. Waffle has several goals that provide support for Windows authentication in Java. In this post I’ll describe the JNA implementation that allows us to retrieve user group memberships for the currently logged on user or a user logged on with a username and password. Both of these were made really simple by JNA.
 

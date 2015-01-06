@@ -5,6 +5,7 @@ redirect_from: "/no-app-specified-telling-heroku-gem-what-its-default-app-should
 date: 2011-08-08 15:57:02
 tags: [git, heroku]
 comments: true
+dblog_post_id: 242
 ---
 On a clean checked out source of some app that deploys to Heroku, I want to be able to type `heroku config`. This complains with  the _'No app specified’_ error.
 

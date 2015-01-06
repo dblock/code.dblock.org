@@ -5,6 +5,7 @@ redirect_from: "/grape-api-mounted-on-rack-w-static-pages/"
 date: 2012-01-30 15:54:46
 tags: [rack, grape, ruby]
 comments: true
+dblog_post_id: 311
 ---
 _tl;dr_ – the source is [here](https://github.com/dblock/grape-on-rack)
 

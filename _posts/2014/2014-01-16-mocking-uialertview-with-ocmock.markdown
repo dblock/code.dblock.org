@@ -5,6 +5,7 @@ redirect_from: "/mocking-uialertview-with-ocmock/"
 date: 2014-01-16 23:35:25
 tags: [objective-c, ios, testing]
 comments: true
+dblog_post_id: 406
 ---
 Let's mock a UIAlertView with [OCMock](http://ocmock.org/). Here’s a simple alert:
 

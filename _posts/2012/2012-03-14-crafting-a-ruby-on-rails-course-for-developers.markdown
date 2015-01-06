@@ -5,6 +5,7 @@ redirect_from: "/crafting-a-ruby-on-rails-course-for-developers/"
 date: 2012-03-14 02:33:58
 tags: [teaching, learning, technology, rails, ruby]
 comments: true
+dblog_post_id: 324
 ---
 ![]({{ site.url }}/images/posts/2012/2012-03-14-crafting-a-ruby-on-rails-course-for-developers/image_1.jpg)
 

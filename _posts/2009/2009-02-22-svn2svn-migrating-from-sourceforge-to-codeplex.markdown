@@ -5,6 +5,7 @@ redirect_from: "/svn2svn-migrating-from-sourceforge-to-codeplex/"
 date: 2009-02-22 19:00:00
 tags: [subversion]
 comments: true
+dblog_post_id: 36
 ---
 I am in the process of migrating a 3rd project from some SVN repository to [CodePlex](http://www.codeplex.com). I do love [CodePlex](http://www.codeplex.com), despite some performance concerns, which I am sure will be addressed eventually. I used Toolbox, an internal Microsoft project, a lot. CodePlex must have learned something from Toolbox since I like it so much. But back to the real world, I am moving DNI (dotNetInstaller) from the clunky SourceForge.
 

@@ -5,6 +5,7 @@ redirect_from: "/abstracting-a-cumbersome-construct-in-vix-api-getnumproperties-
 date: 2008-12-27 22:15:00
 tags: [vmware]
 comments: true
+dblog_post_id: 28
 ---
 Did I tell you how much I love **[yield return](http://msdn.microsoft.com/en-us/library/9k7k7cf0.aspx)**?
 

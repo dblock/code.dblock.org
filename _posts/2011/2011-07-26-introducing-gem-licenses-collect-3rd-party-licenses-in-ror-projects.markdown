@@ -5,6 +5,7 @@ redirect_from: "/introducing-gem-licenses-collect-3rd-party-licenses-in-ror-proj
 date: 2011-07-26 17:16:50
 tags: [rails, ruby, 3licenses, open source]
 comments: true
+dblog_post_id: 238
 ---
 Yet again I have to deal with 3rd party licenses, this time in RoR. It’s a pretty common thing to do for technical managers and in my last job I ended up creating [3licenses](https://github.com/dblock/3licenses/). For starters, we must know which open-source licenses are used. This can be a daunting exercise for large or complex projects. Then, you have to maintain the list and make sure it’s accurate with every release. Figuring out which licenses are used in 3rd party gems is relatively easy, because each gem spec contains a licenses array, we can do something like this.
 

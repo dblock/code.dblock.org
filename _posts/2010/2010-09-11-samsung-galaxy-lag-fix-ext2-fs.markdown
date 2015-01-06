@@ -5,6 +5,7 @@ redirect_from: "/samsung-galaxy-lag-fix-ext2-fs/"
 date: 2010-09-11 13:21:39
 tags: [android]
 comments: true
+dblog_post_id: 122
 ---
 
 ![Samsung-Vibrant-Galaxy-S-T959]({{ site.url }}/images/posts/2010/2010-09-11-samsung-galaxy-lag-fix-ext2-fs/samsung-vibrant-galaxy-s-t959_3.jpg)

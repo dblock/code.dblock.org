@@ -5,6 +5,7 @@ redirect_from: "/debugging-xctools-nsinternalinconsistencyexception-failed-while
 date: 2014-01-15 15:05:00
 tags: [xcode, ios, travis-ci]
 comments: true
+dblog_post_id: 405
 ---
 Took me a while to figure this one out, trying to add a Travis-CI build to [https://github.com/dblock/ios-snapshot-test-case-expecta](https://github.com/dblock/ios-snapshot-test-case-expecta).
 

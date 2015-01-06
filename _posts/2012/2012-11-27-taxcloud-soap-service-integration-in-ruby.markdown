@@ -5,6 +5,7 @@ redirect_from: "/taxcloud-soap-service-integration-in-ruby/"
 date: 2012-11-27 05:54:16
 tags: [ruby, open source, testing]
 comments: true
+dblog_post_id: 360
 ---
 ![]({{ site.url }}/images/posts/2012/2012-11-27-taxcloud-soap-service-integration-in-ruby/image_3.jpg)
 

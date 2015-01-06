@@ -5,6 +5,7 @@ redirect_from: "/doctors-surgery-and-open-source/"
 date: 2013-03-27 17:38:39
 tags: [teams, teaching, technology, jobs, people]
 comments: true
+dblog_post_id: 380
 ---
 I visited a friend who lives in a remote, tropical region of the United States. He’s a doctor and a practicing eye surgeon. The island has both the very rich and the extremely poor. It’s known for both the beautiful beaches and gun violence in poorer neighborhoods. There’re no Starbucks for over 50K residents. There’re a few richer patients that have good insurance or pay cash, but the majority are older natives with a large proportion on Medicare. A dozen surgeries or 60 patients a day is considered uneventful. A full night operating in the ER only happened once during our stay. There’re talks about closing the only hospital.
 

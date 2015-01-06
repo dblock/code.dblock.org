@@ -5,6 +5,7 @@ redirect_from: "/productbuild-versioning-with-msbuild-ant-and-cruisecontrol/"
 date: 2008-10-26 13:30:00
 tags: [build]
 comments: true
+dblog_post_id: 19
 ---
 ![]({{ site.url }}/images/posts/2008/2008-10-26-productbuild-versioning-with-msbuild-ant-and-cruisecontrol/wheel.jpg)
 

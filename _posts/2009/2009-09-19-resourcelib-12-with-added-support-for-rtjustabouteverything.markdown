@@ -5,6 +5,7 @@ redirect_from: "/resourcelib-12-with-added-support-for-rtjustabouteverything/"
 date: 2009-09-19 02:15:00
 tags: [win32]
 comments: true
+dblog_post_id: 49
 ---
 I've been either working on [ResourceLib](http://resourcelib.codeplex.com) on the subway on my work to and from work for the last few weeks or reading [Raymond Chen's "The Old New Thing"](http://www.amazon.com/Old-New-Thing-Development-Throughout/dp/0321440307). Those two exercises go well together since Raymond talks quite a bit about win32 resources.
 

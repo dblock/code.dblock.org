@@ -5,6 +5,7 @@ redirect_from: "/open-source-is-simply-part-of-my-teams-job-description/"
 date: 2011-07-15 07:26:58
 tags: [technology, art.sy, open source]
 comments: true
+dblog_post_id: 233
 ---
 In the last 24 hours my [Github Is Your New Resume](/github-is-your-new-resume) post gathered 343 comments between my blog, [HN](http://news.ycombinator.com/item?id=2763182) and [Reddit](http://www.reddit.com/r/programming/comments/ipo90/github_is_your_new_resume/). There’re also [233 RTs](http://twitter.com/search?q=http%3A%2F%2Fcode.dblock.org%2FShowPost.aspx%3Fid%3D232). First, I want to thank those with good comments. I found a few consistent themes in the debate – the one most interesting to me says that Github represents personal open-source projects done on one’s free time as opposed with paid work developed for an employer.
 

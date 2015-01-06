@@ -5,6 +5,7 @@ redirect_from: "/wmi-executing-a-remote-process-and-waiting-for-its-completion/"
 date: 2008-12-03 21:45:00
 tags: [wmi]
 comments: true
+dblog_post_id: 23
 ---
 This drove me crazy for an hour. I needed to execute a remote process via WMI and wait for it to finish. Lots of online resources are suggesting to use `__InstanceCreationEvent`, but that always threw access denied errors back at me. This is a workable straightforward solution, waiting for process to finish by quering the running processes.
 

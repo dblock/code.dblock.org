@@ -5,6 +5,7 @@ redirect_from: "/living-in-adelaide-gmt930/"
 date: 2010-01-09 13:40:25
 tags: [.net, asp.net]
 comments: true
+dblog_post_id: 76
 ---
 Someone kindly reported [a bug entitled "Times Rounding Off"](http://www.foodcandy.com/BugView.aspx?id=713) on [FoodCandy.com](http://www.foodcandy.com/).
 

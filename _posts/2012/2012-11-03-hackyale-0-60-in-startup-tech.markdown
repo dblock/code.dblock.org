@@ -5,6 +5,7 @@ redirect_from: "/hackyale-0-60-in-startup-tech/"
 date: 2012-11-03 01:23:17
 tags: [teams, technology, speaking, people]
 comments: true
+dblog_post_id: 357
 ---
 ![]({{ site.url }}/images/posts/2012/2012-11-03-hackyale-0-60-in-startup-tech/image_5.jpg)
 

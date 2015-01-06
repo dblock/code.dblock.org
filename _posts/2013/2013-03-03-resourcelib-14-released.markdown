@@ -5,6 +5,7 @@ redirect_from: "/resourcelib-14-released/"
 date: 2013-03-03 15:44:00
 tags: [resourcelib, open source, win32]
 comments: true
+dblog_post_id: 377
 ---
 [https://github.com/dblock/resourcelib](https://github.com/dblock/resourcelib)
 

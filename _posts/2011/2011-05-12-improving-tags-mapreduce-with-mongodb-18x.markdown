@@ -5,6 +5,7 @@ redirect_from: "/improving-tags-mapreduce-with-mongodb-18x/"
 date: 2011-05-12 13:52:44
 tags: [mongodb, ruby]
 comments: true
+dblog_post_id: 206
 ---
 Today we’ll improve [this map/reduce implementation](http://markembling.info/2010/11/using-map-reduce-in-a-mongodb-app) that produces a collection of tags with their counts. We’ll add inline map/reduce for databases that support it, inline JavaScript and make fast incremental updates.
 

@@ -5,6 +5,7 @@ redirect_from: "/help-me-fix-tech-recruiting-become-a-recruiter/"
 date: 2013-01-12 16:11:17
 tags: [teams, recruiters, hiring, people]
 comments: true
+dblog_post_id: 368
 ---
 ![]({{ site.url }}/images/posts/2013/2013-01-12-help-me-fix-tech-recruiting-become-a-recruiter/image_7.jpg)
 

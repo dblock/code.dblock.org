@@ -5,6 +5,7 @@ redirect_from: "/how-do-i-get-the-name-of-an-objects-type-in-javascript/"
 date: 2012-10-13 21:19:02
 tags: [backbone.js, javascript, rspec, art.sy, testing]
 comments: true
+dblog_post_id: 351
 ---
 I love reflection, especially the Ruby kind. JavaScript reflection, though, can exhibit interesting runtime behavior.
 

@@ -5,6 +5,7 @@ redirect_from: "/grape-vs-poncho/"
 date: 2013-04-06 13:19:37
 tags: [grape, ruby]
 comments: true
+dblog_post_id: 381
 ---
 There’re a number of excellent micro-frameworks to author RESTful APIs in Ruby. Let’s take a look at the newcomer, [Poncho](https://github.com/stripe/poncho), from the Stripe team, [brought up](https://groups.google.com/forum/?fromgroups=#!topic/ruby-grape/4oEnuDA9e-8) on the Grape mailing list. For those that don’t know me, I’m the maintainer of [Grape](https://github.com/intridea/grape) and use it very heavily at [Artsy](http://artsy.net/). I’ll do my best not to be biased.
 

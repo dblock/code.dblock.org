@@ -5,6 +5,7 @@ redirect_from: "/goruco-2012-from-zero-to-api-cache-w-grape-mongodb-in-10-minute
 date: 2012-07-01 20:00:14
 tags: [performance, grape, speaking, ruby]
 comments: true
+dblog_post_id: 342
 ---
 ![]({{ site.url }}/images/posts/2012/2012-07-01-goruco-2012-from-zero-to-api-cache-w-grape-mongodb-in-10-minutes-video/image_10.jpg)
 

@@ -5,6 +5,7 @@ redirect_from: "/why-microsoft-should-open-source-skype/"
 date: 2011-05-31 23:49:45
 tags: [open source, microsoft]
 comments: true
+dblog_post_id: 212
 ---
 ![]({{ site.url }}/images/posts/2011/2011-05-31-why-microsoft-should-open-source-skype/image_5.jpg)
 

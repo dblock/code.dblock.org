@@ -5,6 +5,7 @@ redirect_from: "/i-want-to-contribute-to-open-source-where-do-i-begin/"
 date: 2014-09-29 10:45:36
 tags: [teams, teaching, open source]
 comments: true
+dblog_post_id: 423
 ---
 I get this question a lot. I turned to my friends, [HN](https://news.ycombinator.com/item?id=8361790) and [Twitter](https://twitter.com/dblockdotorg/status/514789874155945986) for some advice.
 

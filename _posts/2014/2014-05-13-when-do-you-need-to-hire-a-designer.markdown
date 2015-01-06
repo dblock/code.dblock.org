@@ -5,6 +5,7 @@ redirect_from: "/when-do-you-need-to-hire-a-designer/"
 date: 2014-05-13 15:32:16
 tags: [design, ux, teams, art.sy, ui, people]
 comments: true
+dblog_post_id: 414
 ---
 I was showing [Inez & Vinoodh’s Stephanie Seymour’s photograph on Artsy](https://artsy.net/artwork/inez-and-vinoodh-stephanie-seymour-v-magazine) to a friend. "Beautiful!", she exclaimed and clicked on the [Inez & Vinoodh artist profile](https://artsy.net/artist/inez-and-vinoodh). I lost her for an hour to browsing the site. She added works to favorites. And inquired for one with a gallery, which is core to our subscription business. The reason why this kind of engagement happens time-and-again is, most definitely, not an accident. It is, of course, the art, but it’s also the very deliberate work of the Artsy design team.
 

@@ -5,6 +5,7 @@ redirect_from: "/mentoring-101/"
 date: 2013-06-12 12:54:20
 tags: [teams, teaching, technology, art.sy, people]
 comments: true
+dblog_post_id: 386
 ---
 This year my colleagues at [Artsy](http://artsy.net) created a formal fellowship program. We went out to many US colleges to recruit some of the brightest seniors. From thousands of applications we’ve selected a dozen people that will be joining the arts and tech teams. A few have already graduated and might get full time job offers at the end, others will go back to finish school. We assign everyone a mentor. Today I gave a "Mentoring 101" talk to the team, which seems to have turned out great, thanks to the excellent material sourced from the fellow members of the [New York CTO Club](http://www.linkedin.com/groups/New-York-CTO-Club-45712/about), a group that combines several generations of management experience. Slides [here](http://www.slideshare.net/dblockdotorg/mentoring-101-the-artsy-way).
 

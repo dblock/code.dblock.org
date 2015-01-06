@@ -5,6 +5,7 @@ redirect_from: "/vestris-inc-software-for-free/"
 date: 2009-09-22 22:30:00
 tags: [vestris]
 comments: true
+dblog_post_id: 53
 ---
 It's 2009 and my first company, Vestris Inc., hasn't existed since 2004. You can read some history [here](https://web.archive.org/web/20090405190145/http://www.vestris.com/sti/company.html). For the anecdote, this is the actual map of Vestris Inc. customers.
 

@@ -5,6 +5,7 @@ redirect_from: "/exporting-data-to-excel-in-ruby-on-rails-w-spreadsheet-and-toxl
 date: 2011-09-01 23:32:35
 tags: [excel, rails, ruby]
 comments: true
+dblog_post_id: 254
 ---
 ![]({{ site.url }}/images/posts/2011/2011-09-01-exporting-data-to-excel-in-ruby-on-rails-w-spreadsheet-and-toxls/image_7.jpg)
 

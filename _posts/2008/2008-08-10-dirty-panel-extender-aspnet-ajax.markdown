@@ -5,6 +5,7 @@ redirect_from: "/dirty-panel-extender-aspnet-ajax/"
 date: 2008-08-10 18:08:51
 tags: [asp.net]
 comments: true
+dblog_post_id: 3
 ---
 ![ASP.NET Ajax Dirty Panel Extender in Action](http://www.codeproject.com/KB/ajax/ajaxdirtypanelextender/screenshot.jpg)
 

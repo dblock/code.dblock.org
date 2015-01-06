@@ -5,6 +5,7 @@ redirect_from: "/beer-mug-contribute-something-small-to-an-open-source-project/"
 date: 2011-03-24 22:03:29
 tags: [heroku, open source, people]
 comments: true
+dblog_post_id: 188
 ---
 This morning, [Dan Croak](https://github.com/croaky), chief marketing officer at [Thoughtbot](http://thoughtbot.com/about/), has finally come forward as an amazing open-source contributor. All his previous contributions to the core Rails project notwithstanding. He submitted this to the [Heroku-Bartender project](https://github.com/sarcilav/heroku-bartender/).
 

@@ -5,6 +5,7 @@ redirect_from: "/strictly-platonic-engineering-jobs-on-craigslist/"
 date: 2010-12-17 22:49:35
 tags: [appsecinc, jobs, people]
 comments: true
+dblog_post_id: 153
 ---
 In the past six months I’ve done dozens of engineering interviews for our many job openings, including developers and team leads. We’ve hired some excellent people in this process. I get resumes from my personal network, a few (no more than three) recruiters that I’ve known for a long time and [Craigslist](http://newyork.craigslist.org/sof/). Since Craigslist is source of endless amusement, I took a bit of time to assemble a few numbers.
 

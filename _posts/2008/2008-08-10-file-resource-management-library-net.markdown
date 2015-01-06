@@ -5,6 +5,7 @@ redirect_from: "/file-resource-management-library-net/"
 date: 2008-08-10 18:00:00
 tags: [win32]
 comments: true
+dblog_post_id: 5
 ---
 There are several good articles about reading and writing resources from/to a compiled binary. Most focus on retrieving module version information and modifying version information, mostly in C++. Some detail the same operations for cursor or dialog resources. There's, however, no single .NET library to retrieve and save any type of resources, or any library to edit version resources specifically.
 

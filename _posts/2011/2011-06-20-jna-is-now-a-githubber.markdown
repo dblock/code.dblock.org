@@ -5,6 +5,7 @@ redirect_from: "/jna-is-now-a-githubber/"
 date: 2011-06-20 13:32:09
 tags: [github, git, open source, jna, java]
 comments: true
+dblog_post_id: 219
 ---
 ![]({{ site.url }}/images/posts/2011/2011-06-20-jna-is-now-a-githubber/image_10.jpg)
 

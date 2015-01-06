@@ -5,6 +5,7 @@ redirect_from: "/how-to-convert-numbers-into-words-in-ruby-with-numbersandwords/
 date: 2012-03-23 21:37:49
 tags: [ruby]
 comments: true
+dblog_post_id: 329
 ---
 You’d think someone has implemented simple conversion of numbers into English by now? For example 42 becomes "forty-two".
 

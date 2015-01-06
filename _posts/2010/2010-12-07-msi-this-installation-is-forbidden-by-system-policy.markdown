@@ -5,6 +5,7 @@ redirect_from: "/msi-this-installation-is-forbidden-by-system-policy/"
 date: 2010-12-07 15:53:33
 tags: [msi]
 comments: true
+dblog_post_id: 149
 ---
 I ran into the infamous "this installation is forbidden by system policy" error message this morning while trying to fix the [MsiExt](https://github.com/dblock/msiext/) build on a new Windows 2003 64-bit build machine. The message is known to be extremely helpful. It basically says _"Sorry, someone somewhere defined something that you will never find that prevents this MSI from executing. Good luck with that."_. In addition, it’s the result of an [MsiOpenPackage](http://msdn.microsoft.com/en-us/library/aa370339(VS.85).aspx) call, not of any kind of execution per-se.
 

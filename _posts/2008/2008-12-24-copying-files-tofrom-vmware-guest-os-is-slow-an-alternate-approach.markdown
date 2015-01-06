@@ -5,6 +5,7 @@ redirect_from: "/copying-files-tofrom-vmware-guest-os-is-slow-an-alternate-appro
 date: 2008-12-24 05:45:00
 tags: [vmware]
 comments: true
+dblog_post_id: 26
 ---
 I really like VMWare VIX API's _CopyFileFromGuestToHost_ and _CopyFileFromHostToGuest_. These automatically copy a single file or an entire directory tree. Easy. Unfortunately I am copying large (150-300 Mb) files to/from a VMWare guest OS and it's taking an hour to copy a hundred megs. I bet VMWare API was developed by Russian developers, so it's probably sending UTF-8 encoded bytes in Russian via SOAP. You might remember that I am writing a tool that lets one test a cross-product of installers and virtual machine snapshots: three MSIs multipled by twenty snapshots equals days of file copying! It's not going to work.
 

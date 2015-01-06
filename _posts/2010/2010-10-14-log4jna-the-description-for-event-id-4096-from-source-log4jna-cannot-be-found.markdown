@@ -5,6 +5,7 @@ redirect_from: "/log4jna-the-description-for-event-id-4096-from-source-log4jna-c
 date: 2010-10-14 12:25:48
 tags: [log4j, jna, win32]
 comments: true
+dblog_post_id: 130
 ---
 This is a pretty common problem with NTEventLogAppender (both log4j and [log4jna](http://code.dblock.org/ShowUrl.aspx?ObjectId=129&ObjectType=Post&Url=http%3a%2f%2flog4jna.codeplex.com%2f) versions) and generally with firing events to the Windows event log. The events are properly fired, but the text in the event log contains the annoying _"the description for Event ID 4096 from source cannot be found"_ error.
 

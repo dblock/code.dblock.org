@@ -5,6 +5,7 @@ redirect_from: "/github-is-your-new-resume/"
 date: 2011-07-14 14:30:13
 tags: [github, git, organizations, people]
 comments: true
+dblog_post_id: 232
 ---
 ![]({{ site.url }}/images/posts/2011/2011-07-14-github-is-your-new-resume/image_12.jpg)
 

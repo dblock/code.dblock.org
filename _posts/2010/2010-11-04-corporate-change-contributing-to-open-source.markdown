@@ -5,6 +5,7 @@ redirect_from: "/corporate-change-contributing-to-open-source/"
 date: 2010-11-04 11:30:00
 tags: [appsecinc, open source, organizations, people]
 comments: true
+dblog_post_id: 140
 ---
 
 This is a story of corporate change. It’s a tale about how an unlikely organization embraced open-source. It starts with pain and suffering and may even read like an "I hate my boss" diatribe. I don’t. On the contrary, this story ends better than I would have ever hoped. It will give you hope too.

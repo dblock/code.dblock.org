@@ -5,6 +5,7 @@ redirect_from: "/a-rake-task-for-copying-data-between-amazon-s3-buckets/"
 date: 2011-03-30 01:53:39
 tags: [s3, rake, ruby]
 comments: true
+dblog_post_id: 191
 ---
 ![buckets]({{ site.url }}/images/posts/2011/2011-03-30-a-rake-task-for-copying-data-between-amazon-s3-buckets/buckets_5.jpg)
 

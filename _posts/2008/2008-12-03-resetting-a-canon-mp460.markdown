@@ -5,6 +5,7 @@ redirect_from: "/resetting-a-canon-mp460/"
 date: 2008-12-03 04:25:03
 tags: [hardware]
 comments: true
+dblog_post_id: 21
 ---
 This is going to be my first hardware post. We'll start simple - I do have a copy of [The Art of Electronics](http://www.amazon.com/Art-Electronics-Paul-Horowitz/dp/0521370957) and a welder, so there's a chance I might post something meaningful one day.
 

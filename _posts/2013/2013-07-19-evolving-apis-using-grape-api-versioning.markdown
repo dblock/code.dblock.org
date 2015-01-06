@@ -5,6 +5,7 @@ redirect_from: "/evolving-apis-using-grape-api-versioning/"
 date: 2013-07-19 16:35:12
 tags: [apis, rack, grape, ruby]
 comments: true
+dblog_post_id: 388
 ---
 I’ve seen two common API versioning strategies in the wild. The first is to use a single API version and gradually deprecate methods. This usually means introducing new API routes, while retiring old ones, and representing the same objects in multiple, versioned, formats. Fast forward a few years and you are likely to inherit a significant amount of technical debt. The second strategy involves making a clean cut, leaving the version one of the API alone and building a fresh, new, API version two.
 

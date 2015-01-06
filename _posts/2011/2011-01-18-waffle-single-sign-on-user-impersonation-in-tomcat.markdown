@@ -5,6 +5,7 @@ redirect_from: "/waffle-single-sign-on-user-impersonation-in-tomcat/"
 date: 2011-01-18 14:21:02
 tags: [tomcat, waffle, jna, security, java, active directory, win32]
 comments: true
+dblog_post_id: 157
 ---
 ![]({{ site.url }}/images/posts/2011/2011-01-18-waffle-single-sign-on-user-impersonation-in-tomcat/image_3.jpg)
 

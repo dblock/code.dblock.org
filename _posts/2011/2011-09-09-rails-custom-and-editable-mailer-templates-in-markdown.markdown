@@ -5,6 +5,7 @@ redirect_from: "/rails-custom-and-editable-mailer-templates-in-markdown/"
 date: 2011-09-09 00:20:32
 tags: [devise, rails, ruby]
 comments: true
+dblog_post_id: 263
 ---
 You love markdown? We do too.
 

@@ -5,6 +5,7 @@ redirect_from: "/autoconf-worlds-best-multiple-configurations-software/"
 date: 2009-09-22 22:49:25
 tags: [vestris]
 comments: true
+dblog_post_id: 54
 ---
 This was my first commercial product. It has been available for a while with [full x86 assembly source code](https://github.com/dblock/autoconf). It's useful if you still run a DOS system ;)
 

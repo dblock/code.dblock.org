@@ -5,6 +5,7 @@ redirect_from: "/blame-it-all-on-mongodb/"
 date: 2011-12-20 17:26:09
 tags: [art.sy, mongodb, ruby]
 comments: true
+dblog_post_id: 304
 ---
 You may have read my [previous post](http://code.dblock.org/mongoid-202-mongo-bson-bsonext-140-and-141) about the MongoDB 1.4.x Ruby driver hell.
 

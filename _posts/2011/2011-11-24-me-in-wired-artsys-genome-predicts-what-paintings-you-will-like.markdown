@@ -5,6 +5,7 @@ redirect_from: "/me-in-wired-artsys-genome-predicts-what-paintings-you-will-like
 date: 2011-11-24 01:07:14
 tags: [press, art.sy, me me]
 comments: true
+dblog_post_id: 296
 ---
 Vanity aside, Wired published a very well written article on Art.sy [[link](http://www.wired.com/magazine/2011/11/mf_artsy/all/1)] in the December issue. I think it’s objective, describes the company vision well, and the story about a mobile prototype is completely accurate.
 

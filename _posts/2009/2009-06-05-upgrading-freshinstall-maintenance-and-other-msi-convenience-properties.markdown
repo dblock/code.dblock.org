@@ -5,6 +5,7 @@ redirect_from: "/upgrading-freshinstall-maintenance-and-other-msi-convenience-pr
 date: 2009-06-05 14:15:00
 tags: [wix]
 comments: true
+dblog_post_id: 42
 ---
 In writing new MSI installers, we always have to deal with legacy InstallShield installers, upgrading, maintenance mode, etc. The properties get confusing very quickly, so we came up with some shortcuts that make life easier.
 

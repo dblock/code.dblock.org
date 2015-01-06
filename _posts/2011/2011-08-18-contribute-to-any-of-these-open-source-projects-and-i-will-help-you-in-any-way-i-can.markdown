@@ -5,6 +5,7 @@ redirect_from: "/contribute-to-any-of-these-open-source-projects-and-i-will-help
 date: 2011-08-18 13:42:16
 tags: [art.sy, open source]
 comments: true
+dblog_post_id: 247
 ---
 We all have wish lists. Here’s the deal. Contribute to any of these open-source projects and I will help you in any way I can.
 

@@ -5,6 +5,7 @@ redirect_from: "/how-not-to-rewrite-everything/"
 date: 2012-05-03 13:47:24
 tags: [technology, art.sy, ruby, people]
 comments: true
+dblog_post_id: 334
 ---
 I wrote a blog post yesterday about [How to Start Small With Big Data and Google Analytics](http://artsy.github.com/blog/2012/05/01/how-to-start-small-with-big-data-and-google-analytics/). Essentially, it’s a jumpstart for fetching Google Analytics pageviews and merging the daily data with some domain knowledge. But it also asks an important question:
 

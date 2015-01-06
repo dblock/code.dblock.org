@@ -5,6 +5,7 @@ redirect_from: "/windowsactive-directory-authentication-tomcat-jaas-w-waffle/"
 date: 2010-05-24 12:24:18
 tags: [tomcat, waffle, jna, java, active directory]
 comments: true
+dblog_post_id: 105
 ---
 
 ![waffle]({{ site.url }}/images/posts/2010/2010-05-24-windowsactive-directory-authentication-tomcat-jaas-w-waffle/waffle_6.jpg)

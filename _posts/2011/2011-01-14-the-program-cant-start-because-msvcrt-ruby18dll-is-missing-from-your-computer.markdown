@@ -5,6 +5,7 @@ redirect_from: "/the-program-cant-start-because-msvcrt-ruby18dll-is-missing-from
 date: 2011-01-14 21:50:59
 tags: [rails, ruby, win32]
 comments: true
+dblog_post_id: 156
 ---
 So I’ve been playing with Ruby. Yes, I am using a Windows 7 64-bit laptop and yes, despite the common message from most people on the Internet encouraging me to run Ubuntu, things work just fine.
 

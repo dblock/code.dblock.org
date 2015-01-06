@@ -5,6 +5,7 @@ redirect_from: "/vmwaretasks-13-for-vixcom-170-lets-reinvent-less-wheels/"
 date: 2009-09-10 13:15:50
 tags: [vmware]
 comments: true
+dblog_post_id: 48
 ---
 [![VMWareTasks Library](http://i3.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=vmwaretasks&DownloadId=65246 "VMWareTasks Library")](http://vmwaretasks.codeplex.com)
 

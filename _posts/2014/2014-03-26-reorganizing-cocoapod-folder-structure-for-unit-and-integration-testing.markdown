@@ -5,6 +5,7 @@ redirect_from: "/reorganizing-cocoapod-folder-structure-for-unit-and-integration
 date: 2014-03-26 14:06:21
 tags: [cocoapods, ios, open source]
 comments: true
+dblog_post_id: 410
 ---
 My first CocoaPod described in [this post](/your-first-cocoapod) sparked [a discussion](https://github.com/CocoaPods/pod-template/issues/25) with the CocoaPods team. There’re a few things I didn’t like about the project organization.
 

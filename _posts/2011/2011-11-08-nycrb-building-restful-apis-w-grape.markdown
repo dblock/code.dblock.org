@@ -5,6 +5,7 @@ redirect_from: "/nycrb-building-restful-apis-w-grape/"
 date: 2011-11-08 12:30:52
 tags: [grape, rails, ruby]
 comments: true
+dblog_post_id: 290
 ---
 I’m speaking at NYC.rb tonight @ Pivotal Labs, [RSVP](http://www.meetup.com/NYC-rb/events/28968081/).
 

@@ -5,6 +5,7 @@ redirect_from: "/pushing-assets-to-s3-w-rake-versioning-and-cache-expiration/"
 date: 2011-12-10 20:19:07
 tags: [javascript, css, git, cloudfront, s3, rails, ruby]
 comments: true
+dblog_post_id: 300
 ---
 A while ago I [wrote](/rails-s3-cloudfront-jammit-heroku-100) about how we package and push Rails assets to Amazon S3. We version assets with the GIT hash – varying the assets by URL enables setting indefinite cache expiration and works well with a CDN. In that post you could find a Rake task that would delete any old assets and replace them with newer assets. It’s time for a revision with some new features.
 

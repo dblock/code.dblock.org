@@ -5,6 +5,7 @@ redirect_from: "/5-ways-to-avoid-feature-branches/"
 date: 2012-10-01 12:03:19
 tags: [teams, deployment, testing, organizations, agile]
 comments: true
+dblog_post_id: 348
 ---
 ![]({{ site.url }}/images/posts/2012/2012-10-01-5-ways-to-avoid-feature-branches/image_11.jpg)
 

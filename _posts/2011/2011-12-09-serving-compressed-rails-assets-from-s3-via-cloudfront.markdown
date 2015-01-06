@@ -5,6 +5,7 @@ redirect_from: "/serving-compressed-rails-assets-from-s3-via-cloudfront/"
 date: 2011-12-09 04:56:19
 tags: [cloudfront, s3, rails, ruby]
 comments: true
+dblog_post_id: 299
 ---
 I wrote about how we do asset packaging with Rails, how we Jammit and push them to S3 in [this post](/rails-s3-cloudfront-jammit-heroku-100). We’ve had a few surprises since then, one that had to do with compressed assets.
 

@@ -5,6 +5,7 @@ redirect_from: "/msi-property-patterns-upgrading-firstinstall-and-maintenance/"
 date: 2010-05-11 20:00:00
 tags: [msi, wix]
 comments: true
+dblog_post_id: 101
 ---
 In writing new MSI installers, you must think about upgrade. I always recommend major upgrade – uninstall and reinstall is much cleaner. In that case the `Installed` vs. `NOT Installed` properties get confusing very quickly, so we came up with some shortcuts that make life easier.
 

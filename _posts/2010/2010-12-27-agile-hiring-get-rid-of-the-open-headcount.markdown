@@ -5,6 +5,7 @@ redirect_from: "/agile-hiring-get-rid-of-the-open-headcount/"
 date: 2010-12-27 18:03:34
 tags: [jobs, organizations, people]
 comments: true
+dblog_post_id: 154
 ---
 Here’s a disruptive idea for the corporate world: let’s get rid of the traditional "open headcount".
 

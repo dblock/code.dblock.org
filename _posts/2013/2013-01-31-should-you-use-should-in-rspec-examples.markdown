@@ -5,6 +5,7 @@ redirect_from: "/should-you-use-should-in-rspec-examples/"
 date: 2013-01-31 12:55:37
 tags: [rspec, ruby, testing]
 comments: true
+dblog_post_id: 372
 ---
 There’re two kinds of developers: those who use _should_ in RSpec examples and those who use present tense.
 

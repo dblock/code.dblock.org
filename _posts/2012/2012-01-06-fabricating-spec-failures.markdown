@@ -5,6 +5,7 @@ redirect_from: "/fabricating-spec-failures/"
 date: 2012-01-06 21:39:10
 tags: [rspec, rails, ruby, testing]
 comments: true
+dblog_post_id: 305
 ---
 I love fabricators. We use the awesome [fabrication gem](https://github.com/paulelliott/fabrication) that lets you do some pretty neat things in Rails specs.
 

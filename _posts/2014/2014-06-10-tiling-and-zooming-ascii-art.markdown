@@ -5,6 +5,7 @@ redirect_from: "/tiling-and-zooming-ascii-art/"
 date: 2014-06-10 11:38:55
 tags: [ios, speaking, art.sy]
 comments: true
+dblog_post_id: 415
 ---
 My slides from last night’s iOSoho talk on tiling and zooming ASCII art are here: [http://www.slideshare.net/dblockdotorg/tiling-and-zooming-ascii-art-i-os-soho](http://www.slideshare.net/dblockdotorg/tiling-and-zooming-ascii-art-i-os-soho).
 

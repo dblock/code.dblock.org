@@ -5,6 +5,7 @@ redirect_from: "/eyemind-interview/"
 date: 2011-10-07 14:16:54
 tags: [speaking, art.sy]
 comments: true
+dblog_post_id: 276
 ---
 Me on Eye&Mind, talking about Art.sy technology, [link](http://www.eyeandmind.com/2011/10/art-sy-with-daniel-doubrovkine/).
 

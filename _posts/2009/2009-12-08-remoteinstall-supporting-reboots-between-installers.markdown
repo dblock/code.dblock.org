@@ -5,6 +5,7 @@ redirect_from: "/remoteinstall-supporting-reboots-between-installers/"
 date: 2009-12-08 16:23:18
 tags: [remoteinstall, testing, dotnetinstaller, vmware, msi]
 comments: true
+dblog_post_id: 71
 ---
 We’ve recently upgraded the Visual Studio 2005 SP1 C++ Redistributable to a [newer version with the ATL security update](http://www.microsoft.com/downloads/details.aspx?familyid=766A6AF7-EC73-40FF-B072-9112BAB119C2&displaylang=en). We quickly found that the installer requires a reboot in about half of our upgrade scenarios. This is understandable because our own application is running and using the CRT and while the ATL security update looks like a new side-by-side installation magic happens that involves the previous version.
 

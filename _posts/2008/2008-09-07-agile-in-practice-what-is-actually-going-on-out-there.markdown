@@ -5,6 +5,7 @@ redirect_from: "/agile-in-practice-what-is-actually-going-on-out-there/"
 date: 2008-09-07 03:45:00
 tags: [agile]
 comments: true
+dblog_post_id: 15
 ---
 
 <a href='http://www.infoq.com/presentations/Agile-in-Practice-Scott-Ambler'>

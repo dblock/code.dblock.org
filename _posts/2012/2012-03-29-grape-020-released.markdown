@@ -5,6 +5,7 @@ redirect_from: "/grape-020-released/"
 date: 2012-03-29 14:55:40
 tags: [grape, ruby]
 comments: true
+dblog_post_id: 331
 ---
 After almost a year of active development with 200+ commits, Grape 0.2.0 has finally been released. It’s the code from the "frontier" branch that we’ve been using in production for quite a while.
 

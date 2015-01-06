@@ -5,6 +5,7 @@ redirect_from: "/automating-win32-ui-testing-systemwindowsautomation-and-project
 date: 2009-12-12 14:10:45
 tags: [testing, ui, .net, win32]
 comments: true
+dblog_post_id: 73
 ---
 Just when I thought things were well under control in [dotNetInstaller](https://github.com/dblock/dotnetinstaller/), someone filed [this bug](http://dotnetinstaller.codeplex.com/workitem/4856). It basically says that an installed check doesn’t work. This is pretty major functionality and I was under the impression that I unit-tested it in every possible direction. There’s at least a dozen tests that walk all kinds of scenarios around these checks and everything passes. It took ten seconds to find the culprit: the UI has a silly bug and such a check cannot be added to a configuration node. Naturally unit tests don’t use the UI. The user cannot take advantage of the functionality, even though the functionality itself ... functions.
 

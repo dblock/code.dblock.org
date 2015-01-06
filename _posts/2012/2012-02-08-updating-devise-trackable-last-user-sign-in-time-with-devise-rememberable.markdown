@@ -5,6 +5,7 @@ redirect_from: "/updating-devise-trackable-last-user-sign-in-time-with-devise-re
 date: 2012-02-08 15:48:07
 tags: [devise, rails, ruby]
 comments: true
+dblog_post_id: 315
 ---
 [Devise](https://github.com/plataformatec/devise) has a _:trackable _strategy which updates the user’s last sign-in time, remote IP and increments a counter in the _User_ model upon successful logon. This is implemented in [Devise::Models::Trackable.update_tracked_fields!](https://github.com/plataformatec/devise/blob/master/lib/devise/models/trackable.rb) and invoked as a Warden callback in [devise/hooks/trackable.rb](https://github.com/plataformatec/devise/blob/master/lib/devise/hooks/trackable.rb).
 

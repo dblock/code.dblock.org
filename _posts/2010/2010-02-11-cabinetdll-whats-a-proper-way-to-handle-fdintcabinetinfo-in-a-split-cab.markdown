@@ -5,6 +5,7 @@ redirect_from: "/cabinetdll-whats-a-proper-way-to-handle-fdintcabinetinfo-in-a-s
 date: 2010-02-11 14:57:00
 tags: [win32]
 comments: true
+dblog_post_id: 82
 ---
 I’ve been tracking a bug in [CabLib](http://www.codeproject.com/KB/files/CABCompressExtract.aspx), used in [dotNetInstaller](https://github.com/dblock/dotnetinstaller) recently. CabLib is a complete C# and C++ wrapper for Cabinet.dll and its goal is to make it easier to CAB files. Anyone who used Cabinet.dll’s interface directly will quickly discover that it follows the usual Microsoft Win32 mantra: if a developer can do something himself with the existing API, don’t include that functionality in the platform SDK. This produces a well thought-through Cabinet SDK, provided that your user has a major in computer science and a PhD in cognitive psychology.
 

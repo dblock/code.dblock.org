@@ -5,6 +5,7 @@ redirect_from: "/ror-win-getting-things-done-with-mongodb-mongoid/"
 date: 2011-05-27 12:33:18
 tags: [mongodb, rails, ruby]
 comments: true
+dblog_post_id: 210
 ---
 ![mongoid-logo-small]({{ site.url }}/images/posts/2011/2011-05-27-ror-win-getting-things-done-with-mongodb-mongoid/mongoid-logo-small_2.jpg)
 

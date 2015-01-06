@@ -5,6 +5,7 @@ redirect_from: "/how-we-upgraded-a-live-site-in-the-middle-of-demo-and-didnt-die
 date: 2011-06-21 14:24:53
 tags: [art.sy, testing, agile]
 comments: true
+dblog_post_id: 220
 ---
 ![]({{ site.url }}/images/posts/2011/2011-06-21-how-we-upgraded-a-live-site-in-the-middle-of-demo-and-didnt-die-of-a-heart-attack/image_9.jpg)
 

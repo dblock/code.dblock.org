@@ -5,6 +5,7 @@ redirect_from: "/capybara-failed-to-resynchronize-ajax-request-timed-out/"
 date: 2011-09-28 13:17:36
 tags: [capybara, rails, ruby, testing]
 comments: true
+dblog_post_id: 273
 ---
 I used to attribute this error to little green elves inside of Capybara, Selenium or Firefox. But, as usual, things turn out to have a much more reasonable explanation.
 

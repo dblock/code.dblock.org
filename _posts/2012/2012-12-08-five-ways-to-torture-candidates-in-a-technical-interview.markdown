@@ -5,6 +5,7 @@ redirect_from: "/five-ways-to-torture-candidates-in-a-technical-interview/"
 date: 2012-12-08 17:19:01
 tags: [interviews, teams, people]
 comments: true
+dblog_post_id: 363
 ---
 When I joined Microsoft in ‘99 I was taught how to properly interview candidates. I was shown the wheel of competencies, a kind of a wheel of fortune where a color represents the candidate’s technical skill, ability to solve complicated problems or to communicate with their peers. Each  slice included broad interviewing suggestions, which often gave birth to elaborate puzzles. What could possibly be the best way to figure out whether the candidate is capable of thinking out of the box? Ask them why the potholes are round. Can they crank complex working code on a deadline? Ask them to implement a memory allocator in 30 minutes or less in C.
 

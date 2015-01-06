@@ -5,6 +5,7 @@ redirect_from: "/dotnetinstaller-uac-elevation-on-install/"
 date: 2011-01-20 15:36:42
 tags: [open source, security, ui, dotnetinstaller, win32]
 comments: true
+dblog_post_id: 158
 ---
 Following a much pleasing trend of developers contributing major functionality to my open-source projects, [@nsleightholm](http://www.codeplex.com/site/users/view/nsleightholm) (Neil Sleightholm who works for a company called [X2Systems Ltd](http://www.x2systems.com).) has contributed support for UAC elevation on install to [dotNetInstaller 2.0](https://github.com/dblock/dotnetinstaller).
 

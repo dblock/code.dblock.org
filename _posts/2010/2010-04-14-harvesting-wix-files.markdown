@@ -5,6 +5,7 @@ redirect_from: "/harvesting-wix-files/"
 date: 2010-04-14 21:54:22
 tags: [wix]
 comments: true
+dblog_post_id: 97
 ---
 Sometimes great is the enemy of good. I recently had to harvest a large number of files to create a wix installer. I tried _heat.exe_, but after struggling with its generation style and even considering writing an XSLT, I decided it would be faster to just code what I want in C#. This generates a .wxi file that follows somewhat of a standard of naming components .C, directories .D and skipping .svn folders.
 

@@ -5,6 +5,7 @@ redirect_from: "/rails-passing-arrays-in-a-query-string/"
 date: 2011-03-28 22:07:16
 tags: [rails, ruby]
 comments: true
+dblog_post_id: 190
 ---
 I found this quite unusual. I needed to receive an array with some nested hashes part of a query string into a JSON API. Passing encoded JSON wasn’t looking hot. Turns out, in Rails, this can be done with the `[]` syntax.
 

@@ -5,6 +5,7 @@ redirect_from: "/3licenses-collect-your-3rd-party-licenses/"
 date: 2010-11-08 14:25:14
 tags: [3licenses, ant, open source, java, build]
 comments: true
+dblog_post_id: 141
 ---
 
 ![thirdparty]({{ site.url }}/images/posts/2010/2010-11-08-3licenses-collect-your-3rd-party-licenses/thirdparty_4.jpg)

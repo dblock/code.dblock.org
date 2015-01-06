@@ -5,6 +5,7 @@ redirect_from: "/n-queens-puzzle-a-scheme-and-x86-assembly-solution/"
 date: 2009-09-22 19:00:00
 tags: [scheme]
 comments: true
+dblog_post_id: 52
 ---
 The **eight queens puzzle** is the problem of putting eight chess queens on an 8×8 chessboard such that none of them is able to capture any other using the standard chess queen's moves. The queens must be placed in such a way that no two queens would be able to attack each other. Thus, a solution requires that no two queens share the same row, column, or diagonal. The eight queens puzzle is an example of the more general **_n_ queens puzzle** of placing _n_ queens on an _n_×_n_ chessboard, where solutions exist only for _n_ = 1 or _n_ ≥ 4.
 

@@ -5,6 +5,7 @@ redirect_from: "/a-rake-task-for-copying-mongodb-databases/"
 date: 2011-03-27 15:21:19
 tags: [rake, mongodb, rails, ruby]
 comments: true
+dblog_post_id: 189
 ---
 Now that we have a staging and a production environment, we want to copy all production data to staging at the same time as we push new code to staging via continuous integration. While our code has to generally be resilient to data schema changes – we use NoSQL MongoDB – we don’t want to be in the business of carrying backward compatibility code for too long. Instead, we create data migrations that can run after the new code has been deployed and kill the backward compatibility parts with a future commit after we’ve made sure the data has been properly converted.
 

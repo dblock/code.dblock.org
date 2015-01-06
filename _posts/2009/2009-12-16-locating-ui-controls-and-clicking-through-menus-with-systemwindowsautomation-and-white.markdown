@@ -5,6 +5,7 @@ redirect_from: "/locating-ui-controls-and-clicking-through-menus-with-systemwind
 date: 2009-12-16 14:21:00
 tags: [testing, ui, .net, win32]
 comments: true
+dblog_post_id: 75
 ---
 In a previous post I had implemented clicking through menus with White. Someone [pointed out](http://white.codeplex.com/Thread/View.aspx?ThreadId=77934) that this was a solved problem and I didn’t need to write any code.
 

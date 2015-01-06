@@ -5,6 +5,7 @@ redirect_from: "/ld-library-not-found-forlxext-installing-rmagick-on-mavericks/"
 date: 2013-11-24 19:00:20
 tags: [ruby]
 comments: true
+dblog_post_id: 400
 ---
 As always, ImageMagick is super fun after an OS upgrade. Mavericks + Ruby 2.x + RMagick failed with something very confusing today. It couldn’t find the Xext library, which is part of X11. Turns out, that was removed from Mavericks according to [http://support.apple.com/kb/HT5293](http://support.apple.com/kb/HT5293). Install XQuartz from [http://xquartz.macosforge.org/landing](http://xquartz.macosforge.org/landing) and the problem goes away.
 

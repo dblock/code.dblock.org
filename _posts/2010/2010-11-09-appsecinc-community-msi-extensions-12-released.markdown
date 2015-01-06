@@ -5,6 +5,7 @@ redirect_from: "/appsecinc-community-msi-extensions-12-released/"
 date: 2010-11-09 07:56:03
 tags: [appsecinc, open source, msi, wix]
 comments: true
+dblog_post_id: 142
 ---
 ![msiext]({{ site.url }}/images/posts/2010/2010-11-09-appsecinc-community-msi-extensions-12-released/msiext_3.jpg)
 

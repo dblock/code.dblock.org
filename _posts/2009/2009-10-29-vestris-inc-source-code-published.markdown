@@ -5,6 +5,7 @@ redirect_from: "/vestris-inc-source-code-published/"
 date: 2009-10-29 12:00:00
 tags: [vestris]
 comments: true
+dblog_post_id: 61
 ---
 In the spirt of winding down the rest of Vestris Inc., I've published the source code for all of the commercial software.
 

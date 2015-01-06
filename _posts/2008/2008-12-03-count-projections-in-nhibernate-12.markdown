@@ -5,6 +5,7 @@ redirect_from: "/count-projections-in-nhibernate-12/"
 date: 2008-12-03 14:45:00
 tags: [hibernate]
 comments: true
+dblog_post_id: 22
 ---
 For someone who got stuck with NHibernate 1.1 it was actually surprisingly hard to find much about projections. Before you had to do different queries for a `COUNT` or a `SELECT` and you couldn't use `ICriteria`.
 

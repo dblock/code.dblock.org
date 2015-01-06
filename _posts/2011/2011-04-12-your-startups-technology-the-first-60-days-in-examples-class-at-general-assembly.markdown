@@ -5,6 +5,7 @@ redirect_from: "/your-startups-technology-the-first-60-days-in-examples-class-at
 date: 2011-04-12 22:22:40
 tags: [art.sy, architecture, agile]
 comments: true
+dblog_post_id: 197
 ---
 I’m teaching [a class at General Assembly on April 20th](http://yourtechnology.eventbrite.com).
 

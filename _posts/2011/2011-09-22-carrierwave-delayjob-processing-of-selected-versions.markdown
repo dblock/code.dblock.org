@@ -5,6 +5,7 @@ redirect_from: "/carrierwave-delayjob-processing-of-selected-versions/"
 date: 2011-09-22 23:30:43
 tags: [carrierwave, s3, rails, ruby]
 comments: true
+dblog_post_id: 271
 ---
 Our image upload pipeline has gotten a bit too long and no longer fits in the Heroku’s 30-second limit. We generate several image versions and would like to get a couple of sizes first and the larger processors to be delayed.  I’ve looked at a few solutions, first.
 

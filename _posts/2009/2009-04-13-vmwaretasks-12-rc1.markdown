@@ -5,6 +5,7 @@ redirect_from: "/vmwaretasks-12-rc1/"
 date: 2009-04-13 23:14:07
 tags: [vmware]
 comments: true
+dblog_post_id: 40
 ---
 ![VMWareTasks Library](http://i3.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=vmwaretasks&DownloadId=65246)
 

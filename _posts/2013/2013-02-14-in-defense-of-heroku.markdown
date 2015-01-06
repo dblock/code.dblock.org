@@ -5,6 +5,7 @@ redirect_from: "/in-defense-of-heroku/"
 date: 2013-02-14 02:56:22
 tags: [heroku]
 comments: true
+dblog_post_id: 375
 ---
 Le Clash of Booba, Rohff and La Fouine have a new player, RapGenius.
 

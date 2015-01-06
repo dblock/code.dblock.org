@@ -5,6 +5,7 @@ redirect_from: "/grape-routing-multiple-methods/"
 date: 2011-11-03 13:36:26
 tags: [grape, rails, ruby]
 comments: true
+dblog_post_id: 286
 ---
 Sometimes you want to support both GET and POST in a [Grape API](http://github.com/intridea/grape).
 

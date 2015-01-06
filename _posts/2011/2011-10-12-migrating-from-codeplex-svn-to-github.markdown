@@ -5,6 +5,7 @@ redirect_from: "/migrating-from-codeplex-svn-to-github/"
 date: 2011-10-12 16:32:09
 tags: [codeplex, github, microsoft]
 comments: true
+dblog_post_id: 277
 ---
 If you’re like me, trying to Migrate SVN projects on CodePlex to Github, the automatic import will timeout. This is not some kind of conspiracy. This is because CodePlex SVN is a proxy to TFS and revisions don’t start at zero. In order to migrate a project, figure out what your first commit was and specify it in –r in _git svn clone_. This is discussed more in detail [here](http://stackoverflow.com/questions/2405314/git-svn-error-importing-repository-fatal-not-a-valid-object-name).
 

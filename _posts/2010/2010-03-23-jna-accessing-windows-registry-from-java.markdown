@@ -5,6 +5,7 @@ redirect_from: "/jna-accessing-windows-registry-from-java/"
 date: 2010-03-23 18:29:30
 tags: [jna, java, win32]
 comments: true
+dblog_post_id: 90
 ---
 Some things should just be easy. I’ve committed a bunch of registry utility functions into JNA’s platform.jar, all with unit tests. You don’t have to break your head with Win32 API, just use `com.sun.jna.platform.win32.Advapi32Util` and the following functions.
 

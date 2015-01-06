@@ -5,6 +5,7 @@ redirect_from: "/your-first-ruby-gem/"
 date: 2013-05-15 01:53:08
 tags: [ruby, open source]
 comments: true
+dblog_post_id: 382
 ---
 ![](http://photos1.meetupstatic.com/photos/event/6/5/a/3/global_20906019.jpeg)
 

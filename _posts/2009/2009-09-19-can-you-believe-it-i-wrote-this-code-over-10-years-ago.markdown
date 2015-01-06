@@ -5,6 +5,7 @@ redirect_from: "/can-you-believe-it-i-wrote-this-code-over-10-years-ago/"
 date: 2009-09-19 04:45:00
 tags: [dos]
 comments: true
+dblog_post_id: 50
 ---
 I wonder whether it still compiles and runs.
 

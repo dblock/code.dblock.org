@@ -5,6 +5,7 @@ redirect_from: "/paginating-w-mongoid-240-mongomapper-and-kaminari/"
 date: 2012-01-15 13:54:15
 tags: [mongoid, mongodb, ruby]
 comments: true
+dblog_post_id: 307
 ---
 I’ve upgraded our project from Mongoid 2.0.2 to 2.4.0. It took me a few days since our specs raised a couple of real issues. If you’re doing the same, take Mongoid from the tip of [2.4.0-Stable](https://github.com/mongoid/mongoid/tree/2.4.0-stable).
 

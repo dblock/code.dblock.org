@@ -5,6 +5,7 @@ redirect_from: "/precompiling-rails-assets-before-rspeccapybara-integration-test
 date: 2013-08-04 16:41:01
 tags: [rspec, capybara, rails, testing]
 comments: true
+dblog_post_id: 389
 ---
 The first Capybara integration test always tends to timeout when compiling assets on-demand. It’s just damn too slow. Precompile your assets before the test is run.
 

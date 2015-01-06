@@ -5,6 +5,7 @@ redirect_from: "/who-am-i/"
 date: 2008-08-10 18:03:54
 tags: [me me]
 comments: true
+dblog_post_id: 2
 ---
 Before I start writing anything serious here, I got to get some credibility :)
 

@@ -5,6 +5,7 @@ redirect_from: "/dotnetinstaller-setup-bootstrapper-17-ships/"
 date: 2009-10-02 04:44:34
 tags: [dotnetinstaller]
 comments: true
+dblog_post_id: 57
 ---
 I shipped [dotNetInstaller](https://github.com/dblock/dotnetinstaller) 1.7 yesterday. Download it [here](https://github.com/dblock/dotnetinstaller/). You can see the long list of [what's new on the release page](https://github.com/dblock/dotnetinstaller/Release/ProjectReleases.aspx?ReleaseId=30174), but that's not the topic of my post.
 

@@ -5,6 +5,7 @@ redirect_from: "/non-traditional-methods-of-choosing-technology-for-a-software-p
 date: 2011-07-06 14:15:03
 tags: [technology]
 comments: true
+dblog_post_id: 227
 ---
 Yesterday I gave a [talk on choosing technology for a software project](/slides-from-choosing-technology). I argued that building software is unlike building rockets, toasters or power plants. This was very well received and the audience gave plenty of examples to support my thesis. I then described the traditional approaches of choosing technology: picking a stack, a framework and considering scalability, complexity, cost, etc. You make a spreadsheet and fill the little boxes. It was a necessary and boring introduction.
 

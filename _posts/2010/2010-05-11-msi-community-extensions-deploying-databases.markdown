@@ -5,6 +5,7 @@ redirect_from: "/msi-community-extensions-deploying-databases/"
 date: 2010-05-11 17:56:55
 tags: [databases, msi, wix]
 comments: true
+dblog_post_id: 100
 ---
 I announced in a previous post that AppSecInc. has open-sourced its Wix extensions. We’ve continued developing the project for our own needs and have seen some adoption, especially for installing databases. This was expected, since what distinguishes these extensions from stock Wix ones is a programming model that is not narrowly focused on MSSQL, effectively supporting any ODBC database today and creating the opportunity to support other database targets, such as Oracle.
 

@@ -5,6 +5,7 @@ redirect_from: "/embedding-api-sandboxes-in-documentation/"
 date: 2011-08-19 13:30:48
 tags: [coffeescript, jquery, javascript, grape, rails, ruby]
 comments: true
+dblog_post_id: 248
 ---
 Oh, I know how much you want this!
 

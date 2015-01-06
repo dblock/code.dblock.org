@@ -5,6 +5,7 @@ redirect_from: "/favorite-talks-from-qconfsf-2011/"
 date: 2011-11-23 04:41:52
 tags: [conferences, technology, architecture, people]
 comments: true
+dblog_post_id: 295
 ---
 ![]({{ site.url }}/images/posts/2011/2011-11-23-favorite-talks-from-qconfsf-2011/image_5.jpg)
 

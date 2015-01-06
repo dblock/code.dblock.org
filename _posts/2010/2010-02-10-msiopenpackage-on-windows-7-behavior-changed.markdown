@@ -5,6 +5,7 @@ redirect_from: "/msiopenpackage-on-windows-7-behavior-changed/"
 date: 2010-02-10 22:47:44
 tags: [testing, msi, win32]
 comments: true
+dblog_post_id: 81
 ---
 I was very happy upgrading to Windows 7. Virtually everything worked. All kinds of source code that I am writing compiles and runs without issues. It’s only a week later that I had to touch the [AppSecInc. Community MSI extensions](https://github.com/dblock/msiext) and discovered that most unit tests are failing. I talked about [unit testing custom actions earlier](/unit-testing-msi-custom-actions). I finally got to the bottom of it.
 

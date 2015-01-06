@@ -5,6 +5,7 @@ redirect_from: "/debugging-object-has-no-properties-in-a-mongodb-mapreduce/"
 date: 2012-11-29 12:48:12
 tags: [mongoid, javascript, mongodb]
 comments: true
+dblog_post_id: 361
 ---
 You got to love debugging JavaScript errors. Here’s one from a MongoDB map/reduce. The operation fails with this:
 

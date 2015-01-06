@@ -5,6 +5,7 @@ redirect_from: "/a-rake-task-for-backing-up-a-mongodb-database/"
 date: 2011-03-31 14:11:54
 tags: [s3, rake, mongodb]
 comments: true
+dblog_post_id: 192
 ---
 It’s time to connect MongoDB with S3 and write a task that backs up a MongoDB database to Amazon S3. This follows a series of articles, so before you read this you might want to check these out.
 

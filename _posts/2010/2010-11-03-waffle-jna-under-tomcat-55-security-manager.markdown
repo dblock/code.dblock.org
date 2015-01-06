@@ -5,6 +5,7 @@ redirect_from: "/waffle-jna-under-tomcat-55-security-manager/"
 date: 2010-11-03 14:50:39
 tags: [tomcat, waffle, jna, security, java]
 comments: true
+dblog_post_id: 139
 ---
 
 I struggled with this one. Here’s how to get [JNA](https://github.com/twall/jna) and [Waffle](https://github.com/dblock/waffle/) to work under a Java security manager. In my case I have a Tomcat 5.5 which is launched with _-security_. Here’s the complete command-line.

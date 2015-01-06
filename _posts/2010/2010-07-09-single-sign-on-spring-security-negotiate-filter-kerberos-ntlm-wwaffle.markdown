@@ -5,6 +5,7 @@ redirect_from: "/single-sign-on-spring-security-negotiate-filter-kerberos-ntlm-w
 date: 2010-07-09 15:10:36
 tags: [spring, waffle, security]
 comments: true
+dblog_post_id: 114
 ---
 
 ![springwaffle]({{ site.url }}/images/posts/2010/2010-07-09-single-sign-on-spring-security-negotiate-filter-kerberos-ntlm-wwaffle/springwaffle_3.jpg)

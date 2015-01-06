@@ -5,6 +5,7 @@ redirect_from: "/filtering-by-user-agent-in-rails/"
 date: 2011-11-03 13:15:30
 tags: [rails, ruby]
 comments: true
+dblog_post_id: 285
 ---
 Let's filter out some unwanted browsers from displaying broken pages in our Rails application. We could disallow IE6, for example, but allow IE7, 8 and 9.
 

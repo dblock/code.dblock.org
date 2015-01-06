@@ -5,6 +5,7 @@ redirect_from: "/warning-toplevel-constant-xyz-referenced-adminxyz/"
 date: 2012-01-08 00:09:25
 tags: [rspec, rails, ruby]
 comments: true
+dblog_post_id: 306
 ---
 I posted [this](http://www.ruby-forum.com/topic/1506818) to a Ruby forum a while ago.
 

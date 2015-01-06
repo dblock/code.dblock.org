@@ -5,6 +5,7 @@ redirect_from: "/pragmatic-replacement-for-the-vendor-based-bureaucratic-and-sov
 date: 2011-07-09 13:14:55
 tags: [technology, architecture]
 comments: true
+dblog_post_id: 229
 ---
 In my experience I’ve rarely looked back at a technology decision and claimed to have made the absolute right one. Oh, I stood in front of plenty executive management and presented architectural victory. It was easy with products that brought more revenue and happy customers! Money seems to be capable of justifying anything. I think that we, software architects, rarely make _right_ choices. We make _good_ and _bad_ ones. We could all use a more pragmatic approach.
 

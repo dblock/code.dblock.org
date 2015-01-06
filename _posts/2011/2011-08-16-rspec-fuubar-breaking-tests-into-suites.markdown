@@ -5,6 +5,7 @@ redirect_from: "/rspec-fuubar-breaking-tests-into-suites/"
 date: 2011-08-16 12:34:29
 tags: [rspec, art.sy, rake, rails, ruby, testing]
 comments: true
+dblog_post_id: 244
 ---
 Inspired by [this post](http://kpumuk.info/ruby-on-rails/my-top-7-rspec-best-practices/) on RSpec best practices and updated for RSpec2.
 

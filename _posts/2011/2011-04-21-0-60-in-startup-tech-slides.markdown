@@ -5,6 +5,7 @@ redirect_from: "/0-60-in-startup-tech-slides/"
 date: 2011-04-21 03:58:21
 tags: [art.sy, organizations, people, agile]
 comments: true
+dblog_post_id: 200
 ---
 My class sold out tonight with over 40 people attending. If you were there, thank you so much! It’s really rewarding to have an engaged audience where nobody even moved when Brad came in to mention that it was already 8pm and that class was free to go as I was running way late (I was on day 2 of week 1 an hour and a half into it).
 

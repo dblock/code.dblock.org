@@ -5,6 +5,7 @@ redirect_from: "/data-corruption-is-most-likely-caused-by-your-code-and-not-your
 date: 2013-02-09 19:30:22
 tags: [mongoid, mongodb]
 comments: true
+dblog_post_id: 374
 ---
 ![]({{ site.url }}/images/posts/2013/2013-02-09-data-corruption-is-most-likely-caused-by-your-code-and-not-your-database/image_11.jpg)
 

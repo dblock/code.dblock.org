@@ -5,6 +5,7 @@ redirect_from: "/vmware-tasks-net-library-for-vixcom/"
 date: 2009-01-03 14:15:00
 tags: [vmware]
 comments: true
+dblog_post_id: 29
 ---
 ![VMWare](http://www.codeproject.com/KB/library/VMWareTasks/VMWareLogo.jpg)
 

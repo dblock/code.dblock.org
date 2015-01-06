@@ -5,6 +5,7 @@ redirect_from: "/rails-s3-cloudfront-jammit-heroku-100/"
 date: 2011-05-10 16:42:45
 tags: [cloudfront, s3, rake, heroku, rails, ruby, open source]
 comments: true
+dblog_post_id: 205
 ---
 When someone says that you need a "100 grams" to figure something out, it means that it’s completely unobvious and complicated and therefore you need a few vodka shots. Vodka in Russia is measured in grams – 100g being something you would casually drink for breakfast. Alright, today we’re going to figure out how to make Amazon Cloudfront actually work with static assets, Rails, Jammit and Heroku. Get your vodka glass, you’re going to need one.
 

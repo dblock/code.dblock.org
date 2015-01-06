@@ -5,6 +5,7 @@ redirect_from: "/open-source-roundup-for-early-january-2013/"
 date: 2013-01-21 02:44:11
 tags: [open source]
 comments: true
+dblog_post_id: 369
 ---
 Aside of all the posts about [recruiting](http://code.dblock.org/help-me-fix-tech-recruiting-become-a-recruiter) (recruiter spam dropped by 75%, amazing, thank you very much), [website performance](http://code.dblock.org/10-things-engineers-and-non-engineers-can-do-to-make-a-website-faster) and the [importance of source code](http://code.dblock.org/treat-every-line-of-code-as-if-its-going-to-be-thrown-away-one-day), I wrote a few posts recently on the [Artsy Engineering Blog](http://artsy.github.com/) and made some open-source gem releases and contributions. It feels really good and there’s a whole new week ahead!
 

@@ -5,6 +5,7 @@ redirect_from: "/how-long-does-it-take-to-create-a-12-lecture-8-week-course/"
 date: 2012-03-14 15:08:01
 tags: [teaching, learning, rails, ruby]
 comments: true
+dblog_post_id: 325
 ---
 My family counts many teachers. My grandparents were teachers, my father started as a school English teacher and is now a University professor. My wife changed her successful career to become a teacher.
 
