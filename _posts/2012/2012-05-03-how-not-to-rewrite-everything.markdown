@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Not to Rewrite Everything"
-redirect_from: "/how-not-to-rewrite-everything"
+redirect_from: "/how-not-to-rewrite-everything/"
 date: 2012-05-03 13:47:24
 tags: [technology, art.sy, ruby, people]
 comments: true

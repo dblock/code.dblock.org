@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Corporate America: How to Let Great Engineers Go"
-redirect_from: "/corporate-america-how-to-let-great-engineers-go"
+redirect_from: "/corporate-america-how-to-let-great-engineers-go/"
 date: 2011-11-04 14:35:06
 tags: [hiring, organizations, people]
 comments: true

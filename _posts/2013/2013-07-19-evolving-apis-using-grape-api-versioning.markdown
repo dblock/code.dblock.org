@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Evolving APIs using Grape API Versioning"
-redirect_from: "/evolving-apis-using-grape-api-versioning"
+redirect_from: "/evolving-apis-using-grape-api-versioning/"
 date: 2013-07-19 16:35:12
 tags: [apis, rack, grape, ruby]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Visual Studio 2008 Crashes: doesn’t always mean Microsoft sucks"
-redirect_from: "/visual-studio-2008-crashes-doesnt-always-mean-microsoft-sucks"
+redirect_from: "/visual-studio-2008-crashes-doesnt-always-mean-microsoft-sucks/"
 date: 2010-06-08 13:09:25
 tags: [microsoft]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vestris Inc. software for free"
-redirect_from: "/vestris-inc-software-for-free"
+redirect_from: "/vestris-inc-software-for-free/"
 date: 2009-09-22 22:30:00
 tags: [vestris]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deleting Empty Folders in Outlook"
-redirect_from: "/deleting-empty-folders-in-outlook"
+redirect_from: "/deleting-empty-folders-in-outlook/"
 date: 2009-10-09 13:22:40
 tags: [outlook]
 comments: true

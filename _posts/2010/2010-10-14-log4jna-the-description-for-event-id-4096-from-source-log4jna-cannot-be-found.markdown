@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "log4jna: The description for Event ID 4096 from source log4jna cannot be found."
-redirect_from: "/log4jna-the-description-for-event-id-4096-from-source-log4jna-cannot-be-found"
+redirect_from: "/log4jna-the-description-for-event-id-4096-from-source-log4jna-cannot-be-found/"
 date: 2010-10-14 12:25:48
 tags: [log4j, jna, win32]
 comments: true

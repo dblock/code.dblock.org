@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deploying Latest to Heroku with Jenkins CI"
-redirect_from: "/deploying-latest-to-heroku-with-jenkins-ci"
+redirect_from: "/deploying-latest-to-heroku-with-jenkins-ci/"
 date: 2011-09-02 03:16:25
 tags: [jenkins, heroku]
 comments: true

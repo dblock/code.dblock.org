@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Adding (almost) static pages to your fancy Rails website"
-redirect_from: "/adding-almost-static-pages-to-your-fancy-rails-website"
+redirect_from: "/adding-almost-static-pages-to-your-fancy-rails-website/"
 date: 2011-02-21 18:34:37
 tags: [rails, ruby]
 comments: true

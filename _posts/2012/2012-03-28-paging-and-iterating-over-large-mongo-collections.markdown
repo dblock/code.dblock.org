@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Paging and Iterating Over Large Mongo Collections"
-redirect_from: "/paging-and-iterating-over-large-mongo-collections"
+redirect_from: "/paging-and-iterating-over-large-mongo-collections/"
 date: 2012-03-28 13:23:09
 tags: [mongoid, mongodb, ruby]
 comments: true

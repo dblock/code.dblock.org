@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Making HTTPs Requests in Ruby & JavaScript w/ Node.js"
-redirect_from: "/making-https-requests-in-ruby-javascript-w-nodejs"
+redirect_from: "/making-https-requests-in-ruby-javascript-w-nodejs/"
 date: 2013-09-30 05:33:31
 tags: [nodejs, javascript, ruby]
 comments: true

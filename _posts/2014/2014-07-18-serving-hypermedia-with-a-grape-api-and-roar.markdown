@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Serving Hypermedia with a Grape API and Roar"
-redirect_from: "/serving-hypermedia-with-a-grape-api-and-roar"
+redirect_from: "/serving-hypermedia-with-a-grape-api-and-roar/"
 date: 2014-07-18 22:06:06
 tags: [apis, grape]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why is my Microsoft not working? A tribute to Raymond Chen"
-redirect_from: "/why-is-my-microsoft-not-working-a-tribute-to-raymond-chen"
+redirect_from: "/why-is-my-microsoft-not-working-a-tribute-to-raymond-chen/"
 date: 2009-08-18 12:15:00
 tags: [people]
 comments: true

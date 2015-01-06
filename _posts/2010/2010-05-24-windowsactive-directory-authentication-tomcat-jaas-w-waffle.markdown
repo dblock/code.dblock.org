@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Windows/Active Directory Authentication: Tomcat + JAAS w/ Waffle"
-redirect_from: "/windowsactive-directory-authentication-tomcat-jaas-w-waffle"
+redirect_from: "/windowsactive-directory-authentication-tomcat-jaas-w-waffle/"
 date: 2010-05-24 12:24:18
 tags: [tomcat, waffle, jna, java, active directory]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Swissnex: Swiss Startup Lunch"
-redirect_from: "/swissnex-swiss-startup-lunch"
+redirect_from: "/swissnex-swiss-startup-lunch/"
 date: 2014-06-23 15:04:42
 tags: [speaking]
 comments: true

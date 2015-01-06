@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jenkins AnsiColor 0.2.1 w/ Support for Conceal Codes"
-redirect_from: "/jenkins-ansicolor-021-w-support-for-conceal-codes"
+redirect_from: "/jenkins-ansicolor-021-w-support-for-conceal-codes/"
 date: 2012-02-03 13:26:50
 tags: [jenkins, java]
 comments: true

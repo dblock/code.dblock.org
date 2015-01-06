@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Blast from the past: working versions of XReplace-32 and Expression Calculator"
-redirect_from: "/blast-from-the-past-working-versions-of-xreplace-32-and-expression-calculator"
+redirect_from: "/blast-from-the-past-working-versions-of-xreplace-32-and-expression-calculator/"
 date: 2011-04-23 20:15:00
 tags: [open source, vestris]
 comments: true

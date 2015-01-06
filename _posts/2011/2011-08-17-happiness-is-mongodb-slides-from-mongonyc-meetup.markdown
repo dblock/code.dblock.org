@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Happiness is MongoDB: Slides from MongoNYC Meetup"
-redirect_from: "/happiness-is-mongodb-slides-from-mongonyc-meetup"
+redirect_from: "/happiness-is-mongodb-slides-from-mongonyc-meetup/"
 date: 2011-08-17 12:17:22
 tags: [speaking, mongodb]
 comments: true

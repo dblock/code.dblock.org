@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rails: opinionated directory structure"
-redirect_from: "/rails-opinionated-directory-structure"
+redirect_from: "/rails-opinionated-directory-structure/"
 date: 2011-02-13 04:37:26
 tags: [rails, ruby]
 comments: true

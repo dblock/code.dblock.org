@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Should you use 'Should' in RSpec Examples?"
-redirect_from: "/should-you-use-should-in-rspec-examples"
+redirect_from: "/should-you-use-should-in-rspec-examples/"
 date: 2013-01-31 12:55:37
 tags: [rspec, ruby, testing]
 comments: true

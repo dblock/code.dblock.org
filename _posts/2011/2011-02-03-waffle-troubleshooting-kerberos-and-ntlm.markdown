@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Waffle / Сейчас всё станет намного сложнее: troubleshooting Kerberos and NTLM"
-redirect_from: "/waffle-troubleshooting-kerberos-and-ntlm"
+redirect_from: "/waffle-troubleshooting-kerberos-and-ntlm/"
 date: 2011-02-03 13:31:23
 tags: [open source, waffle, security, active directory]
 comments: true

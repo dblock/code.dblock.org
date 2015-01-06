@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Testing w/ Analytical Gem and RSpec"
-redirect_from: "/testing-w-analytical-gem-and-rspec"
+redirect_from: "/testing-w-analytical-gem-and-rspec/"
 date: 2012-01-30 21:07:14
 tags: [rails, ruby, testing]
 comments: true

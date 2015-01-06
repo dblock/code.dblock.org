@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GoRuCo 2012: From Zero to API Cache w/ Grape & MongoDB in 10 Minutes (Video)"
-redirect_from: "/goruco-2012-from-zero-to-api-cache-w-grape-mongodb-in-10-minutes-video"
+redirect_from: "/goruco-2012-from-zero-to-api-cache-w-grape-mongodb-in-10-minutes-video/"
 date: 2012-07-01 20:00:14
 tags: [performance, grape, speaking, ruby]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JacobGen: PROCESSOR_ARCHITECTURE vs. PROCESSOR_ARCHITEW6432 in MSBuild"
-redirect_from: "/jacobgen-processorarchitecture-vs-processorarchitew6432-in-msbuild"
+redirect_from: "/jacobgen-processorarchitecture-vs-processorarchitew6432-in-msbuild/"
 date: 2010-11-21 15:02:29
 tags: [waffle, java, msbuild]
 comments: true

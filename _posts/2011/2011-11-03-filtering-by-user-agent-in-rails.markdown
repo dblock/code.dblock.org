@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Filtering by User-Agent in Rails"
-redirect_from: "/filtering-by-user-agent-in-rails"
+redirect_from: "/filtering-by-user-agent-in-rails/"
 date: 2011-11-03 13:15:30
 tags: [rails, ruby]
 comments: true

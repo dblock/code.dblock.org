@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Graduating to Jenkins CI for Ruby-on-Rails Teams - Jenkins User Group in NYC (Video)"
-redirect_from: "/graduating-to-jenkins-ci-for-ruby-on-rails-teams-jenkins-user-group-in-nyc-video"
+redirect_from: "/graduating-to-jenkins-ci-for-ruby-on-rails-teams-jenkins-user-group-in-nyc-video/"
 date: 2013-03-02 13:56:49
 tags: [speaking, open source]
 comments: true

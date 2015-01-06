@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Warning: Toplevel Constant XYZ Referenced Admin:XYZ"
-redirect_from: "/warning-toplevel-constant-xyz-referenced-adminxyz"
+redirect_from: "/warning-toplevel-constant-xyz-referenced-adminxyz/"
 date: 2012-01-08 00:09:25
 tags: [rspec, rails, ruby]
 comments: true

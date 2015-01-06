@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Log4Cxx for Win32 VS 2005, 2008, etc."
-redirect_from: "/log4cxx-for-win32-vs-2005-2008-etc"
+redirect_from: "/log4cxx-for-win32-vs-2005-2008-etc/"
 date: 2008-09-19 23:00:00
 tags: [win32]
 comments: true

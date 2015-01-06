@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Custom RSpec Meta Tag Validator"
-redirect_from: "/custom-rspec-meta-tag-validator"
+redirect_from: "/custom-rspec-meta-tag-validator/"
 date: 2013-12-13 22:24:17
 tags: [rspec, capybara, ruby]
 comments: true

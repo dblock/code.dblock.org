@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Win32 PInvoke with JNA"
-redirect_from: "/win32-pinvoke-with-jna"
+redirect_from: "/win32-pinvoke-with-jna/"
 date: 2010-02-19 02:20:03
 tags: [jna, java, win32]
 comments: true

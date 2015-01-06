@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Log4jna: getting rid of the pesky NTEventLogAppender.dll"
-redirect_from: "/log4jna-getting-rid-of-the-pesky-nteventlogappenderdll"
+redirect_from: "/log4jna-getting-rid-of-the-pesky-nteventlogappenderdll/"
 date: 2010-09-28 17:16:04
 tags: [log4j, java]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Moving to New York: a Guide for Software Engineers"
-redirect_from: "/moving-to-new-york-a-guide-for-software-engineers"
+redirect_from: "/moving-to-new-york-a-guide-for-software-engineers/"
 date: 2011-06-29 08:31:23
 tags: [art.sy, jobs, people]
 comments: true

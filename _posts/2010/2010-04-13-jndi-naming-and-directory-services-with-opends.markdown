@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JNDI: Naming and Directory Services with OpenDS"
-redirect_from: "/jndi-naming-and-directory-services-with-opends"
+redirect_from: "/jndi-naming-and-directory-services-with-opends/"
 date: 2010-04-13 15:07:34
 tags: [soa, jndi, java, active directory]
 comments: true

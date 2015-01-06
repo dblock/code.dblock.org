@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Jenkins AnsiColor Plugin You’ve All Been Waiting For"
-redirect_from: "/the-jenkins-ansicolor-plugin-youve-all-been-waiting-for"
+redirect_from: "/the-jenkins-ansicolor-plugin-youve-all-been-waiting-for/"
 date: 2011-09-04 12:28:27
 tags: [jenkins, ruby, open source, build]
 comments: true

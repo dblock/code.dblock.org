@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Product/Build Versioning with MSBuild, ANT and CruiseControl"
-redirect_from: "/productbuild-versioning-with-msbuild-ant-and-cruisecontrol"
+redirect_from: "/productbuild-versioning-with-msbuild-ant-and-cruisecontrol/"
 date: 2008-10-26 13:30:00
 tags: [build]
 comments: true

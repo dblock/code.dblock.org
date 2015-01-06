@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Full Client-Server Negotiate SSO in Java w/o a Web Server using WAFFLE"
-redirect_from: "/full-client-server-negotiate-sso-in-java-wo-a-web-server-using-waffle"
+redirect_from: "/full-client-server-negotiate-sso-in-java-wo-a-web-server-using-waffle/"
 date: 2012-03-15 23:45:00
 tags: [waffle, security, java]
 comments: true

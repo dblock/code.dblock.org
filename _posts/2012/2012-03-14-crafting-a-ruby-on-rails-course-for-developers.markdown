@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Crafting a Ruby on Rails Course for Developers"
-redirect_from: "/crafting-a-ruby-on-rails-course-for-developers"
+redirect_from: "/crafting-a-ruby-on-rails-course-for-developers/"
 date: 2012-03-14 02:33:58
 tags: [teaching, learning, technology, rails, ruby]
 comments: true

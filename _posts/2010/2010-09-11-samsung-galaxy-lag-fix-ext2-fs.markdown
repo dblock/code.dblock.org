@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Samsung Galaxy Lag Fix: EXT2 FS"
-redirect_from: "/samsung-galaxy-lag-fix-ext2-fs"
+redirect_from: "/samsung-galaxy-lag-fix-ext2-fs/"
 date: 2010-09-11 13:21:39
 tags: [android]
 comments: true

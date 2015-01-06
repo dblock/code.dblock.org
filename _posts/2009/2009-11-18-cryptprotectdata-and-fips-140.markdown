@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CryptProtectData and FIPS 140"
-redirect_from: "/cryptprotectdata-and-fips-140"
+redirect_from: "/cryptprotectdata-and-fips-140/"
 date: 2009-11-18 12:45:00
 tags: [security]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Your First Ruby Gem"
-redirect_from: "/your-first-ruby-gem"
+redirect_from: "/your-first-ruby-gem/"
 date: 2013-05-15 01:53:08
 tags: [ruby, open source]
 comments: true

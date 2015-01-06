@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Basic Workflow with htmlInstaller: HTML-based bootstrapper for DNI"
-redirect_from: "/basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni"
+redirect_from: "/basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/"
 date: 2010-08-06 15:48:54
 tags: [dotnetinstaller, msi, wix]
 comments: true

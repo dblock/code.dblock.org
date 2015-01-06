@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Internet Explorer Refuses to read CSS from S3/CloudFront"
-redirect_from: "/internet-explorer-refuses-to-read-css-from-s3cloudfront"
+redirect_from: "/internet-explorer-refuses-to-read-css-from-s3cloudfront/"
 date: 2011-06-12 20:22:15
 tags: [cloudfront, s3]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grape: Routing Multiple Methods"
-redirect_from: "/grape-routing-multiple-methods"
+redirect_from: "/grape-routing-multiple-methods/"
 date: 2011-11-03 13:36:26
 tags: [grape, rails, ruby]
 comments: true

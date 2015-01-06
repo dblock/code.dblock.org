@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google Chrome"
-redirect_from: "/google-chrome"
+redirect_from: "/google-chrome/"
 date: 2008-09-03 04:00:00
 tags: [google]
 comments: true

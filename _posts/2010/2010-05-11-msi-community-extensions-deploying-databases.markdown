@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MSI Community Extensions: deploying databases"
-redirect_from: "/msi-community-extensions-deploying-databases"
+redirect_from: "/msi-community-extensions-deploying-databases/"
 date: 2010-05-11 17:56:55
 tags: [databases, msi, wix]
 comments: true

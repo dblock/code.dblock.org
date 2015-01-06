@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grape API Mounted on RACK w/ Static Pages"
-redirect_from: "/grape-api-mounted-on-rack-w-static-pages"
+redirect_from: "/grape-api-mounted-on-rack-w-static-pages/"
 date: 2012-01-30 15:54:46
 tags: [rack, grape, ruby]
 comments: true

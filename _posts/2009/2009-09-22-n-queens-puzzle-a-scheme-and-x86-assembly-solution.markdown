@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "N queens puzzle: a scheme and x86 assembly solution"
-redirect_from: "/n-queens-puzzle-a-scheme-and-x86-assembly-solution"
+redirect_from: "/n-queens-puzzle-a-scheme-and-x86-assembly-solution/"
 date: 2009-09-22 19:00:00
 tags: [scheme]
 comments: true

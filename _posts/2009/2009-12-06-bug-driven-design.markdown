@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bug Driven Design"
-redirect_from: "/bug-driven-design"
+redirect_from: "/bug-driven-design/"
 date: 2009-12-06 14:30:00
 tags: [architecture, agile]
 comments: true

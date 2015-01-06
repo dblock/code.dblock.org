@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Help: what are the symptoms, events or actions of a software death cycle?"
-redirect_from: "/help-what-are-the-symptoms-events-or-actions-of-a-software-death-cycle"
+redirect_from: "/help-what-are-the-symptoms-events-or-actions-of-a-software-death-cycle/"
 date: 2010-12-10 08:19:59
 tags: [organizations, people, agile]
 comments: true

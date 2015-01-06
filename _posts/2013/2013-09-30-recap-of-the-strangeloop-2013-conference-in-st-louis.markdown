@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Recap of the StrangeLoop 2013 Conference in St. Louis"
-redirect_from: "/recap-of-the-strangeloop-2013-conference-in-st-louis"
+redirect_from: "/recap-of-the-strangeloop-2013-conference-in-st-louis/"
 date: 2013-09-30 13:27:30
 tags: [learning, conferences]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Single Sign-On: Servlet Negotiate Security Filter (Kerberos + NTLM) w/ Waffle and Jetty"
-redirect_from: "/single-sign-on-servlet-negotiate-security-filter-kerberos-ntlm-w-waffle-and-jetty"
+redirect_from: "/single-sign-on-servlet-negotiate-security-filter-kerberos-ntlm-w-waffle-and-jetty/"
 date: 2012-10-02 20:55:56
 tags: [waffle, security, active directory, win32]
 comments: true

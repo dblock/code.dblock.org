@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My Pathological Fear of Deadlines"
-redirect_from: "/my-pathological-fear-of-deadlines"
+redirect_from: "/my-pathological-fear-of-deadlines/"
 date: 2013-06-29 19:01:05
 tags: [agile, me me]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Waffle 1.3 Released"
-redirect_from: "/waffle-13-released"
+redirect_from: "/waffle-13-released/"
 date: 2010-07-25 19:19:51
 tags: [tomcat, spring, waffle, jna, active directory, win32]
 comments: true

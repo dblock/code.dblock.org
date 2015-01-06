@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Oh BetaBeat: Me in New York’s 20 Most Poachable Techies"
-redirect_from: "/oh-betabeat-me-in-new-yorks-20-most-poachable-techies"
+redirect_from: "/oh-betabeat-me-in-new-yorks-20-most-poachable-techies/"
 date: 2011-11-17 20:06:42
 tags: [art.sy, jobs, people]
 comments: true

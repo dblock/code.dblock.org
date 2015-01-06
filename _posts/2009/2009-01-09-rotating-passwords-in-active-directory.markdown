@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rotating Passwords in Active Directory"
-redirect_from: "/rotating-passwords-in-active-directory"
+redirect_from: "/rotating-passwords-in-active-directory/"
 date: 2009-01-09 19:45:00
 tags: [active directory]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AgileDC 2012: Taming the Testing Beast"
-redirect_from: "/agiledc-2012-taming-the-testing-beast"
+redirect_from: "/agiledc-2012-taming-the-testing-beast/"
 date: 2012-10-23 23:41:40
 tags: [speaking, testing]
 comments: true

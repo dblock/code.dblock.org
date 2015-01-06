@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Corporate Change: Contributing to open source @ OpenSource.com"
-redirect_from: "/corporate-change-contributing-to-open-source-opensourcecom"
+redirect_from: "/corporate-change-contributing-to-open-source-opensourcecom/"
 date: 2010-12-09 14:17:51
 tags: []
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Don’t Use MongoDB?"
-redirect_from: "/dont-use-mongodb"
+redirect_from: "/dont-use-mongodb/"
 date: 2011-11-06 17:51:22
 tags: [oracle, mongodb]
 comments: true

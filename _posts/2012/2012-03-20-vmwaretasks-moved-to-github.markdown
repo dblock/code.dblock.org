@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "VMWareTasks Moved to Github"
-redirect_from: "/vmwaretasks-moved-to-github"
+redirect_from: "/vmwaretasks-moved-to-github/"
 date: 2012-03-20 13:14:16
 tags: [github, vmware]
 comments: true

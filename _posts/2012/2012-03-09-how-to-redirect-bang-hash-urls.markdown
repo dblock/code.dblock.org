@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Redirect Bang Hash Urls"
-redirect_from: "/how-to-redirect-bang-hash-urls"
+redirect_from: "/how-to-redirect-bang-hash-urls/"
 date: 2012-03-09 13:37:58
 tags: [art.sy, rails]
 comments: true

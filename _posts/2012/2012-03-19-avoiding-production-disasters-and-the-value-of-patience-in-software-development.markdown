@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Avoiding Production Disasters and The Value of Patience in Software Development"
-redirect_from: "/avoiding-production-disasters-and-the-value-of-patience-in-software-development"
+redirect_from: "/avoiding-production-disasters-and-the-value-of-patience-in-software-development/"
 date: 2012-03-19 12:28:43
 tags: [teams, testing, people]
 comments: true

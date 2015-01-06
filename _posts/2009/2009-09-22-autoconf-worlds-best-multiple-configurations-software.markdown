@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Autoconf: world's best multiple configurations software"
-redirect_from: "/autoconf-worlds-best-multiple-configurations-software"
+redirect_from: "/autoconf-worlds-best-multiple-configurations-software/"
 date: 2009-09-22 22:49:25
 tags: [vestris]
 comments: true

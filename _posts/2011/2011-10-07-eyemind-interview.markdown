@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Eye&Mind Interview"
-redirect_from: "/eyemind-interview"
+redirect_from: "/eyemind-interview/"
 date: 2011-10-07 14:16:54
 tags: [speaking, art.sy]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Waffle: Single Sign-On User Impersonation in Tomcat"
-redirect_from: "/waffle-single-sign-on-user-impersonation-in-tomcat"
+redirect_from: "/waffle-single-sign-on-user-impersonation-in-tomcat/"
 date: 2011-01-18 14:21:02
 tags: [tomcat, waffle, jna, security, java, active directory, win32]
 comments: true

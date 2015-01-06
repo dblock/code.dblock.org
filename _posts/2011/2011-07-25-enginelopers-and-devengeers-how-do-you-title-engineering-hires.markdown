@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Enginelopers and Devengeers: How do You Title Engineering Hires?"
-redirect_from: "/enginelopers-and-devengeers-how-do-you-title-engineering-hires"
+redirect_from: "/enginelopers-and-devengeers-how-do-you-title-engineering-hires/"
 date: 2011-07-25 07:27:54
 tags: [organizations, people]
 comments: true

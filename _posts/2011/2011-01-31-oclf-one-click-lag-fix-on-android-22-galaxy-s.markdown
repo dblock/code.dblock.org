@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OCLF: One Click Lag Fix on Android 2.2 (Galaxy S)"
-redirect_from: "/oclf-one-click-lag-fix-on-android-22-galaxy-s"
+redirect_from: "/oclf-one-click-lag-fix-on-android-22-galaxy-s/"
 date: 2011-01-31 04:08:41
 tags: [android]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Agile Hiring: get rid of the open headcount"
-redirect_from: "/agile-hiring-get-rid-of-the-open-headcount"
+redirect_from: "/agile-hiring-get-rid-of-the-open-headcount/"
 date: 2010-12-27 18:03:34
 tags: [jobs, organizations, people]
 comments: true

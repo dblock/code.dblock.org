@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How To Reject Engineering Candidates"
-redirect_from: "/how-to-reject-engineering-candidates"
+redirect_from: "/how-to-reject-engineering-candidates/"
 date: 2013-05-26 01:34:37
 tags: [teams, hiring]
 comments: true

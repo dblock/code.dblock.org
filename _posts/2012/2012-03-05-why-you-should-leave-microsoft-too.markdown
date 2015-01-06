@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why You Should Leave Microsoft, Too"
-redirect_from: "/why-you-should-leave-microsoft-too"
+redirect_from: "/why-you-should-leave-microsoft-too/"
 date: 2012-03-05 12:50:23
 tags: [startups, new york, hiring, technology, jobs, people]
 comments: true

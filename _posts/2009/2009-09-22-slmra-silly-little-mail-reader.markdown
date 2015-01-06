@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SLMRA: silly little mail reader"
-redirect_from: "/slmra-silly-little-mail-reader"
+redirect_from: "/slmra-silly-little-mail-reader/"
 date: 2009-09-22 22:54:06
 tags: [vestris]
 comments: true

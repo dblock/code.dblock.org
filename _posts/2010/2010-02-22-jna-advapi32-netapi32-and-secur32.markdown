@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JNA: Advapi32, Netapi32 and Secur32"
-redirect_from: "/jna-advapi32-netapi32-and-secur32"
+redirect_from: "/jna-advapi32-netapi32-and-secur32/"
 date: 2010-02-22 23:00:00
 tags: [jna, java]
 comments: true

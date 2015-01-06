@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Implementing My First Jenkins Plugin: AnsiColor"
-redirect_from: "/implementing-my-first-jenkins-plugin-ansicolor"
+redirect_from: "/implementing-my-first-jenkins-plugin-ansicolor/"
 date: 2011-09-07 12:07:05
 tags: [jenkins, java]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Art.sy: Change the World"
-redirect_from: "/artsy-change-the-world"
+redirect_from: "/artsy-change-the-world/"
 date: 2011-03-01 13:50:57
 tags: [art.sy, jobs, people]
 comments: true

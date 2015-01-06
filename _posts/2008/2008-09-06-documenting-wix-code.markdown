@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Documenting WIX Code"
-redirect_from: "/documenting-wix-code"
+redirect_from: "/documenting-wix-code/"
 date: 2008-09-06 21:15:00
 tags: [wix]
 comments: true

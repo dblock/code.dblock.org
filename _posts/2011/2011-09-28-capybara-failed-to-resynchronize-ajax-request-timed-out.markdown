@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Capybara: Failed to Resynchronize, Ajax Request Timed Out (not caused by green elves)"
-redirect_from: "/capybara-failed-to-resynchronize-ajax-request-timed-out"
+redirect_from: "/capybara-failed-to-resynchronize-ajax-request-timed-out/"
 date: 2011-09-28 13:17:36
 tags: [capybara, rails, ruby, testing]
 comments: true

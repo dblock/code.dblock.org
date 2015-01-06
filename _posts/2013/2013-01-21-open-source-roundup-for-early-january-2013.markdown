@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Open-Source Roundup for Early January 2013"
-redirect_from: "/open-source-roundup-for-early-january-2013"
+redirect_from: "/open-source-roundup-for-early-january-2013/"
 date: 2013-01-21 02:44:11
 tags: [open source]
 comments: true

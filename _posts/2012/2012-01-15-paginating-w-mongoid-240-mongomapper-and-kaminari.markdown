@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Paginating w/ Mongoid 2.4.0, MongoMapper and Kaminari"
-redirect_from: "/paginating-w-mongoid-240-mongomapper-and-kaminari"
+redirect_from: "/paginating-w-mongoid-240-mongomapper-and-kaminari/"
 date: 2012-01-15 13:54:15
 tags: [mongoid, mongodb, ruby]
 comments: true

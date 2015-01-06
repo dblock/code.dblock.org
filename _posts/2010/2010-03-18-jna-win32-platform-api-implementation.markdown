@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JNA: Win32 platform API implementation"
-redirect_from: "/jna-win32-platform-api-implementation"
+redirect_from: "/jna-win32-platform-api-implementation/"
 date: 2010-03-18 14:08:51
 tags: [jna, java, win32]
 comments: true

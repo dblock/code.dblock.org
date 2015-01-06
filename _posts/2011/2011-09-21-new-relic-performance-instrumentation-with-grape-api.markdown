@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "New Relic: Performance Instrumentation with Grape API"
-redirect_from: "/new-relic-performance-instrumentation-with-grape-api"
+redirect_from: "/new-relic-performance-instrumentation-with-grape-api/"
 date: 2011-09-21 22:05:40
 tags: [performance, grape, rails, ruby]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MSI Property Patterns: Upgrading, FirstInstall and Maintenance"
-redirect_from: "/msi-property-patterns-upgrading-firstinstall-and-maintenance"
+redirect_from: "/msi-property-patterns-upgrading-firstinstall-and-maintenance/"
 date: 2010-05-11 20:00:00
 tags: [msi, wix]
 comments: true

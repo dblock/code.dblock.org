@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rails Editable Mail Templates w/Preview from 37Signals"
-redirect_from: "/rails-editable-mail-templates-wpreview-from-37signals"
+redirect_from: "/rails-editable-mail-templates-wpreview-from-37signals/"
 date: 2011-09-15 06:41:26
 tags: [rails, ruby]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Waffle 1.4 Released"
-redirect_from: "/waffle-14-released"
+redirect_from: "/waffle-14-released/"
 date: 2011-06-26 22:39:58
 tags: [open source, waffle, jna, active directory, win32]
 comments: true

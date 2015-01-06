@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Safety Net: Removing Barriers to Test Automation"
-redirect_from: "/the-safety-net-removing-barriers-to-test-automation"
+redirect_from: "/the-safety-net-removing-barriers-to-test-automation/"
 date: 2012-10-23 23:52:06
 tags: [teams, testing, people, agile]
 comments: true

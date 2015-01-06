@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Measuring Activity in Open-Source Projects using Github Network Graph"
-redirect_from: "/measuring-activity-in-open-source-projects-using-github-network-graph"
+redirect_from: "/measuring-activity-in-open-source-projects-using-github-network-graph/"
 date: 2011-12-12 02:05:57
 tags: [github, open source]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Iterating over lists in MSBuild"
-redirect_from: "/iterating-over-lists-in-msbuild"
+redirect_from: "/iterating-over-lists-in-msbuild/"
 date: 2010-07-07 20:33:31
 tags: [msbuild]
 comments: true

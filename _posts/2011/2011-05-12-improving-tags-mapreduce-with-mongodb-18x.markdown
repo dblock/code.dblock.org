@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Improving tags map/reduce with MongoDB 1.8.x"
-redirect_from: "/improving-tags-mapreduce-with-mongodb-18x"
+redirect_from: "/improving-tags-mapreduce-with-mongodb-18x/"
 date: 2011-05-12 13:52:44
 tags: [mongodb, ruby]
 comments: true

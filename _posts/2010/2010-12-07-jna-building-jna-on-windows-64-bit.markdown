@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JNA: Building JNA on Windows 64-bit"
-redirect_from: "/jna-building-jna-on-windows-64-bit"
+redirect_from: "/jna-building-jna-on-windows-64-bit/"
 date: 2010-12-07 02:20:46
 tags: [jna, java]
 comments: true

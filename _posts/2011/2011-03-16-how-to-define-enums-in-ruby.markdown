@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to define Enums in Ruby?"
-redirect_from: "/how-to-define-enums-in-ruby"
+redirect_from: "/how-to-define-enums-in-ruby/"
 date: 2011-03-16 21:39:46
 tags: [ruby]
 comments: true

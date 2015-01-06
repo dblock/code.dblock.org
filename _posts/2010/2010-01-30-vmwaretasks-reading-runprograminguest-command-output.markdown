@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "VMWareTasks: reading RunProgramInGuest command output"
-redirect_from: "/vmwaretasks-reading-runprograminguest-command-output"
+redirect_from: "/vmwaretasks-reading-runprograminguest-command-output/"
 date: 2010-01-30 16:24:10
 tags: [vmware]
 comments: true

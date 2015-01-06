@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RemoteInstall: supporting reboots between installers"
-redirect_from: "/remoteinstall-supporting-reboots-between-installers"
+redirect_from: "/remoteinstall-supporting-reboots-between-installers/"
 date: 2009-12-08 16:23:18
 tags: [remoteinstall, testing, dotnetinstaller, vmware, msi]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "VMWare Tasks .NET Library for VixCOM"
-redirect_from: "/vmware-tasks-net-library-for-vixcom"
+redirect_from: "/vmware-tasks-net-library-for-vixcom/"
 date: 2009-01-03 14:15:00
 tags: [vmware]
 comments: true

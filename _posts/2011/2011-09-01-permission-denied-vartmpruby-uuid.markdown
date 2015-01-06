@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Permission denied - /var/tmp/ruby-uuid"
-redirect_from: "/permission-denied-vartmpruby-uuid"
+redirect_from: "/permission-denied-vartmpruby-uuid/"
 date: 2011-09-01 11:17:32
 tags: [rails, ruby, testing]
 comments: true

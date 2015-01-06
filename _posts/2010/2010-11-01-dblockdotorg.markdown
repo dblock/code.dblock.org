@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "@dblockdotorg"
-redirect_from: "/dblockdotorg"
+redirect_from: "/dblockdotorg/"
 date: 2010-11-01 22:45:00
 tags: [people]
 comments: true

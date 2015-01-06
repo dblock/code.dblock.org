@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Oracle Didn’t Learn From the Redhat Experience, PRs a NoSQL Database"
-redirect_from: "/oracle-didnt-learn-from-the-redhat-experience-prs-a-nosql-database"
+redirect_from: "/oracle-didnt-learn-from-the-redhat-experience-prs-a-nosql-database/"
 date: 2011-10-04 03:51:33
 tags: [oracle, mongodb, security, databases]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dan North doesn’t believe in magic and makes babies cry"
-redirect_from: "/dan-north-doesnt-believe-in-magic-and-makes-babies-cry"
+redirect_from: "/dan-north-doesnt-believe-in-magic-and-makes-babies-cry/"
 date: 2011-03-07 13:38:49
 tags: [rails, ruby]
 comments: true

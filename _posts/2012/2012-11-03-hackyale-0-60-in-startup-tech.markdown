@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hack<Yale> 0-60 in Startup Tech"
-redirect_from: "/hackyale-0-60-in-startup-tech"
+redirect_from: "/hackyale-0-60-in-startup-tech/"
 date: 2012-11-03 01:23:17
 tags: [teams, technology, speaking, people]
 comments: true

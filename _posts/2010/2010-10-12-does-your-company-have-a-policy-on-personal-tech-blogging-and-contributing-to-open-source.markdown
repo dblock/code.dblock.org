@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Does your company have a policy on personal tech blogging and contributing to open-source?"
-redirect_from: "/does-your-company-have-a-policy-on-personal-tech-blogging-and-contributing-to-open-source"
+redirect_from: "/does-your-company-have-a-policy-on-personal-tech-blogging-and-contributing-to-open-source/"
 date: 2010-10-12 12:24:35
 tags: [open source, organizations, people]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Installing a Specific Version of NodeJS, NPM and CoffeeScript"
-redirect_from: "/installing-a-specific-version-of-nodejs-npm-and-coffeescript"
+redirect_from: "/installing-a-specific-version-of-nodejs-npm-and-coffeescript/"
 date: 2011-08-31 18:41:32
 tags: [npm, nodejs, coffeescript, linux]
 comments: true

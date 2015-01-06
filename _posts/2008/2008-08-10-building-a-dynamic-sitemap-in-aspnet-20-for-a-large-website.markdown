@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building a dynamic SiteMap in ASP.NET 2.0 for a large website"
-redirect_from: "/building-a-dynamic-sitemap-in-aspnet-20-for-a-large-website"
+redirect_from: "/building-a-dynamic-sitemap-in-aspnet-20-for-a-large-website/"
 date: 2008-08-10 18:10:23
 tags: [asp.net]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Svn2svn: migrating from SourceForge to CodePlex"
-redirect_from: "/svn2svn-migrating-from-sourceforge-to-codeplex"
+redirect_from: "/svn2svn-migrating-from-sourceforge-to-codeplex/"
 date: 2009-02-22 19:00:00
 tags: [subversion]
 comments: true

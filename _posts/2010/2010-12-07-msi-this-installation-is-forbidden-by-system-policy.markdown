@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MSI: This installation is forbidden by system policy."
-redirect_from: "/msi-this-installation-is-forbidden-by-system-policy"
+redirect_from: "/msi-this-installation-is-forbidden-by-system-policy/"
 date: 2010-12-07 15:53:33
 tags: [msi]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DBlog: Implementing Blog Post Slugs in .NET"
-redirect_from: "/dblog-implementing-blog-post-slugs-in-net"
+redirect_from: "/dblog-implementing-blog-post-slugs-in-net/"
 date: 2011-07-22 00:52:32
 tags: [.net, asp.net]
 comments: true

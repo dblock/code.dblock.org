@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "EdgeConf 2013 NYC"
-redirect_from: "/edgeconf-2013-nyc"
+redirect_from: "/edgeconf-2013-nyc/"
 date: 2013-09-30 13:59:17
 tags: [conferences, performance, javascript]
 comments: true

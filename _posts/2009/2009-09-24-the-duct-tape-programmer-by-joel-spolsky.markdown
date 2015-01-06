@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Duct Tape Programmer by Joel Spolsky"
-redirect_from: "/the-duct-tape-programmer-by-joel-spolsky"
+redirect_from: "/the-duct-tape-programmer-by-joel-spolsky/"
 date: 2009-09-24 22:15:00
 tags: [people]
 comments: true

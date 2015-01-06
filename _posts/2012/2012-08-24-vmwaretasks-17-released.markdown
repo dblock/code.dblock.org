@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "VMWareTasks 1.7 Released"
-redirect_from: "/vmwaretasks-17-released"
+redirect_from: "/vmwaretasks-17-released/"
 date: 2012-08-24 15:35:45
 tags: [open source, vmware]
 comments: true

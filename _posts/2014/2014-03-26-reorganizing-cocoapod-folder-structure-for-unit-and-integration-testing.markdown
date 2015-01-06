@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reorganizing CocoaPod Folder Structure for Unit and Integration Testing"
-redirect_from: "/reorganizing-cocoapod-folder-structure-for-unit-and-integration-testing"
+redirect_from: "/reorganizing-cocoapod-folder-structure-for-unit-and-integration-testing/"
 date: 2014-03-26 14:06:21
 tags: [cocoapods, ios, open source]
 comments: true

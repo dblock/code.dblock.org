@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dear California Engineer - Your Commute is Killing You? Move to New York!"
-redirect_from: "/dear-california-engineer-your-commute-is-killing-you-move-to-new-york"
+redirect_from: "/dear-california-engineer-your-commute-is-killing-you-move-to-new-york/"
 date: 2011-05-29 23:50:53
 tags: [art.sy, jobs, people]
 comments: true

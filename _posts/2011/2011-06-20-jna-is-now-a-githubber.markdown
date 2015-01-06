@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JNA is now a Githubber"
-redirect_from: "/jna-is-now-a-githubber"
+redirect_from: "/jna-is-now-a-githubber/"
 date: 2011-06-20 13:32:09
 tags: [github, git, open source, jna, java]
 comments: true

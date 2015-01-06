@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JNA 3.5.0 Released"
-redirect_from: "/jna-350-released"
+redirect_from: "/jna-350-released/"
 date: 2012-10-20 19:48:34
 tags: [open source, jna, java]
 comments: true

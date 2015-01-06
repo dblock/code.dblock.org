@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Slides from 'Choosing Technology'"
-redirect_from: "/slides-from-choosing-technology"
+redirect_from: "/slides-from-choosing-technology/"
 date: 2011-07-05 18:01:07
 tags: [technology, speaking]
 comments: true

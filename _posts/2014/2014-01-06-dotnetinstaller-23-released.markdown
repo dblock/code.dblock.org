@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "dotNetInstaller 2.3 Released"
-redirect_from: "/dotnetinstaller-23-released"
+redirect_from: "/dotnetinstaller-23-released/"
 date: 2014-01-06 20:53:27
 tags: [open source, dotnetinstaller]
 comments: true

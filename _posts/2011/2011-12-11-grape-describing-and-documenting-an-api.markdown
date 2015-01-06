@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grape: Describing and Documenting an API"
-redirect_from: "/grape-describing-and-documenting-an-api"
+redirect_from: "/grape-describing-and-documenting-an-api/"
 date: 2011-12-11 15:03:39
 tags: [grape, art.sy, rails, ruby]
 comments: true

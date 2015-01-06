@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Waffle: configuring Tomcat’s manager application"
-redirect_from: "/waffle-configuring-tomcats-manager-application"
+redirect_from: "/waffle-configuring-tomcats-manager-application/"
 date: 2010-11-30 16:27:45
 tags: [tomcat, waffle, security, active directory]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why One Giant Source Control Repository Is Bad for You (and Facebook)"
-redirect_from: "/why-one-giant-source-control-repository-is-bad-for-you-and-facebook"
+redirect_from: "/why-one-giant-source-control-repository-is-bad-for-you-and-facebook/"
 date: 2014-04-28 21:20:37
 tags: [teams, learning, github, git, open source, microsoft, facebook, organizations, msbuild, people, me me]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "American Horror Story and Entitlement in a Job Interview"
-redirect_from: "/american-horror-story-and-entitlement-in-a-job-interview"
+redirect_from: "/american-horror-story-and-entitlement-in-a-job-interview/"
 date: 2014-01-03 23:11:13
 tags: [interviewing, education, teams, teaching, hiring, people]
 comments: true

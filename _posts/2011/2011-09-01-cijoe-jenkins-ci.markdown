@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CIJoe => Jenkins CI"
-redirect_from: "/cijoe-jenkins-ci"
+redirect_from: "/cijoe-jenkins-ci/"
 date: 2011-09-01 15:13:02
 tags: [jenkins, cijoe]
 comments: true

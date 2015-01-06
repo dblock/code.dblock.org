@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to become an amazing contributor to an open-source project"
-redirect_from: "/how-to-become-an-amazing-contributor-to-an-open-source-project"
+redirect_from: "/how-to-become-an-amazing-contributor-to-an-open-source-project/"
 date: 2011-03-09 13:34:54
 tags: [open source, people]
 comments: true

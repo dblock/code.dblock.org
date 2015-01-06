@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Guava: replacing a ConcurrentHashMap"
-redirect_from: "/guava-replacing-a-concurrenthashmap"
+redirect_from: "/guava-replacing-a-concurrenthashmap/"
 date: 2010-10-04 18:18:52
 tags: [java]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Copying files to/from VMWare guest OS is slow: an alternate approach"
-redirect_from: "/copying-files-tofrom-vmware-guest-os-is-slow-an-alternate-approach"
+redirect_from: "/copying-files-tofrom-vmware-guest-os-is-slow-an-alternate-approach/"
 date: 2008-12-24 05:45:00
 tags: [vmware]
 comments: true

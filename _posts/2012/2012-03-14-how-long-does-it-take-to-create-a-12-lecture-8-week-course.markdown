@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Long Does it Take to Create a 12 Lecture, 8 Week Course"
-redirect_from: "/how-long-does-it-take-to-create-a-12-lecture-8-week-course"
+redirect_from: "/how-long-does-it-take-to-create-a-12-lecture-8-week-course/"
 date: 2012-03-14 15:08:01
 tags: [teaching, learning, rails, ruby]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Blast From The Past: Jade"
-redirect_from: "/blast-from-the-past-jade"
+redirect_from: "/blast-from-the-past-jade/"
 date: 2011-09-06 02:32:15
 tags: [vestris]
 comments: true

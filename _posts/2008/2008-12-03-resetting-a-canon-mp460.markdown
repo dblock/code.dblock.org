@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Resetting a Canon MP460"
-redirect_from: "/resetting-a-canon-mp460"
+redirect_from: "/resetting-a-canon-mp460/"
 date: 2008-12-03 04:25:03
 tags: [hardware]
 comments: true

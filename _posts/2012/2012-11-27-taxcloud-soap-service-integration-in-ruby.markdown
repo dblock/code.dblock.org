@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TaxCloud: SOAP Service Integration in Ruby"
-redirect_from: "/taxcloud-soap-service-integration-in-ruby"
+redirect_from: "/taxcloud-soap-service-integration-in-ruby/"
 date: 2012-11-27 05:54:16
 tags: [ruby, open source, testing]
 comments: true

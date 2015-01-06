@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The program can’t start because msvcrt-ruby18.dll is missing from your computer."
-redirect_from: "/the-program-cant-start-because-msvcrt-ruby18dll-is-missing-from-your-computer"
+redirect_from: "/the-program-cant-start-because-msvcrt-ruby18dll-is-missing-from-your-computer/"
 date: 2011-01-14 21:50:59
 tags: [rails, ruby, win32]
 comments: true

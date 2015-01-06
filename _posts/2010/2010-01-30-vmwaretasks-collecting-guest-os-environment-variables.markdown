@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "VMWareTasks: collecting Guest OS environment variables"
-redirect_from: "/vmwaretasks-collecting-guest-os-environment-variables"
+redirect_from: "/vmwaretasks-collecting-guest-os-environment-variables/"
 date: 2010-01-30 16:34:27
 tags: [vmware]
 comments: true

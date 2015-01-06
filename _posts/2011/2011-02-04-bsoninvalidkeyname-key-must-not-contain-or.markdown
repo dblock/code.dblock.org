@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "BSON::InvalidKeyName: key must not contain '.' or ‘$’"
-redirect_from: "/bsoninvalidkeyname-key-must-not-contain-or"
+redirect_from: "/bsoninvalidkeyname-key-must-not-contain-or/"
 date: 2011-02-04 15:14:01
 tags: [mongodb, ruby]
 comments: true

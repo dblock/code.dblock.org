@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rails: Passing Arrays in a Query String"
-redirect_from: "/rails-passing-arrays-in-a-query-string"
+redirect_from: "/rails-passing-arrays-in-a-query-string/"
 date: 2011-03-28 22:07:16
 tags: [rails, ruby]
 comments: true

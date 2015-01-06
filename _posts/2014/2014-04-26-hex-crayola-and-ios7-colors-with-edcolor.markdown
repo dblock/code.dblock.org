@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hex, Crayola and iOS7 Colors with EDColor"
-redirect_from: "/hex-crayola-and-ios7-colors-with-edcolor"
+redirect_from: "/hex-crayola-and-ios7-colors-with-edcolor/"
 date: 2014-04-26 12:48:25
 tags: [cocoapods, ios, open source]
 comments: true

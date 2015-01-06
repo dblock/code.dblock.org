@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TeamShatter.com"
-redirect_from: "/teamshattercom"
+redirect_from: "/teamshattercom/"
 date: 2010-11-03 12:22:58
 tags: [shatter, appsecinc, security, databases, people]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DNI: setup (msi) bootstrapper"
-redirect_from: "/dni-setup-msi-bootstrapper"
+redirect_from: "/dni-setup-msi-bootstrapper/"
 date: 2008-08-31 22:45:00
 tags: [msi]
 comments: true

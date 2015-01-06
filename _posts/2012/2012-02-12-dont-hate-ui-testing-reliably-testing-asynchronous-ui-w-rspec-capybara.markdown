@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Don’t Hate UI Testing - Reliably Testing Asynchronous UI w/ RSpec & Capybara"
-redirect_from: "/dont-hate-ui-testing-reliably-testing-asynchronous-ui-w-rspec-capybara"
+redirect_from: "/dont-hate-ui-testing-reliably-testing-asynchronous-ui-w-rspec-capybara/"
 date: 2012-02-12 17:00:05
 tags: [rspec, selenium, capybara, testing, dotnetinstaller]
 comments: true

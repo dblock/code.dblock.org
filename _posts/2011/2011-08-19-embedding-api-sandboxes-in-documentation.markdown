@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Embedding API Sandboxes in Documentation"
-redirect_from: "/embedding-api-sandboxes-in-documentation"
+redirect_from: "/embedding-api-sandboxes-in-documentation/"
 date: 2011-08-19 13:30:48
 tags: [coffeescript, jquery, javascript, grape, rails, ruby]
 comments: true

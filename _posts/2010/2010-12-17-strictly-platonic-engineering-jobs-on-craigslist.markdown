@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Strictly Platonic: Engineering Jobs on Craigslist"
-redirect_from: "/strictly-platonic-engineering-jobs-on-craigslist"
+redirect_from: "/strictly-platonic-engineering-jobs-on-craigslist/"
 date: 2010-12-17 22:49:35
 tags: [appsecinc, jobs, people]
 comments: true

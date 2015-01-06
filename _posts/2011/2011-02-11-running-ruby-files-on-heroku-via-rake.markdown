@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Running ruby files on Heroku via rake"
-redirect_from: "/running-ruby-files-on-heroku-via-rake"
+redirect_from: "/running-ruby-files-on-heroku-via-rake/"
 date: 2011-02-11 04:33:57
 tags: [rake, heroku, rails, ruby]
 comments: true

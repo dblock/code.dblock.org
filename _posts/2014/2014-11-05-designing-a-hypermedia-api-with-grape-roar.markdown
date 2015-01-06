@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Designing a Hypermedia API with Grape & Roar"
-redirect_from: "/designing-a-hypermedia-api-with-grape-roar"
+redirect_from: "/designing-a-hypermedia-api-with-grape-roar/"
 date: 2014-11-05 12:18:32
 tags: [apis, grape, ruby]
 comments: true

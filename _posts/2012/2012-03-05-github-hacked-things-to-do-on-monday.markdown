@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Github Hacked: Things to Do on Monday"
-redirect_from: "/github-hacked-things-to-do-on-monday"
+redirect_from: "/github-hacked-things-to-do-on-monday/"
 date: 2012-03-05 02:17:03
 tags: [github, rails, shatter, security]
 comments: true

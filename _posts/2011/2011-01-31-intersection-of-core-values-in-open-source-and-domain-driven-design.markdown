@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Intersection of core values in open source and domain driven design"
-redirect_from: "/intersection-of-core-values-in-open-source-and-domain-driven-design"
+redirect_from: "/intersection-of-core-values-in-open-source-and-domain-driven-design/"
 date: 2011-01-31 16:42:58
 tags: [ddd, open source, organizations, people]
 comments: true

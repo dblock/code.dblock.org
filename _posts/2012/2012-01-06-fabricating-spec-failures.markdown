@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fabricating Spec Failures"
-redirect_from: "/fabricating-spec-failures"
+redirect_from: "/fabricating-spec-failures/"
 date: 2012-01-06 21:39:10
 tags: [rspec, rails, ruby, testing]
 comments: true

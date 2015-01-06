@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ubuntu 11.10 and Back"
-redirect_from: "/ubuntu-1110-and-back"
+redirect_from: "/ubuntu-1110-and-back/"
 date: 2011-10-17 12:46:40
 tags: [linux, virtualbox]
 comments: true

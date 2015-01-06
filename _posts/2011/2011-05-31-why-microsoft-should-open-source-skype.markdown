@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why Microsoft Should Open-Source Skype"
-redirect_from: "/why-microsoft-should-open-source-skype"
+redirect_from: "/why-microsoft-should-open-source-skype/"
 date: 2011-05-31 23:49:45
 tags: [open source, microsoft]
 comments: true

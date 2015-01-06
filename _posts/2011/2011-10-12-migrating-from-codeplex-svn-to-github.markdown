@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Migrating from CodePlex SVN to Github"
-redirect_from: "/migrating-from-codeplex-svn-to-github"
+redirect_from: "/migrating-from-codeplex-svn-to-github/"
 date: 2011-10-12 16:32:09
 tags: [codeplex, github, microsoft]
 comments: true

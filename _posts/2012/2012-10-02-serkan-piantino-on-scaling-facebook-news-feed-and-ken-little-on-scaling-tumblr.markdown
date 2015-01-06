@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Serkan Piantino on Scaling Facebook News Feed and Ken Little on Scaling Tumblr"
-redirect_from: "/serkan-piantino-on-scaling-facebook-news-feed-and-ken-little-on-scaling-tumblr"
+redirect_from: "/serkan-piantino-on-scaling-facebook-news-feed-and-ken-little-on-scaling-tumblr/"
 date: 2012-10-02 21:09:23
 tags: [scale, interviews, conferences, performance, technology, speaking]
 comments: true

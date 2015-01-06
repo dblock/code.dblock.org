@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Syntax Highlighting in Markdown Content with Recarpet, Coderay and Rails"
-redirect_from: "/syntax-highlighting-in-markdown-content-with-recarpet-coderay-and-rails"
+redirect_from: "/syntax-highlighting-in-markdown-content-with-recarpet-coderay-and-rails/"
 date: 2014-08-31 15:08:14
 tags: [art.sy, rails, ruby]
 comments: true

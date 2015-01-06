@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Designing a System with Reporting in Mind"
-redirect_from: "/designing-a-system-with-reporting-in-mind"
+redirect_from: "/designing-a-system-with-reporting-in-mind/"
 date: 2009-11-29 14:45:00
 tags: [databases]
 comments: true

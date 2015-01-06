@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ruby Enumerable Detect with Value"
-redirect_from: "/ruby-enumerable-detect-with-value"
+redirect_from: "/ruby-enumerable-detect-with-value/"
 date: 2013-12-21 18:39:02
 tags: [ruby, open source]
 comments: true

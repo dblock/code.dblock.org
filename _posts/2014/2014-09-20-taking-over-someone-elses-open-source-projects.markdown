@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Taking Over Someone Else’s Open-Source Projects"
-redirect_from: "/taking-over-someone-elses-open-source-projects"
+redirect_from: "/taking-over-someone-elses-open-source-projects/"
 date: 2014-09-20 00:30:00
 tags: [speaking, ruby]
 comments: true

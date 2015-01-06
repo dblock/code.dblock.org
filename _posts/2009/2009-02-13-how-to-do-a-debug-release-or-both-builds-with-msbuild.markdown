@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to do a Debug, Release or both builds with MSBuild"
-redirect_from: "/how-to-do-a-debug-release-or-both-builds-with-msbuild"
+redirect_from: "/how-to-do-a-debug-release-or-both-builds-with-msbuild/"
 date: 2009-02-13 18:15:00
 tags: [msbuild]
 comments: true

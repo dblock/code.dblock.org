@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rendering Markdown Documents in Rails"
-redirect_from: "/rendering-markdown-documents-in-rails"
+redirect_from: "/rendering-markdown-documents-in-rails/"
 date: 2011-11-07 15:01:55
 tags: [grape, rails, ruby]
 comments: true

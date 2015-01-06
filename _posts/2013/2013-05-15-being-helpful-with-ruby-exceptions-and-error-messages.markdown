@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Being Helpful with Ruby Exceptions and Error Messages"
-redirect_from: "/being-helpful-with-ruby-exceptions-and-error-messages"
+redirect_from: "/being-helpful-with-ruby-exceptions-and-error-messages/"
 date: 2013-05-15 01:57:17
 tags: [ruby, open source]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "dotNetInstaller 2.2 Released"
-redirect_from: "/dotnetinstaller-22-released"
+redirect_from: "/dotnetinstaller-22-released/"
 date: 2012-08-24 16:47:16
 tags: [dotnetinstaller, msi]
 comments: true

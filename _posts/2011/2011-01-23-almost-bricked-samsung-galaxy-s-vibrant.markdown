@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Almost Bricked Samsung Galaxy S Vibrant"
-redirect_from: "/almost-bricked-samsung-galaxy-s-vibrant"
+redirect_from: "/almost-bricked-samsung-galaxy-s-vibrant/"
 date: 2011-01-23 06:57:54
 tags: [android, google]
 comments: true

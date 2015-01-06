@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Autoconf: Maybe the First Example of Microsoft Pushing Features into the OS to Kill a Competitor"
-redirect_from: "/autoconf-maybe-the-first-example-of-microsoft-pushing-features-into-the-os-to-kill-a-competitor"
+redirect_from: "/autoconf-maybe-the-first-example-of-microsoft-pushing-features-into-the-os-to-kill-a-competitor/"
 date: 2011-09-06 03:24:54
 tags: [vestris]
 comments: true

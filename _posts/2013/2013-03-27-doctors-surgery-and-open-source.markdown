@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Doctors, Surgery and Open-Source"
-redirect_from: "/doctors-surgery-and-open-source"
+redirect_from: "/doctors-surgery-and-open-source/"
 date: 2013-03-27 17:38:39
 tags: [teams, teaching, technology, jobs, people]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Precompiling Rails Assets before RSpec/Capybara Integration Tests"
-redirect_from: "/precompiling-rails-assets-before-rspeccapybara-integration-tests"
+redirect_from: "/precompiling-rails-assets-before-rspeccapybara-integration-tests/"
 date: 2013-08-04 16:41:01
 tags: [rspec, capybara, rails, testing]
 comments: true

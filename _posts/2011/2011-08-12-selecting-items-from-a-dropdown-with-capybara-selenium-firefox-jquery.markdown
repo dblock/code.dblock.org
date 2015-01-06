@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Selecting items from a dropdown with Capybara, Selenium (Firefox) & JQuery"
-redirect_from: "/selecting-items-from-a-dropdown-with-capybara-selenium-firefox-jquery"
+redirect_from: "/selecting-items-from-a-dropdown-with-capybara-selenium-firefox-jquery/"
 date: 2011-08-12 00:15:35
 tags: [selenium, capybara, firefox, rails, ruby, testing]
 comments: true

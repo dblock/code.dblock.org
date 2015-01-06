@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "dotNetInstaller Setup Bootstrapper 1.7 Ships"
-redirect_from: "/dotnetinstaller-setup-bootstrapper-17-ships"
+redirect_from: "/dotnetinstaller-setup-bootstrapper-17-ships/"
 date: 2009-10-02 04:44:34
 tags: [dotnetinstaller]
 comments: true

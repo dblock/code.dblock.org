@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "log4jna: log4j:ERROR Could not register event source (Access is denied.)"
-redirect_from: "/log4jna-log4jerror-could-not-register-event-source-access-is-denied"
+redirect_from: "/log4jna-log4jerror-could-not-register-event-source-access-is-denied/"
 date: 2010-10-14 12:06:29
 tags: [log4j, jna, security, win32]
 comments: true

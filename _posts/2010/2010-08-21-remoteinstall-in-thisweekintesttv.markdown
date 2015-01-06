@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RemoteInstall in ThisWeekInTest.tv"
-redirect_from: "/remoteinstall-in-thisweekintesttv"
+redirect_from: "/remoteinstall-in-thisweekintesttv/"
 date: 2010-08-21 14:36:09
 tags: [remoteinstall, testing]
 comments: true

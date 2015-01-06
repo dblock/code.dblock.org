@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mongoid Collection Snapshot"
-redirect_from: "/mongoid-collection-snapshot"
+redirect_from: "/mongoid-collection-snapshot/"
 date: 2011-09-19 12:08:53
 tags: [mongodb, ruby]
 comments: true

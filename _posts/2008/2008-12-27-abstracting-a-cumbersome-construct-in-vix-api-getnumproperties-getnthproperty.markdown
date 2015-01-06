@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Abstracting a cumbersome construct in VIX API: GetNumProperties + GetNthProperty"
-redirect_from: "/abstracting-a-cumbersome-construct-in-vix-api-getnumproperties-getnthproperty"
+redirect_from: "/abstracting-a-cumbersome-construct-in-vix-api-getnumproperties-getnthproperty/"
 date: 2008-12-27 22:15:00
 tags: [vmware]
 comments: true

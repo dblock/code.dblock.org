@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RSpec + Capybara Don’t Return a Proper Exit Code"
-redirect_from: "/rspec-capybara-dont-return-a-proper-exit-code"
+redirect_from: "/rspec-capybara-dont-return-a-proper-exit-code/"
 date: 2011-06-23 16:19:53
 tags: [rails, ruby, open source, testing, people]
 comments: true

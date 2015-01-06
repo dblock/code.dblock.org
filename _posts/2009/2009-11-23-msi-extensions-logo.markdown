@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MSI Extensions Logo"
-redirect_from: "/msi-extensions-logo"
+redirect_from: "/msi-extensions-logo/"
 date: 2009-11-23 14:00:00
 tags: [wix]
 comments: true

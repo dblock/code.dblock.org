@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pragmatic Replacement for the Vendor-Based, Bureaucratic and Soviet Style Technology Decision Makings"
-redirect_from: "/pragmatic-replacement-for-the-vendor-based-bureaucratic-and-soviet-style-technology-decision-makings"
+redirect_from: "/pragmatic-replacement-for-the-vendor-based-bureaucratic-and-soviet-style-technology-decision-makings/"
 date: 2011-07-09 13:14:55
 tags: [technology, architecture]
 comments: true

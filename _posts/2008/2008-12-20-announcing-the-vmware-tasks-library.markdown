@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Announcing the VMWare Tasks Library"
-redirect_from: "/announcing-the-vmware-tasks-library"
+redirect_from: "/announcing-the-vmware-tasks-library/"
 date: 2008-12-20 05:30:00
 tags: [vmware]
 comments: true

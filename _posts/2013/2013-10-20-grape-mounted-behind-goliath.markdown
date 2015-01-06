@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grape Mounted behind Goliath"
-redirect_from: "/grape-mounted-behind-goliath"
+redirect_from: "/grape-mounted-behind-goliath/"
 date: 2013-10-20 14:02:10
 tags: [performance, ruby]
 comments: true

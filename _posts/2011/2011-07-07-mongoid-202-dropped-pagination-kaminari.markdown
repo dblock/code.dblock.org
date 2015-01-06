@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mongoid 2.0.2 Dropped Pagination => Kaminari"
-redirect_from: "/mongoid-202-dropped-pagination-kaminari"
+redirect_from: "/mongoid-202-dropped-pagination-kaminari/"
 date: 2011-07-07 09:44:13
 tags: [mongodb, rails, ruby]
 comments: true

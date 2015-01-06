@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setting up Cron to run Rake Tasks"
-redirect_from: "/setting-up-cron-to-run-rake-tasks"
+redirect_from: "/setting-up-cron-to-run-rake-tasks/"
 date: 2011-03-31 14:40:43
 tags: [rake, mongodb]
 comments: true

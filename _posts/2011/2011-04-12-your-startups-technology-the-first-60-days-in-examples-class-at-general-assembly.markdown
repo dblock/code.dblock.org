@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Your Startup's Technology: The First 60 Days in Examples / Class at General Assembly"
-redirect_from: "/your-startups-technology-the-first-60-days-in-examples-class-at-general-assembly"
+redirect_from: "/your-startups-technology-the-first-60-days-in-examples-class-at-general-assembly/"
 date: 2011-04-12 22:22:40
 tags: [art.sy, architecture, agile]
 comments: true

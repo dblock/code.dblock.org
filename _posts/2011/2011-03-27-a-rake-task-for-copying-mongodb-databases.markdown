@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Rake Task for Copying MongoDB Databases"
-redirect_from: "/a-rake-task-for-copying-mongodb-databases"
+redirect_from: "/a-rake-task-for-copying-mongodb-databases/"
 date: 2011-03-27 15:21:19
 tags: [rake, mongodb, rails, ruby]
 comments: true

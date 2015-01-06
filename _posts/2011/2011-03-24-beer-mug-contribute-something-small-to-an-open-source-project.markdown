@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Beer Mug: Contribute Something Small to an Open-Source Project"
-redirect_from: "/beer-mug-contribute-something-small-to-an-open-source-project"
+redirect_from: "/beer-mug-contribute-something-small-to-an-open-source-project/"
 date: 2011-03-24 22:03:29
 tags: [heroku, open source, people]
 comments: true

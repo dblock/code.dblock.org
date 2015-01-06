@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I am Excited About the new Cornell Tech School"
-redirect_from: "/why-i-am-excited-about-the-new-cornell-tech-school"
+redirect_from: "/why-i-am-excited-about-the-new-cornell-tech-school/"
 date: 2013-01-21 20:39:07
 tags: [education, teaching, technology]
 comments: true

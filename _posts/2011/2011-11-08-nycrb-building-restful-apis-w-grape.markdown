@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "NYC.rb: Building RESTful APIs w/ Grape"
-redirect_from: "/nycrb-building-restful-apis-w-grape"
+redirect_from: "/nycrb-building-restful-apis-w-grape/"
 date: 2011-11-08 12:30:52
 tags: [grape, rails, ruby]
 comments: true

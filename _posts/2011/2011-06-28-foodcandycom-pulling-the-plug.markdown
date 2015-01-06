@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "FoodCandy.com: Pulling the Plug"
-redirect_from: "/foodcandycom-pulling-the-plug"
+redirect_from: "/foodcandycom-pulling-the-plug/"
 date: 2011-06-28 07:00:31
 tags: [foodcandy]
 comments: true

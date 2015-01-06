@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Modularizing a RoR Grape API: Multiple Versions"
-redirect_from: "/modularizing-a-ror-grape-api-multiple-versions"
+redirect_from: "/modularizing-a-ror-grape-api-multiple-versions/"
 date: 2011-07-30 06:12:01
 tags: [grape, rails, ruby]
 comments: true

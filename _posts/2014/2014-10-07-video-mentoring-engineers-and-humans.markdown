@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Video: Mentoring Engineers and Humans"
-redirect_from: "/video-mentoring-engineers-and-humans"
+redirect_from: "/video-mentoring-engineers-and-humans/"
 date: 2014-10-07 12:12:31
 tags: [teams, teaching, speaking]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Folder-Driven Development: when to create a folder?"
-redirect_from: "/folder-driven-development-when-to-create-a-folder"
+redirect_from: "/folder-driven-development-when-to-create-a-folder/"
 date: 2011-02-26 20:20:36
 tags: [rails, ruby, architecture, testing]
 comments: true

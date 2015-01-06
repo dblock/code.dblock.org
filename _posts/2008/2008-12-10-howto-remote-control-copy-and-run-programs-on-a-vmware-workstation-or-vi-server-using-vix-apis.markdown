@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HowTo: remote control, copy and run programs on a VMware Workstation or VI server using VIX APIs"
-redirect_from: "/howto-remote-control-copy-and-run-programs-on-a-vmware-workstation-or-vi-server-using-vix-apis"
+redirect_from: "/howto-remote-control-copy-and-run-programs-on-a-vmware-workstation-or-vi-server-using-vix-apis/"
 date: 2008-12-10 20:15:00
 tags: [vmware]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ResourceLib 1.4 Released"
-redirect_from: "/resourcelib-14-released"
+redirect_from: "/resourcelib-14-released/"
 date: 2013-03-03 15:44:00
 tags: [resourcelib, open source, win32]
 comments: true

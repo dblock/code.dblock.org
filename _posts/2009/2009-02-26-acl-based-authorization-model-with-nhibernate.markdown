@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ACL-based authorization model with NHibernate"
-redirect_from: "/acl-based-authorization-model-with-nhibernate"
+redirect_from: "/acl-based-authorization-model-with-nhibernate/"
 date: 2009-02-26 01:45:00
 tags: [hibernate]
 comments: true

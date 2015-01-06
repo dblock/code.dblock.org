@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Five Ways to Torture Candidates in a Technical Interview"
-redirect_from: "/five-ways-to-torture-candidates-in-a-technical-interview"
+redirect_from: "/five-ways-to-torture-candidates-in-a-technical-interview/"
 date: 2012-12-08 17:19:01
 tags: [interviews, teams, people]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Count projections in NHibernate 1.2"
-redirect_from: "/count-projections-in-nhibernate-12"
+redirect_from: "/count-projections-in-nhibernate-12/"
 date: 2008-12-03 14:45:00
 tags: [hibernate]
 comments: true

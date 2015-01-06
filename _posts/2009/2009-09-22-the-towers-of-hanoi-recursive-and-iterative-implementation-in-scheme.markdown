@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Towers of Hanoi: recursive and iterative implementation in Scheme"
-redirect_from: "/the-towers-of-hanoi-recursive-and-iterative-implementation-in-scheme"
+redirect_from: "/the-towers-of-hanoi-recursive-and-iterative-implementation-in-scheme/"
 date: 2009-09-22 19:00:00
 tags: [scheme]
 comments: true

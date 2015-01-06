@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Icon support in ResourceLib.NET"
-redirect_from: "/icon-support-in-resourcelibnet"
+redirect_from: "/icon-support-in-resourcelibnet/"
 date: 2008-09-28 19:15:00
 tags: [win32]
 comments: true

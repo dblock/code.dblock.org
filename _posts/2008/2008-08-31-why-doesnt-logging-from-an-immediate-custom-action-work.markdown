@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why doesn't logging from an immediate custom action work?"
-redirect_from: "/why-doesnt-logging-from-an-immediate-custom-action-work"
+redirect_from: "/why-doesnt-logging-from-an-immediate-custom-action-work/"
 date: 2008-08-31 23:30:00
 tags: [msi]
 comments: true

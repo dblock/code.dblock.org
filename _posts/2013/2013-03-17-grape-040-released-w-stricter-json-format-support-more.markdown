@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grape 0.4.0 Released w/ Stricter JSON Format Support & More"
-redirect_from: "/grape-040-released-w-stricter-json-format-support-more"
+redirect_from: "/grape-040-released-w-stricter-json-format-support-more/"
 date: 2013-03-17 18:30:43
 tags: [rack, grape, ruby]
 comments: true

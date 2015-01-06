@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using GCC to install Ruby w/ RVM on Mac OSX Lion"
-redirect_from: "/using-gcc-to-install-ruby-w-rvm-on-mac-osx-lion"
+redirect_from: "/using-gcc-to-install-ruby-w-rvm-on-mac-osx-lion/"
 date: 2011-11-03 00:24:40
 tags: [mac osx, ruby]
 comments: true

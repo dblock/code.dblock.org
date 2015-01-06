@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ResourceLib 1.2 with added support for RT_JUSTABOUTEVERYTHING"
-redirect_from: "/resourcelib-12-with-added-support-for-rtjustabouteverything"
+redirect_from: "/resourcelib-12-with-added-support-for-rtjustabouteverything/"
 date: 2009-09-19 02:15:00
 tags: [win32]
 comments: true

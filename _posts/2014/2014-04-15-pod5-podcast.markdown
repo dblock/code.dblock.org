@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pod5 Podcast"
-redirect_from: "/pod5-podcast"
+redirect_from: "/pod5-podcast/"
 date: 2014-04-15 12:25:25
 tags: [pod5, cocoapods, objective-c, ios]
 comments: true

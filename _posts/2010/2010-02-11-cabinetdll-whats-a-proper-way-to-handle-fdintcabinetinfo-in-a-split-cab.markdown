@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cabinet.dll: what's a proper way to handle fdintCABINET_INFO in a split cab"
-redirect_from: "/cabinetdll-whats-a-proper-way-to-handle-fdintcabinetinfo-in-a-split-cab"
+redirect_from: "/cabinetdll-whats-a-proper-way-to-handle-fdintcabinetinfo-in-a-split-cab/"
 date: 2010-02-11 14:57:00
 tags: [win32]
 comments: true

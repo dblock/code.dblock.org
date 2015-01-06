@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "10 Largest Collections in a MongoDB Database w/ Mongoid"
-redirect_from: "/10-largest-collections-in-a-mongodb-database-w-mongoid"
+redirect_from: "/10-largest-collections-in-a-mongodb-database-w-mongoid/"
 date: 2013-08-04 16:47:44
 tags: [mongoid, mongodb]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Waffle w/ Tomcat 5.5, 6 and 7"
-redirect_from: "/waffle-w-tomcat-55-6-and-7"
+redirect_from: "/waffle-w-tomcat-55-6-and-7/"
 date: 2010-11-02 23:19:31
 tags: [tomcat, spring, waffle]
 comments: true

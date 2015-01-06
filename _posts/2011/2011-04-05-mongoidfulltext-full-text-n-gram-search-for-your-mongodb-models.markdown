@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mongoid_fulltext: full-text n-gram search for your MongoDB models"
-redirect_from: "/mongoidfulltext-full-text-n-gram-search-for-your-mongodb-models"
+redirect_from: "/mongoidfulltext-full-text-n-gram-search-for-your-mongodb-models/"
 date: 2011-04-05 19:27:06
 tags: [art.sy, mongodb, rails, ruby, open source]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Switching Comments of code.dblock.org to Disqus"
-redirect_from: "/switching-comments-of-codedblockorg-to-disqus"
+redirect_from: "/switching-comments-of-codedblockorg-to-disqus/"
 date: 2011-02-27 21:12:17
 tags: [blog]
 comments: true

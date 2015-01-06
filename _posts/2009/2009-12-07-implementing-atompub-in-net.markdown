@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Implementing AtomPUB in .NET"
-redirect_from: "/implementing-atompub-in-net"
+redirect_from: "/implementing-atompub-in-net/"
 date: 2009-12-07 17:02:46
 tags: [syndication, codeproject, .net, asp.net, blog]
 comments: true

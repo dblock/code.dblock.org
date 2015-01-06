@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grape: API Authentication w/ Devise"
-redirect_from: "/grape-api-authentication-w-devise"
+redirect_from: "/grape-api-authentication-w-devise/"
 date: 2011-05-04 16:26:05
 tags: [rails, ruby, security]
 comments: true

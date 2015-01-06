@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rails + S3 + Cloudfront + Jammit + Heroku + 100 грам"
-redirect_from: "/rails-s3-cloudfront-jammit-heroku-100"
+redirect_from: "/rails-s3-cloudfront-jammit-heroku-100/"
 date: 2011-05-10 16:42:45
 tags: [cloudfront, s3, rake, heroku, rails, ruby, open source]
 comments: true

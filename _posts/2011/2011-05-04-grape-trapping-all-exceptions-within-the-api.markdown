@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grape: trapping all exceptions within the API"
-redirect_from: "/grape-trapping-all-exceptions-within-the-api"
+redirect_from: "/grape-trapping-all-exceptions-within-the-api/"
 date: 2011-05-04 03:33:39
 tags: [rails, ruby]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Java Native Access (JNA) 3.2.5 Shipped"
-redirect_from: "/java-native-access-jna-325-shipped"
+redirect_from: "/java-native-access-jna-325-shipped/"
 date: 2010-04-28 12:16:40
 tags: [jna, java, win32]
 comments: true

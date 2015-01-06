@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Introducing Gem-Licenses: Collect 3rd Party Licenses in RoR Projects"
-redirect_from: "/introducing-gem-licenses-collect-3rd-party-licenses-in-ror-projects"
+redirect_from: "/introducing-gem-licenses-collect-3rd-party-licenses-in-ror-projects/"
 date: 2011-07-26 17:16:50
 tags: [rails, ruby, 3licenses, open source]
 comments: true

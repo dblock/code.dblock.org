@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Breaking the Software Death Cycle with DDD"
-redirect_from: "/breaking-the-software-death-cycle-with-ddd"
+redirect_from: "/breaking-the-software-death-cycle-with-ddd/"
 date: 2011-01-06 15:10:20
 tags: [domain driven design, architecture, organizations, people, agile]
 comments: true

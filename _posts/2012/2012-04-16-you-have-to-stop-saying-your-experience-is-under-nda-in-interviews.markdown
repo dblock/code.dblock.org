@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "You Have to Stop Saying Your Experience is Under NDA in Interviews"
-redirect_from: "/you-have-to-stop-saying-your-experience-is-under-nda-in-interviews"
+redirect_from: "/you-have-to-stop-saying-your-experience-is-under-nda-in-interviews/"
 date: 2012-04-16 14:19:10
 tags: [hiring, people]
 comments: true

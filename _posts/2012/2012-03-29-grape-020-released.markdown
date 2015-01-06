@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grape 0.2.0 Released"
-redirect_from: "/grape-020-released"
+redirect_from: "/grape-020-released/"
 date: 2012-03-29 14:55:40
 tags: [grape, ruby]
 comments: true

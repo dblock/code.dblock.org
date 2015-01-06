@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DataMapper: promoting columns into classes"
-redirect_from: "/datamapper-promoting-columns-into-classes"
+redirect_from: "/datamapper-promoting-columns-into-classes/"
 date: 2011-02-11 06:45:11
 tags: [mysql, datamapper, mongodb, ruby, databases]
 comments: true

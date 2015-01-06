@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grape vs. Poncho"
-redirect_from: "/grape-vs-poncho"
+redirect_from: "/grape-vs-poncho/"
 date: 2013-04-06 13:19:37
 tags: [grape, ruby]
 comments: true

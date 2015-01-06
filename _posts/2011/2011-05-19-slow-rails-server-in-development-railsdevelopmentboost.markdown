@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ":Slow Rails server in development? => :rails_development_boost"
-redirect_from: "/slow-rails-server-in-development-railsdevelopmentboost"
+redirect_from: "/slow-rails-server-in-development-railsdevelopmentboost/"
 date: 2011-05-19 15:06:07
 tags: [rails]
 comments: true

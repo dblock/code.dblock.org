@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DBlog: Implementing Skeleton CSS Boilerplate"
-redirect_from: "/dblog-implementing-skeleton-css-boilerplate"
+redirect_from: "/dblog-implementing-skeleton-css-boilerplate/"
 date: 2011-08-02 16:33:14
 tags: [skeleton, css, .net, blog]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "IBM Cognos BI: generic XSLT normalization for table data"
-redirect_from: "/ibm-cognos-bi-generic-xslt-normalization-for-table-data"
+redirect_from: "/ibm-cognos-bi-generic-xslt-normalization-for-table-data/"
 date: 2010-11-10 16:21:11
 tags: [xslt, xml, cognos]
 comments: true

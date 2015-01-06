@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mentoring 101"
-redirect_from: "/mentoring-101"
+redirect_from: "/mentoring-101/"
 date: 2013-06-12 12:54:20
 tags: [teams, teaching, technology, art.sy, people]
 comments: true

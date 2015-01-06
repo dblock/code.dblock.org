@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Storing Server-Side JavaScript Functions w/ Mongoid + Weekly Rollup"
-redirect_from: "/storing-server-side-javascript-functions-w-mongoid-weekly-rollup"
+redirect_from: "/storing-server-side-javascript-functions-w-mongoid-weekly-rollup/"
 date: 2011-07-14 00:42:44
 tags: [mongodb]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "IFYYFME, or how to Maintain a Healthy Level of Communication Across Organizational Boundaries"
-redirect_from: "/i-f-you-you-f-me-or-how-to-maintain-a-healthy-level-of-communication-across-organizational-boundaries"
+redirect_from: "/i-f-you-you-f-me-or-how-to-maintain-a-healthy-level-of-communication-across-organizational-boundaries/"
 date: 2009-09-03 00:30:00
 tags: [organizations]
 comments: true

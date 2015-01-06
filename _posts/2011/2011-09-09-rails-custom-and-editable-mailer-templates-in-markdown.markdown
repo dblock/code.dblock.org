@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rails: Custom and Editable Mailer Templates in Markdown"
-redirect_from: "/rails-custom-and-editable-mailer-templates-in-markdown"
+redirect_from: "/rails-custom-and-editable-mailer-templates-in-markdown/"
 date: 2011-09-09 00:20:32
 tags: [devise, rails, ruby]
 comments: true

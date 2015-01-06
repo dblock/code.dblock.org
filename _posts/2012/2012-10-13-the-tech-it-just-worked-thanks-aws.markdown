@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The tech? It just worked. Thanks AWS!"
-redirect_from: "/the-tech-it-just-worked-thanks-aws"
+redirect_from: "/the-tech-it-just-worked-thanks-aws/"
 date: 2012-10-13 22:35:11
 tags: [aws, art.sy, heroku, architecture]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JNA: accessing Windows registry from Java"
-redirect_from: "/jna-accessing-windows-registry-from-java"
+redirect_from: "/jna-accessing-windows-registry-from-java/"
 date: 2010-03-23 18:29:30
 tags: [jna, java, win32]
 comments: true

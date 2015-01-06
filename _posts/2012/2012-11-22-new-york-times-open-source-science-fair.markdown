@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "New York Times Open Source Science Fair"
-redirect_from: "/new-york-times-open-source-science-fair"
+redirect_from: "/new-york-times-open-source-science-fair/"
 date: 2012-11-22 14:30:45
 tags: [education, teaching, speaking, open source]
 comments: true

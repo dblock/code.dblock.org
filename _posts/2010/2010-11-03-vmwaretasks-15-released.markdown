@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "VMWareTasks 1.5 Released"
-redirect_from: "/vmwaretasks-15-released"
+redirect_from: "/vmwaretasks-15-released/"
 date: 2010-11-03 11:54:09
 tags: [vmware]
 comments: true

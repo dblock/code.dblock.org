@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Code Blog: Hello World"
-redirect_from: "/code-blog-hello-world"
+redirect_from: "/code-blog-hello-world/"
 date: 2008-08-10 17:45:00
 tags: [blog]
 comments: true

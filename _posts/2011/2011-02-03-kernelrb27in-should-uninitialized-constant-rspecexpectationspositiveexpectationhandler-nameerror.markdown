@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "kernel.rb:27:in `should': uninitialized constant RSpec::Expectations::PositiveExpectationHandler (NameError)"
-redirect_from: "/kernelrb27in-should-uninitialized-constant-rspecexpectationspositiveexpectationhandler-nameerror"
+redirect_from: "/kernelrb27in-should-uninitialized-constant-rspecexpectationspositiveexpectationhandler-nameerror/"
 date: 2011-02-03 23:23:44
 tags: [rails, ruby, testing]
 comments: true

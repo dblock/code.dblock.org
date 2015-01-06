@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Moving to New York? All You Need is the Tech Made in NYC List"
-redirect_from: "/moving-to-new-york-all-you-need-is-the-tech-made-in-nyc-list"
+redirect_from: "/moving-to-new-york-all-you-need-is-the-tech-made-in-nyc-list/"
 date: 2011-11-02 12:33:55
 tags: [technology, art.sy, jobs, people]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Toyota Production System & Why Should Architects Write Code"
-redirect_from: "/toyota-production-system-why-should-architects-write-code"
+redirect_from: "/toyota-production-system-why-should-architects-write-code/"
 date: 2012-02-12 16:05:14
 tags: [technology, architecture]
 comments: true

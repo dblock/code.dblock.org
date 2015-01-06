@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "WMI: Executing a remote process and waiting for its completion"
-redirect_from: "/wmi-executing-a-remote-process-and-waiting-for-its-completion"
+redirect_from: "/wmi-executing-a-remote-process-and-waiting-for-its-completion/"
 date: 2008-12-03 21:45:00
 tags: [wmi]
 comments: true

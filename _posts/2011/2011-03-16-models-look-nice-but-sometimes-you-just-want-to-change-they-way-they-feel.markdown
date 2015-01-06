@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Models look nice, but sometimes you just want to change they way they feel"
-redirect_from: "/models-look-nice-but-sometimes-you-just-want-to-change-they-way-they-feel"
+redirect_from: "/models-look-nice-but-sometimes-you-just-want-to-change-they-way-they-feel/"
 date: 2011-03-16 14:15:30
 tags: [mongodb, rails, ruby]
 comments: true

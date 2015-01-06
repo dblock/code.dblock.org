@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mocking UIAlertView with OCMock"
-redirect_from: "/mocking-uialertview-with-ocmock"
+redirect_from: "/mocking-uialertview-with-ocmock/"
 date: 2014-01-16 23:35:25
 tags: [objective-c, ios, testing]
 comments: true

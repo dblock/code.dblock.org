@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Can you believe it? I wrote this code over 10 years ago..."
-redirect_from: "/can-you-believe-it-i-wrote-this-code-over-10-years-ago"
+redirect_from: "/can-you-believe-it-i-wrote-this-code-over-10-years-ago/"
 date: 2009-09-19 04:45:00
 tags: [dos]
 comments: true

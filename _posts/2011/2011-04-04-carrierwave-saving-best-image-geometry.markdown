@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Carrierwave: Saving Best Image Geometry"
-redirect_from: "/carrierwave-saving-best-image-geometry"
+redirect_from: "/carrierwave-saving-best-image-geometry/"
 date: 2011-04-04 15:54:14
 tags: [rails, ruby]
 comments: true

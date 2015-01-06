@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jenkins AnsiColor 0.3.0 Released"
-redirect_from: "/jenkins-ansicolor-030-released"
+redirect_from: "/jenkins-ansicolor-030-released/"
 date: 2012-06-05 11:50:03
 tags: [jenkins]
 comments: true

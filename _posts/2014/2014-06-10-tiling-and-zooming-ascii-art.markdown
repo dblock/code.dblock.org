@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tiling and Zooming ASCII Art"
-redirect_from: "/tiling-and-zooming-ascii-art"
+redirect_from: "/tiling-and-zooming-ascii-art/"
 date: 2014-06-10 11:38:55
 tags: [ios, speaking, art.sy]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sorting Tables in Rails w/ Mongoid"
-redirect_from: "/sorting-tables-in-rails-w-mongoid"
+redirect_from: "/sorting-tables-in-rails-w-mongoid/"
 date: 2011-10-13 14:29:16
 tags: [mongoid, rails, ruby]
 comments: true

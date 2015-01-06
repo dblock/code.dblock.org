@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Open Source, ?, Profit"
-redirect_from: "/open-source-profit"
+redirect_from: "/open-source-profit/"
 date: 2011-01-27 20:37:47
 tags: [waffle]
 comments: true

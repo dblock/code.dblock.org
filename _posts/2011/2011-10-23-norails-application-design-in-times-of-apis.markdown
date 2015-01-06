@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "NoRails: Application Design in Times of APIs"
-redirect_from: "/norails-application-design-in-times-of-apis"
+redirect_from: "/norails-application-design-in-times-of-apis/"
 date: 2011-10-23 15:40:54
 tags: [grape, rails, architecture]
 comments: true

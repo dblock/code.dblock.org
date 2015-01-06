@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wrapping Responses with Grape and Rack"
-redirect_from: "/wrapping-responses-with-grape-and-rack"
+redirect_from: "/wrapping-responses-with-grape-and-rack/"
 date: 2012-07-05 13:51:35
 tags: [rack, grape, ruby]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AppSecInc. MSI Extensions Open Sourced"
-redirect_from: "/appsecinc-msi-extensions-open-sourced"
+redirect_from: "/appsecinc-msi-extensions-open-sourced/"
 date: 2009-11-20 18:15:00
 tags: [codeproject, msi, wix]
 comments: true

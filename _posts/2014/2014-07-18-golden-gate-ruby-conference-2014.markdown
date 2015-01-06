@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Golden Gate Ruby Conference 2014"
-redirect_from: "/golden-gate-ruby-conference-2014"
+redirect_from: "/golden-gate-ruby-conference-2014/"
 date: 2014-07-18 22:32:31
 tags: [speaking, ruby]
 comments: true

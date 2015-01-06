@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RoR Win: 'Getting Things Done' with MongoDB Mongoid"
-redirect_from: "/ror-win-getting-things-done-with-mongodb-mongoid"
+redirect_from: "/ror-win-getting-things-done-with-mongodb-mongoid/"
 date: 2011-05-27 12:33:18
 tags: [mongodb, rails, ruby]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Serving Compressed Rails Assets from S3 via Cloudfront"
-redirect_from: "/serving-compressed-rails-assets-from-s3-via-cloudfront"
+redirect_from: "/serving-compressed-rails-assets-from-s3-via-cloudfront/"
 date: 2011-12-09 04:56:19
 tags: [cloudfront, s3, rails, ruby]
 comments: true

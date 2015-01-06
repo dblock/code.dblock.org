@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Github is Your New Resume"
-redirect_from: "/github-is-your-new-resume"
+redirect_from: "/github-is-your-new-resume/"
 date: 2011-07-14 14:30:13
 tags: [github, git, organizations, people]
 comments: true

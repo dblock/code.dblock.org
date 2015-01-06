@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vestris Inc. source code published"
-redirect_from: "/vestris-inc-source-code-published"
+redirect_from: "/vestris-inc-source-code-published/"
 date: 2009-10-29 12:00:00
 tags: [vestris]
 comments: true

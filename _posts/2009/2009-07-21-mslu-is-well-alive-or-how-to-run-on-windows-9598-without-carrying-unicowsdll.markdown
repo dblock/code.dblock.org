@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MSLU is well alive or how to run on Windows 95/98 without carrying unicows.dll"
-redirect_from: "/mslu-is-well-alive-or-how-to-run-on-windows-9598-without-carrying-unicowsdll"
+redirect_from: "/mslu-is-well-alive-or-how-to-run-on-windows-9598-without-carrying-unicowsdll/"
 date: 2009-07-21 04:00:00
 tags: [win32]
 comments: true

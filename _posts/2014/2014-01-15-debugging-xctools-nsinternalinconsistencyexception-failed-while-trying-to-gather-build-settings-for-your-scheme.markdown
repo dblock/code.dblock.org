@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Debugging XCTool’s NSInternalInconsistencyException: Failed while trying to gather build settings for your scheme"
-redirect_from: "/debugging-xctools-nsinternalinconsistencyexception-failed-while-trying-to-gather-build-settings-for-your-scheme"
+redirect_from: "/debugging-xctools-nsinternalinconsistencyexception-failed-while-trying-to-gather-build-settings-for-your-scheme/"
 date: 2014-01-15 15:05:00
 tags: [xcode, ios, travis-ci]
 comments: true

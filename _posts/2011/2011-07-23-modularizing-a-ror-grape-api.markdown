@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Modularizing a RoR Grape API"
-redirect_from: "/modularizing-a-ror-grape-api"
+redirect_from: "/modularizing-a-ror-grape-api/"
 date: 2011-07-23 19:17:36
 tags: [rails, ruby, architecture]
 comments: true

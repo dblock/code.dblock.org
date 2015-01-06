@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Data Corruption Is Most Likely Caused By Your Code And Not Your Database"
-redirect_from: "/data-corruption-is-most-likely-caused-by-your-code-and-not-your-database"
+redirect_from: "/data-corruption-is-most-likely-caused-by-your-code-and-not-your-database/"
 date: 2013-02-09 19:30:22
 tags: [mongoid, mongodb]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Watching Rack Application Changes with Guard-Rack"
-redirect_from: "/watching-rack-application-changes-with-guard-rack"
+redirect_from: "/watching-rack-application-changes-with-guard-rack/"
 date: 2012-02-23 16:29:49
 tags: [rack, grape, rails, ruby, open source]
 comments: true

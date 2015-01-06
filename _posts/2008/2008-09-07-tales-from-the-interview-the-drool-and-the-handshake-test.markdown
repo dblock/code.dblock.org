@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tales from the interview: the drool and the handshake test"
-redirect_from: "/tales-from-the-interview-the-drool-and-the-handshake-test"
+redirect_from: "/tales-from-the-interview-the-drool-and-the-handshake-test/"
 date: 2008-09-07 15:15:00
 tags: [people]
 comments: true

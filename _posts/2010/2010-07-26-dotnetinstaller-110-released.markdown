@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "dotNetInstaller 1.10 Released"
-redirect_from: "/dotnetinstaller-110-released"
+redirect_from: "/dotnetinstaller-110-released/"
 date: 2010-07-26 00:43:40
 tags: [dotnetinstaller]
 comments: true

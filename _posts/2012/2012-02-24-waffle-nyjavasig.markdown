@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Waffle @ NYJavaSIG"
-redirect_from: "/waffle-nyjavasig"
+redirect_from: "/waffle-nyjavasig/"
 date: 2012-02-24 00:54:01
 tags: [appsecinc, waffle, security, active directory, win32]
 comments: true

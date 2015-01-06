@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "No app specified: telling Heroku gem what its default --app should be"
-redirect_from: "/no-app-specified-telling-heroku-gem-what-its-default-app-should-be"
+redirect_from: "/no-app-specified-telling-heroku-gem-what-its-default-app-should-be/"
 date: 2011-08-08 15:57:02
 tags: [git, heroku]
 comments: true

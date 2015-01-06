@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MSIOpenPackage on Windows 7: behavior changed"
-redirect_from: "/msiopenpackage-on-windows-7-behavior-changed"
+redirect_from: "/msiopenpackage-on-windows-7-behavior-changed/"
 date: 2010-02-10 22:47:44
 tags: [testing, msi, win32]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "VMWare ESXi 4.1.0 Automation: Insufficient permissions in host operating system"
-redirect_from: "/vmware-esxi-410-automation-insufficient-permissions-in-host-operating-system"
+redirect_from: "/vmware-esxi-410-automation-insufficient-permissions-in-host-operating-system/"
 date: 2010-09-24 21:40:19
 tags: [remoteinstall, testing, vmware]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AppSecInc. Community MSI Extensions 1.2 Released"
-redirect_from: "/appsecinc-community-msi-extensions-12-released"
+redirect_from: "/appsecinc-community-msi-extensions-12-released/"
 date: 2010-11-09 07:56:03
 tags: [appsecinc, open source, msi, wix]
 comments: true

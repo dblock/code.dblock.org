@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "5 Anti-patterns in a College Grad Engineer’s Resume"
-redirect_from: "/5-anti-patterns-in-a-college-or-junior-engineers-resume"
+redirect_from: "/5-anti-patterns-in-a-college-or-junior-engineers-resume/"
 date: 2013-03-25 18:46:12
 tags: [teams, teaching, learning, hiring, people]
 comments: true

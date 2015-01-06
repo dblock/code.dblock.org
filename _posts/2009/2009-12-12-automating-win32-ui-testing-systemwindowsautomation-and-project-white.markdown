@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Automating Win32 UI Testing: System.Windows.Automation and Project White"
-redirect_from: "/automating-win32-ui-testing-systemwindowsautomation-and-project-white"
+redirect_from: "/automating-win32-ui-testing-systemwindowsautomation-and-project-white/"
 date: 2009-12-12 14:10:45
 tags: [testing, ui, .net, win32]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Measuring Performance in Grape APIs w/ NewRelic RPM"
-redirect_from: "/measuring-performance-in-grape-apis-w-newrelic-rpm"
+redirect_from: "/measuring-performance-in-grape-apis-w-newrelic-rpm/"
 date: 2012-12-03 02:58:53
 tags: [performance, grape, ruby]
 comments: true

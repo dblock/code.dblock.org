@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "WAFFLE 1.5 Released"
-redirect_from: "/waffle-15-released"
+redirect_from: "/waffle-15-released/"
 date: 2012-10-22 13:10:17
 tags: [open source, waffle, jna, java]
 comments: true

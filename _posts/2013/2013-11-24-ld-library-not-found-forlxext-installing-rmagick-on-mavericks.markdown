@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ld: library not found for–lXext installing RMagick on Mavericks"
-redirect_from: "/ld-library-not-found-forlxext-installing-rmagick-on-mavericks"
+redirect_from: "/ld-library-not-found-forlxext-installing-rmagick-on-mavericks/"
 date: 2013-11-24 19:00:20
 tags: [ruby]
 comments: true

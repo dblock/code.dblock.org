@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Help Me Fix Tech Recruiting: Become a Recruiter"
-redirect_from: "/help-me-fix-tech-recruiting-become-a-recruiter"
+redirect_from: "/help-me-fix-tech-recruiting-become-a-recruiter/"
 date: 2013-01-12 16:11:17
 tags: [teams, recruiters, hiring, people]
 comments: true

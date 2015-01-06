@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RemoteInstall Test Framework Open-Sourced"
-redirect_from: "/remoteinstall-test-framework-open-sourced"
+redirect_from: "/remoteinstall-test-framework-open-sourced/"
 date: 2009-11-18 00:30:00
 tags: [codeproject, testing, dotnetinstaller, vmware, msi]
 comments: true

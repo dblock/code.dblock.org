@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CarrierWave: DelayJob-Processing of Selected Versions"
-redirect_from: "/carrierwave-delayjob-processing-of-selected-versions"
+redirect_from: "/carrierwave-delayjob-processing-of-selected-versions/"
 date: 2011-09-22 23:30:43
 tags: [carrierwave, s3, rails, ruby]
 comments: true

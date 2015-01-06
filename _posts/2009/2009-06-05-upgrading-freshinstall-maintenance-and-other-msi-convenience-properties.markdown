@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Upgrading, FreshInstall, Maintenance and other MSI convenience properties"
-redirect_from: "/upgrading-freshinstall-maintenance-and-other-msi-convenience-properties"
+redirect_from: "/upgrading-freshinstall-maintenance-and-other-msi-convenience-properties/"
 date: 2009-06-05 14:15:00
 tags: [wix]
 comments: true

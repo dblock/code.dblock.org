@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grape API Mounted on RACK w/ Static Pages, Tests, JQuery UI, Backbone.js and Even Mongo"
-redirect_from: "/grape-api-mounted-on-rack-w-static-pages-tests-jquery-ui-backbonejs-and-even-mongo"
+redirect_from: "/grape-api-mounted-on-rack-w-static-pages-tests-jquery-ui-backbonejs-and-even-mongo/"
 date: 2012-02-22 14:19:57
 tags: [rack, mongoid, jquery, javascript, grape]
 comments: true

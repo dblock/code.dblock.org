@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Who am I?"
-redirect_from: "/who-am-i"
+redirect_from: "/who-am-i/"
 date: 2008-08-10 18:03:54
 tags: [me me]
 comments: true

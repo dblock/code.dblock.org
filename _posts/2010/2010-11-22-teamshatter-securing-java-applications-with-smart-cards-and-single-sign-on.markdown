@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TeamSHATTER: Securing Java Applications with Smart Cards and Single-Sign-On"
-redirect_from: "/teamshatter-securing-java-applications-with-smart-cards-and-single-sign-on"
+redirect_from: "/teamshatter-securing-java-applications-with-smart-cards-and-single-sign-on/"
 date: 2010-11-22 05:18:45
 tags: [shatter, waffle, security]
 comments: true

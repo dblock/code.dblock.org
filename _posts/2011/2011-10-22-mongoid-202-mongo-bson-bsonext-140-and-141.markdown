@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mongoid 2.0.2, Mongo + bson + bson_ext 1.4.0 and 1.4.1"
-redirect_from: "/mongoid-202-mongo-bson-bsonext-140-and-141"
+redirect_from: "/mongoid-202-mongo-bson-bsonext-140-and-141/"
 date: 2011-10-22 07:19:42
 tags: [mongoid, performance, art.sy, mongodb]
 comments: true

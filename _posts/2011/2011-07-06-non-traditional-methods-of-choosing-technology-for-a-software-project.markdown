@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Non-Traditional Methods of Choosing Technology for a Software Project"
-redirect_from: "/non-traditional-methods-of-choosing-technology-for-a-software-project"
+redirect_from: "/non-traditional-methods-of-choosing-technology-for-a-software-project/"
 date: 2011-07-06 14:15:03
 tags: [technology]
 comments: true

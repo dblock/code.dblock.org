@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Single Sign-On: Spring-Security Negotiate Filter (Kerberos + NTLM) w/Waffle"
-redirect_from: "/single-sign-on-spring-security-negotiate-filter-kerberos-ntlm-wwaffle"
+redirect_from: "/single-sign-on-spring-security-negotiate-filter-kerberos-ntlm-wwaffle/"
 date: 2010-07-09 15:10:36
 tags: [spring, waffle, security]
 comments: true

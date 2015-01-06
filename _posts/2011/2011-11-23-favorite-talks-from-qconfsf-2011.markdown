@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Favorite Talks from QConfSF 2011"
-redirect_from: "/favorite-talks-from-qconfsf-2011"
+redirect_from: "/favorite-talks-from-qconfsf-2011/"
 date: 2011-11-23 04:41:52
 tags: [conferences, technology, architecture, people]
 comments: true

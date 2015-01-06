@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Me in Wired: Art.sy’s ‘Genome’ Predicts What Paintings You Will Like"
-redirect_from: "/me-in-wired-artsys-genome-predicts-what-paintings-you-will-like"
+redirect_from: "/me-in-wired-artsys-genome-predicts-what-paintings-you-will-like/"
 date: 2011-11-24 01:07:14
 tags: [press, art.sy, me me]
 comments: true

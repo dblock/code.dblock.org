@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Just Say 'No' To Mailing List Spam by Recruiters"
-redirect_from: "/just-say-no-to-mailing-list-spam-by-recruiters"
+redirect_from: "/just-say-no-to-mailing-list-spam-by-recruiters/"
 date: 2011-09-09 05:06:55
 tags: [recruiters, hiring, organizations, people]
 comments: true

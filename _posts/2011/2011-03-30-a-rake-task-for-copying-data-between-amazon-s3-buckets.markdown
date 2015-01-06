@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Rake Task for Copying Data between Amazon S3 Buckets"
-redirect_from: "/a-rake-task-for-copying-data-between-amazon-s3-buckets"
+redirect_from: "/a-rake-task-for-copying-data-between-amazon-s3-buckets/"
 date: 2011-03-30 01:53:39
 tags: [s3, rake, ruby]
 comments: true

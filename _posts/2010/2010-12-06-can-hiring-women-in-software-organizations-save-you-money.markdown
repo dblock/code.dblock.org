@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Can hiring women in software organizations save you money on plungers?"
-redirect_from: "/can-hiring-women-in-software-organizations-save-you-money"
+redirect_from: "/can-hiring-women-in-software-organizations-save-you-money/"
 date: 2010-12-06 20:15:08
 tags: [organizations, people]
 comments: true

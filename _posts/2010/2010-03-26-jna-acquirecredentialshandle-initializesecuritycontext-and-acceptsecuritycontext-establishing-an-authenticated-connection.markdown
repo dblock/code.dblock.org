@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JNA: AcquireCredentialsHandle, InitializeSecurityContext and AcceptSecurityContext - Establishing an Authenticated Connection"
-redirect_from: "/jna-acquirecredentialshandle-initializesecuritycontext-and-acceptsecuritycontext-establishing-an-authenticated-connection"
+redirect_from: "/jna-acquirecredentialshandle-initializesecuritycontext-and-acceptsecuritycontext-establishing-an-authenticated-connection/"
 date: 2010-03-26 15:05:31
 tags: [waffle, jna, security, win32]
 comments: true

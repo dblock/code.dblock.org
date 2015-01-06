@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "I Want to Contribute to Open-Source: Where do I Begin?"
-redirect_from: "/i-want-to-contribute-to-open-source-where-do-i-begin"
+redirect_from: "/i-want-to-contribute-to-open-source-where-do-i-begin/"
 date: 2014-09-29 10:45:36
 tags: [teams, teaching, open source]
 comments: true

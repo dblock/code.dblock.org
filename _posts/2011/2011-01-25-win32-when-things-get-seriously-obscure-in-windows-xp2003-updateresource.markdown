@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Win32: When things get seriously obscure in Windows XP/2003 UpdateResource"
-redirect_from: "/win32-when-things-get-seriously-obscure-in-windows-xp2003-updateresource"
+redirect_from: "/win32-when-things-get-seriously-obscure-in-windows-xp2003-updateresource/"
 date: 2011-01-25 03:18:02
 tags: [resourcelib, dotnetinstaller, win32]
 comments: true

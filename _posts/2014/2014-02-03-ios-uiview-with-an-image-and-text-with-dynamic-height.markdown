@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "iOS UIView with an Image and Text with Dynamic Height"
-redirect_from: "/ios-uiview-with-an-image-and-text-with-dynamic-height"
+redirect_from: "/ios-uiview-with-an-image-and-text-with-dynamic-height/"
 date: 2014-02-03 05:29:55
 tags: [objective-c, ios, ui]
 comments: true

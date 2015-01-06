@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Harvesting wix files"
-redirect_from: "/harvesting-wix-files"
+redirect_from: "/harvesting-wix-files/"
 date: 2010-04-14 21:54:22
 tags: [wix]
 comments: true

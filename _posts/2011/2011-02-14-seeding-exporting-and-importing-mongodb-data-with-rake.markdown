@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seeding, exporting and importing MongoDB data with Rake"
-redirect_from: "/seeding-exporting-and-importing-mongodb-data-with-rake"
+redirect_from: "/seeding-exporting-and-importing-mongodb-data-with-rake/"
 date: 2011-02-14 16:55:45
 tags: [rake, mongodb, rails, ruby]
 comments: true

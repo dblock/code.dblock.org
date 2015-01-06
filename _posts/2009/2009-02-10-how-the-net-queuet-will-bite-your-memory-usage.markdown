@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How the .NET Queue<T> will bite your memory usage"
-redirect_from: "/how-the-net-queuet-will-bite-your-memory-usage"
+redirect_from: "/how-the-net-queuet-will-bite-your-memory-usage/"
 date: 2009-02-10 13:45:00
 tags: [.net]
 comments: true

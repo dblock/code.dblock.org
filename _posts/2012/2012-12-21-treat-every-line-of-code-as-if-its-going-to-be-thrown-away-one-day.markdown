@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Treat Every Line of Code as If It's Going to be Thrown Away One Day"
-redirect_from: "/treat-every-line-of-code-as-if-its-going-to-be-thrown-away-one-day"
+redirect_from: "/treat-every-line-of-code-as-if-its-going-to-be-thrown-away-one-day/"
 date: 2012-12-21 14:11:45
 tags: [startups, technology, people, agile]
 comments: true

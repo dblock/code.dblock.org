@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Учись Работать / Вся правда о том, что нас мотивирует"
-redirect_from: "/108"
+redirect_from: "/108/"
 date: 2010-05-29 23:48:04
 tags: [organizations, people]
 comments: true

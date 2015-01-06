@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sitting is Killing You? Move to New York"
-redirect_from: "/sitting-is-killing-you-move-to-new-york"
+redirect_from: "/sitting-is-killing-you-move-to-new-york/"
 date: 2011-07-12 00:21:53
 tags: [technology, art.sy, people]
 comments: true

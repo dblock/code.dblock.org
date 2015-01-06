@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Committing CIJoe Runner Configuration into Git"
-redirect_from: "/committing-cijoe-runner-configuration-into-git"
+redirect_from: "/committing-cijoe-runner-configuration-into-git/"
 date: 2011-08-31 18:50:18
 tags: [cijoe, git, linux, build]
 comments: true

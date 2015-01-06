@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pressing the Big Scary Red Reset Button"
-redirect_from: "/pressing-the-big-scary-red-reset-button"
+redirect_from: "/pressing-the-big-scary-red-reset-button/"
 date: 2012-05-15 07:02:23
 tags: [teams, learning, speaking, people, agile]
 comments: true

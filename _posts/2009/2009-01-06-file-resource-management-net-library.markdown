@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "File Resource Management .NET Library"
-redirect_from: "/file-resource-management-net-library"
+redirect_from: "/file-resource-management-net-library/"
 date: 2009-01-06 04:00:00
 tags: [win32]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stuxnet"
-redirect_from: "/stuxnet"
+redirect_from: "/stuxnet/"
 date: 2010-10-03 00:31:35
 tags: [security]
 comments: true

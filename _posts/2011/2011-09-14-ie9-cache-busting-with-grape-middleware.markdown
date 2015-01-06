@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "IE9: Cache-Busting with Grape Middleware"
-redirect_from: "/ie9-cache-busting-with-grape-middleware"
+redirect_from: "/ie9-cache-busting-with-grape-middleware/"
 date: 2011-09-14 03:45:08
 tags: [grape, rails, ruby]
 comments: true

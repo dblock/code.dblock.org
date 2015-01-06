@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Social Coding: Beyond Trolling Healthcare.gov"
-redirect_from: "/social-coding-beyond-trolling-healthcaregov"
+redirect_from: "/social-coding-beyond-trolling-healthcaregov/"
 date: 2013-10-07 13:24:48
 tags: [teams, open source]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ProcessDomain: remoting & out-of-process AppDomains"
-redirect_from: "/processdomain-remoting-out-of-process-appdomains"
+redirect_from: "/processdomain-remoting-out-of-process-appdomains/"
 date: 2011-01-25 19:28:17
 tags: [processdomain, appsecinc, open source, win32]
 comments: true

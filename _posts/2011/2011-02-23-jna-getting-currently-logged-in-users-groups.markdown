@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JNA: Getting currently logged-in user’s groups"
-redirect_from: "/jna-getting-currently-logged-in-users-groups"
+redirect_from: "/jna-getting-currently-logged-in-users-groups/"
 date: 2011-02-23 15:57:47
 tags: [waffle, jna, security, win32]
 comments: true

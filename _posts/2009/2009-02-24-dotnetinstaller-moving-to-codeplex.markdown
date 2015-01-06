@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "dotNetInstaller moving to CodePlex"
-redirect_from: "/dotnetinstaller-moving-to-codeplex"
+redirect_from: "/dotnetinstaller-moving-to-codeplex/"
 date: 2009-02-24 14:38:03
 tags: [msi]
 comments: true

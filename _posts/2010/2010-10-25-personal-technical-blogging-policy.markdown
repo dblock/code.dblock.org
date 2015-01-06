@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Personal Technical Blogging Policy"
-redirect_from: "/personal-technical-blogging-policy"
+redirect_from: "/personal-technical-blogging-policy/"
 date: 2010-10-25 15:53:26
 tags: [appsecinc, organizations, agile]
 comments: true

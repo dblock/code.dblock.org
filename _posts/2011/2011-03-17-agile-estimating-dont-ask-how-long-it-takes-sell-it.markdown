@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Agile Estimating: Don’t Ask How Long it Takes, Sell It!"
-redirect_from: "/agile-estimating-dont-ask-how-long-it-takes-sell-it"
+redirect_from: "/agile-estimating-dont-ask-how-long-it-takes-sell-it/"
 date: 2011-03-17 14:21:58
 tags: []
 comments: true

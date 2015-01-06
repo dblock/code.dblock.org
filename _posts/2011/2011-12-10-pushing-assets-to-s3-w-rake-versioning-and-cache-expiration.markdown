@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pushing Assets to S3 w/ Rake: Versioning and Cache Expiration"
-redirect_from: "/pushing-assets-to-s3-w-rake-versioning-and-cache-expiration"
+redirect_from: "/pushing-assets-to-s3-w-rake-versioning-and-cache-expiration/"
 date: 2011-12-10 20:19:07
 tags: [javascript, css, git, cloudfront, s3, rails, ruby]
 comments: true

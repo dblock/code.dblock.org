@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JNA: pointers to arrays of pointers"
-redirect_from: "/jna-pointers-to-arrays-of-pointers"
+redirect_from: "/jna-pointers-to-arrays-of-pointers/"
 date: 2010-03-29 16:55:31
 tags: [jna, java, win32]
 comments: true

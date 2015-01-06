@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "At QConSF 2011"
-redirect_from: "/at-qconsf-2011"
+redirect_from: "/at-qconsf-2011/"
 date: 2011-11-17 01:13:46
 tags: [conferences, technology, architecture]
 comments: true

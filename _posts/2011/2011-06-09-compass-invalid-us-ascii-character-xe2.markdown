@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Compass: Invalid US-ASCII character 'xE2'"
-redirect_from: "/compass-invalid-us-ascii-character-xe2"
+redirect_from: "/compass-invalid-us-ascii-character-xe2/"
 date: 2011-06-09 21:13:48
 tags: [rails, ruby]
 comments: true

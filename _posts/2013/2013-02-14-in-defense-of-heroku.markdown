@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "In Defense of Heroku"
-redirect_from: "/in-defense-of-heroku"
+redirect_from: "/in-defense-of-heroku/"
 date: 2013-02-14 02:56:22
 tags: [heroku]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Updating Devise Trackable Last User Sign-In Time with Devise Rememberable"
-redirect_from: "/updating-devise-trackable-last-user-sign-in-time-with-devise-rememberable"
+redirect_from: "/updating-devise-trackable-last-user-sign-in-time-with-devise-rememberable/"
 date: 2012-02-08 15:48:07
 tags: [devise, rails, ruby]
 comments: true

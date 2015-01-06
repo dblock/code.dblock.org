@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kevlin Henney on hideously dangerous complexity"
-redirect_from: "/kevlin-henney-on-hideously-dangerous-complexity"
+redirect_from: "/kevlin-henney-on-hideously-dangerous-complexity/"
 date: 2009-12-10 05:26:22
 tags: [architecture]
 comments: true

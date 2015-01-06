@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Making Agile Technology Choices"
-redirect_from: "/making-agile-technology-choices"
+redirect_from: "/making-agile-technology-choices/"
 date: 2011-10-29 05:59:01
 tags: [technology, architecture, organizations, people]
 comments: true

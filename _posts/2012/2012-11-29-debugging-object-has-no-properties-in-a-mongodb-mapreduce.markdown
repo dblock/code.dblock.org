@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Debugging 'object has no properties' in a MongoDB map/reduce"
-redirect_from: "/debugging-object-has-no-properties-in-a-mongodb-mapreduce"
+redirect_from: "/debugging-object-has-no-properties-in-a-mongodb-mapreduce/"
 date: 2012-11-29 12:48:12
 tags: [mongoid, javascript, mongodb]
 comments: true

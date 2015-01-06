@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Anatomy of a Ruby Gem: Grape"
-redirect_from: "/anatomy-of-a-ruby-gem-grape"
+redirect_from: "/anatomy-of-a-ruby-gem-grape/"
 date: 2014-06-23 14:34:39
 tags: [rack, grape, speaking, ruby]
 comments: true

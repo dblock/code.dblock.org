@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jenkins: Running RoR Builds w/ Bash & RVM"
-redirect_from: "/jenkins-running-ror-builds-w-bash-rvm"
+redirect_from: "/jenkins-running-ror-builds-w-bash-rvm/"
 date: 2011-09-06 12:23:16
 tags: [jenkins]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Octopress: Setting up a Blog and Contributing to an Existing One"
-redirect_from: "/octopress-setting-up-a-blog-and-contributing-to-an-existing-one"
+redirect_from: "/octopress-setting-up-a-blog-and-contributing-to-an-existing-one/"
 date: 2012-01-17 15:22:24
 tags: [octopress, technology, blog]
 comments: true

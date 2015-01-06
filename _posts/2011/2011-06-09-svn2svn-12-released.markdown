@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Svn2Svn 1.2 Released"
-redirect_from: "/svn2svn-12-released"
+redirect_from: "/svn2svn-12-released/"
 date: 2011-06-09 12:17:09
 tags: [open source, subversion]
 comments: true

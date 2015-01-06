@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Slow Migration to Mongoid::Slug 2.x"
-redirect_from: "/slow-migration-to-mongoidslug-2x"
+redirect_from: "/slow-migration-to-mongoidslug-2x/"
 date: 2012-11-22 16:55:14
 tags: [mongoid, ruby, open source]
 comments: true

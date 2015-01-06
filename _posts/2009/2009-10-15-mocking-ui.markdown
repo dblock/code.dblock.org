@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mocking UI"
-redirect_from: "/mocking-ui"
+redirect_from: "/mocking-ui/"
 date: 2009-10-15 11:00:00
 tags: [ui]
 comments: true

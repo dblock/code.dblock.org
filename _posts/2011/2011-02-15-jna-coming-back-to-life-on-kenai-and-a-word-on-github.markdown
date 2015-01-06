@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JNA: Coming back to Life on Kenai (and a word on Github)"
-redirect_from: "/jna-coming-back-to-life-on-kenai-and-a-word-on-github"
+redirect_from: "/jna-coming-back-to-life-on-kenai-and-a-word-on-github/"
 date: 2011-02-15 18:50:19
 tags: [open source, jna, java]
 comments: true

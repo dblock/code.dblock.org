@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Your First CocoaPod"
-redirect_from: "/your-first-cocoapod/"
+redirect_from: "/your-first-cocoapod//"
 date: 2014-03-02 13:58:00
 tags: [objective-c, ios, open source]
 comments: true

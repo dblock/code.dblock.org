@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "dotNetInstaller: UAC Elevation on Install"
-redirect_from: "/dotnetinstaller-uac-elevation-on-install"
+redirect_from: "/dotnetinstaller-uac-elevation-on-install/"
 date: 2011-01-20 15:36:42
 tags: [open source, security, ui, dotnetinstaller, win32]
 comments: true

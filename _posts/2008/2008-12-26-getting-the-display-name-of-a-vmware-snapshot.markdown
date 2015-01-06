@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting the display name of a VMWare snapshot"
-redirect_from: "/getting-the-display-name-of-a-vmware-snapshot"
+redirect_from: "/getting-the-display-name-of-a-vmware-snapshot/"
 date: 2008-12-26 14:00:00
 tags: [vmware]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Carrierwave: Full Control over Changing (S3) Upload Path Name"
-redirect_from: "/carrierwave-full-control-over-changing-s3-upload-path-name"
+redirect_from: "/carrierwave-full-control-over-changing-s3-upload-path-name/"
 date: 2011-03-22 11:59:55
 tags: [s3, rails, ruby]
 comments: true

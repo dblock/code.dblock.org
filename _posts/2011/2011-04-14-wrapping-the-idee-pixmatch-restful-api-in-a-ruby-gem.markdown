@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wrapping the Idee Pixmatch RESTful API in a Ruby Gem"
-redirect_from: "/wrapping-the-idee-pixmatch-restful-api-in-a-ruby-gem"
+redirect_from: "/wrapping-the-idee-pixmatch-restful-api-in-a-ruby-gem/"
 date: 2011-04-14 02:03:57
 tags: [art.sy, rails, ruby]
 comments: true

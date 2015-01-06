@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grape vs. Webmachine"
-redirect_from: "/grape-vs-webmachine"
+redirect_from: "/grape-vs-webmachine/"
 date: 2011-12-14 03:13:28
 tags: [webmachine, grape, rails, ruby]
 comments: true

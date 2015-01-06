@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ruby: Unlearning OOP and Embracing Anarchy"
-redirect_from: "/ruby-unlearning-oop-and-embracing-anarchy"
+redirect_from: "/ruby-unlearning-oop-and-embracing-anarchy/"
 date: 2011-03-03 17:09:18
 tags: [ruby, testing, java]
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building & Scaling a Test-Driven Culture @ AppNexus (Video)"
-redirect_from: "/building-scaling-a-test-driven-culture-appnexus-video"
+redirect_from: "/building-scaling-a-test-driven-culture-appnexus-video/"
 date: 2013-05-16 15:30:00
 tags: [teams, speaking, art.sy, testing, agile]
 comments: true

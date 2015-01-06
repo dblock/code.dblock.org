@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Nesting multiple ConfigurationElement types in a ConfigurationElementCollection"
-redirect_from: "/nesting-multiple-configurationelement-types-in-a-configurationelementcollection"
+redirect_from: "/nesting-multiple-configurationelement-types-in-a-configurationelementcollection/"
 date: 2009-02-18 23:15:00
 tags: [.net]
 comments: true
