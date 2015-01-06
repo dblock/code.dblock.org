@@ -6,7 +6,7 @@ date: 2010-10-03 00:31:35
 tags: [security]
 comments: true
 ---
-![3346564112_a856a76e97]({{ site.url }}/images/posts/2010/2010-10-03-stuxnet/3346564112_a856a76e97%5b7%5d.jpg)
+![3346564112_a856a76e97]({{ site.url }}/images/posts/2010/2010-10-03-stuxnet/3346564112_a856a76e97_7.jpg)
 
 I find [Stuxnet](http://en.wikipedia.org/wiki/Stuxnet) fascinating – finally some useful software! Plus it leaves plenty of room for one’s imagination to run wild on industrial hacking theories. Unfortunately, having dealt with the reality behind some of glamorous hacker stories, the truth must be somewhat boring. Nevertheless, [this F-Secure FAQ](https://www.f-secure.com/weblog/archives/00002040.html) is a great read. The guys who wrote the worm are probably having a good time right now reading the analysis.
 

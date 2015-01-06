@@ -18,7 +18,7 @@ Have you ever been part of one of those? It goes something like this.
 
 A bakeoff is generally worth it, but is both expensive and totally boring!
 
-![boring]({{ site.url }}/images/posts/2011/2011-10-29-making-agile-technology-choices/boring%5b4%5d.jpg)
+![boring]({{ site.url }}/images/posts/2011/2011-10-29-making-agile-technology-choices/boring_4.jpg)
 
 At the same time, _corrosion_ is something that plagues this kind of process through corruption (lets discuss our product over a fancy dinner) or, sometimes, pure intimidation and escalation (lets discuss our product over a fancy dinner ... with your boss).
 

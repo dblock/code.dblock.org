@@ -102,7 +102,7 @@ Notice the `DbCreateCredDlg` that was inserted and a few defaults for various op
 
 The `DbCreateCredDlg` looks like this and publishes the `ODBC_CONNECTION_STRING` property, connecting the dots between the UI and the ODBC connection used to create the database.
 
-![MSSQLDatabase]({{ site.url }}/images/posts/2010/2010-05-11-msi-community-extensions-deploying-databases/mssqldatabase%5b3%5d.jpg)
+![MSSQLDatabase]({{ site.url }}/images/posts/2010/2010-05-11-msi-community-extensions-deploying-databases/mssqldatabase_3.jpg)
 
 ### Conclusion
 

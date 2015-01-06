@@ -82,4 +82,4 @@ Well, that’s it. You need to add a _Preview_ class for every mailer.
 
 #### Screenshot
 
-![reset-password]({{ site.url }}/images/posts/2011/2011-09-15-rails-editable-mail-templates-wpreview-from-37signals/reset-password%5b12%5d.jpg)
+![reset-password]({{ site.url }}/images/posts/2011/2011-09-15-rails-editable-mail-templates-wpreview-from-37signals/reset-password_12.jpg)

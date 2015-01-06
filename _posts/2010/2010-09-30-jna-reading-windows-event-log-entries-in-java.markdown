@@ -7,7 +7,7 @@ tags: [jna, win32]
 comments: true
 ---
 
-![Windows-Event-Viewer-Icon-Large]({{ site.url }}/images/posts/2010/2010-09-30-jna-reading-windows-event-log-entries-in-java/windows-event-viewer-icon-large%5b4%5d.jpg)
+![Windows-Event-Viewer-Icon-Large]({{ site.url }}/images/posts/2010/2010-09-30-jna-reading-windows-event-log-entries-in-java/windows-event-viewer-icon-large_4.jpg)
 
 I’ve recently had to deal with writing Windows event log entries in Java, part of the [Log4jna](https://github.com/dblock/log4jna) experiment. Writing was easy, but I have a stretch goal in my mind for our application: I would like to leverage the Windows event log for all kinds of operational events. We could write a service that reads the event log for events that services within our enterprise services conglomerate and reports events that have not much in common except that they were fired by our software.
 

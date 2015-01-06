@@ -16,7 +16,7 @@ This is great advice. Before writing anything in your application, see if thereâ
 
 The hardest part in contributing to open-source is making the initial effort. See a typo? Fork the repo, fix it, make a [pull request](https://help.github.com/articles/using-pull-requests). This exercises the contributing workflow and creates muscle memory.
 
-![Screenshot 2014-09-29 06.24.44]({{ site.url }}/images/posts/2014/2014-09-29-i-want-to-contribute-to-open-source-where-do-i-begin/screenshot 2014-09-29 06.24.44%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-09-29-i-want-to-contribute-to-open-source-where-do-i-begin/screenshot.jpg)
 
 #### Step 3: Extract non-business logic from your application into a library.
 

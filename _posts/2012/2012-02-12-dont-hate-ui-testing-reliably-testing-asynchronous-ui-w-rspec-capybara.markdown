@@ -6,7 +6,7 @@ date: 2012-02-12 17:00:05
 tags: [rspec, selenium, capybara, testing, dotnetinstaller]
 comments: true
 ---
-![capybara4-510x394]({{ site.url }}/images/posts/2012/2012-02-12-dont-hate-ui-testing-reliably-testing-asynchronous-ui-w-rspec-capybara/capybara4-510x394%5b2%5d.jpg)
+![capybara4-510x394]({{ site.url }}/images/posts/2012/2012-02-12-dont-hate-ui-testing-reliably-testing-asynchronous-ui-w-rspec-capybara/capybara4-510x394_2.jpg)
 
 Last week I wrote [an article on the Art.sy Enginering blog about testing with RSpec and Capybara](http://artsy.github.com/blog/2012/02/03/reliably-testing-asynchronous-ui-w-slash-rspec-and-capybara).
 

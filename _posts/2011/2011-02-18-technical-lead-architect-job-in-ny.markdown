@@ -6,7 +6,7 @@ date: 2011-02-18 01:07:18
 tags: [shatter, appsecinc, gwt, jobs, architecture, security, java, .net, people]
 comments: true
 ---
-![architect]({{ site.url }}/images/posts/2011/2011-02-18-technical-lead-architect-job-in-ny/architect%5b3%5d.jpg)
+![architect]({{ site.url }}/images/posts/2011/2011-02-18-technical-lead-architect-job-in-ny/architect_3.jpg)
 
 AppSecInc has an [opening](http://www.appsecinc.com/aboutus/careers/Technical-Lead-Architect.shtml) for a technical lead slash software architect. This is a pretty cool job for someone who has a pragmatic approach to software development, enjoys complex architectural software problems and wants to work with a whole range of Enterprise-y technologies with some awesome people located right here in New York City. This is your chance to put your hands into something very big and very expensive and learn a lot about what kind of software powers the very large businesses out there. Plus you get to meet a few real white hat hackers and talk about it with your friends, go visit some facilities that don’t exist on maps and talk to people who have multiple passports and whose actual name is unknown :)
 

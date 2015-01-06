@@ -77,11 +77,11 @@ end
 
 #### Screenshots
 
-![]({{ site.url }}/images/posts/2011/2011-10-13-sorting-tables-in-rails-w-mongoid/image%5b32%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-10-13-sorting-tables-in-rails-w-mongoid/image_32.jpg)
 
 I love the attention to detail with the little arrow next to the sorted column as well as the fact that this gem uses the _–column_ syntax for sorting in descending order. It also properly supports pagination. Well done.
 
-![]({{ site.url }}/images/posts/2011/2011-10-13-sorting-tables-in-rails-w-mongoid/image%5b31%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-10-13-sorting-tables-in-rails-w-mongoid/image_31.jpg)
 
 #### Gem
 

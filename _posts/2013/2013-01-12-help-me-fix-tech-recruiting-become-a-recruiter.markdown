@@ -6,7 +6,7 @@ date: 2013-01-12 16:11:17
 tags: [teams, recruiters, hiring, people]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2013/2013-01-12-help-me-fix-tech-recruiting-become-a-recruiter/image%5b7%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-01-12-help-me-fix-tech-recruiting-become-a-recruiter/image_7.jpg)
 
 [Nele Brönner and Luca Bogoni](http://www.lucabogoni.com)
 

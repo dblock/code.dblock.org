@@ -6,7 +6,7 @@ date: 2011-04-05 19:27:06
 tags: [art.sy, mongodb, rails, ruby, open source]
 comments: true
 ---
-![ngrams]({{ site.url }}/images/posts/2011/2011-04-05-mongoidfulltext-full-text-n-gram-search-for-your-mongodb-models/ngrams%5b4%5d.jpg)
+![ngrams]({{ site.url }}/images/posts/2011/2011-04-05-mongoidfulltext-full-text-n-gram-search-for-your-mongodb-models/ngrams_4.jpg)
 
 I am pleased to announce [mongoid_fulltext](https://github.com/aaw/mongoid_fulltext), an open-source full-text search implementation for your MongoId models in Ruby.
 

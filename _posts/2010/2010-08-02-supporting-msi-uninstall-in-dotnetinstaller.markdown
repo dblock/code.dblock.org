@@ -44,11 +44,11 @@ _Create a Bootstrapper_
 
 Create a simple bootstrapper that installs MySetup.msi. Add an Installed Check and package the MSI in the bootstrapper.
 
-![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image_4.jpg)
 
 Note that the GUID matches the UpgradeCode in the WIX MSI we have created above.
 
-![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image%5b12%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image_12.jpg)
 
 _Link the Bootstrapper_
 
@@ -65,7 +65,7 @@ _Run the Bootstrapper_
 
 You can run the bootstrapper and MySetup.msi will be installed. Run the bootstrapper again, and it will offer you to uninstall MySetup.msi. It has detected that it’s already installed and will automatically switch to uninstall mode. This will uninstall the application and it works.
 
-![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image%5b23%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image_23.jpg)
 
 #### Great! I have an uninstaller, right?
 
@@ -89,7 +89,7 @@ _Use the Product Code_
 
 It is now possible to use this product code from registry for the _uninstall package_, a nice feature of DNI.
 
-![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image%5b31%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image_31.jpg)
 
 _Including the Bootstrapper in the MSI_
 
@@ -128,7 +128,7 @@ Include Uninstall.exe in the MSI and create an uninstall shortcut to the MSI. Th
 
 Once installed, the shortcut can be used to uninstall the application. During uninstall the MSI component will fetch the product id from registry and invoke `msiexec /x`.
 
-![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image%5b41%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image_41.jpg)
 
 #### Links
 

@@ -12,6 +12,6 @@ Many of my fellow software developers are now running scared refusing to sit at 
 
 While my team is mostly known for experimenting with new software technologies, we’re also learning avant-garde standing techniques. Our work pods provided by [GeneralAssemb.ly](http://generalassemb.ly), voted coolest place to work by NAMBLA, is now offering additional vertical space for so-called stacked up desks, allowing you to stand on the floor, chair or table. Here’s what one of our work pods looks like.
 
-![2011-07-11 18.03.50]({{ site.url }}/images/posts/2011/2011-07-12-sitting-is-killing-you-move-to-new-york/2011-07-11 18.03.50%5b6%5d.jpg)
+![2011-07-11 18.03.50]({{ site.url }}/images/posts/2011/2011-07-12-sitting-is-killing-you-move-to-new-york/2011-07-11 18.03.50_6.jpg)
 
 Since introducing this 3-level setup we’ve noticed a rapid decline in bug counts and increased productivity by the development team. Try this in your office.

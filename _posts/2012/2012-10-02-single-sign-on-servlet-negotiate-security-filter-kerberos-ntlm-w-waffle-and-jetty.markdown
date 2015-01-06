@@ -6,7 +6,7 @@ date: 2012-10-02 20:55:56
 tags: [waffle, security, active directory, win32]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2012/2012-10-02-single-sign-on-servlet-negotiate-security-filter-kerberos-ntlm-w-waffle-and-jetty/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-10-02-single-sign-on-servlet-negotiate-security-filter-kerberos-ntlm-w-waffle-and-jetty/image_3.jpg)
 
 Jetty is just another servlet container, so the setup is very similar to [Tomcat’s](http://code.dblock.org/single-sign-on-servlet-negotiate-security-filter-kerberos-ntlm-w-waffle).
 

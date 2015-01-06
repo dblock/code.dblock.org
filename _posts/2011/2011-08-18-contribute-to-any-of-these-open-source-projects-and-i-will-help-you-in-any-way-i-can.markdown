@@ -37,4 +37,4 @@ Yes, I do. Well, I can easily pay someone to build these features. But they are 
 
 Maybe this can become contagious? List your 3 open-source projects wish-list on your blog and link it in comments!
 
-![]({{ site.url }}/images/posts/2011/2011-08-18-contribute-to-any-of-these-open-source-projects-and-i-will-help-you-in-any-way-i-can/image%5b9%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-08-18-contribute-to-any-of-these-open-source-projects-and-i-will-help-you-in-any-way-i-can/image_9.jpg)

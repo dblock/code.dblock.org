@@ -16,7 +16,7 @@ The new live JNA url is [https://github.com/twall/jna/](https://github.com/twall
 
 To celebrate the new old JNA, I added a logo. I found this one on the internet, so this is the biggest change. I hope you like it.
 
-![jnalogo]({{ site.url }}/images/posts/2011/2011-02-15-jna-coming-back-to-life-on-kenai-and-a-word-on-github/jnalogo%5b4%5d.jpg)
+![jnalogo]({{ site.url }}/images/posts/2011/2011-02-15-jna-coming-back-to-life-on-kenai-and-a-word-on-github/jnalogo_4.jpg)
 
 #### Migration
 

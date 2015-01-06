@@ -6,7 +6,7 @@ date: 2011-05-03 15:37:33
 tags: [art.sy, heroku, open source]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2011/2011-05-03-thinking-open-source-how-startups-destroy-a-culture-of-fear/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-05-03-thinking-open-source-how-startups-destroy-a-culture-of-fear/image_4.jpg)
 
 My [latest article on OpenSource.com](http://opensource.com/business/11/5/thinking-open-source-how-startups-destroy-culture-fear).
 

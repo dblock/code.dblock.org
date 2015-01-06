@@ -6,7 +6,7 @@ date: 2010-12-06 20:15:08
 tags: [organizations, people]
 comments: true
 ---
-![plunger-dallas]({{ site.url }}/images/posts/2010/2010-12-06-can-hiring-women-in-software-organizations-save-you-money/plunger-dallas%5b3%5d.jpg)
+![plunger-dallas]({{ site.url }}/images/posts/2010/2010-12-06-can-hiring-women-in-software-organizations-save-you-money/plunger-dallas_3.jpg)
 
 True story.
 

@@ -6,7 +6,7 @@ date: 2010-11-03 11:54:09
 tags: [vmware]
 comments: true
 ---
-![VMWareLogo]({{ site.url }}/images/posts/2010/2010-11-03-vmwaretasks-15-released/vmwarelogo%5b4%5d.jpg)
+![VMWareLogo]({{ site.url }}/images/posts/2010/2010-11-03-vmwaretasks-15-released/vmwarelogo_4.jpg)
 
 [VMWareTasks 1.5](https://github.com/dblock/vmwaretasks) was released today, November 3rd 2010.
 

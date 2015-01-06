@@ -58,6 +58,6 @@ The best code reviewers point out the good stuff as often as they point out the 
 
 [@gib](https://github.com/gib) made a pull request getting rid of `#!` in one of our projects. It spanned 79 commits with 150 files changed. Phew. The comments were overwhelming.
 
-![]({{ site.url }}/images/posts/2012/2012-06-28-why-i-love-code-reviews/image%5b14%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-06-28-why-i-love-code-reviews/image_14.jpg)
 
 Tell me these aren’t awesome!

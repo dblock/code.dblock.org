@@ -6,7 +6,7 @@ date: 2011-01-25 19:28:17
 tags: [processdomain, appsecinc, open source, win32]
 comments: true
 ---
-![gear]({{ site.url }}/images/posts/2011/2011-01-25-processdomain-remoting-out-of-process-appdomains/gear%5b5%5d.jpg)
+![gear]({{ site.url }}/images/posts/2011/2011-01-25-processdomain-remoting-out-of-process-appdomains/gear_5.jpg)
 
 Some more open-source free goodness from AppSecInc today with [eternal0’s](http://www.codeplex.com/site/users/view/eternal0) release of .NET [ProcessDomain](http://processdomain.codeplex.com). This is AppSecInc’s fifth open-source project released under the Eclipse Public License.
 

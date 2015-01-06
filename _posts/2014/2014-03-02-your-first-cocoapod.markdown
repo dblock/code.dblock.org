@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Your First CocoaPod"
-redirect_from: "/your-first-cocoapod"
+redirect_from: "/your-first-cocoapod/"
 date: 2014-03-02 13:58:00
 tags: [objective-c, ios, open source]
 comments: true
@@ -14,7 +14,7 @@ This was really easy. Open-source in Objective-C FTW!
 
 I wrote [objc-ngram](https://github.com/dblock/objc-ngram), a small [n-gram](http://en.wikipedia.org/wiki/N-gram) library. For example, you could use it as a rudimentary full text search engine.
 
-![]({{ site.url }}/images/posts/2014/2014-03-02-your-first-cocoapod/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-03-02-your-first-cocoapod/image_4.jpg)
 
 #### Create a Pod
 
@@ -49,7 +49,7 @@ $ rm -rf Project
 
 Create a new iOS Single View Application project and place it into the folder created above (_objc-ngram_).
 
-![]({{ site.url }}/images/posts/2014/2014-03-02-your-first-cocoapod/image%5b10%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-03-02-your-first-cocoapod/image_10.jpg)
 
 Inside the Demo folder, create a Podfile. Yes, we’re going to write tests, using [Specta](https://github.com/specta/specta) and [Expecta](https://github.com/specta/expecta).
 
@@ -93,7 +93,7 @@ There’s no excuse not to have tests or continuous integration for an open-sour
 
 In XCode, open _Manage Schemes _and make the _Demo_ scheme shared.
 
-![]({{ site.url }}/images/posts/2014/2014-03-02-your-first-cocoapod/image%5b16%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-03-02-your-first-cocoapod/image_16.jpg)
 
 Create a _.travis.yml_ file at the root of your project.
 

@@ -10,5 +10,5 @@ One of our servers was upgraded to VMWare ESXi 4.1.0 and automation that uses [R
 
 The work-around is to grant the VMUser role the "_Acquire guest control ticket"_ permission under _Virtual Machine/Interaction_.
 
-![SnipImage]({{ site.url }}/images/posts/2010/2010-09-24-vmware-esxi-410-automation-insufficient-permissions-in-host-operating-system/snipimage%5b9%5d.jpg)
+![SnipImage]({{ site.url }}/images/posts/2010/2010-09-24-vmware-esxi-410-automation-insufficient-permissions-in-host-operating-system/snipimage_9.jpg)
 

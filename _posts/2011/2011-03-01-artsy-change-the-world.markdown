@@ -6,7 +6,7 @@ date: 2011-03-01 13:50:57
 tags: [art.sy, jobs, people]
 comments: true
 ---
-![artsy-logo]({{ site.url }}/images/posts/2011/2011-03-01-artsy-change-the-world/artsy-logo%5b5%5d.jpg)
+![artsy-logo]({{ site.url }}/images/posts/2011/2011-03-01-artsy-change-the-world/artsy-logo_5.jpg)
 
 Today is my first day at [Art.sy’s HQ in General Assembly](http://www.generalassemb.ly), full time.
 

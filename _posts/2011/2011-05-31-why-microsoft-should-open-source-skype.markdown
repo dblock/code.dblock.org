@@ -6,7 +6,7 @@ date: 2011-05-31 23:49:45
 tags: [open source, microsoft]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2011/2011-05-31-why-microsoft-should-open-source-skype/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-05-31-why-microsoft-should-open-source-skype/image_5.jpg)
 
 _One way to decimate adversaries is to open-source your entire competitive advantage. That only works when you’re the market leader._
 

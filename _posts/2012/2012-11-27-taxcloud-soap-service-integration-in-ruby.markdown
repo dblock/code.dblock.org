@@ -6,7 +6,7 @@ date: 2012-11-27 05:54:16
 tags: [ruby, open source, testing]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2012/2012-11-27-taxcloud-soap-service-integration-in-ruby/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-11-27-taxcloud-soap-service-integration-in-ruby/image_3.jpg)
 
 I’ve been working on the the [tax_cloud](https://github.com/drewtempelmeyer/tax_cloud) gem for the past couple of days and am happy to announce version 0.2.0, released today. The gem was started by [@tempelmeyer](https://twitter.com/tempelmeyer/) and is now a mature wrapper for the [TaxCloud US Sales Tax calculation service](https://taxcloud.net/default.aspx).
 

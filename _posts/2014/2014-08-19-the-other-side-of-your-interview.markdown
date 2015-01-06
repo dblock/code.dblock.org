@@ -10,4 +10,4 @@ I gave a talk yesterday at the [Flatiron School](http://flatironschool.com) abou
 
 Video from the talk: [https://vimeo.com/103823447](https://vimeo.com/103823447)
 
-![]({{ site.url }}/images/posts/2014/2014-08-19-the-other-side-of-your-interview/screenshot 2014-08-19 14.02.00%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-08-19-the-other-side-of-your-interview/screenshot.jpg)

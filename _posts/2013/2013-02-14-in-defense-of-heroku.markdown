@@ -8,11 +8,11 @@ comments: true
 ---
 Le Clash of Booba, Rohff and La Fouine have a new player, RapGenius.
 
-![]({{ site.url }}/images/posts/2013/2013-02-14-in-defense-of-heroku/image%5b10%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-02-14-in-defense-of-heroku/image_10.jpg)
 
 James, who I have met, and who is a super nice guy wrote a post called ["Heroku’s Ugly Secret"](http://rapgenius.com/James-somers-herokus-ugly-secret-lyrics), describing the changes in the Heroku’s routing mesh on the Cedar stack and how much it sucks. It’s a bit sensationalist, and there was some hint on the evil overcharging overlords. It’s the price of getting up there on HN, I guess. I was going to just watch this quietly, but I just can’t.
 
-![]({{ site.url }}/images/posts/2013/2013-02-14-in-defense-of-heroku/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-02-14-in-defense-of-heroku/image_5.jpg)
 
 This is unproductive. This sensational news has been discussed [here](http://tiwatson.com/blog/2011-2-17-heroku-no-longer-using-a-global-request-queue) and [here](https://groups.google.com/forum/?fromgroups=#!msg/heroku/8eOosLC5nrw/Xy2j7GapebIJ) a year ago. Man, you tore. Them. UP.
 

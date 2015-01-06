@@ -7,7 +7,7 @@ tags: [oshi, jna, java, hardware, win32]
 comments: true
 ---
 
-![oshi]({{ site.url }}/images/posts/2010/2010-06-23-introducing-oshi-operating-system-and-hardware-information-java/oshi%5b8%5d.jpg)
+![oshi]({{ site.url }}/images/posts/2010/2010-06-23-introducing-oshi-operating-system-and-hardware-information-java/oshi_8.jpg)
 
 Take Hyperic SIGAR, a very popular Java API that lets you collect system information. It has two major drawbacks.
 

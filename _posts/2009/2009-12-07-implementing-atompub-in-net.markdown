@@ -232,5 +232,5 @@ All the POST and PUT calls must be authenticated, but I will leave this exercise
 
 This was pretty easy after-all. It took less time putting this code together than struggling with the HTML editor in the past. And I am now writing this in LiveWriter!
 
-![]({{ site.url }}/images/posts/2009/2009-12-07-implementing-atompub-in-net/image%5b26%5d.jpg)
+![]({{ site.url }}/images/posts/2009/2009-12-07-implementing-atompub-in-net/image_26.jpg)
 

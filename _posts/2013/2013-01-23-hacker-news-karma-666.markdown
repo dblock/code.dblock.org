@@ -8,4 +8,4 @@ comments: true
 ---
 Pure. Evil.
 
-![]({{ site.url }}/images/posts/2013/2013-01-23-hacker-news-karma-666/image%5b11%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-01-23-hacker-news-karma-666/image_11.jpg)

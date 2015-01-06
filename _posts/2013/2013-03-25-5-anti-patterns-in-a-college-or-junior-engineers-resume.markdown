@@ -12,7 +12,7 @@ In the past few years I’ve collected dozens of resumes from junior Engineering
 
 #### Objectives Are Too Broad
 
-![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image%5b14%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image_14.jpg)
 
 _"To obtain a full time position that matches my enthusiasm, constant effort and efficiency."_
 
@@ -22,17 +22,17 @@ An objectives paragraph creates unnecessary barriers in hiring you, at best. The
 
 _"I am an open-source contributor __..."_
 
-![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image%5b37%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image_37.jpg)
 
 I wrote an article that went viral, [Github is Your New Resume](http://code.dblock.org/github-is-your-new-resume). When evaluating someone’s Github profile, I usually click on _Repositories_ and then _Sources_. Do you have a project that you have started that has been heavily forked and contributed to? Do you have any activity that’s longer than a year ago or did you just throw some code up there to beef up your resume? Does your contributions graph really look like this?
 
-![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image_5.jpg)
 
 I don’t expect a junior developer to have any of these things. Displaying a link to an empty Github profile is a terrible idea. Do link to your personal website.
 
 #### You have Lead, Driven, Managed, Advised or Evangelized
 
-![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image%5b19%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image_19.jpg)
 
 _"Advised xyz.com founders in technology selection."_
 
@@ -40,7 +40,7 @@ It reads like your head can barely squeeze through your chateau’s living room 
 
 #### You Have Expert Skills
 
-![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image%5b26%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image_26.jpg)
 
 _"Expert in C++, Photoshop and Excel."_
 
@@ -48,7 +48,7 @@ I recommend removing a list of skills altogether and writing, in tiniest font po
 
 #### You Took Many Courses and Excelled in Clubs
 
-![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image%5b30%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image_30.jpg)
 
 _"2nd Place in the Campus Green Computing Initiative"_
 

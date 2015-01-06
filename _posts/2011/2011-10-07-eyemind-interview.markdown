@@ -8,5 +8,5 @@ comments: true
 ---
 Me on Eye&Mind, talking about Art.sy technology, [link](http://www.eyeandmind.com/2011/10/art-sy-with-daniel-doubrovkine/).
 
-![eyeandmind]({{ site.url }}/images/posts/2011/2011-10-07-eyemind-interview/eyeandmind%5b4%5d.jpg)
+![eyeandmind]({{ site.url }}/images/posts/2011/2011-10-07-eyemind-interview/eyeandmind_4.jpg)
 

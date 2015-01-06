@@ -6,7 +6,7 @@ date: 2010-11-09 07:56:03
 tags: [appsecinc, open source, msi, wix]
 comments: true
 ---
-![msiext]({{ site.url }}/images/posts/2010/2010-11-09-appsecinc-community-msi-extensions-12-released/msiext%5b3%5d.jpg)
+![msiext]({{ site.url }}/images/posts/2010/2010-11-09-appsecinc-community-msi-extensions-12-released/msiext_3.jpg)
 
 We take our custom actions seriously.
 

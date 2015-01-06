@@ -6,7 +6,7 @@ date: 2012-10-23 23:52:06
 tags: [teams, testing, people, agile]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2012/2012-10-23-the-safety-net-removing-barriers-to-test-automation/image%5b6%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-10-23-the-safety-net-removing-barriers-to-test-automation/image_6.jpg)
 
 One of the central topics of [my AgileDC 2012 talk](https://www.slideshare.net/dblockdotorg/taming-the-testing-beast-agiledc-2012/) was barriers to test automation and how to remove them. If you aren’t doing test automation, are trying to, and failing, let go your QA team.
 

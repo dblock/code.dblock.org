@@ -16,7 +16,7 @@ Below are some well-researched and widely practiced techniques of breaking even 
 
 Ask an expert C++ level candidate to reverse a string in C.
 
-![]({{ site.url }}/images/posts/2012/2012-12-08-five-ways-to-torture-candidates-in-a-technical-interview/image%5b2%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-12-08-five-ways-to-torture-candidates-in-a-technical-interview/image_2.jpg)
 
 This is guaranteed to be insulting to someone who has demonstrable success developing software in any relevant technology. It’s the first thing taught in any C class and should take you about 45 seconds. The fact that many just cannot do it is irrelevant, those should never make it past a phone screen. By giving this problem to someone you’re telling them that you don’t trust their resume and that their demonstrable experience is completely irrelevant. It’s a single, efficient blow to their ego.
 
@@ -24,7 +24,7 @@ This is guaranteed to be insulting to someone who has demonstrable success devel
 
 Create a system in which the candidate does not have access to food, water or bathroom for extended hours and spends significant lone time in a small, preferably windowless space.
 
-![]({{ site.url }}/images/posts/2012/2012-12-08-five-ways-to-torture-candidates-in-a-technical-interview/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-12-08-five-ways-to-torture-candidates-in-a-technical-interview/image_5.jpg)
 
 After each 1 hour interview, grab the next interviewer and interrogate the previous interviewer on the strengths and weaknesses of the candidate. There’s a series of canned questions to ask: What did you ask the candidate? What did they answer? How well did they do? What are the areas that they failed at and that need to be drilled further by the next interviewer?
 
@@ -34,7 +34,7 @@ This is a clever management technique that extends the interview schedule by abo
 
 Ask the candidate to solve a simple problem in a completely different way, until you run out of time.
 
-![]({{ site.url }}/images/posts/2012/2012-12-08-five-ways-to-torture-candidates-in-a-technical-interview/image%5b8%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-12-08-five-ways-to-torture-candidates-in-a-technical-interview/image_8.jpg)
 
 This is akin to pouring hot pitch on a candidate’s head, letting it cool and then restarting again. It’s theoretically a good exercise if the question is complex, but it’s guaranteed to stump even the best programmer on the fifth "Can you please implement fib(x) in yet another completely different way?" iteration. You’ve succeeded when the candidate gives up and says that there’s just no other reasonable way to do this, at which point you end the interview, shake their hand and walk out.
 
@@ -42,7 +42,7 @@ This is akin to pouring hot pitch on a candidate’s head, letting it cool and t
 
 Lead the candidate to a stopping point where they are drowning in a problem, then maintain them underwater.
 
-![]({{ site.url }}/images/posts/2012/2012-12-08-five-ways-to-torture-candidates-in-a-technical-interview/image%5b17%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-12-08-five-ways-to-torture-candidates-in-a-technical-interview/image_17.jpg)
 
 Pretend to be helpful. Finally, give them a few minutes to concentrate and solve the problem alone. Have a smoke outside. Come back 15 minutes later to see no real progress. Ask them to explain what they wrote and keep a concerned look. Finally, shoot them with a "this is good, although pretty far from working, and we’re out of time".
 
@@ -50,7 +50,7 @@ Pretend to be helpful. Finally, give them a few minutes to concentrate and solve
 
 Ask an executive-level, non-programming interviewee to implement a sort algorithm of their choosing.
 
-![]({{ site.url }}/images/posts/2012/2012-12-08-five-ways-to-torture-candidates-in-a-technical-interview/image%5b11%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-12-08-five-ways-to-torture-candidates-in-a-technical-interview/image_11.jpg)
 
 Guaranteed to remove any kind of skin that one developed over their 20 year long career. In small companies low rank developers interview their future executive-level bosses. Guide the candidate to talk about how they got started and wait for the story about their small, yet relevant programming experience. Mention with a smile that you’re impressed by their solid CS foundation and that "they must surely be able to implement a sort function with a bit of help, even today". The candidate will definitely bite. The next step is a whiteboard.
 

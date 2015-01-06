@@ -8,7 +8,7 @@ comments: true
 ---
 I just mentioned someone’s promotion to one of the person’s colleagues after seeing it on their updated LinkedIn profile. The reaction was not quite what I expected.
 
-![linkedin]({{ site.url }}/images/posts/2011/2011-05-24-capitalizing-on-the-linkedin-ipo-avoiding-short-term-personal-stock-loss/linkedin%5b4%5d.jpg)
+![linkedin]({{ site.url }}/images/posts/2011/2011-05-24-capitalizing-on-the-linkedin-ipo-avoiding-short-term-personal-stock-loss/linkedin_4.jpg)
 
 It’s tempting to capitalize on the LinkedIn IPO: all eyes are directed towards the site and the company. Naturally, some take this opportunity to update their profile with their new job title. Unfortunately others in their company may find that announcement surprising, given the lack of a public announcement, especially when they work real close to that person. This creates a whole range of emotions from a few chuckles to confusion and outright anger.
 

@@ -10,6 +10,6 @@ In 1997 I wrote a program called Jade. It worked on Windows 3.1. I can’t get i
 
 Jade was a personal address book manager that let me print labels of my contacts. It had some [amazing code](https://gist.github.com/1196422). I’ll buy a beer to whoever can tell me what this actually does – I certainly can’t! I am glad it didn’t work out.
 
-![jade]({{ site.url }}/images/posts/2011/2011-09-06-blast-from-the-past-jade/jade%5b6%5d.jpg)
+![jade]({{ site.url }}/images/posts/2011/2011-09-06-blast-from-the-past-jade/jade_6.jpg)
 
 I can’t believe that this was almost 15 years ago.

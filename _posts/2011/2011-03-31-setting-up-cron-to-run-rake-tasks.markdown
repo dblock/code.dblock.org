@@ -6,7 +6,7 @@ date: 2011-03-31 14:40:43
 tags: [rake, mongodb]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2011/2011-03-31-setting-up-cron-to-run-rake-tasks/image%5b6%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-03-31-setting-up-cron-to-run-rake-tasks/image_6.jpg)
 
 This is the last piece of the dev-ops puzzle. We want our [MongoDB backup](http://code.dblock.org/ShowPost.aspx?id=192) to run nightly. Let's create a _:cron_ task
 

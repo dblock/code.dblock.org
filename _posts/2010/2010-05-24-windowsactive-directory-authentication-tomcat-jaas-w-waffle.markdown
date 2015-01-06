@@ -7,7 +7,7 @@ tags: [tomcat, waffle, jna, java, active directory]
 comments: true
 ---
 
-![waffle]({{ site.url }}/images/posts/2010/2010-05-24-windowsactive-directory-authentication-tomcat-jaas-w-waffle/waffle%5b6%5d.jpg)
+![waffle]({{ site.url }}/images/posts/2010/2010-05-24-windowsactive-directory-authentication-tomcat-jaas-w-waffle/waffle_6.jpg)
 
 We used to have code that checked whether a username/password was valid, then tried to enumerate user groups in Active Directory. That didn’t work for nested groups, domains with trusts and many other scenarios in-between. Then we wrote what eventually became Waffle. This week-end I added a JAAS LoginModule to Waffle 1.3. You can use this with anything that supports JAAS, such as Tomcat for BASIC, DIGEST or FORMS authentication. This is actually a simple demonstration (as opposed to the Single Sign-On Negotiate/NTLM/Kerberos valve) of Waffle and is how we originally used it. Here’s how.
 
@@ -112,5 +112,5 @@ endlocal
 
 A demo application can be found in the Waffle distribution in the _Samples\Tomcat\waffle-jaas_ directory. Copy the entire directory into Tomcat's webapps directory, start Tomcat as explained above, and navigate to http://localhost:8080/waffle-jaas. You will be prompted for your Windows login, enter your Windows credentials and log-in.
 
-![]({{ site.url }}/images/posts/2010/2010-05-24-windowsactive-directory-authentication-tomcat-jaas-w-waffle/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-05-24-windowsactive-directory-authentication-tomcat-jaas-w-waffle/image_5.jpg)
 

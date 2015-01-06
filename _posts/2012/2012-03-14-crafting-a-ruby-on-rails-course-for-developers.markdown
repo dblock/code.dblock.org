@@ -6,7 +6,7 @@ date: 2012-03-14 02:33:58
 tags: [teaching, learning, technology, rails, ruby]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2012/2012-03-14-crafting-a-ruby-on-rails-course-for-developers/image%5b1%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-03-14-crafting-a-ruby-on-rails-course-for-developers/image_1.jpg)
 
 Today I gave a talk to a packed NYC.rb about [crafting a Ruby-on-Rails course for developers](http://www.meetup.com/NYC-rb/events/46696902/). I’m working on a blog post about classroom education, but in the meantime, here’re a few links.
 

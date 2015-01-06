@@ -6,7 +6,7 @@ date: 2011-11-23 04:41:52
 tags: [conferences, technology, architecture, people]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2011/2011-11-23-favorite-talks-from-qconfsf-2011/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-11-23-favorite-talks-from-qconfsf-2011/image_5.jpg)
 
 My first QCon, [QConSF ‘11](http://qconsf.com/sf2011/) was very good. I’ve been watching [InfoQ](http://infoq.com) for a very long time and wanted to go to QCon ever since.
 

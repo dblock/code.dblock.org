@@ -10,7 +10,7 @@ Last week I struggled with this rather basic problem of adjusting the height of 
 
 _TL;DR_: the solution was to align the bottom edge of  with a control with the view.
 
-![]({{ site.url }}/images/posts/2014/2014-02-03-ios-uiview-with-an-image-and-text-with-dynamic-height/image%5b6%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-02-03-ios-uiview-with-an-image-and-text-with-dynamic-height/image_6.jpg)
 
 We use a custom _UIView_ with a fixed height of 120px to display a separator, an image and text on its right. We also use [FLKAutoLayout](https://github.com/dkduck/FLKAutoLayout), which is where all these nice alignment methods come from.
 
@@ -60,4 +60,4 @@ The answer is that we don’t need to do any of this. With auto-layout we need t
 
 With this constraint auto-layout seems to be smart enough to pick the tallest control to calculate the height of the view.
 
-![]({{ site.url }}/images/posts/2014/2014-02-03-ios-uiview-with-an-image-and-text-with-dynamic-height/image%5b11%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-02-03-ios-uiview-with-an-image-and-text-with-dynamic-height/image_11.jpg)

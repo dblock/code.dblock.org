@@ -7,7 +7,7 @@ tags: [tomcat, spring, waffle, jna, active directory, win32]
 comments: true
 ---
 
-![waffle]({{ site.url }}/images/posts/2010/2010-07-25-waffle-13-released/waffle%5b4%5d.jpg)
+![waffle]({{ site.url }}/images/posts/2010/2010-07-25-waffle-13-released/waffle_4.jpg)
 
 If you’re writing PInvoke in C# or Java code for Windows authentication, save yourself some time, WAFFLE has these features for you.
 

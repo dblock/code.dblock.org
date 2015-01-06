@@ -14,7 +14,7 @@ We didn’t want a big complex system and tried to find something dedicated to p
 
 Here’s what our instance looks like.
 
-![]({{ site.url }}/images/posts/2011/2011-03-20-continuous-deployment-with-heroku-bartender/image%5b10%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-03-20-continuous-deployment-with-heroku-bartender/image_10.jpg)
 
 You can see your Github commits (white) and all the successful pushes to production (green). You can deploy any change, including an old one, which means you can rollback to any previous check-in when things go bad. The implementation is rudimentary, but we have been doing several deployments a day and it worked like a charm. It also seems that Heroku receives a push, compiles a slug, then hot-swaps it, creating no downtime for users. That’s continuous deployment right there for dirt cheap!
 

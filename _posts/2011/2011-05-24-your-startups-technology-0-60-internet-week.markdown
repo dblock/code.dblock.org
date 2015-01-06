@@ -8,4 +8,4 @@ comments: true
 ---
 I’ll be presenting at [Internet Week NY](http://www.internetweekny.com) on Monday, June 6th, 2pm.
 
-![]({{ site.url }}/images/posts/2011/2011-05-24-your-startups-technology-0-60-internet-week/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-05-24-your-startups-technology-0-60-internet-week/image_3.jpg)

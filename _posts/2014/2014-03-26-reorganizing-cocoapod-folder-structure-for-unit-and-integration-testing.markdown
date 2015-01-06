@@ -60,15 +60,15 @@ Create a new empty project in XCode called "Tests" or, if you prefer, "UnitTests
 
 Add a target.
 
-![]({{ site.url }}/images/posts/2014/2014-03-26-reorganizing-cocoapod-folder-structure-for-unit-and-integration-testing/screen shot 2014-03-25 at 2.15.29 pm%5b6%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-03-26-reorganizing-cocoapod-folder-structure-for-unit-and-integration-testing/screenshot_6.jpg)
 
 Choose Cocoa Touch Unit Testing bundle.
 
-![]({{ site.url }}/images/posts/2014/2014-03-26-reorganizing-cocoapod-folder-structure-for-unit-and-integration-testing/screen shot 2014-03-25 at 2.15.48 pm%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-03-26-reorganizing-cocoapod-folder-structure-for-unit-and-integration-testing/screenshot_4.jpg)
 
 Open _Manage Schemes_ and make sure the scheme is Shared. Then edit the Test project’s scheme and check the Run box under the Build action.
 
-![]({{ site.url }}/images/posts/2014/2014-03-26-reorganizing-cocoapod-folder-structure-for-unit-and-integration-testing/screen shot 2014-03-26 at 9.58.04 am%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-03-26-reorganizing-cocoapod-folder-structure-for-unit-and-integration-testing/screenshot_5.jpg)
 
 The Podfile must now reference "Demo", "Tests" and the "IntegrationTests" project. The syntax for that is a bit backwards, discussed in [https://github.com/CocoaPods/CocoaPods/issues/1922](https://github.com/CocoaPods/CocoaPods/issues/1922).
 

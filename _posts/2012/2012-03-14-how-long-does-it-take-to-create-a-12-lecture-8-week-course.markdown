@@ -12,7 +12,7 @@ My own first encounter with education as an instructor was teaching elder kids t
 
 > Sgt. Pepper's Lonely Hearts Club Band ...
 
-![]({{ site.url }}/images/posts/2012/2012-03-14-how-long-does-it-take-to-create-a-12-lecture-8-week-course/image%5b13%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-03-14-how-long-does-it-take-to-create-a-12-lecture-8-week-course/image_13.jpg)
 
 _the school I went to and Gagarin Square nearby_
 

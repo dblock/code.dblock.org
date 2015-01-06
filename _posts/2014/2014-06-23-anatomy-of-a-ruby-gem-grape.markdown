@@ -9,7 +9,7 @@ comments: true
 I’ve recorded a screencast during the [Anatomy of a Ruby Gem meetup](http://www.meetup.com/Anatomy-of-a-Ruby-Gem/events/187424252/) in New York. It’s a deep dive into [Grape](https://github.com/intridea/grape) internals.
 
 <a href='http://vimeo.com/98830727'>
-  ![]({{ site.url }}/images/posts/2014/2014-06-23-anatomy-of-a-ruby-gem-grape/screenshot 2014-06-23 10.33.03%5b6%5d.jpg)
+  ![]({{ site.url }}/images/posts/2014/2014-06-23-anatomy-of-a-ruby-gem-grape/screenshot.jpg)
 </a>
 
 [https://vimeo.com/98830727](https://vimeo.com/98830727)

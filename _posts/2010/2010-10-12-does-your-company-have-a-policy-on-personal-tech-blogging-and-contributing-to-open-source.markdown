@@ -7,7 +7,7 @@ tags: [open source, organizations, people]
 comments: true
 ---
 
-![opensource-logo]({{ site.url }}/images/posts/2010/2010-10-12-does-your-company-have-a-policy-on-personal-tech-blogging-and-contributing-to-open-source/opensource-logo%5b5%5d.jpg)
+![opensource-logo]({{ site.url }}/images/posts/2010/2010-10-12-does-your-company-have-a-policy-on-personal-tech-blogging-and-contributing-to-open-source/opensource-logo_5.jpg)
 
 I’ve spent hours researching policies on personal blogging for engineers and contributing to open-source. I found virtually nothing – these surely exist, but are definitely kept private in various organizations. Care to share? Please answer the following questions on StackOverflow.
 

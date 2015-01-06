@@ -6,7 +6,7 @@ date: 2012-08-24 16:47:16
 tags: [dotnetinstaller, msi]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2012/2012-08-24-dotnetinstaller-22-released/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-08-24-dotnetinstaller-22-released/image_3.jpg)
 
 dotNetInstaller 2.2 has been released today, August 24th , 2012
 

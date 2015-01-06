@@ -7,7 +7,7 @@ tags: [spring, waffle, security]
 comments: true
 ---
 
-![springwaffle]({{ site.url }}/images/posts/2010/2010-07-09-single-sign-on-spring-security-negotiate-filter-kerberos-ntlm-wwaffle/springwaffle%5b3%5d.jpg)
+![springwaffle]({{ site.url }}/images/posts/2010/2010-07-09-single-sign-on-spring-security-negotiate-filter-kerberos-ntlm-wwaffle/springwaffle_3.jpg)
 
 In this post I’ll explain how to configure the Waffle Spring-Security Negotiate filter to do single-sign-on on Windows and touch on how much more elegant the spring-based filter configuration is versus, for example, a generic servlet filter.
 

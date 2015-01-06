@@ -6,7 +6,7 @@ date: 2012-12-14 05:09:27
 tags: [technology, heroku, ruby, architecture]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2012/2012-12-14-losing-control-to-the-heroku-paas/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-12-14-losing-control-to-the-heroku-paas/image_5.jpg)
 
 I love Heroku and [we have had great success with it](http://success.heroku.com/artsy). Yet, today, I find myself releasing [heroku-forward](http://artsy.github.com/blog/2012/12/13/beat-heroku-60-seconds-application-boot-timeout-with-a-proxy/), a gem born from frustration, that works around a seemingly simple limitation of the platform - a 60 seconds application boot timeout.
 

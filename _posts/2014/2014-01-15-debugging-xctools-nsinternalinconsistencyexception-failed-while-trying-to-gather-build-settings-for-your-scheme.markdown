@@ -69,9 +69,9 @@ This is the real problem, the schemes are user-specific unless marked as _shared
 
 You can change this in [Manage Schemes](https://developer.apple.com/library/ios/recipes/xcode_help-scheme_editor/Articles/SchemeManage.html) in XCode.
 
-![]({{ site.url }}/images/posts/2014/2014-01-15-debugging-xctools-nsinternalinconsistencyexception-failed-while-trying-to-gather-build-settings-for-your-scheme/screenshot 2014-01-15 09.58.11%5b6%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-01-15-debugging-xctools-nsinternalinconsistencyexception-failed-while-trying-to-gather-build-settings-for-your-scheme/screenshot_1.jpg)
 
-![]({{ site.url }}/images/posts/2014/2014-01-15-debugging-xctools-nsinternalinconsistencyexception-failed-while-trying-to-gather-build-settings-for-your-scheme/screenshot 2014-01-15 09.59.22%5b6%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-01-15-debugging-xctools-nsinternalinconsistencyexception-failed-while-trying-to-gather-build-settings-for-your-scheme/screenshot_2.jpg)
 
 Opened [https://github.com/facebook/xctool/issues/295](https://github.com/facebook/xctool/issues/295) to improve the error messaging in XCTool.
 

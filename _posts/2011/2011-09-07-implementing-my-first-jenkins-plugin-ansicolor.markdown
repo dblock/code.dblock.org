@@ -6,7 +6,7 @@ date: 2011-09-07 12:07:05
 tags: [jenkins, java]
 comments: true
 ---
-![jenkins]({{ site.url }}/images/posts/2011/2011-09-07-implementing-my-first-jenkins-plugin-ansicolor/jenkins%5b3%5d.jpg)
+![jenkins]({{ site.url }}/images/posts/2011/2011-09-07-implementing-my-first-jenkins-plugin-ansicolor/jenkins_3.jpg)
 
 I installed Jenkins last week for the very first time. A couple of days later I was able to publish my first plugin, called [AnsiColor](https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin), which colorizes ANSI output. It’s the [plugin you’ve all been waiting for](http://code.dblock.org/the-jenkins-ansicolor-plugin-youve-all-been-waiting-for).
 
@@ -82,7 +82,7 @@ if (! colorizedData.contentEquals(this.data)) {
 }
 ```
 
-![ansicolor]({{ site.url }}/images/posts/2011/2011-09-07-implementing-my-first-jenkins-plugin-ansicolor/ansicolor%5b4%5d.jpg)
+![ansicolor]({{ site.url }}/images/posts/2011/2011-09-07-implementing-my-first-jenkins-plugin-ansicolor/ansicolor_4.jpg)
 
 #### Source Code
 

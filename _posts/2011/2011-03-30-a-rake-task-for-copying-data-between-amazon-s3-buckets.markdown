@@ -6,7 +6,7 @@ date: 2011-03-30 01:53:39
 tags: [s3, rake, ruby]
 comments: true
 ---
-![buckets]({{ site.url }}/images/posts/2011/2011-03-30-a-rake-task-for-copying-data-between-amazon-s3-buckets/buckets%5b5%5d.jpg)
+![buckets]({{ site.url }}/images/posts/2011/2011-03-30-a-rake-task-for-copying-data-between-amazon-s3-buckets/buckets_5.jpg)
 
 Now that we have a Rake task to copy MongoDB databases, we are facing the next problem. We store images on Amazon S3 and each environment has its own S3 bucket. So copying data from production to staging also needs to synchronize the _production_ and the _staging_ S3 buckets, hopefully very quickly for a very large number of files.
 

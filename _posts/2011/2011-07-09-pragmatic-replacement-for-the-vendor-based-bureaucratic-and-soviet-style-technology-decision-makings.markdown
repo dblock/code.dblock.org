@@ -18,7 +18,7 @@ But again, you may have been born in Soviet era socialism. I was. My people inve
 
 It doesn’t have to be this way. Instead of always struggling to make the absolute right choice, just make a few smaller good ones. Use my helpful diagram below instead of a sales person, spreadsheet or committee. Make choices that fit in my picture. Ask yourself: _How much time are we fighting the technology vs. learning or producing tangible results?_ The right balance is something like 5 vs. 95%.
 
-![]({{ site.url }}/images/posts/2011/2011-07-09-pragmatic-replacement-for-the-vendor-based-bureaucratic-and-soviet-style-technology-decision-makings/image%5b6%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-07-09-pragmatic-replacement-for-the-vendor-based-bureaucratic-and-soviet-style-technology-decision-makings/image_6.jpg)
 
 How do you make decisions? Listen to other smart, non-partisan people and let them pitch you the software they use. Ask questions. Find trustworthy peers rather than salesmen and pay attention to whether they use the words _awesome_, _easy_ and _elegant_. Become part of a community of craftsmen. Read [Hacker News](http://news.ycombinator.com) and watch [InfoQ](http://infoq.com) videos. Go to tech meet-ups. Take a few classes. Learn to be a more pragmatic software architect.
 

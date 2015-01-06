@@ -7,7 +7,7 @@ tags: [3licenses, ant, open source, java, build]
 comments: true
 ---
 
-![thirdparty]({{ site.url }}/images/posts/2010/2010-11-08-3licenses-collect-your-3rd-party-licenses/thirdparty%5b4%5d.jpg)
+![thirdparty]({{ site.url }}/images/posts/2010/2010-11-08-3licenses-collect-your-3rd-party-licenses/thirdparty_4.jpg)
 
 I am pleased to announce the open-source release of [3Licenses](https://github.com/dblock/3licenses), an [AppSecInc](http://www.appsecinc.com)-sponsored project, pronounced "free licenses".
 
@@ -30,5 +30,5 @@ Are you currently copying individual _license.txt_ files "by hand" or are you in
 
 Here's what 3Licenses can produce.
 
-![demo2]({{ site.url }}/images/posts/2010/2010-11-08-3licenses-collect-your-3rd-party-licenses/demo2%5b4%5d.jpg)
+![demo2]({{ site.url }}/images/posts/2010/2010-11-08-3licenses-collect-your-3rd-party-licenses/demo2_4.jpg)
 

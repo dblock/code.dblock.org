@@ -55,5 +55,5 @@ This is what the new configuration looks like for executable setups. The list of
 
 This is what the output from a run in CruiseControl looks like. You can see the messages about a required reboot.
 
-![]({{ site.url }}/images/posts/2009/2009-12-08-remoteinstall-supporting-reboots-between-installers/image%5b12%5d.jpg)
+![]({{ site.url }}/images/posts/2009/2009-12-08-remoteinstall-supporting-reboots-between-installers/image_12.jpg)
 

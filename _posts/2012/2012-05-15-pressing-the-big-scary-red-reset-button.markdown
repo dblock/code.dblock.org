@@ -8,7 +8,7 @@ comments: true
 ---
 Last night I gave a talk on pressing the big scary red reset button at the [NY CTO School](http://www.ctoschool.org/). The first talk before me was by [@malcolmcasey](https://twitter.com/#!/malcolmcasey), CTO of [Skillshare](http://www.skillshare.com/), another awesome NYC startup. It’s a great meet-up for early team leads that want to learn from other technologists that have been doing this for a while.
 
-![]({{ site.url }}/images/posts/2012/2012-05-15-pressing-the-big-scary-red-reset-button/image%5b24%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-05-15-pressing-the-big-scary-red-reset-button/image_24.jpg)
 
 I’ve reset a few projects in my life. None as big as Microsoft Windows Longhorn (Vista), which was a fun example of failure of monumental proportion. In 2006 Jim Alchin wrote in the Wall Street Journal: "Longhorn was crashing into the ground." While he was credited with ultimately shipping Vista following a successful reset, it was one of Microsoft’s worse operating systems. Developers just no longer cared. You can see how a reset is by no means a guarantee of success. In fact, anecdotal evidence shows that 7 out of 10 projects that are reset still fail. And when projects fail there’s plenty of wrongs to be pointed out. Marketers will blame the product, product managers the technology and everybody will blame other people. A few will cite failure all around or an unstoppable death spiral.
 

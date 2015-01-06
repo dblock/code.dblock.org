@@ -10,7 +10,7 @@ Are you using log4j’s `NTEventLogAppender` to send events to the Windows event
 
 Introducing [log4jna](http://github.com/dblock/log4jna/), a small project that uses Java Native Access (JNA) and implements the same appender without a need for a native library.
 
-![log4jna]({{ site.url }}/images/posts/2010/2010-09-28-log4jna-getting-rid-of-the-pesky-nteventlogappenderdll/log4jna%5b4%5d.jpg)
+![log4jna]({{ site.url }}/images/posts/2010/2010-09-28-log4jna-getting-rid-of-the-pesky-nteventlogappenderdll/log4jna_4.jpg)
 
 Download a build, compatible with log4j 1.2 and swap your appender for `org.apache.log4jna.nt.Win32EventLogAppender`. There’re a few other small things to worry about described in the documentation.
 

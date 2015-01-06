@@ -6,7 +6,7 @@ date: 2011-08-17 16:43:33
 tags: [testing]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2011/2011-08-17-unable-to-obtain-stable-firefox-connection-in-60-seconds-downgrading-firefox-on-ubuntu/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-08-17-unable-to-obtain-stable-firefox-connection-in-60-seconds-downgrading-firefox-on-ubuntu/image_5.jpg)
 
 Firefox 6 just made its way on my Ubuntu installation. That broke Capybara tests that use selenium-webdriver with the annoying _unable to obtain stable firefox connection in 60 seconds _error_. _Looks like support for Firefox 6 has just been committed and there’s nothing released._ _So hold your upgrades!
 

@@ -6,7 +6,7 @@ date: 2011-02-14 16:55:45
 tags: [rake, mongodb, rails, ruby]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2011/2011-02-14-seeding-exporting-and-importing-mongodb-data-with-rake/image%5b2%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-02-14-seeding-exporting-and-importing-mongodb-data-with-rake/image_2.jpg)
 
 You may have noticed some Ruby on Rails posts lately on my blog. That’s because I am working on something. More about it in a few weeks. In the meantime, all you need to know is that it’s an application with a lot of meaningful and interesting data. Without a representative data set the application is useless and with a fake set of data the application would produce confusing results. Imagine that we are building a website for drug manufacturers to search for chemical ingredients of specific drugs – we’d like to be able to find Aspirin in the development environment and see that it’s made of acetylsalicylic acid, carnauba wax, corn starch, hypromellose, powdered cellulose and triacetin. Finding real answers validates our software and enables developers catch bugs early. We want real data, but just not all of it.
 

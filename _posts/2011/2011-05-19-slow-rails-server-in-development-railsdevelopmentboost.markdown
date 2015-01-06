@@ -6,7 +6,7 @@ date: 2011-05-19 15:06:07
 tags: [rails]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2011/2011-05-19-slow-rails-server-in-development-railsdevelopmentboost/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-05-19-slow-rails-server-in-development-railsdevelopmentboost/image_4.jpg)
 
 It takes me 30-45 seconds to load a Rails page in development. Finally someone did something about it.
 

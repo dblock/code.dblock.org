@@ -8,7 +8,7 @@ comments: true
 ---
 In 2009 I gave away the remainder of my old company’s, Vestris Inc., software. The source code for all of it is also available [here](https://github.com/dblock).
 
-![vestris]({{ site.url }}/images/posts/2011/2011-04-23-blast-from-the-past-working-versions-of-xreplace-32-and-expression-calculator/vestris%5b5%5d.jpg)
+![vestris]({{ site.url }}/images/posts/2011/2011-04-23-blast-from-the-past-working-versions-of-xreplace-32-and-expression-calculator/vestris_5.jpg)
 
 Today, I found myself needing to do some search-and-replace and was amazed to see that XReplace-32 is still the best damn search and replace tool out there, ten years later. The installer didn’t run on my 64-bit Windows, so I got a version installed on XP and zipped it all up. Did the same for Expression Calculator. So, if you’re in the market for a free search and replace tool or a powerful free Windows calculator that can do expressions, look no more.
 

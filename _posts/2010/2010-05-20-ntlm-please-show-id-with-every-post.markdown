@@ -11,7 +11,7 @@ comments: true
 
 I was debugging a GWT application that worked well with FORM authentication and refused to work with integrated Windows auth (NTLM/Kerberos) on some machines. It all started with a benign error message.
 
-![]({{ site.url }}/images/posts/2010/2010-05-20-ntlm-please-show-id-with-every-post/image%5b2%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-05-20-ntlm-please-show-id-with-every-post/image_2.jpg)
 
 The log reveals an interesting stack.
 

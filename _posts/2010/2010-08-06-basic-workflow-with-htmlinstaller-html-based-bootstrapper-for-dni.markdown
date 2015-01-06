@@ -27,19 +27,19 @@ htmlInstaller.exe /configFile Configuration.xml
 
 This is what you’re going to see.
 
-![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image%5b9%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image_9.jpg)
 
 Looks familiar? Unlike the dotNetInstaller.exe UI, this is a UI written in HTML rendered in an embedded browser. You get some new features, such as minimizing, maximizing and resizing of the window, right out of the box. And because the renderer is HTLM, controls flow and sizes adjust normally as in your browser. And because it’s HTML you will be able to skin the bootstrapper completely – those top bar buttons and the resize grip are also rendered by the HTML engine.
 
 Here’s a resized window.
 
-![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image%5b13%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image_13.jpg)
 
 #### Progress
 
 Hit Install with a working configuration. You’ll immediately notice that the progress bar is now embedded inside the bootstrapper UI. I got rid of the infamous K-2000 progress popup and replaced it with an HTML widget. Obviously, it’s completely customizable, and as any other control, optional.
 
-![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image%5b36%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image_36.jpg)
 
 You’ll still see prompts and errors in dialogs. Installers continue to show a separate UI, since the bootstrapper still runs msiexec for MSIs. I do plan to host the MSI installation eventually and provide a single progress bar through the entire process. Failures and bootstrapper prompts will end up being displayed in the bootstrapper UI itself in the 2.0 release if I can make it work.
 
@@ -107,7 +107,7 @@ There’re a few built-in widgets defined by their _id_’s. All such widgets ar
 
 Let's customize the bootstrapper UI by adding this picture.
 
-![picture]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/picture%5b5%5d.jpg)
+![picture]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/picture_5.jpg)
 
 We can insert an `img` tag anywhere in the HTML.
 
@@ -123,7 +123,7 @@ InstallerLinker.exe /Output:Setup.exe /Template:htmlInstaller.exe /Configuration
 
 This produces Setup.exe that includes all the HTML files and our picture in the _Samples\HtmlSetup\Picture_ folder. Note that the HTML UI resized the component selector automatically to insert the picture, as expected.
 
-![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image%5b25%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image_25.jpg)
 
 #### Creating a Basic Workflow
 
@@ -131,7 +131,7 @@ You can now easily see how to create a basic workflow with two pages. Replace _i
 
 Here’s the result.
 
-![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image%5b34%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image_34.jpg)
 
 #### What’s Next?
 

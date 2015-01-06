@@ -7,7 +7,7 @@ tags: [microsoft]
 comments: true
 ---
 
-![]({{ site.url }}/images/posts/2010/2010-06-08-visual-studio-2008-crashes-doesnt-always-mean-microsoft-sucks/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-06-08-visual-studio-2008-crashes-doesnt-always-mean-microsoft-sucks/image_4.jpg)
 
 I often hear from people that Microsoft sucks. When I worked there I found it funny.
 

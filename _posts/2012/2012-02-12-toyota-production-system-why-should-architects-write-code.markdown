@@ -6,7 +6,7 @@ date: 2012-02-12 16:05:14
 tags: [technology, architecture]
 comments: true
 ---
-![toyota]({{ site.url }}/images/posts/2012/2012-02-12-toyota-production-system-why-should-architects-write-code/toyota%5b7%5d.jpg)
+![toyota]({{ site.url }}/images/posts/2012/2012-02-12-toyota-production-system-why-should-architects-write-code/toyota_7.jpg)
 
 I recently read ["The Darker Side of Lean"](http://astro.temple.edu/~rmudambi/Teaching/BA951/Week_04/Toyota-Darker-Side-Mehri.pdf) by Darius Mehri. It is a fascinating account of the evil aspects of the much celebrated Toyota Production System. The author of the paper is a mechanical engineer. Yet, the way he describes Japanese approach to choosing technology struck me as déjà vu.
 

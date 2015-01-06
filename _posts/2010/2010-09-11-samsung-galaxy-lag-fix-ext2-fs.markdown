@@ -7,7 +7,7 @@ tags: [android]
 comments: true
 ---
 
-![Samsung-Vibrant-Galaxy-S-T959]({{ site.url }}/images/posts/2010/2010-09-11-samsung-galaxy-lag-fix-ext2-fs/samsung-vibrant-galaxy-s-t959%5b3%5d.jpg)
+![Samsung-Vibrant-Galaxy-S-T959]({{ site.url }}/images/posts/2010/2010-09-11-samsung-galaxy-lag-fix-ext2-fs/samsung-vibrant-galaxy-s-t959_3.jpg)
 
 I recently got rid of my Windows mobile phone and upgraded to an Android Samsung Galaxy S (I have T-Mobile). After a few days of installing all my new favorite apps, including _Daily Dilbert_, it was time to do pass onto more interesting things.
 
@@ -27,7 +27,7 @@ This can be done with [android-wifi-tether](http://code.google.com/p/android-wif
 
 #### One Click Lag Fix
 
-![snap20100809_151120]({{ site.url }}/images/posts/2010/2010-09-11-samsung-galaxy-lag-fix-ext2-fs/snap20100809_151120%5b4%5d.jpg)
+![snap20100809_151120]({{ site.url }}/images/posts/2010/2010-09-11-samsung-galaxy-lag-fix-ext2-fs/snap20100809_151120_4.jpg)
 
 The software _"creates a VIRTUAL EXT2 filesystem inside the stock RFS filesystem on the internal SD card, with a 4KB block size. This means that this lag fix creates a buffer between the real filesystem and the android system. This buffer should reduce the amount of disk I/O required for all operations by utilizing EXT2 buffering, as well as not writing file access times to disk, etc."_
 

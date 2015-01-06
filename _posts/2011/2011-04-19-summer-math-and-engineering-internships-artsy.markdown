@@ -6,7 +6,7 @@ date: 2011-04-19 20:14:52
 tags: [art.sy]
 comments: true
 ---
-![artsy]({{ site.url }}/images/posts/2011/2011-04-19-summer-math-and-engineering-internships-artsy/artsy%5b3%5d.jpg)
+![artsy]({{ site.url }}/images/posts/2011/2011-04-19-summer-math-and-engineering-internships-artsy/artsy_3.jpg)
 
 You might think that the only math internships are in finance, and that you’ll learn a ton from a programming internship at a hedge fund. If you’re a recent graduate or an exceptional undergrad, we got two exciting internship openings for this summer at [Art.sy](https://artsy.net).
 

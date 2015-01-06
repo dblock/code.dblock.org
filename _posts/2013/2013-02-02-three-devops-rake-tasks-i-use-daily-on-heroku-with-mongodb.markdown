@@ -6,7 +6,7 @@ date: 2013-02-02 06:21:21
 tags: [deployment, mongoid, rake, heroku, mongodb]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2013/2013-02-02-three-devops-rake-tasks-i-use-daily-on-heroku-with-mongodb/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-02-02-three-devops-rake-tasks-i-use-daily-on-heroku-with-mongodb/image_3.jpg)
 
 Heroku and MongoDB enable the kind of frictionless devops workflow every mature software organization wants and spends mountains of money on. It begins with a 1-box developer setup in which I can checkout source code and be ready to start development after a _bundle install, _and continues with a _git push_ to a Heroku staging environment that deploys the application for last minute integration testing  and, finally, production. Each separate Heroku instance has its own configuration and resources. My code also needs sensible defaults for development. For example, _mongoid.yml_ lists _localhost:27017_ as the development database host and _ENV['MONGOHQ_HOST_LIST']_ for production.
 

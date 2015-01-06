@@ -6,7 +6,7 @@ date: 2010-05-20 00:32:22
 tags: [tomcat, waffle, java, active directory]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2010/2010-05-20-single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle/image%5b12%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-05-20-single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle/image_12.jpg)
 
 I’ve added a Tomcat Negotiate (Kerberos + NTLM) authenticator to [Waffle](https://github.com/dblock/waffle) 1.3 for Tomcat 6. Here’s how to use it.
 
@@ -97,11 +97,11 @@ _Firefox_
 
 Navigate to _http://localhost:8080_ after adding it to the Intranet Zone.
 
-![]({{ site.url }}/images/posts/2010/2010-05-20-single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle/image%5b2%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-05-20-single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle/image_2.jpg)
 
 You should no longer be prompted and automatically authenticated.
 
-![]({{ site.url }}/images/posts/2010/2010-05-20-single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle/image%5b7%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-05-20-single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle/image_7.jpg)
 
 #### Logs
 

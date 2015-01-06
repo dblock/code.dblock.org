@@ -8,7 +8,7 @@ comments: true
 ---
 Mea Culpa. Alla Klein was a fake.
 
-![vestris]({{ site.url }}/images/posts/2011/2011-11-09-alla-klein-a-fake-person-in-charge-of-customer-support/vestris%5b3%5d.jpg)
+![vestris]({{ site.url }}/images/posts/2011/2011-11-09-alla-klein-a-fake-person-in-charge-of-customer-support/vestris_3.jpg)
 
 I had a software company called Vestris Inc. in late nineties, incorporated in the BVI. I was 20, had no idea what I was doing, and improvised a lot. I started with a bunch of shareware: XReplace-32 was probably the most successful. I also had a classmate collaborating on a search engine called Alkaline, which made quite a bit of money. The cash was collected from a Swiss bank in Geneva in-person. We sold in 40 countries to thousands of satisfied customers. For enterprise clients I wrote invoices and contracts out of my tiny apartment and we had a phone number, a fax and a voicemail for 24h support. The latter was run by a fake person, Alla Klein. Nobody ever saw Alla, but she was very much in charge.
 

@@ -6,7 +6,7 @@ date: 2011-08-17 12:17:22
 tags: [speaking, mongodb]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2011/2011-08-17-happiness-is-mongodb-slides-from-mongonyc-meetup/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-08-17-happiness-is-mongodb-slides-from-mongonyc-meetup/image_5.jpg)
 
 Slides [here](http://www.slideshare.net/dblockdotorg/2011-0816-mongonyc). Video [here](https://www.mongodb.com/presentations/happiness-mongodb).
 

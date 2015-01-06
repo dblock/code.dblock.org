@@ -14,7 +14,7 @@ A couple of my friends have been interviewing in New York for the last ten years
 
 As a software engineer you’re very privileged. You will always have a job in any city, state or country. Even if you suck, there will always be someone to hire you because the market of software engineers is hot and the numbers play in your favor. So there, unless you’re nearing retirement, you have job security – take some risks.
 
-![pricess]({{ site.url }}/images/posts/2011/2011-06-29-moving-to-new-york-a-guide-for-software-engineers/pricess%5b11%5d.jpg)
+![pricess]({{ site.url }}/images/posts/2011/2011-06-29-moving-to-new-york-a-guide-for-software-engineers/pricess_11.jpg)
 
 New York is an incredible place to grow up, live and retire. It’s a dense city of millions of people with the best theatres and museums. You’ll hear ten different languages spoken at any playground. Beautiful people, physically and intellectually, surround you. One can easily choose to be anonymous here or compete for a place amongst those that aspire for greatness. I’ve lived in Russia, Europe, the Pacific Northwest and New York is the place where I feel truly at home. If your goal is to move to New York, you should find the best offer for you and just move.
 
@@ -42,7 +42,7 @@ I am totally not kidding about number 4.
 
 I think what makes New York an incredible technology scene today is the surging number of technology startups with that include [bit.ly](http://bit.ly/), [10gen](http://www.10gen.com/) or [Foursquare](https://foursquare.com/). The list is pretty long, check out [nytm.org/made](https://nytm.org/made).
 
-![]({{ site.url }}/images/posts/2011/2011-06-29-moving-to-new-york-a-guide-for-software-engineers/image%5b4%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-06-29-moving-to-new-york-a-guide-for-software-engineers/image_4.jpg)
 
 These names are attracting incredible engineering talent. People are saying that _now_ is the time to quit and stop being high on money. If you want to work with the smartest and coolest people in the room on super exciting technology that’s defining the future, combined with an unprecedented level of freedom, the time is now. You’ll have to press the reset button and convince a startup that they should give you a chance. While I didn’t work in the financial sector, I pressed the reset button in March and am not looking back.
 

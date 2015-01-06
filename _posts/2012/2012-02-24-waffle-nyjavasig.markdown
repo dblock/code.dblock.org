@@ -10,6 +10,6 @@ Waffle is a native C# and Java library that does everything Windows authenticati
 
 Slides from my presentation [here](http://www.slideshare.net/dblockdotorg/waffle-windows-authentication-in-java).
 
-![]({{ site.url }}/images/posts/2012/2012-02-24-waffle-nyjavasig/image%5b7%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-02-24-waffle-nyjavasig/image_7.jpg)
 
 Oh, and yes, if you’re still writing JNI code, stop and switch to [JNA](http://github.com/twall/jna).

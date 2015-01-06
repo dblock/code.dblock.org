@@ -8,7 +8,7 @@ comments: true
 ---
 There’s got to be a prettier way of implementing this.
 
-![]({{ site.url }}/images/posts/2011/2011-11-07-rendering-markdown-documents-in-rails/image%5b19%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-11-07-rendering-markdown-documents-in-rails/image_19.jpg)
 
 We use the following code to render API documentation, which is written in [Markdown](http://daringfireball.net/projects/markdown/).
 

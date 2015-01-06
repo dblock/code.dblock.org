@@ -9,5 +9,5 @@ comments: true
 My QCon 2014 talk [Mentoring Engineers and Humans](http://www.infoq.com/presentations/mentoring-cto-club-ny).
 
 <a href='http://www.infoq.com/presentations/mentoring-cto-club-ny'>
-  ![]({{ site.url }}/images/posts/2014/2014-10-07-video-mentoring-engineers-and-humans/screenshot 2014-10-07 08.10.31%5b5%5d.jpg)
+  ![]({{ site.url }}/images/posts/2014/2014-10-07-video-mentoring-engineers-and-humans/screenshot.jpg)
 </a>

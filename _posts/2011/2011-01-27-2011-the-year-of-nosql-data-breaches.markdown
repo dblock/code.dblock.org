@@ -6,7 +6,7 @@ date: 2011-01-27 14:27:27
 tags: [mongodb, security, databases]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2011/2011-01-27-2011-the-year-of-nosql-data-breaches/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-01-27-2011-the-year-of-nosql-data-breaches/image_3.jpg)
 
 My latest article, [2011 – The Year of NoSQL Data Breaches?](http://bit.ly/eI4LdE) was published this morning on TeamSHATTER.
 

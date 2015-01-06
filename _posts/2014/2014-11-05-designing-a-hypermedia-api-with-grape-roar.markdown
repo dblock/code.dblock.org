@@ -12,6 +12,4 @@ Code from walkthrough: [https://github.com/dblock/grape-with-roar-walkthrough](h
 
 A more complete example: [https://github.com/dblock/grape-with-roar](https://github.com/dblock/grape-with-roar).
 
-![Screenshot 2014-11-05 07.16.23]({{ site.url }}/images/posts/2014/2014-11-05-designing-a-hypermedia-api-with-grape-roar/screenshot 2014-11-05 07.16.23%5b5%5d.jpg)
-
-
+![]({{ site.url }}/images/posts/2014/2014-11-05-designing-a-hypermedia-api-with-grape-roar/screenshot.jpg)

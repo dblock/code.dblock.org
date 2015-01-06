@@ -6,7 +6,7 @@ date: 2010-11-18 14:25:27
 tags: [nunit, testing, .net, build, msbuild]
 comments: true
 ---
-![crane]({{ site.url }}/images/posts/2010/2010-11-18-msbuild-setting-up-a-build-environment-w-nunit/crane%5b5%5d.jpg)
+![crane]({{ site.url }}/images/posts/2010/2010-11-18-msbuild-setting-up-a-build-environment-w-nunit/crane_5.jpg)
 
 Here’re a few helpful tricks for setting up a build environment, finding the most recent version of [NUnit](http://www.nunit.org/) and using it with [MSBuild Community Tasks](http://msbuildtasks.tigris.org/) programmatically (assuming you’re not checking in NUnit alongside your source code, which you probably should).
 

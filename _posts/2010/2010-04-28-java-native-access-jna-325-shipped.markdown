@@ -6,7 +6,7 @@ date: 2010-04-28 12:16:40
 tags: [jna, java, win32]
 comments: true
 ---
-![java-logo_svg-a]({{ site.url }}/images/posts/2010/2010-04-28-java-native-access-jna-325-shipped/java-logo_svg-a%5b6%5d.jpg) 3.2.5 shipped quietly last week.
+![java-logo_svg-a]({{ site.url }}/images/posts/2010/2010-04-28-java-native-access-jna-325-shipped/java-logo_svg-a_6.jpg) 3.2.5 shipped quietly last week.
 
 JNA now includes _platform.jar_ that has cross-platform mappings and mappings for a number of commonly used platform functions, including a large number of Win32 mappings as well as a set of utility classes that simplify native access. The code is tested and the utility interfaces ensure that native memory management is taken care of correctly. I’ve contributed a boatload of code in this area, so when something doesn’t work you can blame me.
 

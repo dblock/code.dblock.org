@@ -8,6 +8,6 @@ comments: true
 ---
 Thanks to the amazing crowd at [GoGoRuCo](http://gogaruco.com) 2014, San Francisco!
 
-![]({{ site.url }}/images/posts/2014/2014-09-20-taking-over-someone-elses-open-source-projects/screenshot 2014-09-19 20.33.18%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2014/2014-09-20-taking-over-someone-elses-open-source-projects/screenshot.jpg)
 
 Slides: [http://www.slideshare.net/dblockdotorg/taking-over-open-source-projects-gogaruco-2014](http://www.slideshare.net/dblockdotorg/taking-over-open-source-projects-gogaruco-2014)

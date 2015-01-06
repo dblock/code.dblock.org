@@ -7,7 +7,7 @@ tags: [speaking, open source]
 comments: true
 ---
 <a href='https://www.youtube.com/watch?v=LkrI3D8gxw0'>
-  ![]({{ site.url }}/images/posts/2013/2013-03-02-graduating-to-jenkins-ci-for-ruby-on-rails-teams-jenkins-user-group-in-nyc-video/image%5b4%5d.jpg)
+  ![]({{ site.url }}/images/posts/2013/2013-03-02-graduating-to-jenkins-ci-for-ruby-on-rails-teams-jenkins-user-group-in-nyc-video/image_4.jpg)
 </a>
 
 My talk from JUG NYC from last summer has finally been uploaded to YouTube!

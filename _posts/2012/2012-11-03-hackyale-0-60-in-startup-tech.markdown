@@ -6,7 +6,7 @@ date: 2012-11-03 01:23:17
 tags: [teams, technology, speaking, people]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2012/2012-11-03-hackyale-0-60-in-startup-tech/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-11-03-hackyale-0-60-in-startup-tech/image_5.jpg)
 
 Met with some excellent internship candidates for [Art.sy](https://artsy.net) at [Yale University](http://yale.edu/) today, followed by a talk at [Hack&lt;Yale&gt;](http://hackyale.com) on startup tech: organizing a project from a tech point of view, people, hiring, resumes and being a successful engineer. I really enjoy speaking in front of students: it’s a captive audience with the future in their own hands and few past mistakes. Young engineers aren’t ruined by the failures of entrenched organizations either, and everything new and exciting is very much ahead.
 

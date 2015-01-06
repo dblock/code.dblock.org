@@ -6,7 +6,7 @@ date: 2013-01-21 20:39:07
 tags: [education, teaching, technology]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2013/2013-01-21-why-i-am-excited-about-the-new-cornell-tech-school/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-01-21-why-i-am-excited-about-the-new-cornell-tech-school/image_3.jpg)
 
 New York Times has just published ["New Cornell Technology School Will Foster Commerce Amid Education"](http://www.nytimes.com/2013/01/22/nyregion/cornell-nyc-tech-will-foster-commerce-amid-education.html?pagewanted=all&_r=1&). I am super excited about [Cornell Tech](http://www.cornell.edu/nyc/), and not just because Ariel Kaminer chose to quote me on the modest Artsy partnership with the University :)
 

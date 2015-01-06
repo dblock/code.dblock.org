@@ -258,7 +258,7 @@ rvm:
 [![Build Status](https://travis-ci.org/dblock/ruby-enum.png)](https://travis-ci.org/dblock/ruby-enum)
 ```
 
-![]({{ site.url }}/images/posts/2013/2013-05-15-your-first-ruby-gem/image5%5b1%5d.jpg)
+![]({{ site.url }}/images/posts/2013/2013-05-15-your-first-ruby-gem/image5_1.jpg)
 
 #### Enum Library Code
 

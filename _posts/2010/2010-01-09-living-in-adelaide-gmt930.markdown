@@ -12,11 +12,11 @@ Someone kindly reported [a bug entitled "Times Rounding Off"](http://www.foodcan
 
 I tried to reproduce at no avail. After-all, it’s not that complicated to display a time correctly, especially when it’s the same one as the user enters. How could I have possibly introduced a bug in something this simple? Could this be a user error? So to nail this down, I got a recording of what the user sees.
 
-![]({{ site.url }}/images/posts/2010/2010-01-09-living-in-adelaide-gmt930/image%5b7%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-01-09-living-in-adelaide-gmt930/image_7.jpg)
 
 Looks like a MAC. That’s the problem! It’s a conspiracy of Apple against Microsoft. There must be code in Safari that changes 6:30 to 6:00 every time it hits a website written in .NET.
 
-![]({{ site.url }}/images/posts/2010/2010-01-09-living-in-adelaide-gmt930/image%5b11%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-01-09-living-in-adelaide-gmt930/image_11.jpg)
 
 The screenshots are convincing. The problem exists. And the cause is right there on the screen. The browser' time zone is _Adelaide (GMT+09:30)_. Adelaide, turns out, is the capital of South Australia and has a population of just over a million people. It has a superb climate and cheap housing. It also has a time zone that is nine and a half hours away from UTC. Nine and a half? That’s weird, I’ve never paid attention to half-hour time zones. Turns out there’re others, including Kathmandu, GMT+5:45. Debugging the code it was clear that my entire time-zone system was rounding hours. And now I remember why.
 
@@ -32,5 +32,5 @@ In order to fix this I had to make a few changes.
 
 And finally, ask someone in Adelaide to test this for me.
 
-![]({{ site.url }}/images/posts/2010/2010-01-09-living-in-adelaide-gmt930/image%5b20%5d.jpg)
+![]({{ site.url }}/images/posts/2010/2010-01-09-living-in-adelaide-gmt930/image_20.jpg)
 

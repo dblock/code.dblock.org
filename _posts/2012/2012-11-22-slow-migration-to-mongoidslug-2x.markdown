@@ -6,7 +6,7 @@ date: 2012-11-22 16:55:14
 tags: [mongoid, ruby, open source]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2012/2012-11-22-slow-migration-to-mongoidslug-2x/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-11-22-slow-migration-to-mongoidslug-2x/image_3.jpg)
 
 ... slow migrations ... slug ..., get it?
 

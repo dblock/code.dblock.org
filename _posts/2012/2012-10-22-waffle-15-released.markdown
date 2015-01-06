@@ -6,7 +6,7 @@ date: 2012-10-22 13:10:17
 tags: [open source, waffle, jna, java]
 comments: true
 ---
-![]({{ site.url }}/images/posts/2012/2012-10-22-waffle-15-released/image%5b3%5d.jpg)
+![]({{ site.url }}/images/posts/2012/2012-10-22-waffle-15-released/image_3.jpg)
 
 WAFFLE is a native Windows Authentication Framework consisting of two C# and Java libraries that perform functions related to Windows authentication, supporting Negotiate, NTLM and Kerberos. Waffle also includes libraries that enable drop-in Windows Single Sign On for popular Java web servers, when running on Windows.
 

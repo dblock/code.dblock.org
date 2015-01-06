@@ -6,7 +6,7 @@ date: 2011-05-27 12:33:18
 tags: [mongodb, rails, ruby]
 comments: true
 ---
-![mongoid-logo-small]({{ site.url }}/images/posts/2011/2011-05-27-ror-win-getting-things-done-with-mongodb-mongoid/mongoid-logo-small%5b2%5d.jpg)
+![mongoid-logo-small]({{ site.url }}/images/posts/2011/2011-05-27-ror-win-getting-things-done-with-mongodb-mongoid/mongoid-logo-small_2.jpg)
 
 We high five each other and claim "Rails Win!" when someone finds a gem that solves a really big problem in ~~a few lines~~ one line of code. In this post I’ll list a few interesting addons to the RoR [Mongoid ORM](http://mongoid.org/) that are slowly adding up to a feature-rich ecosystem of plug-and-play modules that work with [Mongoid](http://mongoid.org/). This list should convince you that you should at least [try MongoDB](http://www.mongodb.org/). You can get a ton of functionality "for free".
 

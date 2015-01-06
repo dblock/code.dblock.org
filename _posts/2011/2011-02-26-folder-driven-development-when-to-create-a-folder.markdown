@@ -25,7 +25,7 @@ Let’s examine one good and one bad example.
 
 The worst offender of the principles of folder-driven development is Java. By default, it forces you to organize classes in namespaces and namespaces into folders. This is the simple folder structure of the JNA project:
 
-![]({{ site.url }}/images/posts/2011/2011-02-26-folder-driven-development-when-to-create-a-folder/image%5b12%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-02-26-folder-driven-development-when-to-create-a-folder/image_12.jpg)
 
 There’s no value in having the three top-level folders _src,_ _com_ and _sun_. Let's put this to the test against our rules of thumb.
 
@@ -38,7 +38,7 @@ There’s no value in having the three top-level folders _src,_ _com_ and _sun_.
 
 Rails looks like a substantial improvement. The top of the default structure created by _rails new app_ looks like this:
 
-![]({{ site.url }}/images/posts/2011/2011-02-26-folder-driven-development-when-to-create-a-folder/image%5b16%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-02-26-folder-driven-development-when-to-create-a-folder/image_16.jpg)
 
 1. _Create a folder that is meaningful_: since Rails does MVC, folders like _models_, _views_ and _controllers_ make sense
 2. _Make folders effective and productive_: it’s easy to find a model and easy to find a controller

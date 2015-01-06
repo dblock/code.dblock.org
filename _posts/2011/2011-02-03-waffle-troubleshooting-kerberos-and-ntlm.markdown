@@ -6,7 +6,7 @@ date: 2011-02-03 13:31:23
 tags: [open source, waffle, security, active directory]
 comments: true
 ---
-![usb-toaster]({{ site.url }}/images/posts/2011/2011-02-03-waffle-troubleshooting-kerberos-and-ntlm/usb-toaster%5b3%5d.jpg)
+![usb-toaster]({{ site.url }}/images/posts/2011/2011-02-03-waffle-troubleshooting-kerberos-and-ntlm/usb-toaster_3.jpg)
 
 I’ve often faced puzzling integrated authentication failures on Windows with [WAFFLE](https://github.com/dblock/waffle/). The usual suspects are _the logon attempt failed_ errors. Most of the time I’d try to run the server as a different user (localsystem, a domain user, etc.) and hope for the best. Things get quickly complicated with domain trusts, user accounts enabled for delegation, machine accounts enabled for delegation, plus the fact that the Negotiate protocol selects Kerberos vs. NTLM based on a clever client-server exchange amongst the three inseparable friends – the client, the server and one of the domain controllers distributed across five continents. The amount of possible combinations usually makes me sleepy and I realize that I easily give up.
 

@@ -6,7 +6,7 @@ date: 2010-05-27 13:01:40
 tags: [waffle, jna, security, java, active directory]
 comments: true
 ---
-![waffle]({{ site.url }}/images/posts/2010/2010-05-27-tomcat-single-sign-on-mixed-with-form-authentication-w-waffle/waffle%5b3%5d.jpg)
+![waffle]({{ site.url }}/images/posts/2010/2010-05-27-tomcat-single-sign-on-mixed-with-form-authentication-w-waffle/waffle_3.jpg)
 
 Most Tomcat users begin by implement Form-based authentication. Those deploying applications into enterprises soon discover that those enterprises use an Active Directory and have single sign-on on all intranet sites. They eventually find [Waffle](https://github.com/dblock/waffle/), but don’t want to take the ability to do form-based logon away.
 

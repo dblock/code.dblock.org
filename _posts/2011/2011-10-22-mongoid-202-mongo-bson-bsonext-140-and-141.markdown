@@ -8,7 +8,7 @@ comments: true
 ---
 In the past two days we’ve had hell with our production environment. It started with a general feel of slowness followed by all kinds of alarms going off in the monitoring system. Our database performance tanked. The light blue is the time to serve a request (increasing) and the reds are the monitoring system panicking.
 
-![]({{ site.url }}/images/posts/2011/2011-10-22-mongoid-202-mongo-bson-bsonext-140-and-141/image%5b5%5d.jpg)
+![]({{ site.url }}/images/posts/2011/2011-10-22-mongoid-202-mongo-bson-bsonext-140-and-141/image_5.jpg)
 
 The short story is that the issue was caused by the upgrade of the Ruby driver to 1.4.1. The details are filed in [https://jira.mongodb.org/browse/RUBY-347](https://jira.mongodb.org/browse/RUBY-347).
 

@@ -9,7 +9,7 @@ comments: true
 
 _Jamais deux sans trois._
 
-![waffle]({{ site.url }}/images/posts/2010/2010-05-25-single-sign-on-servlet-negotiate-security-filter-kerberos-ntlm-w-waffle/waffle%5b3%5d.jpg)
+![waffle]({{ site.url }}/images/posts/2010/2010-05-25-single-sign-on-servlet-negotiate-security-filter-kerberos-ntlm-w-waffle/waffle_3.jpg)
 
 #### Download
 
