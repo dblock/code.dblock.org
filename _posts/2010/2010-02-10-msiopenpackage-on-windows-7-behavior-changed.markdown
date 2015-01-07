@@ -13,7 +13,7 @@ On Windows 7 the behavior of `MSIOpenPackage` has changed. We use it to run unit
 
 Microsoft.public.platformsdk.msi was helpful [[thread](http://groups.google.com/group/microsoft.public.platformsdk.msi/browse_thread/thread/5c3ffc48f1ecda30#)]. For `MsiOpenPackage` to succeed you now have to have a `Property` table with a populated `ProductCode` value in the MSI file itself. MsiExt shim code now looks like this. The two `Execute` statements are new. This incidentally demonstrates what fields you need in the MSI summary to get a valid MSI.
 
-```vbscript
+{% highlight autoit %}
 _database.Create(_filename);
 
 MsiDatabaseSummaryEntry summary_entries[] =
@@ -38,7 +38,7 @@ _database.Commit();
 _database.Close();
 
 Open(_filename);
-```
+{% endhighlight %}
 
 Hope this saves you hours of fruitless debugging.
 

@@ -17,7 +17,7 @@ The [Jenkins plugin tutorial](https://wiki.jenkins-ci.org/display/JENKINS/Plugin
 
 A plugin extends _hudson.Plugin_. This class isn’t even necessary, but it’s a good opportunity to setup a logger that’s going to tell us that the plugin is actually being loaded. Whether you’re testing the plugin locally or running a production instance of Jenkins, this will come handy.
 
-```java
+{% highlight java %}
 public class PluginImpl extends Plugin {
   private final static Logger LOG = Logger.getLogger(PluginImpl.class.getName());
 
@@ -25,13 +25,13 @@ public class PluginImpl extends Plugin {
     LOG.info("starting ansicolor plugin");
   }
 }
-```
+{% endhighlight %}
 
 #### Processing Build Output
 
 Our goal is to process build output and insert HTML color markup. So the first task is to find a Jenkins extension point from [here](https://wiki.jenkins-ci.org/display/JENKINS/Extension+points) that exposes build log data. I found the very promising [ConsoleLogFilter](https://wiki.jenkins-ci.org/display/JENKINS/Extension+points#Extensionpoints-hudson.console.ConsoleLogFilter). A simple extension is marked with _@Extension _and I thought I was done.
 
-```java
+{% highlight java %}
 @Extension
 public class AnsiColorConsoleLogFilter extends ConsoleLogFilter {
 
@@ -43,13 +43,13 @@ public class AnsiColorConsoleLogFilter extends ConsoleLogFilter {
   }
 
 }
-```
+{% endhighlight %}
 
 What’s that _AnsiColorizer_? It’s a stream processing class that inherits from _hudson.console.LineTransformationOutputStream _that overrides a method called _eol_, called for each output line. It decorates our logger. Notice that the bytes passed into the _eol_ method are pre-allocated, hence the _len_ parameter. You get a lot more bytes than in the current line, but it’s garbage from previous output after _len_.
 
 The following code will strip all ANSI markup.
 
-```java
+{% highlight java %}
 @Override
 protected void eol(byte[] b, int len) throws IOException {
   String ansiEncodedString = new String(b, 0, len);
@@ -58,7 +58,7 @@ protected void eol(byte[] b, int len) throws IOException {
   byte[] plainBytes = plainString.getBytes();
   out.write(plainBytes, 0, plainBytes.length);
 }
-```
+{% endhighlight %}
 
 Pretty simple, right? Well, it only works if we want to remove stuff or add text and doesn’t work for HTML. Console output gets HTML-encoded as it passed through subsequent filtering, so inserting HTML, such as color, will end up encoded too. Sad face.
 
@@ -68,20 +68,20 @@ Jenkins has another extension point, [BuildWrapper](https://wiki.jenkins-ci.org/
 
 Let's use the extra brain cells that didn’t die while sorting out wrappers, factories, decorators and annotators. Given a string, such as `Hello ]32mCruel Java World`, how do we make it display `"Hello <span style="color: green">Cruel Java World</span>` given that we can only prepend and append text? Like this.
 
-```
+{% highlight html %}
 Hello <span style="color: green">Cruel Java World</span>
 <span style="display: none">Hello ]32mCruel Java World</span>
-```
+{% endhighlight %}
 
 I know, it’s a total hack, but it works and nobody will complain.
 
-```java
+{% highlight java %}
 String colorizedData = colorize(this.data);
 if (! colorizedData.contentEquals(this.data)) {
   text.addMarkup(charPos, colorizedData);
   text.addMarkup(charPos, charPos + text.length(), "<span style=\"display: none;\">", "</span>");
 }
-```
+{% endhighlight %}
 
 ![ansicolor]({{ site.url }}/images/posts/2011/2011-09-07-implementing-my-first-jenkins-plugin-ansicolor/ansicolor_4.jpg)
 

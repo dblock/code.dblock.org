@@ -17,7 +17,7 @@ Let’s turn our Rails site into a wiki in a few simple steps.
 
 A simple page has a name and some content.
 
-```ruby
+{% highlight ruby %}
 class Page
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -25,7 +25,7 @@ class Page
   field :name, type: String
   field :content, type: String
 end
-```
+{% endhighlight %}
 
 Create basic controllers and UI to edit and view the pages – boring Rails stuff.
 
@@ -33,29 +33,29 @@ Create basic controllers and UI to edit and view the pages – boring Rails stuf
 
 Assume _:content_ is in a wiki (markdown) format. No need to stand on your head if you’re using HAML. The HAML _:markdown_ filter will just render your content field in HTML. You have to use the Ruby #{} syntax to evaluate the actual expression. Here’s the entire _views/pages/show.html.haml_.
 
-```haml
+{% highlight haml %}
 %div
   :markdown
     #{@page.content}
-```
+{% endhighlight %}
 
 #### Embed
 
 You can now create pages and link them together by using markdown by their relative URLs. Embed a page from the wiki into another page in a similar fashion: add a utility method to return a blank string when a page is not available and render the embedded page in another HAML page.
 
-```ruby
+{% highlight ruby %}
 class Page
   def self.content_by_name(name)
     p = Page.find(:first, conditions: { name: name })
     p ? p.content : ''
   end
 end
-```
+{% endhighlight %}
 
-```haml
+{% highlight haml %}
 :markdown
   #{Page.content_by_name('footer')}
-```
+{% endhighlight %}
 
 In my example we introduced a convention that a footer page should be called _footer_. In the footer page I’ll place a `[Contact](/pages/Contact)` line to link the _Contact_ page. Someone from marketing can create and edit that.
 

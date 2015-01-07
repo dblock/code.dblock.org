@@ -9,15 +9,15 @@ dblog_post_id: 75
 ---
 In a previous post I had implemented clicking through menus with White. Someone [pointed out](http://white.codeplex.com/Thread/View.aspx?ThreadId=77934) that this was a solved problem and I didn’t need to write any code.
 
-```cs
+{% highlight c# %}
 Window mainWindow = installerEditor.GetWindow("Installer Editor", InitializeOption.NoCache);
 MenuBar mainWindowMenuBar = mainWindow.MenuBar;
 mainWindowMenuBar.MenuItem("File", "Save");
-```
+{% endhighlight %}
 
 What I noticed next is that it would take anywhere from 3 to 10 seconds to resolve mainWindow.MenuBar. I looked at the implementation and it does a descendents (DFS?) search. The menu bar is a child of the window, so we can avoid the recursion altogether.
 
-```cs
+{% highlight c# %}
 private static DictionaryMappedItemFactory _factory = new DictionaryMappedItemFactory();
 
 public static T Find<T>(UIItem item, string name) where T : UIItem
@@ -26,11 +26,11 @@ public static T Find<T>(UIItem item, string name) where T : UIItem
     AutomationElement found = finder.Child(AutomationSearchCondition.ByName("Application"));
     return (T) _factory.Create(found, item.ActionListener);
 }
-```
+{% endhighlight %}
 
 Generalizing this further, a simple tree walker with a depth limit seems to be much more efficient for both scenarios of deep and wide trees. The following code comes from [this](http://white.codeplex.com/Thread/View.aspx?ThreadId=49778) thread, I didn’t write it.
 
-```cs
+{% highlight c# %}
 private static AutomationElement Find(AutomationElement element, string name, int maxDepth)
 {
     if (maxDepth == 0)
@@ -71,13 +71,13 @@ public static T Find<T>(UIItem item, string name) where T : UIItem
 {
     return (T)Find(item, name, 4);
 }
-```
+{% endhighlight %}
 
 The new test code executes magnitudes faster to click File –> Save.
 
-```cs
+{% highlight c# %}
 Window mainWindow = installerEditor.GetWindow("Installer Editor", InitializeOption.NoCache);
 UIAutomation.Find<MenuBar>(mainWindow, "Application").MenuItem("File", "Save").Click();
-```
+{% endhighlight %}
 
 Another interesting aspect of this menu bar is that it is [virtualized](http://msdn.microsoft.com/en-us/library/ee684094(VS.85).aspx). This means that while you may be holding an instance of a MenuBar, it may have been hidden by another UI element at some point and will now throw an exception with the `UIA_E_ELEMENTNOTAVAILABLE` error code if you try to use it. This is annoying: if I need to click on 10 menu items, I have to do 10 searches, starting from the top every time! To solve this, .NET 4.0 has introduced a new [IUIAutomationVirtualizedItemPattern](http://msdn.microsoft.com/en-us/library/ee684094(VS.85).aspx) that has a `Realize` method to materialize the object again.

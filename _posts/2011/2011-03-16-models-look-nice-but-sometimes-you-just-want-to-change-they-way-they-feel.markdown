@@ -9,7 +9,7 @@ dblog_post_id: 183
 ---
 MongoId models provide an excellent level of abstraction. Consider a _User_ model.
 
-```ruby
+{% highlight ruby %}
 class User
   include Mongoid::Document
 
@@ -18,15 +18,15 @@ class User
   field :name, :type => String
   field :email, :type => String
 end
-```
+{% endhighlight %}
 
 We have derived an _Admin _type from it.
 
-```ruby
+{% highlight ruby %}
 class Admin < User
 
 end
-```
+{% endhighlight %}
 
 This avoids having to have an explicit user type. In the database the distinction will be the `_type` field and correct objects are instantiated by querying auto-magically.
 
@@ -34,12 +34,12 @@ But how do we promote a _User_ into an _Admin_?
 
 We have to change the internal `_type` field. So far I found only one way, reach down to MongoDB and update the field explicitly.
 
-```ruby
+{% highlight ruby %}
 def self.promote!(user)
     users = Mongoid.master.collection('users')
     users.update( { :"_id" => user.id }, { :"$set" => { :"_type" => "Admin" }})
 end
-```
+{% endhighlight %}
 
 I feel dirty. Is there a better way?
 

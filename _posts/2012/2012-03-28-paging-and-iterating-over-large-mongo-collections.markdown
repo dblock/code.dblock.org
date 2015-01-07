@@ -11,7 +11,7 @@ Sometimes you need to iterate over a large MongoDB collection. The biggest issue
 
 Here’s a Mongo Ruby iterator that will call Mongo::Collection.find in increments.
 
-```ruby
+{% highlight ruby %}
 module Mongo
   class Collection
     def find_all(query = {}, by = 1000, &block)
@@ -26,11 +26,11 @@ module Mongo
     end
   end
 end
-```
+{% endhighlight %}
 
 And a Mongoid iterator built into Mongoid::Criteria.
 
-```ruby
+{% highlight ruby %}
 module Mongoid
   class Criteria
     def each_by(by = 1000, &block)
@@ -47,7 +47,7 @@ module Mongoid
     end
   end
 end
-```
+{% endhighlight %}
 
 Of course you must be careful that the collection doesn’t change during the iteration. If you add or remove an item before you, or will skip elements or process some elements twice.
 

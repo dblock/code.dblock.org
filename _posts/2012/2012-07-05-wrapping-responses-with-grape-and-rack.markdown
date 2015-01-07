@@ -11,7 +11,7 @@ dblog_post_id: 343
 
 Define a Rack middleware and mount it in the API. Here’s an example of a decorator that wraps any body and resets the status code to 200.
 
-```ruby
+{% highlight ruby %}
 class ApiDecorator
     def initialize(app)
         @app = app
@@ -31,7 +31,7 @@ class MyApi < Grape::API
         { :ping => "pong" }
     end
 end
-```
+{% endhighlight %}
 
 You can see a working sample with _API_v4_Decorator_ mounted in _API_v4_ in [https://github.com/dblock/grape-on-rack](https://github.com/dblock/grape-on-rack).
 

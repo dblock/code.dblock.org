@@ -21,9 +21,9 @@ After some research I found a much better model: creating a hosting a real MSI, 
 
 Manufacturing an empty MSI is easy if you read MSDN documentation.
 
-```c
+{% highlight c %}
 MSIHANDLE hdb = NULL;
-```
+{% endhighlight %}
 
 The result is an empty MSI, but if you try to open it with [Orca](http://msdn.microsoft.com/en-us/library/aa370557.aspx), it will fail without explanation. It seems like you must set at least three properties in order to make this a workable MSI:
 
@@ -33,7 +33,7 @@ The result is an empty MSI, but if you try to open it with [Orca](http://msdn.mi
 
 You have to get the summary information for the number of summary info items that you're going to set, set the properties, persist them to disk and commit the MSI to disk.
 
-```c
+{% highlight c %}
 MSIHANDLE hsummary = NULL;
 MsiGetSummaryInformation(hdb, NULL, 7, & hsummary);
 MsiSummaryInfoSetPropertyA(hsummary, PID_REVNUMBER, VT_LPSTR, 0, NULL, "{00000000-0000-0000-0000-000000000000}");
@@ -48,7 +48,7 @@ MsiSummaryInfoPersist(hsummary);
 MsiCloseHandle(hsummary);
 // commit changes to disk
 MsiDatabaseCommit(hdb);
-```
+{% endhighlight %}
 
 You'll be able to open the MSI with [Orca](http://msdn.microsoft.com/en-us/library/aa370557.aspx) now.
 
@@ -56,19 +56,19 @@ You'll be able to open the MSI with [Orca](http://msdn.microsoft.com/en-us/libra
 
 You can open an MSI package now and use it as if it were part on an installation. If you have just created it, MsiOpenPackage takes a handle in the format of #id. Otherwise you can just specify the full file path to the MSI package.
 
-```c
+{% highlight c %}
 // reopen as an MSI package, this function accepts opened handles in form of #handle
 wchar_t handle[12] = { 0 };
 _snwprintf(handle, ARRAYSIZE(handle), L"#%d", (UINT) hdb);
 MSIHANDLE hproduct = NULL;
 MsiOpenPackage(handle, & hproduct);
-```
+{% endhighlight %}
 
 ### Calling a Custom Action
 
 There're two ways of calling the custom. You can import the CustomAction table that contains the name and reference to your CA, subject of another future post. This works for all types of custom actions, but it can get a little involved since you have to import several tables: CustomAction and Binary. For simpler C++ custom actions, simply fetch the CA's entry point and pass the MSI handle obtained from MsiOpenPackage.
 
-```c
+{% highlight c %}
 // load CustomAction.dll
 HMODULE hca = LoadLibrary(L"CustomAction.dll");
 // find the address of SetProperty1CustomAction
@@ -76,7 +76,7 @@ typedef int (__stdcall * LPCUSTOMACTION) (MSIHANDLE h);
 LPCUSTOMACTION lpca = (LPCUSTOMACTION) GetProcAddress(hca, "SetProperty1CustomAction");
 // call the custom action
 lpca(hproduct);
-```
+{% endhighlight %}
 
 ### Unit Testing a Custom Action
 

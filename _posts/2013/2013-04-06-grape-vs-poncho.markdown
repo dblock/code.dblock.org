@@ -15,17 +15,17 @@ You then declare a _Poncho::JSONMethod_, which inherits from _Poncho::Method_, w
 
 How does all this come together?
 
-```ruby
+{% highlight ruby %}
 # poncho
 get "/users", & UsersListMethod
-```
+{% endhighlight %}
 
-```ruby
+{% highlight ruby %}
 # grape
 get "/users" do
    ...
 end
-```
+{% endhighlight %}
 
 Grape could easily support the Poncho syntax with a few lines of code. Internally it creates a Proc from the body of the block.
 

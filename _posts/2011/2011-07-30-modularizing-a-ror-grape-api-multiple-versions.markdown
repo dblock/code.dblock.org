@@ -11,7 +11,7 @@ We made some progress with modularizing our Grape API in the [last post](/modula
 
 We’ll start by declaring an API class the way we would like to see it.
 
-```ruby
+{% highlight ruby %}
 class Api < Grape::API
   prefix 'api'
   rescue_from :all, :backtrace => true
@@ -19,18 +19,18 @@ class Api < Grape::API
   include Api_v1
   include Api_v2
 end
-```
+{% endhighlight %}
 
 This API is routable in _config/routes.rb_.
 
-```ruby
+{% highlight ruby %}
 match '/api/v1/\*other' => Api
 match '/api/v2/\*other' => Api
-```
+{% endhighlight %}
 
 What does _Api_v1_ or _Api_v2_ look like? It’s  a little tricky. We need to include api modules into the parent Grape API, like this.
 
-```ruby
+{% highlight ruby %}
 module Api_v1
   def self.included(api)
     api.version 'v1'
@@ -38,11 +38,11 @@ module Api_v1
     ...
   end
 end
-```
+{% endhighlight %}
 
 Unfortunately _Module::include_ is private. Let’s expose it as _module_ by extending the _Api_ class with the methods of _ApiModule::ClassMethods_. I personally find this _included / extend_ pair particularly elegant.
 
-```ruby
+{% highlight ruby %}
 module ApiModule
   module ClassMethods
     def module(mod)
@@ -59,22 +59,22 @@ class Api < Grape::API
   prefix 'api'
   ...
 end
-```
+{% endhighlight %}
 
 The Api_v1 will use _module_ instead of _include_.
 
-```ruby
+{% highlight ruby %}
 module Api_v1
   def self.included(api)
     api.version 'v1'
     api.module Api_v1_Me
   end
 end
-```
+{% endhighlight %}
 
 Don’t forget to write some tests. I’ve made [a pull request](https://github.com/intridea/grape/pull/48) into Grape exposing API _versions_ and _routes_, so I can actually write a test now that makes sure we have both versions of the API properly loaded. This goes into _spec/requests/api_spec.rb_.
 
-```ruby
+{% highlight ruby %}
 require 'spec_helper'
 
 describe Api do
@@ -84,4 +84,4 @@ describe Api do
     end
   end
 end
-```
+{% endhighlight %}

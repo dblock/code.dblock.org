@@ -11,7 +11,7 @@ I wanted Ruby and JSON code blocks ala [Github’s Flavored Markdown](https://he
 
 The first, harder part, is doing markdown rendering with syntax  highlighting. You render markdown with your favorite markdown gem (eg. [Redcarpet](https://github.com/vmg/redcarpet)), then parse the document and replace all code divs with a syntax highlighted version produced by [Coderay](https://github.com/rubychan/coderay). I had to also do some div swapping to avoid nested `<pre>` and `<code>` blocks.
 
-```ruby
+{% highlight ruby %}
 require 'redcarpet'
 require 'coderay'
 
@@ -27,11 +27,11 @@ module MarkdownHelper
    doc.to_s
  end
 end
-```
+{% endhighlight %}
 
 We can use this in a controller, assuming content lives in _app/voews/content_. Bonus: caching.
 
-```ruby
+{% highlight ruby %}
 class PagesController < ApplicationController
  include MarkdownHelper
 
@@ -44,20 +44,20 @@ class PagesController < ApplicationController
    end
  end
 end
-```
+{% endhighlight %}
 
 The corresponding view in _pages/show.html.haml_ is as follows.
 
-```haml
+{% highlight haml %}
 %div
  != @content
-```
+{% endhighlight %}
 
 You can route to one of those pages in _routes.rb_.
 
-```ruby
+{% highlight ruby %}
 get '/terms', to: 'pages#show', id: 'terms'
-```
+{% endhighlight %}
 
 See [https://github.com/artsy/doppler/pull/24](https://github.com/artsy/doppler/pull/24) for a complete pull request with the above.
 

@@ -9,7 +9,7 @@ dblog_post_id: 184
 ---
 This is going to heavily quote [http://www.rubyfleebie.com/enumerations-and-ruby/](http://www.rubyfleebie.com/enumerations-and-ruby/),  please read that first. The proposed implementation lets you iterate over enumerated values, which is quite awesome. But it offers little in terms of reuse. Let's improve upon it and split the methods in a way that lets us include an Enum implementation with all its class methods along the way. Full Enum.rb at the end.
 
-```ruby
+{% highlight ruby %}
 module Enum
 
   ... instance methods ...
@@ -22,20 +22,20 @@ module Enum
     ... class methods ...
   end
 end
-```
+{% endhighlight %}
 
 The trick here is that when a class includes a module the module self.included method is invoked. The base parameter is the class object for the class that includes the module, so we can extend it with the _ClassMethods _implementation. Magical.
 
 To define a gender enumeration we can now write the following.
 
-```ruby
+{% highlight ruby %}
 class Gender
   include Enum
 
   Gender.define :MALE, "male"
   Gender.define :FEMALE, "female"
 end
-```
+{% endhighlight %}
 
 You can call `Gender.all` and `Gender::MALE`.
 
@@ -45,7 +45,7 @@ I want to be able to write `define :MALE = "male"` inside `Gender` class and I w
 
 #### Full Enum.rb
 
-```ruby
+{% highlight ruby %}
 module Enum
   def initialize(key, value)
     @key = key
@@ -93,7 +93,7 @@ module Enum
     end
   end
 end
-```
+{% endhighlight %}
 
 #### Update (2015)
 

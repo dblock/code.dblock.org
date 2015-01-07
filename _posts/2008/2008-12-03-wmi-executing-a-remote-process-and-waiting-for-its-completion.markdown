@@ -9,7 +9,7 @@ dblog_post_id: 23
 ---
 This drove me crazy for an hour. I needed to execute a remote process via WMI and wait for it to finish. Lots of online resources are suggesting to use `__InstanceCreationEvent`, but that always threw access denied errors back at me. This is a workable straightforward solution, waiting for process to finish by quering the running processes.
 
-```cs
+{% highlight c# %}
 ConnectionOptions connOptions = new ConnectionOptions();
 connOptions.Impersonation = ImpersonationLevel.Impersonate;
 connOptions.Authentication = AuthenticationLevel.Default;
@@ -32,4 +32,4 @@ while (Select("Win32_Process", string.Format("processId = {0}", pid)).Count > 0)
   Thread.Sleep(1000);
 }
 Console.WriteLine(" done.");
-```
+{% endhighlight %}

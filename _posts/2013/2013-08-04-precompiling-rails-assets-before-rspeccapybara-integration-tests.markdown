@@ -9,7 +9,7 @@ dblog_post_id: 389
 ---
 The first Capybara integration test always tends to timeout when compiling assets on-demand. It’s just damn too slow. Precompile your assets before the test is run.
 
-```ruby
+{% highlight ruby %}
 RSpec.configure do |config|
   config.before :all do
     ENV['PRECOMPILE_ASSETS'] ||= begin
@@ -29,4 +29,4 @@ RSpec.configure do |config|
     end
   end
 end
-```
+{% endhighlight %}

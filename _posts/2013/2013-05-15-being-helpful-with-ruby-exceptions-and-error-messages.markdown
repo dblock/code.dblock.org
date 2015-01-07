@@ -27,14 +27,14 @@ Let's implement a similar system for the [ruby-enum gem](https://github.com/dblo
 
 First, add a dependency on [i18n](http://rubygems.org/gems/i18n) and _require "i18n"_. Then, create a _lib/config/locales_ folder and an _en.yml_ file in it. English error messages will go there. This file will need to be loaded by our library, specifically in [ruby-enum.rb](https://github.com/dblock/ruby-enum/blob/master/lib/ruby-enum.rb).
 
-```ruby
+{% highlight ruby %}
 require 'i18n'
 I18n.load_path << File.join(File.dirname(__FILE__), "config", "locales", "en.yml")
-```
+{% endhighlight %}
 
 Error descriptions inside _en.yml_ contain the problem, summary and resolution. The YAML format supports multi-lines with `\_\_` and can include values from parameters using the `%{name}` syntax.
 
-```yaml
+{% highlight yaml %}
 en:
  ruby:
    enum:
@@ -50,11 +50,11 @@ en:
            \_\_\_include Ruby::Enum\n
            \_\_\_define %{key}, 'value'\n
            \_\_end"
-```
+{% endhighlight %}
 
 The base error class, [Ruby::Enum::Errors::Base](https://github.com/dblock/ruby-enum/blob/master/lib/ruby-enum/errors/base.rb) takes care of the translation. I stripped the implementation details below – the important parts is the _BASE_KEY_ value for localized error messages and the _compose_message_ method. Get the full implementation [here](https://github.com/dblock/ruby-enum/blob/master/lib/ruby-enum/errors/base.rb) and modify it for your project.
 
-```ruby
+{% highlight ruby %}
 module Ruby
  module Enum
    module Errors
@@ -82,11 +82,11 @@ module Ruby
    end
  end
 end
-```
+{% endhighlight %}
 
 Specific errors derive from this class.
 
-```ruby
+{% highlight ruby %}
 module Ruby
  module Enum
    module Errors
@@ -98,16 +98,16 @@ module Ruby
    end
  end
 end
-```
+{% endhighlight %}
 
 When raising an `UninitializedConstantError`, pass the values of _key_ and _name_ used in the en.yml file above.
 
-```ruby
+{% highlight ruby %}
 raise Ruby::Enum::Errors::UninitializedConstantError.new({
- :name => "Class",
- :key => "CONSTANT"
+  :name => "Class",
+  :key => "CONSTANT"
 })
-```
+{% endhighlight %}
 
 Here’s the result.
 
@@ -115,8 +115,8 @@ Here’s the result.
 1.9.3-p362 :002 > require 'ruby-enum'
 => true
 1.9.3-p362 :003 > raise Ruby::Enum::Errors::UninitializedConstantError.new({
-:name => "Class",
-:key => "CONSTANT"
+  :name => "Class",
+  :key => "CONSTANT"
 })
 
 Ruby::Enum::Errors::UninitializedConstantError:

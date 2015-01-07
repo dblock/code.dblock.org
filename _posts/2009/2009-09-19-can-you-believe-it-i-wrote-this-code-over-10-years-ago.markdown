@@ -9,7 +9,7 @@ dblog_post_id: 50
 ---
 I wonder whether it still compiles and runs.
 
-```asm
+{% highlight asm %}
 ;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
 ; Beep speaker; period given by beep_div, duration by beep_len.
 ;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
@@ -46,5 +46,5 @@ beepover:
 	popx ds,es,di,si,dx,cx,bx,ax
 	ret
 beep endp
-```
+{% endhighlight %}
 

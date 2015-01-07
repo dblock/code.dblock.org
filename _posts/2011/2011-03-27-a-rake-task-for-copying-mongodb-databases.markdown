@@ -25,7 +25,7 @@ Let's write a task that will copy one MongoDB database to another using somethin
 
 We’re using [Heroku-san](http://jqr.github.com/2010/08/27/easy-heroku-deploys-with-heroku-san.html), so we’ve got a _heroku.yml_ sitting in the config folder with two values for MONGOHQ_URL under _staging_ and _production_. We’ll load the file with YAML, fetch _MONGOHQ_URL_ and parse it into parts. For those using regular expressions to parse MongoHQ urls, pay attention: everything except the database name is just a regular piece of a URL.
 
-```ruby
+{% highlight ruby %}
 def db_copy_load_config
   YAML.load_file(Rails.root.join("config/heroku.yml")).symbolize_keys
 end
@@ -42,7 +42,7 @@ def parse_mongodb_url(url)
   uri = URI.parse(url)
   [uri, uri.path.gsub("/", "")]
 end
-```
+{% endhighlight %}
 
 I \*heart\* functions that return two values!
 
@@ -50,7 +50,7 @@ I \*heart\* functions that return two values!
 
 MongoDB has a nifty copyDatabase (or clone) feature described [here](http://www.mongodb.org/display/DOCS/Clone+Database). It’s incremental, so we must drop tables before calling it. We also have to ensure that we don’t drop system tables, otherwise our database may be rendered inaccessible.
 
-```ruby
+{% highlight ruby %}
 desc "MongoDB database to database copy"
 task :copyDatabase, [:from, :to] => :environment do |t, args|
   from, from_db_name = parse_mongodb_url(args[:from])
@@ -63,11 +63,11 @@ task :copyDatabase, [:from, :to] => :environment do |t, args|
   end
   to_conn.copy_database(from_db_name, to_db_name, from.host + ":" + from.port.to_s, from.user, from.password)
 end
-```
+{% endhighlight %}
 
 Easy enough. We can call this to copy a production database to staging or to a local instance (for debugging).
 
-```ruby
+{% highlight ruby %}
 namespace :production do
   desc "Copy production data to staging"
   task :to_staging => :environment do
@@ -78,7 +78,7 @@ namespace :production do
     Rake::Task["db:copy:copyDatabase"].execute({ from: get_mongohq_url(:production), to: "mongodb://localhost/development" })
   end
 end
-```
+{% endhighlight %}
 
 #### No Admin for you on MongoHQ
 
@@ -95,7 +95,7 @@ This is because copyDatabase requires admin privileges, which MongoHQ doesn’t 
 
 Falling back to mongodump and mongorestore is trivial. It hurts to do it, but it does work. Here’s the complete _lib/tasks/db_copy.rake_.
 
-```ruby
+{% highlight ruby %}
 namespace :db do
  namespace :copy do
 
@@ -165,4 +165,4 @@ namespace :db do
 
  end
 end
-```
+{% endhighlight %}

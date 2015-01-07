@@ -48,7 +48,7 @@ You’ll still see prompts and errors in dialogs. Installers continue to show a 
 
 Let’s look at the HTML source in this bootstrapper and see how we can make changes to it. There’re two documents embedded with htmlInstaller by default: _index.html_ and _style.css_. We’ll ignore the stylesheet and focus on the index.html page, examining it top-to-bottom.
 
-```html
+{% highlight html %}
 <html>
 <head>
   <style type="text/css">
@@ -83,7 +83,7 @@ Let’s look at the HTML source in this bootstrapper and see how we can make cha
   </div>
 </body>
 </html>
-```
+{% endhighlight %}
 
 This is a standard HTML page with an _html_ opening tag, a _head_ and a _body_. The stylesheet is imported with a custom HTML tag, `@import` – HTMLayout-specific tags are documented [here](http://www.terrainformatica.com/htmlayout/tags.whtm).
 
@@ -112,9 +112,9 @@ Let's customize the bootstrapper UI by adding this picture.
 
 We can insert an `img` tag anywhere in the HTML.
 
-```html
+{% highlight html %}
 <img src="picture.jpg" />
-```
+{% endhighlight %}
 
 We must now embed the picture with the bootstrapper. This can be done with a new `/EmbedHtml` parameter to _InstallerLinker.exe_. For testing you can also put all files, including _htmlInstaller.exe_ in the same directory and run `htmlInstaller.exe /configFile Configuration.xml`. If a local _index.html_ exists, it will be picked up.
 

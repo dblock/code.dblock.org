@@ -19,26 +19,26 @@ A .wixproj project consists of .wxs, .wxi and .wxl files. I chose to take a .wxs
 
 Here's an example:
 
-```xml
+{% highlight xml %}
 <Product Id="*" Name="Test" Language="1033"
  Version="$(var.ProductVersion)"
  UpgradeCode="b6012b2a-d280-40bc-a236-6fdce2c9b84f">
 <?define ProductVersion='5.5.0.0' ?>
 <?include ..\Common\Properties.wxi ?>
-```
+{% endhighlight %}
 
 To parse this, I [wrote a quick and dirty recursive preprocessor in C#](https://github.com/dblock/codeproject/blob/master/DoxygenFilters/WixDoxyFilter/WixPreprocessor.cs) that resolves all includes, expands defines and finally processes the result into a doxygen format. I wish wix had a preprocessor built-in just like the C++ preprocessor to avoid doing all that work. At least manipulating XML in .NET is straightforward and the Regex support is rich.
 
 The most important feature of the preprocessor is to include comments above products, components, merge modules and features. Thus you can include true doxygen text which will appear in the final documentation.
 
-```xml
+{% highlight xml %}
 <!-- This is a test MSI to demonstrate major upgrade. -->
 <Product Id="$(var.ProductCode)" Name="Upgrade Test" Language="1033" ...="">
-```
+{% endhighlight %}
 
 Here's a simple wix installer.
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <?define ProductVersion="3.0.0" ?>
 <?define UpgradeCode="{3485E6A2-A1F3-4329-8BB5-ED8FFCF283D4}"?>
@@ -67,11 +67,11 @@ Here's a simple wix installer.
   </Feature>
  </Product>
 </Wix>
-```
+{% endhighlight %}
 
 And the output that WixDoxyFilter produces.
 
-```doxygen
+```
 /*! \page upgrade_test_wxs Upgrade Test
 PackageDescription
  This is a test MSI to demonstrate major upgrade.
@@ -90,7 +90,7 @@ Component guid: a847491a-6a4e-44ea-b54f-efc6126dd484
 
 The last step is to tell Doxygen's Doxyfile to process .wxs files.
 
-```doxyfile
+```
 FILE_PATTERNS = *.wxs *.xsd
 FILTER_PATTERNS = *.wxs=tools\filters\WixDoxyFilter.exe \
  *.xsd=tools\filters\WixExtXsdDoxyFilter.exe

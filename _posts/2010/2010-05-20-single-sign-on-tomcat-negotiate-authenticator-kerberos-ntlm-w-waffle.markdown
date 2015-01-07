@@ -29,28 +29,28 @@ _Authenticator Valve_
 
 Add a valve and a realm to the application context in your context.xml (for an application) or in server.xml (for the entire Tomcat installation).
 
-```xml
+{% highlight xml %}
 <Context>
   <Valve className="waffle.apache.NegotiateAuthenticator" principalFormat="fqn" roleFormat="both" />
   <Realm className="waffle.apache.WindowsRealm" />
 </Context>
-```
+{% endhighlight %}
 
 _Security Roles_
 
 Configure security roles in your application’s _web.xml_. The Waffle authenticator adds all user's security groups (including nested and domain groups) as roles during authentication.
 
-```xml
+{% highlight xml %}
 <security-role>
   <role-name>Everyone</role-name>
 </security-role>
-```
+{% endhighlight %}
 
 _Restrict Access_
 
 Restrict access to website resources. For example, to restrict the entire website to locally authenticated users add the following in _web.xml_.
 
-```xml
+{% highlight xml %}
 <security-constraint>
   <display-name>Waffle Security Constraint</display-name>
   <web-resource-collection>
@@ -61,7 +61,7 @@ Restrict access to website resources. For example, to restrict the entire websit
     <role-name>Everyone</role-name>
   </auth-constraint>
 </security-constraint>
-```
+{% endhighlight %}
 
 #### Test
 
@@ -109,22 +109,22 @@ You should no longer be prompted and automatically authenticated.
 In the logs you will see the following output for a successful logon.
 
 ```
-1. FINE: logged in user: dblock-green\dblock (S-1-5-21-3442045183-1395134217-4167419351-1000)
-2. FINE:  group: dblock-green\None
-3. FINE:  group: Everyone
-4. FINE:  group: dblock-green\HelpLibraryUpdaters
-5. FINE:  group: dblock-green\HomeUsers
-6. FINE:  group: BUILTIN\Administrators
-7. FINE:  group: BUILTIN\Users
-8. FINE:  group: NT AUTHORITY\INTERACTIVE
-9. FINE:  group: CONSOLE LOGON
-10. FINE:  group: NT AUTHORITY\Authenticated Users
-11. FINE:  group: NT AUTHORITY\This Organization
-12. FINE:  group: S-1-5-5-0-442419
-13. FINE:  group: LOCAL
-14. FINE:  group: NT AUTHORITY\NTLM Authentication
-15. FINE:  group: Mandatory Label\Medium Mandatory Level
-16. INFO: successfully logged in user: dblock-green\dblock
+logged in user: dblock-green\dblock (S-1-5-21-3442045183-1395134217-4167419351-1000)
+ group: dblock-green\None
+ group: Everyone
+ group: dblock-green\HelpLibraryUpdaters
+ group: dblock-green\HomeUsers
+ group: BUILTIN\Administrators
+ group: BUILTIN\Users
+ group: NT AUTHORITY\INTERACTIVE
+ group: CONSOLE LOGON
+ group: NT AUTHORITY\Authenticated Users
+ group: NT AUTHORITY\This Organization
+ group: S-1-5-5-0-442419
+ group: LOCAL
+ group: NT AUTHORITY\NTLM Authentication
+ group: Mandatory Label\Medium Mandatory Level
+successfully logged in user: dblock-green\dblock
 ```
 
 My laptop is not a member of an Active Directory domain, but you would see domain groups, including nested ones here. There’s nothing special to do for Active Directory. The authenticator also automatically handles all aspects of the Negotiate protocol, chooses Kerberos vs. NTLM and supports NTLM POST. It basically has the same effect in Tomcat as choosing Integrated Windows authentication options in IIS.

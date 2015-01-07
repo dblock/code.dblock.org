@@ -32,11 +32,11 @@ To learn more about creating a new pod, see `http://guides.cocoapods.org/making/
 
 This creates an _objc-ngram_ folder with a bunch of files. As of now, it’s missing a _Gemfile_, that I have created manually_._
 
-```ruby
+{% highlight ruby %}
 source 'https://rubygems.org'
 
 gem 'cocoapods'
-```
+{% endhighlight %}
 
 Run `bundle install`, which will generate a _Gemfile.lock _and a _.bundle_ folder. We don’t intend to lock the version of CocoaPods, so add _Gemfile.lock_ and .bundle to _.gitignore_.
 
@@ -54,14 +54,14 @@ Create a new iOS Single View Application project and place it into the folder cr
 
 Inside the Demo folder, create a Podfile. Yes, we’re going to write tests, using [Specta](https://github.com/specta/specta) and [Expecta](https://github.com/specta/expecta).
 
-```ruby
+{% highlight ruby %}
 pod "objc-ngram", :path => "../objc-ngram.podspec"
 
 target "DemoTests" do
   pod 'Specta', '~> 0.2.1'
   pod 'Expecta', '~> 0.2.3'
 end
-```
+{% endhighlight %}
 
 Run `pod install`.
 
@@ -98,7 +98,7 @@ In XCode, open _Manage Schemes _and make the _Demo_ scheme shared.
 
 Create a _.travis.yml_ file at the root of your project.
 
-```yaml
+{% highlight yaml %}
 language: objective-c
 
 before_script:
@@ -110,7 +110,7 @@ xcode_workspace: Demo/Demo.xcworkspace
 xcode_scheme: Demo
 
 xcode_sdk: iphonesimulator
-```
+{% endhighlight %}
 
 Enable the project to build in [Travis-CI](https://travis-ci.org/profile) and add a build status icon to the README.
 
@@ -122,7 +122,7 @@ Write code and tests. Code goes into the [Classes](https://github.com/dblock/obj
 
 I always write tests and start with very obvious ones for each and every new class. This serves as a placeholder for more useful functionality.
 
-```objc
+{% highlight objc %}
 #define EXP_SHORTHAND
 
 #include <Specta/Specta.h>
@@ -144,7 +144,7 @@ describe(@"default width", ^{
 });
 
 SpecEnd
-```
+{% endhighlight %}
 
 CocoaPods lets you easily try pods with `pod try`, so the Demo project should also do something useful and visually stimulating.
 

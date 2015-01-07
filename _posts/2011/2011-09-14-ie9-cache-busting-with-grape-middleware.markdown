@@ -11,7 +11,7 @@ Ran into a series of weird bugs with IE9. Turned out that a lot of our API reque
 
 It was pretty easy to add a set of no-cache headers with [Grape](https://github.com/intridea/grape) Middleware.
 
-```ruby
+{% highlight ruby %}
 class ApiCacheBuster < Grape::Middleware::Base
   def after
     @app_response[1]["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
@@ -25,11 +25,11 @@ class Api < Grape::API
   use ApiCacheBuster
   ...
 end
-```
+{% endhighlight %}
 
 And, trying to get muscle memory for good habits, a test.
 
-```ruby
+{% highlight ruby %}
 require 'spec_helper'
 
 describe ApiCacheBuster do
@@ -41,6 +41,6 @@ describe ApiCacheBuster do
     response.headers["Expires"].should == "Fri, 01 Jan 1990 00:00:00 GMT"
   end
 end
-```
+{% endhighlight %}
 
 The headers are inspired from [this StackOverflow article](http://stackoverflow.com/questions/711418/how-to-prevent-browser-page-caching-in-rails), which shows how to do it with plain Rails controllers.

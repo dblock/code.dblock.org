@@ -13,23 +13,24 @@ We’re using [Grape](https://github.com/intridea/grape) in our Rails app on Her
 
 Add the [newrelic_rpm](https://github.com/newrelic/rpm) gem to Gemfile. It will give us a start with Grape Middleware.
 
-```ruby
+{% highlight ruby %}
 group :production do
   gem "newrelic_rpm", "3.1.2"
 end
-```
+{% endhighlight %}
+
 #### Rack Up
 
 Grape is a Rack-based system. If we wanted to display a bulk metric for Rack middleware, we could simply extend our API model as follows.
 
-```ruby
+{% highlight ruby %}
 class Api < Grape::API
   ...
   if Rails.env.production?
     extend NewRelic::Agent::Instrumentation::Rack
   end
 end
-```
+{% endhighlight %}
 
 I use New Relic in production only, hence the _if_ block. But this is not good enough for us – this would show a single API entry for all calls.
 

@@ -15,7 +15,7 @@ I’ll use the demo project in log4jna to demonstrate what’s going on.
 
 First, configure log4j.properties with an NTEventLogAppender and a new event source name ("demo" in the example below).
 
-```config
+{% highlight properties %}
 log4j.rootCategory=INFO, E
 
 org.apache.log4jna.nt.demo=DEBUG
@@ -24,11 +24,11 @@ log4j.appender.E = org.apache.log4jna.nt.Win32EventLogAppender
 log4j.appender.E.layout = org.apache.log4j.PatternLayout
 log4j.appender.E.source = demo
 log4j.appender.E.layout.ConversionPattern = %d{yyyy-MM-dd HH:mm:ss} %c{1} [%p] %m%n
-```
+{% endhighlight %}
 
 Run the demo as a non-admin user (if you have log4jna source you can do _ant run_). It fails with the following error.
 
-```log
+```
 [java] log4j:ERROR Could not register event source.
 [java] com.sun.jna.platform.win32.Win32Exception: Access is denied.
 [java]     at com.sun.jna.platform.win32.Advapi32Util.registryCreateKey(Advapi32Util.java:712)

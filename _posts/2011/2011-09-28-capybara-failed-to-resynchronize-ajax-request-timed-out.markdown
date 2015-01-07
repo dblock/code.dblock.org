@@ -19,7 +19,7 @@ I used to attribute this error to little green elves inside of Capybara, Seleniu
 
 The spec code is as follows.
 
-```ruby
+{% highlight ruby %}
 context "capybara", :driver => :selenium do
   it "should upload and save a pic" do
     visit '/upload/'
@@ -28,6 +28,6 @@ context "capybara", :driver => :selenium do
     wait_until { find('.edit_pic', visible: true) }
   end
 end
-```
+{% endhighlight %}
 
 The upload generates an `.edit_pic` block at the end of the page. But what happens if the browser height is not big enough to display it? Capybara just waits for the element to become visible and eventually gives up with this error. My first fix was to add `page.execute_script("window.scrollTo(0, document.body.scrollHeight);")`, but that’s not even necessary because Capybara will patiently wait for the file to finish uploading in that _attach_file_ line. It’s good like that.

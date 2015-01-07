@@ -17,29 +17,29 @@ Qu’est-ce que c’est?
 
 The problem is that I am connecting to a slave in a replica set and trying to execute a write operation that must happen on a master node. That’s because I was lazy and was executing command-line update queries, such as this one. I was being lazy. Shame on me.
 
-``` ruby
+{% highlight ruby %}
 system "mongo #{db_host}:#{db_port}/#{db_name} -u #{db_user} -p#{db_password} --eval 'db.widgets.drop()'"
-```
+{% endhighlight %}
 
 This is run in a Rake task. Let's replace this with some Ruby code, the way it’s ought to be.
 
-```ruby
+{% highlight ruby %}
 db = Mongo::Connection.new(db_host, db_port).db(db_name)
 db.authenticate(db_user, db_password) unless (db.user.nil? || db.user.blank?)
 db.collection("widgets").drop()
-```
+{% endhighlight %}
 
 It’s actually a lot cleaner, I am not sure why I was hung up on the command line thing. Unfortunately it doesn’t fix our problem. In a replica set we need to use a [ReplSetConnection](http://api.mongodb.org/ruby/current/Mongo/ReplSetConnection.html) that will automatically load-balance requests and send writes to the master. It takes a list of hosts, something like
 
-```ruby
+{% highlight ruby %}
 db_connection = Mongo::ReplSetConnection.new(db_host_list).db(db_name)
 db_connection.authenticate(db_user, db_password)
 db_connection("widgets").drop()
-```
+{% endhighlight %}
 
 Let's try to write something usable in all of our rake tasks. What I have is a YML file with the Heroku MongoHQ configuration. The first environment is a replica set, while the second is a single MongoDB.
 
-```yaml
+{% highlight yaml %}
 production:
   config:
     MONGOHQ_URL:      "mongodb://heroku:password@replica.mongohq.com:12345/production-name"
@@ -51,11 +51,11 @@ production:
 staging:
   config: &default
     MONGOHQ_URL:      "mongodb://heroku:password@small.mongohq.com:12345/staging-name"
-```
+{% endhighlight %}
 
 We can write a basic _connect_  method that picks up the right configuration, as a Rake task.
 
-```ruby
+{% highlight ruby %}
 namespace :mongohq do
 
   def heroku_config(env = Rails.env)
@@ -91,6 +91,6 @@ namespace :mongohq do
   end
 
 end
-```
+{% endhighlight %}
 
 Now, our rake tasks can call `mongohq_connect(:production)` or `mongohq_connect(:staging)` without having to worry about the kind of setup we have.

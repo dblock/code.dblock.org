@@ -15,7 +15,7 @@ We’re rapidly approaching 2000 tests in our main project, adding about 100 tes
 
 The really annoying part of RSpec is that tests can run in any order. This depends on file timestamps as RSpec globs the files. What I’d really want is to run short domain model tests first and long UI Capybara tests last. This way I’ll be catching errors sooner. Let's break the tests up into suites. Add _lib/tasks/test_suites.rake_. Note that _pattern_ can take an array and that this actually generates Rake tasks.
 
-```ruby
+{% highlight ruby %}
 require 'rspec/core/rake_task'
 
 SPEC_SUITES = [
@@ -45,7 +45,7 @@ namespace :spec do
     end
   end
 end
-```
+{% endhighlight %}
 
 Run `rake -T` for a list of generated tasks. We can now run `rake spec:suite:all` or individual suites with, for example, `rake spec:suite:models`.
 

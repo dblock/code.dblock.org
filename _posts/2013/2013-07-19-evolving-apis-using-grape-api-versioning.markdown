@@ -11,7 +11,7 @@ I’ve seen two common API versioning strategies in the wild. The first is to us
 
 Starting with the next release of Grape (likely 0.6.0) you will have a third alternative: building a new API version incrementally on top of a previous one. There’re no hacks involved. Consider the following trivial API.
 
-```ruby
+{% highlight ruby %}
 module Acme
  class V1 < Grape::API
    format :json
@@ -28,11 +28,11 @@ module Acme
    end
  end
 end
-```
+{% endhighlight %}
 
 Define the next API version.
 
-```ruby
+{% highlight ruby %}
 module Acme
  class V2 < Grape::API
    format :json
@@ -44,21 +44,21 @@ module Acme
    end
  end
 end
-```
+{% endhighlight %}
 
 At this point we want _v1_ to be identical to _v2_, except for the root method. We’ll start by allowing _v1_ to respond to both _v1_ and _v2_ requests.
 
-```ruby
+{% highlight ruby %}
 version ['v2', 'v1'], using: :header, vendor: 'acme', format: :json
-```
+{% endhighlight %}
 
 Mount v2 before v1 and allow v2 to cascade the request to the next Rack middleware by adding _cascade: true_ to its version declaration. Rack::Cascade works by passing on any requests until a middleware replies with something else than a 404.
 
-```ruby
+{% highlight ruby %}
 new Rack::Cascade([Acme::V2, Acme::V1])
 
 version 'v2', using: :header, vendor: 'acme', format: :json, cascade: true
-```
+{% endhighlight %}
 
 Try it on my demo project in [https://github.com/dblock/grape-on-rack-v1-inside-v2](https://github.com/dblock/grape-on-rack-v1-inside-v2).
 

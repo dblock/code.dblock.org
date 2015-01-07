@@ -9,16 +9,16 @@ dblog_post_id: 22
 ---
 For someone who got stuck with NHibernate 1.1 it was actually surprisingly hard to find much about projections. Before you had to do different queries for a `COUNT` or a `SELECT` and you couldn't use `ICriteria`.
 
-```cs
+{% highlight c# %}
 int count = (int) session.CreateQuery(string.Format(
  "SELECT COUNT(instance) FROM Login instance WHERE Role='{0}'",
  TransitLoginRole.Administrator.ToString()))
  .UniqueResult();
-```
+{% endhighlight %}
 
 This is resolved with a projection.
 
-```cs
+{% highlight c# %}
 int count = session.CreateCriteria(typeof(Login))
  .Add(Expression.Eq("Role", TransitLoginRole.Administrator.ToString()))
  .SetProjection(Projections.Count("Id"))
@@ -27,7 +27,7 @@ int count = session.CreateCriteria(typeof(Login))
 IList<Login> logins = session.CreateCriteria(typeof(Login))
  .Add(Expression.Eq("Role", TransitLoginRole.Administrator.ToString()))
  .List<Login>();
-```
+{% endhighlight %}
 
 Nice and easy.
 

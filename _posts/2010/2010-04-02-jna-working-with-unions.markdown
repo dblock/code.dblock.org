@@ -16,23 +16,23 @@ There’s a giant grey rat outside of my window and a bunch of non-union workers
 
 I was trying to retrieve Active Directory forest trust information via [DsGetForestTrustInformationW](http://msdn.microsoft.com/en-us/library/ms675988(VS.85).aspx). The function takes a pointer to a [PLSA_FOREST_TRUST_INFORMATION](http://msdn.microsoft.com/en-us/library/aa378335(VS.85).aspx), a pointer to a pointer to an [LSA_FOREST_TRUST_INFORMATION](http://msdn.microsoft.com/en-us/library/aa378335(VS.85).aspx) structure. So far so good, we just need to pay attention to the several levels of indirection: whenever we want the value of a pointer to something, it’s a `ByReference`.
 
-```java
+{% highlight java %}
 public int DsGetForestTrustInformation(String serverName, String trustedDomainName, int Flags,
         PLSA_FOREST_TRUST_INFORMATION.ByReference ForestTrustInfo);
-```
+{% endhighlight %}
 
-```java
+{% highlight java %}
 public static class PLSA_FOREST_TRUST_INFORMATION extends Structure {
     public static class ByReference extends PLSA_FOREST_TRUST_INFORMATION
         implements Structure.ByReference {
     }
     public LSA_FOREST_TRUST_INFORMATION.ByReference fti;
 }
-```
+{% endhighlight %}
 
 [LSA_FOREST_TRUST_INFORMATION](http://msdn.microsoft.com/en-us/library/aa378335(VS.85).aspx) is a structure that contains a `RecordCount` number of [PLSA_FOREST_TRUST_RECORD](http://msdn.microsoft.com/en-us/library/aa378336(v=VS.85).aspx) items. Those are pointers, so `Entries` is an array of pointers. Since we want the value of a pointer, we use `ByReference` again.
 
-```java
+{% highlight java %}
 public static class LSA_FOREST_TRUST_INFORMATION extends Structure {
     public static class ByReference extends LSA_FOREST_TRUST_INFORMATION
         implements Structure.ByReference {
@@ -44,24 +44,24 @@ public static class LSA_FOREST_TRUST_INFORMATION extends Structure {
         return (PLSA_FOREST_TRUST_RECORD[]) Entries.toArray(RecordCount.intValue());
     }
 }
-```
+{% endhighlight %}
 
 A pointer to a record is simply a structure that contains a pointer to the record.
 
-```java
+{% highlight java %}
 public static class PLSA_FOREST_TRUST_RECORD extends Structure {
     public static class ByReference extends PLSA_FOREST_TRUST_RECORD
         implements Structure.ByReference {
     }
     public LSA_FOREST_TRUST_RECORD.ByReference tr;
 }
-```
+{% endhighlight %}
 
 #### Union inside a Structure?
 
 Still with me? The record is declared like this:
 
-```java
+{% highlight java %}
 typedef struct _LSA_FOREST_TRUST_RECORD {
     ULONG Flags;
     LSA_FOREST_TRUST_RECORD_TYPE ForestTrustType; // type of record
@@ -72,7 +72,7 @@ typedef struct _LSA_FOREST_TRUST_RECORD {
         LSA_FOREST_TRUST_BINARY_DATA Data; // used for unrecognized types
     } ForestTrustData;
 } LSA_FOREST_TRUST_RECORD;
-```
+{% endhighlight %}
 
 Note that MSDN has a mistake [here](http://msdn.microsoft.com/en-us/library/aa378336(VS.85).aspx), missing the `Time` field, which gave me lots of headache and wasted hours of my time. Got to use definitions in platform SDK.
 
@@ -80,7 +80,7 @@ This is a union. How do you declare this in JNA?
 
 A union is just like a structure, except that every field lives at an offset zero. In JNA, you must tell the union which field to use before reading the value.
 
-```java
+{% highlight java %}
 public static class LSA_FOREST_TRUST_RECORD extends Structure {
     public static class ByReference extends LSA_FOREST_TRUST_RECORD
         implements Structure.ByReference {
@@ -114,7 +114,7 @@ public static class LSA_FOREST_TRUST_RECORD extends Structure {
         u.read();
     }
 }
-```
+{% endhighlight %}
 
 In our case we override `read()` and set the type depending on the `ForestTrustType` value. Then re-read the union from memory. Voila.
 

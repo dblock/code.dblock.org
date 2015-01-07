@@ -13,7 +13,7 @@ Now that we have a Rake task to copy MongoDB databases, we are facing the next p
 
 We’ll inspire ourselves from [this post](http://www.austinriba.com/2011/02/copy-contents-of-one-s3-bucket-to-another/) and use [right_aws](https://github.com/rightscale/right_aws) to connect to S3 in Ruby. Our S3 keys are stored in the _heroku.yml_ file, your mileage may vary.
 
-```ruby
+{% highlight ruby %}
 def s3i
   @@s3 ||= s3i_open
 end
@@ -24,11 +24,11 @@ def s3i_open
   s3_access_key = s3_config[:production]['config']['S3_SECRET_ACCESS_KEY']
   RightAws::S3Interface.new(s3_key_id, s3_access_key, { logger: Rails.logger })
 end
-```
+{% endhighlight %}
 
 Once connected we need to fetch all the source keys from the source bucket. You might have heard that Amazon S3 limits a single query to 1000 items, but the right_aws _S3Interface_ has a nice incremental feature. Since we’ll need to compare source and target collections, lets put the items in a hash.
 
-```ruby
+{% highlight ruby %}
 logger.info("[#{Time.now}] fetching keys from #{args[:from]}")
 source_objects_hash = Hash.new
 s3i.incrementally_list_bucket(args[:from]) do |response|
@@ -36,13 +36,13 @@ s3i.incrementally_list_bucket(args[:from]) do |response|
     source_objects_hash[source_object[:key]] = source_object
   end
 end
-```
+{% endhighlight %}
 
 My first implementation used the S3 bucket object, which turned out to be very slow. The enumeration with S3Interface takes roughly 30 seconds per 1000 items, cool.  The rest is easy: we’ll walk the source hash, copy any new or changed items and then walk the target hash to delete any old items.
 
 Here’s the full Rake task. Edit your bucket names and run _rake s3:sync:production:to_staging_.
 
-```ruby
+{% highlight ruby %}
 require 'logger'
 
 namespace :s3 do
@@ -114,11 +114,11 @@ namespace :s3 do
     end
   end
 end
-```
+{% endhighlight %}
 
 The last issue is object permissions. Files copied via S3Interface don’t have their ACLs copied. In our case we want the newly created files to be public. I started by writing a task to copy permissions from the bucket itself.
 
-```ruby
+{% highlight ruby %}
 desc "Apply bucket's ACLs on all keys in it."
 task :applyAcl, [:bucket] => :environment do |t, args|
   acl = s3i.get_acl(args[:bucket])
@@ -128,13 +128,13 @@ task :applyAcl, [:bucket] => :environment do |t, args|
     end
   end
 end
-```
+{% endhighlight %}
 
 Unfortunately, this forces me to have a public bucket, meaning the list of files can be enumerated. That’s not what I want. Digging deeper, the S3 interface takes an [x-amz-acl header](http://docs.amazonwebservices.com/AmazonS3/latest/API/) that allows us to specify a canned target ACL during copy.
 
-```ruby
+{% highlight ruby %}
 s3i.copy(args[:from], key, args[:to], key, :copy, { 'x-amz-acl' => 'public-read' } )
-```
+{% endhighlight %}
 
 Please suggest any improvements!
 

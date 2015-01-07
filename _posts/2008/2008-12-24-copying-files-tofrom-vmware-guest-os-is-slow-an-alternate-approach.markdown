@@ -15,7 +15,7 @@ In the meantime, I need a short term solution.
 
 I decided to try and map the remote drive and use a simple _File.Copy_. The first challenge is to find out the remote server's IP address. VMWare exposes guest OS variables, including the ip, so I've extended VMWareTasks to support those.
 
-```cs
+{% highlight c# %}
 /// <summary>
 /// Environment, guest and runtime variables
 /// </summary>
@@ -36,26 +36,26 @@ public string this[string name]
     job.Wait(VMWareInterop.Timeouts.WriteVariableTimeout);
   }
 }
-```
+{% endhighlight %}
 
 Here's the IP address of a powered-on VM.
 
-```cs
+{% highlight c# %}
 virtualMachine.GuestVariables["ip"];
-```
+{% endhighlight %}
 
 We can make up a network path out of a local one.
 
-```cs
+{% highlight c# %}
 public string PathToNetworkPath(string ip, string value)
 {
   return string.Format(@"\\{0}\{1}", ip, value.Replace(":", "$"));
 }
-```
+{% endhighlight %}
 
 Mapping a network drive is implemented in mpr.dll with [WNetAddConnection2](http://msdn.microsoft.com/en-us/library/aa385413(VS.85).aspx). A wrapper class will do the job.
 
-```cs
+{% highlight c# %}
 public class NetworkDrive
 {
   [DllImport("mpr.dll")]
@@ -118,11 +118,11 @@ public class NetworkDrive
     }
   }
 }
-```
+{% endhighlight %}
 
 Let's put it all together.
 
-```cs
+{% highlight c# %}
 public void CopyFileFromGuestToHost(string guestPath, string hostPath)
 {
   string guestNetworkPath = PathToNetworkPath(_ip, guestPath);
@@ -130,7 +130,7 @@ public void CopyFileFromGuestToHost(string guestPath, string hostPath)
   guestNetworkDrive.MapNetworkDrive(_username, _password);
   File.Copy(guestNetworkPath, hostPath, true);
 }
-```
+{% endhighlight %}
 
 The last thing that remains to be done to make the new copy compatible is to also copy directories and subdirectories. That's left as an exercise to the reader.
 

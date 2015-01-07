@@ -11,15 +11,15 @@ Sorting tables in Rails is a common problem. It must have been done before, righ
 
 Let's make all our controllers support sorting with the _sort_by_ parameter. Add the following to your _ApplicationController_.
 
-```ruby
+{% highlight ruby %}
 handles_sortable_columns do |conf|
   conf.sort_param = "sort_by"
 end
-```
+{% endhighlight %}
 
 This lets us add column sorting with sortable_column to a view (_views/tags/index.html.haml_).
 
-```haml
+{% highlight haml %}
 #tags
   %table
     %tr
@@ -30,15 +30,15 @@ This lets us add column sorting with sortable_column to a view (_views/tags/inde
       %tr
         %td.name= link_to h(tag.name), edit_tag_path(tag)
         %td= tag.count
-```
+{% endhighlight %}
 
 We can use sorting on a Mongoid model directly. For a Tag model, this means invoking `Tag.desc(:field)` or `Tag.asc(:field)` by name.
 
-```ruby
+{% highlight ruby %}
 sortable_column_order do |column, direction|
   tags = Tag.send(direction, column)
 end
-```
+{% endhighlight %}
 
 There’re several issues with this.
 
@@ -47,7 +47,7 @@ There’s no clear default sorting, for tags we’d like to sort by count in des
 
 The first issue can be solved by checking whether the direction is one of _:asc_ or _:desc_ and whether a column is a field in the model (added to _config/initializers/mongoid_document.rb_).
 
-```ruby
+{% highlight ruby %}
 module Mongoid
   module Document
     module ClassMethods
@@ -59,11 +59,11 @@ module Mongoid
     end
   end
 end
-```
+{% endhighlight %}
 
 Since `sort_by_column` returns `nil` if no sorting has been done, we can use it to introduce a default sort in the _Tags_ controller.
 
-```ruby
+{% highlight ruby %}
 class TagsController < ApplicationController
   def index
     sortable_column_order do |column, direction|
@@ -74,7 +74,7 @@ class TagsController < ApplicationController
   end
   ...
 end
-```
+{% endhighlight %}
 
 #### Screenshots
 

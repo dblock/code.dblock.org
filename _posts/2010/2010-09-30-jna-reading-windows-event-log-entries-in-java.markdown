@@ -18,7 +18,7 @@ Let’s read the Windows event log in Java with [JNA](https://github.com/twall/j
 
 I certainly don’t want to deal with the actual event log in my code - I’d like to be able to write something like this.
 
-```java
+{% highlight java %}
 EventLogIterator iter = new EventLogIterator("Application");
 while(iter.hasNext()) {
     EventLogRecord record = iter.next();
@@ -27,7 +27,7 @@ while(iter.hasNext()) {
             + ", Event Type: " + record.getType()
             + ", Event Source: " + record.getSource());
 }
-```
+{% endhighlight %}
 
 If you don’t care about how it’s implemented, get the latest JNA build (this code will ship in JNA 3.2.8) and just use it. Otherwise keep reading.
 
@@ -35,29 +35,29 @@ If you don’t care about how it’s implemented, get the latest JNA build (this
 
 Let’s step back and examine the Win32 API for events. The first call opens and closes an event log. An event log lives on a certain machine (null for current) and has a name (eg. _Application_ or _System_).
 
-```java
+{% highlight java %}
 public HANDLE OpenEventLog(String lpUNCServerName, String lpSourceName);
 public boolean CloseEventLog(HANDLE hEventLog);
-```
+{% endhighlight %}
 
 You can also find out the number of event log records and the ID of the oldest event log entry.
 
-```java
+{% highlight java %}
 public boolean GetNumberOfEventLogRecords(HANDLE hEventLog, IntByReference NumberOfRecords);
 public boolean GetOldestEventLogRecord(HANDLE hEventLog, IntByReference OldestRecord);
-```
+{% endhighlight %}
 
 Finally, reading the event log is exposed via the _ReadEventLog_ API.
 
-```java
+{% highlight java %}
 public boolean ReadEventLog(HANDLE hEventLog, int dwReadFlags, int dwRecordOffset,
         Pointer lpBuffer, int nNumberOfBytesToRead, IntByReference pnBytesRead,
         IntByReference pnMinNumberOfBytesNeeded);
-```
+{% endhighlight %}
 
 The `ReadEventLog` function is meant to be called until there’re no more events. It will read forwards or backwards depending on the flags (`EVENTLOG_FORWARDS_READ` or `EVENTLOG_BACKWARDS_READ`). It will fill the buffer with data from multiple records or fail, telling us that the buffer is not large enough to hold even one record (`ERROR_INSUFFICIENT_BUFFER`). Finally, it will finish signaling that it has read all the entries (`ERROR_HANDLE_EOF`).
 
-```java
+{% highlight java %}
 if (! Advapi32.INSTANCE.ReadEventLog(_h,
         WinNT.EVENTLOG_SEQUENTIAL_READ | WinNT.EVENTLOG_FORWARDS_READ, ...) {
 
@@ -74,11 +74,11 @@ if (! Advapi32.INSTANCE.ReadEventLog(_h,
     }
 }
 // read succeeded, iterate in the buffer
-```
+{% endhighlight %}
 
 After a successful `ReadEventLog` call we receive a buffer with multiple entries of the `EVENTLOGRECORD` type (it’s a simple structure with a bunch of fields). Each record has a different size (each record contains the same header, but different data). We can iterate through it by incrementing a native pointer (JNA’s `Pointer.share` returns a pointer to an offset from an existing pointer value).
 
-```java
+{% highlight java %}
 int dwRead = ... // number of bytes read this time
 Pointer pevlr = buffer; // top of buffer
 while (dwRead > 0)
@@ -88,11 +88,11 @@ while (dwRead > 0)
     dwRead -= record.Length.intValue();
     pevlr = pevlr.share(record.Length.intValue());
 }
-```
+{% endhighlight %}
 
 We can put this together in a unit test.
 
-```java
+{% highlight java %}
 public void testReadEventLogEntries() {
     HANDLE h = Advapi32.INSTANCE.OpenEventLog(null, "Application");
     IntByReference pnBytesRead = new IntByReference();
@@ -130,7 +130,7 @@ public void testReadEventLogEntries() {
     assertTrue(rc == W32Errors.ERROR_HANDLE_EOF);
     assertTrue(Advapi32.INSTANCE.CloseEventLog(h));
 }
-```
+{% endhighlight %}
 
 #### Iterator
 
@@ -138,17 +138,17 @@ Let’s go back to our goal to write an iterator and break the above test apart.
 
 First, we’ll declare an `EventLogRecord` class that encapsulates the the auto-incremented record ID, the event source and the record data itself.
 
-```java
+{% highlight java %}
 public static class EventLogRecord {
     private EVENTLOGRECORD _record = null;
     private int _recordId;
     private String _source;
     ...
-```
+{% endhighlight %}
 
 We’ll write an iterator for this type. It will need to hold the handle to the event log, the buffer to store events, a flag that indicates that the iteration has finished, the number of bytes remaining in the current buffer, a pointer to the current record and the auto-incremented logical record ID. The latter will have to start at some number, ie. the oldest record ID.
 
-```java
+{% highlight java %}
 public static class EventLogIterator
     implements Iterable<EventLogRecord>, Iterator<EventLogRecord> {
 
@@ -174,11 +174,11 @@ public static class EventLogIterator
         }
         _dwRecord = pOldestRecord.getValue();
     }
-```
+{% endhighlight %}
 
 Eventually the iterator will have to terminate and close the event log. Let’s implement _close_. If the caller must abandon the iterator half way through the iteration or on an exception, it must call close to avoid leaking a handle.
 
-```java
+{% highlight java %}
 public void close() {
     _done = true;
     if (_h != null) {
@@ -188,21 +188,21 @@ public void close() {
         _h = null;
     }
 }
-```
+{% endhighlight %}
 
 Knowing whether there’re more records in the iterator involves reading ahead and returning whether the iterator is done.
 
-```java
+{% highlight java %}
 @Override
 public boolean hasNext() {
     read();
     return ! _done;
 }
-```
+{% endhighlight %}
 
 Similarly, the next record involves reading ahead, constructing and returning the record at the current location.
 
-```java
+{% highlight java %}
 @Override
 public EventLogRecord next() {
     read();
@@ -212,11 +212,11 @@ public EventLogRecord next() {
     _pevlr = _pevlr.share(record.getLength());
     return record;
 }
-```
+{% endhighlight %}
 
 Finally, the actual `read`. Do nothing, for as long as there’re bytes in the current buffer and read the next block otherwise. Apply the same logic for resizing the buffer and for finishing the iteration.
 
-```java
+{% highlight java %}
 private boolean read() {
     // finished or bytes remain, don't read any new data
     if (_done || _dwRead > 0) {
@@ -255,7 +255,7 @@ private boolean read() {
     _pevlr = _buffer;
     return true;
 }
-```
+{% endhighlight %}
 
 #### Links
 

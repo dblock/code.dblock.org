@@ -15,10 +15,10 @@ One of the annoying things about Barista, the coffee-script compiler that we use
 
 This will be supported in the next release of Barista, since [pull request #54](https://github.com/Sutto/barista/pull/54) got merged. You can have completely custom preambles, enabling you to make a path relative or to insert a license. Add the following to _config/initializers/barista_config.rb_.
 
-```ruby
+{% highlight ruby %}
 Barista.add_preamble do |location|
   "/\* : DO NOT MODIFY - compiled from #{Pathname.new(location).relative_path_from(Rails.root).to_s}\n\n"
 end
-```
+{% endhighlight %}
 
 My first implementation was a bit raw, but then I remembered that Ruby has this amazing thing called blocks. Let's say you have a method called _preamble_ that is currently a boolean. You can extend it to take an optional block by calling `block_given?`. Voila – now you can both say `preamble = true` and `preamble do ...` that passes some custom code that should get executed to generate a preamble. You can see the final code [here](https://github.com/Sutto/barista/pull/54/files#diff-0). IMO it’s very elegant, beautiful Ruby-magic that enables functions to do extra work when you ask politely.

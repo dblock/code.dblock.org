@@ -11,7 +11,7 @@ Sometimes great is the enemy of good. I recently had to harvest a large number o
 
 It just gets the job done.
 
-```cs
+{% highlight c# %}
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -122,4 +122,4 @@ namespace WixHarvest
         }
     }
 }
-```
+{% endhighlight %}

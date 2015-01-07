@@ -15,7 +15,7 @@ _TL;DR_: the solution was to align the bottom edge of  with a control with the v
 
 We use a custom _UIView_ with a fixed height of 120px to display a separator, an image and text on its right. We also use [FLKAutoLayout](https://github.com/dkduck/FLKAutoLayout), which is where all these nice alignment methods come from.
 
-```objc
+{% highlight objc %}
 - (void)displayText:(NSString *)text andImage:(NSString *)imageUrl
 {
    UIView *separator = [[UIView alloc] init];
@@ -48,16 +48,16 @@ We use a custom _UIView_ with a fixed height of 120px to display a separator, an
 {
    return CGSizeMake(UIViewNoIntrinsicMetric, 120);
 }
-```
+{% endhighlight %}
 
 This is obviously problematic for tall images and cropping art is a major offense. How do we dynamically calculate the height of the view based on the image and/or text height? Since the image is loaded dynamically, are we going to have to write some pretty involved code to wait until its height is known? Do we need to auto-size the label and calculate its height after it wraps over multiple lines?
 
 The answer is that we don’t need to do any of this. With auto-layout we need to attach the image and the text to the bottom of the containing view.
 
-```objc
+{% highlight objc %}
 [self alignBottomEdgeWithView:labelView predicate:@"10"];
 [self alignBottomEdgeWithView:imageView predicate:@"10"];
-```
+{% endhighlight %}
 
 With this constraint auto-layout seems to be smart enough to pick the tallest control to calculate the height of the view.
 

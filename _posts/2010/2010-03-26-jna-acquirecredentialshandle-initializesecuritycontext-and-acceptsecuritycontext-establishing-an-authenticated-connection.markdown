@@ -43,7 +43,7 @@ We’re going to do this in JNA. First, some structure definitions.
 
 A security handle is a pointer that holds credentials, context, etc. The `SecHandle`, `CtxtHandle` and `CredHandle` are all the same thing.
 
-```java
+{% highlight java %}
 public static class SecHandle extends Structure {
     public Pointer dwLower;
     public Pointer dwUpper;
@@ -57,11 +57,11 @@ public static class SecHandle extends Structure {
         return dwLower == null && dwUpper == null;
     }
 }
-```
+{% endhighlight %}
 
 A security buffer holds a single token. It has a size and a type. For example, a security token will be of `MAX_TOKEN_SIZE` size and `SECBUFFER_TOKEN` type.
 
-```java
+{% highlight java %}
 public static class SecBuffer extends Structure {
 
     public static class ByReference extends SecBuffer implements Structure.ByReference {
@@ -91,13 +91,13 @@ public static class SecBuffer extends Structure {
         allocateMemory();
     }
 }
-```
+{% endhighlight %}
 
 Notice the infamous `ByReference` inner class, a handy way in JNA to have a `ByReference` and a non-By-Reference class that do the same thing.
 
 An array of buffers is called a `SecBufferDesc`.
 
-```java
+{% highlight java %}
 public static class SecBufferDesc extends Structure {
     public NativeLong ulVersion;
     public NativeLong cBuffers;
@@ -119,13 +119,13 @@ public static class SecBufferDesc extends Structure {
         allocateMemory();
     }
 }
-```
+{% endhighlight %}
 
 Notice the way an array of inner buffers is declared `ByReference` and created with a `toArray` call. This tells JNA about a nested structure over a contiguous block of memory. It will be read and written automagically in and out of function calls.
 
 The API also needs a timestamp.
 
-```java
+{% highlight java %}
 public static class SECURITY_INTEGER extends Structure {
     public NativeLong dwLower;
     public NativeLong dwUpper;
@@ -139,13 +139,13 @@ public static class SECURITY_INTEGER extends Structure {
 public static class TimeStamp extends SECURITY_INTEGER {
 
 }
-```
+{% endhighlight %}
 
 #### Secur32.dll
 
 The above-mentioned functions are implemented in Secur32.dll.
 
-```java
+{% highlight java %}
 public interface Secur32 extends W32API {
     Secur32 INSTANCE = (Secur32) Native.loadLibrary(
             "Secur32", Secur32.class, W32APIOptions.UNICODE_OPTIONS);
@@ -171,13 +171,13 @@ public interface Secur32 extends W32API {
 
     public int FreeCredentialsHandle(CredHandle phCredential);
 }
-```
+{% endhighlight %}
 
 #### Client-Server
 
 We can do both client and server in the same code for the currently logged on user. In the real world you would only need the client or the server part and you would have to translate the pbClientToken and pbServerToken objects into bytes and send/receive them.
 
-```java
+{% highlight java %}
 try {
     // client ----------- acquire outbound credential handle
     CredHandle phClientCredential = new CredHandle();
@@ -245,7 +245,7 @@ try {
     Secur32.INSTANCE.DeleteSecurityContext(phClientContext);
     Secur32.INSTANCE.FreeCredentialsHandle(phClientCredential);
 }
-```
+{% endhighlight %}
 
 #### Source Code
 

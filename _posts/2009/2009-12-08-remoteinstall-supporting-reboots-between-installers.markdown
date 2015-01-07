@@ -19,7 +19,7 @@ Nothing that 10 minutes of coding can’t solve.
 
 Rather than trying to make RemoteInstall understand that the installer forced a server reboot, we want it to take control of the reboot process. The first step is to split the bootstrapper installation into the Visual Studio CRT installation and our application, "pre-install" the CRT. If the CRT requires a reboot (return code 3010), RemoteInstall will shutdown the guest operating system and power it back up (reboot is not directly supported in VMWare VIX). It can then continue with the next installer. I implemented this behavior in [RemoteInstall 1.2 Beta](https://github.com/dblock/remoteinstall), including an additional _rebootIfRequired_ option for those picky developers that don’t believe me when I say you should stop suppressing reboots.
 
-```cs
+{% highlight c# %}
 else if (remoteInstallResult.RebootRequired)
 {
     if (installerConfig.RebootIfRequired)
@@ -37,11 +37,11 @@ else if (remoteInstallResult.RebootRequired)
             _vmPowerDriver.SnapshotConfig.Name);
     }
 }
-```
+{% endhighlight %}
 
 This is what the new configuration looks like for executable setups. The list of exit codes says to reboot on 3010, succeed on 0 and fail otherwise. MSI setups do this automatically since 3010 is a documented MSI return code that signals reboot.
 
-```xml
+{% highlight xml %}
 <installers destpath="C:" sequence="lifo">
   <installer file="vcredist_x86.exe" name="Visual Studio CRT" type="exe" uninstall="false" installArgs="/q:a /c:"vcredi~3.exe /q:a /c:""msiexec /i vcredist.msi /qb!"""">
     <exitcodes>
@@ -52,7 +52,7 @@ This is what the new configuration looks like for executable setups. The list of
   </installer>
   <installer file="Setup.exe" name="Application Installer" type="exe" uninstall="false" installArgs="/q" />
 </installers>
-```
+{% endhighlight %}
 
 This is what the output from a run in CruiseControl looks like. You can see the messages about a required reboot.
 

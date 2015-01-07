@@ -9,7 +9,7 @@ dblog_post_id: 406
 ---
 Let's mock a UIAlertView with [OCMock](http://ocmock.org/). Here’s a simple alert:
 
-```objc
+{% highlight objc %}
 UIAlertView *alert = [[UIAlertView alloc]
    initWithTitle:@"Title"
    message:@"Please press a button."
@@ -18,11 +18,11 @@ UIAlertView *alert = [[UIAlertView alloc]
    otherButtonTitles:@"OK", nil];
 
 [alert show];
-```
+{% endhighlight %}
 
 And a test that ensures that the alert has been displayed.
 
-```objc
+{% highlight objc %}
 id mockAlertView = [OCMockObject mockForClass:[UIAlertView class]];
 [[[mockAlertView stub] andReturn:mockAlertView] alloc];
 (void)[[[mockAlertView expect] andReturn:mockAlertView]
@@ -37,7 +37,7 @@ id mockAlertView = [OCMockObject mockForClass:[UIAlertView class]];
 
 [mockAlertView verify];
 [mockAlertView stopMocking];
-```
+{% endhighlight %}
 
 The only interesting thing here is that you need to _stopMocking_ the class or other tests will still have the mock enabled and will expect _show_ to be called, producing weird and seemingly unrelated errors.
 

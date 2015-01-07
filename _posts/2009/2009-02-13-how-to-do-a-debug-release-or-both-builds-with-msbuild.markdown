@@ -15,35 +15,35 @@ All the projects I work on now have a very simple MSBuild script that allows you
 
 Let's define a property for the default configuration, ie. when no Configuration is specified on the command line.
 
-```xml
+{% highlight xml %}
 <PropertyGroup Condition="'$(Configuration)'==''">
  <Configuration>Debug</Configuration>
 </PropertyGroup>
-```
+{% endhighlight %}
 
 ### Multiple Configurations
 
 What if multiple configurations were specified? For example, _Debug;Release_. We want to transform a single property into an array of task parameters. There's a brain-twisting way of doing this with MSBuild.
 
-```xml
+{% highlight xml %}
 <Target Name="configurations">
  <CreateItem Include="$(Configuration)">
   <Output TaskParameter="Include" ItemName="Configuration" />
  </CreateItem>
 </Target>
-```
+{% endhighlight %}
 
 It seems that the above code does nothing, but it creates an item called _Configuration_ that can be specified as input to another target.
 
-```xml
+{% highlight xml %}
 <Target Name="showconfigurations" DependsOnTargets="configurations" Inputs="@(Configuration)" Outputs="target\%(Configuration.FileName)">
  <Message Importance="high" Text="Building project, %(Configuration.Identity) ..." />
 </Target>
-```
+{% endhighlight %}
 
 Try it.
 
-```
+{% highlight bat %}
 > msbuild test.proj /t:showconfigurations
 Building project, Debug
 
@@ -53,13 +53,13 @@ Building project, Release ...
 > msbuild test.proj /t:showconfigurations /p:Configuration="Debug;Release"
 Building project, Debug ...
 Building project, Release ...
-```
+{% endhighlight %}
 
 ### Target Inputs
 
 Finally, change all the targets that depend on the configuration name accordingly and use `%(Configuration.Identity)` rather than `$(Configuration)` in those tasks.
 
-```xml
+{% highlight xml %}
 <Target Name="version" DependsOnTargets="configurations" Inputs="@(Configuration)" Outputs="target\%(Configuration.FileName)">
  <Version Major="$(MajorVersion)" Minor="$(MinorVersion)">
  <Output TaskParameter="Major" PropertyName="Major" />
@@ -69,4 +69,4 @@ Finally, change all the targets that depend on the configuration name accordingl
  <Message Text="Version: $(Major).$(Minor).$(Build).$(Revision) (%(Configuration.Identity))"/>
  ...
 </Target>
-```
+{% endhighlight %}

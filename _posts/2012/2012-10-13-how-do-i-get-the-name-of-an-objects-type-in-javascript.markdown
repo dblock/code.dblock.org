@@ -11,18 +11,18 @@ I love reflection, especially the Ruby kind. JavaScript reflection, though, can 
 
 I needed to do something for a given object type, so I wanted to get the name of an object’s type in JavaScript. StackOverflow has a few good discussions on this topic [here](http://stackoverflow.com/questions/332422/how-do-i-get-the-name-of-an-objects-type-in-javascript) and [here](http://stackoverflow.com/questions/11690894/coffeescript-using-instanceof-vs-class-constructor-name).  I wrote this innocent piece of CoffeeScript last week.
 
-```coffeescript
+{% highlight coffeescript %}
 if item.constructor.name == "Spline"
   alert("Reticulated spline: #{item.reticulated}");
-```
+{% endhighlight %}
 
 It worked great in my dev environment and in tests, but failed in staging and would have failed in production had we not noticed. I put in a debugger and, surprise, _item.constructor.name_ was "d". WTF? Turned out, this was caused by the fact that we produced minified JavaScript during asset packaging. All functions and class names were replaced by single character names.
 
 Because _item_ was a Backbone model, the solution was to introduce _modelName_ into it and check that.
 
-```coffeescript
+{% highlight coffeescript %}
 class App.Models.Spline extends Backbone.Model
   modelName: "Spline"
-```
+{% endhighlight %}
 
 If you’re minifying JavaScript, make sure to turn this on in tests and catch similar bugs early. We use [Jammit](http://documentcloud.github.com/jammit/), so this is done by setting _package_assets_ to _always_ in _assets.yml_ (setting it to _on_ in tests has no effect).

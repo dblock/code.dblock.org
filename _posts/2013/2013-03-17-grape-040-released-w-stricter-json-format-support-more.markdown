@@ -21,11 +21,11 @@ If your API returned a an _Object_, it was translated to JSON via _to_json_ or a
 
 I have fixed this in [@6fa8f59](https://github.com/intridea/grape/commit/6fa8f59e0475f926682168ad4f0bbb2f72df96a3), released with Grape 0.4.0, and it’s now possible to return proper JSON representations of _NilClass_ or _String_, as well as to parse any valid JSON, such as _Array_. This means that if your API implementation returned a _String_ or a _nil_, the output will be different.
 
-```ruby
+{% highlight ruby %}
 get "/" do
  "example"
 end
-```
+{% endhighlight %}
 
 ```
 # Grape 0.3.x
@@ -35,11 +35,11 @@ end
 "\"example\""
 ```
 
-```ruby
+{% highlight ruby %}
 get "/" do
  nil
 end
-```
+{% endhighlight %}
 
 ```
 # Grape 0.3.x
@@ -51,7 +51,7 @@ end
 
 You can monkey-patch back the old behavior as follows.
 
-```ruby
+{% highlight ruby %}
 module Grape
  module Formatter
    module Json
@@ -65,7 +65,7 @@ module Grape
    end
  end
 end
-```
+{% endhighlight %}
 
 Similar changes apply to the XML formatter.
 

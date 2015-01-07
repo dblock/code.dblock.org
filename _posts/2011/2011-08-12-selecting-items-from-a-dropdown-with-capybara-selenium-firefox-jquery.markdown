@@ -11,17 +11,17 @@ I am having a weird problem with Capybara and Selenium (Firefox) selecting items
 
 We are editing a _Widget_ that has a dropdown for _size _on the page with values 1-10. We can use a simple form, like this.
 
-```haml
+{% highlight haml %}
 = simple_form_for @widget do |f|
   = f.input :name
   = f.input :description
   = f.input :size, collection: 1..10
   = f.submit "Save"
-```
+{% endhighlight %}
 
 The test code is pretty straightforward too.
 
-```ruby
+{% highlight ruby %}
 context "capybara", :driver => :selenium do
   before(:each) do
     @widget = Fabricate(:widget, :size => 3)
@@ -34,7 +34,7 @@ context "capybara", :driver => :selenium do
     @widget.reload.size.should == 2
   end
 end
-```
+{% endhighlight %}
 
 If you watch this test execute in the browser, the dropdown box that lets the user select the size is clicked on, the value "5" is located and the dropdown closes. Well, not quite. The value changes according to Capybara (fetching the value after _page.select_ confirms this), but the dropdown seems to continue displaying. Weird.
 
@@ -42,9 +42,9 @@ If you watch this test execute in the browser, the dropdown box that lets the us
 
 If you post this form, the value that you get in the controller is still "3", so something is really broken. As a workaround a JQuery selection works.
 
-```ruby
+{% highlight ruby %}
 page.execute_script("$('#widget_size').val('5')")
-```
+{% endhighlight %}
 
 Let's file a bug in Capybara to start, [https://github.com/jnicklas/capybara/issues/448](https://github.com/jnicklas/capybara/issues/448).
 

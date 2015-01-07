@@ -9,17 +9,17 @@ dblog_post_id: 401
 ---
 I’ve written my share of RSpec tests that look for specific meta tags in a web page under Capybara. It would be nice to be able to spell the following.
 
-```ruby
+{% highlight ruby %}
 visit "/"
 page.should have_meta {
  "keywords" => "spline, reticulating",
  "description" => "Splines are being reticulated here."
 }
-```
+{% endhighlight %}
 
 Easy. This is my _spec/support/matchers/have_meta.rb_.
 
-```ruby
+{% highlight ruby %}
 class HaveMeta
  attr_accessor :expected_val, :actual_val, :attribute
 
@@ -45,6 +45,6 @@ end
 def have_meta(expected)
  HaveMeta.new(expected)
 end
-```
+{% endhighlight %}
 
 This is a lot better than having to compare strings or making manual XPath queries.

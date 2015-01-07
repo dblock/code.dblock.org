@@ -9,7 +9,7 @@ dblog_post_id: 42
 ---
 In writing new MSI installers, we always have to deal with legacy InstallShield installers, upgrading, maintenance mode, etc. The properties get confusing very quickly, so we came up with some shortcuts that make life easier.
 
-```xml
+{% highlight xml %}
 <!--
   FirstInstall: when product is installed for the first time
   Upgrading: when we run upgrade for the installed product
@@ -20,20 +20,20 @@ In writing new MSI installers, we always have to deal with legacy InstallShield 
   UpgradingAny: Upgrading OR UpgradingFromLegacy
   Maintenance: configuration maintenance
   -->
-```
+{% endhighlight %}
 
 You must first detect your legacy and existing product(s). For legacy, this is up to you (eg. we look in some old registry key under `Windows\Uninstall`). For MSI you can use the Upgrade table.
 
-```xml
+{% highlight xml %}
 <Upgrade Id="$(var.UpgradeCode)">
   <UpgradeVersion Minimum="$(var.BUILD_VERSION_STRING)" IncludeMinimum="no" OnlyDetect="yes" Property="NEWERVERSION_INSTALLED" />
   <UpgradeVersion Minimum="1.0.0" IncludeMinimum="yes" Maximum="$(var.BUILD_VERSION_STRING)" IncludeMaximum="no" Property="OLDERVERSION_BEINGUPGRADED" />
 </Upgrade>
-```
+{% endhighlight %}
 
 The properties.
 
-```xml
+{% highlight xml %}
 <!-- previously installed version of product -->
 <Property Id="INSTALLEDPRODUCTVERSION">
   <RegistrySearch Id="GetInstalledProductVersion" Type="raw" Root="HKLM" Key="$(var.ProductRegistryKey)" Name="InstalledDisplayVersion" />
@@ -50,11 +50,11 @@ The properties.
 <Property Id="LEGACYPRODUCT_INSTALLEDVERSION">
   <RegistrySearch Id="GetInstalledLegacyProductVersion" Type="raw" Root="HKLM" Key="$(var.WindowsUninstallKey)\$(var.LegacyProductProductCode)" Name="DisplayVersion" />
 </Property>
-```
+{% endhighlight %}
 
 And finally the install sequences and custom actions that define the properties.
 
-```xml
+{% highlight xml %}
 <CustomAction Id="SetFirstInstall" Property="FirstInstall" Value="true"/>
 <CustomAction Id="SetUpgrading" Property="Upgrading" Value="true"/>
 <CustomAction Id="SetRemovingForUpgrade" Property="RemovingForUpgrade" Value="true"/>
@@ -115,4 +115,4 @@ And finally the install sequences and custom actions that define the properties.
     Installed AND REINSTALLMODE
   </Custom>
 </InstallUISequence>
-```
+{% endhighlight %}

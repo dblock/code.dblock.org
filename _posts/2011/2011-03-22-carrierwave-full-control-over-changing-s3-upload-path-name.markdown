@@ -13,20 +13,20 @@ We also need to upload images to different S3 buckets for different Heroku appli
 
 I needed to change the directory structure and the naming of the files. We started with defining _paperclip_path - _Carrierwave is an improvement over [Paperclip](https://github.com/thoughtbot/paperclip), a system to attach files to ActiveRecord records and has some backward compatibility elements. We use the same uploader for two related models, so it was convenient to define a single template path.
 
-```ruby
+{% highlight ruby %}
 include CarrierWave::Compatibility::Paperclip
 
 def paperclip_path
    ":class/:id/:basename_:style.:extension"
 end
-```
+{% endhighlight %}
 
 Next, we wanted to change the _:id_ in the path to _:slug_ – an auto-generated short name with [mongoid_slug](https://github.com/papercavalier/mongoid-slug). Looking at the Paperclip-compatibility code it was clearly not possible without rewriting the whole thing.
 
 Carrierwave recommends [overriding store_dir in the uploader](http://groups.google.com/group/carrierwave/browse_thread/thread/54a2860211109780), but it only gives you a way to modify the directory name, not the whole path with the file name. Digging through the source, I found a way to change the entire path by overriding _store_path_. Note how we access the model being uploaded with _model_.
 
-```ruby
+{% highlight ruby %}
 def store_path(for_file = filename)
   self.model.class.name.underscore.pluralize + "/" + self.model.slug + "/" + (version_name || :original).to_s + ".jpg"
 end
-```
+{% endhighlight %}

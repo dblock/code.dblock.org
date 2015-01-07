@@ -19,7 +19,7 @@ I want to do this the "Rails Way" by invoking a single _rake_ command that impor
 
 Given a set of objects, we can serialize them to a file using JSON. We’ll give the model name and a file as a parameter, fetch all objects and write them to a file in JSON format.
 
-```ruby
+{% highlight ruby %}
 task :export, [:model, :filename] => :environment do |t, args|
   model = args[:model].constantize
   filename = args[:filename]
@@ -31,13 +31,13 @@ task :export, [:model, :filename] => :environment do |t, args|
     end
   end
 end
-```
+{% endhighlight %}
 
 #### Importing Data
 
 Importing data is the inverse operation. We have to clear the model data – I couldn’t figure out how to instantiate an object that exists and resave it with changes [[thread](http://groups.google.com/group/mongoid/browse_thread/thread/0c28c14d0c1c48cd#)].
 
-```ruby
+{% highlight ruby %}
 task :import, [:model, :filename] => :environment do |t, args|
   model = args[:model].constantize
   model.destroy_all
@@ -48,13 +48,13 @@ task :import, [:model, :filename] => :environment do |t, args|
       object.save!
   end
 end
-```
+{% endhighlight %}
 
 #### Putting it Together
 
 We can call our tasks on several well-known collections. Of course, feel free to extend this to iterate through all Mongo collections and post your code as a comment here.
 
-```ruby
+{% highlight ruby %}
 namespace :db do
     def collections
     [
@@ -83,7 +83,7 @@ namespace :db do
         end
     end
 end
-```
+{% endhighlight %}
 
 #### Faking Data
 
@@ -91,18 +91,18 @@ There’re two other interesting implementation details worth mentioning.
 
 The first is that we have a _User_ model that has a username and password. Of course we use the awesome [devise](https://github.com/plataformatec/devise) and importing and exporting password data doesn’t do anything (we’re missing the salt value and the system stores an encrypted password hash anyway). Whenever we encounter a "password" field during import, we simply replace it with a fixed value.
 
-```ruby
+{% highlight ruby %}
 object = model.new.from_json line.strip
 object.password = "password" if (object.respond_to? 'password')
-```
+{% endhighlight %}
 
 The second feature is that we don’t want real user data to be exported, but we’d like to preserve the relationships in the existing database. We use [faker](http://faker.rubyforge.org/) to replace all names, e-mails and websites. This can be further applied to all kinds of properties.
 
-```ruby
+{% highlight ruby %}
 object.name = Faker::Name.name
 object.email = Faker::Internet.email
 object.website = Faker::Internet.domain_name
-```
+{% endhighlight %}
 
 #### Famous Last Thoughts
 

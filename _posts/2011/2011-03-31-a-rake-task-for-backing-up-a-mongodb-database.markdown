@@ -19,7 +19,7 @@ We’re now reusing two pieces of code in all these tasks (I put them into _s3.r
 
 Given an environment, retrieve its MongoHQ url of a database and parse it from _config/heroku.yml_. This returns an URL and a database name.
 
-```ruby
+{% highlight ruby %}
 namespace :mongohq do
   def get_mongohq_url(env = Rails.env)
     @@config ||= YAML.load_file(Rails.root.join("config/heroku.yml")).symbolize_keys
@@ -32,13 +32,13 @@ namespace :mongohq do
     [uri, uri.path.gsub("/", "")]
   end
 end
-```
+{% endhighlight %}
 
 #### s3.rake
 
 We only have one set of S3 keys (we call this a production set). Retrieve those keys from _config/heroku.yml_ and open an _S3Interface_ connection to Amazon S3.
 
-```ruby
+{% highlight ruby %}
 namespace :s3 do
   def s3i
     @@s3i ||= s3i_open
@@ -55,7 +55,7 @@ namespace :s3 do
     RightAws::S3Interface.new(s3_key_id, s3_access_key, { logger: Rails.logger })
   end
 end
-```
+{% endhighlight %}
 
 #### Backup a MongoDB Database
 
@@ -63,7 +63,7 @@ We’re familiar with MongoDB _mongodump_ and _mongorestore_. The strategy is to
 
 The complete **db_backup.rake** code below. It’s an iteration over some code that [@sarcilav](http://blog.sarcilav.com/) wrote, so I can’t take all the credit. The bonus feature is to be able to backup any current environment to S3 as well as another environment (eg. backup _production_ from the _staging_ server) remotely.
 
-```ruby
+{% highlight ruby %}
 namespace :db do
 
   namespace :production do
@@ -112,6 +112,6 @@ namespace :db do
   end
 
 end
-```
+{% endhighlight %}
 
 Improvements welcome!

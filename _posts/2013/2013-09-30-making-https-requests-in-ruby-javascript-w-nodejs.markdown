@@ -38,4 +38,3 @@ $ coffee
 http = require('superagent')
 http.get('https://artsy.net/api/v1/system/up').end((err, res) -> console.log res.body)
 ```
-

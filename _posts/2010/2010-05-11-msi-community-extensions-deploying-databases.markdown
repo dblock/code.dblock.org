@@ -15,30 +15,30 @@ In this post I’ll show you how to get started with installing an MSSQL databas
 
 First, you must add a reference to the WixDataSource extension to your Wix project and include the DataSource extension’s namespace into the Wix XML declaration.
 
-```xml
+{% highlight xml %}
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
  xmlns:DataSource="http://schemas.appsecinc.com/wix/DataSourceExtension">
-```
+{% endhighlight %}
 
 #### ODBC Connection
 
 To connect to a database you need an ODBC connection. For now, we don’t have `ODBC_CONNECTION_STRING` defined, so each implementation that uses this connection will need (and does) supply its own default. For example, SQL server extensions assume that the default connection string refers to a local database with Windows authentication.
 
-```xml
+{% highlight xml %}
 <DataSource:ODBCConnection Id="DemoSQLServerConnection" ConnectionString="[ODBC_CONNECTION_STRING]" />
-```
+{% endhighlight %}
 
 #### MSSQL Database
 
 We can now define an MSSQL database.
 
-```xml
+{% highlight xml %}
 <Component Id="MSSQLDatabaseMsiComponent" Guid="0FEAF4B6-7065-47e2-A403-E94A4B176772">
   <CreateFolder/>
   <DataSource:MSSQLDatabase Id="MSSQLDemoDatabase" Name="DemoDatabase" ConnectionId="DemoSQLServerConnection"
    CreateOnInstall="yes" DropOnUnInstall="no" CheckIfExists="yes" />
 </Component>
-```
+{% endhighlight %}
 
 What’s happening here?
 
@@ -50,13 +50,13 @@ We’ve nested the database under a component, so component rules apply. You can
 
 A database without a schema is not very useful. We author a .sql file that creates the schema and execute it on FirstInstall.
 
-```xml
+{% highlight xml %}
 <DataSource:MSSQLDatabase Id="MSSQLDemoDatabase" Name="DemoDatabase" ConnectionId="DemoSQLServerConnection"
   CreateOnInstall="yes" DropOnUnInstall="no" CheckIfExists="yes">
   <DataSource:ODBCExecute Id="MSSQLDemoDatabase_CreateSchema" ExecuteOnInstall="yes"
    BasePath="[INSTALLLOCATION]" Type="SqlServer" File="Schema.sql">FirstInstall OR Upgrading</DataSource:ODBCExecute>
 </DataSource:MSSQLDatabase>
-```
+{% endhighlight %}
 
 To simplify things for the purposes of this post, the Schema.sql file knows how to handle its own upgrade.
 
@@ -68,7 +68,7 @@ Secondly, with MSI Extensions 1.2, Schema.sql may be an ANSI or a UTF-8 file. Th
 
 We now want to give users an opportunity to choose where to install this database and which credentials to use. For this purpose we add the _WixCommonUiExtension.dll_ to the project and redefine the UI sequence to reference some stock dialogs.
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <Include>
   <Property Id="CREATE_DATABASE_LOGON_TYPE" Value="WinAuthCurrentUser" />
@@ -97,7 +97,7 @@ We now want to give users an opportunity to choose where to install this databas
     <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
   </UI>
 </Include>
-```
+{% endhighlight %}
 
 Notice the `DbCreateCredDlg` that was inserted and a few defaults for various options that drive this dialog. The latter supports testing credentials, choosing whether to use SQL Server or Windows authentication, etc.
 

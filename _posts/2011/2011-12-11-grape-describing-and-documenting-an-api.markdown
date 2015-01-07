@@ -13,7 +13,7 @@ There’re several ways to build an API reference: entirely by hand, generated f
 
 You can now do this in [Grape](https://github.com/intridea/grape) with _desc_ blocks.
 
-```ruby
+{% highlight ruby %}
 # DELETE /api/v1/thing/:id
 desc "Delete an existing thing.", {
   :params => {
@@ -26,13 +26,13 @@ delete ":id" do
   thing.destroy
   thing.as_json
 end
-```
+{% endhighlight %}
 
 Aside from the description passed to _desc_, you can specify a hash with anything in it. There’re a few conventions, such as _:params_, which will merge with any values specified in the URL of the API call.
 
 We can introspect the API at runtime, adding a Rake task, for example, that lists all API calls with their parameters.
 
-```ruby
+{% highlight ruby %}
 namespace :api do
   desc "Displays all API methods."
   task 'routes' => :environment do
@@ -52,7 +52,7 @@ namespace :api do
     end
   end
 end
-```
+{% endhighlight %}
 
 Notice how we’ve used the required option for parameters – it’s, once again, a convention. Grape doesn’t care – it’s pure metadata attached to a route. You can create similar conventions in your own API – we have some "partner" and "admin" APIs that we’ve marked in a similar manner.
 

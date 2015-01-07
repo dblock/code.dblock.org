@@ -16,7 +16,7 @@ So, here’s a slightly hacky solution to delay-processing of select [CarrierWav
 
 Let's make all processing conditional upon _:is_processing_delayed?_ and _:is_processing_immediate?_. You see where this is going.
 
-```ruby
+{% highlight ruby %}
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
 
@@ -46,16 +46,16 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   ...
 end
-```
+{% endhighlight %}
 
 By default processing is immediate, there’s nothing to do. Add the following to the model that is holding the uploader.
 
-```ruby
+{% highlight ruby %}
 def recreate_delayed_versions!
     image.is_processing_delayed = true
     image.recreate_versions!
 end
-```
+{% endhighlight %}
 
 Then delay the method normally in the model’s `after_save` with `self.delay.recreate_delayed_versions!` – that’s it.
 

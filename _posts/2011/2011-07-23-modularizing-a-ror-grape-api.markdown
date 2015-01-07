@@ -11,7 +11,7 @@ A lot of people ask me whether we use Rails controllers for our API. We don’t,
 
 Here’s our current code from API v1.
 
-```ruby
+{% highlight ruby %}
 class Api_v1 < Grape::API
     prefix 'api'
     version 'v1'
@@ -34,21 +34,21 @@ class Api_v1 < Grape::API
         end
     end
 end
-```
+{% endhighlight %}
 
 We want a separate file for helpers and for the _me_ API. We can move the helpers into a module and include it normally.
 
-```ruby
+{% highlight ruby %}
 module ApiAuth
   def authenticated
     ...
   end
 end
-```
+{% endhighlight %}
 
 The namespace DSL is a bit tricky. Those _namespace_ and _get_ are actually namespace functions in _Grape::API_. Fortunately Ruby calls _included(module)_ for every included module. We can call the public methods on a _namespace_ function ourselves.
 
-```ruby
+{% highlight ruby %}
 module Api_v1_Me
   def self.included(api)
     api.namespace :me do
@@ -59,11 +59,11 @@ module Api_v1_Me
     end
   end
 end
-```
+{% endhighlight %}
 
 Let's combine all of this into an API class.
 
-```ruby
+{% highlight ruby %}
 class Api_v1 < Grape::API
   prefix 'api'
   version 'v1'
@@ -74,11 +74,11 @@ class Api_v1 < Grape::API
   end
   include Api_v1_Me
 end
-```
+{% endhighlight %}
 
 The nice thing about this implementation is that we can now compose an API v2 with a bunch of v1 modules and some v2 ones. The not-so-nice part is the _included_ construct. I’d like to write the following.
 
-```ruby
+{% highlight ruby %}
 module Api_v1_Me
     include Grape::APIModule
     namespace :me do
@@ -88,6 +88,6 @@ module Api_v1_Me
         end
     end
 end
-```
+{% endhighlight %}
 
 Beer to anyone who can implement this, I tried for hours, in vain - I think Grape will need some major refactoring to support modules this way. Fork Grape [on Github](https://github.com/intridea/grape).

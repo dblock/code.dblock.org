@@ -13,7 +13,7 @@ This does answer the question of how to get the display name of a VMWare snapsho
 
 Let's add a wrapper for a VIX handle.
 
-```cs
+{% highlight c# %}
 /// <summary>
 /// A wrapper for a VIX handle. Most VIX objects returned also implement IVixHandle.
 /// </summary>
@@ -38,11 +38,11 @@ public class VMWareVixHandle
     return (object[]) result;
   }
 }
-```
+{% endhighlight %}
 
 Then the snapshot's name is a cast to a IVixHandle which implements GetProperties.
 
-```cs
+{% highlight c# %}
 public string DisplayName
 {
   get
@@ -51,5 +51,5 @@ public string DisplayName
     return (string)new VMWareVixHandle((IVixHandle) _snapshot).GetProperties(properties)[0];
   }
 }
-```
+{% endhighlight %}
 

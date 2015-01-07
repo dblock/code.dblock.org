@@ -9,7 +9,7 @@ dblog_post_id: 252
 ---
 I’ve been fighting a trivial RoR controller test failure on a new build machine. The spec is rather trivial.
 
-```ruby
+{% highlight ruby %}
 def mock_widget(stubs={})
   @mock_widget ||= mock_model(Widget, stubs).as_null_object
 end
@@ -19,11 +19,11 @@ it "assigns a newly created widget as @widget" do
   post :create, :widget => {'these' => 'params'}
   assigns(:widget).should be(mock_widget)
 end
-```
+{% endhighlight %}
 
 Exceptions in Rails controllers are eaten in RSpec tests. So whenever I have a controller spec failure, I add a begin/rescue block in it. This is hacky, but gets the job done.
 
-```ruby
+{% highlight ruby %}
 def create
   begin
     ...
@@ -33,7 +33,7 @@ def create
     raise e
   end
 end
-```
+{% endhighlight %}
 
 Today’s spec failure was rather curious.
 

@@ -13,11 +13,11 @@ One of the issues that we ran to with implementing S3/CloudFront was that Intern
 
 Examining the HTTP response I quickly found out that the content-type came back blank. Turns out that our S3 sync code was not setting the content type and right_aws adds a blank content-type (lowercase) because Amazon S3 would otherwise reject it. Here’s a nice fix to my [previous post](/rails-s3-cloudfront-jammit-heroku-100).
 
-```ruby
+{% highlight ruby %}
 content_type = MIME::Types.type_for(entry)[0]
 logger.info("[#{Time.now}] uploading #{key} (#{content_type})")
 s3i.put(to, key, File.open(entry), {
   'x-amz-acl' => 'public-read',
   'content-type' => content_type.to_s
 })
-```
+{% endhighlight %}

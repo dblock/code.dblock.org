@@ -26,7 +26,7 @@ We use [JacobGen](http://sourceforge.net/projects/jacob-project) to generate a J
 
 I found the error strange, since JacobGen carries a 32-bit and a 64-bit native DLL and one would think that that intended to "just work" on a 64-bit system. This is how we call JacobGen:
 
-```bat
+{% highlight bat %}
 @echo off
 setlocal
 
@@ -39,14 +39,14 @@ set PATH=%JACOBGEN_HOME%\%PROCESSOR_ARCHITECTURE%;%PATH%
 
 "%JRE%" -Xint com.jacob.jacobgen.Jacobgen %1 %2 %3 %4 %5
 endlocal
-```
+{% endhighlight %}
 
 This looks perfectly correct – note that path set to `%PROCESSOR_ARCHITECTURE%`. I ran the batch file manually and the build succeeded without any changes!
 
 The problem turned out to be in MSBuild, where 32-bit MSBuild re-defines `PROCESSOR_ARCHITECTURE` as `x86` ([helpful post](http://abstractcode.com/abstractblog/archive/2009/07/03/171.aspx)). Another variable, `PROCESSOR_ARCHITEW6432` is available on 64-bit systems and is set to `AMD64` in my setup. To fix the problem I added a couple of lines to Jacobgen.bat.
 
-```bat
+{% highlight bat %}
 if NOT "%PROCESSOR_ARCHITEW6432%"=="" (
   set PROCESSOR_ARCHITECTURE=%PROCESSOR_ARCHITEW6432%
 )
-```
+{% endhighlight %}

@@ -11,17 +11,17 @@ dblog_post_id: 260
 
 Here’s the code that let you declare `DEVICE=something.sys` in your config.sys file. I included the juiciest commented parts below. The preamble is already priceless.
 
-```asm
+{% highlight asm %}
 ;----------------------------------------------------------------------------
 ; This code is so simple I just couldn't beleive it. So forget about all
 ; books on assembler, cause this DOES ALWAYS WORK and is the shortest way
 ; to do it!
 ;----------------------------------------------------------------------------
-```
+{% endhighlight %}
 
 I used macros stolen from someone’s 3D rendering engine’s source code to avoid typing _push_ and _pop_ too many times. That someone was probably sitting next to me in the basement of [Infomaniak in Geneva](http://www.infomaniak.com/). ASM recursive macros must blow your mind!
 
-```asm
+{% highlight asm %}
 pushx macro r1, r2, r3, r4, r5, r6, r7, r8  ;that's a usefull macro
     ifnb <r1>                               ;stolen it from the source
     push r1                                 ;of a 3D vector engine...
@@ -35,11 +35,11 @@ popx macro r1, r2, r3, r4, r5, r6, r7, r8
     popx r2, r3, r4, r5, r6, r7, r8
     endif
 endm
-```
+{% endhighlight %}
 
 The following seems pretty magical to me right now. Oh yeah, otherwise it STUCKS!
 
-```asm
+{% highlight asm %}
 ORG 0000h                                    ;INDESPENSABLE, SINCE OTHERWISE IT STUCKS
 
 driver_suiv     dw      -1                   ;ALL THIS IS NECESSARY FOR
@@ -48,11 +48,11 @@ attribut        dw      8004h                ;CONFLICT AVOID, if you remove
 req             dw      offset sys_request   ;it will stuck the machine
 run             dw      offset init          ;CRAZY DOS!!!!
 nom_device      db      'NUL    '
-```
+{% endhighlight %}
 
 Who uses DOS 3.2, seriously?
 
-```asm
+{% highlight asm %}
 lds     bx,dword ptr cs:[req_ofs]       ;verify the DOS rubbish
 mov     word ptr [bx+14],0              ;version -> stay resident
 mov     word ptr [bx+16],cs             ;or not
@@ -61,12 +61,12 @@ mov     ah,30h
 int     21h                             ;HAS TO STAY RESIDENT BEFORE
 pop     bx                              ;DOS 3.2, cause otherwise
 cmp     al,3                            ;IT WILL GO CRAZY
-```
+{% endhighlight %}
 
 Finally ...
 
-```asm
+{% highlight asm %}
 END                     ;oh finally the end...
-```
+{% endhighlight %}
 
 The entire source for this gem is [here](https://raw.github.com/dblock/autoconf/master/src/CLRBUFF.ASM). And I’ve published the complete autoconf source [here on Github](https://github.com/dblock/autoconf).

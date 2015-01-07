@@ -13,7 +13,7 @@ A slug is an external identity to an object reachable by an API call. For exampl
 
 In Ruby we use the [mongoid-slug](https://github.com/papercavalier/mongoid-slug) gem. To set this up we include _Mongoid::Slug_ and specify which field to use to generate it.
 
-```ruby
+{% highlight ruby %}
 class Artwork
   include Mongoid::Document
   include Mongoid::Slug
@@ -24,11 +24,11 @@ class Artwork
   ...
 
 end
-```
+{% endhighlight %}
 
 I decided to implement the same thing for this blog, which is a bit obsolete architecture-wise and is written in ASP.NET. To keep things simple, I added a slug field to my _Post_ model as an _nvarchar(256) _and slapped a unique key constraint on it. To generate an actual slug from a title I stole some code from [here](http://www.intrepidstudios.com/blog/2009/2/10/function-to-generate-a-url-friendly-string.aspx). It basically strips any non-alphanumeric text from the post’s title.
 
-```cs
+{% highlight c# %}
 /// <summary>
 /// Transform a string into a slug.
 /// See http://www.intrepidstudios.com/blog/2009/2/10/function-to-generate-a-url-friendly-string.aspx
@@ -46,11 +46,11 @@ public static string ToSlug(string s)
     s = Regex.Replace(s, @"\s", "-");
     return s;
 }
-```
+{% endhighlight %}
 
 Slugs are unique, so we must avoid duplicates. While there’re more effective approaches to generating a unique slug, we’ll simply iterate until we find a unique value. After all, how often do we need to generate a new slug?
 
-```cs
+{% highlight c# %}
 public void GenerateSlug(ISession session)
 {
     if (! string.IsNullOrEmpty(Slug))
@@ -73,11 +73,11 @@ public void GenerateSlug(ISession session)
 
     Slug = slug_candidate;
 }
-```
+{% endhighlight %}
 
 The routing is a bit trickier. Until now the posts were accessible as _ShowPost.aspx?id=Integer_. I started by making a change where a post can be fetched by slug, such as _ShowPost.aspx?slug=String_. The next problem is accepting slugs in the URL and internally rewriting the ASP.NET request path to the latter. The best place to do it seems to be _Application_BeginRequest _in _Global.asax.cs_.
 
-```cs
+{% highlight c# %}
 string path = Request.Path.Substring(Request.ApplicationPath.Length).Trim("/".ToCharArray());
 if (! string.IsNullOrEmpty(path))
 {
@@ -92,13 +92,13 @@ if (! string.IsNullOrEmpty(path))
         }
     }
 }
-```
+{% endhighlight %}
 
 First, we’re removing the virtual path from the request URL, stripping the _/blog/_ part from applications hosted at a _/blog/_ virtual directory. Then, we’re going to assume that anything that doesn’t have a period (.) in the URL is a slug and is being redirected to _ShowPost.aspx_. An alternative is to rely on a _/posts/_ path, but that will break all relative URLs in my existing application since, for example, _/Style.css_ is not the same as _/posts/Style.css_. Naturally your mileage may vary depending on your existing requirements.
 
 Secondly, we’d like to permanently redirect anyone with a _ShowPost.aspx?id=Integer_ link to the new slugged URL and anyone directly hitting the _ShowPost.aspx?id=slug_ url to the slug itself. This way there’s only one way to address a post, by it’s slug.
 
-```cs
+{% highlight c# %}
 // rewrite ShowPost.aspx link to a slug
 if (path == "ShowPost.aspx" && !string.IsNullOrEmpty(Request["id"]))
 {
@@ -109,7 +109,7 @@ else if (path == "ShowPost.aspx" && !string.IsNullOrEmpty(Request["slug"]))
 {
     Response.RedirectPermanent(Request["slug"]);
 }
-```
+{% endhighlight %}
 
 Here’s a URL that I get after running a task to re-slug all existing posts to my infamous Github is Your New Resume post. It’s a lot nicer!
 

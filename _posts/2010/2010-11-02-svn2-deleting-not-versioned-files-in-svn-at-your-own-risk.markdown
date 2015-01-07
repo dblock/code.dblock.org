@@ -16,7 +16,7 @@ We can do better. I added a new tool, _svn2_ to the [Svn2Svn project](https://gi
 
 Svn2 uses [SharpSVN](http://sharpsvn.open.collab.net/) which can run a _status_ command. For each file that is not-versioned, we call a _Microsoft.VisualBasic.FileIO_ function to recycle it.
 
-```cs
+{% highlight c# %}
 SvnStatusArgs statusArgs = new SvnStatusArgs();
 statusArgs.Depth = SvnDepth.Infinity;
 statusArgs.ThrowOnError = true;
@@ -40,4 +40,4 @@ client.Status(path, statusArgs, new EventHandler<SvnStatusEventArgs>(
             break;
     }
 }));
-```
+{% endhighlight %}

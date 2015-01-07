@@ -13,7 +13,7 @@ Expanding from my [previous post](http://code.dblock.org/grape-api-mounted-on-ra
 
 Instead of sticking all of the Rack application code into _config.ru_, lets build a cleaner _Acme::App _(in [app/acme_app.rb](https://github.com/dblock/grape-on-rack/blob/master/app/acme_app.rb)). We’re going to drop _Rack::TryStatic_ and build this logic ourselves, since we might need to deal with other error codes than 404 (depending on your URL strategy you may be tripping over a 405). The logic remains the same: we try a bunch of static files and delegate to the API otherwise. You can also build primitive routing instead, so that everything requesting _/api_ goes to the API and everything else goes to _Rack::Static_. Your mileage will vary.
 
-```ruby
+{% highlight ruby %}
 module Acme
   class App
     def initialize
@@ -37,13 +37,13 @@ module Acme
     end
   end
 end
-```
+{% endhighlight %}
 
 #### RSpec API Tests
 
 Now that we have an application class, we can add API and Capybara integration tests. We start with RSpec and Rack test gems in _Gemfile_.
 
-```ruby
+{% highlight ruby %}
 group :test do
   gem "rspec"
   gem "rack-test"
@@ -51,11 +51,11 @@ group :test do
   gem "rspec-expectations"
   gem "rspec-mocks"
 end
-```
+{% endhighlight %}
 
 The _spec/spec_helper.rb_ adds Rack::Test.
 
-```ruby
+{% highlight ruby %}
 require 'rubygems'
 
 ENV["RACK_ENV"] ||= 'test'
@@ -67,11 +67,11 @@ RSpec.configure do |config|
   config.mock_with :rspec
   config.expect_with :rspec
 end
-```
+{% endhighlight %}
 
 Testing an API involves making requests on the Rack application, pretty straightforward.
 
-```ruby
+{% highlight ruby %}
 require 'spec_helper'
 
 describe Acme::API do
@@ -90,7 +90,7 @@ describe Acme::API do
     end
   end
 end
-```
+{% endhighlight %}
 
 #### RSpec Capybara Integration Tests
 
@@ -98,25 +98,25 @@ Notice that in the tests above we’re mounting the Rack application and making 
 
 We start by adding capybara into Gemfile. At the time of the writing we need to use the code from Capybara head, since it adds support for _Capybara.app_.
 
-```ruby
+{% highlight ruby %}
 group :test do
   gem "capybara", :git => "https://github.com/jnicklas/capybara.git"
 end
-```
+{% endhighlight %}
 
 The _spec/spec_helper.rb_ requires _capybara/rspec_, which brings in methods like _page.visit_ and assigns an instance of the application to _Capybara.app_. Capybara will launch the application for us.
 
-```ruby
+{% highlight ruby %}
 require 'capybara/rspec'
 
 Capybara.configure do |config|
   config.app = Acme::App.new
 end
-```
+{% endhighlight %}
 
 An integration test can go into _spec/integration_ and must be marked with _request: true _and _js: true_ (the latter forces the use of the Selenium driver that will popup a browser). Let's look for a proper title on the homepage.
 
-```ruby
+{% highlight ruby %}
 require 'spec_helper'
 
 describe "Grape on RACK", :js => true, :type => :request do
@@ -129,7 +129,7 @@ describe "Grape on RACK", :js => true, :type => :request do
     end
   end
 end
-```
+{% endhighlight %}
 
 #### A POST, PUT and Some JQuery
 

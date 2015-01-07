@@ -24,7 +24,7 @@ I picked up [OpenDS](http://www.opends.org/), on open-source server from Sun. Af
 
 We can now access this server with JNDI, which comes standard with Java Platform 1.1.2 or later.
 
-```cs
+{% highlight c# %}
 Hashtable<String, String> env = new Hashtable<String, String>();
 env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
 env.put(Context.PROVIDER_URL, "ldap://localhost:389/dc=example,dc=com");
@@ -38,7 +38,7 @@ while(e.hasMore()) {
     System.out.println(e.next());
 }
 ctx.close();
-```
+{% endhighlight %}
 
 This outputs the attributes of my initial domain context that was created at setup time.
 
@@ -57,7 +57,7 @@ The OpenDS schema is stored in .ldif files in the config\schema directory. The d
 
 There’re several RFCs with various well-known attribute types, such as _name_ or _uid_. We’re only missing _serviceUri_, which we can define as a custom attribute.
 
-```opends
+```
 attributeTypes: ( 1.2.840.113556.1.8000.2554.999999.1 NAME 'serviceUri'
     DESC 'service URI' EQUALITY caseIgnoreMatch ORDERING caseIgnoreOrderingMatch
     SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
@@ -65,7 +65,7 @@ attributeTypes: ( 1.2.840.113556.1.8000.2554.999999.1 NAME 'serviceUri'
 
 Our _Service_ type is defined as follows: an object with a common name (cn), a humanly readable name (name), an object class (Service), a unique identifier (uid) and an url to the service (serviceUri).
 
-```opends
+```
 objectClasses: ( 1.2.840.113556.1.8000.2554.999999.2 NAME 'Service'
     DESC 'a SOAP Service' SUP top
     STRUCTURAL MUST ( cn $ name $ objectClass $ uid $ serviceUri ) )
@@ -79,7 +79,7 @@ You can generate a root OID using [this script](http://msdn.microsoft.com/en-us/
 
 Let's define a Service Java class that can be used to read and write objects to the directory.
 
-```java
+{% highlight java %}
 package com.example.jndi;
 
 import javax.naming.NameNotFoundException;
@@ -128,7 +128,7 @@ public class Service extends UnimplementedDirContext {
         return _name + " @ " + _serviceUri;
     }
 }
-```
+{% endhighlight %}
 
 This is a simple container for attributes. The `UnimplementedDirContext` is an empty class that throws NotImplementedException on two dozen methods that are required by a full `DirContext`.
 
@@ -140,13 +140,13 @@ We’d like to organize services under a Services organization. I’ve created t
 
 A write is a call to `bind`. Binding means connecting a _name_ to an _object_. You can `rebind`, ie. either create or update an existing object.
 
-```java
+{% highlight java %}
 Service demoService = new Service(
         "{F6E978E7-A0BC-47ae-95A9-219CD40C5993}",
         "demoService",
         "http://localhost:20080/demo/");
 ctx.rebind("cn=demoService,o=Services", demoService);
-```
+{% endhighlight %}
 
 Here’s what we have in the directory now (this is the _Manage Entries_ UI from the control panel tool that comes with OpenDS).
 
@@ -156,7 +156,7 @@ Here’s what we have in the directory now (this is the _Manage Entries_ UI from
 
 In order to retrieve a strongly typed object from the directory we must supply an object factory. When the factory encounters an object with an `objectClass=Service`, it will create an instance of such.
 
-```java
+{% highlight java %}
 package com.example.jndi;
 
 import javax.naming.*;
@@ -190,27 +190,27 @@ public class ServiceFactory implements DirObjectFactory {
         return getObjectInstance(obj, name, ctx, env, null);
     }
 }
-```
+{% endhighlight %}
 
 The initial directory context must be told to use this factory.
 
-```java
+{% highlight java %}
 env.put(Context.OBJECT_FACTORIES, "com.example.jndi.ServiceFactory");
-```
+{% endhighlight %}
 
 Finally, the retrieval becomes a simple lookup.
 
-```java
+{% highlight java %}
 Service demoService = (Service) ctx.lookup("cn=demoService,o=Services");
-```
+{% endhighlight %}
 
 #### Deleting Directory Objects
 
 To complete the picture, let's delete a directory object. This is the opposite of `bind`, `unbind`.
 
-```java
+{% highlight java %}
 ctx.unbind("cn=demoService,o=Services");
-```
+{% endhighlight %}
 
 #### A Word on XML
 

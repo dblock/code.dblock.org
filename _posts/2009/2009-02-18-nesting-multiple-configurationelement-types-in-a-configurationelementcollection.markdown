@@ -9,23 +9,23 @@ dblog_post_id: 34
 ---
 Today I stumbled upon an unpleasant problem with .NET configuration. I'd like to have a configuration file that looks like this.
 
-```xml
+{% highlight xml %}
 <collection>
  <one />
  <two />
  <one />
 </collection>
-```
+{% endhighlight %}
 
 Well, this is not kosher in .NET configuration terms. So I reduced my expectations. I want the following.
 
-```xml
+{% highlight xml %}
 <collection>
  <add type="one" />
  <add type="two" />
  <add type="one" />
 </collection>
-```
+{% endhighlight %}
 
 Every element has more-a-less similar parameters, but they might vary slightly. Since "one" and "two" are specialized, I'd like to implement two classes **One** and **Two** and derive them from the same common parent class. How do I achieve that?
 
@@ -35,7 +35,7 @@ The trick is to use a proxy class and to manufacture the right type during deser
 
 #### NestedConfiguration.cs
 
-```cs
+{% highlight c# %}
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -211,11 +211,11 @@ namespace NestedConfiguration
     }
   }
 }
-```
+{% endhighlight %}
 
 #### App.config
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
  <configSections>
@@ -229,11 +229,11 @@ namespace NestedConfiguration
   </collection>
  </CollectionSection>
 </configuration>
-```
+{% endhighlight %}
 
 #### Program.cs
 
-```cs
+{% highlight c# %}
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -264,4 +264,4 @@ namespace NestedConfiguration
     }
   }
 }
-```
+{% endhighlight %}

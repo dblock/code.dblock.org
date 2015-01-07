@@ -17,7 +17,7 @@ Carrying unicows.dll is annoying, this is a setup bootstrapper. So I tried embed
 
 The complete code is [here](https://github.com/dblock/dotnetinstaller/blob/master/dotNetInstallerLib/MSLU.cpp).
 
-```c
+{% highlight c %}
 static HMODULE SaveAndLoadMSLU()
 {
   char tf[MAX_PATH] = { 0 };
@@ -74,4 +74,4 @@ static HMODULE __stdcall LoadMSLU (void)
 // load Microsoft Layer for Unicode (MSLU)
 // http://msdn.microsoft.com/en-us/magazine/cc301794.aspx
 extern "C" HMODULE (__stdcall *_PfnLoadUnicows) (void) = & LoadMSLU;
-```
+{% endhighlight %}

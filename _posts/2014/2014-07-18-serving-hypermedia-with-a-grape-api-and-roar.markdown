@@ -13,7 +13,7 @@ Check out an example application deployed at [http://grape-with-roar.herokuapp.c
 
 First, swap the JSON formatter for _Grape::Formatter::Roar_. It’s implementation is almost identical to the default JSON formatter, except that it passes _env_ along to the _to_json_ call.
 
-```ruby
+{% highlight ruby %}
 module Acme
   module Api
     class RootEndpoint < Grape::API
@@ -23,11 +23,11 @@ module Acme
     end
   end
 end
-```
+{% endhighlight %}
 
 Implement a presenter. It will typically have a number of _:properties_. Include _Grape::Roar::Representer_ to use _present _in your API.
 
-```ruby
+{% highlight ruby %}
 module Acme
   module Api
     module Presenters
@@ -47,11 +47,11 @@ module Acme
     end
   end
 end
-```
+{% endhighlight %}
 
 You can now present an entity in your API implementation.
 
-```ruby
+{% highlight ruby %}
 module Acme
   module Api
     class SplinesEndpoint < Grape::API
@@ -69,7 +69,7 @@ module Acme
     end
   end
 end
-```
+{% endhighlight %}
 
 Click [here](http://grape-with-roar.herokuapp.com/api/splines/12450c8b-af08-472e-91ca-6cd2c718fbb7) to see the above code in action.
 

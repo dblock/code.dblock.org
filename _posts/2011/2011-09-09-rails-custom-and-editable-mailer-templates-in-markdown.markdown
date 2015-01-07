@@ -15,7 +15,7 @@ I’m going to show you how to enable dynamic authoring of mail templates in you
 
 Let's add a _MailTemplate_ that can render itself to HTML using [Sanitize](https://github.com/rgrove/sanitize/) and [RDiscount](https://github.com/rtomayko/rdiscount). The class name will be the mailer and the method name, the mail action.
 
-```ruby
+{% highlight ruby %}
 class MailTemplate
   include Mongoid::Document
 
@@ -32,30 +32,30 @@ class MailTemplate
     Sanitize.clean(RDiscount.new(template_result).to_html.encode("UTF-8", undef: :replace), Sanitize::Config::RELAXED)
   end
 end
-```
+{% endhighlight %}
 
 We need to be able to render this in a mailer, so add a simple controller in _app/controllers/mail_templates_controller.rb._
 
-```ruby
+{% highlight ruby %}
 class MailTemplatesController < ApplicationController
   def show
     @mail_template = MailTemplate.find(params[:id])
   end
 end
-```
+{% endhighlight %}
 
 And a simple view, _app/views/mail_templates/show.html.haml_.
 
-```haml
+{% highlight haml %}
 %div
   = @mail_template.to_html(@context).html_safe
-```
+{% endhighlight %}
 
 You can add a form to edit such a mail template, left as an exercise.
 
 There’re a lot of mailers, so having to create each template by hand doesn’t make a lot of sense. There’s no easy way to enumerate all mailers, so lets define the in some central location and write a Rake task to create these in the database. I wrote _app/mailers/mailers.rb._
 
-```ruby
+{% highlight ruby %}
 module Mailers
 
   ALL = {
@@ -100,17 +100,17 @@ module Mailers
   end
 
 end
-```
+{% endhighlight %}
 
 It’s all pretty straightforward. You can add other mailers to _Mailers.ALL_. A rake task can invoke _Mailers.create_templates!_ so that we get a record in the database with the default data. Here’s an example of _app/views/devise/mailer/reset_password_instructions.md_. Note that this is already written in markdown!
 
-```md
+```
 Hello <%=@resource.email%>!
 ```
 
 Someone has requested a link to change your password, and you can do this through the link below.
 
-```md
+```
 [Change my password](http://example.com/users/password/edit?reset_password_token=<%=@resource.reset_password_token%>)
 
 If you didn't request a password reset, please ignore this email.
@@ -121,7 +121,7 @@ Your password won't change until you access the link above and create a new one.
 
 We want to override the Devise mailer and fetch the mail template, if available. Add _app/mailers/devise_mailer.rb_. The mailer will fetch a template from _Mailers_ and render it.
 
-```ruby
+{% highlight ruby %}
 class DeviseMailer < Devise::Mailer
 
   def template_paths
@@ -143,22 +143,22 @@ class DeviseMailer < Devise::Mailer
   end
 
 end
-```
+{% endhighlight %}
 
 Declare the mailer in _config/initializers/devise.rb_.
 
-```ruby
+{% highlight ruby %}
 Devise.setup do |config|
   config.mailer = "DeviseMailer"
   ...
 end
-```
+{% endhighlight %}
 
 #### Tests
 
 A simple test is to make sure we can actually render an e-mail. Here’s what my _spec/mailers/devise_mailer_spec.rb_ looks like.
 
-```ruby
+{% highlight ruby %}
 require "spec_helper"
 
 describe DeviseMailer do
@@ -183,7 +183,7 @@ describe DeviseMailer do
     end
   end
 end
-```
+{% endhighlight %}
 
 #### Next steps?
 

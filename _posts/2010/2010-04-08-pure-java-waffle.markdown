@@ -18,14 +18,14 @@ Waffle is a thin interface that simplifies Windows authentication and authorizat
 
 This calls Win32 `LogonUser`, examines the user token and extracts all local and domain group memberships from it. This obviously includes nested groups.
 
-```java
+{% highlight java %}
 IWindowsAuthProvider prov = new WindowsAuthProviderImpl();
 IWindowsIdentity identity = prov.logonUser("username", "password");
 System.out.println("User identity: " + identity.getFqn());
 for(IWindowsAccount group : identity.getGroups()) {
     System.out.println(" " + group.getFqn() + " (" + group.getSidString() + ")");
 }
-```
+{% endhighlight %}
 
 Here’re the first lines of output for my current user:
 
@@ -41,44 +41,44 @@ NT AUTHORITY\NETWORK (S-1-5-2)
 
 #### Active directory: get the list of trusted domains
 
-```java
+{% highlight java %}
 IWindowsAuthProvider prov = new WindowsAuthProviderImpl();
 IWindowsDomain[] domains = prov.getDomains();
 for(IWindowsDomain domain : domains) {
     System.out.println(domain.getFqn() + ": " + domain.getTrustDirectionString());
 }
-```
+{% endhighlight %}
 
 The typical scenario is presenting a dropdown in front of the user to choose domains he can logon to. This list includes the current domain and all domain trusts.
 
 #### Active directory: is this computer joined to a domain?
 
-```java
+{% highlight java %}
 IWindowsAuthProvider prov = new WindowsAuthProviderImpl();
 IWindowsComputer computer = prov.getCurrentComputer();
 System.out.println(computer.getComputerName());
 System.out.println(computer.getJoinStatus());
 System.out.println(computer.getMemberOf());
-```
+{% endhighlight %}
 
 For systems that run both with and without active directory you need to programmatically figure out whether a computer is joined to a domain or a workgroup. If it’s joined to a domain or a workgroup you want to know what domain the computer is joined to.
 
 #### Local machine: enumerate local groups
 
-```java
+{% highlight java %}
 IWindowsAuthProvider prov = new WindowsAuthProviderImpl();
 IWindowsComputer computer = prov.getCurrentComputer();
 String[] localGroups = computer.getGroups();
 for(String localGroup : localGroups) {
     System.out.println(" " + localGroup);
 }
-```
+{% endhighlight %}
 
 #### Negotiate: single sign-on
 
 This is the sweetest waffle, both the client and the server-side of the Negotiate protocol made super easy. You would typically split this code in two halves and do the work of transmitting the tokens between client and server. In the end, the user is logged on to the server side and you can examine his local and domain groups.
 
-```java
+{% highlight java %}
 String securityPackage = "Negotiate";
 // client credentials handle
 IWindowsCredentialsHandle clientCredentials = WindowsCredentialsHandleImpl.getCurrent(securityPackage);
@@ -111,7 +111,7 @@ for (IWindowsAccount group : serverContext.getIdentity().getGroups()) {
 serverContext.dispose();
 clientContext.dispose();
 clientCredentials.dispose();
-```
+{% endhighlight %}
 
 #### Integration and Download
 

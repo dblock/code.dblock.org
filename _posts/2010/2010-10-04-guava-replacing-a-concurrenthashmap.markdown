@@ -13,11 +13,11 @@ Negotiate is a multi-step protocol. After an initial request the Waffle authenti
 
 One of the solutions is to swap the hash structure for a cache that expires entries. I found [Guava (aka Google-collections)](http://code.google.com/p/guava-libraries/). Here’s my new concurrent hashmap with expiration.
 
-```java
+{% highlight java %}
 ConcurrentMap<String, CtxtHandle> _continueContexts = new MapMaker()
   .expiration(10, TimeUnit.SECONDS)
   .makeMap();
-```
+{% endhighlight %}
 
 It couldn’t have been easier.
 

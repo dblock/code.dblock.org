@@ -9,7 +9,7 @@ dblog_post_id: 372
 ---
 There’re two kinds of developers: those who use _should_ in RSpec examples and those who use present tense.
 
-```ruby
+{% highlight ruby %}
 describe Fridge do
   when "plugged in" do
     before do
@@ -21,9 +21,9 @@ describe Fridge do
     end
   end
 end
-```
+{% endhighlight %}
 
-```ruby
+{% highlight ruby %}
 describe Fridge do
   when "plugged in" do
     before do
@@ -35,7 +35,7 @@ describe Fridge do
     end
   end
 end
-```
+{% endhighlight %}
 
 Should you use _should_?
 

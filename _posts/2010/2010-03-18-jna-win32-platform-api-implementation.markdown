@@ -19,7 +19,7 @@ Asking the security context about group memberships is hence is the "correct" wa
 
 What we want is a security token for the current thread or, if that doesn’t exist, of the current process. This is the token that gives you access to the information such as which user created the thread or process (self) and hence which security groups are attached to it.
 
-```java
+{% highlight java %}
 HANDLEByReference phToken = new HANDLEByReference();
 HANDLE threadHandle = Kernel32.INSTANCE.GetCurrentThread();
 if (! Advapi32.INSTANCE.OpenThreadToken(threadHandle,
@@ -31,11 +31,11 @@ if (! Advapi32.INSTANCE.OpenThreadToken(threadHandle,
     }
 }
 Kernel32.INSTANCE.CloseHandle(phToken.getValue());
-```
+{% endhighlight %}
 
 Notice that this kind of code is almost identical to .NET PInvoke. JNA makes it completely trivial to wrap a DLL function.
 
-```java
+{% highlight java %}
 public interface Advapi32 extends W32API {
     Advapi32 INSTANCE = (Advapi32) Native.loadLibrary("Advapi32",
             Advapi32.class, W32APIOptions.UNICODE_OPTIONS);
@@ -45,24 +45,24 @@ public interface Advapi32 extends W32API {
             int DesiredAccess,
             HANDLEByReference TokenHandle);
 }
-```
+{% endhighlight %}
 
 #### Currently Logged-On User: security groups
 
 Now that we’re holding a security token, we can get the security groups. This is done with Advapi32.dll’s GetTokenInformation. The latter is a little tricky because the Win32 API is capable of retrieving all kinds of token information and takes a pointer to a buffer in memory. But in Java we want to get strongly typed Structure objects back. JNA simplifies this and makes pointer and structure virtually interchangeable by doing all the marshalling logic under the hood.
 
-```java
+{% highlight java %}
 public boolean GetTokenInformation(
         HANDLE tokenHandle,
         int tokenInformationClass,
         Structure tokenInformation,
         int tokenInformationLength,
         IntByReference returnLength);
-```
+{% endhighlight %}
 
 We can derive `TOKEN_GROUPS` from `Structure` and pass it as `tokenInformation`.
 
-```java
+{% highlight java %}
 public static class TOKEN_GROUPS extends Structure {
     public TOKEN_GROUPS() {
         super();
@@ -80,13 +80,13 @@ public static class TOKEN_GROUPS extends Structure {
         return (SID_AND_ATTRIBUTES[]) Group0.toArray(GroupCount);
     }
 }
-```
+{% endhighlight %}
 
 Notice that the number of `SID_AND_ATTRIBUTES` is unknown. When `GetTokenInformation` returns it puts the number of these items into `GroupCount`. JNA supports `Structure.toArray` that just says "this is not a structure, it’s an array of structures". This is similar to .NET’s `PInvoke Marshal.PtrToStructure`, albeit slightly more hacky because what we get back from Win32 is a pointer to an array, not a structure.
 
 Finally, we can call `GetTokenInformation`, the first time to obtain the size of the memory required and the second time to get the actual data.
 
-```java
+{% highlight java %}
 // get token group information size
 IntByReference tokenInformationLength = new IntByReference();
 if (Advapi32.INSTANCE.GetTokenInformation(hToken,
@@ -111,13 +111,13 @@ for (SID_AND_ATTRIBUTES sidAndAttribute : groups.getGroups()) {
         System.out.println("Group name: <unknown>");
     }
 }
-```
+{% endhighlight %}
 
 #### Logon a User: security groups
 
 The only difference of obtaining the security groups of a user that we logon with a username and password is that the user’s token is returned by `LogonUser`.
 
-```java
+{% highlight java %}
 HANDLEByReference phUser = new HANDLEByReference();
 if(! Advapi32.INSTANCE.LogonUser(username, domain, password, WinBase.LOGON32_LOGON_NETWORK,
    WinBase.LOGON32_PROVIDER_DEFAULT, phUser)) {
@@ -129,7 +129,7 @@ if(! Advapi32.INSTANCE.LogonUser(username, domain, password, WinBase.LOGON32_LOG
 //
 
 Kernel32.INSTANCE.CloseHandle(phUser.getValue());
-```
+{% endhighlight %}
 
 #### JNA Platform Library: making it easy, just for you
 

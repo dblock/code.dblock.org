@@ -15,7 +15,7 @@ The [Atom Publishing Protocol](http://bitworking.org/projects/atom/rfc5023.html)
 
 My current blog implementation supports ATOM. This is done by using an asp:Repeater to which I bind a data set.
 
-```xml
+{% highlight xml %}
 <feed xml:lang="en-us" version="0.3" xmlns="http://purl.org/atom/ns#">
   <title>Title</title>
   <link rel="alternate" type="application/xhtml+xml" href="AtomPost.aspx" />
@@ -43,11 +43,11 @@ My current blog implementation supports ATOM. This is done by using an asp:Repea
     </ItemTemplate>
   </asp:Repeater>
 </feed>
-```
+{% endhighlight %}
 
 This works fine for generating feeds, but in order to consume ATOM posts I will need an object model for feed items. That’s where the "not invented here" syndrome has to stop and I am going to let [Argotic](http://argotic.codeplex.com/) do the job. First, by rewriting the above ASP.NET code in C#.
 
-```cs
+{% highlight c# %}
 Response.ContentType = "application/atom+xml;charset=\"utf-8\"";
 
 AtomFeed feed = new AtomFeed();
@@ -79,19 +79,19 @@ foreach (TransitPost post in posts)
 
 feed.Save(Response.OutputStream);
 Response.End();
-```
+{% endhighlight %}
 
 ### AtomPub Discovery
 
 A client that creates posts must be able to find out where to POST to. This is done by creating a service document and pointing the default blog page to it. Interestingly LiveWriter is a little thick with relative URLs, the href below is actually replaced by full URI in code.
 
-```xml
+{% highlight xml %}
 <link id="linkAtomPost" runat="server" rel="service" type="application/atomsvc+xml" href="AtomSvc.aspx">
-```
+{% endhighlight %}
 
 The service document describes a workspace with collections. We have two: one for posts and another for images. The one for posts includes post categories.
 
-```xml
+{% highlight xml %}
 <service xmlns="http://www.w3.org/2007/app" xmlns:atom="http://www.w3.org/2005/Atom">
   <workspace>
     <atom:title>DBlog.NET</atom:title>
@@ -111,7 +111,7 @@ The service document describes a workspace with collections. We have two: one fo
     </collection>
   </workspace>
 </service>
-```
+{% endhighlight %}
 
 We now have Default.aspx that points to the service document, which points to AtomPost.aspx that can generate a feed. The rest doesn’t exist yet, but this is enough to make LiveWriter happy and allow it to register the blog. LiveWriter will automatically detect the Posts collection and, since it’s still a little thick, prompt to which image collection to post images to (we only have one).
 
@@ -121,14 +121,14 @@ To create a post we must at least understand a POST request to AtomPost.aspx.
 
 The client is posting an ATOM entry that we must read.
 
-```cs
+{% highlight c# %}
 AtomEntry atomEntry = new AtomEntry();
 atomEntry.Load(Request.InputStream);
-```
+{% endhighlight %}
 
 The blog system has objects of type Post that are going to be created. Also note that the post comes with ATOM categories – here you would need to recognize which ones must be created and which ones exist as well as associate the categories with the new post. We’ll omit that code to simplify things.
 
-```cs
+{% highlight c# %}
 Post post = new Post();
 post.Id = RequestId;
 post.Title = atomEntry.Title.Content;
@@ -136,22 +136,22 @@ post.Body = atomEntry.Content.Content;
 post.Created = atomEntry.PublishedOn;
 post.Modified = atomEntry.UpdatedOn;
 post.Id = SessionManager.BlogService.CreateOrUpdatePost(post);
-```
+{% endhighlight %}
 
 The post has been created, the server must respond with 201 Created and a new location for this post.
 
-```cs
+{% highlight c# %}
 Response.ContentType = "application/atom+xml;type=entry;charset=\"utf-8\"";
 Response.StatusCode = 201;
 Response.StatusDescription = "Created";
 string location = string.Format("AtomPost.aspx?id={0}", post.Id);
 Response.Headers.Add("Location", location);
 Response.Headers.Add("Content-Location", location);
-```
+{% endhighlight %}
 
 We’ll also add metadata that describes the new post ID and location and return the post to the client.
 
-```cs
+{% highlight c# %}
 atomEntry.Id = new AtomId(new Uri(string.Format("Post/{0}", post.Id)));
 atomEntry.Links.Add(new AtomLink(new Uri(string.Format("AtomPost.aspx?id={0}", post.Id))));
 atomEntry.Links.Add(new AtomLink(new Uri(string.Format("AtomPost.aspx?id={0}", post.Id)), "edit"));
@@ -159,13 +159,13 @@ AtomLink atomEntryUri = new AtomLink(new Uri(string.Format("ShowPost.aspx?id={0}
 atomEntryUri.ContentType = "text/html";
 atomEntry.Links.Add(atomEntryUri);
 atomEntry.Save(Response.OutputStream);
-```
+{% endhighlight %}
 
 There’s no more data to be written to the client. Note that this throws a `ThreadAbortException` that must be trapped in the page code.
 
-```
+{% highlight c# %}
 Response.End();
-```
+{% endhighlight %}
 
 ### Updating and Retrieving Posts
 
@@ -176,7 +176,7 @@ There’re actually four scenarios to implement in AtomPost.
 - **POST** : create a post – see Creating Posts code above.
 - **PUT** with a post ID: update an existing post – see Creating Posts code above.
 
-```cs
+{% highlight c# %}
 switch (Request.HttpMethod)
 {
   case "POST":
@@ -195,7 +195,7 @@ switch (Request.HttpMethod)
   default:
     throw new NotSupportedException(Request.HttpMethod);
 }
-```
+{% endhighlight %}
 
 You can see the complete code for AtomPost [here](https://github.com/dblock/dblog/blob/master/Web/AtomPost.aspx.cs).
 
@@ -203,7 +203,7 @@ You can see the complete code for AtomPost [here](https://github.com/dblock/dblo
 
 Images are similar to posts, except that image data is never embedded in an Atom entry. An image is simply POSTed as binary data and reused in posts with the location that the server returns.
 
-```cs
+{% highlight c# %}
 Image image = new Image();
 image.Id = RequestId;
 image.Name = string.Format("{0}.jpg", Request.Headers["Slug"]);
@@ -221,7 +221,7 @@ Response.Headers.Add("Location", location);
 AtomEntry atomEntry = GetImage(image);
 atomEntry.Save(Response.OutputStream);
 Response.End();
-```
+{% endhighlight %}
 
 Similarly to AtomPost, AtomImage supports GET, POST and PUT. You can see the full code [here](https://github.com/dblock/dblog/blob/master/Web/AtomImage.aspx.cs).
 

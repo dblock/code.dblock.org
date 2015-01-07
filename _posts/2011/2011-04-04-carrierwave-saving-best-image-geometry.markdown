@@ -13,19 +13,19 @@ I recently needed to find out the geometry of the image being uploaded via Carri
 
 First, lets define a "best" version of the image. That’s one that’s not being resized, only converted into JPG.
 
-```ruby
+{% highlight ruby %}
 class ArtworkUploader < CarrierWave::Uploader::Base
   version :best do
     process :convert => 'jpg'
   end
 end
-```
+{% endhighlight %}
 
 #### Fetch Geometry on Upload
 
 Notice the process declarations above: both _resize_to_limit_ and _convert_ are methods of the uploader class. We can therefore add a new _get_geometry_ function and store the geometry of the uploaded image with this version.
 
-```ruby
+{% highlight ruby %}
 class ArtworkUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
 
@@ -45,13 +45,13 @@ class ArtworkUploader < CarrierWave::Uploader::Base
     end
   end
 end
-```
+{% endhighlight %}
 
 #### Save Geometry
 
 Finally, we would like to store _best_width_ and _best_height_ with the _Image_ model. We use MongoId, so we can fetch the geometry _before_save_.
 
-```ruby
+{% highlight ruby %}
 class Image
 
   field :best_width
@@ -68,6 +68,6 @@ class Image
   end
 
 end
-```
+{% endhighlight %}
 
 I think image geometry should be a built-in function and property of Carrierwave. Maybe this can be improved further and make it into the library?

@@ -11,7 +11,7 @@ I’ve been tracking a bug in [CabLib](http://www.codeproject.com/KB/files/CABCo
 
 One of the more interesting aspects of CABs is so-called split CABs. This is just a chain of CAB files, useful if you need to put CABs on a set of floppy drives or embed as a Win32 resource, as dotNetInstaller does (resource size is limited). The Cabinet.dll interface is based on callbacks: you call [FDICopy](http://msdn.microsoft.com/en-us/library/bb432270(VS.85).aspx) and it calls you back (`fdintCABINET_INFO`) whenever it encounters a file that is split over several CABs, telling you which next CAB to process. Logically, you would want to process that next CAB, except that here you need to wait for FDICopy to return to do it. This means you need to remember what the next CAB name is, so that you can call FDICopy on it. The algorithm around FDICopy looks like this.
 
-```cpp
+{% highlight cpp %}
 while (TRUE)
 {
     if (! FdiCopy(context, cabFile, cabFolder, 0, FDICallback, 0, pParam))
@@ -22,10 +22,11 @@ while (TRUE)
 
     cabFile = nextCab;
 }
-```
+{% endhighlight %}
+
 ... and the callback ...
 
-```cpp
+{% highlight cpp %}
 INT_PTR FdiCallback(FDINOTIFICATIONTYPE fdint, PFDINOTIFICATION pfdin)
 {
     switch (fdint)
@@ -33,13 +34,13 @@ INT_PTR FdiCallback(FDINOTIFICATIONTYPE fdint, PFDINOTIFICATION pfdin)
         case fdintCABINET_INFO:
         {
             nextCab = pfdin->psz1;
-```
+{% endhighlight %}
 
 There’s a bug here, one that was not obvious to track. The symptom is that you’re not getting all the files extracted, some CAB files are missed. The problem is that while you’re processing CAB1, for FILE1 you can get a callback that says to continue in CAB2. Then you can get a callback for FILE2 that says to continue in CAB3. You should be ignoring that second callback because you haven’t processed CAB2 yet.
 
 I initially fixed it with a list, but CabLib author pointed out that this is an overkill. The final code looks like this.
 
-```cpp
+{% highlight cpp %}
 while (TRUE)
 {
     nextCab.clear();
@@ -52,9 +53,9 @@ while (TRUE)
 
     cabFile = nextCab;
 }
-```
+{% endhighlight %}
 
-```cpp
+{% highlight cpp %}
 INT_PTR FdiCallback(FDINOTIFICATIONTYPE fdint, PFDINOTIFICATION pfdin)
 {
     switch (fdint)
@@ -63,6 +64,6 @@ INT_PTR FdiCallback(FDINOTIFICATIONTYPE fdint, PFDINOTIFICATION pfdin)
         {
             if (nextCab.empty())
                 nextCab = pfdin->psz1;
-```
+{% endhighlight %}
 
 This was a huge time suck from my development time. If there’s one conclusion you want to take away from this, is that you should never design an interface like the one in Cabinet.dll.

@@ -17,23 +17,23 @@ _conf/context.xml_
 
 Add the Waffle valve.
 
-```xml
+{% highlight xml %}
 <Valve className="waffle.apache.NegotiateAuthenticator" />
-```
+{% endhighlight %}
 
 _conf/server.xml_
 
 Replace UserDatabaseRealm with the Waffle dummy realm.
 
-```xml
+{% highlight xml %}
 <Realm className="waffle.apache.WindowsRealm" />
-```
+{% endhighlight %}
 
 _conf/web.xml_
 
 Protect all pages from unauthenticated users.
 
-```xml
+{% highlight xml %}
 <security-constraint>
   <web-resource-collection>
     <web-resource-name>
@@ -47,18 +47,18 @@ Protect all pages from unauthenticated users.
     <role-name>BUILTIN\Users</role-name>
   </auth-constraint>
 </security-constraint>
-```
+{% endhighlight %}
 
 You may declare the group as a role.
 
-```xml
+{% highlight xml %}
 <security-role>
   <description>
     The role that is required to log in.
   </description>
   <role-name>BUILTIN\Users</role-name>
 </security-role>
-```
+{% endhighlight %}
 
 You can now navigate to http://localhost:8080/ and perform single sign-on. In the logs you’ll see something like this.
 
@@ -73,11 +73,11 @@ _webapps/manager/WEB-INF/web.xml_
 
 Replace the authentication constraint to the users that should be able to access the manager application. For my example I’ll allow all authenticated users. You may also declare the group as a role (see above).
 
-```xml
+{% highlight xml %}
 <auth-constraint>
   <role-name>BUILTIN\Users</role-name>
 </auth-constraint>
-```
+{% endhighlight %}
 
 Remove the entire _login-config_ block.
 
@@ -85,10 +85,10 @@ _webapps/manager/401.jsp_
 
 Remove the following line of code.
 
-```jsp
+{% highlight jsp %}
 <%
     response.setHeader("WWW-Authenticate", "Basic realm=\"Tomcat Manager Application\"");
 %>
-```
+{% endhighlight %}
 
 It’s an interesting way to force a basic authentication popup. If you fail authentication, you get this popup every time, even if you changed BASIC authentication for something else. I believe it’s part of some clever evil plot to cause users many hours of frustration.

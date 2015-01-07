@@ -13,7 +13,7 @@ Today’s problem looks as follows. I have a table called _fruits_. Each _fruit 
 
 Turns out to be very straightforward with DataMapper.
 
-```ruby
+{% highlight ruby %}
 class Color
   include DataMapper::Resource
   storage_names[:default] = "fruits"
@@ -31,6 +31,6 @@ class Color
     end
   end
 end
-```
+{% endhighlight %}
 
 This creates a class called `Color` with a `name` field that comes from the `color` column of the _fruits_ table. We replace the `Color.all` method with our own implementation that makes a `DISTINCT` query at the adapter level. As a bonus you can see how you can rename the all method (we don’t really call the old `_all` implementation here, but it’s often useful). This lets you do `Color.all`.

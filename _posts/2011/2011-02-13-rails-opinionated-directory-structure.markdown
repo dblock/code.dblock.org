@@ -11,7 +11,7 @@ One thing that has been irritating me is the default Rails _app/models_ director
 
 This can be easily fixed by telling Rails to load all sub-directories under models, in _config/application.rb_.
 
-```ruby
+{% highlight ruby %}
 # Load all subdirectories of app/models.
 config.autoload_paths += Dir["#{Rails.root}/app/models/\*\*/\*"]
-```
+{% endhighlight %}

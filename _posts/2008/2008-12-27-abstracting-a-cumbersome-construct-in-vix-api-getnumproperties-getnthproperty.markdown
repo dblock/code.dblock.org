@@ -11,7 +11,7 @@ Did I tell you how much I love **[yield return](http://msdn.microsoft.com/en-us/
 
 One of the peculiar VIX COM API constructs is the combination that returns arrays of properties. This is done with two functions: `GetNumProperties` and `GetNthProperties`. The first returns the number of property arrays returned by the job and the second fetches a property array at a given index. The first obvious step is to wrap the functions within the job class.
 
-```cs
+{% highlight c# %}
 public T GetNthProperties<T>(int index, object[] properties) {
   object result = null;
   VMWareInterop.Check(_handle.GetNthProperties(index, properties, ref result));
@@ -21,11 +21,11 @@ public T GetNthProperties<T>(int index, object[] properties) {
 public int GetNumProperties(int property) {
   return _handle.GetNumProperties(property);
 }
-```
+{% endhighlight %}
 
 We can now write such properties as `RunningVirtualMachines`.
 
-```cs
+{% highlight c# %}
 public IEnumerable<VMWareVirtualMachine> RunningVirtualMachines {
    get
    {
@@ -41,11 +41,11 @@ public IEnumerable<VMWareVirtualMachine> RunningVirtualMachines {
       }
    }
 }
-```
+{% endhighlight %}
 
 This is still not good enough. Let's combine the number of results and the results themselves in a `YieldWait` method.
 
-```cs
+{% highlight c# %}
 public IEnumerable<object[]> YieldWait(object[] properties, int timeoutInSeconds) {
    Wait(timeoutInSeconds);
    for (int i = 0; i < GetNumProperties((int)properties[0]); i++)
@@ -53,11 +53,11 @@ public IEnumerable<object[]> YieldWait(object[] properties, int timeoutInSeconds
       yield return GetNthProperties<object[]>(i, properties);
    }
 }
-```
+{% endhighlight %}
 
 This results in a nice improvement over the previous implementation: we're interating over a resultset rather than calling methods for how many results are available and to fetch each result.
 
-```cs
+{% highlight c# %}
 public IEnumerable<VMWareVirtualMachine> RunningVirtualMachines {
    get
    {
@@ -71,4 +71,4 @@ public IEnumerable<VMWareVirtualMachine> RunningVirtualMachines {
       }
    }
 }
-```
+{% endhighlight %}

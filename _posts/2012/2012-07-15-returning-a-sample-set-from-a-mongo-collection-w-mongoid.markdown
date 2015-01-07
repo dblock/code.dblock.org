@@ -8,7 +8,7 @@ comments: true
 dblog_post_id: 344
 ---
 
-```ruby
+{% highlight ruby %}
 module Mongoid
   class Criteria
     def sample(n = 1)
@@ -21,7 +21,7 @@ module Mongoid
     end
   end
 end
-```
+{% endhighlight %}
 
 > [https://gist.github.com/3113975](https://gist.github.com/3113975)
 

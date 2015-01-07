@@ -17,13 +17,13 @@ This library is also a nice example of a generic SOAP client wrapper in Ruby. I 
 
 I borrowed error handling from [@modetojoy](https://twitter.com/modetojoy)’s Mongoid. Today someone said: "I had a bug in a spec and Durran told me how to fix it in an error message." True story. To accomplish this we define a base error that holds the problem, summary and resolution. In tax_cloud’s case this is  [TaxCloud::Errors::TaxCloudError](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud/errors/tax_cloud_error.rb) paired with [config/locales/en.yml](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/config/locales/en.yml), a locale file that does the error formatting. There’re two things to do in order for the error code to find the message: add the locale file to the load path, in [tax_cloud.rb](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud.rb), and do a bit of formatting with I18n.
 
-```ruby
+{% highlight ruby %}
 I18n.load_path << File.join(File.dirname(__FILE__), "config", "locales", "en.yml")
 
 def translate(key, options)
     ::I18n.translate("#{BASE_KEY}.#{key}", { :locale => :en }.merge(options)).strip
 end
-```
+{% endhighlight %}
 
 What does an error in tax_cloud look like?
 
@@ -51,7 +51,7 @@ Pretty awesome.
 
 The tax_cloud gem uses [Savon](https://github.com/savonrb/savon) to make SOAP requests. "Savon" is French for "Soap", which confuses the French speakers like myself trying to explain that SOAP is Savon. Anyway, a client is initialized with its WSDL.
 
-```ruby
+{% highlight ruby %}
 module TaxCloud #:nodoc:
   class Client < Savon::Client
     def initialize
@@ -59,11 +59,11 @@ module TaxCloud #:nodoc:
     end
   end
 end
-```
+{% endhighlight %}
 
 First, we need to add authentication to every request, which is required by the API. We can override _request_.
 
-```ruby
+{% highlight ruby %}
 def request(method, body = {})
   super method, :body => body.merge(auth_params)
 end
@@ -74,11 +74,11 @@ def auth_params
     'apiKey' => TaxCloud.configuration.api_key
   }
 end
-```
+{% endhighlight %}
 
 Second, we want to handle SOAP errors, and give a detailed explanation for SOAP faults, Mongoid-style. This is your typical block with _yield_.
 
-```ruby
+{% highlight ruby %}
 def request(method, body = {})
   safe do
     super method, :body => body.merge(auth_params)
@@ -92,7 +92,7 @@ def safe(&block)
     raise TaxCloud::Errors::SoapError.new(e)
   end
 end
-```
+{% endhighlight %}
 
 The complete code can be found in [client.rb](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud/client.rb). The error itself is parsed in [soap_error.rb](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud/errors/soap_error.rb) – SOAP faults come in standard format.
 
@@ -106,7 +106,7 @@ Most services have a common response pattern, generalizing it yields a very prod
 
 The tax_cloud gem uses [VCR](https://github.com/myronmarston/vcr) to test SOAP requests. It’s surprisingly easy: use a cassette (a YAML file), which records it the first time you make a request. Second time around the file contents are used and no HTTP requests are made. You can filter out sensitive keys in the configuration.
 
-```ruby
+{% highlight ruby %}
 require 'vcr'
 
 VCR.configure do |c|
@@ -140,7 +140,7 @@ def test_ping
    assert_equal "OK", response
   end
 end
-```
+{% endhighlight %}
 
 You can see the rest of the tests [here](https://github.com/drewtempelmeyer/tax_cloud/tree/master/test).
 

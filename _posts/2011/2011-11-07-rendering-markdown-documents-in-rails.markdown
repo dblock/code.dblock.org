@@ -15,16 +15,16 @@ We use the following code to render API documentation, which is written in [Mark
 
 Add a route that will capture the document filename in _config/routes.rb_. Bonus features: a namespaced controller and a redirect to _/api/v1/docs_ for _/api/v1_.
 
-```ruby
+{% highlight ruby %}
 scope 'api', :module => 'api' do
   match '/:version' => redirect('/api/%{version}/docs')
   match '/:version/docs/(/:page)' => "docs#show"
 end
-```
+{% endhighlight %}
 
 Create a _controllers/api/docs_controller.rb_.
 
-```ruby
+{% highlight ruby %}
 class Api::DocsController < ApplicationController
 
   # GET /api/docs/:version/:page
@@ -42,7 +42,7 @@ class Api::DocsController < ApplicationController
   end
 
 end
-```
+{% endhighlight %}
 
 You can now create _public/api/v1/docs/something.md_ and it will render under _api/v1/docs/something_.
 

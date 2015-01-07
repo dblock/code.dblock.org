@@ -30,7 +30,7 @@ There're two types of APIs.
 
 Connecting to a local VMWare Workstation or an ESX server is virtually identical. The ESX server requires an URL to the SOAP SDK (eg. [https://esxserver/sdk](https://esxserver/sdk)) and a username and password.
 
-```charp
+{% highlight c# %}
 private void ConnectToVMWareWorkstation()
 {
   Connect(Constants.VIX_SERVICEPROVIDER_VMWARE_WORKSTATION, string.Empty, 0, string.Empty, string.Empty);
@@ -56,13 +56,13 @@ private void Connect(int hostType, string hostName, int hostPort, string usernam
   object[] hostArray = hosts as object[];
   _host = (IHost) hostArray[0];
 }
-```
+{% endhighlight %}
 
 #### Locating a Virtual Machine
 
 A virtual machine on a VMWare Workstation is a file with a standard path (eg. _C:\Virtual Machines\myvirtualmachine.vmx_). Unsurprisingly it is the same thing on an ESX server, but with a relative storage path. The latter can be found in the VMWare Infrastructure Client: right click on a virtual machine, choose _Edit Settings_, click the _Options_ tab and note the _Virtual Machine Configuration File_ (eg. _[storage] virtualmachine/virtualmachine.vmx_).
 
-```cs
+{% highlight c# %}
 public void OpenFile(string fileName)
 {
   // Open the VM from the path specified
@@ -75,23 +75,23 @@ public void OpenFile(string fileName)
   Object[] vmArray = vms as Object[];
   _vm = (IVM) vmArray[0];
 }
-```
+{% endhighlight %}
 
 #### Power-on, power-off, copy and execute
 
 These are straightforward operations supported by the SDK via the IVM interface returned set by the above-mentioned OpenFile method. Here're some examples.
 
-```cs
+{% highlight c# %}
 IJob PowerOn(int powerOnOptions, IVixHandle propertyList, ICallback jobDoneCallback);
 
 IJob RevertToSnapshot(ISnapshot snapshot, int options, IVixHandle propertyList, ICallback jobDoneCallback);
 
 IJob CopyFileFromHostToGuest(string hostPathName, string guestPathName, int options, IVixHandle propertyList, ICallback jobDoneCallback);
-```
+{% endhighlight %}
 
 It is now possible to execute commands synchronously and asynchronously, without having to involve WMI or another similar method.
 
-```cs
+{% highlight c# %}
 public int Execute(string path, string parameters)
 {
   IJob vmJob = _vm.RunProgramInGuest(path, parameters, VixCOM.Constants.VIX_RUNPROGRAM_ACTIVATE_WINDOW, null, null);
@@ -99,7 +99,7 @@ public int Execute(string path, string parameters)
   object results = VmwareVixInterop.Wait(vmJob, propertyIDs);
   return Convert.ToInt32(((object[])results)[0]);
 }
-```
+{% endhighlight %}
 
 I think the whole job-based API could use a nice .NET wrapper :)
 

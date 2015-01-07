@@ -9,7 +9,7 @@ dblog_post_id: 399
 ---
 Got a chance to play with [Goliath](http://postrank-labs.github.io/goliath/) for a bit. You don’t need to do much work to mount [Grape](https://github.com/intridea/grape) behind it. Grape figures out content-negotiation and formatting for you, so just stream the response through Goliath.
 
-```ruby
+{% highlight ruby %}
 module Acme
  class Ping < Grape::API
    format :json
@@ -27,11 +27,11 @@ module Acme
    end
  end
 end
-```
+{% endhighlight %}
 
 Tests for something like this are a little bit tricky, because Goliath is fully asynchronous.
 
-```ruby
+{% highlight ruby %}
 describe Acme::API do
  it "ping" do
    with_api Acme::App do
@@ -41,7 +41,7 @@ describe Acme::API do
    end
  end
 end
-```
+{% endhighlight %}
 
 Working code in [https://github.com/dblock/grape-on-goliath](https://github.com/dblock/grape-on-goliath).
 

@@ -15,7 +15,7 @@ It’s a great example of total failure. Something has to be done.
 
 The first part of testing a UI is being able to execute and shutdown the application. Fortunately .NET has a very usable model for this.
 
-```cs
+{% highlight c# %}
 public static int Run(string filename, string args)
 {
     using(Process p = new Process())
@@ -32,13 +32,13 @@ public static int Run(string filename, string args)
         return p.ExitCode;
     }
 }
-```
+{% endhighlight %}
 
 ### Simple UI Tests
 
 We can fetch the window title and test simple scenarios such as passing /? on the command line: the window title should be "Help".
 
-```cs
+{% highlight c# %}
 [Test]
 public void TestRunHelp()
 {
@@ -55,7 +55,7 @@ public void TestRunHelp()
         p.WaitForExit();
     }
 }
-```
+{% endhighlight %}
 
 ### Hitting Menu Items
 
@@ -70,7 +70,7 @@ I used these two articles to get started, so I’ll skip the how. Just read them
 
 I was too lazy to look at the code of the application I am testing, so I wrote something simple to dump controls. This gives a tree of controls that I can now fetch, use, etc.
 
-```cs
+{% highlight c# %}
 public abstract class UIAutomation
 {
     public static void DumpControl(AutomationElement el)
@@ -97,13 +97,13 @@ public abstract class UIAutomation
         }
     }
 }
-```
+{% endhighlight %}
 
 ### Working with Menus
 
 You can locate the application’s menu bar and each menu.
 
-```cs
+{% highlight c# %}
 AutomationElement installerEditorForm = AutomationElement.FromHandle(p.MainWindowHandle);
 // menus
 AutomationElementCollection menuBars = installerEditorForm.FindAll(TreeScope.Children, new PropertyCondition(
@@ -117,11 +117,11 @@ fileMenuItem = menus[0];
 viewMenuItem = menus[1];
 toolsMenuItem = menus[2];
 helpMenuItem = menus[3];
-```
+{% endhighlight %}
 
 To click the File menu, you get a pattern that applies to menus and call a specific pattern method (for an ExpandCollapsePattern, Expand).
 
-```cs
+{% highlight c# %}
 ExpandCollapsePattern fileMenuItemOpenPattern = (ExpandCollapsePattern) fileMenuItem.GetCurrentPattern(
     ExpandCollapsePattern.Pattern);
 fileMenuItemOpenPattern.Expand();
@@ -133,7 +133,7 @@ AutomationElement fileMenuItemNew = installerEditorUI.fileMenuItem.FindFirst(Tre
     new AndCondition(
         new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.MenuItem),
         new PropertyCondition(AutomationElement.NameProperty, "New")));
-```
+{% endhighlight %}
 
 You can already see that this is becoming rather cumbersome. I would have to write a UIMenu and UIMenuItem class or it’s going to be a copy-paste exercise.
 
@@ -141,7 +141,7 @@ You can already see that this is becoming rather cumbersome. I would have to wri
 
 Someone must have had this problem before me. That someone is ThoughtWorks and they created [White](http://white.codeplex.com/). White exposes a strongly typed and therefore less verbose and more usable object model for the UI being tested.
 
-```cs
+{% highlight c# %}
 [Test]
 public void TestMainMenu()
 {
@@ -156,13 +156,13 @@ public void TestMainMenu()
         Assert.AreEqual("Help", mainMenu[3].Name);
     }
 }
-```
+{% endhighlight %}
 
 ### Clicking Through Menus
 
 Clicking through menus with White, starting with the top-level application menu, could use a helper function. Each item needs to be clicked in order to fetch its children, collapsed menu items don’t have any.
 
-```cs
+{% highlight c# %}
 public static Menu ClickThroughMenu(Menus m, string[] items)
 {
     List<string> itemsArray = new List<string>(items);
@@ -188,14 +188,14 @@ public static Menu ClickThroughMenu(Menu m, string[] items)
     }
     return m;
 }
-```
+{% endhighlight %}
 
 Here’s how to use it:
 
-```cs
+{% highlight c# %}
 UIAutomation.ClickThroughMenu(mainWindow.MenuBar.TopLevelMenu,
     new string[] { "Edit", "Add", "Configurations", "Setup Configuration" });
-```
+{% endhighlight %}
 
 ### Bug Solved and Unit-Tested
 

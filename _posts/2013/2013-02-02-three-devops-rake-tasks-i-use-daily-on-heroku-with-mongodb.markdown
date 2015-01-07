@@ -25,7 +25,7 @@ And, please remember, that with great power (and the word "production" in much o
 
 This is made possible by [heroku-commander](https://github.com/dblock/heroku-commander). The library wraps the Heroku CLI (intro [here](http://artsy.github.com/blog/2013/01/31/create-mongodb-command-lines-with-mongo/)) and will run _heroku config –s_. It’s now easy to reach out to a Heroku application and retrieve its configuration programmatically without worrying about API keys (by default it will use the Heroku app defined via the "heroku" GIT remote). We will also need a bit of code to apply our application’s naming convention. This lets me change the execution environment to the one of a remote Heroku application, in Ruby.
 
-```ruby
+{% highlight ruby %}
 module Heroku
  class Config < Hash
    def self.set_env_from!(env)
@@ -41,11 +41,11 @@ module Heroku
    end
  end
 end
-```
+{% endhighlight %}
 
 So how do I run a task locally, but configured as _production_? With the following Rake task.
 
-```ruby
+{% highlight ruby %}
 namespace :heroku do
  desc "Load environment vars from Heroku config into ENV."
  task :config_from_env do
@@ -54,7 +54,7 @@ namespace :heroku do
    Heroku::Config.set_env_from! env
  end
 end
-```
+{% endhighlight %}
 
 Run `RAILS_ENV=production rake heroku:config_from_env my:task`.
 
@@ -62,17 +62,17 @@ Run `RAILS_ENV=production rake heroku:config_from_env my:task`.
 
 First, figure out the remote MongoDB configuration, then execute the _mongo_ shell command. It’s important to know that the built-in system command doesn’t raise an error when the process returns a non-zero status code. Let's add a _system!_ function that fixes that.
 
-```ruby
+{% highlight ruby %}
 def system!(cmdline)
  logger.info("[#{Time.now}] #{cmdline}")
  rc = system(cmdline)
  fail "failed with exit code #{$?.exitstatus}" if (rc.nil? || ! rc || $?.exitstatus != 0)
 end
-```
+{% endhighlight %}
 
 Instead of making MongoDB command lines manually, I’ve used a new gem called [mongoid-shell](https://github.com/dblock/mongoid-shell) (intro [here](http://artsy.github.com/blog/2013/01/31/create-mongodb-command-lines-with-mongo/)).
 
-```ruby
+{% highlight ruby %}
 namespace :db do
  [:staging, :production, :heroku].each do |env|
    namespace env do
@@ -86,7 +86,7 @@ namespace :db do
    end
  end
 end
-```
+{% endhighlight %}
 
 Run `rake db:production:shell`.
 
@@ -94,7 +94,7 @@ Run `rake db:production:shell`.
 
 We all do backups and other important things, daily. But when manipulating production data I want to have the last safeguard with the freshest data from the collection I am about to update. Dump a MongoDB collection locally.
 
-```ruby
+{% highlight ruby %}
 namespace :db do
  [:production, :staging, :heroku].each do |env|
    namespace env do
@@ -111,7 +111,7 @@ namespace :db do
    end
  end
 end
-```
+{% endhighlight %}
 
 #### Points
 

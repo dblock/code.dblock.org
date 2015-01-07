@@ -9,7 +9,7 @@ dblog_post_id: 143
 ---
 I was recently looking at a Cognos BI dataset output in the XML format. It’s a pretty generic approach for data sets that don’t know what type of data they are looking at upfront. It looks like this.
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <dataset xmlns="http://developer.cognos.com/schemas/xmldata/1/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
@@ -37,11 +37,11 @@ I was recently looking at a Cognos BI dataset output in the XML format. It’s a
     </row>
   </data>
 </dataset>
-```
+{% endhighlight %}
 
 This is a rather annoying format to work with. Let's transform it, generically, into something normalized (or strongly typed). We can nest two XSLT foreach statements – for each row, for each item, output a node with the name of the item and the corresponding value. The node name cannot contain special characters and will need to have some replacements. We’ll also have to count rows and items to get the right mapping.
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="iso-8859-1"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:cognos="http://developer.cognos.com/schemas/xmldata/1/">
@@ -63,11 +63,11 @@ This is a rather annoying format to work with. Let's transform it, generically, 
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>
-```
+{% endhighlight %}
 
 Here’s the output.
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <DataSet>
   <Row>
@@ -85,6 +85,6 @@ Here’s the output.
     <Database_Type>Microsoft SQL Server Redirector</Database_Type>
   </Row>
 </DataSet>
-```
+{% endhighlight %}
 
 If we need to transform this data further, we now have a stable format to work with. The order of columns in the report may change, but we won’t have to rewrite the XSLT again.

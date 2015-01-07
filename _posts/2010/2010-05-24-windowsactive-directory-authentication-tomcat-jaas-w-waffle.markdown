@@ -26,7 +26,7 @@ _JAAS Realm_
 
 Add a JAAS realm to the application context. Modify _META-INF\context.xml _of your application.
 
-```xml
+{% highlight xml %}
 <Context>
   <Realm className="org.apache.catalina.realm.JAASRealm"
          appName="Jaas"
@@ -35,7 +35,7 @@ Add a JAAS realm to the application context. Modify _META-INF\context.xml _of yo
          useContextClassLoader="false"
          debug="true" />
 </Context>
-```
+{% endhighlight %}
 
 _Authentication_
 
@@ -43,24 +43,24 @@ Modify _WEB-INF\web.xml_ of your application.
 
 Enable BASIC, DIGEST or FORMS authentication for this realm.
 
-```xml
+{% highlight xml %}
 <login-config>
   <auth-method>BASIC</auth-method>
   <realm-name>Jaas</realm-name>
 </login-config>
-```
+{% endhighlight %}
 
 Configure security roles. The Waffle login module adds all user's security groups (including nested and domain groups) as roles during authentication.
 
-```xml
+{% highlight xml %}
 <security-role>
   <role-name>Everyone</role-name>
 </security-role>
-```
+{% endhighlight %}
 
 Restrict access to website resources. For example, to restrict the entire website to locally authenticated users add the following.
 
-```xml
+{% highlight xml %}
 <security-constraint>
   <display-name>Waffle Security Constraint</display-name>
   <web-resource-collection>
@@ -71,13 +71,13 @@ Restrict access to website resources. For example, to restrict the entire websit
     <role-name>Everyone</role-name>
   </auth-constraint>
 </security-constraint>
-```
+{% endhighlight %}
 
 _Login Configuration_
 
 Create a login configuration file, _login.conf_. This configuration file specifies how to plug the Waffle Windows Login Module.
 
-```config
+```
 Jaas {
     waffle.jaas.WindowsLoginModule sufficient;
 };
@@ -89,7 +89,7 @@ _JAAS Security Policy_
 
 Create JAAS policy configuration file, jaas.policy. This file specifies which identities are granted which permissions.
 
-```config
+```
 grant Principal * * {
   permission java.security.AllPermission "/*";
 };
@@ -101,13 +101,13 @@ The policy file is passed to Java with `-Djava.security.auth.policy=<path-to-fil
 
 You must start Tomcat with Security Manager enabled (`-security`) and configure it with a login configuration and policy. For example, the following will start Tomcat using the demo login.conf and jaas.policy from the Waffle samples.
 
-```bat
+{% highlight bat %}
 @echo off
 setlocal
 set JAVA_OPTS=-Djava.security.auth.login.config="C:/Program Files/Tomcat/webapps/waffle-jaas/login.conf" -Djava.security.auth.policy="C:/Program Files/Tomcat/webapps/waffle-jaas/jaas.policy"
 call bin/catalina.bat run -security
 endlocal
-```
+{% endhighlight %}
 
 #### Demo Application
 

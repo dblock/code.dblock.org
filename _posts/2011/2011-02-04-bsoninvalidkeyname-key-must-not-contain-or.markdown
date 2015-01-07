@@ -9,14 +9,14 @@ dblog_post_id: 168
 ---
 I ran into an error from Mongo, _BSON::InvalidKeyName: key must not contain '.'_ (or sometimes ‘$’ instead of ‘.’). It would happen randomly under RSpec (I do plan to check out Cucumber and Steak - together with BiSON this is going to be delicious), which presents a nice exception summary rather than a full stack trace. The first lesson was how to catch and re-raise a Ruby exceptions to output more detail. I wrapped the failing code with a _begin/rescue_ block.
 
-```ruby
+{% highlight ruby %}
 begin
     # offending code
 rescue Exception => e
     puts e.backtrace
     raise $!
 end
-```
+{% endhighlight %}
 
 This gave a full stack trace for the exception.
 

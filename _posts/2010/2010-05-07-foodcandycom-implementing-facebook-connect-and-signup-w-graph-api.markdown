@@ -44,13 +44,13 @@ _A Facebook Login Button_
 
 I want a login button that gives users a choice of logging into the site with a username and a password, an OpenId and now with a Facebook login. The recommended way is to include some JavaScript and use FBML (a simple markup language) to render it. That approach caused me to have a click-popup-reload cycle, which I didn’t like at all. An alternate suggested way is to generate a login URL manually and let the user navigate away from the site, login to Facebook and return. This is simpler, IMHO, code non-withstanding.
 
-```cs
+{% highlight c# %}
 public string GetLoginUrl(string returnUrl)
 {
     return string.Format("http://www.facebook.com/login.php?api_key={0}&extern=1&fbconnect=1&req_perms=publish_stream,email&return_session=1&v=1.0&next={1}&fb_connect=1&cancel_url={1}",
         FacebookAPIKey, Renderer.UrlEncode(string.Format("{0}/FacebookConnect.aspx?connect=1&ReturnUrl={1}", mSessionManager.WebsiteUrl, Renderer.UrlEncode(returnUrl))));
 }
-```
+{% endhighlight %}
 
 The URL specifies the following.
 
@@ -69,7 +69,7 @@ Invoking this JavaScript gave me a lot of headache – I was properly redirected
 
 The following code works every time.
 
-```html
+{% highlight html %}
 <div id="fb-root"></div>
 <script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
 <script type="text/javascript">
@@ -89,7 +89,7 @@ The following code works every time.
    });
   });
 </script>
-```
+{% endhighlight %}
 
 _Verifying the Signature_
 
@@ -99,7 +99,7 @@ If you’re doing all of this on the client side, read [this document](http://wi
 
 Facebook cookies are collected in a sorted list, concatenated and signed.
 
-```cs
+{% highlight c# %}
 public SortedList<string, string> GetFacebookCookies(HttpCookieCollection cookies)
 {
     SortedList<string, string> sortedCookies = new SortedList<string, string>();
@@ -115,11 +115,11 @@ public SortedList<string, string> GetFacebookCookies(HttpCookieCollection cookie
 
     return sortedCookies;
 }
-```
+{% endhighlight %}
 
 The signature must match the value of the cookie with the same name as the API key.
 
-```cs
+{% highlight c# %}
 var sb = new StringBuilder();
 foreach (String s in cookies.AllKeys)
 {
@@ -137,17 +137,17 @@ foreach (byte b in hash)
 }
 
 return computedHash.ToString().ToLowerInvariant() == signature.ToLowerInvariant();
-```
+{% endhighlight %}
 
 _Facebook Account Id to FoodCandy Account Id_
 
 Once the signature is verified, you can trust the Facebook user id stored in the "user" cookie. It’s a 64-bit integer. I created a new table in SnCore called _AccountFacebook_ and allow users to associate facebook IDs with their account. If the back-end can locate such an account, an SnCore login ticket is issued, which completes the login operation.
 
-```cs
+{% highlight c# %}
 AccountFacebook account = (AccountFacebook)session.CreateCriteria(typeof(AccountFacebook))
         .Add(Expression.Eq("FacebookAccountId", FacebookAccountId))
         .UniqueResult();
-```
+{% endhighlight %}
 
 #### FoodCandy Signup with Facebook
 
@@ -155,18 +155,18 @@ The signup process first goes through the same logon process as described above,
 
 First, I got hold of the [Facebook Developer Toolkit](http://facebooktoolkit.codeplex.com/) that implements calls to Facebook using the [Facebook Graph API](http://developers.facebook.com/docs/api). It is initialized with the API key, the secret and a session key. The toolkit is going to be making server-to-server calls from FoodCandy to Facebook, it’s all back-end operation.
 
-```cs
+{% highlight c# %}
 Facebook.Session.ConnectSession facebookSession = new Facebook.Session.ConnectSession(
     FacebookAPIKey, FacebookSecret);
 
 facebookSession.SessionKey = facebookCookies["session_key"];
 facebookSession.UserId = long.Parse(facebookCookies["user"]);
 Facebook.Rest.Api facebookAPI = new Facebook.Rest.Api(facebookSession);
-```
+{% endhighlight %}
 
 At signup I need the user’s name, e-mail and birthday. I’d also like to get the user’s location and maybe even a picture.
 
-```cs
+{% highlight c# %}
 Facebook.Schema.user user = facebookAPI.Users.GetInfo();
 
 TransitAccount ta = new TransitAccount();
@@ -202,7 +202,7 @@ if (user.picture_big != null)
 
 SnCore.Data.Hibernate.Session.Flush();
 return acct.Id;
-```
+{% endhighlight %}
 
 That’s a lot of private information that you gave me with a single click! Let's look at the created account.
 

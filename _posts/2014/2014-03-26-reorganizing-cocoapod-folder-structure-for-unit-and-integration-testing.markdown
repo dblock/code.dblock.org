@@ -19,17 +19,17 @@ All these issues can be addressed. I’ve reorganized two of my pods, [ARASCIIIm
 
 Fixing the folder structure and naming is fairly straightforward. You can move the contents of the Demo folder one level up. This brings the Podfile to the root. The Podfile can also explicitly name the workspace.
 
-```ruby
+{% highlight ruby %}
 workspace 'ARASCIISwizzle'
 
 pod 'ARASCIISwizzle', :path => 'ARASCIISwizzle.podspec'
 
 xcodeproj 'Demo.xcodeproj'
-```
+{% endhighlight %}
 
 You’ll have to update .travis.yml to build a different workspace and to reference the development pod in the same folder.
 
-```yaml
+{% highlight yaml %}
 language: objective-c
 
 before_install:
@@ -45,7 +45,7 @@ xcode_workspace: ARASCIISwizzle.xcworkspace
 xcode_scheme: Demo
 
 xcode_sdk: iphonesimulator
-```
+{% endhighlight %}
 
 You can [see this commit in ARTiledImageView](https://github.com/dblock/ARTiledImageView/commit/9620887d879c3a7251829c6a0027271473ab7069) that accomplishes the same.
 
@@ -73,7 +73,7 @@ Open _Manage Schemes_ and make sure the scheme is Shared. Then edit the Test pro
 
 The Podfile must now reference "Demo", "Tests" and the "IntegrationTests" project. The syntax for that is a bit backwards, discussed in [https://github.com/CocoaPods/CocoaPods/issues/1922](https://github.com/CocoaPods/CocoaPods/issues/1922).
 
-```ruby
+{% highlight ruby %}
 workspace 'ARASCIISwizzle'
 
 pod 'ARASCIISwizzle', :path => 'ARASCIISwizzle.podspec'
@@ -101,15 +101,15 @@ target 'Tests' do
   pod 'OCMock', '~> 2.2.3'
   xcodeproj 'Tests.xcodeproj'
 end
-```
+{% endhighlight %}
 
 Travis will build "Tests" and "IntegrationTests" in a matrix.
 
-```yaml
+{% highlight yaml %}
 xcode_scheme:
   - Demo
   - Tests
-```
+{% endhighlight %}
 
 You can see the results of the above in [this commit in ARASCIISwizzle](https://github.com/dblock/ARASCIISwizzle/commit/e8b906eb54d46025238b8a95833b51c8549932e3).
 

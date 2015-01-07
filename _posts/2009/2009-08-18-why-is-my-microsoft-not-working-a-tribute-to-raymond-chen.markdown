@@ -11,19 +11,15 @@ I was reading [Raymond Chen's "The Old New Thing"](http://blogs.msdn.com/oldnewt
 
 So, in a classic tribute I have my own little story. All names are fictional.
 
-```
-Them: My Microsoft is not working. It says my license is expired.
-  Me: When you right click on the little icon on the bottom right
-      of the screen, and choose Help -> About, what do you see?
-Them: I see "Power Options" and "Show System Icons", I don't see Help -> About.
-  Me: Try again, when you right click on the little icon that looks like a
-      little face on the bottom right of the screen, what do you see?
-Them: Oh now I see Help -> About!
-  Me: What does it say?
-Them: It says that my license has expired.
-  Me: Buy a new license.
-Them: Thank you, you're so helpful.
-```
+> Them: My Microsoft is not working. It says my license is expired.
+>   Me: When you right click on the little icon on the bottom right of the screen, and choose Help -> About, what do you see?
+> Them: I see "Power Options" and "Show System Icons", I don't see Help -> About.
+>   Me: Try again, when you right click on the little icon that looks like a little face on the bottom right of the screen, what do you see?
+> Them: Oh now I see Help -> About!
+>   Me: What does it say?
+> Them: It says that my license has expired.
+>   Me: Buy a new license.
+> Them: Thank you, you're so helpful.
 
 This thread is enfuriating. I mostly hate when people call software by the company name that produces it. I think it's the fault of the auto industry after-all, everybody calls their Toyota a Toyota.
 

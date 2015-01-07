@@ -11,7 +11,7 @@ Given an _Enumerable_, you can _detect_ a value that matches a condition. But wh
 
 Consider an example where you have an expensive _Geocoder.search_ operation and a list of addresses, two of which are fake. The function returns _nil_ for a fake address. We would like to find the geo-location of the first real address.
 
-```ruby
+{% highlight ruby %}
 addresses = [
  '221B Baker Street, London, UK', # Sherlock Holmes
  '1428 Elm Street, Springwood, Ohio', # Nightmare on Elm Street
@@ -23,23 +23,23 @@ first_real_address = addresses.detect do |address|
 end
 
 first_real_address # 350 5th Ave, New York, NY
-```
+{% endhighlight %}
 
 We would now have to call _Geocoder.search_ on _first_real_address_ twice.
 
 Instead, using _detect_value_ you can return the geo-location of the first real address.
 
-```ruby
+{% highlight ruby %}
 first_geo_location = addresses.detect_value do |address|
  Geocoder.search(address)
 end
 
 first_geo_location # lat: 40.74830, lng: -73.98554
-```
+{% endhighlight %}
 
 The [implementation for detect_value](https://github.com/dblock/enumerable-detect-value/blob/master/lib/enumerable-detect-value.rb) is straightforward.
 
-```ruby
+{% highlight ruby %}
 module Enumerable
  # Returns the first result of the block that is not nil.
  def detect_value(&block)
@@ -50,6 +50,6 @@ module Enumerable
    nil
  end
 end
-```
+{% endhighlight %}
 
 I don’t think this can this be done with the current Ruby standard library without introducing a temporary variable, and _Enumerable##Lazy_ won’t help_._

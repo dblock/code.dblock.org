@@ -9,7 +9,7 @@ dblog_post_id: 113
 ---
 I never remember how to do this, so here’s a refresher. In MSBuild you can easily define a list with properties and iterate over it.
 
-```xml
+{% highlight xml %}
 <Project DefaultTargets="all" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
   <ItemGroup>
     <Squirrel Include="Bob">
@@ -25,6 +25,6 @@ I never remember how to do this, so here’s a refresher. In MSBuild you can eas
     <Message Text="%(Squirrel.Identity) is an %(Squirrel.Color) squirrel with %(Squirrel.Teeth) teeth" />
   </Target>
 </Project>
-```
+{% endhighlight %}
 
 Run the sample above with `msbuild test.proj /t:ShowSquirrels`.

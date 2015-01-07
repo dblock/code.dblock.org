@@ -13,7 +13,7 @@ Can we work around it?
 
 We know how to pipe output, so we can just run `set`, collect and parse the results.
 
-```cs
+{% highlight c# %}
 /// <summary>
 /// Returns environment variables parsed from the output of a set command.
 /// </summary>
@@ -35,14 +35,14 @@ public Dictionary<string, string> GetEnvironmentVariables()
     }
     return environmentVariables;
 }
-```
+{% endhighlight %}
 
 Implemented as `Vestris.VMWareLib.Tools.Windows.Shell.GetEnvironmentVariables()` in [VMWareTasks](https://github.com/dblock/vmwaretasks). It’s a method rather than a property because it actually executes remote commands and environment variables change over time.
 
-```cs
+{% highlight c# %}
 Dictionary<string, string> env = guestShell.GetEnvironmentVariables();
 Console.WriteLine(env["ProgramFiles"]);
-```
+{% endhighlight %}
 
 Problem solved.
 

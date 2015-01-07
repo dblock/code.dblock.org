@@ -13,18 +13,18 @@ I found a few interesting posts, a couple of gems and even a competition. All ha
 
 A few pull requests later, please welcome a new gem, [numbers_and_words](https://github.com/kslazarev/numbers_and_words). [Kirill](https://github.com/kslazarev/) designed the library with conversion strategies and proper localization in-mind.
 
-```ruby
+{% highlight ruby %}
 I18n.with_locale(:en) { 42.to_words }
 I18n.with_locale(:ru) { 42.to_words }
-```
+{% endhighlight %}
 
 These produce "forty-two" and "сорок два".
 
 And a fun one.
 
-```ruby
+{% highlight ruby %}
 2935174315119654654654654654.to_words
-```
+{% endhighlight %}
 
 This is obviously _"two octillion nine hundred thirty-five septillion one hundred seventy-four sextillion three hundred fifteen quintillion one hundred nineteen quadrillion six hundred fifty-four trillion six hundred fifty-four billion six hundred fifty-four million six hundred fifty-four thousand six hundred fifty-four"_.
 

@@ -18,7 +18,7 @@ _Create an Installer_
 
 Create a basic WIX MSI, MySetup. I’ve added a dummy component and feature to it.
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
   <Product Id="*" Name="MySetup" Language="1033" Version="1.0.0.0" Manufacturer="MySetup"
@@ -39,7 +39,7 @@ Create a basic WIX MSI, MySetup. I’ve added a dummy component and feature to i
     </Feature>
   </Product>
 </Wix>
-```
+{% endhighlight %}
 
 _Create a Bootstrapper_
 
@@ -55,12 +55,12 @@ _Link the Bootstrapper_
 
 You can now link the bootstrapper with InstallerLinker. We’ll use MSBuild to automate our build.
 
-```xml
+{% highlight xml %}
 <Target Name="build-bootsrapper">
   <Message Importance="high" Text="Building bootstrapper, $(Configuration) ..." />
   <Exec Command="dotNetInstaller\bin\InstallerLinker.exe /Embed+ /Template:dotNetInstaller\bin\dotNetInstaller.exe /Output:$(ReleaseDir)\MyInstaller.exe /Configuration:MyInstall\Configuration.xml /AppPath:MySetup\bin\$(Configuration)" />
 </Target>
-```
+{% endhighlight %}
 
 _Run the Bootstrapper_
 
@@ -80,11 +80,11 @@ _Save the Product Code_
 
 An MSI can be installed with `msiexec /i MySetup.msi` and can be uninstalled with `msiexec /x {product id}`. Let's augment the MSI and write the product code for the MSI into registry. The bootstrapper will be able to look for that value to execute the `msiexec /x` command.
 
-```xml
+{% highlight xml %}
 <RegistryKey Root="HKLM" Key="SOFTWARE\MySetup">
   <RegistryValue Name="ProductCode" Value="[ProductCode]" Type="string" KeyPath="yes" />
 </RegistryKey>
-```
+{% endhighlight %}
 
 _Use the Product Code_
 
@@ -96,22 +96,22 @@ _Including the Bootstrapper in the MSI_
 
 First, let's build this bootstrapper without embedded files. It’s the same command line with `/Embed-`. We’ll place the output to _Uninstall.exe_.
 
-```xml
+{% highlight xml %}
 <Target Name="build-uninstall">
   <Message Importance="high" Text="Building bootstrapper, $(Configuration) ..." />
   <Exec Command="dotNetInstaller\bin\InstallerLinker.exe /Embed- /Template:dotNetInstaller\bin\dotNetInstaller.exe /Output:MySetup\bin\$(Configuration)\Uninstall.exe /Configuration:MyInstall\Configuration.xml" />
 </Target>
-```
+{% endhighlight %}
 
 Include Uninstall.exe in the MSI and create an uninstall shortcut to the MSI. The shortcut runs `Uninstall.exe /x`, forcing uninstall.
 
-```xml
+{% highlight xml %}
 <Component Id="MyUninstall" Guid="{FDF5D5EB-35B8-429b-9E39-8C4CEFE46F99}">
   <File Id="Uninstall.exe" Source="bin\$(var.Configuration)\Uninstall.exe" />
 </Component>
-```
+{% endhighlight %}
 
-```xml
+{% highlight xml %}
 <Directory Id="ProgramMenuFolder">
   <Directory Id="ApplicationProgramsFolder" Name="MySetup">
     <Component Id="MySetupShortcut" Guid="{D997EBD9-E86D-4744-B202-E1245B9E04F7}">
@@ -125,7 +125,7 @@ Include Uninstall.exe in the MSI and create an uninstall shortcut to the MSI. Th
     </Component>
   </Directory>
 </Directory>
-```
+{% endhighlight %}
 
 Once installed, the shortcut can be used to uninstall the application. During uninstall the MSI component will fetch the product id from registry and invoke `msiexec /x`.
 

@@ -13,17 +13,17 @@ For bare Rack-mounted applications we can make our life easy with Guard. Introdu
 
 For a typical Rack application, including one that uses Grape, add _guard_, _guard-bundler_ (to watch _Gemfile_ changes) and _guard-rack_ to Gemfile.
 
-```ruby
+{% highlight ruby %}
 group :development do
   gem "guard"
   gem "guard-bundler"
   gem "guard-rack"
 end
-```
+{% endhighlight %}
 
 Create a _Guardfile_. Watch the folders of your application.
 
-```ruby
+{% highlight ruby %}
 guard 'bundler' do
   watch('Gemfile')
 end
@@ -32,7 +32,7 @@ guard 'rack' do
   watch('Gemfile.lock')
   watch(%r{^(config|app|api)/.\*})
 end
-```
+{% endhighlight %}
 
 Run with _bundle exec guard_. Watch _rackup_ happen every time you change files.
 

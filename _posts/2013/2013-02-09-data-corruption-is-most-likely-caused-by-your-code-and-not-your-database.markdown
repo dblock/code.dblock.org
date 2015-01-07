@@ -13,9 +13,9 @@ I am increasingly convinced that those who blame MongoDB for any kind of data co
 
 I also want to point out two magical lines of code that I use all the time.
 
-```ruby
+{% highlight ruby %}
 Moped.logger = Logger.new($stdout)
 Moped.logger.level = Logger::DEBUG
-```
+{% endhighlight %}
 
 Knowing what Mongoid is doing is half the battle.

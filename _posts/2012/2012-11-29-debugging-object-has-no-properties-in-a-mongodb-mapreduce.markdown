@@ -22,7 +22,7 @@ Examining the MongoDB log we notice that the map/reduce completes to about 70%, 
 
 While we can just look for a null embedded object, more generally, we can find whether a JS object has no properties with [this isEmpty function from SO](http://stackoverflow.com/questions/3426979/javascript-checking-if-an-object-has-no-properties-or-if-a-map-associative-arra). Declare it in the mongodb console (use a 1-liner):
 
-```js
+{% highlight js %}
 function isEmpty(map) {
     for(var key in map) {
         if (map.hasOwnProperty(key)) {
@@ -31,11 +31,11 @@ function isEmpty(map) {
     }
     return true;
 }
-```
+{% endhighlight %}
 
 Iterate over all bones records.
 
-```js
+{% highlight js %}
 db.bones.find().forEach(function(bone) {
     if (bone.splines) {
         bone.splines.forEach(function(spline) {
@@ -45,11 +45,11 @@ db.bones.find().forEach(function(bone) {
         }
     );
 }});
-```
+{% endhighlight %}
 
 Here’s the culprit, notice the null embedded _spline_.
 
-```json
+{% highlight json %}
 {
     "_id" : ObjectId("507ea06bd646a40002000759"),
     "splines" : [
@@ -60,14 +60,14 @@ Here’s the culprit, notice the null embedded _spline_.
         null
     ]
 }
-```
+{% endhighlight %}
 
 You can get rid of it in different ways on the mongo console. In this case we have two splines, one to keep and another to erase.
 
-```js
+{% highlight js %}
 var bone = db.bones.findOne({ _id: ObjectId("507ea06bd646a40002000759") })
 bone.splines = [bone.splines[0] ];
 db.bones.save(a);
-```
+{% endhighlight %}
 
 How did we get into having this null record anyway? See [https://jira.mongodb.org/browse/SERVER-831](https://jira.mongodb.org/browse/SERVER-831) and [https://github.com/mongoid/mongoid/issues/2545](https://github.com/mongoid/mongoid/issues/2545).

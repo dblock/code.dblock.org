@@ -21,12 +21,12 @@ Some things should just be easy. I’ve committed a bunch of registry utility fu
 
 Try these:
 
-```java
+{% highlight java %}
 Advapi32Util.registryCreateKey(WinReg.HKEY_CURRENT_USER, "Software", "JNA");
 Advapi32Util.registrySetIntValue(WinReg.HKEY_CURRENT_USER, "Software\\JNA", "IntValue", 42);
 System.out.println(Advapi32Util.registryGetIntValue(WinReg.HKEY_CURRENT_USER, "Software\\JNA", "IntValue"));
 Advapi32Util.registryDeleteKey(WinReg.HKEY_CURRENT_USER, "Software", "JNA");
-```
+{% endhighlight %}
 
 I’ll add `REG_MULTI_SZ` support and registry key and value enumerators next.
 

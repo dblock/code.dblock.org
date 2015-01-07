@@ -11,7 +11,7 @@ I was profiling an application at my real job with [MemProfiler](http://memprofi
 
 I narrowed this down to the .NET Queue class. If you [examine the .NET Queue source code](http://blogs.msdn.com/sburke/archive/2008/01/16/configuring-visual-studio-to-debug-net-framework-source-code.aspx), you will notice that it grows infinitely by design in a rotating window pattern. Enqueue means incrementing the pointer modulo the length of the array and Dequeue means decrement the pointer, except when on a collision and needing to resize. In this case everything is copied to a larger array that grows by a factor.
 
-```cs
+{% highlight c# %}
 public T Dequeue() {
   T removed = _array[_head];
   _array[_head] = default(T);
@@ -35,18 +35,18 @@ public void Enqueue(T item) {
   _size++;
   _version++;
 }
-```
+{% endhighlight %}
 
 There's a way to reclaim the empty space by calling `Queue<T>.TrimExcess`. A regular call to this function fixed the apparent memory leak, but it's extremely inefficient. It comes down to the balance between performance and memory usage.
 
-```cs
+{% highlight c# %}
 public void TrimExcess() {
   int threshold = (int)(((double)_array.Length) * 0.9);
   if( _size < threshold ) {
     SetCapacity(_size);
   }
 }
-```
+{% endhighlight %}
 
 The issue for our implementation is that the queue space isn't ever reclaimed automatically. We're using the queue in its processing sense: blocking, thread-safe and bounded. Hence if we had a million items in the queue once, we would keep an array of a million items until `TrimExcess` is called. That is just a lot of memory to hang onto.
 

@@ -11,7 +11,7 @@ We’ve been using [Grape](https://github.com/intridea/grape) to provide a RESTf
 
 I’ve recently had to deal with code that raises exceptions in a bunch of unpredictable places. This causes Rails to produce an HTML error page, including when making JSON API calls. We want to have some control of this and wrap all calls to return an error message or maybe even a JSON error message. To do so we’ll write the following exception handler. It traps all exceptions in a _rescue_ block and re-throws a specific _:error_ that Grape expects.
 
-```ruby
+{% highlight ruby %}
 # trap all exceptions and fail gracefuly with a 500 and a proper message
 class ApiErrorHandler < Grape::Middleware::Base
   def call!(env)
@@ -23,11 +23,11 @@ class ApiErrorHandler < Grape::Middleware::Base
     end
   end
 end
-```
+{% endhighlight %}
 
 This can be injected into the middleware stack, a construct I find quite elegant.
 
-```ruby
+{% highlight ruby %}
 require 'api_error_handler'
 
 class Api_v1 < Grape::API
@@ -38,11 +38,11 @@ class Api_v1 < Grape::API
 
   ...
 end
-```
+{% endhighlight %}
 
 To be good citizens we’ll write an RSpec test, heavily inspired by Grape’s specs.
 
-```ruby
+{% highlight ruby %}
 require 'spec_helper'
 
 describe "ApiErrorHandler" do
@@ -77,7 +77,7 @@ describe "ApiErrorHandler" do
 
   end
 end
-```
+{% endhighlight %}
 
 I couldn’t figure out how to wrap it up to return JSON, I keep having to raise an _:error_ to abort all subsequent middleware processors. Maybe someone can suggest a solution or a better approach altogether?
 

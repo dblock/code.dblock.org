@@ -11,19 +11,19 @@ Last time we added custom editable mail templates to our mailers and made them M
 
 #### Gemfile
 
-```ruby
+{% highlight ruby %}
 gem "mail_view", :git => "https://github.com/37signals/mail_view"
-```
+{% endhighlight %}
 
 #### Routes
 
 Remember how we pre-declared our mailers in a hash. This is going to come in handy for _config/routes.rb_.
 
-```ruby
+{% highlight ruby %}
 Mailers::ALL.each_pair do |klass, method_names|
   mount "#{klass.gsub('::', '')}::Preview".constantize => "mail_templates/#{klass.underscore}/preview"
 end
-```
+{% endhighlight %}
 
 Now we have a _mail_templates/devise/mailer/preview/reset_password_instructions_ path for a Devise::Mailer mailer!
 
@@ -31,7 +31,7 @@ Now we have a _mail_templates/devise/mailer/preview/reset_password_instructions_
 
 This needs to route somewhere. Let's add a preview into our overridden _DeviseMailer_.
 
-```ruby
+{% highlight ruby %}
 class DeviseMailer < Devise::Mailer
   def template_paths
     "devise/mailer"
@@ -51,13 +51,13 @@ class DeviseMailer < Devise::Mailer
     end
   end
 end
-```
+{% endhighlight %}
 
 Why Chuck Norris? I’ve been enjoying the [Chuck Norris Jenkins Plugin](https://wiki.jenkins-ci.org/display/JENKINS/ChuckNorris+Plugin) too much lately. Chuck Norris can preview mail templates in PDF!
 
 Here’s our mail templates admin page with a link to the preview (_mail_templates/index.html.haml_).
 
-```haml
+{% highlight haml %}
 %h1 Mail Templates
 
 %table
@@ -77,7 +77,7 @@ Here’s our mail templates admin page with a link to the preview (_mail_templat
       %td.admin_actions= link_to 'Preview',
         "/admin/mail_templates/#{mail_template.class_name.underscore}/preview/#{mail_template.method_name}",
         :target => '_blank'
-```
+{% endhighlight %}
 
 Well, that’s it. You need to add a _Preview_ class for every mailer.
 

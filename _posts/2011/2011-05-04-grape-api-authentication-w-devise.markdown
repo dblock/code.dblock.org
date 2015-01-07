@@ -22,26 +22,26 @@ Here’s what we did. It’s far from ideal, please comment and suggest ways to 
 
 No authentication is easy. We don’t do anything.
 
-```ruby
+{% highlight ruby %}
 get "ping" do
   "pong"
 end
-```
+{% endhighlight %}
 
 #### A User Logged in with a Form
 
 A previously logged in user is authenticated with Devise (based on Warden). There’s nothing special to do for the API except to insert an _authenticated_user_ method in those APIs that require it.
 
-```ruby
+{% highlight ruby %}
 get "me" do
   authenticated_user
   current_user.as_json
 end
-```
+{% endhighlight %}
 
 The authenticated_user method uses warden.
 
-```ruby
+{% highlight ruby %}
 def authenticated
   if warden.authenticated?
     return true
@@ -53,7 +53,7 @@ end
 def current_user
   warden.user
 end
-```
+{% endhighlight %}
 
 #### Client Applications
 
@@ -63,7 +63,7 @@ We have a straightforward way to register _ClientApplications_ which yield an ap
 
 Before we hookup user authentication, note that we have multiple authentication schemes that yield some kind of access. We can all it an _AccessGrant_. We want the grant to expire. We’ll store the grant in the back-end so that we can check the grant after it has been handed out. A future version may improve on this by signing and serializing the grant to the client, therefore avoiding the database hit.
 
-```ruby
+{% highlight ruby %}
 class AccessGrant
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -112,7 +112,7 @@ class AccessGrant
   end
 
 end
-```
+{% endhighlight %}
 
 #### XApp
 
@@ -120,7 +120,7 @@ Our simpler scenario includes registered applications making calls without users
 
 To get an XApp token one would call the _xapp_token_ API method with the client _ID_ and _secret_. The authenticated method will now look for an _xapp_token_ parameter.
 
-```ruby
+{% highlight ruby %}
 get "xapp_token" do
   application = ClientApplication.authenticate(params[:client_id], params[:client_secret])
   error!("401 Unauthorized", 401) if application.nil?
@@ -145,7 +145,7 @@ def authenticated
     error!('401 Unauthorized', 401)
   end
 end
-```
+{% endhighlight %}
 
 This is an improvement over schemes like BASIC authentication. We’re only sending actual credentials (client ID and secret) once during authentication, which would happen under SSL. If subsequent unprotected traffic were to be logged and the logs stolen, the XApp token would have a limited value since it expires.
 
@@ -157,23 +157,23 @@ OAuth2 is the preferred mechanism for authenticating users. It takes the login o
 
 Let's start from the the tail-end. Assume the client application has gotten some kind of _access_token _and can pass it to each API. This should allow us to lookup an access grant and eventually a user. Let's add this to the User model.
 
-```ruby
+{% highlight ruby %}
 def self.find_for_token_authentication(params = {})
   access = AccessGrant.find_access(params["access_token"])
   return access.user if access
 end
-```
+{% endhighlight %}
 
 How does a user obtain such a token with OAuth2? We’ll need two routes.
 
-```ruby
+{% highlight ruby %}
 match '/oauth2/authorize'    => 'oauth#authorize',    :via => [:get, :post]
 match '/oauth2/access_token' => 'oauth#access_token', :via => [:get, :post]
-```
+{% endhighlight %}
 
 OAuth2 starts by redirecting users to _/oauth2/authorize?client_id=[client id]&redirect_uri=[redirect url]&response_type=code_. This should render a login page. If the user chooses to login, he will be redirected back to the redirect url specified with the authorization code. The application should make a request to _/oauth2/access_token?client_id=[client id]&client_secret=[client secret]&redirect_uri=[redirect url]&grant_type=[authorization code]&code=code_ which will return the JSON `{ "access_token": [access token], "refresh_token": [refresh token], "expires_in": "yyyy-mm-ddThh:mm:ss TZ" }`.
 
-```ruby
+{% highlight ruby %}
 class OauthController < ApplicationController
 
   before_filter :authenticate_user!, :except => [:access_token]
@@ -211,11 +211,11 @@ class OauthController < ApplicationController
   end
 
 end
-```
+{% endhighlight %}
 
 Finally, we can rewrite our API authenticate method appropriately and implement _current_user_. The latter can also tell us whether a user is an administrator or not.
 
-```ruby
+{% highlight ruby %}
 helpers do
   def warden
     env['warden']
@@ -250,6 +250,6 @@ helpers do
     error!('401 Unauthorized', 401) unless is_admin?
   end
 end
-```
+{% endhighlight %}
 
 This is a little thick. Maybe someone can take a stab at sinking some of this into Grape as authentication middleware?

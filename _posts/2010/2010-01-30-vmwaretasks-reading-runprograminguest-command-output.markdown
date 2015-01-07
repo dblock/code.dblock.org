@@ -11,13 +11,13 @@ This is a pretty common question on the VixCOM forum: _How do I run a command in
 
 VixCOM doesn’t have any support for this, so is there something we can do about it? I want to have a RunCommandInGuest to execute shell and other commands that returns StdOut and StdErr. So this is what I want to write:
 
-```cs
+{% highlight c# %}
 Shell.ShellOutput output = guestShell.RunCommandInGuest("dir");
-```
+{% endhighlight %}
 
 I figured that the easiest way would be to pipe output to a file and collect that file. Because the commands can also contain piping, we have to create a temporary .bat that contains the command. I did it for Windows, so you get `Vestris.VMWareLib.Tools.Windows.Shell.RunCommandInGuest` in [VMWareTasks](https://github.com/dblock/vmwaretasks).
 
-```cs
+{% highlight c# %}
 /// <summary>
 /// Use RunProgramInGuest to execute cmd.exe /C "guestCommandLine" > file and parse the result.
 /// </summary>
@@ -51,7 +51,7 @@ public ShellOutput RunCommandInGuest(string guestCommandLine)
         _vm.DeleteFileFromGuest(guestStdErrFilename);
     }
 }
-```
+{% endhighlight %}
 
 Problem solved.
 

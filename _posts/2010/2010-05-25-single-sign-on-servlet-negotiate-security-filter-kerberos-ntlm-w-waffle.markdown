@@ -26,7 +26,7 @@ _Security Filter_
 
 Add the security filter to _WEB-INF\web.xml_.
 
-```xml
+{% highlight xml %}
 <filter>
   <filter-name>SecurityFilter</filter-name>
   <filter-class>waffle.servlet.NegotiateSecurityFilter</filter-class>
@@ -35,7 +35,7 @@ Add the security filter to _WEB-INF\web.xml_.
   <filter-name>SecurityFilter</filter-name>
   <url-pattern>/*</url-pattern>
 </filter-mapping>
-```
+{% endhighlight %}
 
 That’s it.
 
@@ -47,10 +47,10 @@ A demo application can be found in the Waffle distribution in the _Samples\Tomca
 
 If you’re familiar with Tomcat you’ll be surprised that `<%= request.getUserPrincipal().getName() %>` works in a JSP page with this filter in place and no realm configuration. Theoretically Tomcat says you cannot assign a Principal to the request in a filter. The guys at the [Tomcat Security Filter Project](http://securityfilter.sourceforge.net/) found a very simple solution – wrap the request up and pass the wrapper into the next filter in the chain.
 
-```java
+{% highlight java %}
 WindowsPrincipal windowsPrincipal = new WindowsPrincipal(windowsIdentity, null, _principalFormat, _roleFormat);
 subject.getPrincipals().add(windowsPrincipal);
 session.setAttribute("javax.security.auth.subject", subject);
 NegotiateRequestWrapper requestWrapper = new NegotiateRequestWrapper(request, windowsPrincipal);
 chain.doFilter(requestWrapper, response);
-```
+{% endhighlight %}

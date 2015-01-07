@@ -15,10 +15,10 @@ I tried it out with build 1.4.1744.0.
 
 First, there’s a line of code in the _index.jsp_ that displays the current Windows thread identity by calling a Win32 API via JNA.
 
-```jsp
+{% highlight jsp %}
 You are logged in as remote user <b><%= request.getRemoteUser() %></b> in session <b><%= session.getId() %></b>.<br>
 You are impersonating user <b><%= Secur32Util.getUserNameEx(Secur32.EXTENDED_NAME_FORMAT.NameSamCompatible) %></b>.
-```
+{% endhighlight %}
 
 I have two users, _dblock-gray\dblock_ and _dblock-gray\test_. I am running the Tomcat server as _dblock-gray\dblock _and am browsing to it logged in as _dblock-gray\test_. Without impersonation I see the following.
 
@@ -28,7 +28,7 @@ This means that while I am logged in as the test user (`request.getRemoteUser()`
 
 Let’s add _impersonate_ into  web.xml.
 
-```xml
+{% highlight xml %}
 <filter>
   <filter-name>SecurityFilter</filter-name>
   <filter-class>waffle.servlet.NegotiateSecurityFilter</filter-class>
@@ -37,7 +37,7 @@ Let’s add _impersonate_ into  web.xml.
     <param-value>true</param-value>
   </init-param>
 </filter>
-```
+{% endhighlight %}
 
 Tomcat now impersonates _dblock-gray\test_.
 

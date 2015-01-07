@@ -25,12 +25,10 @@ Flip a coin. See which way the wind blows.
 
 What makes developers happy? Large engineering organizations tend to believe that it’s ping-pong tables and free pizza. They are wrong. Engineers like to make their own choices, love to work on cutting edge technology, solving really hard problems. They like when their brains stream code. Your project can easily achieve all these goals by putting developer happiness on the top of the decision-making stack and by demonstrating trust in choices made by the hard-working individual contributors. Sometimes technology managers can (and must) help make those happy choices.
 
-```
-- Bob, what technology would you like to use for project X?
-- I’m comfortable with Java since I’ve been doing it for the last 100 years.
-- Bob, would you like to try Scala instead?
-- Wow! Yes!
-```
+> - Bob, what technology would you like to use for project X?
+> - I’m comfortable with Java since I’ve been doing it for the last 100 years.
+> - Bob, would you like to try Scala instead?
+> - Wow! Yes!
 
 You now have an energized engineer that feels ownership and has a little taste of the risky and unknown. He’s going to work twice as hard and inspire others.
 

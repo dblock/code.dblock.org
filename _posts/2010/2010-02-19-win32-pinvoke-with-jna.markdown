@@ -13,7 +13,7 @@ Thank you. The answer is called [JNA](https://github.com/twall/jna/).
 
 Wrapping a Win32 function is a trivial exercise for any C/C++ developer who dealt with Win32. GetUserNameW takes a wchar_t buffer and a pointer to a length. In JNA this looks like this.
 
-```java
+{% highlight java %}
 import com.sun.jna.*;
 import com.sun.jna.ptr.IntByReference;
 
@@ -22,11 +22,11 @@ public interface IAdvapi32 extends com.sun.jna.examples.win32.W32API {
 
     public boolean GetUserNameW(char[] buffer, IntByReference len);
 }
-```
+{% endhighlight %}
 
 In order not to feel too much like a Win32 developer, we ought to wrap this thing with a usable method. `GetUserName` returns a boolean for success or failure and can give us an additional error when the buffer isn’t sufficiently large.
 
-```java
+{% highlight java %}
 public abstract class Advapi32 {
 
     public static final int ERROR_INSUFFICIENT_BUFFER = 122;
@@ -58,7 +58,7 @@ public abstract class Advapi32 {
         return Native.toString(buffer);
     }
 }
-```
+{% endhighlight %}
 
 Note how JNA implements those nice methods that convert `char[]` buffers to `String`. That’s service!
 

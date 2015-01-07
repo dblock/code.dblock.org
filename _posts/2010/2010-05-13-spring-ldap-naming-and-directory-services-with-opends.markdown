@@ -15,7 +15,7 @@ In a [previous post](/jndi-naming-and-directory-services-with-opends) I’ve des
 
 Let's get something useful in and out of the directory: a _Service_ object. Naturally it doesn’t matter where it came from, so the Service class is a simple container.
 
-```java
+{% highlight java %}
 public class Service {
     String _name;
     String _serviceUri;
@@ -45,7 +45,7 @@ public class Service {
         _serviceUri = uri;
     }
 }
-```
+{% endhighlight %}
 
 You’ll immediately notice that in contrast with the previous implementation, this object knows nothing about being stored in a directory. I was lazy then, but this time Spring helps (forces) me to write better code.
 
@@ -53,7 +53,7 @@ You’ll immediately notice that in contrast with the previous implementation, t
 
 At the core of spring-ldap lies _LdapTemplate_ that executes core LDAP functionality and encapsulates all the plumbing. We’re going to implement a simple DAO for our Service objects that can, for example, retrieve all services.
 
-```java
+{% highlight java %}
 public class ServiceDAO {
     private LdapTemplate _ldapTemplate;
 
@@ -66,11 +66,11 @@ public class ServiceDAO {
                 new ServiceAttributesMapper());
     }
 }
-```
+{% endhighlight %}
 
 Notice a few important things here. First, we have not specified how to connect to the LDAP server - that will appear in the runtime configuration. Secondly, we use _ServiceAttributesMapper_, a class that knows how to map LDAP attributes into a Service object, achieving a very nice separation of concerns.
 
-```java
+{% highlight java %}
 public class ServiceAttributesMapper implements AttributesMapper {
     public Object mapFromAttributes(Attributes attrs) throws NamingException {
         return new Service(
@@ -79,13 +79,13 @@ public class ServiceAttributesMapper implements AttributesMapper {
                 );
     }
 }
-```
+{% endhighlight %}
 
 #### Spring Configuration
 
 To make it all work we need some configuration. We can define a _springldap.xml_ configuration file for our tests, another one for production, etc.
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -104,7 +104,7 @@ To make it all work we need some configuration. We can define a _springldap.xml_
         <property name="ldapTemplate" ref="ldapTemplate" />
     </bean>
 </beans>
-```
+{% endhighlight %}
 
 What does this do?
 
@@ -118,12 +118,12 @@ We could have done this all in code, but Spring helps us create another level of
 
 We still need to tell Spring to use this configuration at runtime before we can call DAO methods such as _getAllServices_.
 
-```java
+{% highlight java %}
 Resource resource = new ClassPathResource("/springldap.xml");
 BeanFactory factory = new XmlBeanFactory(resource);
 ServiceDAO ldapService = (ServiceDAO) factory.getBean("ldapService");
 List<Service> serviceList = ldapService.getAllServices();
-```
+{% endhighlight %}
 
 This is nice! With Spring, we have achieved complete separation of responsibilities and pluggable configuration and, all things considered, wrote a lot less code.
 
@@ -131,7 +131,7 @@ This is nice! With Spring, we have achieved complete separation of responsibilit
 
 _Create or Update a Service_
 
-```java
+{% highlight java %}
 public void createOrUpdateService(Service s) {
     Attributes attrs = new BasicAttributes(true);  // Case ignore
     Attribute oc = new BasicAttribute("objectclass");
@@ -145,26 +145,26 @@ public void createOrUpdateService(Service s) {
     newServiceDN.add("cn", s.getName());
     _ldapTemplate.rebind(newServiceDN, null, attrs);
 }
-```
+{% endhighlight %}
 
 _Delete a Service_
 
-```java
+{% highlight java %}
 public void deleteService(Service s) {
     DistinguishedName serviceDN = new DistinguishedName();
     serviceDN.add("cn", s.getName());
     _ldapTemplate.unbind(serviceDN);
 }
-```
+{% endhighlight %}
 
 _Get a Service by Name_
 
-```java
+{% highlight java %}
 public Service getServiceByName(String name) throws NameNotFoundException {
     return (Service) _ldapTemplate.lookup("cn=" + name,
             new ServiceAttributesMapper());
 }
-```
+{% endhighlight %}
 
 #### Running the Code
 

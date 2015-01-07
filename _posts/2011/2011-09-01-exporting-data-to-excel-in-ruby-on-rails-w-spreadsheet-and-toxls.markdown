@@ -17,20 +17,20 @@ Here’s how we do it, and so should you.
 
 Use [spreadsheet 0.6.5.8](https://rubygems.org/gems/spreadsheet) with [this monkey-patch](https://gist.github.com/1187549) added as _initializers/spreadsheet_encodings.rb_ and [to_xls 1.0](https://rubygems.org/gems/to_xls) from my [to-xls-on-models branch](https://github.com/dblock/to_xls/tree/to-xls-on-models).
 
-```ruby
+{% highlight ruby %}
 gem "spreadsheet", "0.6.5.8"
 gem "to_xls", :git => "https://github.com/dblock/to_xls.git", :branch => "to-xls-on-models"
-```
+{% endhighlight %}
 
 Register the Excel MIME type in _config/initializers/mime_types.rb_.
 
-```ruby
+{% highlight ruby %}
 Mime::Type.register "application/vnd.ms-excel", :xls
-```
+{% endhighlight %}
 
 Add a _as_xls_ method to any model that you want to export that contains the fields of interest. Here’s what I added to _app/models/user.rb_.
 
-```ruby
+{% highlight ruby %}
 def as_xls(options = {})
   {
       "Id" => id.to_s,
@@ -41,13 +41,13 @@ def as_xls(options = {})
       "Sign In Count" => sign_in_count
   }
 end
-```
+{% endhighlight %}
 
 You can also simply call _as_json_ inside _as_xls_. Note that currently only top-level keys are exported.
 
 Add support for the .XLS format in any controller out of which you want to export Excel files. Here’s what I added to _app/controllers/users_controller.rb_.
 
-```ruby
+{% highlight ruby %}
 def index
   @users = User.all
   respond_to do |format|
@@ -55,13 +55,13 @@ def index
     format.xls { send_data @users.to_xls, content_type: 'application/vnd.ms-excel', filename: 'users.xls' }
   end
 end
-```
+{% endhighlight %}
 
 Add a link on the users view. Here’s what I added to _app/views/users.html.haml_. The parameter merging lets you reuse whatever parameters were passed in the page.
 
-```ruby
+{% highlight ruby %}
 = link_to 'Export', users_path(request.parameters.merge({:format => :xls}))
-```
+{% endhighlight %}
 
 We added some styles, so here’s what the export button looks like next to another one.
 
@@ -71,7 +71,7 @@ You get real XLS documents, book & al.
 
 We can write a spec for this controller too.
 
-```ruby
+{% highlight ruby %}
 describe "GET index.xls" do
   it "creates an Excel spreadsheet with all users" do
     user = Fabricate :user
@@ -87,7 +87,7 @@ describe "GET index.xls" do
     w.row(1)[1].should == user.name
   end
 end
-```
+{% endhighlight %}
 
 #### Links
 

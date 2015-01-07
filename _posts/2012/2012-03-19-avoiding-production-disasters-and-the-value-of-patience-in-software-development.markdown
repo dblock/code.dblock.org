@@ -27,7 +27,7 @@ The cost of transforming a task into a feature is about half a day of work. But 
 
 Automation is good, but testing is better. Consider the following task that sends some kind of reminder e-mail.
 
-```ruby
+{% highlight ruby %}
 desc "Send a reminder to all users that haven't been reminded yet."
   task :remind => :environment do |t, args|
     User.all.each do |user|
@@ -37,7 +37,7 @@ desc "Send a reminder to all users that haven't been reminded yet."
     end
   end
 end
-```
+{% endhighlight %}
 
 It’s pretty concise. Unfortunately, _user.reminded?_ has a bug and you now have a communication disaster on your hands.
 
@@ -47,7 +47,7 @@ It’s pretty concise. Unfortunately, _user.reminded?_ has a bug and you now hav
 
 We can move this entire logic into the _User_ model and write a test.
 
-```ruby
+{% highlight ruby %}
 class User
   def reminded?
       !! reminded_at
@@ -59,11 +59,11 @@ class User
       ReminderMailer.delay.reminder_email(self)
   end
 end
-```
+{% endhighlight %}
 
 The test can cover other important aspects, such as the actual source and destination of the e-mail.
 
-```ruby
+{% highlight ruby %}
 describe "remind!" do
   before :each do
     @user = Fabricate :user
@@ -86,11 +86,11 @@ describe "remind!" do
     ActionMailer::Base.deliveries.count.should == emails_count
   end
 end
-```
+{% endhighlight %}
 
 And the task is simpler.
 
-```ruby
+{% highlight ruby %}
 desc "Send a reminder to all users that haven't been reminded yet."
   task :remind => :environment do |t, args|
     User.all.each do |user|
@@ -99,7 +99,7 @@ desc "Send a reminder to all users that haven't been reminded yet."
     end
   end
 end
-```
+{% endhighlight %}
 
 The cost of this change depends on the complexity of the task, but it tends toward zero. Tests take time to implement, but save debugging and regression time. Operational, or "machine" cost is roughly half a day, because the changes must go through continuous integration and a deploy before they can be run.
 
