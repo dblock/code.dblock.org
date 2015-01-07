@@ -26,13 +26,6 @@
         <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
       {% endif %}
     </div><!--/ .headline-wrap -->
-    <div class="tag-wrap">
-      {% for tag in page.tags %}
-        {% if prev_tag %} | {% endif %}
-        {% capture prev_tag %}{{ tag }}{% endcapture %}
-        <a href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a>
-      {% endfor %}
-    </div>
     <div class="article-wrap">
       {{ content }}
       <hr />
