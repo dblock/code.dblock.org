@@ -1,22 +1,3 @@
-#tag-cloud {
-  margin-top: 30px;
-  a.set-1 {
-    @include font-rem(10);
-  }
-  a.set-2 {
-    @include font-rem(12);
-  }
-  a.set-3 {
-    @include font-rem(14);
-  }
-  a.set-4 {
-    @include font-rem(16);
-  }
-  a.set-5 {
-    @include font-rem(18);
-  }
-}
-
 .tag-wrap {
   padding-bottom: 20px;
   font-weight: bold;

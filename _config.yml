@@ -9,6 +9,7 @@ sass:
 gems:
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-archives
 kramdown:
   input: GFM
 owner:
@@ -40,5 +41,9 @@ owner:
   soundcloud:
 paginate: 30
 google_custom_search: "015938957525977311805:c-2lieekft8"
-tag_page_layout: tag
-tag_page_dir: tag
+jekyll-archives:
+  enabled:
+    - tags
+  layout: 'archive'
+  permalinks:
+    tag: '/tag/:name/'

@@ -30,7 +30,7 @@
       {% for tag in page.tags %}
         {% if prev_tag %} | {% endif %}
         {% capture prev_tag %}{{ tag }}{% endcapture %}
-        <a href="{{ site.url }}/tag/{{ tag }}.html">{{ tag }}</a>
+        <a href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a>
       {% endfor %}
     </div>
     <div class="article-wrap">
