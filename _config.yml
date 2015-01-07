@@ -9,7 +9,6 @@ sass:
 gems:
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jekyll/tagging
 kramdown:
   input: GFM
 owner:
