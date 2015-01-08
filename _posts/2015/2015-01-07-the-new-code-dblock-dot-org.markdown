@@ -110,7 +110,7 @@ The full script is [here](https://github.com/dblock/dblog-to-jekyll/blob/master/
 
 #### Disqus
 
-[Disqus](https://disqus.com) migration of comments is still pending. I wrote [a script](https://github.com/dblock/dblog-to-jekyll/blob/master/discus_migration_map.rb) to rewrite post URLs and uploaded it as [instructed](https://help.disqus.com/customer/portal/articles/286778-migration-tools), but nothing has appeared just yet in the new location.
+I wrote [a script](https://github.com/dblock/dblog-to-jekyll/blob/master/discus_migration_map.rb) to rewrite post URLs for [Disqus](https://disqus.com) comments and uploaded it as [instructed](https://help.disqus.com/customer/portal/articles/286778-migration-tools). Posts appeared after I set the correct `disqus-shortname` in my __config.yml_.
 
 ### Jekyll
 
