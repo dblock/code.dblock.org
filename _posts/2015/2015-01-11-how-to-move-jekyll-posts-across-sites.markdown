@@ -11,7 +11,7 @@ The landing [www.dblock.org](http://www.dblock.org) site is also a Jekyll site.
 
 #### Include the Redirect Gem
 
-Include the `jekyll-redirect-from` gem in `_config.yml`.
+Include the _jekyll-redirect-from_ gem in __config.yml_.
 
 {% highlight yaml %}
 gems:
@@ -19,33 +19,14 @@ gems:
 
 {% endhighlight %}
 
-#### Create a Redirect Layout
-
-Create a redirect layout. This does the actual redirected to `page.target_uri`.
-
-{% highlight html %}
-<!doctype html>
-  <head>
-    <link rel=canonical href="{ page.target_uri }">
-    <meta http-equiv=refresh content="0; url={ page.target_uri }">
-  </head>
-  <body>
-    <h1>Redirecting...</h1>
-    <a href="{ page.target_uri }">Click here if you are not redirected.</a>
-    <script>location='{ page.target_uri }'</script>
-  </body>
-</html>
-{% endhighlight %}
-
 #### Create Redirect Pages
 
-Anything that is not prefixed by an underscore is copied as is to the Jekyll __site_ folder. Create a file for each URL in a new _redirect_ folder. For example, here's my _redirect/your-commute-is-killing-you-move-to-new-york.markdown_ file.
+The _jekyll-redirect-from_ library supports _redirect_from_ and _redirect_to_. It creates a file for the source path and a page with a redirect to the destination. Since anything that is not prefixed by an underscore is copied as is to the Jekyll __site_ folder, we can just create a file for each URL in a new _redirect_ directory. For example, here's my _redirect/your-commute-is-killing-you-move-to-new-york.markdown_ file.
 
 ```
 ---
 redirect_from: /your-commute-is-killing-you-move-to-new-york/
-target_uri: http://code.dblock.org/2011/05/29/dear-california-engineer-your-commute-is-killing-you-move-to-new-york.html
-layout: redirect
+redirect_to: http://code.dblock.org/2011/05/29/dear-california-engineer-your-commute-is-killing-you-move-to-new-york.html
 ---
 ```
 
@@ -53,4 +34,4 @@ layout: redirect
 
 Try [www.dblock.org/your-commute-is-killing-you-move-to-new-york](http://www.dblock.org/your-commute-is-killing-you-move-to-new-york).
 
-Everything is open-source. Click [here](https://github.com/dblock/www.dblock.org/commit/dbb42fe5f85f0cf69899b1714819c27c34fc4704) for the source code.
+Everything is open-source. Click [here](https://github.com/dblock/www.dblock.org/commit/85ac18118feac15f25b1f6eb2b1a441ef69d0c53) for the source code.
