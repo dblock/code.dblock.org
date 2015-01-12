@@ -1,0 +1,71 @@
+---
+permalink: /.well-known/keybase.txt
+---
+==================================================================
+https://keybase.io/dblock
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://code.dblock.org
+  * I am dblock (https://keybase.io/dblock) on keybase.
+  * I have a public key with fingerprint 4A72 0FE7 90B0 7A68 744E  3716 75BF 031B 7C94 E183
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "4a720fe790b07a68744e371675bf031b7c94e183",
+            "host": "keybase.io",
+            "key_id": "75bf031b7c94e183",
+            "kid": "01011f9c9e0adc31fabf414de79ecd59d1a303b1812b394eaee3b250e45b48feacf80a",
+            "uid": "91b679d1446dc099b7308e8e077a0e00",
+            "username": "dblock"
+        },
+        "service": {
+            "hostname": "code.dblock.org",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1421064459,
+    "expire_in": 157680000,
+    "prev": "32bb53c6cb42f34f4b9a63a7630577a602131ce93edec440784b48641c061051",
+    "seqno": 14,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.1
+Comment: https://keybase.io/crypto
+
+yMIeAnicbZJdSFRBFMdX0yz78kEq+u5GRbAtM3vnfm1BadSDGD5YBCWsd+bOXS9r
+e9e768dW9lDZEhSVqZVEZpD2EJkIWVJqYtCnJWUZEmVKgmQWkrGG1Vyrt+ZlmHP+
+/9+Zczidc6Y5kuMK26YtPlDRfzju8b30QseOptuz9nPY1CKcZz/np1OXbgR81Apa
+RiDMeTikSm6gU0kBGEiqKEsIUV6CoiRgHfAQS0RBFMo85+TyzJDtYBishqjLMFmM
+PbyGxqL/0funEgACCHWFKBSoGuGhrmIdQaSxkpRogqJBlQc8hjJ0Y555VUp57BYA
+RQJGsk5VostAZbjCKZwCsSgxE0KiRoCiYIkHMpUpkCQVUABsYYhaAXUvZWoN55vE
+z5U6ORYrMgi1B2D38TdPTI26/ohcpuVj5qBlhk1i5rNkXjgc9NjecCRoi4sp9v7F
+eLER0NgcmaGIWiHDDHAeyJQkbNhciNwQiAgJipOjJUHDol7DVgiSKAN27DK0iCF5
+N8YCT0SCkVvnkY6wooq8Kok8EFhDInBDHhKq8FSjBCEgyYgNRUSQABECAXJ2YwUB
+0y7J/qn6GDNk+AJquNCiXGlHe06CIy7ZMT0x3l4FR/LMlH8Lknp2hqO2cmDlg7GL
+9e+vDj9JHb2EYPt9taQpuG1Dh3Pwk89PempjryKLZhe/uVJ56NTQcEvrs4W1jljj
+Zjqrua/h4PXmVUmR/LfdNePaz0N3gk3e6pMjqXUZeH1a9Oi5CThZ5hzbXlYev2BT
+/5OMm+PZy2NmmrXlZVVxpmfJo0dLExMuLG3demsk+rlxMrfs+Om0a/Vner+YL5wt
+WRV5LRk53371SQO533FPTcdDkPhxMiXpnadzYm10fsng5vNZK/aRaNlopOfH069x
+l/347svynt1XT2Y+rHY1dO2ZN/d154ehZQMXt7ddG8jUolU39Bc76/JOBHu7YrsK
+nq87tiZ9dffG2JHs3955NCA=
+=NVRR
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dblock
+
+==================================================================
+
