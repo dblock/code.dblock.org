@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Dirty Panel Extender (ASP.NET AJAX)"
-redirect_from: "/dirty-panel-extender-aspnet-ajax/"
+redirect_from:
+  - "/dirty-panel-extender-aspnet-ajax/"
+  - "/DirtyPanel/"
 date: 2008-08-10 18:08:51
 tags: [asp.net]
 comments: true
