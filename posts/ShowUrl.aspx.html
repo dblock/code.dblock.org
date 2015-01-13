@@ -1,0 +1,31 @@
+---
+permalink: '/ShowUrl.aspx/'
+---
+
+<script language='javascript'>
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+if (typeof String.prototype.startsWith != 'function') {
+  String.prototype.startsWith = function (str){
+    return this.slice(0, str.length) == str;
+  };
+}
+
+var url = getParameterByName('Url');
+
+{% if site.url %}
+  if (url.startsWith('{{ site.url }}')) {
+    window.location.replace(url);
+  } else {
+    window.location = '/'
+  }
+{% else %}
+  window.location.replace(url);
+{% endif %}
+
+</script>
