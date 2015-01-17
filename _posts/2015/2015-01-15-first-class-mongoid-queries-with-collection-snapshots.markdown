@@ -101,6 +101,8 @@ WidgetsAndGadgets.latest.documents.each do |pair|
 end
 {% endhighlight %}
 
+#### Implementation Details
+
 This was a bit tricky to implement. For each collection snapshot we emit a class with a different collection name passed into _store_in_.
 
 {% highlight ruby %}
@@ -130,3 +132,12 @@ end
 The actual implementation memoizes emitted classes and supports other advanced features of [mongoid_collection_snapshot](https://github.com/aaw/mongoid_collection_snapshot). See [mongoid_collection_snapshot#10](https://github.com/aaw/mongoid_collection_snapshot/pull/10) for details.
 
 Full code for this article can be found [here](https://gist.github.com/dblock/ded50b61db49baf32a8d).
+
+#### Real World Impact
+
+I spent a day incrementally rewriting snapshot queries inside the Core API project at [Artsy](https://www.artsy.net). We have about two dozen snapshot classes. This resulted in about half the code to accomplish the same thing, virtually no spec changes. A very clear win.
+
+![]({{ site.url }}/images/posts/2015/2015-01-15-first-class-mongoid-queries-with-collection-snapshots/change1.png)
+
+![]({{ site.url }}/images/posts/2015/2015-01-15-first-class-mongoid-queries-with-collection-snapshots/change2.png)
+
