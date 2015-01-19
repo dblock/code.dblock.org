@@ -6,6 +6,7 @@ date: 2011-05-29 23:50:53
 tags: [art.sy, jobs, people]
 comments: true
 dblog_post_id: 211
+pinned: true
 ---
 
 <img src="{{ site.url }}/images/posts/2011/2011-05-29-dear-california-engineer-your-commute-is-killing-you-move-to-new-york/commute.jpg" align="right" style='margin-left: 10px' />

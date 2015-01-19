@@ -6,6 +6,7 @@ date: 2014-04-28 21:20:37
 tags: [teams, learning, github, git, open source, microsoft, facebook, organizations, msbuild, people, me me]
 comments: true
 dblog_post_id: 413
+pinned: true
 ---
 Facebook’s GIT repository is a single [54GB](https://news.ycombinator.com/item?id=7648237) animal that builds Facebook. It’s not _that_ big - they haven’t seen the MS Windows one! Actually, I take that back - anecdotal evidence suggests that a large number of ex-MSFT engineers are now working at Facebook. I’ve just counted a dozen people I know in my head and at least half have experienced the Windows codebase, first hand. Before I roll out my argument, I have to say that many are my good friends and awesome people. And let me also preface my post with the fact that there’re many advantages of having a single repository for those that contribute to it, and I will not discuss those here. Instead, I am going to try and offer a unique perspective from my rather unique position.
 

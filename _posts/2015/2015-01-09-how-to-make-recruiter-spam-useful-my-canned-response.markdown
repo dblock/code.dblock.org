@@ -4,6 +4,7 @@ title: "How to Make Recruiter Spam Useful: My Canned Response"
 date: 2015-01-09
 tags: [recruiters, me me, jobs]
 comments: true
+pinned: true
 ---
 I get anywhere from 2-5 recruiter e-mails a day. Even though in 75% of the cases I have already heard about the job from my private network or the New York CTO Club, I decided to find a way to make them useful. Today I don't want them to stop. I reply to anything appropriate with a polite canned response, which I have developed over the years.
 
