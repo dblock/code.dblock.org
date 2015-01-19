@@ -1,7 +1,11 @@
 {% if site.owner.disqus-shortname %}
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = '{{ site.owner.disqus-shortname }}'; // required: replace example with your forum shortname
+    {% if page.disqus_shortname %}
+    var disqus_shortname = '{{ page.disqus_shortname }}';
+    {% else %}
+    var disqus_shortname = '{{ site.owner.disqus-shortname }}';
+    {% endif %}
 
     <!--
     {% if page.dblog_post_id %}
