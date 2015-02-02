@@ -13,7 +13,7 @@ In his open letter [_Let the Other 95% of Great Programmers In_](http://paulgrah
 
 > We have the potential to ensure that the US remains a technology superpower just by letting in a few thousand great programmers a year.
 
-As a non-American I don't feel as patriotic. I eagerly advise European engineers not to get too hung up on moving the U.S. and to head to Berlin rather than New York or San Francisco in order to avoid the visa hassle. Berlin is a fantastic city, young and fun, cheap and thriving, dense with tech startups and very culturally diverse. I have spent many years in Europe during my college years and would have rather moved to Berlin than Seattle in 1999, had it had a technology center then. With companies that include such names as SoundCloud, it is definitely is a technology center now.
+As a non-American I don't feel as patriotic. I eagerly advise European engineers not to get too hung up on moving the U.S. and to head to Berlin rather than New York or San Francisco in order to avoid the visa hassle. Berlin is a fantastic city, young and fun, cheap and thriving, dense with tech startups and very culturally diverse. I have spent many years in Europe during my college years and would have rather moved to Berlin than Seattle in 1999, had it had a technology center then. With companies that include such names as SoundCloud, it definitely is a technology center now.
 
 As a followup to Graham's post entitled [_How Paul Graham is Wrong_](http://ma.tt/2014/12/how-paul-graham-is-wrong/) Matt Mullenweg writes:
 
