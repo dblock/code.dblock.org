@@ -14,7 +14,7 @@ kramdown:
 owner:
   name: Daniel Doubrovkine
   avatar: blog.gif
-  bio: "aka dB., Head of Engineering at <a href='https://artsy.net' target='_blank'>artsy.net</a> in New York City, open-source cheerleader"
+  bio: "aka dB., Head of Engineering and Open-Source at <a href='https://artsy.net' target='_blank'>artsy.net</a>, NYC"
   email: dblock@dblock.org
   disqus-shortname: dblockdotorg-code
   twitter: dblockdotorg
@@ -40,3 +40,4 @@ owner:
   soundcloud:
 paginate: 30
 google_custom_search: "015938957525977311805:c-2lieekft8"
+suggest_url: https://github.com/dblock/code.dblock.org/issues/new

@@ -17,6 +17,8 @@ Here's an official bio.
 <a href="https://twitter.com/dblockdotorg" class="twitter-follow-button" data-show-count="false">Follow me @dblockdotorg</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
+Like what you read here? Have questions? <a href='https://github.com/dblock/code.dblock.org/issues/new'>Suggest a Topic</a> for this blog.
+
 I speak frequently at conferences and meetups. Here're a few of my favorite talks.
 
 <a href="http://confreaks.com/videos/4166-gogaruco2014-talking-over-someone-else-s-open-source-projects"><img src="/images/about/taking-over-someone-elses-open-source-project.png"></a><br>
@@ -31,6 +33,6 @@ QCon, New York, 2014
 [Building and Scaling a Test Driven Culture](https://www.youtube.com/watch?v=QvHf94hxzRc)
 AppNexus Engineering at Scale, New York, 2013
 
-Feel free to [e-mail me](mailto:dblock@dblock.org) regarding speaking opportunities.
+Feel free to [e-mail me](mailto:dblock@dblock.org) speaking opportunities.
 
 Finally, if you had enough of this tech stuff, check out [my art blog](http://art.dblock.org).
