@@ -2,7 +2,6 @@
 layout: page
 title: About
 tags: [about, me me]
-modified: 2015-01-01T12:42:12.573882-04:00
 comments: false
 ---
 
@@ -19,20 +18,6 @@ Here's an official bio.
 
 Like what you read here? Have questions? <a href='https://github.com/dblock/code.dblock.org/issues/new'>Suggest a Topic</a> for this blog.
 
-I speak frequently at conferences and meetups. Here're a few of my favorite talks.
-
-<a href="http://confreaks.com/videos/4166-gogaruco2014-talking-over-someone-else-s-open-source-projects"><img src="/images/about/taking-over-someone-elses-open-source-project.png"></a><br>
-[Taking over Someone Else's Open-Source Projects](http://confreaks.com/videos/4166-gogaruco2014-talking-over-someone-else-s-open-source-projects)
-Golden Gate Ruby Conference, San Francisco, 2014
-
-<a href="http://www.infoq.com/presentations/mentoring-cto-club-ny"><img src="/images/about/mentoring-humans-and-engineers.png"></a><br>
-[Mentoring Humans and Engineers](http://www.infoq.com/presentations/mentoring-cto-club-ny)
-QCon, New York, 2014
-
-<a href="https://www.youtube.com/watch?v=QvHf94hxzRc"><img src="/images/about/building-and-scaling-a-test-driven-culture.png"></a><br>
-[Building and Scaling a Test Driven Culture](https://www.youtube.com/watch?v=QvHf94hxzRc)
-AppNexus Engineering at Scale, New York, 2013
-
-Feel free to [e-mail me](mailto:dblock@dblock.org) speaking opportunities.
+I speak frequently at conferences and meetups. See [this page](/speaking) for details and feel free to [e-mail me](mailto:dblock@dblock.org) speaking opportunities.
 
 Finally, if you had enough of this tech stuff, check out [my art blog](http://art.dblock.org).
