@@ -9,7 +9,7 @@ dblog_post_id: 200
 ---
 My class sold out tonight with over 40 people attending. If you were there, thank you so much! It’s really rewarding to have an engaged audience where nobody even moved when Brad came in to mention that it was already 8pm and that class was free to go as I was running way late (I was on day 2 of week 1 an hour and a half into it).
 
-Slides are [here](http://www.slideshare.net/dblockdotorg/060-in-startup-technology).
+Revised slides from a later presentation are [here](http://www.slideshare.net/dblockdotorg/hackyale-060-in-startup-tech).
 
 Temple of Gravity was built at Burning Man 2003.
 
