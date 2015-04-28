@@ -9,7 +9,7 @@ You have recently graduated and looked for work. You put together a good resume 
 
 ### Now what?
 
-First, _do nothing_. Take those two weeks to relax and catch up on your non-technical reading. Lay on the beach. Have a drink. Some managers will offer you a few possible things to do (usually reading or to brush up on some particular language), accept these suggestions eagerly, but don't ask for them. Don't feel obligated to do anything. Personally, I expect my new hires to arrive rested and refreshed on their first day of work - if I wanted them to start earlier, I would have asked.
+First, _do nothing_. Take those two weeks to relax and catch up on your non-technical reading. Lie on the beach. Have a drink. Some managers will offer you a few possible things to do (usually reading or to brush up on some particular language), accept these suggestions eagerly, but don't ask for them. Don't feel obligated to do anything. Personally, I expect my new hires to arrive rested and refreshed on their first day of work - if I wanted them to start earlier, I would have asked.
 
 ### Your First Day
 
