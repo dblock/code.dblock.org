@@ -6,7 +6,6 @@ date: 2013-05-26 01:34:37
 tags: [teams, hiring]
 comments: true
 dblog_post_id: 385
-pinned: true
 ---
 Over the past 15 years I have interviewed hundreds of Engineers. I had the pleasure of hiring quite a few, but I also had the duty to reject many.
 
