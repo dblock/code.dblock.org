@@ -5,7 +5,7 @@ date: 2015-05-20
 tags: [jobs, hiring]
 comments: true
 ---
-If there is a single thing I can point to as the key to creating a successful engineering organization, it’s the extreme focus on recruiting the best people in the world who share common values, and are passionate about working together to achieve a mission. Attracting best talent is hard, and it's always my number one focus and priority.
+If there is a single thing I can point to as the key to creating a successful engineering organization, it’s the extreme focus on recruiting the best people in the world who share common values, and are passionate about working together to achieve a mission. Attracting the best talent is hard, and it's always my number one focus and priority.
 
 ### Hiring for Product Needs
 
@@ -13,7 +13,7 @@ If there is a single thing I can point to as the key to creating a successful en
 
 It's common to hire people based on _product needs_, primarily because it's easy to reason about it and to explain needs to non-technical people. Need a dynamic website? Hire a Ruby-on-Rails engineer. Develop an iPhone app? You need an iOS engineer. This is an effective, short term approach, that works for those specific purposes. If you think of engineering as your _hands_ and the product people as your _brain_, this works very well. When thinking this way I suggest you work with an agency, where you pay a premium for getting individuals that are up and running immediately, do what you tell them to do and are able to scale resources up and down depending on how your needs change with time. Furthermore, all hired guns are paid for their technical skills, not to think. They rarely care about your domain and seek interesting technical challenges. This is a _good thing_, you're paying them to _do_ more than to _think_.
 
-Hiring for needs can work for full time roles in a product organization as well. However it creates very high and unnecessary risk for product development. Product needs are very specific, skills are rarely a perfect match and there're a lot of variables in hiring someone multiplied by the incredible scarcity of software engineers. It takes on average 21 days to get an individual through an interview, references and offer process, assuming such candidate exists, so it's not uncommon to see positions unfilled for months. Furthermore there's a really big risk that the new hire doesn't work out, jeopardizing your entire new product or feature. That's the reason why I believe there're no short term wins in hiring great engineers and why I believe so many companies complain that hiring is their biggest limiting factor - they either can't find that perfect matching candidate or see new hires under-deliver.
+Hiring for needs can work for full time roles in a product organization as well. However it creates very high and unnecessary risk for product development. Product needs are very specific, skills are rarely a perfect match, and there are a lot of variables in hiring someone multiplied by the incredible scarcity of software engineers. It takes on average 21 days to get an individual through an interview, references, and offer process, assuming such candidate exists, so it's not uncommon to see positions unfilled for months. Furthermore there's a really big risk that the new hire doesn't work out, jeopardizing your entire new product or feature. That's the reason why I believe there are no short term wins in hiring great engineers and why I believe so many companies complain that hiring is their biggest limiting factor - they either can't find that perfect matching candidate or see new hires under-deliver.
 
 ### Hiring Multipliers
 
@@ -32,8 +32,8 @@ This is somewhat similar to [Spotify Squads](https://labs.spotify.com/2014/03/27
 My hiring roadmap has two types of positions:
 
 * Individuals with skills that don't exist or lack across a team. This is where more experienced engineers often come in, increasing the team skill multiplying factor.
-* Individuals who mirror skills of existing team members. This is where juniors often come in, which helps build capacity and strengthening the base.
+* Individuals who mirror skills of existing team members. This is where juniors often come in, which helps build capacity and strengthen the base.
 
-I think about how much headcount is needed based on what the existing teams tell me within this framework, aim for sustainable pace, and am very careful about not adding too many people too quickly. For a team of 20 this means adding 10 engineers over the course of a year.
+I think about how much headcount is needed based on what the existing teams tell me within this framework, aim for a sustainable pace, and am very careful about not adding too many people too quickly. For a team of 20 this means adding 10 engineers over the course of a year.
 
-Finally, you'll rarely hear me say that _we don't have resources to build a feature, therefore we need to hire someone_. My engineering team will work on everything starting with the highest priority items, and we continue growing capacity under the hood at a steady rate to get more things done faster.
+Finally, you'll rarely hear me say that _we don't have the resources to build a feature, therefore we need to hire someone_. My engineering team will work on everything starting with the highest priority items, and we continue growing capacity under the hood at a steady rate to get more things done faster.
