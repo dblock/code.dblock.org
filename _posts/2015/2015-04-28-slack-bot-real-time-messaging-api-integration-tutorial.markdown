@@ -16,7 +16,7 @@ The endless levels of callback hell and promises have driven me sufficiently cra
 The Real Time Messaging API is a WebSocket-based API that allows you to receive events from Slack in real time and send messages as user. The hard part has been done for you in the [slack-api](https://github.com/aki017/slack-ruby-gem) gem. It's a bit in flux, so here's a working Gemfile add.
 
 {% highlight ruby %}
-gem 'slack-api', github: 'aki017/slack-ruby-gem', require: 'slack'
+gem 'slack-api', '~> 1.1.6', require: 'slack'
 {% endhighlight %}
 
 ### Create a New Bot Integration
