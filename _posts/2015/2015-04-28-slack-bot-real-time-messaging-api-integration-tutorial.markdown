@@ -81,6 +81,8 @@ Slack automatically parses and translates things like `<@userid>`. That's it.
 
 I turned GameBot into a runnable app with some bells and whistles, source code is at [github.com/dblock/slack-gamebot](https://github.com/dblock/slack-gamebot). It has tests and can be a decent boilerplate for your own Slack bot. Stay tuned for a complete game bot implementation that will work for ping-pong and other challenges.
 
-### Update: Lita
+### Update: Lita and Slack-Ruby-Bot
 
-Someone pointed me to an interesting project, [Lita](https://www.lita.io), a generic bot environment that lets you create bot handlers for various tools without having to implement all the above-mentioned boilerplate. I am going to [try to rewrite](https://github.com/dblock/slack-gamebot/issues/2) slack-gamebot using that.
+Someone pointed me to an interesting project, [Lita](https://www.lita.io), a generic bot environment that lets you create bot handlers for various tools without having to implement all the above-mentioned boilerplate. It seems to bring a lot of infrastructure in, such as Redis, that's not always what you want.
+
+I've since worked on [slack-ruby-bot](https://github.com/dblock/slack-ruby-bot), a simpler bot boilerplate, and reimplemented the above using that. It made it really trivial to write a Slack bot in Ruby, so party on!
