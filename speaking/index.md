@@ -5,13 +5,12 @@ tags: [speaking]
 comments: false
 ---
 
-I speak frequently at conferences and meetups. My upcoming engagements are:
+I speak frequently at conferences and meetups. Most recent talks.
 
-* [HappinessConf April 29-30, Boston](http://www.happinessconf.com): Becoming Open-Source by Default
-* [East Coast CTO Summit, May 12, New York](https://www.eventjoy.com/e/east-coast-cto-summit-2015): Engineering Compensation - Chutes and Ladders
-* [QCon, June 10, New York](https://qconnewyork.com): TBD
+* [QCon, June 10, 2015, New York](https://qconnewyork.com): Becoming Open-Source by Default
+* [East Coast CTO Summit, May 12, 2015, New York](https://www.eventjoy.com/e/east-coast-cto-summit-2015): Engineering Compensation - Chutes and Ladders
 
-Here're a few of my favorite talks.
+Here're a few of my favorite recorded talks.
 
 <a href="http://confreaks.com/videos/4166-gogaruco2014-talking-over-someone-else-s-open-source-projects"><img src="/images/about/taking-over-someone-elses-open-source-project.png"></a><br>
 [Taking over Someone Else's Open-Source Projects](http://confreaks.com/videos/4166-gogaruco2014-talking-over-someone-else-s-open-source-projects)
