@@ -9,7 +9,7 @@ I've extracted and improved upon common code from [slack-gamebot](https://github
 
 Here's a minimal example.
 
-![](https://github.com/dblock/slack-ruby-bot/raw/master/screenshots/demo.gif)
+![]({{ site.url }}/images/posts/2015/2015-07-18-the-easiest-way-to-write-a-slack-bot-in-ruby/demo.gif)
 
 {% highlight ruby %}
 require 'slack-ruby-bot'
