@@ -7,8 +7,9 @@ comments: false
 
 I speak frequently at conferences and meetups. Most recent talks.
 
-* [QCon, June 10, 2015, New York](https://qconnewyork.com): Becoming Open-Source by Default
-* [East Coast CTO Summit, May 12, 2015, New York](https://www.eventjoy.com/e/east-coast-cto-summit-2015): Engineering Compensation - Chutes and Ladders
+* [QCon, June 10, 2015, New York](https://qconnewyork.com): Becoming Open-Source by Default.
+* [East Coast CTO Summit, May 12, 2015, New York](https://www.eventjoy.com/e/east-coast-cto-summit-2015): Engineering Compensation - Chutes and Ladders.
+* [CTO Cast #6, Подкаст о технологиях, процессах, инфраструктуре и людях в IT-компаниях](http://ctocast.com/post/109134364183/ctocast-6-artsy): on Open-Source (in Russian).
 
 Here're a few of my favorite recorded talks.
 
