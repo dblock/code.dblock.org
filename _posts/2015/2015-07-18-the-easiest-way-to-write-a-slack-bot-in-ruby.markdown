@@ -19,8 +19,8 @@ module PongBot
   end
 
   class Ping < SlackRubyBot::Commands::Base
-    command 'ping' do |data, _|
-      send_message data.channel, 'pong'
+    command 'ping' do |client, data, _|
+      send_message client, data.channel, 'pong'
     end
   end
 end

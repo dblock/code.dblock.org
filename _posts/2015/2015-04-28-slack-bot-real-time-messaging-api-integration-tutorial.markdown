@@ -11,12 +11,18 @@ I've been recently contributing to [slack-pongbot](https://github.com/andrewvy/s
 
 The endless levels of callback hell and promises have driven me sufficiently crazy to try and rewrite this in Ruby. Let's get a basic Ruby Slack integration going, using the [Slack Real Time Messaging API](https://api.slack.com/rtm) this time.
 
+### Slack-Ruby-Client
+
+A quick note to readers. If you come here from [slack-ruby-gem](https://github.com/aki017/slack-ruby-gem) this tutorial no longer uses it. That library was slow to evolve and wasn't clearly separating the Slack Web API with the Slack RealTime Messaging API. I've rewritten much of the implementation in [slack-ruby-client](https://github.com/aki017/slack-ruby-client).
+
+I do want to thank [@aki017](https://github.com/aki017), the author of the former gem, for getting me started.
+
 ### Use Slack Real Time Messaging Api
 
-The Real Time Messaging API is a WebSocket-based API that allows you to receive events from Slack in real time and send messages as user. The hard part has been done for you in the [slack-api](https://github.com/aki017/slack-ruby-gem) gem. It's a bit in flux, so here's a working Gemfile add.
+The Real Time Messaging API is a WebSocket-based API that allows you to receive events from Slack in real time and send messages as user. The hard part has been done for you in the [slack-ruby-client](https://github.com/aki017/slack-ruby-client) gem.
 
 {% highlight ruby %}
-gem 'slack-api', '~> 1.1.6', require: 'slack'
+gem 'slack-ruby-client', '~> 0.1.0'
 {% endhighlight %}
 
 ### Create a New Bot Integration
@@ -27,15 +33,16 @@ This is something done in Slack, under [integrations](https://slack.com/services
 
 ### Verify Auth
 
-Use the token to verify auth.
+Use the token to verify auth via the Web API.
 
 {% highlight ruby %}
 Slack.configure do |config|
-  config.token = ...
+  config.token = ENV['SLACK_API_TOKEN']
 end
 
-auth = Slack.auth_test
-fail auth['error'] unless auth['ok']
+client = Slack::Web::Client.new
+
+client.auth_test
 {% endhighlight %}
 
 The above code returns a hash with the user information, including _url_, _team_ and _team id_, _user_ and _user_id_.
@@ -45,18 +52,17 @@ The above code returns a hash with the user information, including _url_, _team_
 The slack-api gem uses eventmachine to listen on events from Slack.
 
 {% highlight ruby %}
-client = Slack.realtime
+client = Slack::RealTime::Client.new
 
 client.on :hello do
-  # Slack successfull connected ...
-  logger.info 'Successfully connected.'
+  puts 'Successfully connected.'
 end
 
 client.on :message do |data|
   # respond to messages
 end
 
-client.start
+client.start!
 {% endhighlight %}
 
 ### Respond to Messages
@@ -64,11 +70,10 @@ client.start
 {% highlight ruby %}
 client.on :message do |data|
   case data['text']
-    when 'gamebot hi'
-      Slack.chat_postMessage channel: data['channel'], text: "Hi <@#{data.user}>!"
-    when /^gamebot/
-      Slack.chat_postMessage channel: data['channel'], text: "Sorry <@#{data.user}>, what?"
-    end
+  when 'bot hi' then
+    client.message channel: data['channel'], text: "Hi <@#{data['user']}>!"
+  when /^bot/ then
+    client.message channel: data['channel'], text: "Sorry <@#{data['user']}>, what?"
   end
 end
 {% endhighlight %}
@@ -79,10 +84,4 @@ Slack automatically parses and translates things like `<@userid>`. That's it.
 
 ### Turning GameBot into an App
 
-I turned GameBot into a runnable app with some bells and whistles, source code is at [github.com/dblock/slack-gamebot](https://github.com/dblock/slack-gamebot). It has tests and can be a decent boilerplate for your own Slack bot. Stay tuned for a complete game bot implementation that will work for ping-pong and other challenges.
-
-### Update: Lita and Slack-Ruby-Bot
-
-Someone pointed me to an interesting project, [Lita](https://www.lita.io), a generic bot environment that lets you create bot handlers for various tools without having to implement all the above-mentioned boilerplate. It seems to bring a lot of infrastructure in, such as Redis, that's not always what you want.
-
-I've since worked on [slack-ruby-bot](https://github.com/dblock/slack-ruby-bot), a simpler bot boilerplate, and reimplemented the above using that. It made it really trivial to write a Slack bot in Ruby, so party on!
+I turned GameBot into a runnable app with some bells and whistles at [github.com/dblock/slack-gamebot](https://github.com/dblock/slack-gamebot).
