@@ -40,6 +40,7 @@ This is your opportunity to help! Please contribute.
 - [Delayed::Backend::Mongoid](https://github.com/collectiveidea/delayed_job_mongoid): Mongoid backend for DelayedJob.
 - [Delayed::ShallowMongoid](https://github.com/joeyAghion/delayed_job_shallow_mongoid): Short-circuits serialization of Mongoid model instances when a delayed job is called on them.
 - [CarrierWave::Mongoid](https://github.com/carrierwaveuploader/carrierwave-mongoid): Mongoid and MongoDB's GridFS support in CarrierWave.
+- [Mongoid::Multinenancy](https://github.com/PerfectMemory/mongoid-multitenancy): Adds the ability to scope Mongoid models to a tenant in a shared database strategy.
 
 ### Missing a Useful Gem?
 
