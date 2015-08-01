@@ -24,7 +24,7 @@ This is your opportunity to help! Please contribute.
 - [Mongoid::Locker](https://github.com/afeld/mongoid-locker): Document-level locking.
 - [Mongoid::CachedJson](https://github.com/dblock/mongoid-cached-json): Effective caching for nested JSON models.
 - [Mongoid::Shell](https://github.com/dblock/mongoid-shell): Derive shell commands from Mongoid sessions and configuration options.
-- [Mongoid::Slug](https://github.com/papercavalier/mongoid-slug): Adds a URL-like field to a model.
+- [Mongoid::Slug](https://github.com/digitalplaywright/mongoid-slug): Generates a URL slug/permalink based on fields in a Mongoid-based model.
 - [Mongoid::History](https://github.com/aq1018/mongoid-history): Creates an audit trail for all changes in a model.
 - [Mongoid::Tracking](https://github.com/twoixter/trackoid): Tracker for document changes, more suitable when you need to embed tracking logic such as increments.
 - [Mongoid::Taggable](https://github.com/wilkerlucio/mongoid_taggable): Adds tags to documents and make documents searchable by all or some tags.
