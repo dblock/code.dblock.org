@@ -41,6 +41,13 @@ This is your opportunity to help! Please contribute.
 - [Delayed::ShallowMongoid](https://github.com/joeyAghion/delayed_job_shallow_mongoid): Short-circuits serialization of Mongoid model instances when a delayed job is called on them.
 - [CarrierWave::Mongoid](https://github.com/carrierwaveuploader/carrierwave-mongoid): Mongoid and MongoDB's GridFS support in CarrierWave.
 - [Mongoid::Multinenancy](https://github.com/PerfectMemory/mongoid-multitenancy): Adds the ability to scope Mongoid models to a tenant in a shared database strategy.
+- [Mongoid::GridFs](https://github.com/ahoward/mongoid-grid_fs): A pure Mongoid/Moped implementation of the MongoDB GridFS specification.
+- [Mongoid::Sadstory](https://github.com/netguru/mongoid-sadstory): Adds support for multiparameter fields to mongoid 4.x series.
+- [Mongoid::Paranoia](https://github.com/simi/mongoid_paranoia): Enables a "soft delete" of Mongoid documents.
+- [Mongoid::Token](https://github.com/thetron/mongoid_token): Short snappy tokens for Mongoid documents.
+- [Mongoid::Autoinc](https://github.com/suweller/mongoid-autoinc): A mongoid plugin to add auto incrementing fields to your documents.
+- [Kaminari](https://github.com/amatsuda/kaminari): Paginator for modern web app frameworks and ORMs, including Mongoid.
+- [WillPaginateMongoid](https://github.com/lucasas/will_paginate_mongoid): Paginator for Mongoid.
 
 ### Missing a Useful Gem?
 
