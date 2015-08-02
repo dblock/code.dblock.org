@@ -5,13 +5,11 @@ tags: [speaking]
 comments: false
 ---
 
-I speak frequently at conferences and meetups. Most recent talks.
+I speak frequently at conferences and meetups. Recently at [QCon, June 10, 2015, New York](https://qconnewyork.com) on becoming open-source by default and the [East Coast CTO Summit, May 12, 2015, New York](https://www.eventjoy.com/e/east-coast-cto-summit-2015) on Engineering compensation.
 
-* [QCon, June 10, 2015, New York](https://qconnewyork.com): Becoming Open-Source by Default.
-* [East Coast CTO Summit, May 12, 2015, New York](https://www.eventjoy.com/e/east-coast-cto-summit-2015): Engineering Compensation - Chutes and Ladders.
-* [CTO Cast #6, Подкаст о технологиях, процессах, инфраструктуре и людях в IT-компаниях](http://ctocast.com/post/109134364183/ctocast-6-artsy): on Open-Source (in Russian).
+Here's a selection of some recorded talks.
 
-Here're a few of my favorite recorded talks.
+[CTO Cast #6, Подкаст о технологиях, процессах, инфраструктуре и людях в IT-компаниях](http://ctocast.com/post/109134364183/ctocast-6-artsy): on Open-Source, in Russian. Текстовая версия на Habrahabr: ["Оpen source не значит, что это бесплатно и что это никому не принадлежит".](http://habrahabr.ru/company/caspowa/blog/254343/) & ["Оттого что они не пишут open source, они плохими инженерами не стали".](http://habrahabr.ru/company/caspowa/blog/255585/)
 
 <a href="http://confreaks.com/videos/4166-gogaruco2014-talking-over-someone-else-s-open-source-projects"><img src="/images/about/taking-over-someone-elses-open-source-project.png"></a><br>
 [Taking over Someone Else's Open-Source Projects](http://confreaks.com/videos/4166-gogaruco2014-talking-over-someone-else-s-open-source-projects)
