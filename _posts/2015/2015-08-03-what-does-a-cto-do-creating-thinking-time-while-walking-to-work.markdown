@@ -13,7 +13,7 @@ I've since moved back to Manhattan and live across the street from the famous Fl
 
 My new commute takes me downtown 1.8 miles via multiple routes. It usually takes 20-30 minutes past Union Square, Washington Square Park, NYU and SOHO. It's pretty amazing. I also walk back at the end of the day.
 
-<a href='https://www.google.com/maps/dir/Flatiron+Building,+175+5th+Ave,+New+York,+NY+10010/401+Broadway,+New+York,+NY+10013/@40.7299054,-74.0064768,15z/data=!4m15!4m14!1m5!1m1!1s0x89c259a3f71c1f67:0xde2a6125ed704926!2m2!1d-73.9896986!2d40.7410605!1m5!1m1!1s0x89c2598a7047e143:0x8750e8a6a40d5599!2m2!1d-74.0028525!2d40.7188804!3e2!5i2'>![commuting to work]({{ site.url }}/images/posts/2015/2015-08-03-what-does-a-cto-do-creating-thinking-time-while-walking-to-work/commute.png)</a>
+<a href='https://www.google.com/maps/dir/Flatiron+Building,+175+5th+Ave,+New+York,+NY+10010/401+Broadway,+New+York,+NY+10013/@40.7299054,-74.0064768,15z/data=!4m15!4m14!1m5!1m1!1s0x89c259a3f71c1f67:0xde2a6125ed704926!2m2!1d-73.9896986!2d40.7410605!1m5!1m1!1s0x89c2598a7047e143:0x8750e8a6a40d5599!2m2!1d-74.0028525!2d40.7188804!3e2!5i2'>![commuting to work]({{ site.url }}/images/posts/2015/2015-08-03-what-does-a-cto-do-creating-thinking-time-while-walking-to-work/commute.jpg)</a>
 
 Following the recommendation from my executive coach I began structuring my walking time.
 
