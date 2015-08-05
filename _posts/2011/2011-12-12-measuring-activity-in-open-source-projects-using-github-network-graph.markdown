@@ -19,7 +19,7 @@ You could check the number of forks and watchers for projects on Github.
 
 It measures the project’s popularity quite well, but maybe not its activity.
 
-My favorite way of measuring a project’s activity is to look at the Github network graph. It’s an [amazing and useful feature](https://github.com/blog/39-say-hello-to-the-network-graph-visualizer). Here’s [Grape’s](https://github.com/intridea/grape/network).
+My favorite way of measuring a project’s activity is to look at the Github network graph. It’s an [amazing and useful feature](https://github.com/blog/39-say-hello-to-the-network-graph-visualizer). Here’s [Grape’s](https://github.com/ruby-grape/grape/network).
 
 ![]({{ site.url }}/images/posts/2011/2011-12-12-measuring-activity-in-open-source-projects-using-github-network-graph/image_13.jpg)
 

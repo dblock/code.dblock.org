@@ -11,7 +11,7 @@ Building a software platform is not just an investment in the future, it’s a s
 
 There’re several ways to build an API reference: entirely by hand, generated from code comments or by adding metadata at runtime. The first one is inanity and the second one is not leveraging the magic of Ruby. Hence I am a huge fan of the latter, as it offers the best chance of creating something that actually reflects code.
 
-You can now do this in [Grape](https://github.com/intridea/grape) with _desc_ blocks.
+You can now do this in [Grape](https://github.com/ruby-grape/grape) with _desc_ blocks.
 
 {% highlight ruby %}
 # DELETE /api/v1/thing/:id

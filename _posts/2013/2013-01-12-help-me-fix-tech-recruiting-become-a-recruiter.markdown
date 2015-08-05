@@ -19,7 +19,7 @@ To fix the problem we must replace the recruiters that suck by recruiters that d
 
 Engineering doesn’t happen in a vacuum behind closed doors anymore. Deliberately maintaining long lasting relationships with other technologists is part of your job.
 
-My first contacts were made with people I went to college with or worked with in the 90s. I have great friends in Seattle and San Francisco and amongst those I hung out with after moving to New York ten years ago. I made some amazing connections through open-source coordination work on popular projects such as [JNA](https://github.com/twall/jna) or [Grape](https://github.com/intridea/grape).
+My first contacts were made with people I went to college with or worked with in the 90s. I have great friends in Seattle and San Francisco and amongst those I hung out with after moving to New York ten years ago. I made some amazing connections through open-source coordination work on popular projects such as [JNA](https://github.com/twall/jna) or [Grape](https://github.com/ruby-grape/grape).
 
 For me, being deliberate about building industry relationships means that in every conference, event or social function I set myself the objective of meeting and establishing a contact with just one single peer who I respect for technical achievement and who is currently or often be in a hiring manager position. I’ve invited all these people to visit me during work hours, showed them what we’re working on and often bought them coffee at La Colombe around the corner. It’s amazing to brainstorm with these smart technologists, so I get a ton out of it. I’m booked almost every early afternoon for the sole purpose of meeting people.
 

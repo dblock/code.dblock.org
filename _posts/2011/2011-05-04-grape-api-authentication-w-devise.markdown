@@ -7,7 +7,7 @@ tags: [rails, ruby, security]
 comments: true
 dblog_post_id: 204
 ---
-Now that we have dealt with exceptions in our API we need to provide various methods of authentication. We’re going to be talking [grape](https://github.com/intridea/grape) and [devise](https://github.com/plataformatec/devise).
+Now that we have dealt with exceptions in our API we need to provide various methods of authentication. We’re going to be talking [grape](https://github.com/ruby-grape/grape) and [devise](https://github.com/plataformatec/devise).
 
 There’re several scenarios and issues to consider.
 

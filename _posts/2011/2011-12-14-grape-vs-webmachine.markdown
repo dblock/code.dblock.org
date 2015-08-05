@@ -9,7 +9,7 @@ dblog_post_id: 303
 ---
 One of my favorite talks at QCon 2011 was [about Webmachine](http://qconlondon.com/london-2011/presentation/Webmachine%3A+a+practical+executable+model+of+HTTP). I was very curious to see what those well-disciplined Erlang people had come up with. At the end of the talk I had learned that Webmachine used a resource-based model that enabled well-behaved HTTP applications, which is RESTful by definition. So I went to [NYC.rb](http://www.meetup.com/NYC-rb/events/28968101/?value=Resources%2C+For+Real+This+Time+(with+Webmachine)) today to hear about the Ruby version of Webmachine and to write a post about how these two frameworks compare.
 
-Should you build your next RESTful API with [Grape](https://github.com/intridea/grape) or [Webmachine](https://github.com/seancribbs/webmachine-ruby)?
+Should you build your next RESTful API with [Grape](https://github.com/ruby-grape/grape) or [Webmachine](https://github.com/seancribbs/webmachine-ruby)?
 
 Both frameworks as saying that you should not force HTTP onto an MVC-shaped application. Both excel at serving HTTP resources.
 

@@ -93,6 +93,6 @@ curl http://localhost:9292/only_in_v1 -H "Accept:application/vnd.acme-v1+json"
 {"only_in_v1":"true"}
 ```
 
-The only fix needed in Grape for this was to enable multiple versions specified with _version_, committed in [2be499c51](https://github.com/intridea/grape/commit/2be499c51542e536e9e0bf7fd4e7587dd069e289).
+The only fix needed in Grape for this was to enable multiple versions specified with _version_, committed in [2be499c51](https://github.com/ruby-grape/grape/commit/2be499c51542e536e9e0bf7fd4e7587dd069e289).
 
 This came up [on the Grape mailing list](https://groups.google.com/forum/?fromgroups#!topic/ruby-grape/yTQZtQmfxrs).

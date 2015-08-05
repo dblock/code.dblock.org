@@ -7,7 +7,7 @@ tags: [rails, ruby, architecture]
 comments: true
 dblog_post_id: 236
 ---
-A lot of people ask me whether we use Rails controllers for our API. We don’t, we use [Grape](https://github.com/intridea/grape). Grape is a Rack-based system and a DSL that provides a cleaner separation, some API-specific  functionality and generally a better syntax. Now that we have [dealt with exceptions](/grape-trapping-all-exceptions-within-the-api) and [authentication](/grape-api-authentication-w-devise) we realized that the amount of functionality exposed in the API has grown exponentially in one single Ruby file. Let's refactor it into modules.
+A lot of people ask me whether we use Rails controllers for our API. We don’t, we use [Grape](https://github.com/ruby-grape/grape). Grape is a Rack-based system and a DSL that provides a cleaner separation, some API-specific  functionality and generally a better syntax. Now that we have [dealt with exceptions](/grape-trapping-all-exceptions-within-the-api) and [authentication](/grape-api-authentication-w-devise) we realized that the amount of functionality exposed in the API has grown exponentially in one single Ruby file. Let's refactor it into modules.
 
 Here’s our current code from API v1.
 
@@ -90,4 +90,4 @@ module Api_v1_Me
 end
 {% endhighlight %}
 
-Beer to anyone who can implement this, I tried for hours, in vain - I think Grape will need some major refactoring to support modules this way. Fork Grape [on Github](https://github.com/intridea/grape).
+Beer to anyone who can implement this, I tried for hours, in vain - I think Grape will need some major refactoring to support modules this way. Fork Grape [on Github](https://github.com/ruby-grape/grape).

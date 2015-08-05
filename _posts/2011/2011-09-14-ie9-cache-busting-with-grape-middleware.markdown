@@ -9,7 +9,7 @@ dblog_post_id: 266
 ---
 Ran into a series of weird bugs with IE9. Turned out that a lot of our API requests were cached on the client. I am not sure whether this is some clever plot to make things work faster, but it was rather puzzling. Nothing in our API headers indicated that the data can be cached for any duration, but nothing indicated otherwise either. Generally I’d like IE to work more like other browsers these days, not the other way around.
 
-It was pretty easy to add a set of no-cache headers with [Grape](https://github.com/intridea/grape) Middleware.
+It was pretty easy to add a set of no-cache headers with [Grape](https://github.com/ruby-grape/grape) Middleware.
 
 {% highlight ruby %}
 class ApiCacheBuster < Grape::Middleware::Base

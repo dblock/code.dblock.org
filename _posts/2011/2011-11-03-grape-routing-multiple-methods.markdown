@@ -7,9 +7,9 @@ tags: [grape, rails, ruby]
 comments: true
 dblog_post_id: 286
 ---
-Sometimes you want to support both GET and POST in a [Grape API](http://github.com/intridea/grape).
+Sometimes you want to support both GET and POST in a [Grape API](http://github.com/ruby-grape/grape).
 
-If you want to support GET you would write something like `get [path] do`. If you want to support POST you would write `post [path] do`. What are those _get_ and _post_ methods anyway? The answer is in Grape’s [api.rb](https://github.com/intridea/grape/blob/master/lib/grape/api.rb).
+If you want to support GET you would write something like `get [path] do`. If you want to support POST you would write `post [path] do`. What are those _get_ and _post_ methods anyway? The answer is in Grape’s [api.rb](https://github.com/ruby-grape/grape/blob/master/lib/grape/api.rb).
 
 {% highlight ruby %}
 def get(paths = ['/'], options = {}, &block); route('GET', paths, options, &block) end

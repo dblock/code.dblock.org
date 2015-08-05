@@ -72,7 +72,7 @@ module Api_v1
 end
 {% endhighlight %}
 
-Don’t forget to write some tests. I’ve made [a pull request](https://github.com/intridea/grape/pull/48) into Grape exposing API _versions_ and _routes_, so I can actually write a test now that makes sure we have both versions of the API properly loaded. This goes into _spec/requests/api_spec.rb_.
+Don’t forget to write some tests. I’ve made [a pull request](https://github.com/ruby-grape/grape/pull/48) into Grape exposing API _versions_ and _routes_, so I can actually write a test now that makes sure we have both versions of the API properly loaded. This goes into _spec/requests/api_spec.rb_.
 
 {% highlight ruby %}
 require 'spec_helper'

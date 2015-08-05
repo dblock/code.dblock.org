@@ -9,7 +9,7 @@ dblog_post_id: 331
 ---
 After almost a year of active development with 200+ commits, Grape 0.2.0 has finally been released. It’s the code from the "frontier" branch that we’ve been using in production for quite a while.
 
-Grape is an API DSL. If you’re building a RESTful API today, this is a great place to start. Grape lives at [https://github.com/intridea/grape](https://github.com/intridea/grape).
+Grape is an API DSL. If you’re building a RESTful API today, this is a great place to start. Grape lives at [https://github.com/ruby-grape/grape](https://github.com/ruby-grape/grape).
 
 Here’re the 0.2.0 highlights:
 

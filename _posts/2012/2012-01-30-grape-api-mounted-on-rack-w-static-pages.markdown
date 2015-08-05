@@ -9,7 +9,7 @@ dblog_post_id: 311
 ---
 _tl;dr_ – the source is [here](https://github.com/dblock/grape-on-rack)
 
-Here’s how I mount a [Grape](http://github.com/intridea/grape) API on Rack and also serve static pages. Most useful for building a service with documentation.
+Here’s how I mount a [Grape](http://github.com/ruby-grape/grape) API on Rack and also serve static pages. Most useful for building a service with documentation.
 
 Setup bundler with the required gems. I am using the next version of Grape (_frontier_ branch and the next version of _rack-contrib_ which contains _Rack::TryStatic _that we’re going to want to use).
 
@@ -18,7 +18,7 @@ source "http://rubygems.org"
 
 gem "rack", "1.3.5"
 gem "rack-contrib", :git => "https://github.com/rack/rack-contrib.git", :require => "rack/contrib"
-gem "grape", :git => "http://github.com/intridea/grape.git", :branch => "frontier"
+gem "grape", :git => "http://github.com/ruby-grape/grape.git", :branch => "frontier"
 {% endhighlight %}
 
 Static content goes to a new _public_ folder, for example _public/index.html_.

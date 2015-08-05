@@ -7,7 +7,7 @@ tags: [performance, grape, rails, ruby]
 comments: true
 dblog_post_id: 270
 ---
-We’re using [Grape](https://github.com/intridea/grape) in our Rails app on Heroku, which comes with New Relic instrumentation out-of-the-box. Let's get the Grape API route details to show in New Relic as well.
+We’re using [Grape](https://github.com/ruby-grape/grape) in our Rails app on Heroku, which comes with New Relic instrumentation out-of-the-box. Let's get the Grape API route details to show in New Relic as well.
 
 #### Gemfile
 

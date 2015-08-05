@@ -7,7 +7,7 @@ tags: [performance, ruby]
 comments: true
 dblog_post_id: 399
 ---
-Got a chance to play with [Goliath](http://postrank-labs.github.io/goliath/) for a bit. You don’t need to do much work to mount [Grape](https://github.com/intridea/grape) behind it. Grape figures out content-negotiation and formatting for you, so just stream the response through Goliath.
+Got a chance to play with [Goliath](http://postrank-labs.github.io/goliath/) for a bit. You don’t need to do much work to mount [Grape](https://github.com/ruby-grape/grape) behind it. Grape figures out content-negotiation and formatting for you, so just stream the response through Goliath.
 
 {% highlight ruby %}
 module Acme
