@@ -6,6 +6,8 @@ tags: [teams, people, open-source]
 comments: true
 pinned: true
 ---
+tl;dr Watch [this video instead](https://vimeo.com/136554627)!
+
 In 2004, fresh out of Microsoft, I began contributing to my [first public open-source project](https://github.com/dblock/dotnetinstaller). I've since helped [transform several corporate cultures from users to contributors](http://opensource.com/life/10/12/corporate-change-contributing-open-source) and have made open-source work a core tenet of the [Artsy](https://www.artsy.net/) development process with [open-source projects](http://artsy.github.io/open-source) that range from small libraries to entire applications. Finally, I've been maintaining several popular open-source libraries myself, including [Grape](https://github.com/ruby-grape/grape), [Hashie](https://github.com/intridea/hashie) or [JNA](https://github.com/twall/jna) with the help of thousands of companies and individuals around the world. I frequently [speak about the value of open-source](http://confreaks.com/videos/4166-gogaruco2014-taking-over-someone-else-s-open-source-projects) and the hard work involved.
 
 I am very proud of my open-source contributions and would like to take it one step further by outlining my thinking around me, personally, _becoming open-source by default_.
