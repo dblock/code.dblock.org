@@ -15,6 +15,7 @@ Now begins the process of upgrading gems to Mongoid 5. I maintain half a dozen o
 
 - [Mongoid::Scroll](https://github.com/dblock/mongoid-scroll): Extension that enables infinite scrolling. [@d398c4e9](https://github.com/dblock/mongoid-scroll/commit/d398c4e9ce8279d4659dc26f18f3a77ef38decdb)
 - [Mongoid::TagCollectible](https://github.com/dblock/mongoid-tag-collectible): Easily maintain a collection of Tag instances with aggregate counts from your model's tags. [@5813b77f](https://github.com/dblock/mongoid-tag-collectible/commit/5813b77f3981c5725f8253ff8b6df09e816f099b)
+- [Mongoid::Autoinc](https://github.com/suweller/mongoid-autoinc): A mongoid plugin to add auto incrementing fields to your documents. [@2be7377a](https://github.com/InnovativeTravel/mongoid-autoinc/commit/2be7377aa54f25cecc77ded6a642e675d04e4f11)
 
 ### Does Not Support Mongoid 5 Beta
 
@@ -45,7 +46,6 @@ This is your opportunity to help! Please contribute.
 - [Mongoid::Sadstory](https://github.com/netguru/mongoid-sadstory): Adds support for multiparameter fields to mongoid 4.x series.
 - [Mongoid::Paranoia](https://github.com/simi/mongoid_paranoia): Enables a "soft delete" of Mongoid documents.
 - [Mongoid::Token](https://github.com/thetron/mongoid_token): Short snappy tokens for Mongoid documents.
-- [Mongoid::Autoinc](https://github.com/suweller/mongoid-autoinc): A mongoid plugin to add auto incrementing fields to your documents.
 - [Kaminari](https://github.com/amatsuda/kaminari): Paginator for modern web app frameworks and ORMs, including Mongoid.
 - [WillPaginateMongoid](https://github.com/lucasas/will_paginate_mongoid): Paginator for Mongoid.
 
