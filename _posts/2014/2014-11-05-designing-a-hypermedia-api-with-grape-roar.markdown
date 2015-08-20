@@ -13,4 +13,6 @@ Code from walkthrough: [https://github.com/dblock/grape-with-roar-walkthrough](h
 
 A more complete example: [https://github.com/dblock/grape-with-roar](https://github.com/dblock/grape-with-roar).
 
+A rough hand-held video: [https://www.youtube.com/watch?v=8HRzdF6kaDw#t=1m23](https://www.youtube.com/watch?v=8HRzdF6kaDw#t=1m23).
+
 ![]({{ site.url }}/images/posts/2014/2014-11-05-designing-a-hypermedia-api-with-grape-roar/screenshot.jpg)
