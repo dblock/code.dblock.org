@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lazy Each in Ruby MRI vs. Rubinius"
-date: 2015-08-30
+date: 2015-08-31
 tags: [ruby, mri, rubinius]
 comments: true
 ---
