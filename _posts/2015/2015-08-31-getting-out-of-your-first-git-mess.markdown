@@ -93,6 +93,8 @@ Fast-forward
 ...
 ```
 
+You may get a _Your branch and 'origin/master' have diverged, and have 2 and 8 different commits each, respectively._ error message, which is normal, because your cloned local copy is not the same as your Github fork, they have diverged.
+
 Push master to Github, overwriting all changes.
 
 ```
