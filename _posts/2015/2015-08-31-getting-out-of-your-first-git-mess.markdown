@@ -111,7 +111,7 @@ Fast-forward
 
 You may get a _"Your branch and 'origin/master' have diverged, and have 2 and 8 different commits each, respectively."_ error message, which is normal, because your cloned local copy is not the same as your Github fork, they have diverged.
 
-Push the _master_ branch to Github, overwriting all changes wutg `git push origin master -f`. The force flag, `-f` is required because we're overwriting changes on Github.
+Push the _master_ branch to Github, overwriting all changes with `git push origin master -f`. The force flag, `-f` is required because we're overwriting changes on Github.
 
 ```
 (master)$ git push origin master -f
