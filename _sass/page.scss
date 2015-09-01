@@ -736,10 +736,13 @@ $button-size: 1.5rem;
 	}
 }
 
-// Suggest Box
+// Suggest and RSS Boxes
 // --------------------------------------------------
-.suggest {
-  margin-top: 10px;
+.suggest, .rss {
   font-size: 80%;
   font-style: italic;
+}
+
+.suggest {
+  margin-top: 10px;
 }
