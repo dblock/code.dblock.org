@@ -9,14 +9,18 @@ I'm teaching a [Startup Systems Design and Engineering class](https://github.com
 
 Since most students use git for the very first time they often make some kind of mess. Everyone successfully forks the repository, clones it locally, makes changes (usually on _master_), commits and pushes, but that's where the issues begin. They try to update from the upstream repository, squash commits, rebase things and make a huge mess. This is normal, git is very powerful and can be very confusing. Eventually it becomes muscle memory and you can only really get there by doing it yourself.
 
-After helping about 5 students I decided to write this up. Here's a quick tutorial on getting out of any mess.
+After helping a handful of students I decided to write this up. Here's a quick tutorial on getting out of a git mess.
 
-### Clean-ish Slate
+### Make a Clean-ish Slate
 
-First, checkout the _master_ branch.
+The first goal is to make both the local computer's and our Github fork's _master_ branches look like the _upstream_, the repository that was forked, _master_ branch, without losing changes already made.
+
+Checkout the _master_ branch.
 
 ```
-git checkout master
+(big-mess)$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
 ```
 
 Make sure there're no changes currently on master.
@@ -28,7 +32,7 @@ Your branch is up-to-date with 'origin/master'.
 nothing to commit, working directory clean
 ```
 
-If there're any changes here, stash them away with _git stash_. Run _git status_ again and make sure it's clean.
+If there're any changes here, `git stash` them away. If you were in the middle of a merge, run `git merge --abort`. If you were in the middle of a rebase, run `git rebase --abort`. Run `git status` again and make sure everything is clean.
 
 ### Save Your Work
 
@@ -41,7 +45,7 @@ Switched to a new branch 'tmp'
 (tmp)$
 ```
 
-And go back to _master_.
+And go back to the _master_ branch.
 
 ```
 (tmp)$ git checkout master
@@ -53,30 +57,42 @@ Your branch is up-to-date with 'origin/master'.
 
 ### Configure the Upstream Remote
 
+This is our link to the parent or forked repository called the _upstream_.
+
 ```
 (master)$ git remote -v
 origin  git@github.com:dblock/cs5356.git (fetch)
 origin  git@github.com:dblock/cs5356.git (push)
 ```
 
-Add the remote.
+Add the _upstream_ remote.
 
 ```
 (master)$ git remote add upstream git@github.com:Cornell-CS5356-Fall2015/cs5356.git
 ```
 
-The _git remote -v_ command would show the upstream remote now.
+The `git remote -v` command would show the upstream remote now.
+
+```
+(master)$ git remote -v
+origin  git@github.com:dblock/cs5356.git (fetch)
+origin  git@github.com:dblock/cs5356.git (push)
+upstream  git@github.com:Cornell-CS5356-Fall2015/cs5356.git (fetch)
+upstream  git@github.com:Cornell-CS5356-Fall2015/cs5356.git (push)
+```
 
 ### Rewind Master a Dozen Commits
 
-Go back in time, losing any changes.
+Go back in time, losing any changes with `git reset --hard`.
 
 ```
 (master)$ git reset HEAD~12 --hard
 HEAD is now at ee933e2 Smaller logo.
 ```
 
-Pull from upstream.
+This just undid a dozen changes, including ours, on _master_. Fortunately we saved everything in that _tmp_ branch.
+
+Pull from _upstream_ with `git pull upstream master`.
 
 ```
 (master)$ git pull upstream master
@@ -93,9 +109,9 @@ Fast-forward
 ...
 ```
 
-You may get a _Your branch and 'origin/master' have diverged, and have 2 and 8 different commits each, respectively._ error message, which is normal, because your cloned local copy is not the same as your Github fork, they have diverged.
+You may get a _"Your branch and 'origin/master' have diverged, and have 2 and 8 different commits each, respectively."_ error message, which is normal, because your cloned local copy is not the same as your Github fork, they have diverged.
 
-Push master to Github, overwriting all changes.
+Push the _master_ branch to Github, overwriting all changes wutg `git push origin master -f`. The force flag, `-f` is required because we're overwriting changes on Github.
 
 ```
 (master)$ git push origin master -f
@@ -108,35 +124,47 @@ To git@github.com:dblock/cs5356.git
    dd3a085..abaecc6  master -> master
 ```
 
-Now master is in sync between upstream's _master_, your fork's _master_ on Github and your computer's _master_, we're back to a state after we've forked the repository, but our changes are on that _tmp_ branch.
+Now master is in sync between upstream's _master_, your fork's _master_ on Github and your computer's _master_, we're back to a state after we've forked the repository, and our changes are on that _tmp_ branch.
 
 ### Apply Changes to a New Branch
 
-We saved our work to _tmp_. Create a new branch called _students-list_ and merge all changes from _tmp_ to it, minus the history.
+We saved our work to _tmp_. Create a new branch called _students-list_ and merge all changes from _tmp_ to it, minus the history with `git merge --squash`. That flag applies the changes but doesn't replay the commits.
 
 ```
 (master)$ git checkout -b students-list
 Switched to a new branch 'students-list'
 
 (students-list)$ git merge tmp --squash
+Updating dd3a085..abaecc6
+Fast-forward
+Squash commit -- not updating HEAD
 ...
 ```
 
-Use `git status` to see changes. They aren't committed, it's as if you just made them.
+Use `git status` to see changes. They aren't committed, it's as if you just made them with a text editor.
+
+```
+(students-list)$ git status
+On branch students-list
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+  new file:   ...
+```
 
 ### Examine Changes, Commit and Push
 
-Add any changed files with _git add_, commit changes with _git commit_ and push the branch to Github.
+Add any changed files with `git add`, commit changes with `git commit` and push the branch to Github.
 
 ```
-git push origin student-list
+(students-list)$ git push origin student-list
 ```
 
-Make a pull request from the _student-list_ branch to the upstream's _master_ branch on Github.
+Make a pull request from the _student-list_ branch to the upstream's _master_ branch on Github. You're all set.
 
 ### Need More Changes?
 
-If you need to make more small changes to the student-list branch, edit the files, `git add` them and commit using `git commit --amend`, which updates the last commit instead of adding a new one, then `git push origin student-list -f` to push the changes to Github. This way there's only one commit in the pull request, no need to _squash_.
+If you need to make more small changes to the _student-list_ branch, edit the files, `git add` them and commit using `git commit --amend`, which updates the last commit instead of adding a new one, then `git push origin student-list -f` to push the changes to Github. This way there's only one commit in the pull request, no need to _squash_.
 
 ### Rebase
 
@@ -163,7 +191,7 @@ Switched to branch 'student-list'
 ...
 ```
 
-When a conflict is shown during the rebase, fix it by editing the file in conflict with a text editor, then continue the rebase with _git rebase --continue_.
+When a conflict is shown during the rebase, fix it by editing the file in conflict with a text editor, then continue the rebase with `git rebase --continue`.
 
 Push the branch to Github.
 
@@ -171,11 +199,11 @@ Push the branch to Github.
 git push origin student-list -f
 ```
 
-No need to update an existing pull request from the student-list branch, it will be automatically updated with the new changes.
+No need to update an existing pull request from the _student-list_ branch, it will be automatically updated with the new changes!
 
 ### Cleanup
 
-After the pull request is accepted upstream (merged), cleanup local branches.
+After the pull request has been accepted upstream (ie. merged), checkout the _master_ branch, `git pull upstream master`, then cleanup local branches.
 
 ```
 (master)$ git branch -D tmp
@@ -183,21 +211,27 @@ After the pull request is accepted upstream (merged), cleanup local branches.
 (master)$ git branch -d student-list
 ```
 
-Prune any branches that were deleted remotely.
+The `-D` force-deletes unmerged branches with changes and `-d` deletes all merged branches.
+
+You may get a _"error: unable to delete 'branch-name': remote ref does not exist_" when trying to delete a branch. Prune any branches that were deleted remotely.
 
 ```
 (master)$ git remote prune origin
 ```
 
-You can see the list with `git branch -r`.
+You can see the remote branch list with `git branch -r`.
 
 ```
 (master)$ git branch -r
   origin/student-list
 ```
 
-Delete the remote branches.
+Delete the merged remote branches.
 
 ```
 (master)$ git push origin :student-list
 ```
+
+### Conclusion
+
+The biggest issue was that you started without a _topic_ or _feature_ branch, _student-list_ in our example. That makes it hard to have a local baseline (_master_) to rebase or update against. Always keep all the _master_ branches in sync, and use _feature_ branches for development.
