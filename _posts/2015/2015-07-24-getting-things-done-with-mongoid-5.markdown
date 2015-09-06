@@ -7,17 +7,20 @@ comments: true
 ---
 ![mongoid]({{ site.url }}/images/posts/2015/2015-07-24-getting-things-done-with-mongoid-5/mongoid.jpg)
 
-Mongoid 5 is now in Beta. For the upcoming 5.0.0 release, the repository is being moved to the MongoDB organization and is now fully supported by MongoDB, the company. Great!
+Mongoid 5 now has an RC0. For the upcoming 5.0.0 release, the repository is being moved to the MongoDB organization and is now fully supported by MongoDB, the company. Great!
 
 Now begins the process of upgrading gems to Mongoid 5. I maintain half a dozen of these, so I am going to keep an up-to-date list of the gems that support the new version, which will incidentally help everyone find their favorite Mongoid gems to stay productive, much like [my 2011 post](/2011/05/27/ror-win-getting-things-done-with-mongodb-mongoid.html) did. So far I have added Mongoid 5 suport to two, and it was fairly easy.
 
-### Supports Mongoid 5 Beta
+### Supports Mongoid 5 RC0
 
 - [Mongoid::Scroll](https://github.com/dblock/mongoid-scroll): Extension that enables infinite scrolling. [@d398c4e9](https://github.com/dblock/mongoid-scroll/commit/d398c4e9ce8279d4659dc26f18f3a77ef38decdb)
 - [Mongoid::TagCollectible](https://github.com/dblock/mongoid-tag-collectible): Easily maintain a collection of Tag instances with aggregate counts from your model's tags. [@5813b77f](https://github.com/dblock/mongoid-tag-collectible/commit/5813b77f3981c5725f8253ff8b6df09e816f099b)
+
+### Supports Mongoid 5 Beta
+
 - [Mongoid::Autoinc](https://github.com/suweller/mongoid-autoinc): A mongoid plugin to add auto incrementing fields to your documents. [@2be7377a](https://github.com/InnovativeTravel/mongoid-autoinc/commit/2be7377aa54f25cecc77ded6a642e675d04e4f11)
 
-### Does Not Support Mongoid 5 Beta
+### Does Not Support Mongoid 5
 
 This is your opportunity to help! Please contribute.
 
