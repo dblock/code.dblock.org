@@ -15,6 +15,7 @@ Now begins the process of upgrading gems to Mongoid 5. I maintain half a dozen o
 
 - [Mongoid::Scroll](https://github.com/dblock/mongoid-scroll): Extension that enables infinite scrolling. [@d398c4e9](https://github.com/dblock/mongoid-scroll/commit/d398c4e9ce8279d4659dc26f18f3a77ef38decdb)
 - [Mongoid::TagCollectible](https://github.com/dblock/mongoid-tag-collectible): Easily maintain a collection of Tag instances with aggregate counts from your model's tags. [@5813b77f](https://github.com/dblock/mongoid-tag-collectible/commit/5813b77f3981c5725f8253ff8b6df09e816f099b)
+- [Mongoid::RSpec](https://github.com/mongoid-rspec/mongoid-rspec): RSpec matchers and macros for Mongoid.
 
 ### Supports Mongoid 5 Beta
 
