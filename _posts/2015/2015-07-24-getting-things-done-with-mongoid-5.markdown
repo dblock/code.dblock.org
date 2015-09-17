@@ -13,7 +13,7 @@ Gems are being upgraded to Mongoid 5. I maintain half a dozen of those, so I am 
 
 So far I have added Mongoid 5 suport to two, and it was fairly easy - [mongoid-scroll@d398c4e9](https://github.com/dblock/mongoid-scroll/commit/d398c4e9ce8279d4659dc26f18f3a77ef38decdb), [mongoid-tag-collectible@5813b77f](https://github.com/dblock/mongoid-tag-collectible/commit/5813b77f3981c5725f8253ff8b6df09e816f099b) and [mongoid-autoinc@2be7377a](https://github.com/InnovativeTravel/mongoid-autoinc/commit/2be7377aa54f25cecc77ded6a642e675d04e4f11) should help you add support to other gems.
 
-Since writing this I have also published a [mongoid-compatibility gem](https://github.com/dblock/mongoid-compatibility) that avoids redundant version checking code and introduces a think compatibility layer for things like `Moped::BSON::ObjectId.legal?(value)` (Mongoid 3) vs. `BSON::ObjectId.legal?(value)` (Mongoid 4 and 5).
+Since writing this I have also published a [mongoid-compatibility gem](https://github.com/dblock/mongoid-compatibility) that avoids redundant version checking code and introduces a thin compatibility layer for things like `Moped::BSON::ObjectId.legal?(value)` (Mongoid 3) vs. `BSON::ObjectId.legal?(value)` (Mongoid 4 and 5).
 
 ### Supports Mongoid 5
 
