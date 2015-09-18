@@ -20,6 +20,7 @@ Since writing this I have also published a [mongoid-compatibility gem](https://g
 - [Mongoid::Autoinc](https://github.com/suweller/mongoid-autoinc): A mongoid plugin to add auto incrementing fields to your documents.
 - [Mongoid::CachedJson](https://github.com/dblock/mongoid-cached-json): Effective caching for nested JSON models.
 - [Mongoid::Enum](https://github.com/thetron/mongoid-enum): Sweet enum sugar for your Mongoid documents.
+- [Mongoid::Fulltext](https://github.com/artsy/mongoid_fulltext): An n-gram based full text search.
 - [Mongoid::Geospatial](https://github.com/nofxx/mongoid-geospatial): A MongoDB/Mongoid Extension with optional GeoRuby/RGeo support.
 - [Mongoid::History](https://github.com/aq1018/mongoid-history): Creates an audit trail for all changes in a model.
 - [Mongoid::RSpec](https://github.com/mongoid-rspec/mongoid-rspec): RSpec matchers and macros for Mongoid.
@@ -36,7 +37,6 @@ This is your opportunity to help! Please contribute.
 - [Kaminari](https://github.com/amatsuda/kaminari): Paginator for modern web app frameworks and ORMs, including Mongoid.
 - [Mongoid::Atomic](https://github.com/jcoene/mongoid_atomic): Atomic updates support.
 - [Mongoid::CollectionSnapshot](https://github.com/aaw/mongoid_collection_snapshot): Easy maintenence of collections of processed data.
-- [Mongoid::Fulltext](https://github.com/aaw/mongoid_fulltext): An n-gram based full text search.
 - [Mongoid::Geo](https://github.com/kristianmandrup/mongoid-geo): Geo-based searched.
 - [Mongoid::GridFs](https://github.com/ahoward/mongoid-grid_fs): A pure Mongoid/Moped implementation of the MongoDB GridFS specification.
 - [Mongoid::Il8n](https://github.com/Papipo/mongoid_i18n): Localizable fields.
