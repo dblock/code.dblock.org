@@ -21,6 +21,7 @@ Since writing this I have also published a [mongoid-compatibility gem](https://g
 - [Mongoid::CachedJson](https://github.com/dblock/mongoid-cached-json): Effective caching for nested JSON models.
 - [Mongoid::Enum](https://github.com/thetron/mongoid-enum): Sweet enum sugar for your Mongoid documents.
 - [Mongoid::Geospatial](https://github.com/nofxx/mongoid-geospatial): A MongoDB/Mongoid Extension with optional GeoRuby/RGeo support.
+- [Mongoid::History](https://github.com/aq1018/mongoid-history): Creates an audit trail for all changes in a model.
 - [Mongoid::RSpec](https://github.com/mongoid-rspec/mongoid-rspec): RSpec matchers and macros for Mongoid.
 - [Mongoid::Scroll](https://github.com/dblock/mongoid-scroll): Extension that enables infinite scrolling.
 - [Mongoid::TagCollectible](https://github.com/dblock/mongoid-tag-collectible): Easily maintain a collection of Tag instances with aggregate counts from your model's tags.
@@ -38,7 +39,6 @@ This is your opportunity to help! Please contribute.
 - [Mongoid::Fulltext](https://github.com/aaw/mongoid_fulltext): An n-gram based full text search.
 - [Mongoid::Geo](https://github.com/kristianmandrup/mongoid-geo): Geo-based searched.
 - [Mongoid::GridFs](https://github.com/ahoward/mongoid-grid_fs): A pure Mongoid/Moped implementation of the MongoDB GridFS specification.
-- [Mongoid::History](https://github.com/aq1018/mongoid-history): Creates an audit trail for all changes in a model.
 - [Mongoid::Il8n](https://github.com/Papipo/mongoid_i18n): Localizable fields.
 - [Mongoid::Locker](https://github.com/afeld/mongoid-locker): Document-level locking.
 - [Mongoid::Multinenancy](https://github.com/PerfectMemory/mongoid-multitenancy): Adds the ability to scope Mongoid models to a tenant in a shared database strategy.
