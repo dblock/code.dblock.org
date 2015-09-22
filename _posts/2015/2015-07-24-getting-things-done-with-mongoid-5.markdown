@@ -17,6 +17,7 @@ Since writing this I have also published a [mongoid-compatibility gem](https://g
 
 ### Supports Mongoid 5
 
+- [CarrierWave::Mongoid](https://github.com/carrierwaveuploader/carrierwave-mongoid): Mongoid and MongoDB's GridFS support in CarrierWave.
 - [Mongoid::Autoinc](https://github.com/suweller/mongoid-autoinc): Adds auto incrementing fields to your documents.
 - [Mongoid::CachedJson](https://github.com/dblock/mongoid-cached-json): Effective caching for nested JSON models.
 - [Mongoid::CollectionSnapshot](https://github.com/aaw/mongoid_collection_snapshot): Easy maintenence of collections of processed data.
@@ -33,7 +34,6 @@ Since writing this I have also published a [mongoid-compatibility gem](https://g
 
 This is your opportunity to help! Please contribute.
 
-- [CarrierWave::Mongoid](https://github.com/carrierwaveuploader/carrierwave-mongoid): Mongoid and MongoDB's GridFS support in CarrierWave.
 - [Delayed::Backend::Mongoid](https://github.com/collectiveidea/delayed_job_mongoid): Mongoid backend for DelayedJob.
 - [Delayed::ShallowMongoid](https://github.com/joeyAghion/delayed_job_shallow_mongoid): Short-circuits serialization of Mongoid model instances when a delayed job is called on them.
 - [Kaminari](https://github.com/amatsuda/kaminari): Paginator for modern web app frameworks and ORMs, including Mongoid.
