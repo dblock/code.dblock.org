@@ -28,6 +28,7 @@ Since writing this I have also published a [mongoid-compatibility gem](https://g
 - [Mongoid::Paranoia](https://github.com/simi/mongoid_paranoia): Enables a "soft delete" of Mongoid documents.
 - [Mongoid::RSpec](https://github.com/mongoid-rspec/mongoid-rspec): RSpec matchers and macros for Mongoid.
 - [Mongoid::Scroll](https://github.com/dblock/mongoid-scroll): Enables infinite scrolling.
+- [Mongoid::Slug](https://github.com/digitalplaywright/mongoid-slug): Generates a URL slug/permalink based on fields in a Mongoid-based model.
 - [Mongoid::TagCollectible](https://github.com/dblock/mongoid-tag-collectible): Easily maintain a collection of Tag instances with aggregate counts from your model's tags.
 
 ### Does Not Support Mongoid 5
@@ -47,7 +48,6 @@ This is your opportunity to help! Please contribute.
 - [Mongoid::Sadstory](https://github.com/netguru/mongoid-sadstory): Adds support for multiparameter fields to mongoid 4.x series.
 - [Mongoid::Search](https://github.com/mauriciozaffari/mongoid_search): Keyword-based search.
 - [Mongoid::Shell](https://github.com/dblock/mongoid-shell): Derive shell commands from Mongoid sessions and configuration options.
-- [Mongoid::Slug](https://github.com/digitalplaywright/mongoid-slug): Generates a URL slug/permalink based on fields in a Mongoid-based model.
 - [Mongoid::Taggable](https://github.com/wilkerlucio/mongoid_taggable): Adds tags to documents and make documents searchable by all or some tags.
 - [Mongoid::TaggableWithContext](https://github.com/aq1018/mongoid_taggable_with_context): Adds tagging support with pre-aggregation.
 - [Mongoid::Token](https://github.com/thetron/mongoid_token): Short snappy tokens for Mongoid documents.
