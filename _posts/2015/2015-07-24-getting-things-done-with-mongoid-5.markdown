@@ -17,15 +17,16 @@ Since writing this I have also published a [mongoid-compatibility gem](https://g
 
 ### Supports Mongoid 5
 
-- [Mongoid::Autoinc](https://github.com/suweller/mongoid-autoinc): A mongoid plugin to add auto incrementing fields to your documents.
+- [Mongoid::Autoinc](https://github.com/suweller/mongoid-autoinc): Adds auto incrementing fields to your documents.
 - [Mongoid::CachedJson](https://github.com/dblock/mongoid-cached-json): Effective caching for nested JSON models.
 - [Mongoid::CollectionSnapshot](https://github.com/aaw/mongoid_collection_snapshot): Easy maintenence of collections of processed data.
-- [Mongoid::Enum](https://github.com/thetron/mongoid-enum): Sweet enum sugar for your Mongoid documents.
+- [Mongoid::Enum](https://github.com/thetron/mongoid-enum): Sweet enum sugar for Mongoid documents.
 - [Mongoid::Fulltext](https://github.com/artsy/mongoid_fulltext): An n-gram based full text search.
-- [Mongoid::Geospatial](https://github.com/nofxx/mongoid-geospatial): A MongoDB/Mongoid Extension with optional GeoRuby/RGeo support.
+- [Mongoid::Geospatial](https://github.com/nofxx/mongoid-geospatial): GeoRuby/RGeo support.
 - [Mongoid::History](https://github.com/aq1018/mongoid-history): Creates an audit trail for all changes in a model.
+- [Mongoid::Paranoia](https://github.com/simi/mongoid_paranoia): Enables a "soft delete" of Mongoid documents.
 - [Mongoid::RSpec](https://github.com/mongoid-rspec/mongoid-rspec): RSpec matchers and macros for Mongoid.
-- [Mongoid::Scroll](https://github.com/dblock/mongoid-scroll): Extension that enables infinite scrolling.
+- [Mongoid::Scroll](https://github.com/dblock/mongoid-scroll): Enables infinite scrolling.
 - [Mongoid::TagCollectible](https://github.com/dblock/mongoid-tag-collectible): Easily maintain a collection of Tag instances with aggregate counts from your model's tags.
 
 ### Does Not Support Mongoid 5
@@ -43,7 +44,6 @@ This is your opportunity to help! Please contribute.
 - [Mongoid::Locker](https://github.com/afeld/mongoid-locker): Document-level locking.
 - [Mongoid::Multinenancy](https://github.com/PerfectMemory/mongoid-multitenancy): Adds the ability to scope Mongoid models to a tenant in a shared database strategy.
 - [Mongoid::Orderable](https://github.com/pyromaniac/mongoid_orderable): Ordered list implementation.
-- [Mongoid::Paranoia](https://github.com/simi/mongoid_paranoia): Enables a "soft delete" of Mongoid documents.
 - [Mongoid::Sadstory](https://github.com/netguru/mongoid-sadstory): Adds support for multiparameter fields to mongoid 4.x series.
 - [Mongoid::Search](https://github.com/mauriciozaffari/mongoid_search): Keyword-based search.
 - [Mongoid::Shell](https://github.com/dblock/mongoid-shell): Derive shell commands from Mongoid sessions and configuration options.
