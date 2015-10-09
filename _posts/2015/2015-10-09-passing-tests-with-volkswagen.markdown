@@ -38,4 +38,8 @@ Volkswagen did a good job pioneering TDD. There's now broad language and framewo
 
 * [Volkswagen-Xcode](https://github.com/cezheng/Volkswagen-Xcode)
 
+### Swift
+
+* [Winterkorn](https://github.com/neonichu/Winterkorn)
+
 Please add more, PR [here](https://github.com/dblock/code.dblock.org/blob/gh-pages/_posts/2015/2015-10-09-passing-tests-with-volkswagen.markdown).
