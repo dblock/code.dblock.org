@@ -28,6 +28,7 @@ Since writing this I have also published a [mongoid-compatibility gem](https://g
 - [Mongoid::Geospatial](https://github.com/nofxx/mongoid-geospatial): GeoRuby/RGeo support.
 - [Mongoid::History](https://github.com/aq1018/mongoid-history): Creates an audit trail for all changes in a model.
 - [Mongoid::Locker](https://github.com/afeld/mongoid-locker): Document-level locking.
+- [Mongoid::Orderable](https://github.com/pyromaniac/mongoid_orderable): Ordered list implementation.
 - [Mongoid::Paranoia](https://github.com/simi/mongoid_paranoia): Enables a "soft delete" of Mongoid documents.
 - [Mongoid::RSpec](https://github.com/mongoid-rspec/mongoid-rspec): RSpec matchers and macros for Mongoid.
 - [Mongoid::Scroll](https://github.com/dblock/mongoid-scroll): Enables infinite scrolling.
@@ -46,7 +47,6 @@ This is your opportunity to help! Please contribute.
 - [Mongoid::GridFs](https://github.com/ahoward/mongoid-grid_fs): A pure Mongoid/Moped implementation of the MongoDB GridFS specification.
 - [Mongoid::Il8n](https://github.com/Papipo/mongoid_i18n): Localizable fields.
 - [Mongoid::Multinenancy](https://github.com/PerfectMemory/mongoid-multitenancy): Adds the ability to scope Mongoid models to a tenant in a shared database strategy.
-- [Mongoid::Orderable](https://github.com/pyromaniac/mongoid_orderable): Ordered list implementation.
 - [Mongoid::Sadstory](https://github.com/netguru/mongoid-sadstory): Adds support for multiparameter fields to mongoid 4.x series.
 - [Mongoid::Search](https://github.com/mauriciozaffari/mongoid_search): Keyword-based search.
 - [Mongoid::Taggable](https://github.com/wilkerlucio/mongoid_taggable): Adds tags to documents and make documents searchable by all or some tags.
