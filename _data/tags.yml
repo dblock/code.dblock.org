@@ -1,110 +1,165 @@
 .net:
   name: .net
+  count: 8
 active directory:
   name: active directory
+  count: 16
 agile:
   name: agile
+  count: 18
 appsecinc:
   name: appsecinc
+  count: 8
 architecture:
   name: architecture
+  count: 15
 art.sy:
   name: art.sy
+  count: 46
 asp.net:
   name: asp.net
+  count: 6
 blog:
   name: blog
+  count: 6
 build:
   name: build
+  count: 5
 capybara:
   name: capybara
+  count: 5
 conferences:
   name: conferences
+  count: 5
 cto:
   name: cto
+  count: 8
 databases:
   name: databases
+  count: 9
 dotnetinstaller:
   name: dotnetinstaller
+  count: 13
 git:
   name: git
+  count: 8
 github:
   name: github
+  count: 9
 grape:
   name: grape
+  count: 24
 heroku:
   name: heroku
+  count: 13
 hiring:
   name: hiring
+  count: 11
 ios:
   name: ios
+  count: 9
 java:
   name: java
+  count: 34
 javascript:
   name: javascript
+  count: 9
 jenkins:
   name: jenkins
+  count: 7
 jna:
   name: jna
+  count: 25
 jobs:
   name: jobs
+  count: 16
 learning:
   name: learning
+  count: 9
 me me:
   name: me me
+  count: 7
 mongodb:
   name: mongodb
+  count: 35
 mongoid:
   name: mongoid
+  count: 13
 msbuild:
   name: msbuild
+  count: 5
 msi:
   name: msi
+  count: 19
 open source:
   name: open source
+  count: 53
 organizations:
   name: organizations
+  count: 21
 people:
   name: people
+  count: 64
 performance:
   name: performance
+  count: 9
 rack:
   name: rack
+  count: 7
 rails:
   name: rails
+  count: 64
 rake:
   name: rake
+  count: 10
 rspec:
   name: rspec
+  count: 10
 ruby:
   name: ruby
+  count: 100
 s3:
   name: s3
+  count: 8
 security:
   name: security
+  count: 27
 slack:
   name: slack
+  count: 5
 speaking:
   name: speaking
+  count: 23
 teaching:
   name: teaching
+  count: 13
 teams:
   name: teams
+  count: 26
 technology:
   name: technology
+  count: 26
 testing:
   name: testing
+  count: 36
 tomcat:
   name: tomcat
+  count: 9
 ui:
   name: ui
+  count: 6
 vestris:
   name: vestris
+  count: 8
 vmware:
   name: vmware
+  count: 18
 waffle:
   name: waffle
+  count: 26
 win32:
   name: win32
+  count: 37
 wix:
   name: wix
+  count: 11

@@ -8,6 +8,6 @@ comments: false
   {% for tag_hash in site.data.tags %}
     {% assign key = tag_hash[0] %}
     {% assign tag = tag_hash[1] %}
-    <li><a href='/tags/{{ key }}'>{{ tag.name }}</a></li>
+    <li><a href='/tags/{{ key }}'>{{ tag.name }}</a> ({{ tag.count }})</li>
   {% endfor %}
 </ul>

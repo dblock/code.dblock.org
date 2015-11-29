@@ -23,5 +23,5 @@ permalink: /tags/#{tag}/
 ---
     EOS
   end
-  File.write '_data/tags.yml', tags.keys.sort.map { |tag| "#{tag}:\n  name: #{tag}" }.join("\n")
+  File.write '_data/tags.yml', tags.keys.sort.map { |tag| "#{tag}:\n  name: #{tag}\n  count: #{tags[tag]}" }.join("\n")
 end

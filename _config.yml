@@ -1,6 +1,6 @@
 title: code.dblock.org | tech blog
 locale: en_US
-url: http://code.dblock.org
+url:
 markdown: kramdown
 highlighter: pygments
 sass:
