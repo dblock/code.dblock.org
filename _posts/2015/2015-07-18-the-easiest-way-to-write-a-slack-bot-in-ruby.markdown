@@ -29,3 +29,7 @@ PongBot::App.instance.run
 {% endhighlight %}
 
 Add `gem 'slack-ruby-bot'` to your *Gemfile* and party on. Unlike [Lita](https://github.com/jimmycuadra/lita) it's not trying to be anything other than a Slack bot boilerplate. Source code [on Github](https://github.com/dblock/slack-ruby-bot).
+
+### Update: Integration with Rails
+
+If you're trying to integrate Slack with Rails, check out [Writing a Slack Bot running on Rails (with React)](/2015/11/28/writing-a-slack-bot-running-on-rails-with-react.html).

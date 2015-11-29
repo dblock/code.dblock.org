@@ -85,3 +85,7 @@ Slack automatically parses and translates things like `<@userid>`. That's it.
 ### Turning GameBot into an App
 
 I turned GameBot into a runnable app with some bells and whistles at [github.com/dblock/slack-gamebot](https://github.com/dblock/slack-gamebot).
+
+### Update: Bot Framework and Integration with Rails
+
+If you're writing a bot, or trying to integrate Slack with Rails, check out [The Easiest Way to Write a Slack Bot in Ruby](/2015/07/18/the-easiest-way-to-write-a-slack-bot-in-ruby.html) and [Writing a Slack Bot running on Rails (with React)](/2015/11/28/writing-a-slack-bot-running-on-rails-with-react.html).
