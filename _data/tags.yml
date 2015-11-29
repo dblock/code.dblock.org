@@ -1,4 +1,110 @@
-slack:
-  name: Slack
+.net:
+  name: .net
+active directory:
+  name: active directory
+agile:
+  name: agile
+appsecinc:
+  name: appsecinc
+architecture:
+  name: architecture
+art.sy:
+  name: art.sy
+asp.net:
+  name: asp.net
+blog:
+  name: blog
+build:
+  name: build
+capybara:
+  name: capybara
+conferences:
+  name: conferences
+cto:
+  name: cto
+databases:
+  name: databases
+dotnetinstaller:
+  name: dotnetinstaller
+git:
+  name: git
+github:
+  name: github
+grape:
+  name: grape
+heroku:
+  name: heroku
+hiring:
+  name: hiring
+ios:
+  name: ios
+java:
+  name: java
+javascript:
+  name: javascript
+jenkins:
+  name: jenkins
+jna:
+  name: jna
+jobs:
+  name: jobs
+learning:
+  name: learning
+me me:
+  name: me me
 mongodb:
-  name: MongoDB
+  name: mongodb
+mongoid:
+  name: mongoid
+msbuild:
+  name: msbuild
+msi:
+  name: msi
+open source:
+  name: open source
+organizations:
+  name: organizations
+people:
+  name: people
+performance:
+  name: performance
+rack:
+  name: rack
+rails:
+  name: rails
+rake:
+  name: rake
+rspec:
+  name: rspec
+ruby:
+  name: ruby
+s3:
+  name: s3
+security:
+  name: security
+slack:
+  name: slack
+speaking:
+  name: speaking
+teaching:
+  name: teaching
+teams:
+  name: teams
+technology:
+  name: technology
+testing:
+  name: testing
+tomcat:
+  name: tomcat
+ui:
+  name: ui
+vestris:
+  name: vestris
+vmware:
+  name: vmware
+waffle:
+  name: waffle
+win32:
+  name: win32
+wix:
+  name: wix
