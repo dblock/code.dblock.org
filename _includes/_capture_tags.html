@@ -1,0 +1,17 @@
+{% assign tags_ary = "" | split: "" %}
+{% for post_tag in page.tags %}
+  {% assign tag = site.data.tags[post_tag] %}
+  {% if tag %}
+    {% capture tag_content %}
+      <a href='/tags/{{ post_tag }}/'>{{ tag.name }}</a>
+    {% endcapture %}
+    {% assign tags_ary = tags_ary | push: tag_content %}
+  {% endif %}
+{% endfor %}
+{% capture tags_content %}
+  {% if tags_ary.size > 1 %}
+    <i class="fa fa-tags">{{ tags_ary | join: ", " }}</i>
+  {% elsif tags_ary.size == 1 %}
+    <i class="fa fa-tag">{{ tags_ary | join: ", " }}</i>
+  {% endif %}
+{% endcapture %}
