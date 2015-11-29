@@ -2,7 +2,7 @@
 layout: post
 title: "Becoming Open Source by Default"
 date: 2015-02-09
-tags: [teams, people, open-source]
+tags: [teams, people, open source]
 comments: true
 pinned: true
 ---

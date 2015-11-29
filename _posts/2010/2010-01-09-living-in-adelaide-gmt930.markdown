@@ -3,7 +3,7 @@ layout: post
 title: "Living in Adelaide, GMT+9:30"
 redirect_from: "/living-in-adelaide-gmt930/"
 date: 2010-01-09 13:40:25
-tags: [.net, asp.net]
+tags: [dotnet, asp.net]
 comments: true
 dblog_post_id: 76
 ---
