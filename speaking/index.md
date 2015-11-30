@@ -3,6 +3,8 @@ layout: page
 title: Speaking
 tags: [speaking]
 comments: false
+redirect_from: '/@speaking/'
+permalink: '/speaking/'
 ---
 
 I speak frequently at conferences and meetups. Recently at [QCon, June 10, 2015, New York](https://qconnewyork.com) on becoming open-source by default and the [East Coast CTO Summit, May 12, 2015, New York](https://www.eventjoy.com/e/east-coast-cto-summit-2015) on Engineering compensation.
