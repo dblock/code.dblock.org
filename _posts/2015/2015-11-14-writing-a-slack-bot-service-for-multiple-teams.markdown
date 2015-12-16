@@ -5,7 +5,11 @@ date: 2015-11-14
 tags: [slack, api]
 comments: true
 ---
-The [slack-ruby-bot gem](https://github.com/dblock/slack-ruby-bot) lets you roll out a bot for your team, but used to recommend a global Slack token configuration. How do we turn it into a full Slack bot service for multiple teams?
+![slack platform]({{ site.url }}/images/posts/2015/2015-11-14-writing-a-slack-bot-service-for-multiple-teams/platform.png)
+
+_Note: This post has been updated with Slack Button integration since the launch of the [Slack Developer Platform](https://medium.com/slack-developer-blog/launch-platform-114754258b91#.od3y71dyo)._
+
+The [slack-ruby-bot gem](https://github.com/dblock/slack-ruby-bot) lets you roll out a bot for your team, but used to recommend a global Slack token configuration. How do we turn it into a full Slack bot service for multiple teams? How can we get a Slack Button to let teams install our service?
 
 tl;dr Check out [github.com/dblock/slack-bot-server](https://github.com/dblock/slack-bot-server).
 
@@ -28,6 +32,12 @@ In order to maintain multiple bot servers you need a registry. I chose to make s
 ### A Web Interface and an API
 
 The bot server isn't useful without a bit of UI. I implemented a [Grape API](https://github.com/dblock/slack-bot-server/tree/master/api) with some basic CRUD using MongoDB to store API tokens, along with a page that uses JQuery to add and remove new integrations.
+
+### Slack Button Integration
+
+To enable Slack button integration, I followed [Create a New Application](https://api.slack.com/applications/new) on Slack, noting the client ID and secret. The UI gives you the HTML code for a slack button. When a user clicks on the button they and OAuth completes successfully they are redirected back to your application with a `code` in the query string. That code is POSTed to Slack via the [Web API's oauth.access](https://api.slack.com/methods/oauth.access) which returns an actual API token that can be used with a Real Time API client.
+
+![register]({{ site.url }}/images/posts/2015/2015-11-14-writing-a-slack-bot-service-for-multiple-teams/new.png)
 
 ### Your Turn
 
