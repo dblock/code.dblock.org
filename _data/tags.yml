@@ -126,7 +126,7 @@ security:
   count: 27
 slack:
   name: slack
-  count: 5
+  count: 6
 speaking:
   name: speaking
   count: 23

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "PlayPlay.io: Ping Pong and Chess Slack Bot"
+title: "PlayPlay.io: Ping Pong, Chess, Pool and Tic-Tac-Toe Slack Bot"
 date: 2015-12-24
-tags: [slack, bot, ping pong, chess]
+tags: [slack, bot, ping pong, chess, pool, tic-tac-toe]
 comments: true
 ---
-I've launched [playplay.io](http://playplay.io), based on my open-source [slack-gamebot](https://github.com/dblock/slack-gamebot).
+I've launched [playplay.io](http://playplay.io), based on my open-source [slack-gamebot](https://github.com/dblock/slack-gamebot). It can currently track your ping pong, pool, chess and tic-tac-toe games.
 
 [![playplay.io]({{ site.url }}/images/posts/2015/2015-12-24-playplayio-ping-pong-and-chess-slack-bot/playplayio.png)](http://playplay.io)
 
-* Find it [on ProductHunt](https://www.producthunt.com/tech/playplay-io).
-* Follow [@playplayio](https://twitter.com/playplayio) on Twitter.
+* Give it some love [on ProductHunt](https://www.producthunt.com/tech/playplay-io).
+* Follow [@playplayio](https://twitter.com/playplayio) on Twitter for updates.
 * Sign up your team for free [on playplay.io](http://playplay.io).
 
 ### Implementation Details
