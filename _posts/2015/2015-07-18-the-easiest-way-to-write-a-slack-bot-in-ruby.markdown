@@ -14,18 +14,13 @@ Here's a minimal example.
 {% highlight ruby %}
 require 'slack-ruby-bot'
 
-module PongBot
-  class App < SlackRubyBot::App
-  end
-
-  class Ping < SlackRubyBot::Commands::Base
-    command 'ping' do |client, data, _|
-      send_message client, data.channel, 'pong'
-    end
+class PongBot < SlackRubyBot::Bot
+  command 'ping' do |client, data, _|
+    client.say(channel: data.channel, text: 'pong')
   end
 end
 
-PongBot::App.instance.run
+PongBot.run
 {% endhighlight %}
 
 Add `gem 'slack-ruby-bot'` to your *Gemfile* and party on. Unlike [Lita](https://github.com/jimmycuadra/lita) it's not trying to be anything other than a Slack bot boilerplate. Source code [on Github](https://github.com/dblock/slack-ruby-bot).
