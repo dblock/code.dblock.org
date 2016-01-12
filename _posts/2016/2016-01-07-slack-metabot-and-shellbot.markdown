@@ -9,6 +9,6 @@ I made two fun bots, [slack-metabot](http://slack-metabot.dblock.org) and [slack
 
 ![slack-metabot]({{ site.url }}/images/posts/2016/2016-01-07-slack-metabot-and-shellbot/metabot.gif)
 
-![slack-metabot]({{ site.url }}/images/posts/2016/2016-01-07-slack-metabot-and-shellbot/shellbot.gif)
+![slack-shellbot]({{ site.url }}/images/posts/2016/2016-01-07-slack-metabot-and-shellbot/shellbot.gif)
 
 You're welcome.
