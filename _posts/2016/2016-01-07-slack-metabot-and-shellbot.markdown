@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Slack MetaBot and ShellBot (aka Shlack)"
+title: "Slack API Explorer and ShellBot (aka Shlack)"
 date: 2016-01-07
 tags: [slack, bot]
 comments: true
 ---
-I made two fun bots, [slack-metabot](http://slack-metabot.dblock.org) and [slack-shellbot](http://shlack.dblock.org).
+I made two fun bots, [slack-api-explorer](http://api-explorer.playplay.io) and [slack-shellbot](http://shlack.dblock.org).
 
-![slack-metabot]({{ site.url }}/images/posts/2016/2016-01-07-slack-metabot-and-shellbot/metabot.gif)
+![slack-api-explorer]({{ site.url }}/images/posts/2016/2016-01-07-slack-metabot-and-shellbot/api-explorer.gif)
 
 ![slack-shellbot]({{ site.url }}/images/posts/2016/2016-01-07-slack-metabot-and-shellbot/shellbot.gif)
 
