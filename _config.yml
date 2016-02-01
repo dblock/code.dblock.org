@@ -2,11 +2,11 @@ title: code.dblock.org | tech blog
 locale: en_US
 url:
 markdown: kramdown
-highlighter: pygments
 sass:
   sass_dir: _sass
   style: compressed
 gems:
+  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
 kramdown:
