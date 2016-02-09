@@ -115,6 +115,16 @@ root@dblock-plum:~# dokku domains:add market-bot market.playplay.io
 -----> Added market.playplay.io to market-bot
 {% endhighlight %}
 
+### Hot Deploys
+
+When a new version of a bot is deployed, Dokku will wait `DOKKU_WAIT_TO_RETIRE` to shutdown the previous instance. You may not want two instances of a bot to hang around and either set this time to zero or a smaller number.
+
+{% highlight bash %}
+root@dblock-plum:~# dokku config:set --global DOKKU_WAIT_TO_RETIRE=0
+-----> Setting config vars
+       DOKKU_WAIT_TO_RETIRE: 5
+{% endhighlight %}
+
 ### Things I Will Miss
 
 The only thing I will miss from Heroku is the ability to change the number and the size of each process and maybe not having to SSH to the instance. Other than that the DigitalOcean + Dokku combination is much more cost-effective and equally convenient.
