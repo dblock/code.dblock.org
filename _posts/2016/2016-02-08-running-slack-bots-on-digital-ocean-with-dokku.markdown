@@ -81,6 +81,16 @@ Any other environment variable can be set as well.
 root@dblock-plum:/# dokku config:set market-bot SLACK_CLIENT_ID=... SLACK_CLIENT_SECRET=... RACK_ENV=production LANG=en_US.UTF-8
 {% endhighlight %}
 
+### Supervisord
+
+Install [dokku-logging-supervisord](https://github.com/sehrope/dokku-logging-supervisord) to auto-restart crashing processes, just like on Heroku.
+
+{% highlight bash %}
+root@dblock-plum:/# dokku plugin:install https://github.com/sehrope/dokku-logging-supervisord.git
+{% endhighlight %}
+
+This will also cause application log files to go into `/var/log/dokku/[app name]`, so you can `tail -f` those normally.
+
 ### Pushing Code
 
 Dokku supports Git workflow. Add a remote and push code to it.
