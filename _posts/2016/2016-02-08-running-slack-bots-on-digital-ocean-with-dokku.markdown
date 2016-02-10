@@ -83,10 +83,10 @@ root@dblock-plum:/# dokku config:set market-bot SLACK_CLIENT_ID=... SLACK_CLIENT
 
 ### Supervisord
 
-Install [dokku-logging-supervisord](https://github.com/sehrope/dokku-logging-supervisord) to auto-restart crashing processes, just like on Heroku.
+Install [dokku-logging-supervisord](https://github.com/sehrope/dokku-logging-supervisord) to auto-restart crashing processes, just like on Heroku. Use [this fork](https://github.com/rsteckler/dokku-logging-supervisord) to avoid [docker-locking-supervisord#34](https://github.com/sehrope/dokku-logging-supervisord/issues/34) which points to [docker#18543](https://github.com/docker/docker/issues/18543) as a bug that causes hangs on restart.
 
 {% highlight bash %}
-root@dblock-plum:/# dokku plugin:install https://github.com/sehrope/dokku-logging-supervisord.git
+root@dblock-plum:/# dokku plugin:install https://github.com/rsteckler/dokku-logging-supervisord.git
 {% endhighlight %}
 
 This will also cause application log files to go into `/var/log/dokku/[app name]`, so you can `tail -f` those normally.
