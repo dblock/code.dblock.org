@@ -29,7 +29,7 @@ Finally, navigating to the droplet's URL and clicking a couple of buttons will c
 
 ### SSH and Dokku
 
-Unlike Heroku, Dokku doesn't seem to have a remote client for manipulating the PaaS. It's not a big deal, you need to SSH to the Droplet and run commands from there. It's just a Linux Ubuntu box.
+Install `dokku-cli` via `gem install dokku-cli`. Adding a `dokku` remote to your local git repository will let you run `dokku config` and other commands just like on Heroku. You can also SSH to the Droplet and run commands from there. It's just a Linux Ubuntu box.
 
 ![ssh]({{ site.url }}/images/posts/2016/2016-02-08-running-slack-bots-on-digital-ocean-with-dokku/ssh.png)
 
@@ -133,4 +133,4 @@ Sign up for New Relic and configure it for Docker as described [here](https://do
 
 ### Things I Will Miss
 
-The only thing I will miss from Heroku is the ability to change the number and the size of each process and maybe not having to SSH to the instance. Other than that the DigitalOcean + Dokku combination is much more cost-effective and equally convenient.
+The only thing I will miss from Heroku is the ability to change the number and the size of each process. Other than that the DigitalOcean + Dokku combination is much more cost-effective and equally convenient.
