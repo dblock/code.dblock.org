@@ -125,6 +125,12 @@ root@dblock-plum:~# dokku config:set --global DOKKU_WAIT_TO_RETIRE=0
        DOKKU_WAIT_TO_RETIRE: 5
 {% endhighlight %}
 
+### New Relic
+
+Sign up for New Relic and configure it for Docker as described [here](https://docs.newrelic.com/docs/servers/new-relic-servers-linux/installation-configuration/enabling-new-relic-servers-docker), which gives you a view inside the Docker containers.
+
+![NewRelic]({{ site.url }}/images/posts/2016/2016-02-08-running-slack-bots-on-digital-ocean-with-dokku/newrelic.png)
+
 ### Things I Will Miss
 
 The only thing I will miss from Heroku is the ability to change the number and the size of each process and maybe not having to SSH to the instance. Other than that the DigitalOcean + Dokku combination is much more cost-effective and equally convenient.
