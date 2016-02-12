@@ -7,7 +7,9 @@ tags: [performance, grape, speaking, ruby]
 comments: true
 dblog_post_id: 342
 ---
-![]({{ site.url }}/images/posts/2012/2012-07-01-goruco-2012-from-zero-to-api-cache-w-grape-mongodb-in-10-minutes-video/image_10.jpg)
+tl;dr [watch the video](https://www.youtube.com/watch?v=e9HLflRXMcA)
+
+[![]({{ site.url }}/images/posts/2012/2012-07-01-goruco-2012-from-zero-to-api-cache-w-grape-mongodb-in-10-minutes-video/image_10.jpg)](https://www.youtube.com/watch?v=e9HLflRXMcA)
 
 Me announcing the open-source Garner gem, [https://github.com/artsy/garner](https://github.com/artsy/garner) and talking about server-side caching. A few people came up to me after the quick talk and said it really helped them put 2 and 2 together between If-Modified-Since, If-None-Match, E-Tags and 304s. Cool.
 
