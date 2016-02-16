@@ -7,6 +7,9 @@ active directory:
 agile:
   name: agile
   count: 18
+api:
+  name: api
+  count: 5
 appsecinc:
   name: appsecinc
   count: 8
@@ -81,7 +84,7 @@ me me:
   count: 7
 mongodb:
   name: mongodb
-  count: 35
+  count: 36
 mongoid:
   name: mongoid
   count: 13
@@ -99,7 +102,7 @@ organizations:
   count: 21
 people:
   name: people
-  count: 64
+  count: 65
 performance:
   name: performance
   count: 9
@@ -126,7 +129,7 @@ security:
   count: 27
 slack:
   name: slack
-  count: 6
+  count: 10
 speaking:
   name: speaking
   count: 23
@@ -135,7 +138,7 @@ teaching:
   count: 13
 teams:
   name: teams
-  count: 26
+  count: 27
 technology:
   name: technology
   count: 26
