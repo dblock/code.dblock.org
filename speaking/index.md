@@ -7,9 +7,12 @@ redirect_from: '/@speaking/'
 permalink: '/speaking/'
 ---
 
-I speak frequently at conferences and meetups. Recently at [QCon, June 10, 2015, New York](https://qconnewyork.com) on becoming open-source by default and the [East Coast CTO Summit, May 12, 2015, New York](https://www.eventjoy.com/e/east-coast-cto-summit-2015) on Engineering compensation.
+I speak frequently at conferences and meetups, ranging from pure technology topics to Engineering compensation. Feel free to [e-mail me](mailto:dblock@dblock.org) with speaking opportunities.
 
-Here's a selection of some recorded talks.
+Here's a selection of recorded talks.
+
+<a href="https://vimeo.com/158686783"><img src="/images/about/your-first-slack-bot-service.png"></a><br>
+[Your First Slack Bot Service](https://vimeo.com/158686783): Recorded at the first inaugural New York City Slack Meetup in March 2016.
 
 <a href="https://vimeo.com/136554627"><img src="/images/about/becoming-open-source-by-default.png"></a><br>
 [Becoming Open-Source by Default](https://vimeo.com/136554627): Recorded for the Artsy offsite in August 2015.
@@ -28,4 +31,3 @@ QCon, New York, 2014
 [Building and Scaling a Test Driven Culture](https://www.youtube.com/watch?v=QvHf94hxzRc)
 AppNexus Engineering at Scale, New York, 2013
 
-Feel free to [e-mail me](mailto:dblock@dblock.org) speaking opportunities.
