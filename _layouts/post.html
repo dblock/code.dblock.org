@@ -39,7 +39,7 @@
         <div class="article-author-bottom">
           {% include _author-bio.html %}
         </div>
-        <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
+        <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}. <a target="_blank" href="{{ site.edit_url }}{{ page.path }}">See a typo?</a></p>
         {% if page.share != false %}{% include _social-share.html %}{% endif %}
       </footer>
     </div><!-- /.article-wrap -->
