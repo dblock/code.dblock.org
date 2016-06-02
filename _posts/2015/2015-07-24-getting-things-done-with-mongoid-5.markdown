@@ -20,14 +20,17 @@ Since writing this I have also published a [mongoid-compatibility gem](https://g
 - [CarrierWave::Mongoid](https://github.com/carrierwaveuploader/carrierwave-mongoid): Mongoid and MongoDB's GridFS support in CarrierWave.
 - [Delayed::Backend::Mongoid](https://github.com/collectiveidea/delayed_job_mongoid): Mongoid backend for DelayedJob.
 - [Delayed::ShallowMongoid](https://github.com/joeyAghion/delayed_job_shallow_mongoid): Short-circuits serialization of Mongoid model instances when a delayed job is called on them.
+- [Kaminari](https://github.com/amatsuda/kaminari): Paginator for modern web app frameworks and ORMs, including Mongoid.
 - [Mongoid::Autoinc](https://github.com/suweller/mongoid-autoinc): Adds auto incrementing fields to your documents.
 - [Mongoid::CachedJson](https://github.com/dblock/mongoid-cached-json): Effective caching for nested JSON models.
 - [Mongoid::CollectionSnapshot](https://github.com/aaw/mongoid_collection_snapshot): Easy maintenence of collections of processed data.
 - [Mongoid::Enum](https://github.com/thetron/mongoid-enum): Sweet enum sugar for Mongoid documents.
 - [Mongoid::Fulltext](https://github.com/artsy/mongoid_fulltext): An n-gram based full text search.
 - [Mongoid::Geospatial](https://github.com/nofxx/mongoid-geospatial): GeoRuby/RGeo support.
+- [Mongoid::GridFs](https://github.com/ahoward/mongoid-grid_fs): A pure Mongoid/Moped implementation of the MongoDB GridFS specification.
 - [Mongoid::History](https://github.com/aq1018/mongoid-history): Creates an audit trail for all changes in a model.
 - [Mongoid::Locker](https://github.com/afeld/mongoid-locker): Document-level locking.
+- [Mongoid::Multinenancy](https://github.com/PerfectMemory/mongoid-multitenancy): Adds the ability to scope Mongoid models to a tenant in a shared database strategy.
 - [Mongoid::Orderable](https://github.com/pyromaniac/mongoid_orderable): Ordered list implementation.
 - [Mongoid::Paranoia](https://github.com/simi/mongoid_paranoia): Enables a "soft delete" of Mongoid documents.
 - [Mongoid::RSpec](https://github.com/mongoid-rspec/mongoid-rspec): RSpec matchers and macros for Mongoid.
@@ -35,23 +38,20 @@ Since writing this I have also published a [mongoid-compatibility gem](https://g
 - [Mongoid::Shell](https://github.com/dblock/mongoid-shell): Derive shell commands from Mongoid sessions and configuration options.
 - [Mongoid::Slug](https://github.com/digitalplaywright/mongoid-slug): Generates a URL slug/permalink based on fields in a Mongoid-based model.
 - [Mongoid::TagCollectible](https://github.com/dblock/mongoid-tag-collectible): Easily maintain a collection of Tag instances with aggregate counts from your model's tags.
+- [Mongoid::Token](https://github.com/thetron/mongoid_token): Short snappy tokens for Mongoid documents.
 - [Sunspot::Mongo](https://github.com/derekharmel/sunspot_mongo): Sunspot search support for Mongoid.
 
 ### Does Not Support Mongoid 5
 
-This is your opportunity to help! Please contribute.
+Some of these gems look dead, so this is your opportunity to help! Please contribute.
 
-- [Kaminari](https://github.com/amatsuda/kaminari): Paginator for modern web app frameworks and ORMs, including Mongoid.
 - [Mongoid::Atomic](https://github.com/jcoene/mongoid_atomic): Atomic updates support.
 - [Mongoid::Geo](https://github.com/kristianmandrup/mongoid-geo): Geo-based searched.
-- [Mongoid::GridFs](https://github.com/ahoward/mongoid-grid_fs): A pure Mongoid/Moped implementation of the MongoDB GridFS specification.
 - [Mongoid::Il8n](https://github.com/Papipo/mongoid_i18n): Localizable fields.
-- [Mongoid::Multinenancy](https://github.com/PerfectMemory/mongoid-multitenancy): Adds the ability to scope Mongoid models to a tenant in a shared database strategy.
 - [Mongoid::Sadstory](https://github.com/netguru/mongoid-sadstory): Adds support for multiparameter fields to mongoid 4.x series.
 - [Mongoid::Search](https://github.com/mauriciozaffari/mongoid_search): Keyword-based search.
 - [Mongoid::Taggable](https://github.com/wilkerlucio/mongoid_taggable): Adds tags to documents and make documents searchable by all or some tags.
 - [Mongoid::TaggableWithContext](https://github.com/aq1018/mongoid_taggable_with_context): Adds tagging support with pre-aggregation.
-- [Mongoid::Token](https://github.com/thetron/mongoid_token): Short snappy tokens for Mongoid documents.
 - [Mongoid::Tracking](https://github.com/twoixter/trackoid): Tracker for document changes, more suitable when you need to embed tracking logic such as increments.
 - [Mongoid::Tree](https://github.com/ticktricktrack/mongoid_tree): Model tree structures.
 - [Mongoid::Votable](https://github.com/vinova/voteable_mongo): Vote models up/down.
