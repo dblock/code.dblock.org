@@ -9,7 +9,9 @@ permalink: '/about/'
 
 Hi! This is my tech blog.
 
-<img src="/images/about/daniel-doubrovkine.jpg" style="max-width: 200px">
+<a href='/images/about/headshot.jpg'>
+  <img src="/images/about/daniel-doubrovkine.jpg" style="max-width: 200px">
+</a>
 
 Here's an official bio.
 
