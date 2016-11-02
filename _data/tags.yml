@@ -36,7 +36,7 @@ conferences:
   count: 5
 cto:
   name: cto
-  count: 8
+  count: 9
 databases:
   name: databases
   count: 9
@@ -45,10 +45,10 @@ dotnetinstaller:
   count: 13
 git:
   name: git
-  count: 8
+  count: 9
 github:
   name: github
-  count: 9
+  count: 10
 grape:
   name: grape
   count: 24
@@ -57,10 +57,10 @@ heroku:
   count: 13
 hiring:
   name: hiring
-  count: 11
+  count: 12
 ios:
   name: ios
-  count: 9
+  count: 10
 java:
   name: java
   count: 34
@@ -75,7 +75,7 @@ jna:
   count: 25
 jobs:
   name: jobs
-  count: 16
+  count: 17
 learning:
   name: learning
   count: 9
@@ -84,10 +84,10 @@ me me:
   count: 7
 mongodb:
   name: mongodb
-  count: 36
+  count: 38
 mongoid:
   name: mongoid
-  count: 13
+  count: 14
 msbuild:
   name: msbuild
   count: 5
@@ -102,7 +102,7 @@ organizations:
   count: 21
 people:
   name: people
-  count: 65
+  count: 68
 performance:
   name: performance
   count: 9
@@ -132,13 +132,13 @@ slack:
   count: 11
 speaking:
   name: speaking
-  count: 23
+  count: 24
 teaching:
   name: teaching
   count: 13
 teams:
   name: teams
-  count: 27
+  count: 29
 technology:
   name: technology
   count: 26

@@ -9,7 +9,25 @@ permalink: '/speaking/'
 
 I speak frequently on topics ranging from the intersection of technology and art to people and teams. Feel free to [e-mail me](mailto:dblock@dblock.org) with speaking opportunities, including when you just want an intro to [Artsy](https://www.artsy.net) to any broad audience.
 
-Here's a selection of recorded talks.
+## NASDAQ CTO Summit
+
+<div markdown="0">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-video" data-href="https://www.facebook.com/NASDAQ/videos/10154582987442429/" data-width="640" data-show-text="false">
+<blockquote cite="https://www.facebook.com/NASDAQ/videos/10154582987442429/" class="fb-xfbml-parse-ignore">
+<a href="https://www.facebook.com/NASDAQ/videos/10154582987442429/">#CTOSummit LIVE: Daniel Doubrovkine, CTO Artsy</a>
+<p>#CTOSummit LIVE: Daniel Doubrovkine, CTO Artsy</p>Posted by <a href="https://www.facebook.com/NASDAQ/">Nasdaq</a> on Tuesday, November 1, 2016
+</blockquote>
+</div></div>
+
+## Recorded Talks
 
 <a href="http://confreaks.com/videos/4166-gogaruco2014-talking-over-someone-else-s-open-source-projects"><img src="/images/about/taking-over-someone-elses-open-source-project.png"></a><br>
 [Taking over Someone Else's Open-Source Projects](http://confreaks.com/videos/4166-gogaruco2014-talking-over-someone-else-s-open-source-projects)
