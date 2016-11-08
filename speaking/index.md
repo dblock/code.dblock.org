@@ -29,6 +29,9 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ## Recorded Talks
 
+<a href="https://www.youtube.com/watch?v=F-uGrsPGKIs&list=PLcENCb4ZF_mzk-jqgEFTBXRTU9zhD471J&index=4"><img src="/images/about/storage-wars.png"></a><br>
+[DataLayer - Storage Wars: The Art Genome Project](https://www.youtube.com/watch?v=F-uGrsPGKIs), 2016
+
 <a href="http://confreaks.com/videos/4166-gogaruco2014-talking-over-someone-else-s-open-source-projects"><img src="/images/about/taking-over-someone-elses-open-source-project.png"></a><br>
 [Taking over Someone Else's Open-Source Projects](http://confreaks.com/videos/4166-gogaruco2014-talking-over-someone-else-s-open-source-projects)
 Golden Gate Ruby Conference, San Francisco, 2014
