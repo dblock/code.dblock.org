@@ -13,7 +13,7 @@ In 2009 I gave away the remainder of my old company’s, Vestris Inc., software.
 
 Today, I found myself needing to do some search-and-replace and was amazed to see that XReplace-32 is still the best damn search and replace tool out there, ten years later. The installer didn’t run on my 64-bit Windows, so I got a version installed on XP and zipped it all up. Did the same for Expression Calculator. So, if you’re in the market for a free search and replace tool or a powerful free Windows calculator that can do expressions, look no more.
 
-[Download XReplace-32 2.32 (installer)](http://code.dblock.org/downloads/xreplace/XReplace-Registered.exe)
+[Download XReplace-32 2.32 (installer)](https://github.com/dblock/xreplace/releases/download/registered/XReplace-Registered.exe)
 Registered version, completely free, [binaries only](http://code.dblock.org/downloads/xreplace/XReplace-32.zip) if the installer doesn't work.
 
 [Download Expression Calculator 2.43 (Installer)](http://code.dblock.org/downloads/excalc/Excalc-Registered.exe)
