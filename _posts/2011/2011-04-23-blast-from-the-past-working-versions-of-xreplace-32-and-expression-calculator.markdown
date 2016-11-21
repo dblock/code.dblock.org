@@ -16,7 +16,7 @@ Today, I found myself needing to do some search-and-replace and was amazed to se
 [Download XReplace-32 2.32 (installer)](https://github.com/dblock/xreplace/releases/download/registered/XReplace-Registered.exe)
 Registered version, completely free, [binaries only](http://code.dblock.org/downloads/xreplace/XReplace-32.zip) if the installer doesn't work.
 
-[Download Expression Calculator 2.43 (Installer)](http://code.dblock.org/downloads/excalc/Excalc-Registered.exe)
+[Download Expression Calculator 2.43 (Installer)](https://github.com/dblock/excalc/releases/download/registered/Excalc-Registered.exe)
 Registered version, completely free.
 
 I sold many thousands of copies of both till about 2003. If you’re still using these, post a comment!
