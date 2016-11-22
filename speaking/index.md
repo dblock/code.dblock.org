@@ -29,6 +29,9 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ## Recorded Talks
 
+<a href="https://pbell.wistia.com/medias/xo6uw6v4fm"><img src="/images/about/cto-summit-nasdaq.png"></a><br>
+[CTO Summit @ Nasdaq - Inspiring Team Leads to Give Away Their Legos](https://pbell.wistia.com/medias/xo6uw6v4fm), 2016
+
 <a href="https://www.youtube.com/watch?v=F-uGrsPGKIs&list=PLcENCb4ZF_mzk-jqgEFTBXRTU9zhD471J&index=4"><img src="/images/about/storage-wars.png"></a><br>
 [DataLayer - Storage Wars: The Art Genome Project](https://www.youtube.com/watch?v=F-uGrsPGKIs), 2016
 

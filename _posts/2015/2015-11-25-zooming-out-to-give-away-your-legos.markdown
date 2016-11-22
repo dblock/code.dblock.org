@@ -5,6 +5,15 @@ date: 2015-11-25
 tags: [cto, patterns, people]
 comments: true
 ---
+Update: a recoreded talk based on this post at the CTO Summit @ Nasdaq.
+
+<a href="https://pbell.wistia.com/medias/xo6uw6v4fm"><img src="/images/about/cto-summit-nasdaq.png"></a><br>
+[CTO Summit @ Nasdaq - Inspiring Team Leads to Give Away Their Legos](https://pbell.wistia.com/medias/xo6uw6v4fm), 2016
+
+Or keep reading ...
+
+***
+
 A few months ago I asked myself: [What does a CTO do?](/2015/05/23/what-does-a-cto-do.html). I divided my attention across three priorities: _people_, _technology_ and _business_, [spent a lot of time with the entire team, beyond Engineering](/2015/07/18/what-does-a-cto-do-offering-time-to-the-team.html), [created time to think](/2015/08/03/what-does-a-cto-do-creating-thinking-time-while-walking-to-work.html), learned to [connect people in a more systematic way](/2015/08/17/what-does-a-cto-do-connecting-people-to-enable-magic.html) and started actively extracting useful work patterns, sometimes even [turning hindsight into foresight](/2015/09/01/turning-hindsight-into-foresight.html).
 
 Let's step up a notch.
