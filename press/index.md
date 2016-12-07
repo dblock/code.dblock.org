@@ -79,6 +79,8 @@ fjs.parentNode.insertBefore(js, fjs);
 
 > Open source is for all of us. Open source is the best way to write software.
 
+### [Observer.com: Ruby Instructor Open Sources Ruby Curriculum](http://observer.com/2012/03/ruby-instructor-open-sources-ruby-curriculum/)
+
 ## 2011
 
 ### [Wired: Art.sy’s ‘Genome’ Predicts What Paintings You Will Like](https://www.wired.com/2011/11/mf_artsy)
@@ -88,4 +90,12 @@ fjs.parentNode.insertBefore(js, fjs);
 > The two men leaned in close to watch. A few seconds passed. Nothing happened. "This thing is still a memory hog," Doubrovkine muttered.
 >
 > Suddenly, the phone completed what to a visiting journalist seemed like a miraculous set of connections.
+
+### [Business Insider: The Sexiest Programmers Alive!](http://www.businessinsider.com/the-sexiest-programmers-alive-2011-5?op=1/#niel-doubrovkine-programmer-at-artsy-6)
+
+### [Observer.com: Art.sy’s Carter Cleveland Represents Generation Open Source](http://observer.com/2011/05/art-sys-carter-cleveland-is-of-a-generation-open-source)
+
+### [Observer.com: That $2,800 Ruby Class That Had NYC-rb in a Huff? It’s Already Sold Out](http://observer.com/2011/12/that-2800-ruby-class-that-had-nyc-rb-in-a-huff-its-already-sold-out/)
+
+### [Observer.com: Ruby Developers Offended by $2,800 Ruby Class](http://observer.com/2011/12/ruby-developers-offended-by-2800-ruby-class)
 
