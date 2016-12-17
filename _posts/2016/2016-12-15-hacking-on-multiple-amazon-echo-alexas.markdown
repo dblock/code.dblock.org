@@ -13,9 +13,9 @@ Two Echo dots are better than one. They are aware of each-other, so only one wil
 
 Source code in [github/dblock/alexa-mom](https://github.com/dblock/alexa-mom).
 
-I also made another skill called _Amerika_ that quotes Donald Trump making America great again ([video](https://www.youtube.com/watch?v=mF0Hdswzzt0)). I'm trying to get this skill certified and available to the general public, but I am not holding my breath.
+I also made another skill called _The Future of Amerika_, now available in your official skills, that quotes Donald Trump making America great again ([video](https://www.youtube.com/watch?v=XcKm9Rx8qbo)).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mF0Hdswzzt0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XcKm9Rx8qbo" frameborder="0" allowfullscreen></iframe>
 
 Source code in [github/dblock/amerika](https://github.com/dblock/amerika).
 
