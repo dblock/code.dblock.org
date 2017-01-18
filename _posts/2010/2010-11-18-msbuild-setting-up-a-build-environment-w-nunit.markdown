@@ -3,7 +3,7 @@ layout: post
 title: "MSBuild: Setting Up a Build Environment w/ NUnit"
 redirect_from: "/msbuild-setting-up-a-build-environment-w-nunit/"
 date: 2010-11-18 14:25:27
-tags: [nunit, testing, .net, build, msbuild]
+tags: [nunit, testing, dotnet, build, msbuild]
 comments: true
 dblog_post_id: 144
 ---

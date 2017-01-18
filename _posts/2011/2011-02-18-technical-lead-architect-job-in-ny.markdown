@@ -3,7 +3,7 @@ layout: post
 title: "Technical Lead / Architect Job in NY"
 redirect_from: "/technical-lead-architect-job-in-ny/"
 date: 2011-02-18 01:07:18
-tags: [shatter, appsecinc, gwt, jobs, architecture, security, java, .net, people]
+tags: [shatter, appsecinc, gwt, jobs, architecture, security, java, dotnet, people]
 comments: true
 dblog_post_id: 174
 ---

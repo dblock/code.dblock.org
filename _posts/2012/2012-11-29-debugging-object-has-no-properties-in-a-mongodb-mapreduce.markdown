@@ -70,4 +70,4 @@ bone.splines = [bone.splines[0] ];
 db.bones.save(a);
 {% endhighlight %}
 
-How did we get into having this null record anyway? See [https://jira.mongodb.org/browse/SERVER-831](https://jira.mongodb.org/browse/SERVER-831) and [https://github.com/mongoid/mongoid/issues/2545](https://github.com/mongoid/mongoid/issues/2545).
+How did we get into having this null record anyway? See [https://jira.mongodb.org/browse/SERVER-831](https://jira.mongodb.org/browse/SERVER-831) and mongoid#2545.

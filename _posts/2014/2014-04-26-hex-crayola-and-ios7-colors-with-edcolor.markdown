@@ -7,7 +7,7 @@ tags: [cocoapods, ios, open source]
 comments: true
 dblog_post_id: 412
 ---
-If you are in the market for a color library, you’ll find many. I needed to convert a hex color into a _UIColor_. Let's try with Artsy purple. Rumor is that it was inspired by [Kenny Scharf's "Purple"](https://artsy.net/artwork/kenny-scharf-purple).
+If you are in the market for a color library, you’ll find many. I needed to convert a hex color into a _UIColor_. Let's try with Artsy purple. Rumor is that it was inspired by Kenny Scharf's "Purple".
 
 {% highlight objc %}
 + (UIColor *)artsyPurple

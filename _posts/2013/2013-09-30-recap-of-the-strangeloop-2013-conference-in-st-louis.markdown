@@ -7,8 +7,6 @@ tags: [learning, conferences]
 comments: true
 dblog_post_id: 395
 ---
-![](https://thestrangeloop.com/images/slider1.png)
-
 [StrangeLoop](https://thestrangeloop.com), takes place in St. Louis, MO. I would describe it as a conference of emerging languages, attracting engineers from all over the world. The breadth of thought process, technologies and creativity is probably only second to arts and tech conferences (I’m particularly excited about the upcoming [LISA](http://softwareandart.com/?page_id=1161) conference in NYC). People that go to StrangeLoop seem like a diverse set, although I ran into far too many Enterprise-y developers and even a banker (to be fair, he was attending a vampire symposium in the same hotel).
 
 My all time favorite talk was _Creative Machines_, by [@josephwilk](https://twitter.com/josephwilk). Can we distinguish between a machine’s creative attempts and human’s? The talk, illustrated with code and music touched a lot of profound questions and I felt truly immersed into its message.

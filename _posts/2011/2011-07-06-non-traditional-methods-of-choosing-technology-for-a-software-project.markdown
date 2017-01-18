@@ -44,7 +44,7 @@ We knew we needed a NoSQL database. So we picked [MongoDB](http://mongodb.org) b
 
 ![]({{ site.url }}/images/posts/2011/2011-07-06-non-traditional-methods-of-choosing-technology-for-a-software-project/image_11.jpg)
 
-My most frequent approach to choosing technology is a pragmatic one. I encourage my team to try anything, iterate on it and decide to keep or toss something later, once we know better. For example, [Gib](http://blog.shortforgilbert.com/) just tried [Sugarskull](https://github.com/hij1nx/SugarSkull) on a 30-second pitch by [hij1nx](http://twitter.com/hij1nx). He spent a couple of days replacing Backbone.js routes with it and was jazzed to do it. Sugarskull just came out of the oven, still steaming hot! Right now it feels amazing, but none of us have any idea whether this was an excellent choice or a decision that will run the project into the ground.
+My most frequent approach to choosing technology is a pragmatic one. I encourage my team to try anything, iterate on it and decide to keep or toss something later, once we know better. For example, Gib just tried Sugarskull on a 30-second pitch by [hij1nx](http://twitter.com/hij1nx). He spent a couple of days replacing Backbone.js routes with it and was jazzed to do it. Sugarskull just came out of the oven, still steaming hot! Right now it feels amazing, but none of us have any idea whether this was an excellent choice or a decision that will run the project into the ground.
 
 The pragmatic approach means making choices based on these criteria.
 

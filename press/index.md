@@ -7,7 +7,7 @@ permalink: '/press/'
 ---
 ![techcrunch](/images/press/techcrunch.png) ![the verge](/images/press/verge.png) ![wired](/images/press/wired.jpg) ![nyt](/images/press/nyt.png) ![hbr](/images/press/hbr.jpg) ![hbr](/images/press/hebdo.jpg) ![w](/images/press/w.png) ![nasdaq](/images/press/nasdaq.png)
 
-Looking for a quote? [Email me](mailto:{{ author.email }}).
+Looking for a quote? [Email me](mailto:dblock@dblock.org).
 
 ## 2016
 
@@ -43,7 +43,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ### [W Magazine: Who’s Who: Internet Art](http://www.wmagazine.com/culture/art-and-design/2015/04/internet-art-world)
 
-![](http://art.dblock.org/images/posts/2015/2015-04-23-artsy-in-w-magazine/artsy.jpg)
+![Artsy in W Magazine](http://art.dblock.org/images/posts/2015/2015-04-23-artsy-in-w-magazine/artsy.jpg)
 
 > The Internet is the ultimate blank canvas. W salutes some of the enterprising teams stretching the boundaries of the art world online. 
 

@@ -17,4 +17,4 @@ Today I released [mongoid-cached-json 1.4](https://github.com/dblock/mongoid-cac
 
 Last week I released [guard-rack 1.3.1](https://github.com/dblock/guard-rack) in which [@viking](https://github.com/viking) got rid of .pid files and I finished by making it compatible with all versions of Ruby using the awesome [spoon](https://github.com/headius/spoon) gem (solid replacement for not-so-cross-platform [posix-spawn](https://github.com/rtomayko/posix-spawn)).
 
-Finally, I posted [an amazing study of a horse by George Stubbs on Artsy](http://artsy.net/dblock/post/this-horse-is-a-fantastic-study-of). You can follow me there for all the art, and for my tech stuff, on [Twitter](https://twitter.com/dblockdotorg).
+Finally, I posted an amazing study of a horse by George Stubbs on Artsy. You can follow me there for all the art, and for my tech stuff, on [Twitter](https://twitter.com/dblockdotorg).

@@ -3,7 +3,7 @@ layout: post
 title: "Automating Win32 UI Testing: System.Windows.Automation and Project White"
 redirect_from: "/automating-win32-ui-testing-systemwindowsautomation-and-project-white/"
 date: 2009-12-12 14:10:45
-tags: [testing, ui, .net, win32]
+tags: [testing, ui, dotnet, win32]
 comments: true
 dblog_post_id: 73
 ---
@@ -199,5 +199,5 @@ UIAutomation.ClickThroughMenu(mainWindow.MenuBar.TopLevelMenu,
 
 ### Bug Solved and Unit-Tested
 
-My original problem was [a bug in dotNetInstaller](http://dotnetinstaller.codeplex.com/workitem/4856) where adding an installed check through the UI would popup an error. I was now able to write a unit test for it, see [it’s source code](https://github.com/dblock/dotnetinstaller/SourceControl/changeset/view/36754#801450).
+My original problem was [a bug in dotNetInstaller](http://dotnetinstaller.codeplex.com/workitem/4856) where adding an installed check through the UI would popup an error. I was now able to write a unit test for it.
 

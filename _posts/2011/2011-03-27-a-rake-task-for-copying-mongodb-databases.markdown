@@ -48,7 +48,7 @@ I \*heart\* functions that return two values!
 
 #### Copying Databases
 
-MongoDB has a nifty copyDatabase (or clone) feature described [here](http://www.mongodb.org/display/DOCS/Clone+Database). It’s incremental, so we must drop tables before calling it. We also have to ensure that we don’t drop system tables, otherwise our database may be rendered inaccessible.
+MongoDB has a nifty `copyDatabase` (or clone) feature described [here](https://docs.mongodb.com/v2.2/reference/method/db.copyDatabase). It’s incremental, so we must drop tables before calling it. We also have to ensure that we don’t drop system tables, otherwise our database may be rendered inaccessible.
 
 {% highlight ruby %}
 desc "MongoDB database to database copy"
@@ -89,7 +89,7 @@ Database command 'copydbgetnonce' failed: {"assertion"=>"unauthorized db:admin l
   "assertionCode"=>10057, "errmsg"=>"db assertion failure", "ok"=>0.0}
 ```
 
-This is because copyDatabase requires admin privileges, which MongoHQ doesn’t give co-located users (answer from support in [this thread](http://support.mongohq.com/discussions/questions/199-copy_database-yields-unauthorized-dbadmin-lock-type1)). Too bad - we have to fallback to the silly _mongodump_ and _mongorestore_. This has two major disadvantages: it requires a local mongo installation and copies a ton of data over the network from MongoHQ, then back to MongoHQ. I hope that either MongoHQ exposes this API one day or there’s a non-admin way to do this with MongoDB [[SERVER-2846](http://jira.mongodb.org/browse/SERVER-2846)].
+This is because copyDatabase requires admin privileges, which MongoHQ doesn’t give co-located users. Too bad - we have to fall back to the silly _mongodump_ and _mongorestore_. This has two major disadvantages: it requires a local mongo installation and copies a ton of data over the network from MongoHQ, then back to MongoHQ. I hope that either MongoHQ exposes this API one day or there’s a non-admin way to do this with MongoDB [[SERVER-2846](http://jira.mongodb.org/browse/SERVER-2846)].
 
 #### Using Mongo Dump and Restore
 

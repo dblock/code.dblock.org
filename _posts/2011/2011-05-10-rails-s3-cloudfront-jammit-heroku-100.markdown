@@ -17,7 +17,7 @@ First some background.
 
 #### CoffeeScript to JavaScript
 
-[CoffeeScript](http://jashkenas.github.com/coffee-script/) is a language that compiles into JavaScript. We use [Backbone.js](http://documentcloud.github.com/backbone/) heavily and write all javascript in coffee. Our files live in _app/coffeescripts_. Coffeescript is compiled with [barista](https://github.com/Sutto/barista) and the output is placed into _public/javascripts_.
+[CoffeeScript](http://coffeescript.org/) is a language that compiles into JavaScript. We use [Backbone.js](http://backbonejs.org/) heavily and write all javascript in coffee. Our files live in _app/coffeescripts_. Coffeescript is compiled with [barista](https://github.com/Sutto/barista) and the output is placed into _public/javascripts_.
 
 #### Asset Packaging
 

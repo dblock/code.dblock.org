@@ -118,7 +118,7 @@ Enable the project to build in [Travis-CI](https://travis-ci.org/profile) and ad
 
 #### Code & Tests
 
-Write code and tests. Code goes into the [Classes](https://github.com/dblock/objc-ngram/tree/master/Classes) folder. Tests go into the [Demo](https://github.com/dblock/objc-ngram/tree/master/Demo/DemoTests) project. Note, that in order for new class files to be visible to the project you must remember to rerun `pod install`. Pod will also enable ARC for those new files, automatically.
+Write code and tests. Code goes into the [Classes](https://github.com/dblock/objc-ngram/tree/master/Classes) folder. Tests go into the Demo project. Note, that in order for new class files to be visible to the project you must remember to rerun `pod install`. Pod will also enable ARC for those new files, automatically.
 
 I always write tests and start with very obvious ones for each and every new class. This serves as a placeholder for more useful functionality.
 

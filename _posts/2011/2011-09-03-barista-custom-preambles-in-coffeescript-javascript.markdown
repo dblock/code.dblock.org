@@ -9,7 +9,7 @@ dblog_post_id: 256
 ---
 ![]({{ site.url }}/images/posts/2011/2011-09-03-barista-custom-preambles-in-coffeescript-javascript/image_4.jpg)
 
-You know I love coffee. My coffee is supported by [Vibiemme hardware](http://www.dblock.org/new-toys-vibiemme-domobar-mazzer-mini) and [Barista software](https://github.com/Sutto/barista). We even have [interns writing coffee](/embedding-api-sandboxes-in-documentation). Yeah, take that corporate internship! How much coffee-script did _you_ write this summer?
+You know I love coffee. My coffee is supported by Vibiemme hardware and [Barista software](https://github.com/Sutto/barista). We even have [interns writing coffee](/embedding-api-sandboxes-in-documentation). Yeah, take that corporate internship! How much coffee-script did _you_ write this summer?
 
 One of the annoying things about Barista, the coffee-script compiler that we use with Rails, is that it adds a preamble with a full path to every generated file (something like _/home/dblock/bla/bla/bla.coffee_). This makes it difficult to force file generation and have those files committed into source control, since they change all the time. I’ve always wanted to make these paths relative, therefore creating the same file contents on different machines.
 

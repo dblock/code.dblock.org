@@ -3,7 +3,7 @@ layout: post
 title: "WAFFLE: Windows Authentication Functional Framework (LE)"
 redirect_from: "/waffle-windows-authentication-functional-framework-le/"
 date: 2010-03-01 18:28:04
-tags: [waffle, java, .net, active directory, win32]
+tags: [waffle, java, dotnet, active directory, win32]
 comments: true
 dblog_post_id: 85
 ---

@@ -16,7 +16,7 @@ Fortunately this is open-source software and where I fail others can pickup the 
 #### Troubleshooting Kerberos
 
 - [Enabling Kerberos Logging](http://support.microsoft.com/?id=262177)
-- [Troubleshooting Kerberos Delegation](http://www.microsoft.com/downloads/en/details.aspx?familyid=99b0f94f-e28a-4726-bffe-2f64ae2f59a2&displaylang=en)
+- [Troubleshooting Kerberos Delegation](https://support.microsoft.com/en-us/help/907272/kerberos-authentication-and-troubleshooting-delegation-issues)
 
 #### Troubleshooting NTLM
 

@@ -17,7 +17,7 @@ The answer came from another question
 
 That actually gave me pause, turns out I wasn't sure. I started enumerating things I do, looked for patterns and found one.
 
-First and foremost, I generally try to be _helpful_. I am a big fan of [IFYYFME](/2009/09/03/i-f-you-you-f-me-or-how-to-maintain-a-healthy-level-of-communication-across-organizational-boundaries.html). I [offer rejected candidates help](/2013/05/26/how-to-reject-engineering-candidates.html) with finding a job. I am an obsessive documenter of technical issues on this blog. Etc.
+First and foremost, I generally try to be _helpful_. I am a big fan of [IFYYFME](http://code.dblock.org/2009/09/03/i-f-you-you-f-me-or-how-to-maintain-a-healthy-level-of-communication-across-organizational-boundaries.html). I [offer rejected candidates help](http://code.dblock.org/2013/05/26/how-to-reject-engineering-candidates.html) with finding a job. I am an obsessive documenter of technical issues on this blog. Etc.
 
 Why do I do this? A few years ago I wasn't able to answer this question. Today I can. Turns out, being helpful, for me, is a way of earning trust towards a more useful purpose - _connecting people_. Helping someone achieve what they need creates a strong connection between an individual and myself, and an opportunity to connect such individuals between themselves to enable _magic_. This is straight out of [Tribal Leadership](http://www.triballeadership.net/book), where a _triad_ is the building block of a Stage Four culture.
 

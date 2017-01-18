@@ -13,7 +13,7 @@ I found this quite unusual. I needed to receive an array with some nested hashes
 /stuff?widget[]=first-widget&gadget[]=a-gadget&widget[]=another%20widget
 ```
 
-What the heck is this [] syntax?! Why is there multiple widget entries?! There’re a few good articles on this, including [this one](http://rails.nuvvo.com/lesson/6371-action-controller-parameters). Web developers apparently have been doing this forever. I am far behind :(
+What the heck is this [] syntax?! Why is there multiple widget entries?! There’re a few good articles on this, including [this one](https://web.archive.org/web/20141114035424/http://rails.nuvvo.com/lesson/6371-action-controller-parameters). Web developers apparently have been doing this forever. I am far behind :(
 
 Here’s what Rails parses from this query string.
 

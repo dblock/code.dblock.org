@@ -44,7 +44,7 @@ Authorization: Negotiate TlRMTVNTUAABAAAAB7IIogkACQAxAAAACQAJACgAAAAFAs4OAAAAD0R
 
 #### The Issue
 
-I mentioned that I had two environments: one that worked and one that didn’t. The defining moment came when [John](http://blog.johnhite.com/) pointed out that the working environment was choosing _Kerberos_, while the non-working environment was choosing _NTLM_ when performing _Negotiate_ authentication. It was clear that after a Kerberos auth the POST no longer carried an Authorization header and had a body.
+I mentioned that I had two environments: one that worked and one that didn’t. The defining moment came when someone pointed out that the working environment was choosing _Kerberos_, while the non-working environment was choosing _NTLM_ when performing _Negotiate_ authentication. It was clear that after a Kerberos auth the POST no longer carried an Authorization header and had a body.
 
 I (mistakenly) concluded that this was a GWT bug with Internet Explorer. It failed the same way in Chrome though, so this wasn’t some kind of conspiracy.
 

@@ -3,7 +3,7 @@ layout: post
 title: "Implementing AtomPUB in .NET"
 redirect_from: "/implementing-atompub-in-net/"
 date: 2009-12-07 17:02:46
-tags: [syndication, codeproject, .net, asp.net, blog]
+tags: [syndication, codeproject, dotnet, asp.net, blog]
 comments: true
 dblog_post_id: 70
 ---

@@ -9,15 +9,15 @@ dblog_post_id: 2
 ---
 Before I start writing anything serious here, I got to get some credibility :)
 
-My name is Daniel Doubrovkine, aka dB. I've had a blog ([www.dblock.org](http://www.dblock.org)) since 1994 or something like that and I've been in technology for slightly longer than that. I've founded several companies, worked for [The Evil Empire](http://www.microsoft.com) for five years and several other businesses since. You can read my non-updated resume from 06' [here](http://dblock.org/Bric-a-brac/resume/Daniel-Doubrovkine-Resume-2006.pdf).
+My name is Daniel Doubrovkine, aka dB. I've had a blog ([www.dblock.org](http://www.dblock.org)) since 1994 or something like that and I've been in technology for slightly longer than that. I've founded several companies, worked for [The Evil Empire](http://www.microsoft.com) for five years and several other businesses since.
 
 Today I am Development Manager of Products at [Application Security Inc.](http://www.appsecinc.com). I have a team of three dozen people shipping two products: [AppDetectivePro](http://www.appsecinc.com/products/appdetective/) and [DbProtect](http://www.appsecinc.com/products/dbprotect/index.shtml). I contribute to a variety of open-source projects as well on my free time and have posted a few articles on [CodeProject](http://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=913212).
 
-I also have a rather large pet project, [FoodCandy](http://www.foodcandy.com) - a food social network with thousands of members. [FoodCandy](http://www.foodcandy.com) is powered by [SnCore](https://github.com/dblock/sncore), a social networking SDK that I wrote from scratch.
+I also have a rather large pet project, FoodCandy - a food social network with thousands of members. FoodCandy is powered by [SnCore](https://github.com/dblock/sncore), a social networking SDK that I wrote from scratch.
 
 In this blog you're going to find interesting articles about technology that I am involved with. Some might help you in your tasks.
 
-#### Update (2015)
+#### Update (2015-2017)
 
-A lot of things have changed since I wrote this. I sold FoodCandy years ago. I no longer work at AppSec. All my code is now on [Github](https://github.com/dblock). Check out the [updated about page](/about) for more recent details.
+A lot of things have changed since I wrote this. I sold FoodCandy years ago. I no longer work at AppSec, been CTO of [Artsy](https://www.artsy.net) for a few years. All my code is now on [Github](https://github.com/dblock). Check out the [updated about page](/about) for more recent details.
 

@@ -7,7 +7,7 @@ tags: [rails, ruby]
 comments: true
 dblog_post_id: 175
 ---
-So you’ve built the super amazing complicated Rails website. You are serving data from millions of documents from [MongoDB](http://www.mongodb.org/), rendering complex objects using [HAML](http://haml-lang.com/) and generally doing a bunch of hardcore stuff. Then someone asks you a pretty simple question: _how do I change the "Contact Us" page that’s linked at the bottom? _
+So you’ve built the super amazing complicated Rails website. You are serving data from millions of documents from [MongoDB](http://www.mongodb.org/), rendering complex objects using HAML and generally doing a bunch of hardcore stuff. Then someone asks you a pretty simple question: _how do I change the "Contact Us" page that’s linked at the bottom? _
 
 A terrified look takes over your face. You realize that you must now explain to a non-technical person the process of committing to [Github](https://github.com/), merging and branching. Moreover, you are going to have to give that person committer rights. That’s pretty scary stuff right there. That marketing person is never, ever getting write access to my jewels!
 

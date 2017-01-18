@@ -19,7 +19,7 @@ I do want to thank [@aki017](https://github.com/aki017), the author of the forme
 
 ### Use Slack Real Time Messaging Api
 
-The Real Time Messaging API is a WebSocket-based API that allows you to receive events from Slack in real time and send messages as user. The hard part has been done for you in the [slack-ruby-client](https://github.com/aki017/slack-ruby-client) gem.
+The Real Time Messaging API is a WebSocket-based API that allows you to receive events from Slack in real time and send messages as user. The hard part has been done for you in the slack-ruby-client gem.
 
 {% highlight ruby %}
 gem 'slack-ruby-client', '~> 0.1.0'

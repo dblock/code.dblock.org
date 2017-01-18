@@ -20,7 +20,7 @@ def self.install_javascript
 end
 {% endhighlight %}
 
-The [add_stored_function](http://api.mongodb.org/ruby/current/Mongo/DB.html) method comes from the Ruby MongoDB driver. Call _Widget.install_javascript_ somewhere in a Rake task or inside your map/reduce code.
+The `add_stored_function` method comes from the Ruby MongoDB driver. Call `Widget.install_javascript` somewhere in a Rake task or inside your map/reduce code.
 
 Let's now map/reduce our _widgets_ into _widgets_weekly_ using the created_at timestamp. Notice the call to _getWeek_.
 

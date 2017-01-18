@@ -9,7 +9,5 @@ dblog_post_id: 341
 ---
 In good company with Bitfloor, NextBigSound and Crowdtap. What do we have in common? We use MongoDB.
 
-> [http://5in5nyc.com/2012/06/20/5in5nyc-ep-07-10gen-friends-mongodb-bitfloor-nextbigsound-crowdtap-art-sy/](http://5in5nyc.com/2012/06/20/5in5nyc-ep-07-10gen-friends-mongodb-bitfloor-nextbigsound-crowdtap-art-sy/)
-
 ![]({{ site.url }}/images/posts/2012/2012-06-28-5in5-nyc-episode-7/image_5.jpg)
 

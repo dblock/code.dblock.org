@@ -7,7 +7,7 @@ tags: [dotnet, asp.net]
 comments: true
 dblog_post_id: 76
 ---
-Someone kindly reported [a bug entitled "Times Rounding Off"](http://www.foodcandy.com/BugView.aspx?id=713) on [FoodCandy.com](http://www.foodcandy.com/).
+Someone kindly reported a bug entitled "Times Rounding Off" on FoodCandy.
 
 > _"I just created a new event, scheduled to start at 6:30 PM on December 14th. When it displays, it shows a start time of 6:00 PM. If I edit it, it shows 6:30 PM."_
 
@@ -25,7 +25,7 @@ When I started dealing with time zones, I added code that let the user choose wh
 
 In order to fix this I had to make a few changes.
 
-1. Fix [TimeZoneInformation.cs](https://github.com/dblock/sncore/blob/master/SnCore.Tools/TimeZoneInformation.cs) to return TimeSpan instead of an int for UTC bias and to parse the browser time zone offset as a float. TimeZoneInformation is, btw, a very helpful class that originated [here](http://www.codeproject.com/dotnet/WorldClock.asp) and is capable of enumerating system time zones and do the time zone math taking care of daylight savings and stuff like that.
+1. Fix [TimeZoneInformation.cs](https://github.com/dblock/sncore/blob/master/SnCore.Tools/TimeZoneInformation.cs) to return TimeSpan instead of an int for UTC bias and to parse the browser time zone offset as a float. TimeZoneInformation is, btw, a very helpful class that originated [here](https://www.codeproject.com/Articles/8789/World-Clock-and-the-TimeZoneInformation-class) and is capable of enumerating system time zones and do the time zone math taking care of daylight savings and stuff like that.
 2. Change all native methods that took an int UTC bias to take a TimeSpan.
 3. Change all SOAP methods that took an int UTC bias to take a long UTC bias in ticks. This makes it serializable and I can new TimeSpan(ticks) on the server or client side.
 4. Change the code that adjusts UTC times to Add a TimeSpan and not AddHours a UTC bias.

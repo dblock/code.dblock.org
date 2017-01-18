@@ -7,7 +7,7 @@ tags: [dotnetinstaller]
 comments: true
 dblog_post_id: 57
 ---
-I shipped [dotNetInstaller](https://github.com/dblock/dotnetinstaller) 1.7 yesterday. Download it [here](https://github.com/dblock/dotnetinstaller/). You can see the long list of [what's new on the release page](https://github.com/dblock/dotnetinstaller/Release/ProjectReleases.aspx?ReleaseId=30174), but that's not the topic of my post.
+I shipped [dotNetInstaller](https://github.com/dblock/dotnetinstaller) 1.7 yesterday. Download it [here](https://github.com/dblock/dotnetinstaller/). You can see the long list of [what's new on the release page](https://github.com/dblock/dotnetinstaller/releases), but that's not the topic of my post.
 
 There has been a large volume of regressions since 1.5 as many new features were implemented in 1.6. We're using dotNetInstaller heavily at my day job, so I needed to create a situation where I don't have to go back fixing the same bugs, over and over again. I just don't have time for that in the long run, I need to move on and work on some real enterprise software problems.
 

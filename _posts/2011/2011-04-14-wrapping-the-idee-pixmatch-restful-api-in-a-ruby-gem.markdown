@@ -7,7 +7,7 @@ tags: [art.sy, rails, ruby]
 comments: true
 dblog_post_id: 198
 ---
-I had a nice time today wrapping up the [Idee Pixmatch API](http://ideeinc.com/products/pixmatch/) in a Ruby gem. PixMatch is a general image matching engine that allows you to perform large scale image comparisons and I wanted to upload a few million images and check it out.
+I had a nice time today wrapping up the [Idee Pixmatch API](https://web.archive.org/web/20120626084848/http://ideeinc.com/products/pixmatch/) in a Ruby gem. PixMatch is a general image matching engine that allows you to perform large scale image comparisons and I wanted to upload a few million images and check it out.
 
 ![pixmatch-sample]({{ site.url }}/images/posts/2011/2011-04-14-wrapping-the-idee-pixmatch-restful-api-in-a-ruby-gem/pixmatch-sample_7.jpg)
 

@@ -28,7 +28,7 @@ There're two types of APIs.
 
 #### Connecting to a VMWare Workstation or ESX Server
 
-Connecting to a local VMWare Workstation or an ESX server is virtually identical. The ESX server requires an URL to the SOAP SDK (eg. [https://esxserver/sdk](https://esxserver/sdk)) and a username and password.
+Connecting to a local VMWare Workstation or an ESX server is virtually identical. The ESX server requires an URL to the SOAP SDK (eg. _https://esxserver/sdk_) and a username and password.
 
 {% highlight c# %}
 private void ConnectToVMWareWorkstation()

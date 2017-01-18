@@ -7,7 +7,7 @@ tags: [win32]
 comments: true
 dblog_post_id: 17
 ---
-[This guy](http://www.dreamcubes.com/blog) just saved me tons of time. I've spent two days on a handle leak that I eventually tracked down to an older version of log4cxx that we have been using. Upgrading to log4cxx 10 was really easy with pre-built binaries and Visual Studio projects that he provided.
+[This guy](https://web.archive.org/web/20090520025034/http://www.dreamcubes.com/blog) just saved me tons of time. I've spent two days on a handle leak that I eventually tracked down to an older version of log4cxx that we have been using. Upgrading to log4cxx 10 was really easy with pre-built binaries and Visual Studio projects that he provided.
 
 Thank you!
 

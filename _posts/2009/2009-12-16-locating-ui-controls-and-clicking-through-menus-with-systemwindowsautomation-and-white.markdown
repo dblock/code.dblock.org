@@ -3,7 +3,7 @@ layout: post
 title: "Locating UI controls and clicking through menus with System.Windows.Automation and White"
 redirect_from: "/locating-ui-controls-and-clicking-through-menus-with-systemwindowsautomation-and-white/"
 date: 2009-12-16 14:21:00
-tags: [testing, ui, .net, win32]
+tags: [testing, ui, dotnet, win32]
 comments: true
 dblog_post_id: 75
 ---

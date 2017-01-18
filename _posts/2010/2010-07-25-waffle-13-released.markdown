@@ -29,4 +29,4 @@ If you're using Tomcat or Jetty with an IIS front-end to do authentication only,
 - A Spring-Security Windows Authentication Manager.
 - A JAAS Login Module.
 
-WAFFLE has originated at [AppSecInc.](http://www.appsecinc.com) and the team deserves the credit. John has [a blog](http://blog.johnhite.com/) too, check it out.
+WAFFLE has originated at [AppSecInc.](http://www.appsecinc.com) and the team deserves the credit.

@@ -7,7 +7,7 @@ tags: [mongodb, rails, ruby]
 comments: true
 dblog_post_id: 228
 ---
-I was a bit surprised to see mongoid drop pagination support in 2.0.2 ([here](https://github.com/mongoid/mongoid/commit/087c95aa706e4df50a6db0f302c42dd815df8b34) and [here](https://github.com/mongoid/mongoid/commit/f7f66f2345336ecc361ca27bbfa8f8a25443587f)). It got some people confused (see [#983](https://github.com/mongoid/mongoid/issues/983)). In a project that uses [will_paginate](https://github.com/mislav/will_paginate), this results in very slow large queries, but no other breakage. It looks like Mongoid did the right thing though – their implementation was messy and other extensions do a much cleaner job.
+I was a bit surprised to see mongoid drop pagination support in 2.0.2 ([here](https://github.com/mongoid/mongoid/commit/087c95aa706e4df50a6db0f302c42dd815df8b34) and [here](https://github.com/mongoid/mongoid/commit/f7f66f2345336ecc361ca27bbfa8f8a25443587f)). It got some people confused (see mongoid#983). In a project that uses [will_paginate](https://github.com/mislav/will_paginate), this results in very slow large queries, but no other breakage. It looks like Mongoid did the right thing though – their implementation was messy and other extensions do a much cleaner job.
 
 Here’s what I had to do to switch from will_paginate to [kaminari](https://github.com/amatsuda/kaminari). The latter works well with Mongoid 2.0.2.
 

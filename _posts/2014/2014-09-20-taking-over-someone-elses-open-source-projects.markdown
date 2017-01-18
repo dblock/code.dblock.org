@@ -7,7 +7,7 @@ tags: [speaking, ruby]
 comments: true
 dblog_post_id: 422
 ---
-Thanks to the amazing crowd at [GoGoRuCo](http://gogaruco.com) 2014, San Francisco!
+Thanks to the amazing crowd at GoGoRuCo 2014, San Francisco!
 
 ![]({{ site.url }}/images/posts/2014/2014-09-20-taking-over-someone-elses-open-source-projects/screenshot.jpg)
 

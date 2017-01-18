@@ -17,7 +17,7 @@ Thanks to all the contributors!
 
 - Build: 2.3.16.0
 - Info: [https://github.com/dblock/dotnetinstaller](https://github.com/dblock/dotnetinstaller)
-- MSI: [https://github.com/downloads/dblock/dotnetinstaller/dotNetInstaller.2.3.msi](https://github.com/downloads/dblock/dotnetinstaller/dotNetInstaller.2.3.msi)
-- ZIP: [https://github.com/downloads/dblock/dotnetinstaller/dotNetInstaller.2.3.zip](https://github.com/downloads/dblock/dotnetinstaller/dotNetInstaller.2.3.zip)
+- MSI: https://github.com/downloads/dblock/dotnetinstaller/dotNetInstaller.2.3.msi
+- ZIP: https://github.com/downloads/dblock/dotnetinstaller/dotNetInstaller.2.3.zip
 - CHANGELOG: [https://github.com/dblock/dotnetinstaller/blob/master/CHANGELOG.md](https://github.com/dblock/dotnetinstaller/blob/master/CHANGELOG.md "https://github.com/dblock/dotnetinstaller/blob/master/CHANGELOG.md")
 

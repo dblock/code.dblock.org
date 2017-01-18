@@ -13,4 +13,4 @@ A recording of me speaking at MongoNYC 2012.
 
 ![]({{ site.url }}/images/posts/2012/2012-06-03-mongonyc-2012-using-mongodb-to-build-artsy-video/image_9.jpg)
 
-My [next talk is at GoRuCo, the Gotham Ruby Conference](http://goruco.com/). We’ll take a Grape API from zero to cache in 10 minutes. The [lineup of speakers](http://goruco.com/speakers/) is pretty intimidating, ranging from Dr. Nic Williams to David Chelimsky.
+My [next talk is at GoRuCo, the Gotham Ruby Conference](http://goruco.com/). We’ll take a Grape API from zero to cache in 10 minutes. The lineup of speakers is pretty intimidating, ranging from Dr. Nic Williams to David Chelimsky.

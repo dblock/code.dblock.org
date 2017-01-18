@@ -3,7 +3,7 @@ layout: post
 title: "FoodCandy.com: Implementing Facebook Connect and Signup w/ Graph API"
 redirect_from: "/foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/"
 date: 2010-05-07 14:44:54
-tags: [sncore, facebook, foodcandy, .net, asp.net]
+tags: [sncore, facebook, foodcandy, dotnet, asp.net]
 comments: true
 dblog_post_id: 99
 ---
@@ -61,7 +61,7 @@ _Redirect After Login_
 
 A logged-in user is now returned to FacebookConnect.aspx with a number of parameters in the URL that contain session information.
 
-Facebook JavaScript can process all that into cookies. The cookie names start with the API key. You can find a lot more detail about cookies [here](http://wiki.developers.facebook.com/index.php/Verifying_The_Signature#Signatures_and_Facebook_Connect_Sites).
+Facebook JavaScript can process all that into cookies. The cookie names start with the API key. You can find a lot more detail about cookies [here](https://web.archive.org/web/20091223093524/http://wiki.developers.facebook.com/index.php/Verifying_The_Signature#Signatures_and_Facebook_Connect_Sites).
 
 ![]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image_9.jpg)
 
@@ -95,7 +95,7 @@ _Verifying the Signature_
 
 FacebookConnect.aspx does the job at performing a cross-site Facebook login, then redirects back to the initial login page. The latter must now verify that the login is legit and locate a FoodCandy account associated with this Facebook login. I do this work in the actual login page.
 
-If you’re doing all of this on the client side, read [this document](http://wiki.developers.facebook.com/index.php/Verifying_The_Signature) for background and use the [Facebook Connect library](http://fbconnectauth.codeplex.com/). I had to split the process between the front-end and the back-end and used it for a reference implementation.
+If you’re doing all of this on the client side, read [this document](https://web.archive.org/web/20091223093524/http://wiki.developers.facebook.com/index.php/Verifying_The_Signature) for background and use the [Facebook Connect library](http://fbconnectauth.codeplex.com/). I had to split the process between the front-end and the back-end and used it for a reference implementation.
 
 Facebook cookies are collected in a sorted list, concatenated and signed.
 

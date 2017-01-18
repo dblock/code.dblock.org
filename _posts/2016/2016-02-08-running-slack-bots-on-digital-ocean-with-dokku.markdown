@@ -103,7 +103,7 @@ Dokku supports Git workflow. Add a remote and push code to it.
 ...
 {% endhighlight %}
 
-The app is now available at _market-bot.dblock-plum.digitalocean.playplay.io_, much like any _herokuapp.com_ applications. I added a DNS CNAME [market-bot.playplay.io](http://market-bot.playplay.io) entry pointing here and told Dokku about it.
+The app is now available at _market-bot.dblock-plum.digitalocean.playplay.io_, much like any _herokuapp.com_ applications. I added a DNS CNAME [market.playplay.io](https://market.playplay.io) entry pointing here and told Dokku about it.
 
 {% highlight bash %}
 root@dblock-plum:~# dokku domains:add market-bot market.playplay.io

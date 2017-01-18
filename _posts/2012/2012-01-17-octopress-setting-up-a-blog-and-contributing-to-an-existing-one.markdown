@@ -9,7 +9,7 @@ dblog_post_id: 309
 ---
 [Octopress](http://octopress.org) documentation can be quite confusing. It took me a while to understand what the heck Octopress is doing to branches and remote origins. It’s actually pretty simple, so I am going to try to un-confuse you. I will also show you a better way to contribute to an existing blog and explain what’s happening in those Rake tasks.
 
-We are going to deploy a blog to Github pages, so we need a project, such as _username.github.com_. Go to Github to [create one](https://github.com/repositories/new). Use your username instead of "username".
+We are going to deploy a blog to Github pages, so we need a project, such as _username.github.com_. Go to Github to create one. Use your username instead of "username".
 
 Next, fetch Octopress and install it locally. This gets the files from its main repository and applies a default theme.
 
@@ -136,7 +136,7 @@ To git@github.com:username/username.github.com.git
 * [new branch]      master -> master
 ```
 
-If you go to [http://username.github.com](http://username.github.com) you should see your blog with the blog post once Github has regenerated the pages – usually a minute or two. And on [https://github.com/username/username.github.com](https://github.com/username/username.github.com) you should be able to see the generated files on _master_ along with a _source_ branch with the blog source.
+If you go to http://username.github.com you should see your blog with the blog post once Github has regenerated the pages – usually a minute or two. And on https://github.com/username/username.github.com you should be able to see the generated files on _master_ along with a _source_ branch with the blog source.
 
 You’ll have to do this every time you want to deploy your changes.
 

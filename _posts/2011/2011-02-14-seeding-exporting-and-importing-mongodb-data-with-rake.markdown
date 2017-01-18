@@ -13,7 +13,7 @@ You may have noticed some Ruby on Rails posts lately on my blog. That’s becaus
 
 I tried _mongodump_ and _mongorestore_. Those are straightforward tools that let you export and import Mongo data (Mongo people did their job very well there, much less hassle than with a traditional RDBMS where you have to backup the database, deal with the transaction log, bla bla bla). All is well when working with local machines. Remotely, you need to go the extra step of figuring out the database address, username and password. This gets messier with Heroku and eventually starts smelling bad.
 
-I want to do this the "Rails Way" by invoking a single _rake_ command that imports and exports Mongo data in any of my environments. The following is based on [this post](http://railsfreak.com/post/481785306/grow-your-app-from-seeds), but we’re doing this with MongoDB and will take it a little further. We’ll put our tasks in _lib/tasks/db_import_export.rake_.
+I want to do this the "Rails Way" by invoking a single _rake_ command that imports and exports Mongo data in any of my environments. The following is based on [this post](http://joshowens.me/grow-your-app-from-seeds), but we’re doing this with MongoDB and will take it a little further. We’ll put our tasks in _lib/tasks/db_import_export.rake_.
 
 #### Exporting Data
 

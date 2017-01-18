@@ -15,7 +15,7 @@ I think there’s a valuable lesson to be learned here for everyone writing soft
 
 By all accounts we’re paid extremely well and we’re as much in demand as doctors. An even smaller percentage of us are the kind of specialists capable of building the software equivalent of performing eye surgery. Of course, there’s no true comparison with being able to directly affect one’s vision with a surgical instrument and the next website, but how can we use our privileged position to, at least, be more helpful? Here’re a few ideas.
 
-If you can afford it, work for a non-profit. If you’re in NYC, I would start with [DonorsChoose](http://www.donorschoose.org/careers). Their Engineering team is lead by [a very experienced techie and an amazing guy](http://www.linkedin.com/in/oliverhh). They promise you’ll never get rich, but you’ll wake up every day with a purpose and heartwarming "thank you" emails from thousands of children in the public school system around the US.
+If you can afford it, work for a non-profit. If you’re in NYC, I would start with [DonorsChoose](http://www.donorschoose.org/careers). Their Engineering team is lead by [a very experienced techie and an amazing guy](https://www.linkedin.com/in/oliverhh). They promise you’ll never get rich, but you’ll wake up every day with a purpose and heartwarming "thank you" emails from thousands of children in the public school system around the US.
 
 Continuing the theme of education, consider [Neverware](http://neverware.com/), which makes old computers run like new and who’s [CEO is a volunteer firefighter](http://www.inc.com/magazine/20110501/ceo-passions-volunteer-firefighting.html).
 

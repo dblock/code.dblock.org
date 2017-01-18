@@ -17,4 +17,4 @@ The cool git check-in animation was made with [Gource](http://code.google.com/p/
 
 The Russian hovercraft video is [here](http://www.youtube.com/watch?v=kDd9vlnqRuo).
 
-Please share your comments and suggestions here or privately at _dblock[at]dblock[dot]org_. I really want to hear from you, please don’t hesitate to contact me for anything. Finally, thanks to [Foursquare](https://foursquare.com), [10gen](http://www.10gen.com) and [Postling](http://www.postling.com) for many data points mentioned in the slides.
+Please share your comments and suggestions here or privately at _dblock[at]dblock[dot]org_. I really want to hear from you, please don’t hesitate to contact me for anything. Finally, thanks to [Foursquare](https://foursquare.com), [10gen](http://www.10gen.com) and [Postling](https://web.archive.org/web/20150314224528/https://postling.com/) for many data points mentioned in the slides.

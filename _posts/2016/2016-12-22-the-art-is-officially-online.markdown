@@ -27,5 +27,5 @@ Finally, I really enjoyed hearing Hank Willis Thomas saying that the art market 
 
 See you next year in Miami!
 
-![]({{ site.url }}/images/posts/2016/2016-12-22-the-art-world-is-officially-online/online-auctions.jpg) ![]({{ site.url }}/images/posts/2016/2016-12-22-the-art-world-is-officially-online/the-evolution-of-artist-management.jpg)
+![Flyer: Online Auctions]({{ site.url }}/images/posts/2016/2016-12-22-the-art-world-is-officially-online/online-auctions.jpg) ![Flyer: The Evolution of Artist Management]({{ site.url }}/images/posts/2016/2016-12-22-the-art-world-is-officially-online/the-evolution-of-artist-management.jpg)
 

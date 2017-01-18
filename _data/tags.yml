@@ -1,6 +1,3 @@
-.net:
-  name: .net
-  count: 8
 active directory:
   name: active directory
   count: 16
@@ -18,7 +15,7 @@ architecture:
   count: 15
 art.sy:
   name: art.sy
-  count: 46
+  count: 48
 asp.net:
   name: asp.net
   count: 6
@@ -40,6 +37,9 @@ cto:
 databases:
   name: databases
   count: 9
+dotnet:
+  name: dotnet
+  count: 12
 dotnetinstaller:
   name: dotnetinstaller
   count: 13

@@ -55,7 +55,7 @@ _The idea that startups would sacrifice much needed working capital because they
 
 If you’re moving, you might just want money. Hedge funds and banks will gladly throw tons of cash at you. Unfortunately many have different numbers behind the phrase "tons of cash". A friend of mine has a 5MM$ house in Seattle suburbs, you can imagine what "tons" means to him!
 
-A rule of thumb is that salaries above 200K$ don’t exist and that an engineer can expect to make the usual range of 60K$ to about 140K$ depending on your level of experience. The financial sector has huge bonus potential, but then you might want to [read this](http://adgrok.com/why-founding-a-three-person-startup-with-zero-revenue-is-better-than-working-for-goldman-sachs/). IMHO, if you just need a great salary right now, working for a financial firm may just be the right thing for you. When that bonus lands you’ll be happy as a cat getting dry chicken treats.
+A rule of thumb is that salaries above 200K$ don’t exist and that an engineer can expect to make the usual range of 60K$ to about 140K$ depending on your level of experience. The financial sector has huge bonus potential, but then you might want to [read this](https://web.archive.org/web/20120618163609/http://adgrok.com/why-founding-a-three-person-startup-with-zero-revenue-is-better-than-working-for-goldman-sachs/). IMHO, if you just need a great salary right now, working for a financial firm may just be the right thing for you. When that bonus lands you’ll be happy as a cat getting dry chicken treats.
 
 _The idea that cost of living or the fact that there’s city and state tax in New York somehow means that people pay higher salaries is false. You make the same, which really means you make less._
 

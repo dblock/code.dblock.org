@@ -18,7 +18,7 @@ The Open-Source Curriculum @ [https://github.com/generalassembly/ga-ruby-on-rail
 #### Demo Stashboards, Students’ Projects
 
 - [https://github.com/jameslin101/stashboard](https://github.com/jameslin101/stashboard): a clean Stashboard clone
-- [https://github.com/MedText/stashfu](https://github.com/MedText/stashfu): Stashboard as a service
-- [https://github.com/generalassembly/boardroom](https://github.com/generalassembly/boardroom): Stashboard with voice-over-ip-activated control
+- https://github.com/MedText/stashfu: Stashboard as a service
+- https://github.com/generalassembly/boardroom: Stashboard with voice-over-ip-activated control
 
 I want to thank the audience for attending en-masse, the students who demoed their Stashboard clones, GA and the course sponsors. Some of the students are looking for a Ruby-on-Rails programmer job, reach out!

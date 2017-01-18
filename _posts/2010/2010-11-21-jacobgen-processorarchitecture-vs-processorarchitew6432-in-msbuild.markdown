@@ -43,7 +43,7 @@ endlocal
 
 This looks perfectly correct – note that path set to `%PROCESSOR_ARCHITECTURE%`. I ran the batch file manually and the build succeeded without any changes!
 
-The problem turned out to be in MSBuild, where 32-bit MSBuild re-defines `PROCESSOR_ARCHITECTURE` as `x86` ([helpful post](http://abstractcode.com/abstractblog/archive/2009/07/03/171.aspx)). Another variable, `PROCESSOR_ARCHITEW6432` is available on 64-bit systems and is set to `AMD64` in my setup. To fix the problem I added a couple of lines to Jacobgen.bat.
+The problem turned out to be in MSBuild, where 32-bit MSBuild re-defines `PROCESSOR_ARCHITECTURE` as `x86` ([helpful post](https://web.archive.org/web/20100421162834/http://abstractcode.com/abstractblog/archive/2009/07/03/171.aspx)). Another variable, `PROCESSOR_ARCHITEW6432` is available on 64-bit systems and is set to `AMD64` in my setup. To fix the problem I added a couple of lines to Jacobgen.bat.
 
 {% highlight bat %}
 if NOT "%PROCESSOR_ARCHITEW6432%"=="" (

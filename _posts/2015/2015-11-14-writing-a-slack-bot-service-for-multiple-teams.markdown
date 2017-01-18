@@ -11,7 +11,7 @@ _Note: This post has been updated with Slack Button integration since the launch
 
 The [slack-ruby-bot gem](https://github.com/dblock/slack-ruby-bot) lets you roll out a bot for your team, but used to recommend a global Slack token configuration. How do we turn it into a full Slack bot service for multiple teams? How can we get a Slack Button to let teams install our service?
 
-tl;dr Check out [github.com/dblock/slack-bot-server](https://github.com/dblock/slack-bot-server).
+tl;dr Check out [github.com/dblock/slack-bot-server](https://github.com/slack-ruby/slack-ruby-bot-server).
 
 ![demo]({{ site.url }}/images/posts/2015/2015-11-14-writing-a-slack-bot-service-for-multiple-teams/demo.gif)
 
@@ -27,11 +27,11 @@ Furthermore, the implementation now relies on websocket events to keep the bot u
 
 ### A Service to add Tokens
 
-In order to maintain multiple bot servers you need a registry. I chose to make something simple, [SlackRubyBot::Service](https://github.com/dblock/slack-bot-server/blob/master/app/service.rb) that uses a lock for thread safety and adds instances of `SlackRubyBot::Service` to a `Hash`, with the API token as key. You can `SlackRubyBot::Service.start!(token)` and `SlackRubyBot::Service.stop!(token)`. The tokens are stored in MongoDB as [teams](https://github.com/dblock/slack-bot-server/blob/master/slack-bot-server/models/team.rb).
+In order to maintain multiple bot servers you need a registry. I chose to make something simple, `SlackRubyBot::Service` that uses a lock for thread safety and adds instances of `SlackRubyBot::Service` to a `Hash`, with the API token as key. You can `SlackRubyBot::Service.start!(token)` and `SlackRubyBot::Service.stop!(token)`. The tokens are stored in MongoDB as `teams`.
 
 ### A Web Interface and an API
 
-The bot server isn't useful without a bit of UI. I implemented a [Grape API](https://github.com/dblock/slack-bot-server/tree/master/api) with some basic CRUD to store teams with their API tokens, along with an HTML (ERB) page that uses JQuery to add and remove new integrations.
+The bot server isn't useful without a bit of UI. I implemented a Grape API with some basic CRUD to store teams with their API tokens, along with an HTML (ERB) page that uses JQuery to add and remove new integrations.
 
 ### Slack Button Integration
 
@@ -41,11 +41,11 @@ To enable Slack button integration, I followed [Create a New Application](https:
 
 ### Your Turn
 
-You can use [slack-bot-server](https://github.com/dblock/slack-bot-server) as a boilerplate to roll out a full Slack bot service to multiple teams, just fork the project. I chose not to package this as a library, I want you to use this as a boilerplate to get you started, but then sail on your own to make something useful.
+You can use [slack-bot-server](https://github.com/slack-ruby/slack-ruby-bot-server) as a boilerplate to roll out a full Slack bot service to multiple teams, just fork the project. I chose not to package this as a library, I want you to use this as a boilerplate to get you started, but then sail on your own to make something useful.
 
 ### Source Code
 
-Everything can be found at [github.com/dblock/slack-bot-server](https://github.com/dblock/slack-bot-server).
+Everything can be found at [github.com/slack-ruby/slack-bot-server](https://github.com/slack-ruby/slack-ruby-bot-server).
 
 ### Similar Projects
 

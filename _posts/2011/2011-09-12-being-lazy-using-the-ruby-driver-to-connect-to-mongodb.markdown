@@ -29,7 +29,7 @@ db.authenticate(db_user, db_password) unless (db.user.nil? || db.user.blank?)
 db.collection("widgets").drop()
 {% endhighlight %}
 
-It’s actually a lot cleaner, I am not sure why I was hung up on the command line thing. Unfortunately it doesn’t fix our problem. In a replica set we need to use a [ReplSetConnection](http://api.mongodb.org/ruby/current/Mongo/ReplSetConnection.html) that will automatically load-balance requests and send writes to the master. It takes a list of hosts, something like
+It’s actually a lot cleaner, I am not sure why I was hung up on the command line thing. Unfortunately it doesn’t fix our problem. In a replica set we need to use a `ReplSetConnection` that will automatically load-balance requests and send writes to the master. It takes a list of hosts, something like
 
 {% highlight ruby %}
 db_connection = Mongo::ReplSetConnection.new(db_host_list).db(db_name)
