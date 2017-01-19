@@ -53,6 +53,6 @@ AppNexus Engineering at Scale, New York, 2013
 <a href="https://vimeo.com/136554627"><img alt="Becoming Open-Source By Default at Artsy" src="/images/about/becoming-open-source-by-default.png"></a><br>
 [Becoming Open-Source by Default](https://vimeo.com/136554627): Recorded for the Artsy offsite in August 2015.
 
--[CTO Cast #6, Подкаст о технологиях, процессах, инфраструктуре и людях в IT-компаниях](http://ctocast.com/2015/01/25/ctocast-6-daniel-doubrovkine-artsy-net-open-source-cheerleader/): on Open-Source, in Russian. Also ["Оттого что они не пишут open source, они плохими инженерами не стали".](http://habrahabr.ru/company/caspowa/blog/255585/).
+[CTO Cast #6, Подкаст о технологиях, процессах, инфраструктуре и людях в IT-компаниях](http://ctocast.com/2015/01/25/ctocast-6-daniel-doubrovkine-artsy-net-open-source-cheerleader/): on Open-Source, in Russian. Also ["Оттого что они не пишут open source, они плохими инженерами не стали".](http://habrahabr.ru/company/caspowa/blog/255585/).
 
 More talks under [the cut](/tags/speaking/).
