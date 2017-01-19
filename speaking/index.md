@@ -9,6 +9,10 @@ permalink: '/speaking/'
 
 I speak frequently on topics ranging from the intersection of technology and art to people and teams. Feel free to [e-mail me](mailto:dblock@dblock.org) with speaking opportunities, including when you just want an intro to [Artsy](https://www.artsy.net) to any broad audience.
 
+## Upcoming
+
+[Worlds Fair Nano, San Francisco, January 28th](http://www.worldsfairusa.com/nano/sf), "The Future of Art"
+
 ## NASDAQ CTO Summit
 
 <div markdown="0">
