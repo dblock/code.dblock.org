@@ -9,10 +9,6 @@ permalink: '/speaking/'
 
 I speak frequently on topics ranging from the intersection of technology and art to people and teams. Feel free to [e-mail me](mailto:dblock@dblock.org) with speaking opportunities, including when you just want an intro to [Artsy](https://www.artsy.net) to any broad audience.
 
-## Upcoming
-
-[Worlds Fair Nano, San Francisco, January 28th](http://www.worldsfairusa.com/nano/sf), "The Future of Art"
-
 ## NASDAQ CTO Summit
 
 <div markdown="0">
@@ -32,6 +28,9 @@ fjs.parentNode.insertBefore(js, fjs);
 </div></div>
 
 ## Recorded Talks
+
+<a href="https://www.youtube.com/watch?v=CEkJLhA1R0w&feature=youtu.be">Worlds Fair Nano, San Francisco, January 28th</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CEkJLhA1R0w?ecver=1" frameborder="0" allowfullscreen></iframe><br>
 
 <a href="https://pbell.wistia.com/medias/xo6uw6v4fm"><img alt="CTO Summit at NASDAQ" src="/images/about/cto-summit-nasdaq.png"></a><br>
 [CTO Summit @ Nasdaq - Inspiring Team Leads to Give Away Their Legos](https://pbell.wistia.com/medias/xo6uw6v4fm), 2016
