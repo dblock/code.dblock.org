@@ -120,10 +120,10 @@ rspec:
   count: 10
 ruby:
   name: ruby
-  count: 100
+  count: 101
 s3:
   name: s3
-  count: 8
+  count: 9
 security:
   name: security
   count: 27
