@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Grape Framework 1.0 Released"
+date: 2017-04-27
+tags: [ruby, grape]
+comments: true
+---
+I took a deep breath, and released Grape Framework 1.0. We're at 8,066 Github stars and 965 forks. I still think Grape is the best way to build Ruby RESTful APIs. I've [written many blog posts](/tags/grape/) on the subject.
+
+Some of the big changes in 1.0 included [ripping out Hashie::Mash](https://github.com/ruby-grape/grape/pull/1594) and [multi_xml and multi_json](https://github.com/ruby-grape/grape/pull/1623). As always we took great care of preserving as much backwards compatibility as possible.
+
+Enjoy!
+
+![](https://github.com/ruby-grape/grape/blob/master/grape.png?raw=true)
+
