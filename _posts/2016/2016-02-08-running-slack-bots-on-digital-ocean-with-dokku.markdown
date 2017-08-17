@@ -131,6 +131,36 @@ Sign up for New Relic and configure it for Docker as described [here](https://do
 
 ![NewRelic]({{ site.url }}/images/posts/2016/2016-02-08-running-slack-bots-on-digital-ocean-with-dokku/newrelic.png)
 
+{% highlight bash %}
+dokku config:set market-bot NEW_RELIC_APP_NAME=market-bot NEW_RELIC_LICENSE_KEY=...
+{% endhighlight %}
+
+### Lets Encrypt
+
+Setup SSL as described [here](https://medium.com/@pimterry/effortlessly-add-https-to-dokku-with-lets-encrypt-900696366890).
+
+{% highlight bash %}
+root@dblock-plum:~# dokku plugin:update letsencrypt
+...
+{% endhighlight %}
+
+For a new app.
+
+{% highlight bash %}
+root@dblock-plum:~# dokku domains:add market-bot market.playplay.io
+-----> Added market.playplay.io to market-bot
+...
+
+dokku config:set --no-restart market-bot DOKKU_LETSENCRYPT_EMAIL=dblock@example.com
+-----> Setting config vars
+       DOKKU_LETSENCRYPT_EMAIL:    dblock@example.com
+
+root@dblock-plum:~# dokku letsencrypt sup-bot
+=====> Let's Encrypt market-bot
+...
+done
+{% endhighlight %}
+
 ### Things I Will Miss
 
 The only thing I will miss from Heroku is the ability to change the number and the size of each process. Other than that the DigitalOcean + Dokku combination is much more cost-effective and equally convenient.
