@@ -5,6 +5,8 @@ date: 2017-08-21
 tags: [teams, agile, slack]
 comments: true
 ---
+**Update**: I wrote a longer article, ["What “S’Up”? Using Triads to Develop Tribal Leadership"](https://medium.com/artsy-blog/what-sup-using-triads-to-develop-tribal-leadership-a01d4f207bf8) on the Artsy Medium blog about this.
+
 > The most valuable relationships are not made of two people, they’re made of three.  A third person will always stabilize and grow the relationship between the other two. It’s called a triad, and the more you create, the stronger your network.
 > - via [CultureSync, Tribal Leadership](http://www.culturesync.net/toolbox/intro-to-triads)
 
