@@ -3,7 +3,7 @@ active directory:
   count: 16
 agile:
   name: agile
-  count: 18
+  count: 19
 api:
   name: api
   count: 5
@@ -51,7 +51,7 @@ github:
   count: 10
 grape:
   name: grape
-  count: 24
+  count: 25
 heroku:
   name: heroku
   count: 13
@@ -120,7 +120,7 @@ rspec:
   count: 10
 ruby:
   name: ruby
-  count: 101
+  count: 103
 s3:
   name: s3
   count: 9
@@ -129,7 +129,7 @@ security:
   count: 27
 slack:
   name: slack
-  count: 11
+  count: 12
 speaking:
   name: speaking
   count: 24
@@ -138,10 +138,10 @@ teaching:
   count: 13
 teams:
   name: teams
-  count: 29
+  count: 30
 technology:
   name: technology
-  count: 26
+  count: 27
 testing:
   name: testing
   count: 36
