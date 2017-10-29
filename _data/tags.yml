@@ -141,7 +141,7 @@ teams:
   count: 30
 technology:
   name: technology
-  count: 27
+  count: 28
 testing:
   name: testing
   count: 36
