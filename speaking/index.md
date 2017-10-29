@@ -29,7 +29,13 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ## Recorded Talks
 
-<a href="https://www.youtube.com/watch?v=CEkJLhA1R0w&feature=youtu.be">Worlds Fair Nano, San Francisco, January 28th</a>
+<a href="https://www.youtube.com/watch?feature=youtu.be&v=lS9KehRHrho">Artist Marc Gumpinger and Artsy CTO Daniel Doubrovkine, moderated by HG Contemporary gallerist Philippe Hoerle-Guggenheim, discuss the past, present, and future of art and technology during the "Contemporary Art in a Technology Driven World" panel, New York, October 28, 2017</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lS9KehRHrho" frameborder="0" allowfullscreen></iframe><br>
+
+<a href="https://www.youtube.com/watch?v=leiKlKXRvuk">Artsy Overiew for Coalition for Queens and Q&A</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/leiKlKXRvuk" frameborder="0" allowfullscreen></iframe><br>
+
+<a href="https://www.youtube.com/watch?v=CEkJLhA1R0w&feature=youtu.be">Worlds Fair Nano, San Francisco, January 28th, 2017</a>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CEkJLhA1R0w?ecver=1" frameborder="0" allowfullscreen></iframe><br>
 
 <a href="https://pbell.wistia.com/medias/xo6uw6v4fm"><img alt="CTO Summit at NASDAQ" src="/images/about/cto-summit-nasdaq.png"></a><br>
