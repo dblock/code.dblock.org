@@ -296,3 +296,6 @@ Open the checked out project in VSCode and run it via ⌘F5 (Debug/Start without
 
 ![]({{ site.url }}/images/posts/2017/2017-10-23-building-and-consuming-a-graphql-api-in-ruby-on-rails/mutation.gif)
 
+### Generating and Handling Errors
+
+Read [Generating and Handling Errors in GraphQL in Ruby](/2017/10/30/generating-and-handling-errors-in-graphql-in-ruby.html) next.
