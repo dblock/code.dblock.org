@@ -283,16 +283,7 @@ brew install watchman
 npm install @playlyfe/gql
 {% endhighlight %}
 
-Right now you need code from [graphql-for-vscode#50](https://github.com/kumarharsh/graphql-for-vscode/pull/50), which adds GraphQL syntax highlighting, auto-complete, command + click, etc., to anything between `<<~GRAPHQL ... GRAPHQL`. While that pull request is pending, it requires some gymnastics.
-
-{% highlight bash %}
-git clone git@github.com:mzikherman/graphql-for-vscode.git
-cd graphql-for-vscode
-git checkout add_ruby_heredoc
-npm install
-{% endhighlight %}
-
-Open the checked out project in VSCode and run it via ⌘F5 (Debug/Start without Debugging). This will launch a new VSCode window from which you can open the project with GraphQL code, such as [dblock/graphql-invoices](https://github.com/dblock/graphql-invoices).
+Install graphql-for-vscode from the Visual Studio Code Marketplace, [here](https://marketplace.visualstudio.com/items?itemName=kumar-harsh.graphql-for-vscode).
 
 ![]({{ site.url }}/images/posts/2017/2017-10-23-building-and-consuming-a-graphql-api-in-ruby-on-rails/mutation.gif)
 
