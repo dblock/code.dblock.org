@@ -21,7 +21,7 @@ Client-side errors include parser and validation errors that don't require a rou
 
 ### Server-Side Errors
 
-For server-side implementations the [graphql-ruby doc on errors](https://github.com/rmosolgo/graphql-ruby/blob/master/guides/queries/error_handling.md) gives a lot of options to help you shoot yourself in the foot. Add your +1 to [graphql-ruby#1035](https://github.com/rmosolgo/graphql-ruby/pull/1035) that improves the documentation.
+For server-side implementations the [graphql-ruby doc on errors](https://github.com/rmosolgo/graphql-ruby/blob/master/guides/queries/error_handling.md) gives a few options.
 
 #### Returning Errors Inside Resolve
 
