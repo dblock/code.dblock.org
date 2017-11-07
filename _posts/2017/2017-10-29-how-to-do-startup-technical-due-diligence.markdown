@@ -22,9 +22,9 @@ Sometimes CEOs will also make wild statements about proprietary algorithms, spec
 
 ## Why do due diligence?
 
-I believe that due diligence, including technical, is a VC's _duty and responsibility to their own investors_. And due diligence should be obvious if you're buying a company - know what you're getting!
+I believe that due diligence, including technical, is a VC's _duty and responsibility to their own investors_, and not just a box to check. And due diligence should be obvious if you're buying a company - know what you're getting!
 
-There's a high rate of execution failures in startups, yet many VCs skip technical due diligence or have non-technical partners talk to the CTO for an hour or two. In my opinion, technology must be evaluated at par with financial discipline before giving a company money, so I find it fascinating that VCs will put cash into teams after incredibly thorough audits of their books, but without really looking at what's under the hood. Technical due diligence establishes a more realistic view of the company's technology and easily highlights cultural qualities and dysfunctions in technical teams by asking important questions. It avoids a lot of surprises during the first board meeting after the investment. It also usually costs less than the lawyers involved in any deal.
+There's a high rate of execution failures in startups, yet many VCs skip technical due diligence or have non-technical partners talk to the CTO for an hour or two. At best they see this process as educational. In my opinion, technology must be evaluated at par with financial discipline before giving a company money, so I find it fascinating that VCs will put cash into teams after incredibly thorough audits of their books, but without really looking at what's under the hood. Technical due diligence establishes a more realistic view of the company's technology and easily highlights cultural qualities and dysfunctions in technical teams by asking important questions. It avoids a lot of surprises during the first board meeting after the investment. It also usually costs less than the lawyers involved in any deal.
 
 ## Who should do technical due diligence?
 
