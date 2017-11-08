@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Past, Present and Future of Art & Techology Panel at HG Contemporary"
+title: "Past, Present and Future of Art & Technology Panel at HG Contemporary"
 date: 2017-10-29
 tags: [technology, art, future, panels]
 comments: true
