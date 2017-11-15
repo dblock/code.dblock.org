@@ -121,9 +121,7 @@ class GraphqlController < ApplicationController
   end
 
   def variables
-    variables = params[:variables]
-    variables = JSON.parse(variables) if variables && variables.is_a?(String)
-    variables || {}
+    params[:variables] || {}
   end
 end
 {% endhighlight %}
