@@ -23,5 +23,7 @@ sitemap: false
 @import "elements";
 @import "forms";
 @import "page";
-@import "vendor/font-awesome/font-awesome";
+@import "vendor/fontawesome/scss/fontawesome";
+@import "vendor/fontawesome/scss/fa-brands";
+@import "vendor/fontawesome/scss/fa-solid";
 @import "vendor/magnific-popup/magnific-popup";
