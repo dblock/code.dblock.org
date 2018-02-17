@@ -16,6 +16,9 @@ architecture:
 art.sy:
   name: art.sy
   count: 48
+artsy:
+  name: artsy
+  count: 5
 asp.net:
   name: asp.net
   count: 6
@@ -120,7 +123,7 @@ rspec:
   count: 10
 ruby:
   name: ruby
-  count: 103
+  count: 105
 s3:
   name: s3
   count: 9
@@ -141,7 +144,7 @@ teams:
   count: 30
 technology:
   name: technology
-  count: 28
+  count: 30
 testing:
   name: testing
   count: 36
