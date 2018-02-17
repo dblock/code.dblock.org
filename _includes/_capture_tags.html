@@ -10,8 +10,8 @@
 {% endfor %}
 {% capture tags_content %}
   {% if tags_ary.size > 1 %}
-    <i class="fa fa-tags">{{ tags_ary | join: ", " }}</i>
+    <i class="fa fa-tags">{{ tags_ary | join: '<span>|</span>' }}</i>
   {% elsif tags_ary.size == 1 %}
-    <i class="fa fa-tag">{{ tags_ary | join: ", " }}</i>
+    <i class="fa fa-tag">{{ tags_ary | join: '<span>|</span>' }}</i>
   {% endif %}
 {% endcapture %}
