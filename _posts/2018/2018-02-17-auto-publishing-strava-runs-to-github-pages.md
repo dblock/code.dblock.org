@@ -11,7 +11,7 @@ These are the implementation details.
 
 ### Jekyll and Github Pages
 
-I started with a basic Jekyll + Github Pages blog like this one. You can read about the basic setup [here](/2015/01/07/the-new-code-dblock-dot-org.html). I copied everything from this blog to the new one, deleted all content and customized some logos and colors, mostly in `_config.yml`.
+I started with a basic Jekyll + Github Pages blog like the one you're looking at now. You can read about the basic setup in [this post](/2015/01/07/the-new-code-dblock-dot-org.html). I copied everything from this blog to the new one, deleted all content and customized some logos and colors, mostly in `_config.yml`.
 
 That is [run.dblock.org@6e33b125](https://github.com/dblock/run.dblock.org/commit/6e33b12576b12de6aea85c0e762eb390526bb0f7).
 
@@ -51,6 +51,34 @@ Each activity comes with an encoded summary polyline in `activity['map']['summar
 {% endhighlight %}
 
 Google Static Maps API requires a key that you can get from the [console](https://developers.google.com/maps/documentation/static-maps/get-api-key).
+
+### Adding Start and Finish Markers
+
+Strava API does not [unfortunately return precise-enough coordinates to plot start and finish of the runs](https://groups.google.com/forum/#!searchin/strava-api/start_latlng$20maps%7Csort:date/strava-api/ZUAZX8idGaE/MVzOJFH-wjwJ), but we can pluck these out from the decoded polyline using the [polylines gem](https://github.com/joshuaclayton/polylines).
+
+{% highlight ruby %}
+require 'polylines'
+
+summary_polyline = activity['map']['summary_polyline']
+decoded_polyline = Polylines::Decoder.decode_polyline(summary_polyline)
+start_latlng = decoded_polyline[0]
+end_latlng = decoded_polyline[-1]
+{% endhighlight %}
+
+These markers are added to the map with `&markers=color:yellow|label:S|#{start_latlng[0]},#{start_latlng[1]}` and `&markers=color:green|label:F|#{end_latlng[0]},#{end_latlng[1]}` in [run.dblock.org@7b25c263](https://github.com/dblock/run.dblock.org/commit/7b25c26343d024c177d0613044f5bd6d23312bee).
+
+### Getting Photos
+
+By default Strava API only returns the primary photo. Call `list_activity_photos` to get all of them and specify `size` for anything other than thumbnails.
+
+{% highlight ruby %}
+client.list_activity_photos(activity['id'], size: '600').each do |photo|
+  url = photo['urls']['600']
+  # ...
+end
+{% endhighlight %}
+
+This is [run.dblock.org@84d67788](https://github.com/dblock/run.dblock.org/commit/84d67788dd0ee16cf1d4ad9fe8d382517c71292d).
 
 ### Generating Jekyll Pages
 
