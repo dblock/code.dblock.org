@@ -227,6 +227,13 @@ $button-size: 1.5rem;
 		}
 	}
 }
+#donate {
+	margin-bottom: 2em;
+	margin-top: 1em;
+	a {
+		text-decoration: underline;
+	}
+}
 #index {
 	@include container;
 	@include grid(12,10);

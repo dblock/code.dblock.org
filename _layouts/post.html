@@ -20,6 +20,7 @@
     {% include _search.html %}
     {% include _suggest.html %}
     {% include _rss.html %}
+    {% include _donate.html %}
   </div>
   <article class="post">
     <div class="headline-wrap">
@@ -37,6 +38,7 @@
     <div class="article-wrap">
       {{ content }}
       <hr />
+      Was this helpful? {% include _donate.html %}
       <footer role="contentinfo">
         <div class="article-author-bottom">
           {% include _author-bio.html %}
