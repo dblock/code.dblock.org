@@ -228,13 +228,14 @@ $button-size: 1.5rem;
 	}
 }
 #donate {
-	margin-bottom: 2em;
-	margin-top: 1em;
 	a {
 		text-decoration: underline;
 	}
 }
-#index {
+.article-author-side #donate {
+	margin-top: 1em;
+}
+#index, #donate {
 	@include container;
 	@include grid(12,10);
 	@include prefix(12,1);
