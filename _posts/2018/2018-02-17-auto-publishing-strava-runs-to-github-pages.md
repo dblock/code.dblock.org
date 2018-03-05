@@ -46,7 +46,7 @@ end
 
 A lot of this "math" belongs in strava-api-v3 - maybe a good opportunity to contribute, so I opened [strava-api-v3#36](https://github.com/jaredholdcroft/strava-api-v3/issues/36).
 
-The above code is [run.dblock.org@1927f128](https://github.com/dblock/run.dblock.org/commit/1927f128559b74035ba80d52c465d70d371a9cf1) with pagination fixed in [run.dblock.org@a6893fa2](https://github.com/dblock/run.dblock.org/commit/a6893fa255e429f20d58b7a64650265d39cebe62).
+The above code is [run.dblock.org@1927f128](https://github.com/dblock/run.dblock.org/commit/1927f128559b74035ba80d52c465d70d371a9cf1) with pagination fixed in [run.dblock.org@f3eac93b](https://github.com/dblock/run.dblock.org/commit/f3eac93b36bff08f0163c349006d905bbee2cf68?w=1).
 
 ### Plotting Runs with Google Maps
 
