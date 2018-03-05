@@ -22,25 +22,31 @@ I used the [strava-api-v3](https://github.com/jaredholdcroft/strava-api-v3) gem 
 {% highlight ruby %}
 client = Strava::Api::V3::Client.new(access_token: ENV['STRAVA_API_TOKEN'])
 
-client.list_athlete_activities.each do |activity|
-  start_date_local = DateTime.parse(activity['start_date_local'])
-  distance_in_miles = '%.2fmi' % (activity['distance'] * 0.00062137)
-  time_in_hours = '%dh%02dm%02ds' % [
-    activity['moving_time']/3600%24,
-    activity['moving_time']/60%60,
-    activity['moving_time']%60
-  ]
-  average_speed = '%.2fmph' % (activity['average_speed'] * 2.23694)
-  pace_per_mile = Time.at((60*60)/(activity['average_speed'] * 2.23694)).utc.strftime("%M:%S")
+page = 1
+loop do
+  activities = client.list_athlete_activities(page: page, per_page: 10)
+  break unless activites.any?
+  activities.each do |activity|
+    start_date_local = DateTime.parse(activity['start_date_local'])
+    distance_in_miles = '%.2fmi' % (activity['distance'] * 0.00062137)
+    time_in_hours = '%dh%02dm%02ds' % [
+      activity['moving_time']/3600%24,
+      activity['moving_time']/60%60,
+      activity['moving_time']%60
+    ]
+    average_speed = '%.2fmph' % (activity['average_speed'] * 2.23694)
+    pace_per_mile = Time.at((60*60)/(activity['average_speed'] * 2.23694)).utc.strftime("%M:%S")
 
-  # etc.
+    # etc.
 
+  end
+  page += 1
 end
 {% endhighlight %}
 
 A lot of this "math" belongs in strava-api-v3 - maybe a good opportunity to contribute, so I opened [strava-api-v3#36](https://github.com/jaredholdcroft/strava-api-v3/issues/36).
 
-The above code is [run.dblock.org@1927f128](https://github.com/dblock/run.dblock.org/commit/1927f128559b74035ba80d52c465d70d371a9cf1).
+The above code is [run.dblock.org@1927f128](https://github.com/dblock/run.dblock.org/commit/1927f128559b74035ba80d52c465d70d371a9cf1) with pagination fixed in [run.dblock.org@a6893fa2](https://github.com/dblock/run.dblock.org/commit/a6893fa255e429f20d58b7a64650265d39cebe62).
 
 ### Plotting Runs with Google Maps
 
