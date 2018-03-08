@@ -35,7 +35,7 @@ resolve ->(_object, _inputs, _ctx) {
 
 The response contains both a `nil` value in `data` and an `errors` field with an error at the `executionError` path with a message.
 
-![]({{ site.url }}/images/posts/2017-10-30-generating-and-handling-errors-in-graphql-in-ruby/execution-error.png)
+![]({{ site.url }}/images/posts/2017/2017-10-30-generating-and-handling-errors-in-graphql-in-ruby/execution-error.png)
 
 #### Handling Predictable Errors
 
