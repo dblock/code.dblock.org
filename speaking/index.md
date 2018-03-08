@@ -29,6 +29,9 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ## Recorded Talks
 
+<a href='https://www.facebook.com/brunchwork/videos/152715542060400/'>Technology, AR and Artsy, in Conversation with Andrew Russeth, ArtNews Magazine Editor, for Brunchwork</a>
+<a href='https://www.facebook.com/brunchwork/videos/152715542060400/'>![]({{ site.url }}/images/posts/2018/2018-03-08-andrew-russeth-brunchwork/brunchwork.jpg)</a>
+
 <a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>Mass Appeal: Tech’s New Role in Art Collecting + Fundraising - a conversation with Kickstarter Soraya Haas and Sotheby's Noah Wunsch, moderated by Christine Kuan at Sotheby's Institute.</a>
 <a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>![]({{ site.url }}/images/posts/2017/2017-11-07-sothebys-institute-mass-appeal-tech-new-role-in-art-collecting-and-fundraising/screenshot.png)</a>
 
