@@ -29,6 +29,10 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ## Recorded Talks
 
+[How Art Will Make Us Human: Daniel Doubrovkine CTO at Artsy, State of the Art Podcast](https://art19.com/shows/state-of-the-art/episodes/92a50b6a-c227-48a7-863a-56f754078146)
+
+<a href='https://art19.com/shows/state-of-the-art/episodes/92a50b6a-c227-48a7-863a-56f754078146'>![]({{ site.url }}/images/posts/2018/2018-01-18-state-of-the-art-podcast/cover.jpg)</a>
+
 <a href='https://www.facebook.com/brunchwork/videos/152715542060400/'>Technology, AR and Artsy, in Conversation with Andrew Russeth, ArtNews Magazine Editor, for Brunchwork</a>
 <a href='https://www.facebook.com/brunchwork/videos/152715542060400/'>![]({{ site.url }}/images/posts/2018/2018-03-08-andrew-russeth-brunchwork/brunchwork.jpg)</a>
 
