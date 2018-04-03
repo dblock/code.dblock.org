@@ -7,6 +7,8 @@ comments: true
 ---
 I always hated running. And now I have a [open-source running blog](http://run.dblock.org). Most entries are automatically generated from runs recorded in [Strava](https://www.strava.com/athletes/dblockdotorg) - I'm just too lazy to do it by hand :)
 
+<b>Update</b>: if you're going to want to copy code from here, you might want to check out [slack-strava](https://github.com/dblock/slack-strava), which was inspired by this post and has a much cleaner implementation of activities and maps.
+
 These are the implementation details.
 
 ### Jekyll and Github Pages
