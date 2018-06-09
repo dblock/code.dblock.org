@@ -1,6 +1,6 @@
 title: code.dblock.org | tech blog
 locale: en_US
-url:
+url: https://code.dblock.org
 markdown: kramdown
 sass:
   sass_dir: _sass
