@@ -9,7 +9,7 @@ dblog_post_id: 193
 ---
 ![]({{ site.url }}/images/posts/2011/2011-03-31-setting-up-cron-to-run-rake-tasks/image_6.jpg)
 
-This is the last piece of the dev-ops puzzle. We want our [MongoDB backup](http://code.dblock.org/ShowPost.aspx?id=192) to run nightly. Let's create a _:cron_ task
+This is the last piece of the dev-ops puzzle. We want our [MongoDB backup](https://code.dblock.org/ShowPost.aspx?id=192) to run nightly. Let's create a _:cron_ task
 
 {% highlight ruby %}
 task :cron => :environment do

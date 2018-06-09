@@ -9,7 +9,7 @@ dblog_post_id: 377
 ---
 [https://github.com/dblock/resourcelib](https://github.com/dblock/resourcelib)
 
-Download: [http://code.dblock.org/downloads/resourcelib/Vestris.ResourceLib.1.4.zip](http://code.dblock.org/downloads/resourcelib/Vestris.ResourceLib.1.4.zip)
+Download: [https://code.dblock.org/downloads/resourcelib/Vestris.ResourceLib.1.4.zip](https://code.dblock.org/downloads/resourcelib/Vestris.ResourceLib.1.4.zip)
 
 - [#2](https://github.com/dblock/resourcelib/pull/2): Added VersionResource.FileFlags - [@alaendle](https://github.com/alaendle).
 - Updated solution to Visual Studio 2010 - [@redwyre](https://github.com/redwyre).

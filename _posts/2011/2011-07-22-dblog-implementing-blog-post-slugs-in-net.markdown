@@ -113,7 +113,7 @@ else if (path == "ShowPost.aspx" && !string.IsNullOrEmpty(Request["slug"]))
 
 Here’s a URL that I get after running a task to re-slug all existing posts to my infamous Github is Your New Resume post. It’s a lot nicer!
 
-[code.dblock.org/github-is-your-new-resume](http://code.dblock.org/github-is-your-new-resume)
+[code.dblock.org/github-is-your-new-resume](https://code.dblock.org/github-is-your-new-resume)
 
 The URL has changed, yet Discus comments are fine (phew.) – they use my unique identifier. The twitter RT count is lost though and is reset at zero, since Twitter is a URL-based system. Too bad, here’s a screenshot for the memories.
 

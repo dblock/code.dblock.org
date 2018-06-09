@@ -26,7 +26,7 @@ The _jekyll-redirect-from_ library supports _redirect_from_ and _redirect_to_. I
 ```
 ---
 redirect_from: /your-commute-is-killing-you-move-to-new-york/
-redirect_to: http://code.dblock.org/2011/05/29/dear-california-engineer-your-commute-is-killing-you-move-to-new-york.html
+redirect_to: https://code.dblock.org/2011/05/29/dear-california-engineer-your-commute-is-killing-you-move-to-new-york.html
 ---
 ```
 
@@ -82,6 +82,6 @@ if (url) {
 
 #### Try It
 
-Try [www.dblock.org/your-commute-is-killing-you-move-to-new-york](http://www.dblock.org/your-commute-is-killing-you-move-to-new-york) and [code.dblock.org/ShowPost.aspx?id=103](http://code.dblock.org/ShowPost.aspx?id=103).
+Try [www.dblock.org/your-commute-is-killing-you-move-to-new-york](http://www.dblock.org/your-commute-is-killing-you-move-to-new-york) and [code.dblock.org/ShowPost.aspx?id=103](https://code.dblock.org/ShowPost.aspx?id=103).
 
 Everything is open-source. Click [here](https://github.com/dblock/www.dblock.org/commit/85ac18118feac15f25b1f6eb2b1a441ef69d0c53) for the source code for the plain redirect and [here](https://github.com/dblock/code.dblock.org/commit/66e15c163704569a9eec6eef45ecf1c667d5ab44) for the more complicated ASPX one.

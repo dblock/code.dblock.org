@@ -5,13 +5,13 @@ date: 2015-01-07 16:07:00
 tags: [blog, jekyll]
 comments: true
 ---
-The newly remodeled [code.dblock.org](http://code.dblock.org) is powered by [Jekyll](http://jekyllrb.com) and [Github pages](https://pages.github.com). The source code can be found [here](https://github.com/dblock/code.dblock.org).
+The newly remodeled [code.dblock.org](https://code.dblock.org) is powered by [Jekyll](http://jekyllrb.com) and [Github pages](https://pages.github.com). The source code can be found [here](https://github.com/dblock/code.dblock.org).
 
 ![]({{ site.url }}/images/posts/2015/2015-01-07-the-new-code-dblock-dot-org/meta.png)
 
 ### The Old
 
-My [homegrown system](https://github.com/dblock/dblog) was built in 2008. The tech stack was Microsoft ASP.net with a SQL Server back-end. I did most publishing with [Windows LiveWriter](http://en.wikipedia.org/wiki/Windows_Live_Writer) that used [AtomPub](http://code.dblock.org/2009/12/07/implementing-atompub-in-net.html).
+My [homegrown system](https://github.com/dblock/dblog) was built in 2008. The tech stack was Microsoft ASP.net with a SQL Server back-end. I did most publishing with [Windows LiveWriter](http://en.wikipedia.org/wiki/Windows_Live_Writer) that used [AtomPub](https://code.dblock.org/2009/12/07/implementing-atompub-in-net.html).
 
 Needless to say that was starting to really annoy me, having to boot a VirtualBox VM with Windows on my Mac just to publish an article. Worse, copy paste between the host and the guest OS was not working for images, so I used Dropbox for screenshots. The system was originally designed to save me time, only to ultimately become a time suck. Finally, [WinHost](http://www.winhost.com), where the blog was hosted, while providing excellent service, actually costs quite a bit of money.
 

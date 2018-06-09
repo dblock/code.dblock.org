@@ -7,7 +7,7 @@ tags: [objective-c, ios, open source]
 comments: true
 dblog_post_id: 408
 ---
-Right behind [Your First Ruby Gem](http://code.dblock.org/your-first-ruby-gem), here’s a walkthrough of creating your first Objective-C CocoaPod. Now, I must admit that after only two months of Objective-C programming, I am not nearly an expert. So I enlisted [Orta from CocoaPods](http://orta.github.io/) to stand behind my back and poke me with a stick whenever I did something wrong. It’s also important to note that there’s a lot of development going on in CocoaPods and my walkthrough represents the current state of affairs as of February 2014.
+Right behind [Your First Ruby Gem](https://code.dblock.org/your-first-ruby-gem), here’s a walkthrough of creating your first Objective-C CocoaPod. Now, I must admit that after only two months of Objective-C programming, I am not nearly an expert. So I enlisted [Orta from CocoaPods](http://orta.github.io/) to stand behind my back and poke me with a stick whenever I did something wrong. It’s also important to note that there’s a lot of development going on in CocoaPods and my walkthrough represents the current state of affairs as of February 2014.
 
 #### TL;DR
 

@@ -138,7 +138,7 @@ $ git rev-parse HEAD
 50fd3fcfa592eaac16cce6b3c508cf2487749bb0
 ```
 
-Instead of uploading _assets/common.css_ we’ll upload _assets/50fd3fcfa592eaac16cce6b3c508cf2487749bb0/common.css_. The rake task that performs the upload will also delete the existing files that are being replaced by a new hash. We typically run something like _rake assets:push:to_staging_. Note that this task needs some pre-requisite functions, read [this](http://code.dblock.org/ShowPost.aspx?id=191) post for getting started with S3 and Rake.
+Instead of uploading _assets/common.css_ we’ll upload _assets/50fd3fcfa592eaac16cce6b3c508cf2487749bb0/common.css_. The rake task that performs the upload will also delete the existing files that are being replaced by a new hash. We typically run something like _rake assets:push:to_staging_. Note that this task needs some pre-requisite functions, read [this](https://code.dblock.org/ShowPost.aspx?id=191) post for getting started with S3 and Rake.
 
 {% highlight ruby %}
 # uploads assets to s3 under assets/githash, deletes stale assets

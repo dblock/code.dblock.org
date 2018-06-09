@@ -9,7 +9,7 @@ dblog_post_id: 262
 ---
 ![jenkins]({{ site.url }}/images/posts/2011/2011-09-07-implementing-my-first-jenkins-plugin-ansicolor/jenkins_3.jpg)
 
-I installed Jenkins last week for the very first time. A couple of days later I was able to publish my first plugin, called [AnsiColor](https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin), which colorizes ANSI output. It’s the [plugin you’ve all been waiting for](http://code.dblock.org/the-jenkins-ansicolor-plugin-youve-all-been-waiting-for).
+I installed Jenkins last week for the very first time. A couple of days later I was able to publish my first plugin, called [AnsiColor](https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin), which colorizes ANSI output. It’s the [plugin you’ve all been waiting for](https://code.dblock.org/the-jenkins-ansicolor-plugin-youve-all-been-waiting-for).
 
 The [Jenkins plugin tutorial](https://wiki.jenkins-ci.org/display/JENKINS/Plugin+tutorial) is quite good, I recommend you just follow it. It has a maven-based cookbook to generate a new project. But if you’re like me, you’ll reconstruct a plugin from scratch (and possibly trade time for a better understanding). I’ll just mention a few things that could have been helpful to me.
 

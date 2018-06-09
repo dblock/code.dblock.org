@@ -23,7 +23,7 @@ One library is known for its excellent error messages. Consider a typical valida
 
 This error describes the problem, offers a detailed summary and provides a possible resolution!
 
-Let's implement a similar system for the [ruby-enum gem](https://github.com/dblock/ruby-enum/) that I [live-coded at NYC.rb](http://code.dblock.org/your-first-ruby-gem).
+Let's implement a similar system for the [ruby-enum gem](https://github.com/dblock/ruby-enum/) that I [live-coded at NYC.rb](https://code.dblock.org/your-first-ruby-gem).
 
 First, add a dependency on [i18n](http://rubygems.org/gems/i18n) and _require "i18n"_. Then, create a _lib/config/locales_ folder and an _en.yml_ file in it. English error messages will go there. This file will need to be loaded by our library, specifically in [ruby-enum.rb](https://github.com/dblock/ruby-enum/blob/master/lib/ruby-enum.rb).
 

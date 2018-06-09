@@ -25,7 +25,7 @@ _"I am an open-source contributor __..."_
 
 ![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image_37.jpg)
 
-I wrote an article that went viral, [Github is Your New Resume](http://code.dblock.org/github-is-your-new-resume). When evaluating someone’s Github profile, I usually click on _Repositories_ and then _Sources_. Do you have a project that you have started that has been heavily forked and contributed to? Do you have any activity that’s longer than a year ago or did you just throw some code up there to beef up your resume? Does your contributions graph really look like this?
+I wrote an article that went viral, [Github is Your New Resume](https://code.dblock.org/github-is-your-new-resume). When evaluating someone’s Github profile, I usually click on _Repositories_ and then _Sources_. Do you have a project that you have started that has been heavily forked and contributed to? Do you have any activity that’s longer than a year ago or did you just throw some code up there to beef up your resume? Does your contributions graph really look like this?
 
 ![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image_5.jpg)
 

@@ -7,7 +7,7 @@ tags: [rack, mongoid, jquery, javascript, grape]
 comments: true
 dblog_post_id: 318
 ---
-Expanding from my [previous post](http://code.dblock.org/grape-api-mounted-on-rack-w-static-pages) on a Grape API mounted on RACK.
+Expanding from my [previous post](https://code.dblock.org/grape-api-mounted-on-rack-w-static-pages) on a Grape API mounted on RACK.
 
 #### Refactoring the Application Instance
 

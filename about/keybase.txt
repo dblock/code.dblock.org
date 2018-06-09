@@ -7,7 +7,7 @@ https://keybase.io/dblock
 
 I hereby claim:
 
-  * I am an admin of http://code.dblock.org
+  * I am an admin of https://code.dblock.org
   * I am dblock (https://keybase.io/dblock) on keybase.
   * I have a public key with fingerprint 4A72 0FE7 90B0 7A68 744E  3716 75BF 031B 7C94 E183
 
