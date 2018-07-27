@@ -155,7 +155,7 @@ dokku config:set --no-restart market-bot DOKKU_LETSENCRYPT_EMAIL=dblock@example.
 -----> Setting config vars
        DOKKU_LETSENCRYPT_EMAIL:    dblock@example.com
 
-root@dblock-plum:~# dokku letsencrypt sup-bot
+root@dblock-plum:~# dokku letsencrypt market-bot
 =====> Let's Encrypt market-bot
 ...
 done
