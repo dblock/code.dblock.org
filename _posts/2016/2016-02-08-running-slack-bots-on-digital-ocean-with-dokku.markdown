@@ -55,6 +55,8 @@ root@dblock-plum:/# dokku mongo:create market-bot
 
 Of course you don't have to do any of this and signup for a MongoDB hosting provider like MongoLab or Compose, too.
 
+See also [Installing and Upgrading MongoDB in Dokku](/2018/07/27/installing-and-upgrading-mongodb-in-dokku.html).
+
 ### Creating an App
 
 Creating an app is very similar to Heroku. In fact, this uses [herokuish](https://github.com/gliderlabs/herokuish), a utility for emulating Heroku build and runtime tasks in containers, so from now on everything pretty much looks like Heroku.
