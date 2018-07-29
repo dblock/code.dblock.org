@@ -4,6 +4,7 @@ title: "What is the difference between a CTO and a VP or Head of Engineering?"
 date: 2015-05-07
 tags: [job titles, cto, head of engineering, vp of engineering]
 comments: true
+pinned: true
 ---
 My job title has recently changed from *Head of Engineering* to *CTO*, and many people outside of Artsy have been asking me to explain the logic behind this. A more important question is *what is the difference between a CTO and a VP or Head of Engineering*? Are these different jobs? Is it all about the title and why do titles matter at all?
 
