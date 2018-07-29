@@ -58,3 +58,51 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 		display: inline;
 	}
 }
+
+table {
+  padding: 0; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+      background-color: #f0f0f0; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+div.thumbnail-grid {
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+
+img.thumbnail {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin: 2px;
+  @media #{$large} {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  &:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+}
