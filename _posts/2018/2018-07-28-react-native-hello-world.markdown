@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "React Native Hello World"
-date: "2018-07-29 2:25"
+date: "2018-07-28"
 tags: [react native, 33 minutes]
 ---
 I've made [too many Slack bots](/tags/slack/) since 2015, so I decided to try something new and less comfortable. If you've written many services and back-ends as I have, you may have developed the same mental block as I when it came to client-side or front-end code. Since Artsy had been doing [amazing things with React Native](http://artsy.github.io/series/react-native-at-artsy) for a while, I committed myself to writing a mobile app in React Native, from scratch.
@@ -54,5 +54,5 @@ This seems bizarre. It's neither JavaScript, nor HTML. It is called [JSX](https:
 
 ### Code
 
-The code from this post is [33-minutes-app#f2bf31](https://github.com/33-minutes/33-minutes-app/commit/f2bf315ca8423d459ffb15abd9365c908cc40864). In the [next post I will add a toggle button](/2018/07/29/2-react-native-toggle-button.html).
+The code from this post is [33-minutes-app#f2bf31](https://github.com/33-minutes/33-minutes-app/commit/f2bf315ca8423d459ffb15abd9365c908cc40864). In the [next post I will add a toggle button](/2018/07/29/react-native-toggle-button.html).
 

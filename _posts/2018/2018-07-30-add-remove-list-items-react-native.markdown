@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Adding and Removing List Items in React Native"
-date: "2018-07-29 3:00"
+date: "2018-07-30"
 tags: [react native, 33 minutes]
 ---
-In the [previous post](/2018/07/29/2-react-native-toggle-button.html) I added a React Native toggle button. In this post I will add and remove list items.
+In the [previous post](/2018/07/29/react-native-toggle-button.html) I added a React Native toggle button. In this post I will add and remove list items.
 
-<a href='{{site.url}}/images/posts/2018/2018-07-29-3-add-remove-list-items-react-native/add-remove-list-items.gif'><img src='{{site.url}}/images/posts/2018/2018-07-29-3-add-remove-list-items-react-native/add-remove-list-items.gif' class="thumbnail"></a>
+<a href='{{site.url}}/images/posts/2018/2018-07-30-add-remove-list-items-react-native/add-remove-list-items.gif'><img src='{{site.url}}/images/posts/2018/2018-07-30-add-remove-list-items-react-native/add-remove-list-items.gif' class="thumbnail"></a>
 
 We're going to be storing an array of meetings, adding to it and removing from it.
 
@@ -94,4 +94,4 @@ removeMeetingByKey(key) {
 }
 {% endhighlight %}
 
-See the complete code with additional and removal wired up is in [33-minutes-app@249dd0](https://github.com/33-minutes/33-minutes-app/commit/249dd0096a444f4d7fb88c992988156ecc0d7165). In the [next post I will add a meeting clock timer](/2018/07/29/4-react-native-clock-timer.html).
+See the complete code with additional and removal wired up is in [33-minutes-app@249dd0](https://github.com/33-minutes/33-minutes-app/commit/249dd0096a444f4d7fb88c992988156ecc0d7165). In the [next post I will add a meeting clock timer](/2018/07/31/react-native-clock-timer.html).

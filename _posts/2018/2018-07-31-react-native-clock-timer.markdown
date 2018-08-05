@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Implementing a Ticking Clock Timer in React Native"
-date: "2018-07-29 3:30"
+date: "2018-07-31"
 tags: [react native, 33 minutes]
 ---
-In the [previous post](/2018/07/29/3-add-remove-list-items-react-native.html) I added and removed list items. In this post I will implement a ticking timer.
+In the [previous post](/2018/07/30/add-remove-list-items-react-native.html) I added and removed list items. In this post I will implement a ticking timer.
 
-<a href='{{site.url}}/images/posts/2018/2018-07-29-4-react-native-clock-timer/timer.gif'><img src='{{site.url}}/images/posts/2018/2018-07-29-4-react-native-clock-timer/timer.gif' class="thumbnail"></a>
+<a href='{{site.url}}/images/posts/2018/2018-07-31-react-native-clock-timer/timer.gif'><img src='{{site.url}}/images/posts/2018/2018-07-31-react-native-clock-timer/timer.gif' class="thumbnail"></a>
 
 The React Native ecosystem promises a rich set of components that work seamlessly together, much like the Ruby world. My first timer implementation used [react-timer-machine](https://github.com/yassinedoghri/react-timer-machine), _a fully controllable and customizable timer component_.
 
