@@ -48,5 +48,5 @@ We can rely on `setInterval` to call a method every second in the foreground and
 this.setState({ elapsedTime: moment().diff(this.state.meetingStartedAt) })
 {% endhighlight %}
 
-You can see this code in [33-minutes-app@0f1df4](https://github.com/33-minutes/33-minutes-app/commit/0f1df4c1c8036934874973480d7bf5ac37d86aa2).
+You can see this code in [33-minutes-app@0f1df4](https://github.com/33-minutes/33-minutes-app/commit/0f1df4c1c8036934874973480d7bf5ac37d86aa2). In the [next post](/2018/08/01/wiring-up-a-react-native-client-to-a-rails-graphql-server.html) I will wire up this React Native client app to a Rails GraphQL API.
 
