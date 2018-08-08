@@ -223,6 +223,40 @@ CreateUserMutation.commit({
 
 Login is very similar. For now we're using cookies to store a session and don't remember anything on the client, which means that reloading the app logs the user out.
 
+### Show Some Data
+
+To show data wrap up a GraphQL query into a [QueryRenderer](https://facebook.github.io/relay/docs/en/query-renderer.html). You'll always need one.
+
+{% highlight js %}
+render() {
+  return (
+    <QueryRenderer
+      environment={this.props.relay.environment}
+      query={graphql`
+        query UserQuery {
+         user {
+          id
+          name
+         }
+        }
+      `}
+
+      render={({error, props, retry}) => {
+        if (error) {
+          // todo
+        }
+
+        if (! props) {
+          return <Text>Loading ...</Text>
+        }
+
+        // props.user ...
+      }
+    />
+  )
+}
+{% endhighlight %}
+
 ## Code
 
-See [33-minutes-app@e3e6b9](https://github.com/33-minutes/33-minutes-app/commit/e3e6b9e672ce552be95b7221b1c05818018e8ae9) for complete code.
+See [33-minutes-app@e3e6b9](https://github.com/33-minutes/33-minutes-app/commit/e3e6b9e672ce552be95b7221b1c05818018e8ae9) for complete code. In the [next post](/2018/08/03/enabling-relay-style-mutations-and-pagination.html) I'll enable Relay-style pagination.
