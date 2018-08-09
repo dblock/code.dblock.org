@@ -2,7 +2,7 @@
 layout: post
 title: "Enabling Relay-Style Mutations and Pagination"
 date: "2018-08-03"
-tags: [react native, 33 minutes]
+tags: [react native, 33 minutes, relay]
 ---
 In the [previous post](/2018/08/01/wiring-up-a-react-native-client-to-a-rails-graphql-server.html) I wired up a React Native client to a Rails API GraphQL server. In this post I'll enable adding, removing and retrieving paginated data.
 

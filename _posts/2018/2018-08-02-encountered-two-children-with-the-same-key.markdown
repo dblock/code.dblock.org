@@ -2,7 +2,7 @@
 layout: post
 title: "Warning: Encountered two children with same key"
 date: "2018-08-02"
-tags: [react native, 33 minutes]
+tags: [react native, 33 minutes, relay]
 ---
 This drove me crazy.
 

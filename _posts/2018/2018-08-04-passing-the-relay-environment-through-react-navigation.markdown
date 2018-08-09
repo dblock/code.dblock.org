@@ -2,7 +2,7 @@
 layout: post
 title: "Passing The Relay Environment Through React Navigation"
 date: "2018-08-04"
-tags: [react native, 33 minutes]
+tags: [react native, 33 minutes, relay]
 ---
 Passing the [Relay environment](https://github.com/33-minutes/33-minutes-app/blob/master/app/Environment.js) around to make it available in each `QueryRenderer` with react-navigation seems unnecessarily difficult because of the difference between component props and screen props. I've successfully used [react-navigation-props-mapper](https://github.com/vonovak/react-navigation-props-mapper) to merge the two in [33-minutes-app](https://github.com/33-minutes/33-minutes-app).
 
