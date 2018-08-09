@@ -5,9 +5,7 @@ date: 2018-03-07
 tags: [ssl, jekyll, blog]
 comments: true
 ---
-Github has been [petitioned, begged and implored](https://gist.github.com/coolaj86/e07d42f5961c68fc1fc8) to enable SSL on custom domains running on Github pages. It looks like they are finally and quietly delivering SSL support with [LetsEncrypt](https://letsencrypt.org) certificates being deployed.
-
-<b>Please be aware that it hasn't been officially released, this is why I have migrated two small Jekyll sites and not this blog, for example. YMMV.</b>
+Github has been [petitioned, begged and implored](https://gist.github.com/coolaj86/e07d42f5961c68fc1fc8) to enable SSL on custom domains running on Github pages. They finally [delivered](https://blog.github.com/2018-05-01-github-pages-custom-domains-https) SSL support with [LetsEncrypt](https://letsencrypt.org).
 
 ![]({{ site.url }}/images/posts/2018/2018-03-07-enabling-ssl-on-github-pages/ssl.png)
 
