@@ -10,8 +10,12 @@ permalink: '/about/'
 Hi! This is my tech blog.
 
 <a href='/images/about/headshot.jpg'>
-  <img src="/images/about/daniel-doubrovkine.jpg" style="max-width: 200px">
+  <img src="/images/about/daniel-doubrovkine.jpg" style="max-height: 200px">
+</a><a href='/images/about/headshot-landscape.jpg'>
+  <img src="/images/about/daniel-doubrovkine-landscape.jpg" style="max-height: 200px">
 </a>
+
+<small>(click images for hi-res headshots)</small>
 
 Here's an official bio.
 
