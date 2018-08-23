@@ -8,7 +8,7 @@ If you are like me, [trying to hire developers](https://www.artsy.net/jobs), you
 
 ## Fue
 
-Intrioducing [fue](https://github.com/dblock/fue), a little command-line tool to do just that. Get a Github access token [here](https://github.com/settings/tokens).
+Introducing [fue](https://github.com/dblock/fue), a little command-line tool to do just that. Get a Github access token [here](https://github.com/settings/tokens). Fue is short for "Finding Unicorn Engineers".
 
 ![]({{site.url}}/images/posts/2018/2018-08-15-finding-a-github-users-email-address/fue.gif)
 
