@@ -29,6 +29,10 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ## Recorded Talks
 
+[The Future is Art, Christie's Art & Tech Summit: Exploring Blockchain](https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s), London
+
+<a href='https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s'>![]({{site.url}}/images/posts/2018/2018-07-17-christies-art-tech-summit-exploring-blockchain/daniel-doubrovkine-speaking.png)</a>
+
 [How Art Will Make Us Human: Daniel Doubrovkine CTO at Artsy, State of the Art Podcast](https://art19.com/shows/state-of-the-art/episodes/92a50b6a-c227-48a7-863a-56f754078146)
 
 <a href='https://art19.com/shows/state-of-the-art/episodes/92a50b6a-c227-48a7-863a-56f754078146'>![]({{ site.url }}/images/posts/2018/2018-01-18-state-of-the-art-podcast/cover.jpg)</a>
