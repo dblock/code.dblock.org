@@ -1,6 +1,6 @@
 33 minutes:
   name: 33 minutes
-  count: 9
+  count: 10
 active directory:
   name: active directory
   count: 16
@@ -21,7 +21,7 @@ art.sy:
   count: 48
 artsy:
   name: artsy
-  count: 7
+  count: 8
 asp.net:
   name: asp.net
   count: 6
@@ -54,7 +54,7 @@ git:
   count: 9
 github:
   name: github
-  count: 10
+  count: 12
 grape:
   name: grape
   count: 25
@@ -90,10 +90,10 @@ me me:
   count: 7
 mongodb:
   name: mongodb
-  count: 40
+  count: 41
 mongoid:
   name: mongoid
-  count: 15
+  count: 17
 msbuild:
   name: msbuild
   count: 5
@@ -129,7 +129,7 @@ rspec:
   count: 10
 ruby:
   name: ruby
-  count: 106
+  count: 107
 s3:
   name: s3
   count: 9
@@ -141,7 +141,7 @@ slack:
   count: 13
 speaking:
   name: speaking
-  count: 26
+  count: 27
 teaching:
   name: teaching
   count: 13
