@@ -77,6 +77,40 @@ end
 
 Note that `Point` seems to implement support for latitude and longitude backwards. This is [mongoid-geospatial#61](https://github.com/mongoid/mongoid-geospatial/issues/61).
 
-The values passed back-and-forth are much more readable now and our API accepts standard notations such as `50.004444, 36.231389` or `50° 0′ 16″ N, 36° 13′ 53″ E` and returns a `location` as a string, allowing seamless future improvements on the support location formats.
-
 This is implemented in [33-minutes-server@28f309](https://github.com/33-minutes/33-minutes-server/commit/28f309cedd12d970338bfc98582daa521625b43e).
+
+### Location Formats
+
+The values passed back-and-forth are much more readable now and our API accepts standard notations (eg. `50.004444, 36.231389` or `50° 0′ 16″ N, 36° 13′ 53″ E`) and returns a `location` as a string (eg. `50° 0′ 16″ N, 36° 13′ 53″ E`). This allows for seamless future improvements in the location formats, but burdens the client to parse a complex response.
+
+The first attempt at easing this is to return a location in the simpler `lat,lon` format.
+
+{% highlight ruby %}
+Types::GeoCoordinates = GraphQL::ScalarType.define do
+  name 'GeoCoordinates'
+
+  coerce_input ->(value, _ctx) { Geo::Coord.parse(value) }
+  coerce_result ->(value, _ctx) { [value.y, value.x].map(&:to_s).join(',') }
+end
+{% endhighlight %}
+
+We can do better and just return an array, as well as allow multiple kinds of location inputs.
+
+{% highlight ruby %}
+Types::GeoCoordinates = GraphQL::ScalarType.define do
+  name 'GeoCoordinates'
+
+  coerce_input ->(value, _ctx) {
+    case value
+    when Array
+      Geo::Coord.new(value[0], value[1])
+    else
+      Geo::Coord.parse(value)
+    end
+  }
+
+  coerce_result ->(value, _ctx) { [value.y, value.x] }
+end
+{% endhighlight %}
+
+This is implemented in [33-minutes-server@098ff1](https://github.com/33-minutes/33-minutes-server/commit/098ff17148e30898e8efed3645a757750614132b) and [33-minutes-server@cc159b](https://github.com/33-minutes/33-minutes-server/commit/cc159bf87f0157c2f9cb0423ba51017fd2476174).
