@@ -51,7 +51,7 @@ I signed up and watched a webinar.
 
 Questions?
 
-Send me an e-mail. I will read it for $20, donate [here](https://runwithtfk.org/Profile/PublicPage/61018).
+Become my patron at any level via [Patreon](https://www.patreon.com/dblock) and send me an e-mail! All proceeds donated to Charity.
 
 
 
