@@ -9,7 +9,7 @@ dblog_post_id: 271
 ---
 Our image upload pipeline has gotten a bit too long and no longer fits in the Heroku’s 30-second limit. We generate several image versions and would like to get a couple of sizes first and the larger processors to be delayed.  I’ve looked at a few solutions, first.
 
-- [This article](http://www.freezzo.com/2011/01/06/how-to-use-delayed-job-to-handle-your-carrierwave-processing/) describes how to delay all processors, but stores the original file for all versions, first. Other than being wasteful it has a real problem for the Cloudfront cache – if some large image were to be cached before the delayed job can resize it, we’d get an image of a wrong size for 24 hours.
+- [This article](https://www.randygirard.com/how-to-use-delayed-job-to-handle-your-carrierwave-processing/) describes how to delay all processors, but stores the original file for all versions, first. Other than being wasteful it has a real problem for the Cloudfront cache – if some large image were to be cached before the delayed job can resize it, we’d get an image of a wrong size for 24 hours.
 - The [carrierwave_backgrounder](https://github.com/lardawge/carrierwave_backgrounder) gem is a better candidate. Unfortunately it relies on a local store and doesn’t work in a distributed environment. I think it shouldn’t be too hard to fetch the original image and then invoke the processors, but I wasn’t ready for a day-long project and it doesn’t quite do what I want – process some versions in the background.
 
 So, here’s a slightly hacky solution to delay-processing of select [CarrierWave](https://github.com/jnicklas/carrierwave) image versions.
