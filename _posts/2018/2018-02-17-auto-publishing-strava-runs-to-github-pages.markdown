@@ -9,6 +9,8 @@ I always hated running. And now I have a [open-source running blog](http://run.d
 
 <b>Update</b>: if you're going to want to copy code from here, you might want to check out [slack-strava](https://github.com/dblock/slack-strava), which was inspired by this post and has a much cleaner implementation of activities and maps.
 
+<b>Update</b>: Strava has [changed their authentication](https://developers.strava.com/docs/authentication/) and no longer supports long lived tokens. See [this post](/2018/11/17/dealing-with-strava-api-token-migration.html) for more information.
+
 These are the implementation details.
 
 ### Jekyll and Github Pages
@@ -19,7 +21,9 @@ That is [run.dblock.org@6e33b125](https://github.com/dblock/run.dblock.org/commi
 
 ### Getting Data from Strava
 
-I used the [strava-api-v3](https://github.com/jaredholdcroft/strava-api-v3) gem that talks to [Strava's Open API](https://developers.strava.com). To make this work I had to create an app on Strava and copy-paste the "public access" token from [strava.com/settings/api](https://www.strava.com/settings/api).
+I used the [strava-api-v3](https://github.com/jaredholdcroft/strava-api-v3) gem that talks to [Strava's Open API](https://developers.strava.com). To make this work I had to create an app on Strava and copy-paste the access token from [strava.com/settings/api](https://www.strava.com/settings/api).
+
+Note that this token expires quickly. See [this post](/2018/11/17/dealing-with-strava-api-token-migration.html) for how to refresh it.
 
 {% highlight ruby %}
 client = Strava::Api::V3::Client.new(access_token: ENV['STRAVA_API_TOKEN'])
