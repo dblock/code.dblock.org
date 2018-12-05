@@ -2,14 +2,10 @@
 layout: post
 title: "Auto-Publishing Strava Runs to Github Pages"
 date: 2018-02-17
-tags: [running, ruby, blog]
+tags: [running, ruby, blog, strava]
 comments: true
 ---
 I always hated running. And now I have a [open-source running blog](http://run.dblock.org). Most entries are automatically generated from runs recorded in [Strava](https://www.strava.com/athletes/dblockdotorg) - I'm just too lazy to do it by hand :)
-
-<b>Update</b>: if you're going to want to copy code from here, you might want to check out [slack-strava](https://github.com/dblock/slack-strava), which was inspired by this post and has a much cleaner implementation of activities and maps.
-
-<b>Update</b>: Strava has [changed their authentication](https://developers.strava.com/docs/authentication/) and no longer supports long lived tokens. See [this post](/2018/11/17/dealing-with-strava-api-token-migration.html) for more information.
 
 These are the implementation details.
 
@@ -21,45 +17,27 @@ That is [run.dblock.org@6e33b125](https://github.com/dblock/run.dblock.org/commi
 
 ### Getting Data from Strava
 
-I used the [strava-api-v3](https://github.com/jaredholdcroft/strava-api-v3) gem that talks to [Strava's Open API](https://developers.strava.com). To make this work I had to create an app on Strava and copy-paste the access token from [strava.com/settings/api](https://www.strava.com/settings/api).
+I created an app on Strava and noted the access token from [strava.com/settings/api](https://www.strava.com/settings/api) and used it with [strava-ruby-client](https://github.com/dblock/strava-ruby-client) to talk to [Strava's Open API](https://developers.strava.com).
 
-Note that this token expires quickly. See [this post](/2018/11/17/dealing-with-strava-api-token-migration.html) for how to refresh it.
+Note that this token expires quickly. See [this post](/2018/11/17/dealing-with-strava-api-token-migration.html) for how to refresh it, in general, and below for how to make this process work in Travis-CI.
 
 {% highlight ruby %}
 client = Strava::Api::V3::Client.new(access_token: ENV['STRAVA_API_TOKEN'])
 
-page = 1
-loop do
-  activities = client.list_athlete_activities(page: page, per_page: 10)
-  break unless activites.any?
-  activities.each do |activity|
-    start_date_local = DateTime.parse(activity['start_date_local'])
-    distance_in_miles = '%.2fmi' % (activity['distance'] * 0.00062137)
-    time_in_hours = '%dh%02dm%02ds' % [
-      activity['moving_time']/3600%24,
-      activity['moving_time']/60%60,
-      activity['moving_time']%60
-    ]
-    average_speed = '%.2fmph' % (activity['average_speed'] * 2.23694)
-    pace_per_mile = Time.at((60*60)/(activity['average_speed'] * 2.23694)).utc.strftime("%M:%S")
-
-    # etc.
-
-  end
-  page += 1
+client.athlete_activities do |activity|
+  activity.start_date_local # => ...
+  activity.time_in_hours # => ...
+  activity.average_speed # => ...
+  activity.pace_per_mile # => ...
 end
 {% endhighlight %}
 
-A lot of this "math" belongs in strava-api-v3 - maybe a good opportunity to contribute, so I opened [strava-api-v3#36](https://github.com/jaredholdcroft/strava-api-v3/issues/36).
-
-The above code is [run.dblock.org@1927f128](https://github.com/dblock/run.dblock.org/commit/1927f128559b74035ba80d52c465d70d371a9cf1) with pagination fixed in [run.dblock.org@f3eac93b](https://github.com/dblock/run.dblock.org/commit/f3eac93b36bff08f0163c349006d905bbee2cf68?w=1).
-
 ### Plotting Runs with Google Maps
 
-Each activity comes with an encoded summary polyline in `activity['map']['summary_polyline']`, which can be passed directly to Google Static Maps API with the `enc:` prefix to render a nice image.
+Each activity comes with an encoded summary polyline in `activity.map.summary_polyline`, which can be passed directly to Google Static Maps API with the `enc:` prefix to render a nice image.
 
 {% highlight html %}
-<img src='https://maps.googleapis.com/maps/api/staticmap?maptype=roadmap&path=enc:#{activity['map']['summary_polyline']}&key=...&size=800x800'>
+<img src='https://maps.googleapis.com/maps/api/staticmap?maptype=roadmap&path=enc:#{activity.map.summary_polyline}&key=...&size=800x800'>
 {% endhighlight %}
 
 Google Static Maps API requires a key that you can get from the [console](https://developers.google.com/maps/documentation/static-maps/get-api-key).
@@ -71,26 +49,24 @@ Strava API does not [unfortunately return precise-enough coordinates to plot sta
 {% highlight ruby %}
 require 'polylines'
 
-summary_polyline = activity['map']['summary_polyline']
+summary_polyline = activity.map.summary_polyline
 decoded_polyline = Polylines::Decoder.decode_polyline(summary_polyline)
 start_latlng = decoded_polyline[0]
 end_latlng = decoded_polyline[-1]
 {% endhighlight %}
 
-These markers are added to the map with `&markers=color:yellow|label:S|#{start_latlng[0]},#{start_latlng[1]}` and `&markers=color:green|label:F|#{end_latlng[0]},#{end_latlng[1]}` in [run.dblock.org@7b25c263](https://github.com/dblock/run.dblock.org/commit/7b25c26343d024c177d0613044f5bd6d23312bee).
+These markers are added to the map with `&markers=color:yellow|label:S|#{start_latlng[0]},#{start_latlng[1]}` and `&markers=color:green|label:F|#{end_latlng[0]},#{end_latlng[1]}`.
 
 ### Getting Photos
 
-By default Strava API only returns the primary photo. Call `list_activity_photos` to get all of them and specify `size` for anything other than thumbnails.
+By default Strava API only returns the primary photo. Call `activity_photos` to get all of them and specify `size` for anything other than thumbnails. Note that this seems to be an undocumented Strava API.
 
 {% highlight ruby %}
-client.list_activity_photos(activity['id'], size: '600').each do |photo|
-  url = photo['urls']['600']
+client.activity_photos(activity.id, size: '600').each do |photo|
+  url = photo.urls['600']
   # ...
 end
 {% endhighlight %}
-
-This is [run.dblock.org@84d67788](https://github.com/dblock/run.dblock.org/commit/84d67788dd0ee16cf1d4ad9fe8d382517c71292d).
 
 ### Generating Jekyll Pages
 
@@ -98,25 +74,25 @@ I wrote a Rake task that iterates over Strava activities and outputs a `.md` fil
 
 {% highlight ruby %}
 filename = [
-  "_posts/#{start_date_local.year}/#{start_date_local.strftime('%Y-%m-%d')}",
-  activity['type'].downcase,
-  distance_in_miles,
-  time_in_hours
+  "_posts/#{activity.start_date_local.year}/#{activity.start_date_local.strftime('%Y-%m-%d')}",
+  activity.type.downcase,
+  activity.distance_in_miles,
+  activity.time_in_hours
 ].join('-') + '.md'
 
-FileUtils::mkdir_p "_posts/#{start_date_local.year}"
+FileUtils::mkdir_p "_posts/#{activity.start_date_local.year}"
 
 File.open filename, "w" do |file|
   file.write <<-EOS
 ---
 layout: post
-title: "#{activity['name']}"
-date: "#{start_date_local.strftime('%F %T')}"
+title: "#{activity.name}"
+date: "#{activity.start_date_local.strftime('%F %T')}"
 ---
 <ul>
- <li>Distance: #{distance_in_miles}</li>
- <li>Time: #{time_in_hours}</li>
- <li>Pace: #{pace_per_mile}</li>
+ <li>Distance: #{activity.distance_in_miles}</li>
+ <li>Time: #{activity.time_in_hours}</li>
+ <li>Pace: #{activity.pace_per_mile}</li>
 </ul>
 EOS
 {% endhighlight %}
@@ -179,7 +155,9 @@ This is [run.dblock.org@2a08d5ec](https://github.com/dblock/run.dblock.org/commi
 
 ### Travis-CI Cron
 
-I added `STRAVA_API_TOKEN` and `GH_TOKEN` values to Travis-CI UI, then added a daily Cron job. This is because we want Travis to run an update both when code (eg. stylesheet) changes are pushed to Github and when new runs are posted to Strava.
+To make this process work recurrently, I added `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET` and `GH_TOKEN` values to Travis-CI UI, then added a daily Cron job. This is because we want Travis to run an update both when code (eg. stylesheet) changes are pushed to Github and when new runs are posted to Strava.
+
+The Strava refresh token must be kept secret and therefore I encrypted it with `travis encrypt STRAVA_API_REFRESH_TOKEN=... --add env`, which adds it to `.travis.yml`. This uses the Travis-CI public key and can only be decrypted in Travis-CI. The Rake task also updates the refresh token if it has changed as a result of the OAuth workflow.
 
 ### Finally
 
