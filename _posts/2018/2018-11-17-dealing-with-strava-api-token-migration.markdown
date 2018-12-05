@@ -2,7 +2,7 @@
 layout: post
 title: "Dealing with Strava API OAuth Token Migration"
 date: 2018-11-17
-tags: [strava]
+tags: [strava, oauth, api]
 comments: true
 ---
 Strava has recently [announced](https://developers.strava.com/docs/oauth-updates/) changes to the Strava OAuth flow. On October 15, 2019 all applications using the old flow will stop working.
@@ -27,17 +27,12 @@ My [run.dblock.org](https://run.dblock.org) website has a Travis-CI job that fet
 
 The [app settings page](https://www.strava.com/settings/api) no longer carries a long lived access token. The old one will expire in October 2019.
 
-The first step is to obtain an OAuth token with `activity:read_all` scope. Because mine is not an interactive app I [wrote a script](https://github.com/dblock/run.dblock.org/commit/0adadb36e46e29410dafd3757e4070afc30882b5#diff-1e2fd5f9daf890ec3249625bee294c05) that makes the API calls and tells you to navigate to a page using a browser.
+The first step is to obtain an OAuth token with `activity:read_all` scope. Because mine is not an interactive app I used [strava-oauth-token](https://github.com/dblock/strava-ruby-client/blob/master/bin/strava-oauth-token) that makes the API calls and navigates to a web page using a browser.
 
 {% highlight bash %}
-$ STRAVA_CLIENT_ID=... STRAVA_CLIENT_SECRET=... ruby strava_oauth.rb
-1. Navigate to https://www.strava.com/oauth/authorize?client_id=...&redirect_uri=http%3A%2F%2Flocalhost&response_type=code&scope=activity%3Aread_all
-2. Copy paste the code from the URL: ******
-3. Using code ****** ...
-token_type: Bearer
-refresh_token: ******
-access_token: ******
-expires_at: 2018-11-17 23:02:26 -0500
+$ gem install strava-ruby-client
+
+$ STRAVA_CLIENT_ID=... STRAVA_CLIENT_SECRET=... strava-oauth-token
 {% endhighlight %}
 
 Instead of setting `STRAVA_API_TOKEN` we now need `STRAVA_CLIENT_ID` and `STRAVA_CLIENT_SECRET` in the Travis-CI configuration as well as `STRAVA_API_REFRESH_TOKEN` from above to obtain the actual access token each time the website cron runs. However, the result may yield a new refresh token that will need to be rotated, so entering the refresh token in the Travis-CI UI is not going to work.
@@ -58,4 +53,3 @@ The migration for OAuth apps makes total sense. The migration for an application
 2. The developer is forced to store the refresh token in potentially less secure ways and is now required to store an updated refresh token at "runtime" after obtaining an access token.
 
 I think the Strava developer UI should just let you create a long lived personal access token with any given scope that can be revoked from the same UI, which is what Github API allows for non-interactive apps. Storing that token would be more secure than having to store a client ID and secret.
-
