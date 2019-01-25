@@ -40,7 +40,7 @@ This is the good news. The product manager happily goes away. The feature priori
 
 I hope you can see the trend. In all cases I will come out unhappy with the interruption and the PM will get no information that influences feature priority. This is because features, priority and implementation are independent variables.
 
-Are you still asking why you shouldn’t set a feature priority lower if it’s really big and not so important? If it’s not so important, just lower its importance in the backlog. As a product manager in an agile organization you’re not setting the order of execution, you’re setting _priority_. Priority is an _indication_ for the development team of what’s important _to the customer _(or the company or the organization). You must learn to trust your development team to pick a balance of achievable low hanging fruit and big feature investments overtime.
+Are you still asking why you shouldn’t set a feature priority lower if it’s really big and not so important? If it’s not so important, just lower its importance in the backlog. As a product manager in an agile organization you’re not setting the order of execution, you’re setting _priority_. Priority is an _indication_ for the development team of what’s important _to the customer_ (or the company or the organization). You must learn to trust your development team to pick a balance of achievable low hanging fruit and big feature investments overtime.
 
 As an engineer, I recommend product management folks follow these rules of thumb.
 
