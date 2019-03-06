@@ -90,7 +90,7 @@ The active ping monitoring was released in slack-ruby-client 0.14.1, slack-ruby-
 
 ### Thanks
 
-Again, much thanks to Slack's team for debugging, support and code, including [Rodney Urquhart](https://github.com/RodneyU215), [Ankur Oberoi](https://github.com/aoberoi) and [Jason Roche](https://github.com/roach), as well as [Samuel Williams](https://github.com/ioquatix) for his Async library, various fixes and his adult supervision and for catching tons of non-obvious hard bugs across multiple code reviews.
+Again, much thanks to Slack's team for debugging, support and code, including [Rodney Urquhart](https://github.com/RodneyU215), [Ankur Oberoi](https://github.com/aoberoi) and [Jason Roche](https://github.com/roach), as well as [Samuel Williams](https://github.com/ioquatix) for his Async library, his adult supervision and for catching tons of non-obvious hard bugs across multiple code reviews.
 
 ### Links
 
