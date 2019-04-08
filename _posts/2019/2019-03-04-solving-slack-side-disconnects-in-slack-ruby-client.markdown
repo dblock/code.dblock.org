@@ -101,3 +101,4 @@ Again, much thanks to Slack's team for debugging, support and code, including [R
 * [slack-ruby-client#226](https://github.com/slack-ruby/slack-ruby-client/pull/226), [#232](https://github.com/slack-ruby/slack-ruby-client/pull/232), [#236](https://github.com/slack-ruby/slack-ruby-client/pull/236), [#234](https://github.com/slack-ruby/slack-ruby-client/pull/234), [#254](https://github.com/slack-ruby/slack-ruby-client/issues/254): Adding Slack Socket level ping/pong.
 * [slack-ruby-bot#203](https://github.com/slack-ruby/slack-ruby-bot/pull/203): Removed restart logic.
 * [slack-ruby-bot-server#93](https://github.com/slack-ruby/slack-ruby-bot-server/pull/93): Removed ping worker.
+* [slack-ruby-client#262](https://github.com/slack-ruby/slack-ruby-client/pull/262): Better disconnect handling, fixing occasional failures to reconnect.
