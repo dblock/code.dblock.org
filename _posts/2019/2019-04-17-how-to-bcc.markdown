@@ -1,0 +1,113 @@
+---
+layout: post
+title: "How to BCC"
+date: 2019-04-13
+tags: [email, teams]
+comments: true
+---
+In his 2001 memoir "How to Lose Friends & Alienate People" Toby Young proposed a universal theorem.
+
+> Some people are lucky enough to stumble across the right path straight away; most of us only discover what the right one is by going down the wrong one first.
+
+He may have been talking about one of my former colleagues who made a career limiting move by hitting _Reply All_ to a team re-org announcement and saying out loud what everybody already thought: _"I cannot believe you have promoted that idiot."_
+
+The corollary of Toby Young's theorem is that _you should never write anything you don't want to be read_.
+
+That said, such incidents can be avoided with a bit of discipline from the e-mail senders, described below.
+
+### Always Bcc and Announce Lists
+
+Only put individual e-mail addresses on the _to:_ or _cc:_ lines and _bcc:_ mailing lists. Maybe even address the e-mail to yourself to keep a copy. This prevents the knee jerk _Reply All_ reaction to a wide distribution list when one only meant to reply to the sender.
+
+Furthermore, a recipient doesn't know who is being bcc-ed or whether they were e-mailed directly or were part of a list, therefore the polite thing to do is to tell them.
+
+{% highlight txt %}
+From: me
+To: me
+Bcc: team, hr
+-------------
+
+Team (team@ and hr@ on the bcc),
+
+Today I am happy to announce that Alice was promoted.
+
+-Me
+{% endhighlight %}
+
+### Forward Instead of Bcc
+
+If you are trying to bcc someone as an FYI, don't. Forward that e-mail with a personal note.
+
+A bcc is not an FYI, and you are hiding the fact that another person is being bcc-ed, creating an opportunity for an unpleasant surprise when that person hits _Reply All_ to visible recipients.
+
+{% highlight txt %}
+From: me
+To: Bob
+--------
+
+Bob, FYI, here's the team announcement from this morning.
+
+_________________________________________________________
+
+From: me
+To: me
+Bcc: team, hr
+-------------
+
+Team (team@ and hr@ on the bcc),
+
+Today I am happy to announce that Alice was promoted.
+
+-Me
+{% endhighlight %}
+
+### Move People to Bcc
+
+If someone made an introduction, thank them and move them to the bcc. Spare their inbox from conversations they dont't care about.
+
+{% highlight txt %}
+From: me
+To: Bob
+Bcc: Alice
+----------
+
+Thanks Alice, moving to bcc. Nice to virtually meet you, Bob.
+
+______________________________________________________________
+
+From: Alice
+To: me, Bob
+-----------
+
+Daniel meet Bob!
+
+-Alice
+{% endhighlight %}
+
+Did someone not follow the rules above? Move everyone to bcc when replying all. You might save someone's professional relationship.
+
+### Say Congrats on the To Line
+
+When replying to a piece of good news, don't _Reply All_. Make it count by sending them something personal and sparing everyone else.
+
+{% highlight txt %}
+From: me
+To: Alice
+---------
+
+Congrats Alice, you've done a tremendous job. This is well deserved!
+
+-Daniel
+_______________________________________________________________________
+
+From: Bob
+Cc: Alice
+Bcc:
+---------
+
+Team (on the bcc),
+
+Today I am happy to announce that Alice was promoted.
+
+-Bob
+{% endhighlight %}
