@@ -29,6 +29,10 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ## Recorded Talks
 
+[Art Market 1.0](https://www.youtube.com/watch?v=LxWfMp0gzSU&t=31m), University of Zurich
+
+<a href='https://www.youtube.com/watch?v=LxWfMp0gzSU&t=31m'>![]({{site.url}}/images/posts/2019/2019-03-07-art-market-one-point-o/daniel-doubrovkine-speaking-uzh.png)</a>
+
 [The Future is Art, Christie's Art & Tech Summit: Exploring Blockchain](https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s), London
 
 <a href='https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s'>![]({{site.url}}/images/posts/2018/2018-07-17-christies-art-tech-summit-exploring-blockchain/daniel-doubrovkine-speaking.png)</a>
