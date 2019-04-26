@@ -9,7 +9,7 @@ agile:
   count: 19
 api:
   name: api
-  count: 5
+  count: 8
 appsecinc:
   name: appsecinc
   count: 8
@@ -21,7 +21,7 @@ art.sy:
   count: 48
 artsy:
   name: artsy
-  count: 8
+  count: 10
 asp.net:
   name: asp.net
   count: 6
@@ -39,7 +39,7 @@ conferences:
   count: 5
 cto:
   name: cto
-  count: 10
+  count: 12
 databases:
   name: databases
   count: 9
@@ -63,7 +63,7 @@ heroku:
   count: 13
 hiring:
   name: hiring
-  count: 12
+  count: 13
 ios:
   name: ios
   count: 10
@@ -81,13 +81,13 @@ jna:
   count: 25
 jobs:
   name: jobs
-  count: 18
+  count: 19
 learning:
   name: learning
   count: 9
 me me:
   name: me me
-  count: 7
+  count: 8
 mongodb:
   name: mongodb
   count: 41
@@ -105,10 +105,10 @@ open source:
   count: 53
 organizations:
   name: organizations
-  count: 21
+  count: 22
 people:
   name: people
-  count: 68
+  count: 69
 performance:
   name: performance
   count: 9
@@ -129,7 +129,7 @@ rspec:
   count: 10
 ruby:
   name: ruby
-  count: 107
+  count: 109
 s3:
   name: s3
   count: 9
@@ -138,16 +138,19 @@ security:
   count: 27
 slack:
   name: slack
-  count: 13
+  count: 14
 speaking:
   name: speaking
-  count: 27
+  count: 28
+strava:
+  name: strava
+  count: 5
 teaching:
   name: teaching
   count: 13
 teams:
   name: teams
-  count: 30
+  count: 31
 technology:
   name: technology
   count: 30
