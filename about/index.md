@@ -19,7 +19,7 @@ Hi! This is my tech blog.
 
 Here's an official bio.
 
-> Daniel Doubrovkine (aka dB.) is a seasoned entrepreneur, technologist, CTO at <a href='https://artsy.net' target='_blank'>Artsy.net</a> in New York, the largest online fine art marketplace and publication. Daniel graduated from University of Geneva in late 90s with a degree in Computer Science. Daniel is the creator and maintainer of many popular <a href='http://github.com/dblock'>open-source projects</a> and a <a href='http://art.dblock.org'>lifetime artist</a>.
+> Daniel Doubrovkine (aka dB.) is a seasoned entrepreneur, technologist, former CTO at <a href='https://artsy.net' target='_blank'>Artsy.net</a> in New York. Daniel graduated from University of Geneva in late 90s with a degree in Computer Science. Daniel is the creator and maintainer of many popular <a href='http://github.com/dblock'>open-source projects</a> and a <a href='http://art.dblock.org'>lifetime artist</a>.
 
 <a href="https://twitter.com/dblockdotorg" class="twitter-follow-button" data-show-count="false">Follow me @dblockdotorg</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
