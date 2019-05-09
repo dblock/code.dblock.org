@@ -89,7 +89,7 @@ Beyond technology, it was a privilege to see Artsy Editorial grow alongside the 
 
 ### Thank You
 
-I cannot thank each and every Artsy team member for giving me the life changing opportunity to be *their* CTO for over the last 8 years. I owe many thanks to Carter Cleveland (CEO), Sebastian Cwilich (COO), the Board, Artsy investors and the Leadership team for giving me the Artsy platform to work alongside with them in building an extraordinary company. Artsy has changed my life and the professional I am. I am forever grateful.
+I cannot thank each and every Artsy team member enough for giving me the life changing opportunity to be *their* CTO for over the last 8 years. I owe many thanks to Carter Cleveland (CEO), Sebastian Cwilich (COO), the Board, Artsy investors and the Leadership team for giving me the Artsy platform to work alongside with them in building an extraordinary company. Artsy has changed my life and the professional I am. I am forever grateful.
 
 ![]({{site.url}}/images/posts/2019/2019-05-01-reflecting-on-eight-years-building-artsy/2018-05-10-artsy-with-jerry-saltz.jpg)
 <br><small>Artsy leadership team at David Zwirner Gallery, May 2018, w/Jerry Saltz</small>
