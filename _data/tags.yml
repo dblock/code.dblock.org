@@ -165,7 +165,7 @@ ui:
   count: 6
 vestris:
   name: vestris
-  count: 8
+  count: 9
 vmware:
   name: vmware
   count: 18
