@@ -3,7 +3,7 @@ layout: post
 title: "Open-Source Is Simply Part of my Team’s Job Description"
 redirect_from: "/open-source-is-simply-part-of-my-teams-job-description/"
 date: 2011-07-15 07:26:58
-tags: [technology, art.sy, open source]
+tags: [technology, artsy, open source]
 comments: true
 dblog_post_id: 233
 ---

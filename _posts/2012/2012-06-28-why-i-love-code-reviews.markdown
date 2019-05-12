@@ -3,7 +3,7 @@ layout: post
 title: "Why I Love Code Reviews"
 redirect_from: "/why-i-love-code-reviews/"
 date: 2012-06-28 13:12:41
-tags: [teams, teaching, technology, art.sy, open source, people, agile]
+tags: [teams, teaching, technology, artsy, open source, people, agile]
 comments: true
 dblog_post_id: 340
 ---

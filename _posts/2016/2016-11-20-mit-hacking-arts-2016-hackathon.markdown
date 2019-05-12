@@ -2,7 +2,7 @@
 layout: post
 title: "MIT Hacking Arts 2016 Hackathon"
 date: 2016-11-20 11:59
-tags: [hackathons, mit, art.sy]
+tags: [hackathons, mit, artsy]
 comments: true
 ---
 This was an awesome hackathon with some strong projects. The judges deliberated for a while - we ended up having to do another blind round to pick our winner.

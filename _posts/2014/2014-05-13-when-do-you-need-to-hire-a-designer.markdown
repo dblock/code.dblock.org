@@ -3,7 +3,7 @@ layout: post
 title: "When do you need to hire a designer?"
 redirect_from: "/when-do-you-need-to-hire-a-designer/"
 date: 2014-05-13 15:32:16
-tags: [design, ux, teams, art.sy, ui, people]
+tags: [design, ux, teams, artsy, ui, people]
 comments: true
 dblog_post_id: 414
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Me @ Silicon Alley Talent Fair on NY1"
 redirect_from: "/me-silicon-alley-talent-fair-on-ny1/"
 date: 2011-11-14 19:42:27
-tags: [art.sy, people]
+tags: [artsy, people]
 comments: true
 dblog_post_id: 292
 ---

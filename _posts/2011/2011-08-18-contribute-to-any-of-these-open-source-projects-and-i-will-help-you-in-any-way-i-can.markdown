@@ -3,7 +3,7 @@ layout: post
 title: "Contribute to any of these open-source projects and I will help you in any way I can"
 redirect_from: "/contribute-to-any-of-these-open-source-projects-and-i-will-help-you-in-any-way-i-can/"
 date: 2011-08-18 13:42:16
-tags: [art.sy, open source]
+tags: [artsy, open source]
 comments: true
 dblog_post_id: 247
 ---
@@ -27,7 +27,7 @@ I run engineering in a small [NYC startup](https://artsy.net). I’ll try to hel
 
 - I’ll be happy to spend some technology-related face-to-face time.
 - I can introduce you to entrepreneurs, tech leads, hiring managers or, if everything else fails, a decent recruiter in the New York area.
-- I’ll invite you to visit [GeneralAssemb.ly](http://generalassemb.ly) for happy hour and maybe even try to hire you for [art.sy](https://artsy.net/).
+- I’ll invite you to visit [GeneralAssemb.ly](http://generalassemb.ly) for happy hour and maybe even try to hire you for [artsy](https://artsy.net/).
 - I can be your reference. This will make a huge difference if you don’t have any real job experience and are finishing college next year.
 
 #### So, you want free labor?

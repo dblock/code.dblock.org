@@ -3,7 +3,7 @@ layout: post
 title: "Octopress: Blogging Evolution"
 redirect_from: "/octopress-blogging-evolution/"
 date: 2012-01-17 14:47:36
-tags: [octopress, art.sy]
+tags: [octopress, artsy]
 comments: true
 dblog_post_id: 308
 ---

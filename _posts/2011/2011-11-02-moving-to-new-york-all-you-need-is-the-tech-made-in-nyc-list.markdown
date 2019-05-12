@@ -3,13 +3,13 @@ layout: post
 title: "Moving to New York? All You Need is the Tech Made in NYC List"
 redirect_from: "/moving-to-new-york-all-you-need-is-the-tech-made-in-nyc-list/"
 date: 2011-11-02 12:33:55
-tags: [technology, art.sy, jobs, people]
+tags: [technology, artsy, jobs, people]
 comments: true
 dblog_post_id: 283
 ---
 ![made_newyork_bk]({{ site.url }}/images/posts/2011/2011-11-02-moving-to-new-york-all-you-need-is-the-tech-made-in-nyc-list/made_newyork_bk_6.jpg)
 
-In the past few months I’ve talked to dozens of engineering candidates and hired a handful of people for [art.sy](https://artsy.net). I’d love to hire more, but being an early stage startup means making difficult choices. My guiding principle for getting an A-team is to get people smarter than me. But even with a bar rising with every hire, I had to say no to very strong developers. This is a luxury, since most companies struggle with attracting top talent. Given magical unlimited funding, I’d hire twice as many as I can afford right now – we have an incredible amount of work.
+In the past few months I’ve talked to dozens of engineering candidates and hired a handful of people for [artsy](https://artsy.net). I’d love to hire more, but being an early stage startup means making difficult choices. My guiding principle for getting an A-team is to get people smarter than me. But even with a bar rising with every hire, I had to say no to very strong developers. This is a luxury, since most companies struggle with attracting top talent. Given magical unlimited funding, I’d hire twice as many as I can afford right now – we have an incredible amount of work.
 
 For those that make the cut, but aren’t hired for headcount reasons, I will offer my help to find another startup in NYC. There’re hundreds! Here’s what I ask them to do.
 

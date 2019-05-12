@@ -3,7 +3,7 @@ layout: post
 title: "MongoNYC 2012: Using MongoDB to Build Art.sy - Video"
 redirect_from: "/mongonyc-2012-using-mongodb-to-build-artsy-video/"
 date: 2012-06-03 19:30:53
-tags: [speaking, art.sy, mongodb]
+tags: [speaking, artsy, mongodb]
 comments: true
 dblog_post_id: 338
 ---

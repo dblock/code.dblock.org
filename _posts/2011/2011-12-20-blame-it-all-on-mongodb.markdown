@@ -3,7 +3,7 @@ layout: post
 title: "Blame it all on MongoDB"
 redirect_from: "/blame-it-all-on-mongodb/"
 date: 2011-12-20 17:26:09
-tags: [art.sy, mongodb, ruby]
+tags: [artsy, mongodb, ruby]
 comments: true
 dblog_post_id: 304
 ---

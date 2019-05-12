@@ -3,7 +3,7 @@ layout: post
 title: "The Other Side of Your Interview"
 redirect_from: "/the-other-side-of-your-interview/"
 date: 2014-08-19 18:30:08
-tags: [interviewing, teaching, learning, speaking, art.sy]
+tags: [interviewing, teaching, learning, speaking, artsy]
 comments: true
 dblog_post_id: 420
 ---

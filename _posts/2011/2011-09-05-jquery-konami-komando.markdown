@@ -3,7 +3,7 @@ layout: post
 title: "JQuery Konami Komando"
 redirect_from: "/jquery-konami-komando/"
 date: 2011-09-05 11:24:59
-tags: [coffeescript, javascript, art.sy, open source]
+tags: [coffeescript, javascript, artsy, open source]
 comments: true
 dblog_post_id: 258
 ---

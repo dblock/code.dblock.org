@@ -3,7 +3,7 @@ layout: post
 title: "Eye&Mind Interview"
 redirect_from: "/eyemind-interview/"
 date: 2011-10-07 14:16:54
-tags: [speaking, art.sy]
+tags: [speaking, artsy]
 comments: true
 dblog_post_id: 276
 ---

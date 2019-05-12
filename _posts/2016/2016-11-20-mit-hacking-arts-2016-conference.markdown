@@ -2,7 +2,7 @@
 layout: post
 title: "MIT Hacking Arts 2016 Conference"
 date: 2016-11-19
-tags: [hackathons, mit, art.sy]
+tags: [hackathons, mit, artsy]
 comments: true
 ---
 I have the honor of serving as judge for another year at [MIT Hacking Arts 2016 Hackathon](http://hackingarts.com/#ha2016) that follows an incredibly inspiring conference filled with panels on the intersection of technology and art.

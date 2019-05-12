@@ -3,7 +3,7 @@ layout: post
 title: "RSpec: Fuubar + Breaking Tests into Suites"
 redirect_from: "/rspec-fuubar-breaking-tests-into-suites/"
 date: 2011-08-16 12:34:29
-tags: [rspec, art.sy, rake, rails, ruby, testing]
+tags: [rspec, artsy, rake, rails, ruby, testing]
 comments: true
 dblog_post_id: 244
 ---

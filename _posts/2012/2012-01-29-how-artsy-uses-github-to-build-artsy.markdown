@@ -3,7 +3,7 @@ layout: post
 title: "How Art.sy uses Github to Build Art.sy"
 redirect_from: "/how-artsy-uses-github-to-build-artsy/"
 date: 2012-01-29 20:29:08
-tags: [github, art.sy]
+tags: [github, artsy]
 comments: true
 dblog_post_id: 310
 ---

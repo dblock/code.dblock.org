@@ -2,7 +2,7 @@
 layout: post
 title: "Open-Sourcing the Artsy Engineering Compensation Framework"
 date: 2015-02-09
-tags: [teams, people, open source, money, art.sy]
+tags: [teams, people, open source, money, artsy]
 comments: true
 ---
 I recently worked on the [Artsy Engineering Compensation Framework](http://artsy.github.io/blog/2015/04/03/artsy-engineering-compensation-framework), and more specifically on the Engineering ladder, open-sourced today. I have done this before, but never with so much intensity, thought, feedback and so many iterations. This was a very educational exercise for me and I wanted to share the process surrounding the giving birth to something like this.

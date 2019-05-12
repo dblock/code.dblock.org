@@ -3,7 +3,7 @@ layout: post
 title: "Your Startup’s Technology: 0-60 @ Internet Week"
 redirect_from: "/your-startups-technology-0-60-internet-week/"
 date: 2011-05-24 22:27:42
-tags: [speaking, art.sy, agile]
+tags: [speaking, artsy, agile]
 comments: true
 dblog_post_id: 209
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Mapping and Tiling on iOS"
 redirect_from: "/mapping-and-tiling-on-ios/"
 date: 2014-03-19 14:44:16
-tags: [ios, art.sy, open source]
+tags: [ios, artsy, open source]
 comments: true
 dblog_post_id: 409
 ---

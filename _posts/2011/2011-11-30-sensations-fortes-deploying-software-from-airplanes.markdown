@@ -3,7 +3,7 @@ layout: post
 title: "Sensations Fortes: Deploying Software from Airplanes"
 redirect_from: "/sensations-fortes-deploying-software-from-airplanes/"
 date: 2011-11-30 23:44:30
-tags: [deployment, art.sy, heroku]
+tags: [deployment, artsy, heroku]
 comments: true
 dblog_post_id: 298
 ---

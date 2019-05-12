@@ -3,7 +3,7 @@ layout: post
 title: "How we Upgraded a Live Site in the Middle of Demo (and Didn’t Die of a Heart Attack)"
 redirect_from: "/how-we-upgraded-a-live-site-in-the-middle-of-demo-and-didnt-die-of-a-heart-attack/"
 date: 2011-06-21 14:24:53
-tags: [art.sy, testing, agile]
+tags: [artsy, testing, agile]
 comments: true
 dblog_post_id: 220
 ---

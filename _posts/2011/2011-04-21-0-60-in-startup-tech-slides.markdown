@@ -3,7 +3,7 @@ layout: post
 title: "0-60 In Startup Tech: Slides"
 redirect_from: "/0-60-in-startup-tech-slides/"
 date: 2011-04-21 03:58:21
-tags: [art.sy, organizations, people, agile]
+tags: [artsy, organizations, people, agile]
 comments: true
 dblog_post_id: 200
 ---

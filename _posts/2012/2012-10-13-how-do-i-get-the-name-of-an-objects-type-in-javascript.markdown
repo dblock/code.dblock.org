@@ -3,7 +3,7 @@ layout: post
 title: "How do I get the name of an object’s type in JavaScript?"
 redirect_from: "/how-do-i-get-the-name-of-an-objects-type-in-javascript/"
 date: 2012-10-13 21:19:02
-tags: [backbone.js, javascript, rspec, art.sy, testing]
+tags: [backbone.js, javascript, rspec, artsy, testing]
 comments: true
 dblog_post_id: 351
 ---

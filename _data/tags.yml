@@ -16,12 +16,9 @@ appsecinc:
 architecture:
   name: architecture
   count: 15
-art.sy:
-  name: art.sy
-  count: 48
 artsy:
   name: artsy
-  count: 10
+  count: 59
 asp.net:
   name: asp.net
   count: 6
@@ -102,7 +99,7 @@ msi:
   count: 19
 open source:
   name: open source
-  count: 53
+  count: 54
 organizations:
   name: organizations
   count: 22
@@ -141,7 +138,7 @@ slack:
   count: 14
 speaking:
   name: speaking
-  count: 28
+  count: 29
 strava:
   name: strava
   count: 5

@@ -3,7 +3,7 @@ layout: post
 title: "Continuous Deployment with Heroku-Bartender"
 redirect_from: "/continuous-deployment-with-heroku-bartender/"
 date: 2011-03-20 19:13:22
-tags: [art.sy, heroku, rails, ruby]
+tags: [artsy, heroku, rails, ruby]
 comments: true
 dblog_post_id: 186
 ---
