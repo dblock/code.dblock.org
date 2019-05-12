@@ -29,12 +29,11 @@ I speak frequently on topics ranging from the intersection of technology and art
 <a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>![]({{ site.url }}/images/posts/2017/2017-11-07-sothebys-institute-mass-appeal-tech-new-role-in-art-collecting-and-fundraising/screenshot.png)</a><br>
 <a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>Mass Appeal: Tech’s New Role in Art Collecting + Fundraising - a conversation with Kickstarter Soraya Haas and Sotheby's Noah Wunsch, moderated by Christine Kuan at Sotheby's Institute.</a>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lS9KehRHrho" frameborder="0" allowfullscreen></iframe><br>
-<a href="https://www.youtube.com/watch?feature=youtu.be&v=lS9KehRHrho">Artist Marc Gumpinger and Artsy CTO Daniel Doubrovkine, moderated by HG Contemporary gallerist Philippe Hoerle-Guggenheim, discuss the past, present, and future of art and technology during the "Contemporary Art in a Technology Driven World" panel, New York, October 28, 2017</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lS9KehRHrho" frameborder="0" allowfullscreen></iframe><a href="https://www.youtube.com/watch?feature=youtu.be&v=lS9KehRHrho">Artist Marc Gumpinger and Artsy CTO Daniel Doubrovkine, moderated by HG Contemporary gallerist Philippe Hoerle-Guggenheim, discuss the past, present, and future of art and technology during the "Contemporary Art in a Technology Driven World" panel, New York, October 28, 2017</a>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/leiKlKXRvuk" frameborder="0" allowfullscreen></iframe><br><a href="https://www.youtube.com/watch?v=leiKlKXRvuk">Artsy Overiew for Coalition for Queens and Q&A</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/leiKlKXRvuk" frameborder="0" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=leiKlKXRvuk">Artsy Overiew for Coalition for Queens and Q&A</a>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CEkJLhA1R0w?ecver=1" frameborder="0" allowfullscreen></iframe><br><a href="https://www.youtube.com/watch?v=CEkJLhA1R0w&feature=youtu.be">Worlds Fair Nano, San Francisco, January 28th, 2017</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CEkJLhA1R0w?ecver=1" frameborder="0" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=CEkJLhA1R0w&feature=youtu.be">Worlds Fair Nano, San Francisco, January 28th, 2017</a>
 
 <div markdown="0">
 <div id="fb-root"></div>
@@ -51,6 +50,7 @@ fjs.parentNode.insertBefore(js, fjs);
 <p>#CTOSummit LIVE: Daniel Doubrovkine, CTO Artsy</p>Posted by <a href="https://www.facebook.com/NASDAQ/">Nasdaq</a> on Tuesday, November 1, 2016
 </blockquote>
 </div></div>
+[CTO Summit @ Nasdaq, Live Interview](https://www.facebook.com/NASDAQ/videos/10154582987442429/), 2016
 
 <a href="https://pbell.wistia.com/medias/xo6uw6v4fm"><img alt="CTO Summit at NASDAQ" src="/images/about/cto-summit-nasdaq.png"></a><br>
 [CTO Summit @ Nasdaq - Inspiring Team Leads to Give Away Their Legos](https://pbell.wistia.com/medias/xo6uw6v4fm), 2016
