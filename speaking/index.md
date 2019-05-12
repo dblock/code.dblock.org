@@ -7,9 +7,34 @@ redirect_from: '/@speaking/'
 permalink: '/speaking/'
 ---
 
-I speak frequently on topics ranging from the intersection of technology and art to people and teams. Feel free to [e-mail me](mailto:dblock@dblock.org) with speaking opportunities, including when you just want an intro to [Artsy](https://www.artsy.net) to any broad audience.
+I speak frequently on topics ranging from the intersection of technology and art to people and teams. Feel free to [e-mail me](mailto:dblock@dblock.org) with speaking opportunities.
 
-## NASDAQ CTO Summit
+## Recorded Talks
+
+<a target="_blank" href="https://pbell.wistia.com/medias/3gtygjn4gv">![]({{site.url}}/images/posts/2019/2019-05-12-building-an-open-source-engineering-brand/cto-summit.png)</a><br>
+[Building an Open-Source Engineering Brand](https://pbell.wistia.com/medias/3gtygjn4gv), Austin CTO Summit '19
+
+<a href='https://www.youtube.com/watch?v=LxWfMp0gzSU&t=31m'>![]({{site.url}}/images/posts/2019/2019-03-07-art-market-one-point-o/daniel-doubrovkine-speaking-uzh.png)</a><br>
+[Art Market 1.0](https://www.youtube.com/watch?v=LxWfMp0gzSU&t=31m), University of Zurich
+
+<a href='https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s'>![]({{site.url}}/images/posts/2018/2018-07-17-christies-art-tech-summit-exploring-blockchain/daniel-doubrovkine-speaking.png)</a><br>
+[The Future is Art, Christie's Art & Tech Summit: Exploring Blockchain](https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s), London
+
+<a href='https://art19.com/shows/state-of-the-art/episodes/92a50b6a-c227-48a7-863a-56f754078146'>![]({{ site.url }}/images/posts/2018/2018-01-18-state-of-the-art-podcast/cover.jpg)</a><br>
+[How Art Will Make Us Human](https://art19.com/shows/state-of-the-art/episodes/92a50b6a-c227-48a7-863a-56f754078146), State of the Art Podcast
+
+<a href='https://www.facebook.com/brunchwork/videos/152715542060400/'>![]({{ site.url }}/images/posts/2018/2018-03-08-andrew-russeth-brunchwork/brunchwork.jpg)</a><br>
+<a href='https://www.facebook.com/brunchwork/videos/152715542060400/'>Technology, AR and Artsy, in Conversation with Andrew Russeth, ArtNews Magazine Editor, for Brunchwork</a>
+
+<a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>![]({{ site.url }}/images/posts/2017/2017-11-07-sothebys-institute-mass-appeal-tech-new-role-in-art-collecting-and-fundraising/screenshot.png)</a><br>
+<a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>Mass Appeal: Tech’s New Role in Art Collecting + Fundraising - a conversation with Kickstarter Soraya Haas and Sotheby's Noah Wunsch, moderated by Christine Kuan at Sotheby's Institute.</a>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lS9KehRHrho" frameborder="0" allowfullscreen></iframe><br>
+<a href="https://www.youtube.com/watch?feature=youtu.be&v=lS9KehRHrho">Artist Marc Gumpinger and Artsy CTO Daniel Doubrovkine, moderated by HG Contemporary gallerist Philippe Hoerle-Guggenheim, discuss the past, present, and future of art and technology during the "Contemporary Art in a Technology Driven World" panel, New York, October 28, 2017</a>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/leiKlKXRvuk" frameborder="0" allowfullscreen></iframe><br><a href="https://www.youtube.com/watch?v=leiKlKXRvuk">Artsy Overiew for Coalition for Queens and Q&A</a>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CEkJLhA1R0w?ecver=1" frameborder="0" allowfullscreen></iframe><br><a href="https://www.youtube.com/watch?v=CEkJLhA1R0w&feature=youtu.be">Worlds Fair Nano, San Francisco, January 28th, 2017</a>
 
 <div markdown="0">
 <div id="fb-root"></div>
@@ -26,35 +51,6 @@ fjs.parentNode.insertBefore(js, fjs);
 <p>#CTOSummit LIVE: Daniel Doubrovkine, CTO Artsy</p>Posted by <a href="https://www.facebook.com/NASDAQ/">Nasdaq</a> on Tuesday, November 1, 2016
 </blockquote>
 </div></div>
-
-## Recorded Talks
-
-[Art Market 1.0](https://www.youtube.com/watch?v=LxWfMp0gzSU&t=31m), University of Zurich
-
-<a href='https://www.youtube.com/watch?v=LxWfMp0gzSU&t=31m'>![]({{site.url}}/images/posts/2019/2019-03-07-art-market-one-point-o/daniel-doubrovkine-speaking-uzh.png)</a>
-
-[The Future is Art, Christie's Art & Tech Summit: Exploring Blockchain](https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s), London
-
-<a href='https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s'>![]({{site.url}}/images/posts/2018/2018-07-17-christies-art-tech-summit-exploring-blockchain/daniel-doubrovkine-speaking.png)</a>
-
-[How Art Will Make Us Human: Daniel Doubrovkine CTO at Artsy, State of the Art Podcast](https://art19.com/shows/state-of-the-art/episodes/92a50b6a-c227-48a7-863a-56f754078146)
-
-<a href='https://art19.com/shows/state-of-the-art/episodes/92a50b6a-c227-48a7-863a-56f754078146'>![]({{ site.url }}/images/posts/2018/2018-01-18-state-of-the-art-podcast/cover.jpg)</a>
-
-<a href='https://www.facebook.com/brunchwork/videos/152715542060400/'>Technology, AR and Artsy, in Conversation with Andrew Russeth, ArtNews Magazine Editor, for Brunchwork</a>
-<a href='https://www.facebook.com/brunchwork/videos/152715542060400/'>![]({{ site.url }}/images/posts/2018/2018-03-08-andrew-russeth-brunchwork/brunchwork.jpg)</a>
-
-<a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>Mass Appeal: Tech’s New Role in Art Collecting + Fundraising - a conversation with Kickstarter Soraya Haas and Sotheby's Noah Wunsch, moderated by Christine Kuan at Sotheby's Institute.</a>
-<a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>![]({{ site.url }}/images/posts/2017/2017-11-07-sothebys-institute-mass-appeal-tech-new-role-in-art-collecting-and-fundraising/screenshot.png)</a>
-
-<a href="https://www.youtube.com/watch?feature=youtu.be&v=lS9KehRHrho">Artist Marc Gumpinger and Artsy CTO Daniel Doubrovkine, moderated by HG Contemporary gallerist Philippe Hoerle-Guggenheim, discuss the past, present, and future of art and technology during the "Contemporary Art in a Technology Driven World" panel, New York, October 28, 2017</a>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lS9KehRHrho" frameborder="0" allowfullscreen></iframe><br>
-
-<a href="https://www.youtube.com/watch?v=leiKlKXRvuk">Artsy Overiew for Coalition for Queens and Q&A</a>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/leiKlKXRvuk" frameborder="0" allowfullscreen></iframe><br>
-
-<a href="https://www.youtube.com/watch?v=CEkJLhA1R0w&feature=youtu.be">Worlds Fair Nano, San Francisco, January 28th, 2017</a>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CEkJLhA1R0w?ecver=1" frameborder="0" allowfullscreen></iframe><br>
 
 <a href="https://pbell.wistia.com/medias/xo6uw6v4fm"><img alt="CTO Summit at NASDAQ" src="/images/about/cto-summit-nasdaq.png"></a><br>
 [CTO Summit @ Nasdaq - Inspiring Team Leads to Give Away Their Legos](https://pbell.wistia.com/medias/xo6uw6v4fm), 2016
