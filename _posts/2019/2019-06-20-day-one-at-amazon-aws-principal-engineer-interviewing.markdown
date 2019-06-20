@@ -33,6 +33,6 @@ You will code regardless of how much open-source work you have out there, how ma
 
 Finally, you will meet some of the smartest Engineers at AWS that have worked on some impressive services used my millions of customers. The bar is high, but they are also very nice humans. Have fun!
 
-### Want to Work at AWS?
+### Want to work at AWS?
 
 Check out the [Amazon PE Hiring Page](https://www.amazon.jobs/en/landing_pages/principal-engineer-hiring) and please feel free to [reach out](/about/) if you'd like to sit down for coffee and chat about working at AWS.
