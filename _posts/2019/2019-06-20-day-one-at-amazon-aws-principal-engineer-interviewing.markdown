@@ -35,4 +35,4 @@ Finally, you will meet some of the smartest Engineers at AWS that have worked on
 
 ### Want to Work at AWS?
 
-Check out the [Amazon PE Hiring Page](https://www.amazon.jobs/en/landing_pages/principal-engineer-hiring) and please feel free to [reach out](/about/) if I can be of any help.
+Check out the [Amazon PE Hiring Page](https://www.amazon.jobs/en/landing_pages/principal-engineer-hiring) and please feel free to [reach out](/about/) if you'd like to sit down for coffee and chat about working at AWS.
