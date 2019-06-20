@@ -7,7 +7,7 @@ comments: true
 ---
 <a href="https://aws.amazon.com/" target="_blank"><img src="{{site.url}}/images/posts/2019/2019-06-20-day-one-at-amazon-aws-principal-engineer-interviewing/aws.png" width="100px"></a>
 
-June 3rd was my Day 1 at [AWS Marketplace](https://aws.amazon.com/marketplace) in New York. After [8 years of people management and startup building](/2019/05/01/reflecting-on-eight-years-building-artsy.html) I decided to join Amazon's fastest growing and most technically challenging business in an individual contributor role, a _Principal Engineer_. In this post I will answer the obvious question - _Why did I choose AWS?_ - and give some personal interviewing tips.
+June 3rd was my Day 1 at [AWS Marketplace](https://aws.amazon.com/marketplace) in New York. After [8 years of people management and startup building](/2019/05/01/reflecting-on-eight-years-building-artsy.html) I decided to join Amazon's fastest growing and most technically challenging business in an individual contributor, [Principal Engineer](https://www.amazon.jobs/en/landing_pages/principal-engineer-hiring) role. In this post I will answer the obvious question - _Why did I choose AWS?_ - and give some personal interviewing tips.
 
 ### Why did I choose AWS?
 
@@ -35,4 +35,4 @@ Finally, you will meet some of the smartest Engineers at AWS that have worked on
 
 ### Want to Work at AWS?
 
-Please feel free to [reach out](/about/).
+Check out the [Amazon PE Hiring Page](https://www.amazon.jobs/en/landing_pages/principal-engineer-hiring) and please feel free to [reach out](/about/) if I can be of any help.
