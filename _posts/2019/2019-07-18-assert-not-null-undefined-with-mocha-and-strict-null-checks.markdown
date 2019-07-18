@@ -118,6 +118,22 @@ The result is better.
     at Context.it (test/spline.spec.ts:37:33)
 {% endhighlight %}
 
+### Casting a Type
+
+We can cast the result of `reticulate()` and TypeScript will happily let us by.
+
+{% highlight typescript %}
+describe("using a cast", () => {
+  it("can be reticulated", () => {
+    const reticulatedSpline = spline.reticulate() as Spline;
+    expect(reticulatedSpline).to.exist;
+    expect(reticulatedSpline.reticulatedCount).to.eq(1);
+  });
+});
+{% endhighlight %}
+
+This is problematic. If the signature of `reticulate()` were to change, we would just be forcing the response to pretend to be a `Spline`, getting no new compile-time errors and leaving nonsensical tests.
+
 ### Allowing Null
 
 Finally, we can use TypeScript `!` and explicitly check `.to.exist`.
