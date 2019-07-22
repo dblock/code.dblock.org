@@ -82,11 +82,13 @@ We naturally reached the obvious conclusion that there was no bug and that the p
 
 [@RodneyU215](https://github.com/RodneyU215) from Slack stepped in and added ping monitoring in [slack-ruby-client#226](https://github.com/slack-ruby/slack-ruby-client/pull/226) following [Slack's RTM guidelines](https://api.slack.com/rtm) (see Ping and Pong). The entire discussion and the evolution of that code is worth a read. I notably learned that Ruby `Time.now` was [not monotonic](https://blog.dnsimple.com/2018/03/elapsed-time-with-ruby-the-right-way/).
 
-I found the final code in [slack-ruby-client#226](https://github.com/slack-ruby/slack-ruby-client/pull/226) to be a rather elegant and straightforward example of a complex asynchronous process.
+I found the final code in [slack-ruby-client#226](https://github.com/slack-ruby/slack-ruby-client/pull/226) to be a rather elegant and straightforward example of a complex asynchronous process: a worker sends `ping` messages to Slack, which responds with a `pong` captured by the listening process. We periodically check whether a ping has been received within a reasonable timeframe and forcibly abort the connection, causing a reconnect, if it wasn't.
+
+We further refactored the implementation in [slack-ruby-client#262](https://github.com/slack-ruby/slack-ruby-client/pull/262), extracting and improving the keep-alive logic. Finally, [slack-ruby-client#279](https://github.com/slack-ruby/slack-ruby-client/pull/279) addressed handling of errors in the ping worker itself preventing it from dying.
 
 ### Released Libraries
 
-The active ping monitoring was released in slack-ruby-client 0.14.1, slack-ruby-bot 0.12.0 and slack-ruby-bot-server 0.9.0 and seemed to have worked well, short of [slack-ruby-client#257](https://github.com/slack-ruby/slack-ruby-client/issues/257) being watched.
+The active ping monitoring was released in slack-ruby-client 0.14.1, slack-ruby-bot 0.12.0 and slack-ruby-bot-server 0.9.0. Subsequent releases all the way up to 0.14.3 continue addressing various newly identified issues.
 
 ### Thanks
 
@@ -102,3 +104,4 @@ Again, much thanks to Slack's team for debugging, support and code, including [R
 * [slack-ruby-bot#203](https://github.com/slack-ruby/slack-ruby-bot/pull/203): Removed restart logic.
 * [slack-ruby-bot-server#93](https://github.com/slack-ruby/slack-ruby-bot-server/pull/93): Removed ping worker.
 * [slack-ruby-client#262](https://github.com/slack-ruby/slack-ruby-client/pull/262): Better disconnect handling, fixing occasional failures to reconnect.
+* [slack-ruby-client#279](https://github.com/slack-ruby/slack-ruby-client/pull/279): Handle unexpected errors in ping worker.
