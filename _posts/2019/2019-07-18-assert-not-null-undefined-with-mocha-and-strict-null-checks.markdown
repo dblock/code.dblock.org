@@ -37,6 +37,8 @@ it("can be reticulated", () => {
 
 This is because [the implementation in chai](https://github.com/chaijs/chai/blob/master/lib/chai/assertion.js#L133) creates an assertion object and evaluates it, then an error is thrown if the assertion fails. TypeScript can't infer that the `.to.exist` check will throw if the object is null. 
 
+This is not a new problem and a proposal for asserting control flow has been discussed in [TypeScript#8655](https://github.com/microsoft/TypeScript/issues/8655) and an implementation proposed in [TypeScript#32695](https://github.com/microsoft/TypeScript/pull/32695).
+
 ### Assert Not Null
 
 The first solution is a more elegant variation if the original `if` and `throw`.
@@ -164,3 +166,5 @@ The result, in my opinion, is the cleanest.
 
 * [stackoverflow#57066536](https://stackoverflow.com/questions/57066536/how-can-i-avoid-an-if-else-in-typescript-with-mocha-and-undefined-returns): How can I avoid an if/else in TypeScript with mocha and undefined returns?
 * [sample code from above](https://github.com/dblock/typescript-mocha-strict-null-checks)
+* [TypeScript#8655](https://github.com/microsoft/TypeScript/issues/8655): Control flow based type narrowing for assert(...) calls.
+* [TypeScript#32695](https://github.com/microsoft/TypeScript/pull/32695): A proposed `assert` implementation. 
