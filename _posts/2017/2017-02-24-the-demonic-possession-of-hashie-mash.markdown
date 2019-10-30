@@ -226,3 +226,5 @@ Again, [@michaelherold](https://github.com/michaelherold) fixes this in [#415](h
 I am sure this isn't over. I can't wait for 3.5.6!
 
 The good news is that we now have an [integration test suite](https://github.com/intridea/hashie/tree/master/spec/integration) for any bizarre regression. And a huge community of people to help. I also suggest you stop using `Hashie::Mash` and mix-in well-defined and clearly scoped extensions, one-by-one, such as `Hashie::Extensions::MethodAccess` or `Hashie::Extensions::MergeInitializer` on a need-by-need basis.
+
+**Update**: check out ["Let's Subclass Hash"](https://michaeljherold.com/2018/11/14/rubyconf-2018-lets-subclass-hash/) talk by @mherold at RubyConf 2018 for more examples.
