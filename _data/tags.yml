@@ -54,7 +54,7 @@ github:
   count: 12
 grape:
   name: grape
-  count: 25
+  count: 26
 heroku:
   name: heroku
   count: 13
@@ -69,7 +69,7 @@ java:
   count: 34
 javascript:
   name: javascript
-  count: 9
+  count: 11
 jenkins:
   name: jenkins
   count: 7
@@ -105,7 +105,7 @@ organizations:
   count: 22
 people:
   name: people
-  count: 69
+  count: 70
 performance:
   name: performance
   count: 9
@@ -126,7 +126,7 @@ rspec:
   count: 10
 ruby:
   name: ruby
-  count: 109
+  count: 110
 s3:
   name: s3
   count: 9
@@ -147,7 +147,7 @@ teaching:
   count: 13
 teams:
   name: teams
-  count: 31
+  count: 32
 technology:
   name: technology
   count: 30
