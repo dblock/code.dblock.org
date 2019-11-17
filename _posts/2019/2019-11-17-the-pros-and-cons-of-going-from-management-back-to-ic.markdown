@@ -29,7 +29,7 @@ At Principal level I definitely did not. Working autonomously is literally in my
 
 ### Levels of Stress
 
-Absolutely. I have different kinds of responsibilities and it's liberating.
+I feel a lot less stress, but not because of the volume of work. I have different kinds of responsibilities and it's liberating.
 
 I work normal hours and I have more time to focus on tasks that require flow, and make me less stressed and happier. I never stopped writing code, but I can actually write code now, if I want to, as a primary, deliberate activity. And coding is like running, or writing and, simply put, makes me feel better. Once I get into flow I eventually hit a natural high. Time flies. I can choose not to take a meeting, cater to an investor or deal with an unhappy customer. I am not on call for catastrophic failures. I don't have direct reports that routinely vent their personal life and frustrations with me. I deal with a lot less gossip and politics. I am nobody's psychiatrist, and I am no longer the face of the organization.
 
@@ -41,7 +41,7 @@ In my individual contributor role I can only influence, but I cannot decide anyt
 
 ### Money
 
-AWS pays extremely competitively. And I am convinced that it is the best place to take advantage of a bright economic future. The opportunity for cloud computing is tremendous, migration to the cloud is accelerating, and growth within the cloud infrastructure is very substantial. We're at the starting line.
+AWS pays very competitively. And I am convinced that it is the best place to take advantage of a bright economic future. The opportunity for cloud computing is tremendous, migration to the cloud is accelerating, and growth within the cloud infrastructure is very substantial. We're at the starting line.
 
 Comparing apples to apples versus my CTO job is difficult and depends on how you value startup stock options. My Artsy stock options were valued as dollars within the compensation framework, but are currently a six figure liability with a huge tax bill, and an expiration date. My AWS RSUs are liquid and are the same as cash.
 
