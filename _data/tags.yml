@@ -36,7 +36,7 @@ conferences:
   count: 5
 cto:
   name: cto
-  count: 12
+  count: 13
 databases:
   name: databases
   count: 9
@@ -55,6 +55,9 @@ github:
 grape:
   name: grape
   count: 26
+head of engineering:
+  name: head of engineering
+  count: 5
 heroku:
   name: heroku
   count: 13
@@ -166,6 +169,9 @@ vestris:
 vmware:
   name: vmware
   count: 18
+vp of engineering:
+  name: vp of engineering
+  count: 5
 waffle:
   name: waffle
   count: 26

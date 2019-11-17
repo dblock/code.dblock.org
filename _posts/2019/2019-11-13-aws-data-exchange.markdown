@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building AWS Data Exchange and the Value of Simple Ideas at Scale"
-tags: [aws]
+tags: [aws, aws data exchange]
 date: 2019-11-13
 comments: true
 ---
