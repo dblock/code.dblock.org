@@ -5,7 +5,11 @@ date: 2017-07-03
 tags: [cube]
 comments: true
 ---
-I've taught many people, including my 8yo and a whole bunch of [coworkers](https://www.artsy.net/life-at-artsy), how to solve a Rubik's Cube. I think it's easy to do with an instructor and very hard to do from Youtube videos. Below is a _curriculum_ for instructors that know how to solve the cube and want to teach a friend.
+I've taught many people, including my 8yo and a whole bunch of co-workers, how to solve a Rubik's Cube. Since then, he has claimed @rubikscubegod on [Instagram](https://www.instagram.com/rubikscubegod/) and [Youtube](https://www.youtube.com/channel/UCBVi4JjxGD3dbYlM168ew1g), and him and I recorded a tutorial video. In the video we use [this 1-pager]({{ site.url }}/images/posts/2017/2017-07-03-solving-a-3x3-rubiks-cube/cheat-sheet.pdf). Print yourself a copy.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/14YWxe5Tsr0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Teaching to Cube
 
 Most can figure out how to solve one side and even the first row by themselves. Then it gets harder.
 
@@ -19,9 +23,9 @@ I let my students practice on their own, until they can easily solve one side.
 
 ### Solve the First Row
 
-Teach how to complete columns above the centers, then how to complete the entire first row (aka the T's). 
+Teach how to complete columns above the centers, then how to complete the entire first row (aka the T's).
 
-I typically bring a piece down from the top row, rotate it towards its destination, overshoot by one, then bring the piece occupying the target position down and rotate everything backwards. 
+I typically bring a piece down from the top row, rotate it towards its destination, overshoot by one, then bring the piece occupying the target position down and rotate everything backwards.
 
 I let my students practice on their own, until they can have one full side and all the T's.
 
