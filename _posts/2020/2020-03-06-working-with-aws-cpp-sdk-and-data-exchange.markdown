@@ -143,7 +143,7 @@ int main(int argc, char** argv)
 
 The complete project can be found in [aws-samples/aws-sdk-cpp-list-s3-buckets](https://github.com/aws-samples/aws-sdk-cpp-list-s3-buckets).
 
-### AWS Data Exchange in C++
+### Listing Entitled Data Sets in AWS Data Exchange in C++
 
 Finally, I wrote a sample for [AWS Data Exchange](https://aws.amazon.com/data-exchange). In the following example we list all the data sets that our current account is entitled to.
 
