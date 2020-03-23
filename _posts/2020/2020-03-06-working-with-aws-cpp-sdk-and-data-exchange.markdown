@@ -104,9 +104,48 @@ I had started from an example in [this blog post](https://aws.amazon.com/blogs/d
 
 The minimal `CMakeLists.txt` example has been corrected in [aws-doc-sdk-examples#1022](https://github.com/awsdocs/aws-doc-sdk-examples/pull/1022), and the documentation in [aws-cpp-developer-guide#37](https://github.com/awsdocs/aws-cpp-developer-guide/pull/37).
 
+### Listing S3 Buckets in C++
+
+Now that I was able to build C++ code against the AWS SDK for C++, I wrote a demo that lists S3 buckets.
+
+{% highlight cpp %}
+#include <iostream>
+#include <aws/core/Aws.h>
+#include <aws/s3/S3Client.h>
+#include <aws/s3/model/Bucket.h>
+
+int main(int argc, char** argv)
+{
+    Aws::SDKOptions options;
+    Aws::InitAPI(options);
+    {
+        Aws::S3::S3Client s3_client;
+        auto outcome = s3_client.ListBuckets();
+
+        if (outcome.IsSuccess()) {
+            std::cout << "Your Amazon S3 buckets:" << std::endl;
+
+            Aws::Vector<Aws::S3::Model::Bucket> bucket_list =
+            outcome.GetResult().GetBuckets();
+
+            for (auto const &bucket: bucket_list) {
+                std::cout << "  * " << bucket.GetName() << std::endl;
+            }
+        } else {
+            std::cout << "ListBuckets error: "
+            << outcome.GetError().GetExceptionName() << " - "
+            << outcome.GetError().GetMessage() << std::endl;
+        }
+    }
+    Aws::ShutdownAPI(options);
+}
+{% endhighlight %}
+
+The complete project can be found in [aws-samples/aws-sdk-cpp-list-s3-buckets](https://github.com/aws-samples/aws-sdk-cpp-list-s3-buckets).
+
 ### AWS Data Exchange in C++
 
-Now that I was able to build C++ code against the AWS SDK for C++, I could write a sample for Data Exchange. In the following example we list all the data sets that our current account is entitled to.
+Finally, I wrote a sample for [AWS Data Exchange](https://aws.amazon.com/data-exchange). In the following example we list all the data sets that our current account is entitled to.
 
 {% highlight cpp %}
 Aws::DataExchange::DataExchangeClient client;
@@ -128,4 +167,4 @@ for (auto const &data_set: data_sets_list) {
 }
 {% endhighlight %}
 
-See [aws-dataexchange-api-samples#33](https://github.com/aws-samples/aws-dataexchange-api-samples/pull/33) for complete working code and a working `CMakeFile.txt`.
+See [aws-dataexchange-api-samples/subscribers/cpp/all-entitled-datasets](https://github.com/aws-samples/aws-dataexchange-api-samples/tree/master/subscribers/cpp/all-entitled-datasets), via [aws-dataexchange-api-samples#33](https://github.com/aws-samples/aws-dataexchange-api-samples/pull/33) for complete working code and a working `CMakeFile.txt`.
