@@ -7,7 +7,9 @@ comments: true
 ---
 [Strava Webhook Events API](https://developers.strava.com/docs/webhooks) seems to give developers trouble. Last year I wrote a [new Strava Ruby client](/2018/11/27/writing-a-new-strava-api-ruby-client.html) that made things significantly easier and came with some handy tools.
 
-Here is how to run a full loop locally using `strava-webhooks` from [strava-ruby-client](https://github.com/dblock/strava-ruby-client#webhooks).
+I've also used Strava Webhooks in [Slava](https://slava.playplay.io), my Strava bot for Slack. See [slack-strava#78](https://github.com/dblock/slack-strava/pull/78) for production code.
+
+Here is how to run a full loop locally using `strava-webhooks` from [strava-ruby-client](https://github.com/dblock/strava-ruby-client#webhooks). This is essential for local development and testing. I recommend doing this before writing any code for your own app.
 
 #### Install
 
