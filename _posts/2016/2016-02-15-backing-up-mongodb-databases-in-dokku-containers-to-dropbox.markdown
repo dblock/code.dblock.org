@@ -101,7 +101,7 @@ echo " today is $dt"
 BACKUP_PATH=~/Dropbox/mongo/backup/$(date +"%Y")/$(date +"%B")
 echo " creating $BACKUP_PATH .."
 
-dbs=$(dokku mongo:list | grep mongo | cut -f1 -d' ')
+dbs=$(dokku mongo:list | grep -v ===)
 
 for db in $dbs
 do
