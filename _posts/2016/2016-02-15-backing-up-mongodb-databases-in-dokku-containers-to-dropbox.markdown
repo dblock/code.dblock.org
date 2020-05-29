@@ -107,7 +107,7 @@ for db in $dbs
 do
   echo " backing up $db ..."
   mkdir -p $BACKUP_PATH/$db
-  f=$BACKUP_PATH/$db/$dt-$db.tar
+  f=$BACKUP_PATH/$db/$dt-$db
   rm -f $f
   dokku mongo:export $db > $f
   gzip -f $f
@@ -124,6 +124,10 @@ ln -s /root/Dropbox/bin/dokku-mongo-export.sh dokku-mongo-export
 {% endhighlight %}
 
 Note that only executables without an extension run from `/etc.cron.*/`, hence the name of the symbolic link is different from the script.
+
+#### Restoring Data
+
+The archive that [mongo:export produces](https://github.com/dokku/dokku-mongo/blob/master/functions#L115) is gzipped archive output of `mongodump`. To restore in Dokku, use `mongo:import`. To restore locally, run `mongorestore --gzip --archive=filename`.
 
 ### Neat
 
