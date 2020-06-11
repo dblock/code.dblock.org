@@ -87,7 +87,9 @@ If you need selective sync, check out [this blog post](http://buildcontext.com/b
 
 #### Create an Export Script
 
-Create `Dropbox/bin/dokku-mongo-export.sh`. It enumerates Dokku MongoDB databases and runs `mongo:export` on them. Notice I just put the script in my Dropbox ;)
+Create `Dropbox/bin/dokku-mongo-export.sh`. It enumerates Dokku MongoDB databases and runs `mongo:export` on them. The archive that [mongo:export produces](https://github.com/dokku/dokku-mongo/blob/master/functions#L115) is gzipped archive output of `mongodump`.
+
+Notice I just put the script in my Dropbox ;)
 
 {% highlight bash %}
 #!/bin/bash
@@ -107,10 +109,8 @@ for db in $dbs
 do
   echo " backing up $db ..."
   mkdir -p $BACKUP_PATH/$db
-  f=$BACKUP_PATH/$db/$dt-$db
-  rm -f $f
+  f=$BACKUP_PATH/$db/$dt-$db.dump.gz
   dokku mongo:export $db > $f
-  gzip -f $f
 done
 {% endhighlight %}
 
