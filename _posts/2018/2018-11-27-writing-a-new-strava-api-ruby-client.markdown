@@ -98,6 +98,8 @@ end
 Api::Config.reset
 {% endhighlight %}
 
+Note that this pattern can be extended deeper, and the configuration can be further nested, as in [iex-ruby-client#88](https://github.com/dblock/iex-ruby-client/pull/88).
+
 The client itself.
 
 {% highlight ruby %}
