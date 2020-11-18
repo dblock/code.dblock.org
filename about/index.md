@@ -26,7 +26,9 @@ Here's an official bio.
 <a href="https://twitter.com/dblockdotorg" class="twitter-follow-button" data-show-count="false">Follow me @dblockdotorg</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-Like what you read here? Have questions? <a href="https://github.com/dblock/code.dblock.org/issues/new">Suggest a Topic</a> for this blog. Feel free to <a href="mailto:dblock@dblock.org">e-mail me</a>, but please no recruiters.
+Like what you read here? Consider <a href="https://github.com/sponsors/dblock" target="_blank">sponsoring my open-source work</a>.
+
+Have questions? <a href="https://github.com/dblock/code.dblock.org/issues/new">Suggest a Topic</a> for this blog. Feel free to <a href="mailto:dblock@dblock.org">e-mail me</a>, but please no recruiters.
 
 I speak frequently at conferences and meetups. See [this page](/speaking) for details and feel free to [e-mail me](mailto:dblock@dblock.org) speaking opportunities.
 

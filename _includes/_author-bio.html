@@ -15,6 +15,7 @@
   </a>
 </h3>
 <p>{{ author.bio }}</p>
+{% include _sponsor.html %}
 {% if author.email %}<a href="mailto:{{ author.email }}" class="author-social" target="_blank"><i class="fas fa-fw fa-envelope-square"></i> Email</a>{% endif %}
 {% if author.twitter %}<a href="https://twitter.com/{{ author.twitter }}" class="author-social" target="_blank"><i class="fab fa-fw fa-twitter-square"></i> Twitter</a>{% endif %}
 {% if author.facebook %}<a href="https://facebook.com/{{ author.facebook }}" class="author-social" target="_blank"><i class="fab fa-fw fa-facebook-square"></i> Facebook</a>{% endif %}
