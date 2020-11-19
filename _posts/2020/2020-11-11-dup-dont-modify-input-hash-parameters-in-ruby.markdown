@@ -62,4 +62,6 @@ def historical_prices(symbol, options = {})
 end
 {% endhighlight %}
 
+Lastly, both `.dup` and `.clone` are both shallow, but that doesn't matter as long as you only use `.delete` and remove values. If you were to modify the `options` Hash in any other way, you may need to [deep_dup](https://apidock.com/rails/Hash/deep_dup) it instead.
+
 All that said, if you know the finite list of parameters to your functions, use [Ruby 2 Keyword Arguments](https://thoughtbot.com/blog/ruby-2-keyword-arguments) instead.
