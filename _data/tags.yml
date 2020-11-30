@@ -6,10 +6,10 @@ active directory:
   count: 16
 agile:
   name: agile
-  count: 19
+  count: 20
 api:
   name: api
-  count: 8
+  count: 9
 appsecinc:
   name: appsecinc
   count: 8
@@ -21,6 +21,9 @@ artsy:
   count: 59
 asp.net:
   name: asp.net
+  count: 6
+aws:
+  name: aws
   count: 6
 blog:
   name: blog
@@ -42,7 +45,7 @@ databases:
   count: 9
 dotnet:
   name: dotnet
-  count: 12
+  count: 13
 dotnetinstaller:
   name: dotnetinstaller
   count: 13
@@ -51,10 +54,13 @@ git:
   count: 9
 github:
   name: github
-  count: 12
+  count: 13
 grape:
   name: grape
   count: 26
+graphql:
+  name: graphql
+  count: 5
 head of engineering:
   name: head of engineering
   count: 5
@@ -72,7 +78,7 @@ java:
   count: 34
 javascript:
   name: javascript
-  count: 11
+  count: 12
 jenkins:
   name: jenkins
   count: 7
@@ -90,7 +96,7 @@ me me:
   count: 8
 mongodb:
   name: mongodb
-  count: 41
+  count: 42
 mongoid:
   name: mongoid
   count: 17
@@ -102,13 +108,13 @@ msi:
   count: 19
 open source:
   name: open source
-  count: 54
+  count: 55
 organizations:
   name: organizations
   count: 22
 people:
   name: people
-  count: 70
+  count: 71
 performance:
   name: performance
   count: 9
@@ -129,7 +135,7 @@ rspec:
   count: 10
 ruby:
   name: ruby
-  count: 110
+  count: 114
 s3:
   name: s3
   count: 9
@@ -138,7 +144,7 @@ security:
   count: 27
 slack:
   name: slack
-  count: 14
+  count: 15
 speaking:
   name: speaking
   count: 29
