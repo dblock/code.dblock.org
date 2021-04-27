@@ -99,3 +99,17 @@ And you can see a nice icon next to verified commits on GitHub!
 ![verified]({{ site.url }}/images/posts/2021/2021-04-16-adding-work-email-to-a-gpg-key-and-signing-git-commits/verified.gif)
 
 Now, how do I get verified [on Twitter](https://twitter.com/dblockdotorg)?!
+
+### Passphrase
+
+I find it annoying to have to re-enter the passphrase every few minutes. Put the following into `~/.gnupg/gpg-agent.conf` to set the timeout to a day's worth.
+
+{% highlight bash %}
+default-cache-ttl 86400
+{% endhighlight %}
+
+Restart `gpgagent` with `gpgconf --kill gpg-agent`.
+
+### Troubleshooting
+
+If you're having trouble with gog, try `echo "test" | gpg --clearsign` to get a better error. If it complains that `gpg-agent` is not started, run `gpgagent` and correct any errors.
