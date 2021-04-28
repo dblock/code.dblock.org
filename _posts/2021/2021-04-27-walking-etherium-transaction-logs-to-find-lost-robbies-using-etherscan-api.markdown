@@ -15,6 +15,8 @@ If you enjoyed the forensics in [Rare “Lost Robbie” AI Nude NFTs Worth Milli
 
 Please do note that I am no expert, and that I would greatly appreciate suggestions and fixes to my approach and [the code](https://github.com/dblock/lost-robbies).
 
+An freebie OBJKT NFT was also minted, inspired by this project. Available at [hicetnunc.xyz/objkt/53103](https://www.hicetnunc.xyz/objkt/53103).
+
 ### Getting Started
 
 First, get an `ETHERSCAN_API_KEY` from [Etherscan](https://etherscan.io/myapikey) and save it to a file called `.env`. We'll use [dotenv](https://www.npmjs.com/package/dotenv) to automatically load it, and initialize `EtherscanApi` with this key.
