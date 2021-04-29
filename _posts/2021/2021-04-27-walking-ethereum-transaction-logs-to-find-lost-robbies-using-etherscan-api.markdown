@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Walking Etherium Transaction Logs to Find Lost Robbies w/Etherscan API   
+title: Walking Ethereum Transaction Logs to Find Lost Robbies w/Etherscan API   
 date: 2021-04-27
-tags: [etherium, etherscan, crypto, robbies]
+tags: [ethereum, etherscan, crypto, robbies]
+redirect_from: "/2021/04/27/walking-etherium-transaction-logs-to-find-lost-robbies-using-etherscan-api.html"
 comments: true
 ---
 On July 17, 2018, I [spoke](https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s) at the Christies first ever annual Tech Summit entitled "Exploring Blockchain", in London. I even got a freebie NFT!
@@ -11,7 +12,7 @@ During the event [SuperRare](http://superrare.io/) partnered with [Jason Bailey]
 
 A small handful of these original NFTs are known to still exist. We'll call them "Robbies". On April 5th, 2021, [frame 269](https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-269-459) sold for 125ETH ($265K). 
 
-If you enjoyed the forensics in [Rare “Lost Robbie” AI Nude NFTs Worth Millions Surface](https://digitalartcollector.com/rare-lost-robbie-ai-nude-nfts-worth-millions-surface/), or if you just want to know how SuperRare or other marketplaces display token history, this post is for you. We'll walk the Etherium blockchain transaction logs to find all the Robbies using [etherscan-api](https://www.npmjs.com/package/etherscan-api) ([Etherscan API](https://etherscan.io/apis)). 
+If you enjoyed the forensics in [Rare “Lost Robbie” AI Nude NFTs Worth Millions Surface](https://digitalartcollector.com/rare-lost-robbie-ai-nude-nfts-worth-millions-surface/), or if you just want to know how SuperRare or other marketplaces display token history, this post is for you. We'll walk the Ethereum blockchain transaction logs to find all the Robbies using [etherscan-api](https://www.npmjs.com/package/etherscan-api) ([Etherscan API](https://etherscan.io/apis)). 
 
 Please do note that I am no expert, and that I would greatly appreciate suggestions and fixes to my approach and [the code](https://github.com/dblock/lost-robbies).
 
@@ -61,9 +62,9 @@ This says Robbie has earned 118.66 ETH (~$317K) from sales so far. Not bad.
 
 ### SuperRare Contract
 
-Etherium transactions execute methods that are written in a _contract_, which is basically a bunch of code that implements a set of known methods (an interface, e.g. [ERC721](https://github.com/ethereum/eips/issues/721)). As all code, method have inputs and outputs. The SuperRare contract is [0x41a322b28d0ff354040e2cbc676f0320d8c8850d](https://etherscan.io/address/0x41a322b28d0ff354040e2cbc676f0320d8c8850d), also found by examining a transaction linked from SuperRare.
+Ethereum transactions execute methods that are written in a _contract_, which is basically a bunch of code that implements a set of known methods (an interface, e.g. [ERC721](https://github.com/ethereum/eips/issues/721)). As all code, method have inputs and outputs. The SuperRare contract is [0x41a322b28d0ff354040e2cbc676f0320d8c8850d](https://etherscan.io/address/0x41a322b28d0ff354040e2cbc676f0320d8c8850d), also found by examining a transaction linked from SuperRare.
 
-Contracts are expressed in JSON, include method names, inputs, outputs, and other metadata. Contracts, along with all inputs and outputs on Etherium, are encoded in binary format, using an application binary interface (ABI). We can fetch the contract with `contract.getabi`.
+Contracts are expressed in JSON, include method names, inputs, outputs, and other metadata. Contracts, along with all inputs and outputs on Ethereum, are encoded in binary format, using an application binary interface (ABI). We can fetch the contract with `contract.getabi`.
 
 {% highlight typescript %}
 var abi = await api.contract.getabi('0x41a322b28d0ff354040e2cbc676f0320d8c8850d');
@@ -74,7 +75,7 @@ The ABI also gives you the ability to create an instance of a [ethereum-input-da
 
 ### Transactions and Logs
 
-Etherium transactions are a series of method calls. Each transaction has an address, input arguments and output results. Each method call inside a transaction receives input, or _topics_, that can be _indexed_. A successful method call creates a log entry. Etherscan lets you query logs that belong to a certain contract using indexed topics.
+Ethereum transactions are a series of method calls. Each transaction has an address, input arguments and output results. Each method call inside a transaction receives input, or _topics_, that can be _indexed_. A successful method call creates a log entry. Etherscan lets you query logs that belong to a certain contract using indexed topics.
 
 For example, you can query logs for all method calls for the SuperRare contract.
 
@@ -87,7 +88,7 @@ logs.result // first page of a lot of logs
 
 So, what's the address of my NFT? Well, there isn't one.
 
-The SuperRare contract _mints_ a new NFT as a side effect of a call to the `addNewToken` method. The `addNewToken` call increments `totalSupply()` of tokens to obtain a new token ID, and transfers the new token ID from address `0x00` to the caller using the `Transfer` method.
+The SuperRare contract _mints_ a new NFT as a side effect of a call to the `addNewToken` method. The `addNewToken` call increments `totalSupply()` of tokens to obtain a new token ID. By convention, this looks like a transfer from address `0x00` to the caller using the `Transfer` method.
 
 Take a look at [the first Nude Portrait #7 token creation transaction](https://etherscan.io/tx/0x397cf219aadb0e25afc7fcbb35f36ebccd8611375b5c7ad888e4cbacced2d7ea). The transaction address was `0x397cf219aadb0e25afc7fcbb35f36ebccd8611375b5c7ad888e4cbacced2d7ea`. It called the `addNewToken` method with an `_uri` of `https://ipfs.pixura.io/ipfs/QmWkvzP1FZBrwBXjj3vD258RQm9MtV25G69zcqzYmc1cGd`, which contains the JSON of frame #1.
 
