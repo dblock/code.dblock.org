@@ -40,3 +40,9 @@ Instead, the change would have looked as follows.
 
 So much easier to grok, isn't it?
 
+GitHub does a great job at the diff, compare:
+
+A quick brown fox jumps 
+over the lazy dog.
+
+A quick brown fox jumps over the lazy dog.
