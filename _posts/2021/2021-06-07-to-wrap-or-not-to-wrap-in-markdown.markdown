@@ -1,6 +1,6 @@
 ---
 layout: post
-title: To Wrap or not to Wrap in Markdown?   
+title: To Wrap or Not to Wrap in Markdown?   
 date: 2021-06-07
 tags: [markdown, oss]
 comments: true
@@ -15,34 +15,33 @@ Here's a logical argument for _not wrapping_ text in markdown.
 
 Markdown doesn't use line the breaks: whether you include a line break in your markdown or not the rendered result is the same, unless you use 2 line breaks.
 
-For example, the following old text
+For example, consider the following text wrapped at 23 characters for illustration purposes.
 
 ```
 A quick brown fox jumps 
 over the lazy dog.
 ```
 
-is replaced with the following new text
+We swap "a" and "the", producing the following new text.
 
 ```
 The quick brown fox 
 jumps over a lazy dog.
 ````
 
-This has somehow become a 2-line change. Pain and suffering.
+Because of a line wrap, this 2-word change is now a 2-line change. It hurts.
 
-Instead, the change would have looked as follows.
+Without the wrap the diff would have been super clean.
 
 ```
 >A quick brown fox jumps over the lazy dog.
 <The quick brown fox jumps over a lazy dog.
 ```
 
-So much easier to grok, isn't it?
+Furthermore, GitHub [does an even better job at the 1-line diff](https://github.com/dblock/code.dblock.org/commit/99a4948a737ef21bf4025f3faa5b6167410e3de8).
 
-GitHub does a great job at the diff, compare:
+![diff]({{ site.url }}/images/posts/2021/2021-06-07-to-wrap-or-not-to-wrap-in-markdown/diff.png)
 
-The quick brown fox 
-jumps over a lazy dog.
+Notice how the word "jumps" was highlighted, even though it wasn't actually changed.
 
-The quick brown fox jumps over a lazy dog.
+For an argument _for_ wrapping text, see [this comment](https://github.com/opensearch-project/OpenSearch/pull/712#issuecomment-855271225).
