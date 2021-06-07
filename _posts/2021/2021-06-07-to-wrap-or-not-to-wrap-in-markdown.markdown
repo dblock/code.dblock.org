@@ -42,7 +42,7 @@ So much easier to grok, isn't it?
 
 GitHub does a great job at the diff, compare:
 
-A quick brown fox jumps 
-over the lazy dog.
+The quick brown fox 
+jumps over a lazy dog.
 
-A quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over a lazy dog.
