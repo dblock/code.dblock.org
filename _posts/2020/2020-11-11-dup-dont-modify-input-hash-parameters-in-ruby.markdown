@@ -7,7 +7,7 @@ comments: true
 ---
 We often write Ruby functions that take an `options` Hash, remove some of its values, then pass the hash further down. Unfortunately we also often [introduce a very difficult to catch bug](https://github.com/dblock/iex-ruby-client/pull/94#discussion_r520637150). Here's why you always want to `dup` input options in Ruby that come in as a Hash.
 
-Consider the following example from [iex-ruby-client](https://github.com/dblock/iex-ruby-client). We pluck `symbol` out of `options` to use in an HTTP request path, then pass the rest of the options as query string parameters. We want to `.delete` the `symbol` key to avoid passing its value further down because the API does not expect it, and could have all kinds of unfortunate side-effects. We also don't know all the possible arguments to the API, especially not the future ones, as we want to be forward-compatible.
+Consider the following example from [iex-ruby-client](https://github.com/dblock/iex-ruby-client). We pluck `range` out of `options` to use in an HTTP request path, then pass the rest of the options as query string parameters. We want to `.delete` the `range` key to avoid passing its value further down because the API does not expect it, and could have all kinds of unfortunate side-effects. We also don't know all the possible arguments to the API, especially not the future ones, as we want to be forward-compatible.
 
 {% highlight ruby %}
 def historical_prices(symbol, options = {})
