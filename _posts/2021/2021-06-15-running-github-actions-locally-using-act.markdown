@@ -36,7 +36,7 @@ run: |
 
 ### Environment
 
-The current workflow implementation checks out OpenSearch and builds it, thus needing a token to `git clone` from GitHub. Create a `.env` file with a read-only GitHub token.
+The current workflow implementation checks out OpenSearch and builds it, thus needing a token to `git clone` from GitHub. Create a `.secrets` file with a read-only GitHub token. This gets automatically picked up by act.
 
 ```
 GITHUB_TOKEN=valid-token
@@ -45,7 +45,7 @@ GITHUB_TOKEN=valid-token
 ### Invoke Act
 
 ```
-act -r --secret-file .env pull_request -P ubuntu-latest=catthehacker/ubuntu:runner-latest 
+act -r pull_request -P ubuntu-latest=catthehacker/ubuntu:runner-latest 
 ```
 
 Act uses an open-source Docker container to run the job. Enjoy a `BUILD SUCCESSFUL` result!
