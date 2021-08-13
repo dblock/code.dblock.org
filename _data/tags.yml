@@ -16,6 +16,9 @@ appsecinc:
 architecture:
   name: architecture
   count: 15
+art:
+  name: art
+  count: 5
 artsy:
   name: artsy
   count: 59
@@ -51,10 +54,10 @@ dotnetinstaller:
   count: 13
 git:
   name: git
-  count: 9
+  count: 10
 github:
   name: github
-  count: 13
+  count: 15
 grape:
   name: grape
   count: 26
@@ -141,13 +144,13 @@ s3:
   count: 9
 security:
   name: security
-  count: 27
+  count: 28
 slack:
   name: slack
   count: 15
 speaking:
   name: speaking
-  count: 29
+  count: 30
 strava:
   name: strava
   count: 5
