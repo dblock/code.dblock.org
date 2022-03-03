@@ -59,7 +59,7 @@ Can I be a people manager again? The consensus is yes, too. In fact, it seems ea
 
 ### Conclusion
 
-Did I make the right decision? Six months in, yes. And I am a big fan of Marie Condo. After weighing all the pros and the cons, going from manager to IC brought me a lot of joy. Maybe it will bring you joy, too?
+Did I make the right decision? Six months in, yes. And I am a big fan of Marie Kondo. After weighing all the pros and the cons, going from manager to IC brought me a lot of joy. Maybe it will bring you joy, too?
 
 
 
