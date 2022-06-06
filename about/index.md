@@ -17,7 +17,7 @@ Hi! This is my tech blog.
 
 <small>(click images for hi-res headshots)</small>
 
-I serve customers as a Principal Engineer across <a href="https://aws.amazon.com/data-exchange" target="_blank">AWS Data Exchange</a> and <a href="https://aws.amazon.com/marketplace" target="_blank">AWS Marketplace</a> in NYC. Opinions on this blog are my own.
+I am currently working on [OpenSearch](https://opensearch.org/) at AWS in NYC. Opinions on this blog are my own.
 
 Here's an official bio.
 
