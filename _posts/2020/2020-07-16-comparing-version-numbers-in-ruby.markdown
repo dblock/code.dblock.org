@@ -18,6 +18,17 @@ Time and [again](https://github.com/ruby-grape/grape/pull/2091#discussion_r45576
  => true # ouch
 {% endhighlight %}
 
+Using `to_f` is another common mistake.
+
+{% highlight ruby %}
+> RUBY_VERSION
+ => "2.10.0"
+> RUBY_VERSION.to_f < 2.7
+ => false # ouch
+> RUBY_VERSION.to_f
+ => 2.1
+{% endhighlight %}
+
 There's a [great post](https://metaredux.com/posts/2018/10/28/a-better-way-to-compare-versions-in-ruby.html) that comes up on top of Google that recommends using `Gem::Version`.
 
 {% highlight ruby %}
