@@ -5,7 +5,7 @@ date: 2020-07-16
 tags: [ruby]
 comments: true
 ---
-Time and [again](https://github.com/ruby-grape/grape/pull/2091#discussion_r455763685), developers fail to compare gem or ruby version numbers correctly. It's an easy mistake to make.
+Time and [again](https://github.com/ruby-grape/grape/pull/2091#discussion_r455763685), and [again](https://github.com/opensearch-project/opensearch-ruby/pull/76#discussion_r910422525), developers fail to compare gem or ruby version numbers correctly. It's an easy mistake to make.
 
 {% highlight ruby %}
 > RUBY_VERSION
