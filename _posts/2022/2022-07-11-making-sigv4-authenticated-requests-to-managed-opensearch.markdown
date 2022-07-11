@@ -61,7 +61,7 @@ public static void main(String[] args) throws
     ClientProtocolException, IOException {
     
     HttpRequestInterceptor interceptor = new AwsRequestSigningApacheInterceptor(
-        "service",
+        "es",
         Aws4Signer.create(), 
         DefaultCredentialsProvider.create(), 
         Region.US_WEST_2
