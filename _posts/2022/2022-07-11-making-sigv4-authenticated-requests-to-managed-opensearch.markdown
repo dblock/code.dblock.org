@@ -35,6 +35,14 @@ awscurl \
   --service es
 {% endhighlight %}
 
+### [aws-es-curl](https://github.com/joona/aws-es-curl)
+
+{% highlight bash %}
+aws-es-curl \
+  "https://search...us-west-2.es.amazonaws.com" \
+  --region us-west-2
+{% endhighlight %}
+
 ### Java
 
 #### [aws-request-signing-apache-interceptor](https://github.com/acm19/aws-request-signing-apache-interceptor)
