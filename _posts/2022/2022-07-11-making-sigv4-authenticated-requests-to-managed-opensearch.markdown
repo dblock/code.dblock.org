@@ -45,9 +45,48 @@ aws-es-curl \
 
 ### Java
 
+#### [opensearch-java](https://github.com/opensearch-project/opensearch-java)
+
+Use `AwsSdk2Transport` introduced in opensearch-java 2.1.0 (see [opensearch-java#55](https://github.com/opensearch-project/opensearch-java/issues/55) and [opensearch-java#177](https://github.com/opensearch-project/opensearch-java/pull/177) for more information). This is the latest recommended approach.
+
+{% highlight java %}
+import java.io.IOException;
+
+import org.opensearch.client.opensearch.OpenSearchClient;
+import org.opensearch.client.opensearch.core.InfoResponse;
+import org.opensearch.client.transport.aws.AwsSdk2Transport;
+import org.opensearch.client.transport.aws.AwsSdk2TransportOptions;
+
+import software.amazon.awssdk.http.SdkHttpClient;
+import software.amazon.awssdk.http.apache.ApacheHttpClient;
+import software.amazon.awssdk.regions.Region;
+
+public static void main(final String[] args) throws IOException {
+    SdkHttpClient httpClient = ApacheHttpClient.builder().build();
+    try {
+
+        OpenSearchClient client = new OpenSearchClient(
+            new AwsSdk2Transport(
+                httpClient,
+                "search-...us-west-2.es.amazonaws.com",
+                Region.US_WEST_2,
+                AwsSdk2TransportOptions.builder().build()
+            )
+        );
+
+        InfoResponse info = client.info();
+        System.out.println(info.version().distribution() + ": " + info.version().number());
+    } finally {
+      httpClient.close();
+    }
+}
+{% endhighlight %}
+
+You can see a working demo in [opensearch-java-client-demo](https://github.com/dblock/opensearch-java-client-demo).
+
 #### [aws-request-signing-apache-interceptor](https://github.com/acm19/aws-request-signing-apache-interceptor)
 
-Use an interceptor and any Apache REST client.
+Use an interceptor and any Apache REST client, including `RestHighLevelClient`.
 
 {% highlight java %}
 import java.io.IOException;
@@ -86,20 +125,7 @@ public static void main(String[] args) throws
 }
 {% endhighlight %}
 
-You can see a demo by checking out the interceptor demo and running the following.
-
-{% highlight bash %}
-mvn \
-  test-compile \
-  exec:java \
-  -Dexec.classpathScope=test \
-  -Dexec.mainClass="io.github.acm19.aws.interceptor.test.AmazonOpenSearchServiceSample" \
-  -Dexec.args="--endpoint=https://search-...us-west-2.es.amazonaws.com --region=us-west-2"
-{% endhighlight %}
-
-#### [opensearch-java](https://github.com/opensearch-project/opensearch-java)
-
-See [opensearch-java#55](https://github.com/opensearch-project/opensearch-java/issues/55) and [opensearch-java#177](https://github.com/opensearch-project/opensearch-java/pull/177) for ongoing work to make SigV4 a first class citizen in opensearch-java.
+You can see a working demo in the [interceptor code](https://github.com/acm19/aws-request-signing-apache-interceptor). For an example that uses OpenSearch `RestHighLevelClient` see [1.x](https://github.com/dblock/opensearch-java-client-demo/tree/opensearch-1.x) or [2.x](https://github.com/dblock/opensearch-java-client-demo/tree/opensearch-2.x) depending on your version.
 
 ### Ruby
 
