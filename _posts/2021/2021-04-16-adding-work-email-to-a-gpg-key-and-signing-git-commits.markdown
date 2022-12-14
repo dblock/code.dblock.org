@@ -110,6 +110,19 @@ default-cache-ttl 86400
 
 Restart `gpgagent` with `gpgconf --kill gpg-agent`.
 
+### New Computer
+
+Import the key on a new computer.
+
+{% highlight bash %}
+gpg --import ~/Dropbox/Personal/7C94E183.gpg
+gpg --import-ownertrust < ~/Dropbox/Personal/7C94E183.trustlevel.txt
+git config --global user.signingkey 75BF031B7C94E183
+git config --global commit.gpgsign true
+{% endhighlight %}
+
+If you get an error `gpg: no valid OpenPGP data found.` and `gpg: Total number processed: 0`, this is a very obtuse way for GPG to tell you the that contents of the file you're trying to import is invalid. In my case `gpg --import ~/Dropbox/Personal/7C94E183.gpg` was failing because the file was not synced to my local drive from Dropbox.
+
 ### Troubleshooting
 
 If you're having trouble with gog, try `echo "test" | gpg --clearsign` to get a better error. If it complains that `gpg-agent` is not started, run `gpgagent` and correct any errors.
