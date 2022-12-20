@@ -129,7 +129,32 @@ You can see a working demo in the [interceptor code](https://github.com/acm19/aw
 
 ### Ruby
 
-See [opensearch-ruby#71](https://github.com/opensearch-project/opensearch-ruby/issues/71).
+#### [opensearch-ruby](https://github.com/opensearch-project/opensearch-ruby)
+
+Use [opensearch-aws-sigv4](https://rubygems.org/gems/opensearch-aws-sigv4) releaed as 1.0 via [opensearch-ruby#71](https://github.com/opensearch-project/opensearch-ruby/issues/71).
+
+{% highlight ruby %}
+require 'opensearch-aws-sigv4'
+require 'aws-sigv4'
+
+signer = Aws::Sigv4::Signer.new(
+  service: 'es',
+  region: ENV['OPENSEARCH_REGION'] || 'us-east-1',
+  access_key_id: ENV['AWS_ACCESS_KEY_ID'] || raise('Missing AWS_ACCESS_KEY_ID.'),
+  secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'] || raise('Missing AWS_SECRET_ACCESS_KEY.'),
+  session_token: ENV['AWS_SESSION_TOKEN']
+)
+
+client = OpenSearch::Aws::Sigv4Client.new({
+  host: ENV['OPENSEARCH_ENDPOINT'] || raise('Missing OPENSEARCH_ENDPOINT.')
+  # log: true
+}, signer)
+
+info = client.info
+puts info['version']['distribution'] + ': ' + info['version']['number']
+{% endhighlight %}
+
+You can see a working demo in [opensearch-ruby-client-demo](https://github.com/dblock/opensearch-ruby-client-demo).
 
 ### PHP
 
