@@ -139,15 +139,14 @@ require 'aws-sigv4'
 
 signer = Aws::Sigv4::Signer.new(
   service: 'es',
-  region: ENV['OPENSEARCH_REGION'] || 'us-east-1',
-  access_key_id: ENV['AWS_ACCESS_KEY_ID'] || raise('Missing AWS_ACCESS_KEY_ID.'),
-  secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'] || raise('Missing AWS_SECRET_ACCESS_KEY.'),
+  region: 'us-west-2',
+  access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+  secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
   session_token: ENV['AWS_SESSION_TOKEN']
 )
 
 client = OpenSearch::Aws::Sigv4Client.new({
-  host: ENV['OPENSEARCH_ENDPOINT'] || raise('Missing OPENSEARCH_ENDPOINT.')
-  # log: true
+  host: 'https://...'
 }, signer)
 
 info = client.info
