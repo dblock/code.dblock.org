@@ -165,7 +165,41 @@ See [opensearch-js#252](https://github.com/opensearch-project/opensearch-js/issu
 
 ### Python
 
-See [opensearch-py#85](https://github.com/opensearch-project/opensearch-py/issues/85).
+#### [opensearch-py](https://github.com/opensearch-project/opensearch-py)
+
+Use [opensearch-py](https://pypi.org/project/opensearch-py/).
+
+{% highlight python %}
+from os import environ
+from time import sleep
+from urllib.parse import urlparse
+
+from boto3 import Session
+from opensearchpy import AWSV4SignerAuth, OpenSearch, RequestsHttpConnection
+
+url = urlparse(environ['OPENSEARCH_ENDPOINT'])
+region = environ.get('OPENSEARCH_REGION', 'us-west-2')
+
+credentials = Session().get_credentials()
+
+auth = AWSV4SignerAuth(credentials, region)
+
+client = OpenSearch(
+  hosts=[{
+    'host': url.netloc,
+    'port': url.port or 443
+  }],
+  http_auth=auth,
+  use_ssl=True,
+  verify_certs=True,
+  connection_class=RequestsHttpConnection
+)
+
+info = client.info()
+print(f"{info['version']['distribution']}: {info['version']['number']}")
+{% endhighlight %}
+
+You can see a working demo in [opensearch-python-client-demo](https://github.com/dblock/opensearch-python-client-demo).
 
 ### Go
 
