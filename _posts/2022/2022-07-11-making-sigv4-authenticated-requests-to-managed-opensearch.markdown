@@ -163,9 +163,38 @@ See [opensearch-ruby#71](https://github.com/opensearch-project/opensearch-ruby/i
 
 See [opensearch-php#59](https://github.com/opensearch-project/opensearch-php/issues/59).
 
-### JavaScript
+### Node.js
 
-See [opensearch-js#252](https://github.com/opensearch-project/opensearch-js/issues/252).
+Use [@opensearch-project/opensearch](https://www.npmjs.com/package/@opensearch-project/opensearch) 2.x.
+
+{% highlight typescript %}
+const { defaultProvider } = require("@aws-sdk/credential-provider-node"); // V3 SDK.
+const { Client } = require('@opensearch-project/opensearch');
+const { AwsSigv4Signer } = require('@opensearch-project/opensearch/aws');
+
+async function main() {
+    const client = new Client({
+      ...AwsSigv4Signer({
+        region: process.env.OPENSEARCH_REGION || 'us-east-1',
+        getCredentials: () => {
+        const credentialsProvider = defaultProvider();
+        return credentialsProvider();
+        },
+      }),
+      node: process.env.OPENSEARCH_ENDPOINT
+    });
+
+    var info = await client.info();
+    var version = info.body.version
+    console.log(version.distribution + ": " + version.number);
+}
+
+main();
+{% endhighlight %}
+
+You can see a working demo in [opensearch-node-client-demo](https://github.com/dblock/opensearch-node-client-demo).
+
+See [opensearch-js#252](https://github.com/opensearch-project/opensearch-js/issues/252) for implementation details.
 
 ### Python
 
