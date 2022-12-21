@@ -175,10 +175,10 @@ const { AwsSigv4Signer } = require('@opensearch-project/opensearch/aws');
 async function main() {
     const client = new Client({
       ...AwsSigv4Signer({
-        region: process.env.OPENSEARCH_REGION || 'us-east-1',
+        region: process.env.OPENSEARCH_REGION || 'us-west-2',
         getCredentials: () => {
-        const credentialsProvider = defaultProvider();
-        return credentialsProvider();
+          const credentialsProvider = defaultProvider();
+          return credentialsProvider();
         },
       }),
       node: process.env.OPENSEARCH_ENDPOINT
