@@ -47,7 +47,7 @@ aws-es-curl \
 
 #### [opensearch-java](https://github.com/opensearch-project/opensearch-java)
 
-Use `AwsSdk2Transport` introduced in opensearch-java 2.1.0 (see [opensearch-java#55](https://github.com/opensearch-project/opensearch-java/issues/55) and [opensearch-java#177](https://github.com/opensearch-project/opensearch-java/pull/177) for more information). This is the latest recommended approach.
+Use `AwsSdk2Transport` introduced in opensearch-java 2.1.0. This is the latest recommended approach.
 
 {% highlight java %}
 import java.io.IOException;
@@ -83,6 +83,8 @@ public static void main(final String[] args) throws IOException {
 {% endhighlight %}
 
 You can see a working demo in [opensearch-java-client-demo](https://github.com/dblock/opensearch-java-client-demo).
+
+See [opensearch-java#55](https://github.com/opensearch-project/opensearch-java/issues/55) and [opensearch-java#177](https://github.com/opensearch-project/opensearch-java/pull/177) for implementation details.
 
 #### [aws-request-signing-apache-interceptor](https://github.com/acm19/aws-request-signing-apache-interceptor)
 
@@ -131,7 +133,7 @@ You can see a working demo in the [interceptor code](https://github.com/acm19/aw
 
 #### [opensearch-ruby](https://github.com/opensearch-project/opensearch-ruby)
 
-Use [opensearch-aws-sigv4](https://rubygems.org/gems/opensearch-aws-sigv4) releaed as 1.0 via [opensearch-ruby#71](https://github.com/opensearch-project/opensearch-ruby/issues/71).
+Use [opensearch-aws-sigv4](https://rubygems.org/gems/opensearch-aws-sigv4) 1.0 or newer.
 
 {% highlight ruby %}
 require 'opensearch-aws-sigv4'
@@ -155,6 +157,8 @@ puts info['version']['distribution'] + ': ' + info['version']['number']
 
 You can see a working demo in [opensearch-ruby-client-demo](https://github.com/dblock/opensearch-ruby-client-demo).
 
+See [opensearch-ruby#71](https://github.com/opensearch-project/opensearch-ruby/issues/71) for implementation details.
+
 ### PHP
 
 See [opensearch-php#59](https://github.com/opensearch-project/opensearch-php/issues/59).
@@ -167,7 +171,7 @@ See [opensearch-js#252](https://github.com/opensearch-project/opensearch-js/issu
 
 #### [opensearch-py](https://github.com/opensearch-project/opensearch-py)
 
-Use [opensearch-py](https://pypi.org/project/opensearch-py/).
+Use [opensearch-py](https://pypi.org/project/opensearch-py/) 1.1.0 or newer.
 
 {% highlight python %}
 from os import environ
@@ -200,6 +204,8 @@ print(f"{info['version']['distribution']}: {info['version']['number']}")
 {% endhighlight %}
 
 You can see a working demo in [opensearch-python-client-demo](https://github.com/dblock/opensearch-python-client-demo).
+
+See [opensearch-py#85](https://github.com/opensearch-project/opensearch-py/issues/85) for implementation details.
 
 ### Go
 
