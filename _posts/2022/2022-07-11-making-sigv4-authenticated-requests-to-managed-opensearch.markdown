@@ -7,7 +7,9 @@ comments: true
 ---
 [Amazon OpenSearch](https://aws.amazon.com/opensearch-service/) uses AWS SigV4 for authentication. We're trying to make it dead easy to make authenticated requests across all OpenSearch clients in [opensearch-clients#22](https://github.com/opensearch-project/opensearch-clients/issues/22). Please help contribute end-to-end cookbook examples to this post below for various clients.
 
-### [curl](https://curl.se/)
+### Command Line
+
+#### [curl](https://curl.se/)
 
 {% highlight bash %}
 export AWS_ACCESS_KEY_ID=...
@@ -22,7 +24,7 @@ curl \
   -H "x-amz-security-token:$AWS_SESSION_TOKEN"
 {% endhighlight %}
 
-### [awscurl](https://github.com/okigan/awscurl)
+#### [awscurl](https://github.com/okigan/awscurl)
 
 {% highlight bash %}
 export AWS_ACCESS_KEY_ID=...
@@ -35,7 +37,7 @@ awscurl \
   --service es
 {% endhighlight %}
 
-### [aws-es-curl](https://github.com/joona/aws-es-curl)
+#### [aws-es-curl](https://github.com/joona/aws-es-curl)
 
 {% highlight bash %}
 aws-es-curl \
@@ -164,6 +166,8 @@ See [opensearch-ruby#71](https://github.com/opensearch-project/opensearch-ruby/i
 See [opensearch-php#59](https://github.com/opensearch-project/opensearch-php/issues/59).
 
 ### Node.js
+
+#### [opensearch-js](https://github.com/opensearch-project/opensearch-js)
 
 Use [@opensearch-project/opensearch](https://www.npmjs.com/package/@opensearch-project/opensearch) 2.x.
 
