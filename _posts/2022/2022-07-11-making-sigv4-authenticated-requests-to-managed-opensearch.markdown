@@ -240,6 +240,36 @@ You can see a working demo in [opensearch-python-client-demo](https://github.com
 
 See [opensearch-py#85](https://github.com/opensearch-project/opensearch-py/issues/85) for implementation details.
 
+### DotNet
+
+#### [opensearch-net](https://github.com/opensearch-project/opensearch-net)
+
+Use [OpenSearch.Client](https://www.nuget.org/packages/OpenSearch.Client) 1.2.0 or newer.
+
+{% highlight csharp %}
+using OpenSearch.Client;
+using OpenSearch.Net.Auth.AwsSigV4;
+
+namespace Application
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var endpoint = new Uri(Environment.GetEnvironmentVariable("OPENSEARCH_ENDPOINT") ?? throw new ArgumentNullException("Missing OPENSEARCH_ENDPOINT."));
+            var region = Amazon.RegionEndpoint.GetBySystemName(Environment.GetEnvironmentVariable("OPENSEARCH_REGION") ?? "us-west-2");
+            var connection = new AwsSigV4HttpConnection(region);
+            var config = new ConnectionSettings(endpoint, connection);
+            var client = new OpenSearchClient(config);
+
+            Console.WriteLine($"{client.RootNodeInfo().Version.Distribution}: {client.RootNodeInfo().Version.Number}");
+        }
+    }
+}
+{% endhighlight %}
+
+You can see a working demo in [opensearch-dotnet-client-demo](https://github.com/dblock/opensearch-dotnet-client-demo).
+
 ### Go
 
 See [opensearch-go#117](https://github.com/opensearch-project/opensearch-go/issues/117).
