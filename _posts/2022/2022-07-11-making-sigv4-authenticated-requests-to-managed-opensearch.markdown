@@ -161,10 +161,6 @@ You can see a working demo in [opensearch-ruby-client-demo](https://github.com/d
 
 See [opensearch-ruby#71](https://github.com/opensearch-project/opensearch-ruby/issues/71) for implementation details.
 
-### PHP
-
-See [opensearch-php#59](https://github.com/opensearch-project/opensearch-php/issues/59).
-
 ### Node.js
 
 #### [opensearch-js](https://github.com/opensearch-project/opensearch-js)
@@ -208,7 +204,6 @@ Use [opensearch-py](https://pypi.org/project/opensearch-py/) 1.1.0 or newer.
 
 {% highlight python %}
 from os import environ
-from time import sleep
 from urllib.parse import urlparse
 
 from boto3 import Session
@@ -269,6 +264,10 @@ namespace Application
 {% endhighlight %}
 
 You can see a working demo in [opensearch-dotnet-client-demo](https://github.com/dblock/opensearch-dotnet-client-demo).
+
+### PHP
+
+See [opensearch-php#59](https://github.com/opensearch-project/opensearch-php/issues/59).
 
 ### Go
 
