@@ -265,6 +265,43 @@ namespace Application
 
 You can see a working demo in [opensearch-dotnet-client-demo](https://github.com/dblock/opensearch-dotnet-client-demo).
 
+### Rust
+
+Use [opensearch-rs](https://docs.rs/opensearch/latest/opensearch/).
+
+{% highlight rust %}
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    use std::env;
+    use std::convert::TryInto;
+
+    use serde_json::{ Value };
+
+    use opensearch::{
+        http::transport::{SingleNodeConnectionPool, TransportBuilder},
+        OpenSearch
+    };
+
+    use url::Url;
+
+    let url = Url::parse(&env::var("OPENSEARCH_ENDPOINT").expect("Missing OPENSEARCH_ENDPOINT"));
+    let conn_pool = SingleNodeConnectionPool::new(url?);
+    let aws_config = aws_config::load_from_env().await.clone();
+    let transport = TransportBuilder::new(conn_pool).auth(aws_config.clone().try_into()?).build()?;
+    let client = OpenSearch::new(transport);
+
+    let info: Value = client.info().send().await?.json().await?;
+    println!("{}: {}", info["version"]["distribution"].as_str().unwrap(), info["version"]["number"].as_str().unwrap());
+
+    Ok(())
+}
+
+{% endhighlight %}
+
+You can see a working demo in [opensearch-rust-client-demo](https://github.com/dblock/opensearch-rust-client-demo).
+
+See [opensearch-rs#36](https://github.com/opensearch-project/opensearch-rs/issues/36) for implementation details.
+
 ### PHP
 
 See [opensearch-php#59](https://github.com/opensearch-project/opensearch-php/issues/59).
@@ -272,8 +309,4 @@ See [opensearch-php#59](https://github.com/opensearch-project/opensearch-php/iss
 ### Go
 
 See [opensearch-go#117](https://github.com/opensearch-project/opensearch-go/issues/117).
-
-### Rust
-
-See [opensearch-rs#36](https://github.com/opensearch-project/opensearch-rs/issues/36).
 
