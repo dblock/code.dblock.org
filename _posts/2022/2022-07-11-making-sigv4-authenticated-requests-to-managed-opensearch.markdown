@@ -52,81 +52,45 @@ aws-es-curl \
 Use `AwsSdk2Transport` introduced in opensearch-java 2.1.0. This is the latest recommended approach.
 
 {% highlight java %}
-import java.io.IOException;
+SdkHttpClient httpClient = ApacheHttpClient.builder().build();
 
-import org.opensearch.client.opensearch.OpenSearchClient;
-import org.opensearch.client.opensearch.core.InfoResponse;
-import org.opensearch.client.transport.aws.AwsSdk2Transport;
-import org.opensearch.client.transport.aws.AwsSdk2TransportOptions;
+OpenSearchClient client = new OpenSearchClient(
+    new AwsSdk2Transport(
+        httpClient,
+        "search-...us-west-2.es.amazonaws.com",
+        Region.US_WEST_2,
+        AwsSdk2TransportOptions.builder().build()
+    )
+);
 
-import software.amazon.awssdk.http.SdkHttpClient;
-import software.amazon.awssdk.http.apache.ApacheHttpClient;
-import software.amazon.awssdk.regions.Region;
+InfoResponse info = client.info();
+System.out.println(info.version().distribution() + ": " + info.version().number());
 
-public static void main(final String[] args) throws IOException {
-    SdkHttpClient httpClient = ApacheHttpClient.builder().build();
-    try {
-
-        OpenSearchClient client = new OpenSearchClient(
-            new AwsSdk2Transport(
-                httpClient,
-                "search-...us-west-2.es.amazonaws.com",
-                Region.US_WEST_2,
-                AwsSdk2TransportOptions.builder().build()
-            )
-        );
-
-        InfoResponse info = client.info();
-        System.out.println(info.version().distribution() + ": " + info.version().number());
-    } finally {
-      httpClient.close();
-    }
-}
+httpClient.close();
 {% endhighlight %}
 
-You can see a working demo in [opensearch-java-client-demo](https://github.com/dblock/opensearch-java-client-demo).
-
-See [opensearch-java#55](https://github.com/opensearch-project/opensearch-java/issues/55) and [opensearch-java#177](https://github.com/opensearch-project/opensearch-java/pull/177) for implementation details.
+Working demo in [opensearch-java-client-demo](https://github.com/dblock/opensearch-java-client-demo).
 
 #### [aws-request-signing-apache-interceptor](https://github.com/acm19/aws-request-signing-apache-interceptor)
 
 Use an interceptor and any Apache REST client, including `RestHighLevelClient`.
 
 {% highlight java %}
-import java.io.IOException;
+HttpRequestInterceptor interceptor = new AwsRequestSigningApacheInterceptor(
+    "es",
+    Aws4Signer.create(), 
+    DefaultCredentialsProvider.create(), 
+    Region.US_WEST_2
+);
 
-import org.apache.http.HttpRequestInterceptor;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
+CloseableHttpClient client = HttpClients.custom()
+    .addInterceptorLast(interceptor)
+    .build();
 
-import io.github.acm19.aws.interceptor.http.AwsRequestSigningApacheInterceptor;
-import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
-import software.amazon.awssdk.auth.signer.Aws4Signer;
-import software.amazon.awssdk.regions.Region;
-import software.amazon.awssdk.utils.IoUtils;
-
-public static void main(String[] args) throws 
-    ClientProtocolException, IOException {
-    
-    HttpRequestInterceptor interceptor = new AwsRequestSigningApacheInterceptor(
-        "es",
-        Aws4Signer.create(), 
-        DefaultCredentialsProvider.create(), 
-        Region.US_WEST_2
-    );
-
-    CloseableHttpClient client = HttpClients.custom()
-        .addInterceptorLast(interceptor)
-        .build();
-
-    HttpGet httpGet = new HttpGet("https://...");
-    CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
-    System.out.println(httpResponse.getStatusLine());
-    System.out.println(IoUtils.toUtf8String(response.getEntity().getContent()));
-}
+HttpGet httpGet = new HttpGet("https://...");
+CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
+System.out.println(httpResponse.getStatusLine());
+System.out.println(IoUtils.toUtf8String(response.getEntity().getContent()));
 {% endhighlight %}
 
 You can see a working demo in the [interceptor code](https://github.com/acm19/aws-request-signing-apache-interceptor). For an example that uses OpenSearch `RestHighLevelClient` see [1.x](https://github.com/dblock/opensearch-java-client-demo/tree/opensearch-1.x) or [2.x](https://github.com/dblock/opensearch-java-client-demo/tree/opensearch-2.x) depending on your version.
@@ -138,9 +102,6 @@ You can see a working demo in the [interceptor code](https://github.com/acm19/aw
 Use [opensearch-aws-sigv4](https://rubygems.org/gems/opensearch-aws-sigv4) 1.0 or newer.
 
 {% highlight ruby %}
-require 'opensearch-aws-sigv4'
-require 'aws-sigv4'
-
 signer = Aws::Sigv4::Signer.new(
   service: 'es',
   region: 'us-west-2',
@@ -157,9 +118,7 @@ info = client.info
 puts info['version']['distribution'] + ': ' + info['version']['number']
 {% endhighlight %}
 
-You can see a working demo in [opensearch-ruby-client-demo](https://github.com/dblock/opensearch-ruby-client-demo).
-
-See [opensearch-ruby#71](https://github.com/opensearch-project/opensearch-ruby/issues/71) for implementation details.
+Working demo in [opensearch-ruby-client-demo](https://github.com/dblock/opensearch-ruby-client-demo).
 
 ### Node.js
 
@@ -168,49 +127,31 @@ See [opensearch-ruby#71](https://github.com/opensearch-project/opensearch-ruby/i
 Use [@opensearch-project/opensearch](https://www.npmjs.com/package/@opensearch-project/opensearch) 2.x.
 
 {% highlight typescript %}
-const { defaultProvider } = require("@aws-sdk/credential-provider-node"); // V3 SDK.
-const { Client } = require('@opensearch-project/opensearch');
-const { AwsSigv4Signer } = require('@opensearch-project/opensearch/aws');
+const client = new Client({
+  ...AwsSigv4Signer({
+    region: process.env.AWS_REGION || 'us-east-1',
+    getCredentials: () => {
+      const credentialsProvider = defaultProvider();
+      return credentialsProvider();
+    },
+  }),
+  node: process.env.OPENSEARCH_ENDPOINT
+});
 
-async function main() {
-    const client = new Client({
-      ...AwsSigv4Signer({
-        region: process.env.OPENSEARCH_REGION || 'us-west-2',
-        getCredentials: () => {
-          const credentialsProvider = defaultProvider();
-          return credentialsProvider();
-        },
-      }),
-      node: process.env.OPENSEARCH_ENDPOINT
-    });
-
-    var info = await client.info();
-    var version = info.body.version
-    console.log(version.distribution + ": " + version.number);
-}
-
-main();
+var info = await client.info();
+var version = info.body.version
+console.log(version.distribution + ": " + version.number);
 {% endhighlight %}
 
-You can see a working demo in [opensearch-node-client-demo](https://github.com/dblock/opensearch-node-client-demo).
-
-See [opensearch-js#252](https://github.com/opensearch-project/opensearch-js/issues/252) for implementation details.
+Working demo in [opensearch-node-client-demo](https://github.com/dblock/opensearch-node-client-demo).
 
 ### Python
 
 #### [opensearch-py](https://github.com/opensearch-project/opensearch-py)
 
-Use [opensearch-py](https://pypi.org/project/opensearch-py/) 1.1.0 or newer.
-
 {% highlight python %}
-from os import environ
-from urllib.parse import urlparse
-
-from boto3 import Session
-from opensearchpy import AWSV4SignerAuth, OpenSearch, RequestsHttpConnection
-
 url = urlparse(environ['OPENSEARCH_ENDPOINT'])
-region = environ.get('OPENSEARCH_REGION', 'us-west-2')
+region = environ.get('AWS_REGION', 'us-east-1')
 
 credentials = Session().get_credentials()
 
@@ -231,9 +172,7 @@ info = client.info()
 print(f"{info['version']['distribution']}: {info['version']['number']}")
 {% endhighlight %}
 
-You can see a working demo in [opensearch-python-client-demo](https://github.com/dblock/opensearch-python-client-demo).
-
-See [opensearch-py#85](https://github.com/opensearch-project/opensearch-py/issues/85) for implementation details.
+Working demo in [opensearch-python-client-demo](https://github.com/dblock/opensearch-python-client-demo).
 
 ### DotNet
 
@@ -242,71 +181,76 @@ See [opensearch-py#85](https://github.com/opensearch-project/opensearch-py/issue
 Use [OpenSearch.Client](https://www.nuget.org/packages/OpenSearch.Client) 1.2.0 or newer.
 
 {% highlight csharp %}
-using OpenSearch.Client;
-using OpenSearch.Net.Auth.AwsSigV4;
+var endpoint = new Uri(Environment.GetEnvironmentVariable("OPENSEARCH_ENDPOINT") ?? throw new ArgumentNullException("Missing OPENSEARCH_ENDPOINT."));
+var region = Amazon.RegionEndpoint.GetBySystemName(Environment.GetEnvironmentVariable("AWS_REGION") ?? "us-east-1");
+var connection = new AwsSigV4HttpConnection(region);
+var config = new ConnectionSettings(endpoint, connection);
+var client = new OpenSearchClient(config);
 
-namespace Application
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var endpoint = new Uri(Environment.GetEnvironmentVariable("OPENSEARCH_ENDPOINT") ?? throw new ArgumentNullException("Missing OPENSEARCH_ENDPOINT."));
-            var region = Amazon.RegionEndpoint.GetBySystemName(Environment.GetEnvironmentVariable("OPENSEARCH_REGION") ?? "us-west-2");
-            var connection = new AwsSigV4HttpConnection(region);
-            var config = new ConnectionSettings(endpoint, connection);
-            var client = new OpenSearchClient(config);
-
-            Console.WriteLine($"{client.RootNodeInfo().Version.Distribution}: {client.RootNodeInfo().Version.Number}");
-        }
-    }
-}
+Console.WriteLine($"{client.RootNodeInfo().Version.Distribution}: {client.RootNodeInfo().Version.Number}");
 {% endhighlight %}
 
-You can see a working demo in [opensearch-dotnet-client-demo](https://github.com/dblock/opensearch-dotnet-client-demo).
+Working demo in [opensearch-dotnet-client-demo](https://github.com/dblock/opensearch-dotnet-client-demo).
 
 ### Rust
 
-Use [opensearch-rs](https://docs.rs/opensearch/latest/opensearch/).
+#### [opensearch-rs](https://docs.rs/opensearch/latest/opensearch/)
 
 {% highlight rust %}
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    use std::env;
-    use std::convert::TryInto;
+let url = Url::parse(&env::var("OPENSEARCH_ENDPOINT").expect("Missing OPENSEARCH_ENDPOINT"));
+let conn_pool = SingleNodeConnectionPool::new(url?);
+let aws_config = aws_config::load_from_env().await.clone();
+let transport = TransportBuilder::new(conn_pool).auth(aws_config.clone().try_into()?).build()?;
+let client = OpenSearch::new(transport);
 
-    use serde_json::{ Value };
-
-    use opensearch::{
-        http::transport::{SingleNodeConnectionPool, TransportBuilder},
-        OpenSearch
-    };
-
-    use url::Url;
-
-    let url = Url::parse(&env::var("OPENSEARCH_ENDPOINT").expect("Missing OPENSEARCH_ENDPOINT"));
-    let conn_pool = SingleNodeConnectionPool::new(url?);
-    let aws_config = aws_config::load_from_env().await.clone();
-    let transport = TransportBuilder::new(conn_pool).auth(aws_config.clone().try_into()?).build()?;
-    let client = OpenSearch::new(transport);
-
-    let info: Value = client.info().send().await?.json().await?;
-    println!("{}: {}", info["version"]["distribution"].as_str().unwrap(), info["version"]["number"].as_str().unwrap());
-
-    Ok(())
-}
-
+let info: Value = client.info().send().await?.json().await?;
+println!("{}: {}", info["version"]["distribution"].as_str().unwrap(), info["version"]["number"].as_str().unwrap());
 {% endhighlight %}
 
-You can see a working demo in [opensearch-rust-client-demo](https://github.com/dblock/opensearch-rust-client-demo).
-
-See [opensearch-rs#36](https://github.com/opensearch-project/opensearch-rs/issues/36) for implementation details.
+Working demo in [opensearch-rust-client-demo](https://github.com/dblock/opensearch-rust-client-demo).
 
 ### PHP
 
-See [opensearch-php#59](https://github.com/opensearch-project/opensearch-php/issues/59).
+#### [opensearch-php](https://github.com/opensearch-project/opensearch-php)
+
+{% highlight php %}
+$client = (new \OpenSearch\ClientBuilder())
+  ->setHosts([getenv("OPENSEARCH_ENDPOINT")])
+  ->setSigV4Region(getenv("AWS_REGION"))    
+  ->setSigV4CredentialProvider(true)
+  ->build();
+
+$info = $client->info();
+
+echo "{$info['version']['distribution']}: {$info['version']['number']}\n";
+{% endhighlight %}
+
+Working demo in [opensearch-php-client-demo](https://github.com/dblock/opensearch-php-client-demo).
 
 ### Go
 
-See [opensearch-go#117](https://github.com/opensearch-project/opensearch-go/issues/117).
+#### [opensearch-go](https://github.com/opensearch-project/opensearch-go)
 
+{% highlight go %}
+ctx := context.Background()
+cfg, _ := config.LoadDefaultConfig(ctx)
+signer, _ := requestsigner.NewSigner(cfg)
+
+endpoint, _ := os.LookupEnv("OPENSEARCH_ENDPOINT")
+
+client, _ := opensearch.NewClient(opensearch.Config{
+  Addresses: []string{endpoint},
+  Signer:    signer,
+})
+
+if info, err := client.Info(); err != nil {
+  log.Fatal("info", err)
+} else {
+  var r map[string]interface{}
+  json.NewDecoder(info.Body).Decode(&r)
+  version := r["version"].(map[string]interface{})
+  fmt.Printf("%s: %s\n", version["distribution"], version["number"])
+}
+{% endhighlight %}
+
+Working demo in [opensearch-go-client-demo](https://github.com/dblock/opensearch-go-client-demo).
