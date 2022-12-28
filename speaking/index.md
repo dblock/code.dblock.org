@@ -11,6 +11,8 @@ I speak frequently on topics ranging from the intersection of technology and art
 
 ## Recorded Talks
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IKiJHgM9tko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=IKiJHgM9tko">OpenSearchCon 2022: Hundreds of Terabytes of Data</a>
+
 <a target="_blank" href="https://pbell.wistia.com/medias/3gtygjn4gv">![]({{site.url}}/images/posts/2019/2019-05-12-building-an-open-source-engineering-brand/cto-summit.png)</a><br>
 [Building an Open-Source Engineering Brand](https://pbell.wistia.com/medias/3gtygjn4gv), Austin CTO Summit '19
 
