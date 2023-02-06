@@ -30,3 +30,15 @@ So how do I actually keep a CHANGELOG? I keep a yellow sticky note to which I ad
 ![]({{ site.url }}/images/posts/2020/2020-09-01-keep-a-changelog-at-work/onboarding.png)
 
 If you start a CHANGELOG, tell me about it!
+
+Finally, here's some Ruby to generate a TOC till EOY.
+
+{% highlight ruby %}
+require 'date'
+
+start_date = Date.today
+end_date = Date.new(Date.today.year, 12, 31)
+(start_date..end_date).select(&:monday?).reverse.each do |dt|
+    puts "* [[#{dt}]]"
+end
+{% endhighlight %}
