@@ -26,22 +26,22 @@ end
 
 The trick here is that when a class includes a module the module self.included method is invoked. The base parameter is the class object for the class that includes the module, so we can extend it with the _ClassMethods _implementation. Magical.
 
-To define a gender enumeration we can now write the following.
+To define an order state enumeration we can now write the following.
 
 {% highlight ruby %}
-class Gender
-  include Enum
+class OrderState
+  include Ruby::Enum
 
-  Gender.define :MALE, "male"
-  Gender.define :FEMALE, "female"
+  define :CREATED, 'created'
+  define :PAID, 'paid'
 end
 {% endhighlight %}
 
-You can call `Gender.all` and `Gender::MALE`.
+You can call `OrderState.all` and `OrderState::CREATED`.
 
 #### What’s next?
 
-I want to be able to write `define :MALE = "male"` inside `Gender` class and I want to prevent instances of `Gender` outside of within `Enum`. First one to accomplish both gets a beer.
+I want to be able to write `define :CREATED = "CREATED"` inside `OrderState` class and I want to prevent instances of `OrderState` outside of within `Enum`. First one to accomplish both gets a beer.
 
 #### Full Enum.rb
 
@@ -97,4 +97,10 @@ end
 
 #### Update (2015)
 
-Check out [the ruby-enum gem ](https://github.com/dblock/ruby-enum).
+Check out [the ruby-enum gem](https://github.com/dblock/ruby-enum).
+
+#### Update (2023)
+
+The [ruby-enum gem](https://github.com/dblock/ruby-enum) is used by 1M+ projects 🙈🙉.
+
+![]({{ site.url }}/images/posts/2011/2011-03-16-how-to-define-enums-in-ruby/usage.png)
