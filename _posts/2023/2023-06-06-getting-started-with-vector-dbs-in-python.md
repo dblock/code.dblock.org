@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Getting started with Vector DBs in Python
-date: 2023-05-16
+date: 2023-06-16
 tags: [knn, vectordb]
 comments: true
+redirect_from: /2023/05/16/getting-started-with-vector-dbs-in-python.html
 ---
 Vector databases are all the rage today. 
 
