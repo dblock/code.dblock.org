@@ -250,7 +250,6 @@ vector-app/
 `services.xml`:
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8" ?>
-<?xml version="1.0" encoding="utf-8" ?>
 <services version="1.0" xmlns:deploy="vespa" xmlns:preprocess="properties">
     <container id="default" version="1.0">
         <document-api/>
