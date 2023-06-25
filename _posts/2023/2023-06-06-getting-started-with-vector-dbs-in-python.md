@@ -223,12 +223,11 @@ USERNAME=admin PASSWORD=admin ENDPOINT=https://localhost:9200 poetry run src/ope
 
 ### Vespa
 
-[Vespa](https://vespa.ai/) is a fully featured search engine and vector database. It supports vector search (ANN), lexical search, and search in structured data, all in the same query. Vespa is Apache 2.0 licensed, and can be run in a variety of ways, including Docker and as a managed [cloud service](https://cloud.vespa.ai/).
+[Vespa](https://vespa.ai/) is a fully featured search engine and vector database. It supports approximate nearest neighbor search, lexical search, and search in structured data, all in the same query. Vespa is Apache 2.0 licensed, and can be run in a variety of ways, including Docker and as a managed [cloud service](https://cloud.vespa.ai/).
 
-Let's use their Docker container for this example.
+Let's use their Docker container for this example. Make sure you [configure Docker with at least 4GB RAM](https://docs.docker.com/desktop/settings/mac/#resources) (check with `docker info | grep "Total Memory"`).
 
 {% highlight bash %}
-docker info | grep "Total Memory" # make sure it's at least 4Gb
 docker run --detach --name vespa --hostname vespa-container \
   --publish 8080:8080 --publish 19071:19071 \
   vespaengine/vespa
@@ -238,14 +237,14 @@ This container listsens on port `8080` for search and and ingestion APIs and on 
 
 Vespa encapsulates the concept of a schema/index in an application that needs to be defined and deployed, so it is not as straightforward as the previous example.
 
-To create a new application with a sample vector schema we need to create a `settings.xml` file with the overall application properties and a `schema.md` file with the definition of our schema. For this example, let's create the following directory structure
+To create a new application with a sample vector schema we need to create a `settings.xml` file with the overall application properties and a `schema.md` file with the definition of our schema. For this example, let's create the following directory structure.
 
-```
+{% highlight shell %}
 vector-app/
 ├── schemas/
 │   └── vector.sd
 └── services.xml
-```
+{% endhighlight %}
 
 `services.xml`:
 {% highlight xml %}
@@ -298,10 +297,9 @@ schema vector {
             expression: closeness(field, values)
         }
     }
-
 {% endhighlight %}
 
-We can then deploy using the configuration API:
+Deploy using the configuration API.
 
 {% highlight bash %}
 (cd vector-app && zip -r - .) | \
@@ -311,7 +309,7 @@ We can then deploy using the configuration API:
 curl --header Content-Type:application/zip -XPOST localhost:19071/application/v2/tenant/default/session
 {% endhighlight %}
 
-In our Python code, we can then set up the HTTP client:
+In our Python code, setup the client.
 
 {% highlight python %}
 endpoint = "http://localhost:8080"
@@ -322,7 +320,7 @@ headers = {
 }
 {% endhighlight %}
 
-And ingest some sample documents:
+And ingest some sample documents.
 
 {% highlight python %}
 vectors = [
@@ -343,10 +341,10 @@ for vector in vectors:
     client.post(urljoin(endpoint, "/document/v1/vector/vector/docid/" + vector["id"]), headers=headers, data=data)
 {% endhighlight %}
 
-Finally, to search we can run the following query:
+Finally, to search we can run the following query.
 
 {% highlight python %}
-query = "yql=select * from sources * where {targetHits: 1}nearestNeighbor(values,vector_query_embedding)" \
+query = "yql=select * from sources * where {targetHits: 1} nearestNeighbor(values,vector_query_embedding)" \
     "&ranking.profile=vector_similarity" \
     "&hits=1" \
     "&input.query(vector_query_embedding)=[0.1,0.2,0.3]"
@@ -360,7 +358,7 @@ print(results["root"]["children"][0]["fields"])
 You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/vespa/hello.py).
 
 {% highlight bash %}
-ENDPOINT=http://localhost:8080 poetry run src/vespa/hello.py
+ENDPOINT=http://localhost:8080 CONFIG_ENDPOINT=http://localhost:19071 poetry run src/vespa/hello.py
 
 > POST http://localhost:8080/document/v1/vector/vector/docid/vec1
 < POST http://localhost:8080/document/v1/vector/vector/docid/vec1 - 200
@@ -369,10 +367,8 @@ ENDPOINT=http://localhost:8080 poetry run src/vespa/hello.py
 > GET http://localhost:8080/search/?yql=select%20%2A%20from%20sources%20%2A%20where%20%7BtargetHits%3A%201%7DnearestNeighbor%28values%2Cvector_query_embedding%29&ranking.profile=vector_similarity&hits=1&input.query%28vector_query_embedding%29=%5B0.1%2C0.2%2C0.3%5D
 < GET http://localhost:8080/search/?yql=select%20%2A%20from%20sources%20%2A%20where%20%7BtargetHits%3A%201%7DnearestNeighbor%28values%2Cvector_query_embedding%29&ranking.profile=vector_similarity&hits=1&input.query%28vector_query_embedding%29=%5B0.1%2C0.2%2C0.3%5D - 200
 {'sddocname': 'vector', 'documentid': 'id:vector:vector::vec1', 'id': 'vec1', 'values': {'type': 'tensor<float>(x[3])', 'values': [0.10000000149011612, 0.20000000298023224, 0.30000001192092896]}, 'metadata': {'genre': 'drama'}}
-> DELETE http://localhost:8080/document/v1/vector/vector/docid/vec1
-< DELETE http://localhost:8080/document/v1/vector/vector/docid/vec1 - 200
-> DELETE http://localhost:8080/document/v1/vector/vector/docid/vec2
-< DELETE http://localhost:8080/document/v1/vector/vector/docid/vec2 - 200
+> DELETE http://localhost:19071/application/v2/tenant/default/application/default
+< DELETE http://localhost:19071/application/v2/tenant/default/application/default - 200
 {% endhighlight %}
 
 
