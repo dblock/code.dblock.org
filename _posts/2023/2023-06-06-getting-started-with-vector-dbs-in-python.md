@@ -228,16 +228,17 @@ USERNAME=admin PASSWORD=admin ENDPOINT=https://localhost:9200 poetry run src/ope
 Let's use their Docker container for this example. Make sure you [configure Docker with at least 4GB RAM](https://docs.docker.com/desktop/settings/mac/#resources) (check with `docker info | grep "Total Memory"`).
 
 {% highlight bash %}
+docker pull vespaengine/vespa
 docker run --detach --name vespa --hostname vespa-container \
   --publish 8080:8080 --publish 19071:19071 \
   vespaengine/vespa
 {% endhighlight %}
 
-This container listsens on port `8080` for search and and ingestion APIs and on `19071` for configuration APIs.
+This container listens on port `8080` for search and ingestion APIs, and on `19071` for configuration APIs.
 
 Vespa encapsulates the concept of a schema/index in an application that needs to be defined and deployed, so it is not as straightforward as the previous example.
 
-To create a new application with a sample vector schema we need to create a `settings.xml` file with the overall application properties and a `schema.md` file with the definition of our schema. For this example, let's create the following directory structure.
+To create a new application with a sample vector schema we need to create a `settings.xml` file with the overall application properties, and a `schema.md` file with the definition of our schema. For this example, let's create the following directory structure.
 
 {% highlight shell %}
 vector-app/
@@ -370,7 +371,6 @@ ENDPOINT=http://localhost:8080 CONFIG_ENDPOINT=http://localhost:19071 poetry run
 > DELETE http://localhost:19071/application/v2/tenant/default/application/default
 < DELETE http://localhost:19071/application/v2/tenant/default/application/default - 200
 {% endhighlight %}
-
 
 ### Others
 
