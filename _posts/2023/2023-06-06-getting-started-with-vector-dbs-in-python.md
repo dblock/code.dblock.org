@@ -157,14 +157,14 @@ client.put(
         "settings": {"index.knn": True},
         "mappings": {
             "properties": {
-                "vector": {"type": "knn_vector", "dimension": 3},
+                "values": {"type": "knn_vector", "dimension": 3},
             }
         },
     },
 
 {% endhighlight %}
 
-Indexing data can be done via the bulk API, which requires newline-delimited JSON. It asks to separate document IDs from document data, so I purposely wrote it in a way that starts with combined vector documents that include IDs, and generates JSON that the bulk API accepts as a transform.
+Indexing data can be done document-by-document or via the bulk API, which requires newline-delimited JSON. We start with some data.
 
 {% highlight python %}
 vectors = [
@@ -179,18 +179,22 @@ vectors = [
         "metadata": {"genre": "action"},
     },
 ]
+{% endhighlight %}
 
+Inserting document-by-document.
+
+{% highlight python %}
+for vector in vectors:
+    client.post(urljoin(endpoint, f"/{index_name}/_doc/{vector['id']}"), headers=headers, json=vector)
+{% endhighlight %}
+
+Or bulk insert, which asks to separate document IDs from document data, so I purposely wrote it in a way that starts with combined vector documents that include IDs, and generates JSON that the bulk API accepts as a transform.
+
+{% highlight python %}
 data = ""
 for vector in vectors:
-    data += (
-        json.dumps(
-            {
-                "index": {"_index": index_name, "_id": vector["id"]},
-                "vector": vector["values"],
-            } | {i: vector[i] for i in vector if i != "id" and i != "values"}
-        )
-        + "\n"
-    )
+    data += json.dumps({ "index": {"_index": index_name, "_id": vector["id"]} }) + "\n"
+    data += json.dumps({i: vector[i] for i in vector if i != "id"}) + "\n"
 
 client.post(urljoin(endpoint, "/_bulk"), headers=headers, data=data)
 {% endhighlight %}
@@ -198,7 +202,7 @@ client.post(urljoin(endpoint, "/_bulk"), headers=headers, data=data)
 Searching an index is straightforward.
 
 {% highlight python %}
-query = {"query": {"knn": {"vector": {"vector": [0.1, 0.2, 0.3], "k": 1}}}}
+query = {"query": {"knn": {"values": {"vector": [0.1, 0.2, 0.3], "k": 1}}}}
 
 results = client.post(
     urljoin(endpoint, f"/{index_name}/_search"), headers=headers, json=query
@@ -218,7 +222,7 @@ USERNAME=admin PASSWORD=admin ENDPOINT=https://localhost:9200 poetry run src/ope
 < POST https://localhost:9200/_bulk - 200
 > POST https://localhost:9200/my-index/_search
 < POST https://localhost:9200/my-index/_search - 200
-{'total': {'value': 1, 'relation': 'eq'}, 'max_score': 0.97087383, 'hits': [{'_index': 'my-index', '_id': 'vec1', '_score': 0.97087383, '_source': {'index': {'_index': 'my-index', '_id': 'vec2'}, 'vector': [0.2, 0.3, 0.4], 'metadata': {'genre': 'action'}}}]}
+{'total': {'value': 1, 'relation': 'eq'}, 'max_score': 0.97087383, 'hits': [{'_index': 'my-index', '_id': 'vec1', '_score': 0.97087383, '_source': {'index': {'_index': 'my-index', '_id': 'vec2'}, 'values': [0.2, 0.3, 0.4], 'metadata': {'genre': 'action'}}}]}
 {% endhighlight %}
 
 ### Vespa
