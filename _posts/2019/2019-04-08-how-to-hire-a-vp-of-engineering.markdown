@@ -86,24 +86,21 @@ The job description spelled out responsibilities.
 
 And minimum requirements, none of which include such things as college degrees or years of experience.
 
-> Leadership of a large (at least 20, ideally 40+), growing team of engineers through several evolutions of >
-process and organization.
+> Leadership of a large (at least 20, ideally 40+), growing team of engineers through several evolutions of process and organization.
 >
 > Demonstrated technical depth and significant experience in full stack, distributed systems.
 >
-> Track record of outstanding people management, ability to influence and engage direct, indirect reports and >
-peers.
+> Track record of outstanding people management, ability to influence and engage direct, indirect reports and peers.
 >
-> Exceptional written, oral, interpersonal, and presentation skills and an ability to interface with >
-executive-level management, board of directors, and staff.
+> Exceptional written, oral, interpersonal, and presentation skills and an ability to interface with executive-level management, board of directors, and staff.
 
 ### Using a Recruiting Firm
 
 Use an external recruiter, but do references on them.
 
-Because of our open-source community engagement, Artsy enjoys a healthy rate of qualified inbound hires and has therefore never used a recruiter for Engineering. Unfortunately, VP-level candidates are often public roles and don't usually apply online or visibly seek employment. Senior managers often only trust their closest friends with information pertaining to them leaving a current job, severely limiting networking reach. Finally, hiring a VP requires a lot of recruiting overhead and we were simply not equipped to handle it with a small HR team.
+Because of our open-source community engagement, Artsy enjoys a healthy rate of qualified inbound hires, and has therefore never used a recruiter for Engineering. Unfortunately, VP-level candidates are often public roles and don't usually apply online or visibly seek employment. Senior managers often only trust their closest friends with information pertaining to them leaving a current job, severely limiting networking reach. Finally, hiring a VP requires a lot of recruiting overhead, and we were simply not equipped to handle it with a small HR team.
 
-A recruiter will represent your brand. Artsy chose [Riviera Partners](https://rivierapartners.com) to help us conduct the search and process. I can personally highly recommend them.
+A recruiter will represent your brand. Artsy chose [Riviera Partners](https://rivierapartners.com) to help us conduct the search and process. I can, personally, highly recommend them.
 
 Pro tip: let the CFO or the COO negotiate the recruiter retainer and fees. Bad cop, good cop. They are also just better at it.
 
@@ -111,7 +108,7 @@ Pro tip: let the CFO or the COO negotiate the recruiter retainer and fees. Bad c
 
 It's your responsibility as the hiring manager to _own_ the candidate and to keep them engaged, and not HR's.
 
-At Artsy, half the executive-level candidates at the top of the funnel came from the team’s personal networks and the other half via the search firm. I had to make a list of "ideal" candidates and discuss various desired attributes with the recruiter.
+At Artsy, half the executive-level candidates at the top of the funnel came from the team’s personal networks, and the other half via the search firm. I had to make a list of "ideal" candidates and discuss various desired attributes with the recruiter.
 
 External candidates engaged via a recruiter pitch, then were connected with me for an informational. Internal candidates first met with me, then were connected with the external firm.
 
@@ -119,11 +116,11 @@ External candidates engaged via a recruiter pitch, then were connected with me f
 
 An informational with a VP-level candidate is typically a tour of the office, followed by a lunch or a long coffee. The goal is to get the individual excited about the opportunity, get acquainted with their future manager, to align expectations and get an early feel of what it would be like to work together.
 
-Pro tip: you never get a chance to make a first impression, so make sure you don't have a meeting directly following the informational. Having all the time in the world for the candidate signals overall low stress, general patience and thoughtfulness.
+Pro tip: you never get a chance to make a first impression, so make sure you don't have a meeting directly following the informational. Having all the time in the world for the candidate signals overall low stress, general patience, and thoughtfulness.
 
 My informational often sounds like a sales pitch to most candidates, but it is also an actual interview. I spend at least 30 minutes before meeting anyone to go over their resume, read the recruiter's material, research any externally available information, and prepare a list of questions to unearth potential red flags.
 
-During these meetings I offer a deep dive into the company history and businesses. I deliver a map of the team structure, software, systems, engineering practices and articulate company values.
+During these meetings I offer a deep dive into the company history and businesses. I deliver a map of the team structure, software, systems, engineering practices, and articulate company values.
 
 Speaking of red flags, I had rejected more than one VP candidate during the informational by simply saying that _I don't believe we have a good match, because ..._.
 
@@ -133,7 +130,7 @@ Follow-up to an informational with an e-mail, thanking the candidate and outlini
 
 Make it extra personal by highlighting what _they_ said about the opportunity, attempting to underscore why this this job could be the absolute best choice for them.
 
-I also like to include a handy and up-to-date GMail canned response that includes links to various topics I talk about during any informational. It's a rabbit hole that will start you in the [Artsy README](http://github.com/artsy/README) and take you through some exciting company milestones to my personal blog.
+I also like to include a handy, up-to-date GMail canned response that includes links to various topics I talk about during any informational. It's a rabbit hole that will start you in the [Artsy README](http://github.com/artsy/README) and take you through some exciting company milestones to my personal blog.
 
 Pro tip: while the next step is always meeting the CEO, move faster by also scheduling a first round of onsite interviews in parallel.
 
