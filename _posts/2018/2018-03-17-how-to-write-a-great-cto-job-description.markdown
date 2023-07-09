@@ -58,6 +58,4 @@ Without going as far as a deck, I would keep the job description specific. Here'
 >
 > Target compensation for this role is $220K with a meaningful stock options package, usual medical and dental benefits and a company matched 401K.
 
-Help me improve this job description by commenting below?
-
 Thanks to the New York CTO club for early feedback.
