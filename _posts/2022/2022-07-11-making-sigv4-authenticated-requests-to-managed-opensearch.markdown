@@ -5,7 +5,7 @@ date: 2022-07-11
 tags: [opensearch, aws]
 comments: true
 ---
-[Amazon OpenSearch](https://aws.amazon.com/opensearch-service/) uses AWS SigV4 for authentication. We're trying to make it dead easy to make authenticated requests across all OpenSearch clients in [opensearch-clients#22](https://github.com/opensearch-project/opensearch-clients/issues/22). Please help contribute end-to-end cookbook examples to this post below for various clients.
+[Amazon OpenSearch](https://aws.amazon.com/opensearch-service/) and [Amazon OpenSearch Serverless](https://aws.amazon.com/opensearch-service/features/serverless/) use AWS SigV4 for authentication. We've made it dead easy to make authenticated requests across all OpenSearch clients in [opensearch-clients#22](https://github.com/opensearch-project/opensearch-clients/issues/22).
 
 ### Command Line
 
@@ -24,6 +24,8 @@ curl \
   -H "x-amz-security-token:$AWS_SESSION_TOKEN"
 {% endhighlight %}
 
+If you want to `PUT` a document with `curl` you need some data, and the `x-amz-content-sha256` header for Amazon OpenSearch Serverless. See [this gist](https://gist.github.com/dblock/8dca2faba28a26e229676932763bd6c8#file-opensearch-curl-knn-sh) for a full example that inserts some vectors and perform an approximate nearest neighbor search.
+
 #### [awscurl](https://github.com/okigan/awscurl)
 
 {% highlight bash %}
@@ -36,6 +38,8 @@ awscurl \
   --region us-west-2 \
   --service es
 {% endhighlight %}
+
+See [this gist](https://gist.github.com/dblock/8dca2faba28a26e229676932763bd6c8#file-opensearch-awscurl-sh) for a full example that inserts some vectors and perform an approximate nearest neighbor search.
 
 #### [aws-es-curl](https://github.com/joona/aws-es-curl)
 
