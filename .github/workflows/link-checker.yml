@@ -1,0 +1,18 @@
+name: link-checker
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  # push:
+  # schedule:
+  #   - cron: "00 18 * * *"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Link Checker
+        id: muffet
+        uses: ruzickap/action-my-broken-link-checker@v2
+        with:
+          url: https://code.dblock.org
