@@ -11,7 +11,7 @@ dblog_post_id: 324
 
 Today I gave a talk to a packed NYC.rb about [crafting a Ruby-on-Rails course for developers](http://www.meetup.com/NYC-rb/events/46696902/). I’m working on a blog post about classroom education, but in the meantime, here’re a few links.
 
-The Open-Source Curriculum @ [https://github.com/generalassembly/ga-ruby-on-rails-for-devs](https://github.com/generalassembly/ga-ruby-on-rails-for-devs)
+The Open-Source Curriculum @ [https://github.com/dblock/ga-ruby-on-rails-for-devs](https://github.com/dblock/ga-ruby-on-rails-for-devs)
 
 [Slides from the Presentation on SlideShare](http://www.slideshare.net/dblockdotorg/crafting-a-rubyonrails-course-for-developers)
 

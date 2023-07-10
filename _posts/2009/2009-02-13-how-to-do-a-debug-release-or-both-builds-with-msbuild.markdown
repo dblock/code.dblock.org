@@ -7,7 +7,7 @@ tags: [msbuild]
 comments: true
 dblog_post_id: 33
 ---
-In a previous post I've described how to do [product/build versioning with MSBuild](/ShowPost.aspx?id=19). Another common build aspect is building different flavors of code: Debug vs. Release.
+In a previous post I've described how to do [product/build versioning with MSBuild](/2008/10/26/productbuild-versioning-with-msbuild-ant-and-cruisecontrol.html). Another common build aspect is building different flavors of code: Debug vs. Release.
 
 All the projects I work on now have a very simple MSBuild script that allows you to build either Debug or Release, defaulting to Debug for developers. Our CruiseControl configurations build Release. Comes a shared libraries project, which needs to do Debug, Release or both. How can I accomplish this with MSBuild?
 

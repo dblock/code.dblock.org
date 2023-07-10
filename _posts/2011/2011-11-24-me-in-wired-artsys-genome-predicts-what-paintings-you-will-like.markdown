@@ -7,7 +7,7 @@ tags: [press, artsy, me me]
 comments: true
 dblog_post_id: 296
 ---
-Vanity aside, Wired published a very well written article on Art.sy [[link](http://www.wired.com/magazine/2011/11/mf_artsy/all/1)] in the December issue. I think it’s objective, describes the company vision well, and the story about a mobile prototype is completely accurate.
+Vanity aside, Wired published a very well written article on Art.sy ([link](https://www.wired.com/2011/11/mf-artsy/)) in the December issue. I think it’s objective, describes the company vision well, and the story about a mobile prototype is completely accurate.
 
 Also, got to love the photo taken at Haunch of Venison!
 

@@ -10,7 +10,7 @@ In the [previous post](/2018/08/01/wiring-up-a-react-native-client-to-a-rails-gr
 
 When creating a second item I would encounter the following error: _Encountered two children with the same key, &lt;id&gt;. Child keys must be unique; when two children share a key, only the first child will be used._ This was odd, because I knew all IDs were unique. Turns out, this is a Relay bug, with a proposed fix in [relay#2349](https://github.com/facebook/relay/pull/2349) that is yet to be merged. This is fairly basic and is a good demonstration of how <strike>immature</strike> cutting edge this ecosystem is.
 
-You can work around this by supplying a unique ID into each GraphQL mutation, which is an optional field [in the Relay spec](https://facebook.github.io/relay/graphql/mutations.htm).
+You can work around this by supplying a unique ID into each GraphQL mutation, which is an optional field [in the Relay spec](https://relay.dev/docs/guided-tour/updating-data/graphql-mutations/).
 
 {% highlight js %}
 import { graphql } from 'react-relay'

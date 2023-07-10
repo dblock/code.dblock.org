@@ -9,5 +9,5 @@ dblog_post_id: 292
 ---
 I got 5 seconds around 1m20.
 
-> [http://www.ny1.com/content/ny1_living/consumer_watch/150699/startups-provide-non-traditional-spin-to-job-fairs](http://www.ny1.com/content/ny1_living/consumer_watch/150699/startups-provide-non-traditional-spin-to-job-fairs)
+> [https://web.archive.org/web/20111114113623/http://www.ny1.com/content/ny1_living/consumer_watch/150699/startups-provide-non-traditional-spin-to-job-fairs](https://web.archive.org/web/20111114113623/http://www.ny1.com/content/ny1_living/consumer_watch/150699/startups-provide-non-traditional-spin-to-job-fairs)
 

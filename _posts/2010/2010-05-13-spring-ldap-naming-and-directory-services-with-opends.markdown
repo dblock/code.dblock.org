@@ -171,13 +171,13 @@ public Service getServiceByName(String name) throws NameNotFoundException {
 You can run the source code from this article with OpenDS and Eclipse.
 
 1. Check out the source code from [here](https://github.com/dblock/codeproject/tree/master/JndiDemo).
-2. Install OpenDS from [http://www.opends.org](http://www.opends.org).
+2. Install OpenDS from [https://web.archive.org/web/20111001105032/http://www.opends.org](https://web.archive.org/web/20111001105032/http://www.opends.org).
 3. Copy _schema\Services.ldif_ into _OpenDS\config\schema\100-Services.ldif_ and restart OpenDS.
 4. Import the _JndiDemo_ project into Eclipse and run JUnit tests in the _src-test_ package.
 
 #### Links
 
 - [Source Code for this Article](https://github.com/dblock/codeproject/tree/master/JndiDemo)
-- [OpenDS Directory Server](http://www.opends.org/)
+- [OpenDS Directory Server](https://web.archive.org/web/20111001105032/http://www.opends.org/)
 - [Getting Started with JNDI and OpenDS](/jndi-naming-and-directory-services-with-opends)
 - [Spring-LDAP](http://www.springsource.org/ldap)

@@ -18,7 +18,7 @@ I was about to throw my MP460 Canon printer (80$) out of the window (8th floor, 
 5. Click "Resume" for Four times
 6. Once you click "Power", to confirm the selected action (reset counter absorber). To disable the printer "Power" button to click again.
 
-On the wireless front, I got a Linksys [WPS54G](http://www.linksys.com/servlet/Satellite?c=L_Product_C2&childpagename=US%2FLayout&cid=1114037289494&pagename=Linksys%2FCommon%2FVisitorWrapper). None of the wizards worked, go figure. I ended up being able to connect to the printer's HTTP configuration interface, but couldn't configure it on Vista. It wasn't too hard to configure manually with [some help](http://forums.linksys.com/linksys/board/message?board.id=Wireless_Print_Servers&thread.id=1476).
+On the wireless front, I got a Linksys WPS54G. None of the wizards worked, go figure. I ended up being able to connect to the printer's HTTP configuration interface, but couldn't configure it on Vista. It wasn't too hard to configure manually with some help from the Linksys forums.
 
 1. Add the appropriate printer from _Control Panel_, _Printers_, _Add Printer_
 2. Select _Local Printer_ and select _Create New Port_, _Standard TCP/IP Port_

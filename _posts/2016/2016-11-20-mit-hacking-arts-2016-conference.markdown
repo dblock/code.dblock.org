@@ -33,13 +33,13 @@ And more ...
 
 > Technology can provide agency to movement and dance, but also allow audiences to interact with it. <small>/[Sidra Bell](http://www.sidrabelldanceny.org)</small>
 
-> Technology is part of our life. Dance can add a creative element to technology, it can make it more expressive. <small>/[Maria Takeuchi - Asphyxia](http://www.asphyxia-project.com)</small>
+> Technology is part of our life. Dance can add a creative element to technology, it can make it more expressive. <small>/[Maria Takeuchi - Asphyxia](https://web.archive.org/web/20150314213400/http://www.asphyxia-project.com/)</small>
 
 There was a lively discussion about tools, [Isadora](http://troikatronix.com/isadora) was mentioned several times.
 
 ### Biotech and Arts
 
-Joe Davis is a living mad scientist at the Thomas Schwartz Lab, MIT Biology. Joe notably created the first digital image out of molecules of DNA ([Microvenus](http://geneticsandculture.com/genetics_culture/pages_genetics_culture/gc_w03/davis_microvenus.htm)). Things have evolved a bit and we now have [CRISPR](https://en.wikipedia.org/wiki/CRISPR) and can store movies in DNA. Since Earth will evolve into something DNA-based that is not us, maybe we can store the entire human history in the earth biome? DNA will be our time machine!
+Joe Davis is a living mad scientist at the Thomas Schwartz Lab, MIT Biology. Joe notably created the first digital image out of molecules of DNA ([Microvenus](https://web.archive.org/web/20161028133415/http://geneticsandculture.com/genetics_culture/pages_genetics_culture/gc_w03/davis_microvenus.htm)). Things have evolved a bit and we now have [CRISPR](https://en.wikipedia.org/wiki/CRISPR) and can store movies in DNA. Since Earth will evolve into something DNA-based that is not us, maybe we can store the entire human history in the earth biome? DNA will be our time machine!
 
 ![Joe Davis, Mad Scientist, MIT]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-conference/joedavis.jpg)
 
@@ -57,7 +57,7 @@ Joe Davis is a living mad scientist at the Thomas Schwartz Lab, MIT Biology. Joe
 
 > Now is the time for art to be critical. Look out for all of us during the new administration. <small>/[Christina Agapakis](http://agapakis.com)</small>
 
-> Before biowork we had Dracula and Frankenstein. <small>/[Joe Davis](http://geneticsandculture.com/genetics_culture/pages_genetics_culture/gc_w03/davis_joe.htm)</small>
+> Before biowork we had Dracula and Frankenstein. <small>/[Joe Davis](https://web.archive.org/web/20161211224511/http://geneticsandculture.com/genetics_culture/pages_genetics_culture/gc_w03/davis_joe.htm)</small>
 
 And my favorite.
 
@@ -75,7 +75,7 @@ Web art has also taken a turn for the worst once the browser wars were over. Thi
 
 > AR is a new dimension of storytelling. Inspired by [Picasso's light painting](http://time.com/3746330/behind-the-picture-picasso-draws-with-light) HoloArt is now a new art media. It can be used as a way to enhance flow, provide full immersion. <small>/[Judith Amores](http://fluid.media.mit.edu/people/judith-amores)</small>
 
-> Public art is always dependent on authorization by authority. It doesn't have to be subversive, but I like subversive. <small>/[George Fifield](http://bostoncyberarts.org/festival/george-fifield), [bostoncyberarts.org](http://bostoncyberarts.org)</small>
+> Public art is always dependent on authorization by authority. It doesn't have to be subversive, but I like subversive. <small>/[George Fifield](https://web.archive.org/web/20160531181333/http://bostoncyberarts.org/festival/george-fifield), [bostoncyberarts.org](http://bostoncyberarts.org)</small>
 
 > AR can help us shape how we look and how we look at each other. <small>/[Jacob Loweenstein, VR@MIT](http://vratmit.com)</small>
 

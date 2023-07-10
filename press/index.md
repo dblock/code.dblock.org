@@ -41,13 +41,13 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ## 2015
 
-### [W Magazine: Who’s Who: Internet Art](http://www.wmagazine.com/culture/art-and-design/2015/04/internet-art-world)
+### [W Magazine: Who’s Who: Internet Art](https://www.wmagazine.com/gallery/internet-art-world)
 
 ![Artsy in W Magazine](http://art.dblock.org/images/posts/2015/2015-04-23-artsy-in-w-magazine/artsy.jpg)
 
 > The Internet is the ultimate blank canvas. W salutes some of the enterprising teams stretching the boundaries of the art world online. 
 
-### [L'Hebdo: New York: Vers Quel Nouveau Rêve?](http://www.hebdo.ch/hebdo/cadrages/detail/new-york-vers-quel-nouveau-r%C3%AAve)
+### [L'Hebdo: New York: Vers Quel Nouveau Rêve?](https://web.archive.org/web/20151018232702/http://www.hebdo.ch/hebdo/cadrages/detail/new-york-vers-quel-nouveau-r%C3%AAve)
 
 > De plus en plus d’artistes, de cinéastes et d’écrivains fuient la Grande Pomme pour s’installer à Detroit ou à Los Angeles. Dans le même temps, la ville se transforme en Silicon Valley de la côte est, notamment avec la création d’un campus technologique sur une île au large de Manhattan.
 
@@ -83,7 +83,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ## 2011
 
-### [Wired: Art.sy’s ‘Genome’ Predicts What Paintings You Will Like](https://www.wired.com/2011/11/mf_artsy)
+### [Wired: Art.sy’s ‘Genome’ Predicts What Paintings You Will Like](https://www.wired.com/2011/11/mf-artsy/)
 
 > On a Balmy summer day in Manhattan, the founder of a web startup called Art.sy was about to experience what one might call an Alexander Graham Bell moment. The firm’s 25-year-old CEO, Carter Cleveland, was sitting on a sofa with his MacBook, scrolling through photos of fine art, when his lanky head of engineering walked in looking positively wobbly with excitement. "This is actually quite cool," he said, landing on the sofa next to his boss. The engineer, Daniel Doubrovkine, produced a phone and pointed its camera at Cleveland’s computer screen, which at that moment showed an image from Andy Warhol’s Flowers series.
 >

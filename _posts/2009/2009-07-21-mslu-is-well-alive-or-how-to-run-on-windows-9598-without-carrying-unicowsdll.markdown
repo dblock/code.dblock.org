@@ -15,7 +15,7 @@ MSLU stands for Microsoft Layer for Unicode. Making MSLU work involves not upgra
 
 Carrying unicows.dll is annoying, this is a setup bootstrapper. So I tried embedding it as a resource (`RES_UNICOWS CUSTOM "unicows.dll"`) and am now decompressing it at runtime to `%TEMP%\unicows.dll`. It works beautifully!
 
-The complete code is [here](https://github.com/dblock/dotnetinstaller/blob/master/dotNetInstallerLib/MSLU.cpp).
+The complete code is [here](https://github.com/dotnetinstaller/dotnetinstaller/blob/2.4/dotNetInstallerLib/MSLU.cpp).
 
 {% highlight c %}
 static HMODULE SaveAndLoadMSLU()

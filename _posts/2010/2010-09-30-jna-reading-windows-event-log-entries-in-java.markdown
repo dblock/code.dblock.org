@@ -260,4 +260,4 @@ private boolean read() {
 #### Links
 
 - The code has been checked into JNA, see [Advapi32Util.java](https://github.com/twall/jna/blob/master/contrib/platform/src/com/sun/jna/platform/win32/Advapi32Util.java)
-- MSDN [sample](http://msdn.microsoft.com/en-us/library/bb427356(v=VS.85).aspx) on reading the event log in C.
+- MSDN [sample](https://learn.microsoft.com/en-us/windows/win32/eventlog/querying-for-event-source-messages) on reading the event log in C.

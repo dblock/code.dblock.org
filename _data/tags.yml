@@ -27,7 +27,7 @@ asp.net:
   count: 6
 aws:
   name: aws
-  count: 6
+  count: 8
 blog:
   name: blog
   count: 8
@@ -57,7 +57,7 @@ git:
   count: 10
 github:
   name: github
-  count: 15
+  count: 18
 grape:
   name: grape
   count: 26
@@ -93,13 +93,13 @@ jobs:
   count: 19
 learning:
   name: learning
-  count: 9
+  count: 11
 me me:
   name: me me
   count: 8
 mongodb:
   name: mongodb
-  count: 42
+  count: 44
 mongoid:
   name: mongoid
   count: 17
@@ -147,7 +147,7 @@ security:
   count: 28
 slack:
   name: slack
-  count: 15
+  count: 16
 speaking:
   name: speaking
   count: 30

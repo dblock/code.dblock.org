@@ -106,7 +106,7 @@ Time taken: 1.732 seconds, Fetched: 3 row(s)
 
 Neither Hadoop or Hive are prerequisites to run Spark on OSX, install it with `brew install apache-spark`. From your installation in `/usr/local/Cellar/apache-spark/X.Y.Z` run `./bin/run-example SparkPi 10` from there. You should see `Pi is roughly 3.1413551413551413`.
 
-You can run a Spark shell with `spark-shell`. Lets play with a [sample dataset of country GDPs](https://gist.githubusercontent.com/izakp/2244e9b256fab99cf8bbf6215d9c02c6/raw/a92422f29412fcac34e4847cf0d5409e1d057e29/gdp.json) curated for us by [@ByzantineFault](https://twitter.com/ByzantineFault) during a recent [@ArtsyOpenSource](https://twitter.com/artsyopensource) Spark workshop.
+You can run a Spark shell with `spark-shell`. Lets play with a sample dataset of country GDPs (Update: unfortunately lost forever) curated for us by [@ByzantineFault](https://twitter.com/ByzantineFault) during a recent [@ArtsyOpenSource](https://twitter.com/artsyopensource) Spark workshop.
 
 {% highlight shell %}
 $> wget https://gist.githubusercontent.com/izakp/2244e9b256fab99cf8bbf6215d9c02c6/raw/a92422f29412fcac34e4847cf0d5409e1d057e29/gdp.json

@@ -12,7 +12,7 @@ The root of all my GraphQL queries are now a `user` and a user has a number of `
 
 ### Relay-Style Mutations
 
-Relay has a [specified](https://facebook.github.io/relay/docs/en/mutations.html) add/remove behavior via `RANGE_ADD` and `NODE_DELETE`.
+Relay has a [specified](https://relay.dev/docs/guided-tour/updating-data/graphql-mutations/) add/remove behavior via `RANGE_ADD` and `NODE_DELETE`.
 
 #### RANGE_ADD
 
@@ -190,4 +190,4 @@ This returns meetings with `edge` and `node` elements along with `pageInfo` and 
 
 See [33-minutes-server@f0bd7d](https://github.com/33-minutes/33-minutes-server/commit/f0bd7df9dd0f4311344557dce4e673e28c84f1d1) for a complete implementation. You will also need [rmosolgo/graphql-ruby#1754](https://github.com/rmosolgo/graphql-ruby/pull/1754) to make this work with Mongoid.
 
-To enable this on the client requires a lot of boilerplate, including a pagination container and a call to Relay to load more data as [documented](https://facebook.github.io/relay/docs/en/pagination-container.html). I suggest just copy-pasting and adapting working code from [33-minutes-app@4fd9bd](https://github.com/33-minutes/33-minutes-app/commit/4fd9bda8580ee2bad52a0c831b54a51957840bcb).
+To enable this on the client requires a lot of boilerplate, including a pagination container and a call to Relay to load more data as [documented](https://relay.dev/docs/v10.1.3/pagination-container/). I suggest just copy-pasting and adapting working code from [33-minutes-app@4fd9bd](https://github.com/33-minutes/33-minutes-app/commit/4fd9bda8580ee2bad52a0c831b54a51957840bcb).

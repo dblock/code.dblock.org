@@ -5,7 +5,7 @@ date: 2016-03-11
 tags: [slack, bots]
 comments: true
 ---
-I gave a talk entitled "Your First Slack Bot Service" at the inaugural [New York City Slack Meetup](http://www.meetup.com/New-York-Slack-Meetup).
+I gave a talk entitled "Your First Slack Bot Service" at the inaugural New York City Slack Meetup.
 
 It contains an overview of Slack APIs and various integration options, including Web API, Real Time Messaging API and Slack Platform Services with Slack Button integration. I also live coded a complete "Hi" bot with Slack Button integration from scratch without any Slack-specific frameworks or libraries.
 

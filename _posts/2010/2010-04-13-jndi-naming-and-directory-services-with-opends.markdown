@@ -9,7 +9,7 @@ dblog_post_id: 96
 ---
 I often hear from .NET programmers "I’d like to get into Java, not the language, but all that J2EE stuff ...". I am one of those people so I try to use any opportunity to try something I’ve never touched before.
 
-We’re moving to a SOA model with the product at my [day job](http://www.appsecinc.com). One of the fundamental questions is: _"How does a service find another service?"._ The standard answer is to use a naming and directory service and in Java you talk to one of these things with [JNDI](http://java.sun.com/products/jndi/).
+We’re moving to a SOA model with the product at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com). One of the fundamental questions is: _"How does a service find another service?"._ The standard answer is to use a naming and directory service and in Java you talk to one of these things with [JNDI](http://java.sun.com/products/jndi/).
 
 First, a few basics.
 
@@ -20,7 +20,7 @@ By using a directory service, you can simplify applications and their administra
 
 #### Client & Server
 
-I picked up [OpenDS](http://www.opends.org/), on open-source server from Sun. After a straightforward installation (set _OPENDS_JAVA_HOME_ to a JRE location and run _setup.bat_) I had an LDAP server running as a Windows Service (OpenDS) on port 389. There’s a handy _bat\control-panel.bat_ that launches a schema and object browser.
+I picked up [OpenDS](https://web.archive.org/web/20111001105032/http://www.opends.org/), on open-source server from Sun. After a straightforward installation (set _OPENDS_JAVA_HOME_ to a JRE location and run _setup.bat_) I had an LDAP server running as a Windows Service (OpenDS) on port 389. There’s a handy _bat\control-panel.bat_ that launches a schema and object browser.
 
 We can now access this server with JNDI, which comes standard with Java Platform 1.1.2 or later.
 
@@ -73,7 +73,7 @@ objectClasses: ( 1.2.840.113556.1.8000.2554.999999.2 NAME 'Service'
 
 #### OIDs
 
-You can generate a root OID using [this script](http://msdn.microsoft.com/en-us/library/ms677620.aspx) (save the script to disk and run `cscript script.vbs`) and keep adding numbers to it. It’s just a globally unique number that identifies an attribute or a class. I generated OID 1.2.840.113556.1.8000.2554.999999.
+You can generate a root OID using [this script](https://learn.microsoft.com/en-us/windows/win32/ad/obtaining-an-object-identifier-from-microsoft) (save the script to disk and run `cscript script.vbs`) and keep adding numbers to it. It’s just a globally unique number that identifies an attribute or a class. I generated OID 1.2.840.113556.1.8000.2554.999999.
 
 #### Service in Java
 
@@ -221,7 +221,7 @@ Alternatively, OpenDS provides an implementation of Directory Services Markup La
 #### Links
 
 - [Naming and Directory Services Tutorial](http://java.sun.com/products/jndi/tutorial/TOC.html)
-- [OpenDS Directory Server](http://www.opends.org/)
+- [OpenDS Directory Server](https://web.archive.org/web/20111001105032/http://www.opends.org/)
 - [Source Code for this Article](https://github.com/dblock/codeproject/tree/master/JndiDemo)
   - [Service.java](https://github.com/dblock/codeproject/blob/master/JndiDemo/src/com/example/jndi/Service.java)
   - [UnimplementedDirContext.java](https://github.com/dblock/codeproject/blob/master/JndiDemo/src/com/example/jndi/UnimplementedDirContext.java)

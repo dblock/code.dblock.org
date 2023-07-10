@@ -62,7 +62,7 @@ jobs:
 {% endraw %}
 {% endhighlight %}
 
-This [worked](https://github.com/dblock/distance_of_time_in_words/runs/803512680?check_suite_focus=true) because `bundler` was installed by default.
+This worked because `bundler` was installed by default.
 
 ### Use another `if:`
 

@@ -7,7 +7,7 @@ tags: [people]
 comments: true
 dblog_post_id: 16
 ---
-I feel very inspired by [Raymond Chen](http://blogs.msdn.com/oldnewthing/)'s [The Old New Thing: Tales from the Interview](http://blogs.msdn.com/oldnewthing/archive/2008/09/05/8925556.aspx) posts, so here's one from my own.
+I feel very inspired by [Raymond Chen](http://blogs.msdn.com/oldnewthing/)'s [The Old New Thing: Tales from the Interview](https://web.archive.org/web/20080914015852/http://blogs.msdn.com/oldnewthing/archive/2008/09/05/8925556.aspx) posts, so here's one from my own.
 
 There're two criteria often omitted in an a successful software developer candidate: doesn't drool and has a handshake. The second one is particularly important, it eliminates potentially weak candidates that can't make a decision. To which the following story ...
 

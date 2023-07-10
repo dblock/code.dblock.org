@@ -81,7 +81,7 @@ dropboxd for USER root: running (pid 993)
 
 #### Selective Sync
 
-If you need selective sync, check out [this blog post](http://buildcontext.com/blog/2012/dropbox-linux-ubuntu-ec2-linode-selective-sync).
+If you need selective sync, check out [this blog post](https://web.archive.org/web/20161025164915/http://buildcontext.com/blog/2012/dropbox-linux-ubuntu-ec2-linode-selective-sync).
 
 ### Backup MongoDB Databases
 

@@ -60,6 +60,6 @@ results.sparkContext.hadoopConfiguration.set("fs.s3a.secret.key", "...")
 
 A few useful notes and links.
 
-* [S3 Support in Apache Hadoop](https://wiki.apache.org/hadoop/AmazonS3)
+* [S3 Support in Apache Hadoop](https://cwiki.apache.org/confluence/display/HADOOP2/AmazonS3)
 * [Dealing with java.lang.OutOfMemoryError : GC overhead limit exceeded in Spark](http://stackoverflow.com/a/22742982/123094)
 * [What is the difference between s3n, s3a and s3?](http://stackoverflow.com/q/33356041/123094)

@@ -11,7 +11,7 @@ dblog_post_id: 30
 
 The  **File Resource Management Library** is a managed C# framework that enumerates resources and implements both read and write of the file version (`VS_VERSIONINFO`), string resources (company, copyright and product information) and icon (`RT_GROUP_ICON`, `RT_ICON`) resources.
 
-- [CodePlex](http://www.codeplex.com/resourcelib/)
+- CodePlex ... Update: [GitHub](https://github.com/resourcelib/resourcelib)
 - [CodeProject Article](http://www.codeproject.com/KB/library/ResourceLib.aspx)
 
 #### Update (2015)

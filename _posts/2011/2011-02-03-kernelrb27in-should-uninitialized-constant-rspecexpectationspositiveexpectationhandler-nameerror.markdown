@@ -14,7 +14,7 @@ This one took a while and required extensive help from a rocket scientist. While
   in `should': uninitialized constant RSpec::Expectations::PositiveExpectationHandler (NameError)
 ```
 
-The problem was that you need to configure the expectations framework in _spec\spec_helper.rb_. The _expect_with :rspec_ is the fix.
+The problem was that you need to configure the expectations framework in _spec/spec_helper.rb_. The _expect_with :rspec_ is the fix.
 
 {% highlight ruby %}
 RSpec.configure do |config|
@@ -23,4 +23,4 @@ RSpec.configure do |config|
 end
 {% endhighlight %}
 
-You can read more about rspec configuration [here](http://relishapp.com/rspec/rspec-core/v/2-4/dir/expectation-framework-integration/configure-expectation-framework).
+You can read more about rspec configuration [here](https://rspec.help/rspec/expectation-framework-integration/).

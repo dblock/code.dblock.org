@@ -25,11 +25,11 @@ Manufacturing an empty MSI is easy if you read MSDN documentation.
 MSIHANDLE hdb = NULL;
 {% endhighlight %}
 
-The result is an empty MSI, but if you try to open it with [Orca](http://msdn.microsoft.com/en-us/library/aa370557.aspx), it will fail without explanation. It seems like you must set at least three properties in order to make this a workable MSI:
+The result is an empty MSI, but if you try to open it with [Orca](https://learn.microsoft.com/en-us/windows/win32/msi/orca-exe), it will fail without explanation. It seems like you must set at least three properties in order to make this a workable MSI:
 
-- [PID_REVNUMBER](http://msdn.microsoft.com/en-us/library/aa372870(VS.85).aspx): For an installation package, the Revision Number Summary property contains the [package code](http://msdn.microsoft.com/en-us/library/aa370946(VS.85).aspx) for the installer package.
-- [PID_WORDCOUNT](http://msdn.microsoft.com/en-us/library/aa372870(VS.85).aspx): In the summary information of an installation package, the Word Count Summary property indicates the type of source file image.
-- [PID_PAGECOUNT](http://msdn.microsoft.com/en-us/library/aa370570(VS.85).aspx): The Page Count Summary property contains the minimum installer version required by the installation package.
+- [PID_REVNUMBER](https://learn.microsoft.com/en-us/windows/win32/msi/word-count-summary): For an installation package, the Revision Number Summary property contains the [package code](https://learn.microsoft.com/en-us/windows/win32/msi/p-gly) for the installer package.
+- [PID_WORDCOUNT](https://learn.microsoft.com/en-us/windows/win32/msi/word-count-summary): In the summary information of an installation package, the Word Count Summary property indicates the type of source file image.
+- [PID_PAGECOUNT](https://learn.microsoft.com/en-us/windows/win32/msi/page-count-summary): The Page Count Summary property contains the minimum installer version required by the installation package.
 
 You have to get the summary information for the number of summary info items that you're going to set, set the properties, persist them to disk and commit the MSI to disk.
 
@@ -50,7 +50,7 @@ MsiCloseHandle(hsummary);
 MsiDatabaseCommit(hdb);
 {% endhighlight %}
 
-You'll be able to open the MSI with [Orca](http://msdn.microsoft.com/en-us/library/aa370557.aspx) now.
+You'll be able to open the MSI with [Orca](https://learn.microsoft.com/en-us/windows/win32/msi/orca-exe) now.
 
 ### Opening an MSI Package
 

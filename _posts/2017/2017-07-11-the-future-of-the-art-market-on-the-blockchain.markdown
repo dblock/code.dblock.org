@@ -21,11 +21,11 @@ If that video got you interested and you're curious about some computer science 
 
 ### Who is Working with Blockchain in the Art World?
 
-There's a nice starter list of companies active in the art world and Blockchain compiled by Jess Houlgrave as part of her work for an M.A. at the Sotheby's Institute of Art on [The Arts Slack #blockchain channel](https://thearts.slack.com/archives/C5YN7BY6R/p1498230417603305) (you can join [here](http://thearts.herokuapp.com/)). I've selected a few and categorized them by the type of problem they attempt to solve.
+There's a nice starter list of companies active in the art world and Blockchain compiled by Jess Houlgrave as part of her work for an M.A. at the Sotheby's Institute of Art on [The Arts Slack #blockchain channel](https://thearts.slack.com/archives/C5YN7BY6R/p1498230417603305) (you can join [here](https://web.archive.org/web/20160731120137/http://thearts.herokuapp.com/)). I've selected a few and categorized them by the type of problem they attempt to solve.
 
 #### How do I buy digital art?
 
-Perhaps the most obvious and natural application of Blockchain in the art market is to produce, display, and sell (for Bitcoin) downloadable objects. This is the mission of [Left.Gallery](https://left.gallery) and [Cointemporary](http://cointemporary.com).
+Perhaps the most obvious and natural application of Blockchain in the art market is to produce, display, and sell (for Bitcoin) downloadable objects. This is the mission of [Left.Gallery](https://left.gallery) and [Cointemporary](https://web.archive.org/web/20170912005750/http://cointemporary.com).
 
 #### How can I make money selling my work?
 
@@ -33,11 +33,11 @@ Distribution and content monetization, supporting multiple actors ranging from b
 
 #### Where does this work come from?
 
-Provenance can significantly increase (eg. a work was bought my a major collector) or undermine (eg. the work was stolen) the price of a work. A fairly well established player in this field is [Ascribe](https://www.ascribe.io) and even [Deloitte developed proofs of concept to solve traceability issues](https://www2.deloitte.com/lu/en/pages/technology/articles/Blockchain-proof-concept-solve-traceability-issues-art.html).
+Provenance can significantly increase (eg. a work was bought my a major collector) or undermine (eg. the work was stolen) the price of a work. A fairly well established player in this field is [Ascribe](https://www.ascribe.io) and even [Deloitte developed proofs of concept to solve traceability issues](https://web.archive.org/web/20161025133624/https://www2.deloitte.com/lu/en/pages/technology/articles/Blockchain-proof-concept-solve-traceability-issues-art.html).
 
 #### Is this work authentic?
 
-Reducing risks around authenticity is the mission of [Everledger](https://www.everledger.io), [TagSmart](http://www.tagsmart.com) and [Verisart](https://www.verisart.com). These can work well in tandem with technology that uniquely identifies a work, such as [Artmyn](https://artmyn.com) that can 3D-scan a work in-depth and [Provenire](https://www.provenireauthentication.com) that uses synthetic DNA polymers to specifically and uniquely mark artwork.
+Reducing risks around authenticity is the mission of [Everledger](https://www.everledger.io), [TagSmart](http://www.tagsmart.com) and [Verisart](https://www.verisart.com). These can work well in tandem with technology that uniquely identifies a work, such as [Artmyn](https://artmyn.com) that can 3D-scan a work in-depth and Provenire that uses synthetic DNA polymers to specifically and uniquely mark artwork.
 
 #### Who is using a copy of this digital work?
 
@@ -45,7 +45,7 @@ In an attempt to replace Digimark's traditional watermarking standard, [Blockai]
 
 #### How can an artist make money on the resale of a work?
 
-Many artists watch their works resell for massive amounts of money without seeing a cent. [Artlery](https://artlery.com) is making Droit de Suite standard, attempting to redefine the art economy.
+Many artists watch their works resell for massive amounts of money without seeing a cent. Artlery is making Droit de Suite standard, attempting to redefine the art economy.
 
 #### How much money do I owe in royalties to the artists?
 
@@ -57,7 +57,7 @@ It may be possible to completely disassemble and reassemble the art market and f
 
 #### What is art?
 
-My favorite applications of the Blockchain question art itself. One of such examples is [Furtherfield](http://furtherfield.org) with a very interesting [exhibition called New World Order](http://furtherfield.org/programmes/exhibition/new-world-order), which displayed such works as the [Plantoid](http://okhaos.com/plantoids), a Blockchain life form which hires an artist to produce a work of art once you send it enough Bitcoin.
+My favorite applications of the Blockchain question art itself. One of such examples is [Furtherfield](http://furtherfield.org) with a very interesting [exhibition called New World Order](https://www.furtherfield.org/new-world-order), which displayed such works as the [Plantoid](http://okhaos.com/plantoids), a Blockchain life form which hires an artist to produce a work of art once you send it enough Bitcoin.
 
 ### Fear, Uncertainty and Data
 
@@ -75,7 +75,7 @@ There're [thousands of Koons' balloon dogs](https://www.artsy.net/search?q=ballo
 
 #### Establishing Provenance and Authenticity
 
-I can easily scribble something similar to the works of one of my favorite street artists, [Jim Joe](https://www.artsy.net/artist/jim-joe), but nothing replaces the nights of scouting for [his works](http://art.dblock.org/tags/jim%20joe) all over East Village. Blockchain is a natural solution to demonstrating where a work comes from and, combined with such technology as in-depth scanning and fingerprinting, to prove authenticity.
+I can easily scribble something similar to the works of one of my favorite street artists, [Jim Joe](https://www.artsy.net/artist/jim-joe), but nothing replaces the nights of scouting for [his works](https://art.dblock.org/tags/jim%20joe/) all over East Village. Blockchain is a natural solution to demonstrating where a work comes from and, combined with such technology as in-depth scanning and fingerprinting, to prove authenticity.
 
 #### Speeding Up and Lowering Transaction Costs
 

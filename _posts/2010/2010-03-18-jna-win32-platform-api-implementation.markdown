@@ -7,7 +7,7 @@ tags: [jna, java, win32]
 comments: true
 dblog_post_id: 89
 ---
-Lately I’ve been working on a native Java implementation of [Waffle](https://github.com/dblock/waffle) and contributing an increasing amount of code to the java.net [JNA](http://jna.java.net) project. Waffle has several goals that provide support for Windows authentication in Java. In this post I’ll describe the JNA implementation that allows us to retrieve user group memberships for the currently logged on user or a user logged on with a username and password. Both of these were made really simple by JNA.
+Lately I’ve been working on a native Java implementation of [Waffle](https://github.com/dblock/waffle) and contributing an increasing amount of code to the java.net [JNA](https://github.com/java-native-access/jna) project. Waffle has several goals that provide support for Windows authentication in Java. In this post I’ll describe the JNA implementation that allows us to retrieve user group memberships for the currently logged on user or a user logged on with a username and password. Both of these were made really simple by JNA.
 
 A user’s security context is represented by a token and includes local and domain groups flattened out. That is, it contains all groups, including nested ones. If this construct didn’t exist, Windows would have to call Active Directory every time it wants to, for example, verify whether a logged on user has access to a certain file. Having the group memberships in the security context allows the operating system to compare the group SIDs with the values in the file’s ACL.
 

@@ -13,7 +13,7 @@ Next time I am sitting in one of these meetings, I _will_ jump out of the window
 
 _"What can we do to save Bob?"_
 
-What are we, some kind of divine authority? Is Bob a soul that needs to be raptured? I am doodling a hot female demon from "Ugly Americans" on Bob’s last year’s revue. The revue looks finer than ever! Back to Bob - he’s an amazing developer. He’s paid well. He gets to do whatever he wants, mostly. But we got little new to offer – the business is "business as usual", so he has been procrastinating for a while and finally got bored. And [bored people quit](http://www.randsinrepose.com/archives/2011/07/12/bored_people_quit.html). After many months of the same, he finally made a decision and told his manager yesterday.
+What are we, some kind of divine authority? Is Bob a soul that needs to be raptured? I am doodling a hot female demon from "Ugly Americans" on Bob’s last year’s revue. The revue looks finer than ever! Back to Bob - he’s an amazing developer. He’s paid well. He gets to do whatever he wants, mostly. But we got little new to offer – the business is "business as usual", so he has been procrastinating for a while and finally got bored. And [bored people quit](https://randsinrepose.com/archives/bored-people-quit/). After many months of the same, he finally made a decision and told his manager yesterday.
 
 Bob could use fifty grand. Or a hundred. In a single check. I bet that would close the deal and he would stay for another year or two. But I am not going to say it – for starters, this kind of proposals strangely never gather enough support around a big executive table. Ten individuals who all think one thing and say another will hang in this room and debate what _else_ can we do to save Bob.
 

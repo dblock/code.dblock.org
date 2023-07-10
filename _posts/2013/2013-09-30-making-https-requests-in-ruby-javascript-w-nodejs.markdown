@@ -28,7 +28,7 @@ end
 
 #### Node.js
 
-A little simpler, [superagent](http://visionmedia.github.io/superagent/), also known as "ajax with less suck", can take care of everything.
+A little simpler, [superagent](https://github.com/ladjs/superagent), also known as "ajax with less suck", can take care of everything.
 
 ```
 $ npm install -g superagent

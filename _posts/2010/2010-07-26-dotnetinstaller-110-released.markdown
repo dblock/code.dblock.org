@@ -10,7 +10,7 @@ dblog_post_id: 117
 
 ![dni]({{ site.url }}/images/posts/2010/2010-07-26-dotnetinstaller-110-released/dni_3.jpg)
 
-dotNetInstaller 1.10 was released July 12th, 2010. dotNetInstaller is a very popular general purpose setup bootstrapper for Microsoft Windows created by Davide Icardi. I’ve been maintaining the project and contributing the vast majority of the features since 2008, mostly driven by our needs at [work](http://www.appsecinc.com).
+dotNetInstaller 1.10 was released July 12th, 2010. dotNetInstaller is a very popular general purpose setup bootstrapper for Microsoft Windows created by Davide Icardi. I’ve been maintaining the project and contributing the vast majority of the features since 2008, mostly driven by our needs at [work](https://web.archive.org/web/20131111165225/https://www.appsecinc.com).
 
 > [Download](https://github.com/dblock/dotnetinstaller)
 

@@ -150,7 +150,7 @@ describe("allowing null", () => {
 });
 {% endhighlight %}
 
-This is my preferred method, but requires disabling `strictNullChecks` in tests (read more about this [here](https://basarat.gitbooks.io/typescript/docs/options/strictNullChecks.html)).
+This is my preferred method, but requires disabling `strictNullChecks` in tests (read more about this [here](https://web.archive.org/web/20191120101312/https://basarat.gitbooks.io/typescript/docs/options/strictNullChecks.html)).
 
 The result, in my opinion, is the cleanest.
 

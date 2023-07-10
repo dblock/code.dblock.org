@@ -9,7 +9,7 @@ dblog_post_id: 317
 ---
 ![toyota]({{ site.url }}/images/posts/2012/2012-02-12-toyota-production-system-why-should-architects-write-code/toyota_7.jpg)
 
-I recently read ["The Darker Side of Lean"](http://astro.temple.edu/~rmudambi/Teaching/BA951/Week_04/Toyota-Darker-Side-Mehri.pdf) by Darius Mehri. It is a fascinating account of the evil aspects of the much celebrated Toyota Production System. The author of the paper is a mechanical engineer. Yet, the way he describes Japanese approach to choosing technology struck me as déjà vu.
+I recently read ["The Darker Side of Lean"](https://web.archive.org/web/20120131153659/http://astro.temple.edu/~rmudambi/Teaching/BA951/Week_04/Toyota-Darker-Side-Mehri.pdf) by Darius Mehri. It is a fascinating account of the evil aspects of the much celebrated Toyota Production System. The author of the paper is a mechanical engineer. Yet, the way he describes Japanese approach to choosing technology struck me as déjà vu.
 
 > _To arrive at the best design, the engineers would gather huge amounts of information, comparing new designs with previous designs. If the technology unearthed by their research could benefit the product in any way, they would include it in the many alternatives they were considering. Sobek, Ward and Liker’s research compare Toyota’s approach to product development as set-based design where "designers think and reason about sets of design alternatives. Over time, these sets are gradually narrowed as the designers eliminate inferior alternatives until they find a final solution." They claim this method differs from the conventional practice of choosing a single design early on and iterating to improve it until a solution is obtained._
 

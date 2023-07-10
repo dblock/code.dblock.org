@@ -7,7 +7,7 @@ tags: [domain driven design, architecture, organizations, people, agile]
 comments: true
 dblog_post_id: 155
 ---
-Thanks to everyone for attending my "Breaking the Software Death Cycle with DDD" presentation last night at the [DDD meet-up](http://www.dddnyc.org/calendar/15302867/?eventId=15302867&action=detail) at Microsoft. It looks like the topic turned out to be interesting – it was followed by some great questions, a few tweets and I got a pile of e-mails to respond to.
+Thanks to everyone for attending my "Breaking the Software Death Cycle with DDD" presentation last night at the DDD meet-up at Microsoft. It looks like the topic turned out to be interesting – it was followed by some great questions, a few tweets and I got a pile of e-mails to respond to.
 
 [Slides](https://www.slideshare.net/dblockdotorg/breaking-the-software-death-cycle-with-domaindriven-design)
 

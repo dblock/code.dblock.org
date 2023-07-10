@@ -7,7 +7,7 @@ tags: [jna, java, win32]
 comments: true
 dblog_post_id: 92
 ---
-I recently had a few drinks too many with my coworkers at the Russian Vodka Room and took the subway home. It’s a thirty minute ride during which I tried to implement [EnumerateSecurityPackages](http://msdn.microsoft.com/en-us/library/aa375397(VS.85).aspx) in JNA. It was not a success and resulted in three dozen logs from JVM crashes. A good night sleep helped make it actually work.
+I recently had a few drinks too many with my coworkers at the Russian Vodka Room and took the subway home. It’s a thirty minute ride during which I tried to implement [EnumerateSecurityPackages](https://learn.microsoft.com/en-us/windows/win32/api/sspi/nf-sspi-enumeratesecuritypackagesa) in JNA. It was not a success and resulted in three dozen logs from JVM crashes. A good night sleep helped make it actually work.
 
 {% highlight java %}
 SECURITY_STATUS SEC_Entry EnumerateSecurityPackages(
@@ -16,7 +16,7 @@ SECURITY_STATUS SEC_Entry EnumerateSecurityPackages(
 );
 {% endhighlight %}
 
-This function wants a pointer to an array of pointer to a [SecPkgInfo](http://msdn.microsoft.com/en-us/library/aa380104(VS.85).aspx) structure.
+This function wants a pointer to an array of pointer to a [SecPkgInfo](https://learn.microsoft.com/en-us/windows/win32/api/sspi/ns-sspi-secpkginfoa) structure.
 
 {% highlight java %}
 typedef struct _SecPkgInfo {

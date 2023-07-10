@@ -15,7 +15,7 @@ Jenkins AnsiColor, the essential Jenkins plugin version 0.3.0 has been released.
 
 The major new feature is the ability to customize color maps, with XTerm, VGA and CSS color maps built-in. This was contributed by @harrah in [#9](https://github.com/dblock/jenkins-ansicolor-plugin/pull/9). It also has a few notable bug fixes, including proper support for background and foreground color reset, which caused output from the colorize Ruby gem not to be colored ([#5](https://github.com/dblock/jenkins-ansicolor-plugin/issues/5)).
 
-[https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin](https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin)
+[https://plugins.jenkins.io/ansicolor](https://plugins.jenkins.io/ansicolor)
 
 [https://github.com/dblock/jenkins-ansicolor-plugin](https://github.com/dblock/jenkins-ansicolor-plugin)
 

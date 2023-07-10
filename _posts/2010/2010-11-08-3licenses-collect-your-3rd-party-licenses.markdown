@@ -10,7 +10,7 @@ dblog_post_id: 141
 
 ![thirdparty]({{ site.url }}/images/posts/2010/2010-11-08-3licenses-collect-your-3rd-party-licenses/thirdparty_4.jpg)
 
-I am pleased to announce the open-source release of [3Licenses](https://github.com/dblock/3licenses), an [AppSecInc](http://www.appsecinc.com)-sponsored project, pronounced "free licenses".
+I am pleased to announce the open-source release of [3Licenses](https://github.com/dblock/3licenses), an [AppSecInc](https://web.archive.org/web/20131111165225/https://www.appsecinc.com)-sponsored project, pronounced "free licenses".
 
 The overwhelming majority of 3rd party licenses require the application that uses them to reproduce the license verbatim in an artifact that is installed with the application itself. For instance, the BSD license states the following.
 

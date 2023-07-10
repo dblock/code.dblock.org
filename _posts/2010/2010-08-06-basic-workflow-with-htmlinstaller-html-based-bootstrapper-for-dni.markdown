@@ -85,7 +85,7 @@ Let’s look at the HTML source in this bootstrapper and see how we can make cha
 </html>
 {% endhighlight %}
 
-This is a standard HTML page with an _html_ opening tag, a _head_ and a _body_. The stylesheet is imported with a custom HTML tag, `@import` – HTMLayout-specific tags are documented [here](http://www.terrainformatica.com/htmlayout/tags.whtm).
+This is a standard HTML page with an _html_ opening tag, a _head_ and a _body_. The stylesheet is imported with a custom HTML tag, `@import` – HTMLayout-specific tags are documented [here](https://web.archive.org/web/20120802053514/http://www.terrainformatica.com/htmlayout/tags.whtm).
 
 There’re a few built-in widgets defined by their _id_’s. All such widgets are optional and have well-known behavior within the bootstrapper.
 

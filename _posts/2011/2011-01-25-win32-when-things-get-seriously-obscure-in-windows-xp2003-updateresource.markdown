@@ -7,7 +7,7 @@ tags: [resourcelib, dotnetinstaller, win32]
 comments: true
 dblog_post_id: 160
 ---
-I just fixed [#8157](http://dotnetinstaller.codeplex.com/workitem/8157). It was a humbling and head-scratching two hours.
+I just fixed dotnetinstaller#8157. It was a humbling and head-scratching two hours.
 
 The story goes like this. dotNetInstaler embeds files into the final bootstrapper. When built on Windows 7, everything works fine. When built on Windows XP or 2003, the executable produced runs, but its resources can no longer be loaded (which causes the htmlInstaller UI to look ugly). If you try to open the executable generated on Windows XP in Visual Studio, the latter will complain that the resources cannot be enumerated.
 

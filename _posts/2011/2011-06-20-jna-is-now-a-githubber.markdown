@@ -21,7 +21,7 @@ We were not unhappy with the old Java.net site, it worked fine and while it didn
 
 Java.net has been and continues to be about content management, but developers want collaboration. The fundamental goals don’t align with what we need.
 
-Oracle has outsourced Java.net in March to a company called Cognisync. The first thing Cognisync did was a [press release](http://www.cognisync.com/news/company/03_01_11_javanet).
+Oracle has outsourced Java.net in March to a company called Cognisync. The first thing Cognisync did was a [press release](https://web.archive.org/web/20111027183752/http://www.cognisync.com/news/company/03_01_11_javanet).
 
 You can imagine a few sales execs in a room making a deal and celebrating with a nice bottle of expensive French champagne, before instructing the marketing team to make a press release and throwing the thing over the cubicle walls to an understaffed team of developers. How do you feel about improving this giant mess? It’s so crappy, it’s a challenge, you’re going to love it! I’ve lived through some of similar scenarios in various big and small companies, my opinion is that it’s highly unlikely that Cognisync or anybody else is capable of transforming Java.net from a dying weed into a thriving flower.
 

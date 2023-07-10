@@ -7,13 +7,13 @@ tags: [appsecinc, jobs, people]
 comments: true
 dblog_post_id: 153
 ---
-In the past six months I’ve done dozens of engineering interviews for our many job openings, including developers and team leads. We’ve hired some excellent people in this process. I get resumes from my personal network, a few (no more than three) recruiters that I’ve known for a long time and [Craigslist](http://newyork.craigslist.org/sof/). Since Craigslist is source of endless amusement, I took a bit of time to assemble a few numbers.
+In the past six months I’ve done dozens of engineering interviews for our many job openings, including developers and team leads. We’ve hired some excellent people in this process. I get resumes from my personal network, a few (no more than three) recruiters that I’ve known for a long time and [Craigslist](https://web.archive.org/web/20100706065015/http://newyork.craigslist.org/sof/). Since Craigslist is source of endless amusement, I took a bit of time to assemble a few numbers.
 
 Most resumes follow a pattern. I will only talk about the strange, funny and sad ones, and very little about good resumes. Before I begin, I must add that I did hire two people via Craigslist and I am extremely happy with their work. Obviously any resemblance with your resume is pure coincidence and any personal data has been removed.
 
 #### The Pie
 
-This is the general distribution of about 150 resumes I have received via Craigslist for a senior individual contributor position. The job description is no longer available on Craigslist, but it’s very much in-line with a typical job description for a C# developer with some C++ experience. We have a [similar position available today](http://www.appsecinc.com/aboutus/careers/Software-Engineer-Scanner-Services.shtml).
+This is the general distribution of about 150 resumes I have received via Craigslist for a senior individual contributor position. The job description is no longer available on Craigslist, but it’s very much in-line with a typical job description for a C# developer with some C++ experience. We have a [similar position available today](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/aboutus/careers/Software-Engineer-Scanner-Services.shtml).
 
 The detached pie slice represents about 4% of actual good resumes, worth my time.
 

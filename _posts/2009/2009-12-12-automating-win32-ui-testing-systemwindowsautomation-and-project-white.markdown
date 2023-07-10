@@ -7,7 +7,7 @@ tags: [testing, ui, dotnet, win32]
 comments: true
 dblog_post_id: 73
 ---
-Just when I thought things were well under control in [dotNetInstaller](https://github.com/dblock/dotnetinstaller/), someone filed [this bug](http://dotnetinstaller.codeplex.com/workitem/4856). It basically says that an installed check doesn’t work. This is pretty major functionality and I was under the impression that I unit-tested it in every possible direction. There’s at least a dozen tests that walk all kinds of scenarios around these checks and everything passes. It took ten seconds to find the culprit: the UI has a silly bug and such a check cannot be added to a configuration node. Naturally unit tests don’t use the UI. The user cannot take advantage of the functionality, even though the functionality itself ... functions.
+Just when I thought things were well under control in [dotNetInstaller](https://github.com/dblock/dotnetinstaller/), someone filed [this bug](https://web.archive.org/web/20161107054658/http://dotnetinstaller.codeplex.com/workitem/4856). It basically says that an installed check doesn’t work. This is pretty major functionality and I was under the impression that I unit-tested it in every possible direction. There’s at least a dozen tests that walk all kinds of scenarios around these checks and everything passes. It took ten seconds to find the culprit: the UI has a silly bug and such a check cannot be added to a configuration node. Naturally unit tests don’t use the UI. The user cannot take advantage of the functionality, even though the functionality itself ... functions.
 
 It’s a great example of total failure. Something has to be done.
 
@@ -139,7 +139,7 @@ You can already see that this is becoming rather cumbersome. I would have to wri
 
 ### Project White
 
-Someone must have had this problem before me. That someone is ThoughtWorks and they created [White](http://white.codeplex.com/). White exposes a strongly typed and therefore less verbose and more usable object model for the UI being tested.
+Someone must have had this problem before me. That someone is ThoughtWorks and they created [White](https://web.archive.org/web/20110210092224/http://white.codeplex.com/). White exposes a strongly typed and therefore less verbose and more usable object model for the UI being tested.
 
 {% highlight c# %}
 [Test]
@@ -199,5 +199,5 @@ UIAutomation.ClickThroughMenu(mainWindow.MenuBar.TopLevelMenu,
 
 ### Bug Solved and Unit-Tested
 
-My original problem was [a bug in dotNetInstaller](http://dotnetinstaller.codeplex.com/workitem/4856) where adding an installed check through the UI would popup an error. I was now able to write a unit test for it.
+My original problem was [a bug in dotNetInstaller](https://web.archive.org/web/20161107054658/http://dotnetinstaller.codeplex.com/workitem/4856) where adding an installed check through the UI would popup an error. I was now able to write a unit test for it.
 

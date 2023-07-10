@@ -14,7 +14,7 @@ Introducing [fue](https://github.com/dblock/fue), a little command-line tool to 
 
 ## Implementation Details
 
-The [Github V4 GraphQL API](https://developer.github.com/v4) lets you make one deep query without having to iterate over repositories or commits.
+The [Github V4 GraphQL API](https://docs.github.com/en/graphql) lets you make one deep query without having to iterate over repositories or commits.
 
 ### Finding a User ID
 

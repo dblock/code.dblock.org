@@ -53,7 +53,7 @@ class DeviseMailer < Devise::Mailer
 end
 {% endhighlight %}
 
-Why Chuck Norris? I’ve been enjoying the [Chuck Norris Jenkins Plugin](https://wiki.jenkins-ci.org/display/JENKINS/ChuckNorris+Plugin) too much lately. Chuck Norris can preview mail templates in PDF!
+Why Chuck Norris? I’ve been enjoying the [Chuck Norris Jenkins Plugin](https://plugins.jenkins.io/chucknorris) too much lately. Chuck Norris can preview mail templates in PDF!
 
 Here’s our mail templates admin page with a link to the preview (_mail_templates/index.html.haml_).
 

@@ -7,7 +7,7 @@ tags: [msi]
 comments: true
 dblog_post_id: 8
 ---
-It's not hard, but rather frustrating to find :) [This post](http://forum.installsite.net/index.php?act=ST&f=26&t=14035) was helpful.
+It's not hard, but rather frustrating to find.
 
 {% highlight autoit %}
 Set installer = CreateObject("WindowsInstaller.Installer")

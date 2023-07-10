@@ -9,7 +9,7 @@ dblog_post_id: 193
 ---
 ![]({{ site.url }}/images/posts/2011/2011-03-31-setting-up-cron-to-run-rake-tasks/image_6.jpg)
 
-This is the last piece of the dev-ops puzzle. We want our [MongoDB backup](https://code.dblock.org/ShowPost.aspx?id=192) to run nightly. Let's create a _:cron_ task
+This is the last piece of the dev-ops puzzle. We want our [MongoDB backup](/2011/03/31/a-rake-task-for-backing-up-a-mongodb-database.html) to run nightly. Let's create a _:cron_ task
 
 {% highlight ruby %}
 task :cron => :environment do
@@ -33,4 +33,4 @@ To propagate the settings to crontab, use the following command.
 $ whenever --update-crontab
 ```
 
-All credit for this one goes to [@sarcilav](http://blog.sarcilav.com/) – I wanted to wrap up our dev-ops story in one place on my blog.
+All credit for this one goes to [@sarcilav](https://web.archive.org/web/20120629110557/http://blog.sarcilav.com//) – I wanted to wrap up our dev-ops story in one place on my blog.

@@ -9,7 +9,7 @@ dblog_post_id: 262
 ---
 ![jenkins]({{ site.url }}/images/posts/2011/2011-09-07-implementing-my-first-jenkins-plugin-ansicolor/jenkins_3.jpg)
 
-I installed Jenkins last week for the very first time. A couple of days later I was able to publish my first plugin, called [AnsiColor](https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin), which colorizes ANSI output. It’s the [plugin you’ve all been waiting for](https://code.dblock.org/the-jenkins-ansicolor-plugin-youve-all-been-waiting-for).
+I installed Jenkins last week for the very first time. A couple of days later I was able to publish my first plugin, called [AnsiColor](https://plugins.jenkins.io/ansicolor), which colorizes ANSI output. It’s the [plugin you’ve all been waiting for](https://code.dblock.org/the-jenkins-ansicolor-plugin-youve-all-been-waiting-for).
 
 The [Jenkins plugin tutorial](https://wiki.jenkins-ci.org/display/JENKINS/Plugin+tutorial) is quite good, I recommend you just follow it. It has a maven-based cookbook to generate a new project. But if you’re like me, you’ll reconstruct a plugin from scratch (and possibly trade time for a better understanding). I’ll just mention a few things that could have been helpful to me.
 
@@ -29,7 +29,7 @@ public class PluginImpl extends Plugin {
 
 #### Processing Build Output
 
-Our goal is to process build output and insert HTML color markup. So the first task is to find a Jenkins extension point from [here](https://wiki.jenkins-ci.org/display/JENKINS/Extension+points) that exposes build log data. I found the very promising [ConsoleLogFilter](https://wiki.jenkins-ci.org/display/JENKINS/Extension+points#Extensionpoints-hudson.console.ConsoleLogFilter). A simple extension is marked with _@Extension _and I thought I was done.
+Our goal is to process build output and insert HTML color markup. So the first task is to find a Jenkins extension point from [here](https://www.jenkins.io/doc/developer/extensions) that exposes build log data. I found the very promising [ConsoleLogFilter](https://www.jenkins.io/doc/developer/extensions#Extensionpoints-hudson.console.ConsoleLogFilter). A simple extension is marked with _@Extension _and I thought I was done.
 
 {% highlight java %}
 @Extension
@@ -64,7 +64,7 @@ Pretty simple, right? Well, it only works if we want to remove stuff or add text
 
 #### Console Notes
 
-Jenkins has another extension point, [BuildWrapper](https://wiki.jenkins-ci.org/display/JENKINS/Extension+points#Extensionpoints-hudson.tasks.BuildWrapper). It will add an option to every build project to enable the decoration of the build logger to which we can attach a [ConsoleAnnotationDescriptor](https://wiki.jenkins-ci.org/display/JENKINS/Extension+points#Extensionpoints-hudson.console.ConsoleAnnotationDescriptor). All this is rather convoluted, but constructed with good intentions of being able to stream data. As a recent Rubyist I raised all of my eyebrows time-and-again – I forgot how much people love factories in Java. Anyway, that lets you insert _ConsoleNote_ elements before and after a line of log output. The note is HTML. But ANSI characters can be anywhere in the string, so how is this helpful?
+Jenkins has another extension point, [BuildWrapper](https://www.jenkins.io/doc/developer/extensions#Extensionpoints-hudson.tasks.BuildWrapper). It will add an option to every build project to enable the decoration of the build logger to which we can attach a [ConsoleAnnotationDescriptor](https://www.jenkins.io/doc/developer/extensions#Extensionpoints-hudson.console.ConsoleAnnotationDescriptor). All this is rather convoluted, but constructed with good intentions of being able to stream data. As a recent Rubyist I raised all of my eyebrows time-and-again – I forgot how much people love factories in Java. Anyway, that lets you insert _ConsoleNote_ elements before and after a line of log output. The note is HTML. But ANSI characters can be anywhere in the string, so how is this helpful?
 
 Let's use the extra brain cells that didn’t die while sorting out wrappers, factories, decorators and annotators. Given a string, such as `Hello ]32mCruel Java World`, how do we make it display `"Hello <span style="color: green">Cruel Java World</span>` given that we can only prepend and append text? Like this.
 

@@ -7,7 +7,7 @@ tags: [syndication, codeproject, dotnet, asp.net, blog]
 comments: true
 dblog_post_id: 70
 ---
-I’ve been wanting to implement a POST protocol for my blog for a while. The urge got really bad since I’ve started using [LiveWriter](http://download.live.com/writer) at my [day job](http://www.appsecinc.com/). It’s such a nice piece of software compared to blogging with the online HTML editor with it’s, often too smart, HTML cleanup, struggling with embedded pictures and loosing drafts. I even considered abandoning my own creation and using [WordPress](http://wordpress.org/) or some other blogging engine. Then the "not invented here" syndrome took over. I spent a few hours implementing a large part of AtomPUB, [RFC-5023](http://tools.ietf.org/html/rfc5023).
+I’ve been wanting to implement a POST protocol for my blog for a while. The urge got really bad since I’ve started using [LiveWriter](https://support.microsoft.com/en-us/windows/windows-essentials-2707b879-5004-4349-c4a4-e5900945f2a9) at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/). It’s such a nice piece of software compared to blogging with the online HTML editor with it’s, often too smart, HTML cleanup, struggling with embedded pictures and loosing drafts. I even considered abandoning my own creation and using [WordPress](https://wordpress.org/) or some other blogging engine. Then the "not invented here" syndrome took over. I spent a few hours implementing a large part of AtomPUB, [RFC-5023](http://tools.ietf.org/html/rfc5023).
 
 The [Atom Publishing Protocol](http://bitworking.org/projects/atom/rfc5023.html) is an application-level protocol for publishing and editing web resources. The protocol is based on HTTP transfer of Atom-formatted representations. The Atom format is documented in the Atom Syndication Format, [RFC-4287](http://tools.ietf.org/html/rfc4287).
 
@@ -45,7 +45,7 @@ My current blog implementation supports ATOM. This is done by using an asp:Repea
 </feed>
 {% endhighlight %}
 
-This works fine for generating feeds, but in order to consume ATOM posts I will need an object model for feed items. That’s where the "not invented here" syndrome has to stop and I am going to let [Argotic](http://argotic.codeplex.com/) do the job. First, by rewriting the above ASP.NET code in C#.
+This works fine for generating feeds, but in order to consume ATOM posts I will need an object model for feed items. That’s where the "not invented here" syndrome has to stop and I am going to let [Argotic](https://web.archive.org/web/20091227163034/http://argotic.codeplex.com//) do the job. First, by rewriting the above ASP.NET code in C#.
 
 {% highlight c# %}
 Response.ContentType = "application/atom+xml;charset=\"utf-8\"";

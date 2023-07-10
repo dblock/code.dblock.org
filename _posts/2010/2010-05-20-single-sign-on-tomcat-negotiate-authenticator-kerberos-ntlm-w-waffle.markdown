@@ -131,7 +131,7 @@ My laptop is not a member of an Active Directory domain, but you would see domai
 
 #### Related Projects
 
-- [Tomcat SPNEGO by Dominique Guerrin](http://tomcatspnego.codeplex.com/): this is a very good prototype of a filter. It uses JNI and not JNA, doesn’t support NTLM POST and the code is pretty thick.
+- [Tomcat SPNEGO by Dominique Guerrin](https://web.archive.org/web/20120114182927/http://tomcatspnego.codeplex.com/): this is a very good prototype of a filter. It uses JNI and not JNA, doesn’t support NTLM POST and the code is pretty thick.
 - [SPNEGO Sourceforge](http://spnego.sourceforge.net/): it’s a nightmare to configure, doesn’t work without an Active Directory domain and requires an SPN
 - [JCIFS NTLM](http://jcifs.samba.org/src/docs/ntlmhttpauth.html): no longer supported and they recommend using Jespa
 - [Jespa](http://www.ioplex.com/jespa.html): a commercial implementation that claims to do the same thing as Waffle, but uses the Netlogon service instead of the native Windows API

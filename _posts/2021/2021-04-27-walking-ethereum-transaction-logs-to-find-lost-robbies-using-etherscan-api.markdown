@@ -8,15 +8,15 @@ comments: true
 ---
 On July 17, 2018, I [spoke](https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s) at the Christies first ever annual Tech Summit entitled "Exploring Blockchain", in London. I even got a freebie NFT!
 
-During the event [SuperRare](http://superrare.io/) partnered with [Jason Bailey](https://www.artnome.com/about-artnome) and enlisted [Robbie Barrat](https://robbiebarrat.github.io/), the first artist to ever tokenize on SuperRare. Robbie created "AI Generated Nude Portrait #7" for the event, which he intended as 300 separate frames of a single artwork. Each of the 300 frames was tokenized separately and added to redeemable ETH gift cards with directions for how to claim the 1/1 token. 
+During the event [SuperRare](https://superrare.com/) partnered with [Jason Bailey](https://www.artnome.com/about-artnome) and enlisted [Robbie Barrat](https://robbiebarrat.github.io/), the first artist to ever tokenize on SuperRare. Robbie created "AI Generated Nude Portrait #7" for the event, which he intended as 300 separate frames of a single artwork. Each of the 300 frames was tokenized separately and added to redeemable ETH gift cards with directions for how to claim the 1/1 token. 
 
-A small handful of these original NFTs are known to still exist. We'll call them "Robbies". On April 5th, 2021, [frame 269](https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-269-459) sold for 125ETH ($265K). 
+A small handful of these original NFTs are known to still exist. We'll call them "Robbies". On April 5th, 2021, [frame 269](https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-269-459) sold for 125ETH ($265K). 
 
 If you enjoyed the forensics in [Rare “Lost Robbie” AI Nude NFTs Worth Millions Surface](https://digitalartcollector.com/rare-lost-robbie-ai-nude-nfts-worth-millions-surface/), or if you just want to know how SuperRare or other marketplaces display token history, this post is for you. We'll walk the Ethereum blockchain transaction logs to find all the Robbies using [etherscan-api](https://www.npmjs.com/package/etherscan-api) ([Etherscan API](https://etherscan.io/apis)). 
 
 Please do note that I am no expert, and that I would greatly appreciate suggestions and fixes to my approach and [the code](https://github.com/dblock/lost-robbies).
 
-An freebie OBJKT NFT was also minted, inspired by this project. Available at [hicetnunc.xyz/objkt/53103](https://www.hicetnunc.xyz/objkt/53103).
+An freebie OBJKT NFT was also minted, inspired by this project. Available at [hicetnunc.xyz/objkt/53103](https://objkt.com/asset/hicetnunc/53103).
 
 ### Getting Started
 
@@ -51,7 +51,7 @@ The rest of the code goes somewhere into that _do something useful here_ part ab
 
 ### Who is Robbie?
 
-Robbie Barrat, or [@videodrome](https://superrare.co/videodrome) is [0x860c4604fe1125ea43f81e613e7afb2aa49546aa](https://etherscan.io/address/0x860c4604fe1125ea43f81e613e7afb2aa49546aa). I found that address by following transaction links on SuperRare.
+Robbie Barrat, or [@videodrome](https://superrare.com/videodrome) is [0x860c4604fe1125ea43f81e613e7afb2aa49546aa](https://etherscan.io/address/0x860c4604fe1125ea43f81e613e7afb2aa49546aa). I found that address by following transaction links on SuperRare.
 
 {% highlight typescript %}
 var balance = (await api.account.balance('0x860c4604fe1125ea43f81e613e7afb2aa49546aa')).result;
@@ -115,7 +115,7 @@ Take a look at [the first Nude Portrait #7 token creation transaction](https://e
 }
 {% endhighlight %}
 
-The output of this transaction was a `_tokenId` of `191`. Navigating to [superrare.co/artwork/191](https://superrare.co/artwork/191) will incidentally show you the first frame from "Nude Portrait #7".
+The output of this transaction was a `_tokenId` of `191`. Navigating to [superrare.co/artwork/191](https://superrare.com/artwork/191) will incidentally show you the first frame from "Nude Portrait #7".
 
 ### Finding Create Transactions
 
@@ -124,8 +124,8 @@ As I described above, creating a token means calling `Transfer` from address `0x
 {% highlight typescript %}
 api.log.getLogs(
   '0x41a322b28d0ff354040e2cbc676f0320d8c8850d', // contract address
-  '5977236', // fromBlock, from https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-1-191
-  '5977931', // toBlock, from https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-300-490
+  '5977236', // fromBlock, from https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-1-191
+  '5977931', // toBlock, from https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-300-490
   null,
   null,
   '0x0000000000000000000000000000000000000000000000000000000000000000' // from at creation
@@ -153,8 +153,8 @@ After creation, the tokens were transferred from @videodrome's address into newl
 {% highlight typescript %}
 api.log.getLogs(
   '0x41a322b28d0ff354040e2cbc676f0320d8c8850d', // contract address
-  '5977931', // fromBlock, from https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-1-191
-  '5979502', // toBlock, from https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-300-490
+  '5977931', // fromBlock, from https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-1-191
+  '5979502', // toBlock, from https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-300-490
   null,
   null,
   '0x000000000000000000000000860c4604fe1125ea43f81e613e7afb2aa49546aa' // videodrome's address
@@ -206,37 +206,37 @@ The complete code to this blog post is [here](https://github.com/dblock/lost-rob
 Run `npm run update` to fetch any new data updates, cached locally, and `npm run sales` to show the most recent sales.
 
 {% highlight bash %}
-frame 13 sold for 100.888 ETH on Sat Apr 10 2021 00:40:21 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-13-203
-frame 24 sold for 0.100 ETH on Fri Jul 20 2018 10:32:22 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-24-214
-frame 44 was listed for sale for 350.000 ETH on Sun Apr 25 2021 16:42:41 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-44-234
+frame 13 sold for 100.888 ETH on Sat Apr 10 2021 00:40:21 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-13-203
+frame 24 sold for 0.100 ETH on Fri Jul 20 2018 10:32:22 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-24-214
+frame 44 was listed for sale for 350.000 ETH on Sun Apr 25 2021 16:42:41 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-44-234
   sold for 110.000 ETH on Mon Apr 19 2021 14:17:32 GMT-0400
-frame 45 sold for 100.888 ETH on Fri Apr 09 2021 15:38:00 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-45-235
-frame 53 was listed for sale for 2500.000 ETH on Wed Mar 24 2021 21:44:31 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-53-243
-frame 65 was listed for sale for 545.000 ETH on Sun Apr 04 2021 22:14:41 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-65-255
+frame 45 sold for 100.888 ETH on Fri Apr 09 2021 15:38:00 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-45-235
+frame 53 was listed for sale for 2500.000 ETH on Wed Mar 24 2021 21:44:31 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-53-243
+frame 65 was listed for sale for 545.000 ETH on Sun Apr 04 2021 22:14:41 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-65-255
   sold for 47.000 ETH on Sun Apr 04 2021 08:32:42 GMT-0400
-frame 78 was listed for sale for 222.000 ETH on Fri Apr 23 2021 17:37:51 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-78-268
-frame 92 was listed for sale for 122.000 ETH on Mon Apr 26 2021 16:58:29 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-92-282
+frame 78 was listed for sale for 222.000 ETH on Fri Apr 23 2021 17:37:51 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-78-268
+frame 92 was listed for sale for 122.000 ETH on Mon Apr 26 2021 16:58:29 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-92-282
   sold for 50.000 ETH on Mon Apr 05 2021 13:50:40 GMT-0400
-frame 101 was listed for sale for 5555.000 ETH on Fri Mar 12 2021 07:11:07 GMT-0500 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-101-291
+frame 101 was listed for sale for 5555.000 ETH on Fri Mar 12 2021 07:11:07 GMT-0500 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-101-291
   sold for 1.500 ETH on Mon Dec 02 2019 13:46:32 GMT-0500
-frame 104 was listed for sale for 1000.000 ETH on Mon Mar 15 2021 16:12:56 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-104-294
+frame 104 was listed for sale for 1000.000 ETH on Mon Mar 15 2021 16:12:56 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-104-294
   sold for 19.000 ETH on Thu Jun 11 2020 16:28:09 GMT-0400
-frame 149 was listed for sale for 888.000 ETH on Wed Mar 24 2021 08:29:05 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-149-339
+frame 149 was listed for sale for 888.000 ETH on Wed Mar 24 2021 08:29:05 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-149-339
   sold for 35.000 ETH on Tue Aug 04 2020 02:06:33 GMT-0400
-frame 153 sold for 16.500 ETH on Wed Jan 01 2020 15:37:56 GMT-0500 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-153-343
-frame 165 was listed for sale for 2000.000 ETH on Mon Apr 05 2021 15:52:17 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-165-355
-frame 166 was listed for sale for 2200.000 ETH on Mon Apr 19 2021 22:24:50 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-166-356
+frame 153 sold for 16.500 ETH on Wed Jan 01 2020 15:37:56 GMT-0500 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-153-343
+frame 165 was listed for sale for 2000.000 ETH on Mon Apr 05 2021 15:52:17 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-165-355
+frame 166 was listed for sale for 2200.000 ETH on Mon Apr 19 2021 22:24:50 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-166-356
   sold for 80.000 ETH on Sat Apr 03 2021 03:56:19 GMT-0400
-frame 175 sold for 0.001 ETH on Sat Jul 11 2020 23:54:29 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-175-365
+frame 175 sold for 0.001 ETH on Sat Jul 11 2020 23:54:29 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-175-365
   sold for 0.001 ETH on Sat Jul 11 2020 23:37:43 GMT-0400
   sold for 0.001 ETH on Sat Jul 11 2020 23:30:37 GMT-0400
   sold for 0.001 ETH on Sat Jul 11 2020 23:14:22 GMT-0400
   sold for 21.000 ETH on Mon Jun 29 2020 22:48:05 GMT-0400
   sold for 1.500 ETH on Sat Dec 21 2019 00:09:56 GMT-0500
-frame 179 was listed for sale for 299.000 ETH on Mon Apr 12 2021 21:17:18 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-179-369
-frame 206 sold for 60.000 ETH on Wed Apr 07 2021 15:40:30 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-206-396
-frame 269 sold for 125.000 ETH on Mon Apr 05 2021 16:36:12 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-269-459
-frame 275 was listed for sale for 885.000 ETH on Mon Apr 19 2021 22:25:38 GMT-0400 | https://superrare.co/artwork/ai-generated-nude-portrait-7-frame-275-465
+frame 179 was listed for sale for 299.000 ETH on Mon Apr 12 2021 21:17:18 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-179-369
+frame 206 sold for 60.000 ETH on Wed Apr 07 2021 15:40:30 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-206-396
+frame 269 sold for 125.000 ETH on Mon Apr 05 2021 16:36:12 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-269-459
+frame 275 was listed for sale for 885.000 ETH on Mon Apr 19 2021 22:25:38 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-275-465
   sold for 50.000 ETH on Wed Apr 07 2021 19:29:54 GMT-0400
 {% endhighlight %}
 

@@ -26,7 +26,7 @@ cd job-scheduler
 
 ### Modify Workflow (Temporary)
 
-By default the `runner` user under which the workflow runs in the Docker container does not have write access to the current folder, therefore [the workflow](https://github.com/opensearch-project/job-scheduler/blob/main/.github/workflows/test-and-build-workflow.yml) as implemented requires one additional step. Add the following code locally in `.github/workflows/test-and-build-workflow.yml` after "Setup Java".
+By default the `runner` user under which the workflow runs in the Docker container does not have write access to the current folder, therefore [the workflow](https://github.com/opensearch-project/job-scheduler/blob/v1.13.0.0/.github/workflows/test-and-build-workflow.yml) as implemented requires one additional step. Add the following code locally in `.github/workflows/test-and-build-workflow.yml` after "Setup Java".
 
 ```yaml
 - name: Chown

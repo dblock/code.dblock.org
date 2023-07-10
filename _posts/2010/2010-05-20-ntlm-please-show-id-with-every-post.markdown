@@ -26,7 +26,7 @@ at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
 at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
 ```
 
-We’re in the middle of an Ajax POST. Examining the HTTP request we find that it doesn’t have a body. This explains why GWT is throwing this exception, but doesn’t explain why this happens. I asked for help on both the [GWT group](http://groups.google.com/group/google-web-toolkit/browse_thread/thread/6039401ab4221f7c) and on [EXTJs premium forum](http://www.extjs.com/forum/showthread.php?99321-Exception-while-dispatching-incoming-RPC-call), but didn’t get anything useful.
+We’re in the middle of an Ajax POST. Examining the HTTP request we find that it doesn’t have a body. This explains why GWT is throwing this exception, but doesn’t explain why this happens. I asked for help on both the [GWT group](http://groups.google.com/group/google-web-toolkit/browse_thread/thread/6039401ab4221f7c) and on EXTJs premium forum, but didn’t get anything useful.
 
 {% highlight http %}
 POST /dbprotect/com.example.gwt.main/service/ServiceRPC HTTP/1.1
@@ -62,6 +62,6 @@ This fix was easy. When an empty POST is sent, we must follow the protocol and p
 
 #### Suboptimal Performance
 
-There’s a big side effect to this NTLM negotiation – degraded performance. You’re getting a POST request that requires authentication every time you have a new connection. This happens a lot with AJAX sites, such as GWT-based ones. A workaround is described in [KB251404](http://support.microsoft.com/kb/251404), setting _HKEY_CURRENT_USER/Software/Microsoft/Windows/CurrentVersion/Internet Settings/DisableNTLMPreAuth_ to 1.
+There’s a big side effect to this NTLM negotiation – degraded performance. You’re getting a POST request that requires authentication every time you have a new connection. This happens a lot with AJAX sites, such as GWT-based ones. A workaround is described in [KB251404](https://mskb.pkisolutions.com/kb/251404), setting _HKEY_CURRENT_USER/Software/Microsoft/Windows/CurrentVersion/Internet Settings/DisableNTLMPreAuth_ to 1.
 
 In a properly configured Active Directory you’re most likely to be using Kerberos anyway. This requires a valid SPN. Read [this article](http://blogs.msdn.com/sql_protocols/archive/2006/12/02/understanding-kerberos-and-ntlm-authentication-in-sql-server-connections.aspx) to start – it’s about SQL server, but applies to all services. Adding a _HTTP/server.com:port_ SPN was sufficient in some of my test environments to avoid NTLM altogether.

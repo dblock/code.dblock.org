@@ -61,7 +61,7 @@ ssb   rsa2048/960955779E55310A 2013-12-24 [E]
 
 {% endhighlight %}
 
-I then exported the public key with `gpg -a --export 3AA5C34371567BD2` and [added it to my Github account](https://docs.github.com/en/articles/adding-a-new-gpg-key-to-your-github-account).
+I then exported the public key with `gpg -a --export 3AA5C34371567BD2` and [added it to my Github account](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account).
 
 ### Signing Git Commits
 

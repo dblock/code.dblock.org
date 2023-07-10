@@ -9,7 +9,7 @@ One of the things you have to be aware when writing a bot is disabled integratio
 
 ![server side closed connection]({{ site.url }}/images/posts/2016/2016-01-12-when-robots-die-slack-account-inactive-and-closed-connections/disable.gif)
 
-Using [slack-ruby-client](), you would want to handle `:close`.
+Using [slack-ruby-client](https://github.com/slack-ruby/slack-ruby-client), you would want to handle `:close`.
 
 {% highlight ruby %}
 client.on :close do |_data|

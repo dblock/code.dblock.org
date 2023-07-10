@@ -96,7 +96,7 @@ object = model.new.from_json line.strip
 object.password = "password" if (object.respond_to? 'password')
 {% endhighlight %}
 
-The second feature is that we don’t want real user data to be exported, but we’d like to preserve the relationships in the existing database. We use [faker](http://faker.rubyforge.org/) to replace all names, e-mails and websites. This can be further applied to all kinds of properties.
+The second feature is that we don’t want real user data to be exported, but we’d like to preserve the relationships in the existing database. We use [faker](https://web.archive.org/web/20110319202004/http://faker.rubyforge.org/) to replace all names, e-mails and websites. This can be further applied to all kinds of properties.
 
 {% highlight ruby %}
 object.name = Faker::Name.name

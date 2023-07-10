@@ -60,7 +60,7 @@ jobs:
 Here's how this works.
 
 1. A shell command `ls manifests/*.yml` lists all .yml files.
-2. A pipe to `| jq -R -s -c 'split("\n")[:-1]'` transforms the file list into a JSON array (from [StackOverflow#10234327](https://stackoverflow.com/questions/10234327/convert-bash-ls-output-to-json-array)). Note that [jq is installed on all GHA Linux images](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md). 
+2. A pipe to `| jq -R -s -c 'split("\n")[:-1]'` transforms the file list into a JSON array (from [StackOverflow#10234327](https://stackoverflow.com/questions/10234327/convert-bash-ls-output-to-json-array)). Note that [jq is installed on all GHA Linux images](https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2004-Readme.md). 
 3. The `matrix` output is set to the JSON array of files using [set-output](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter) with `echo "::set-output name=matrix::value`.
 4. The `manifest` values are loaded from the JSON array using [fromJson](https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#fromjson) and become part of the updated workflow.
  

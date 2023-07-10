@@ -7,8 +7,8 @@ comments: true
 ---
 Update: a recoreded talk based on this post at the CTO Summit @ Nasdaq.
 
-<a href="https://pbell.wistia.com/medias/xo6uw6v4fm"><img src="/images/about/cto-summit-nasdaq.png"></a><br>
-[CTO Summit @ Nasdaq - Inspiring Team Leads to Give Away Their Legos](https://pbell.wistia.com/medias/xo6uw6v4fm), 2016
+<a href="https://www.ctoconnection.com/topics/scaleup/videos/2016-11-01-inspiring-team-leads-to-give-away-their-legos"><img src="/images/about/cto-summit-nasdaq.png"></a><br>
+[CTO Summit @ Nasdaq - Inspiring Team Leads to Give Away Their Legos](https://www.ctoconnection.com/topics/scaleup/videos/2016-11-01-inspiring-team-leads-to-give-away-their-legos), 2016
 
 Or keep reading ...
 

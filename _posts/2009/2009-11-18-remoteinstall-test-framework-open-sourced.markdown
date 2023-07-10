@@ -10,7 +10,7 @@ dblog_post_id: 62
 
 I am pleased to announce the open sourcing of the [RemoteInstall Test Framework](https://github.com/dblock/remoteinstall).
 
-RemoteInstall is a pragmatic approach to testing and has been extremely successful at my [day job](http://www.appsecinc.com/). We went through several test framework iterations and just couldn't get any automation going. We tried expensive systems and open-source stuff. We spent cash. We made automation a priority. It continued being a dead end.
+RemoteInstall is a pragmatic approach to testing and has been extremely successful at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/). We went through several test framework iterations and just couldn't get any automation going. We tried expensive systems and open-source stuff. We spent cash. We made automation a priority. It continued being a dead end.
 
 In the meantime we were authoring MSI installers like crazy. We had to deal with a large distributed system that was having a high deployment failure rate, a system made of many components. We had hundreds of upgrade paths and it was clear that we needed to automate it. Seeing company automation efforts deadlocked, I decided that instead of trying yet another expensive test system I'll have an intern write a simple tool that can leverage VMWare Infrastructure. I wanted it to do this:
 
@@ -36,5 +36,5 @@ This made it into a full blown test framework. We now author tests in C# and Jav
 
 [Download RI Here](https://github.com/dblock/remoteinstall)
 
-I want to thank [Application Security Inc.](http://www.appsecinc.com) for helping me in making this happen and all the anonymous developers who have contributed code to RI here on Madison Ave.
+I want to thank [Application Security Inc.](https://web.archive.org/web/20131111165225/https://www.appsecinc.com) for helping me in making this happen and all the anonymous developers who have contributed code to RI here on Madison Ave.
 

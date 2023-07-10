@@ -9,7 +9,7 @@ dblog_post_id: 157
 ---
 ![]({{ site.url }}/images/posts/2011/2011-01-18-waffle-single-sign-on-user-impersonation-in-tomcat/image_3.jpg)
 
-A generous contributor (Nicolas Guillaumin, [@nguillaumin](http://www.codeplex.com/site/users/view/nguillaumin) who works for a company called [Funnelback](http://www.funnelback.com/)), has committed the much requested impersonation support to Waffle. This is pretty exciting, since it fills in a bunch of squares in the puzzle that we’re trying to assemble with the [Waffle project](https://github.com/dblock/waffle).
+A generous contributor (Nicolas Guillaumin, @nguillaumin) who works for a company called Funnelback, has committed the much requested impersonation support to Waffle. This is pretty exciting, since it fills in a bunch of squares in the puzzle that we’re trying to assemble with the [Waffle project](https://github.com/dblock/waffle).
 
 I tried it out with build 1.4.1744.0.
 

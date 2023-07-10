@@ -9,7 +9,7 @@ dblog_post_id: 162
 ---
 ![]({{ site.url }}/images/posts/2011/2011-01-27-2011-the-year-of-nosql-data-breaches/image_3.jpg)
 
-My latest article, [2011 – The Year of NoSQL Data Breaches?](http://bit.ly/eI4LdE) was published this morning on TeamSHATTER.
+My latest article, [2011 – The Year of NoSQL Data Breaches?](https://web.archive.org/web/20120330060217/http://www.teamshatter.com/uncategorized/2011-%E2%80%93-the-year-of-nosql-data-breaches) was published this morning on TeamSHATTER.
 
 I wanted to take a tangent on this topic and write down a paragraph or two about my hands-on experience with one of the NoSQL databases, [MongoDB](http://www.mongodb.org).
 

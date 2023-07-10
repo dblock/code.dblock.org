@@ -118,7 +118,7 @@ end
 
 #### Workers
 
-To test this in a local environment run `rake jobs:work` in parallel to `rails server`. On Heroku you will have to add a worker dyno by running `heroku workers 1` as described in [http://devcenter.heroku.com/articles/delayed-job](http://devcenter.heroku.com/articles/delayed-job).
+To test this in a local environment run `rake jobs:work` in parallel to `rails server`. On Heroku you will have to add a worker dyno by running `heroku workers 1` as described in [https://web.archive.org/web/20110629070127/http://devcenter.heroku.com/articles/delayed-job](https://web.archive.org/web/20110629070127/http://devcenter.heroku.com/articles/delayed-job).
 
 #### Viewing Workers
 

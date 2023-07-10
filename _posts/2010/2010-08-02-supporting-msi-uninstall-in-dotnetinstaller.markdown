@@ -8,7 +8,7 @@ comments: true
 dblog_post_id: 118
 ---
 
-Someone recently [asked](http://dotnetinstaller.codeplex.com/discussions/205186) how to support uninstall in dotNetInstaller, specifically with MSI components. It’s a question that comes up frequently, and it’s a powerful feature of dotNetInstaller. We use it for a very large bootstrapper (1.2GB) across a dozen installers, including some big ones that we didn’t write (IBM Cognos).
+Someone recently [asked](https://web.archive.org/web/20140901030820/http://dotnetinstaller.codeplex.com/discussions/205186) how to support uninstall in dotNetInstaller, specifically with MSI components. It’s a question that comes up frequently, and it’s a powerful feature of dotNetInstaller. We use it for a very large bootstrapper (1.2GB) across a dozen installers, including some big ones that we didn’t write (IBM Cognos).
 
 While the documentation explains the basics, it’s a bit thick. This is a step-by-step tutorial.
 

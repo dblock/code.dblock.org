@@ -9,7 +9,7 @@ dblog_post_id: 304
 ---
 You may have read my [previous post](https://code.dblock.org/mongoid-202-mongo-bson-bsonext-140-and-141) about the MongoDB 1.4.x Ruby driver hell.
 
-We rolled back to 1.3.1 and were running fine in production for a long time. On Friday, we started seeing intermittent _deadlock: recursive locking_ errors from the driver and our site was struggling to stay up. Very quickly the error rate rendered it unusable. A Google search yielded Mongo Ruby driver bug [RUBY-274](https://jira.mongodb.org/browse/RUBY-274), describing the exact error, which pointed a Ruby 1.9.2 threading issue [#4266](https://bugs.ruby-lang.org/issues/4266), explained in [this blog post](http://web.archive.org/web/20120228164435/http://blog.stochasticbytes.com/2011/01/rubys-threaderror-deadlock-recursive-locking-bug/).
+We rolled back to 1.3.1 and were running fine in production for a long time. On Friday, we started seeing intermittent _deadlock: recursive locking_ errors from the driver and our site was struggling to stay up. Very quickly the error rate rendered it unusable. A Google search yielded Mongo Ruby driver bug [RUBY-274](https://jira.mongodb.org/browse/RUBY-274), describing the exact error, which pointed a Ruby 1.9.2 threading issue [#4266](https://bugs.ruby-lang.org/issues/4266), explained in [this blog post](https://web.archive.org/web/20120228164435/http://blog.stochasticbytes.com/2011/01/rubys-threaderror-deadlock-recursive-locking-bug/).
 
 We were confused why this suddenly started happening with no apparent reason, created a ticket with our MongoDB provider [MongoHQ](http://mongohq.com) and bounced the replica set members one-by-one as well as our app on Heroku. It did nothing.
 

@@ -9,5 +9,5 @@ dblog_post_id: 40
 ---
 ![VMWareTasks Library](http://i3.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=vmwaretasks&DownloadId=65246)
 
-VMWareTasks 1.2 is now RC1 [> Read More](http://vmwaretasks.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=25219)
+VMWareTasks 1.2 is now RC1.
 

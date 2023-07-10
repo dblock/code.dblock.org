@@ -7,7 +7,7 @@ comments: true
 ---
 In June 2018 users started reporting slack-side disconnects in their Ruby bots, reported via [slack-ruby-client#208](https://github.com/slack-ruby/slack-ruby-client/issues/208), regardless of the concurrency library (Eventmachine or Celluloid) used. I was already observing this behavior in my larger production bots, especially [playplay.io](https://www.playplay.io) with hundreds of teams.
 
-Because this was a new behavior I assumed that the client was not seeing or handling some new type of communication error correctly at the websocket library layer. This has been an issue before, and in the case of Celluloid, IO exceptions had to be handled by emitting a `:close` event [here](https://github.com/slack-ruby/slack-ruby-client/blob/master/lib/slack/real_time/concurrency/celluloid.rb#L39). That is, the websocket library was seeing a problem and raising an exception, but the client didn't properly emit a close event, so the bots just sat there waiting for something to happen.
+Because this was a new behavior I assumed that the client was not seeing or handling some new type of communication error correctly at the websocket library layer. This has been an issue before, and in the case of Celluloid, IO exceptions had to be handled by emitting a `:close` event [here](https://github.com/slack-ruby/slack-ruby-client/blob/v0.15.1/lib/slack/real_time/concurrency/celluloid.rb#L39). That is, the websocket library was seeing a problem and raising an exception, but the client didn't properly emit a close event, so the bots just sat there waiting for something to happen.
 
 {% highlight ruby %}
 def run_loop
@@ -56,7 +56,7 @@ Gross, but effective.
 
 ### Async Implementation
 
-Because both the asynchronous library and the websocket implementation were used by thousands of projects, I naturally assumed slack-ruby-client would be more likely to have a bug. The celluloid-io code that I wrote was not detecting server-side disconnects occasionally, therefore we must have not been using celluloid-io correctly in [concurrency/celluloid.rb](https://github.com/slack-ruby/slack-ruby-client/blob/master/lib/slack/real_time/concurrency/celluloid.rb#L31). I summarized my conclusion in [celluloid-io#187](https://github.com/celluloid/celluloid-io/issues/187) and asked for help.
+Because both the asynchronous library and the websocket implementation were used by thousands of projects, I naturally assumed slack-ruby-client would be more likely to have a bug. The celluloid-io code that I wrote was not detecting server-side disconnects occasionally, therefore we must have not been using celluloid-io correctly in [concurrency/celluloid.rb](https://github.com/slack-ruby/slack-ruby-client/blob/v0.15.1/lib/slack/real_time/concurrency/celluloid.rb#L31). I summarized my conclusion in [celluloid-io#187](https://github.com/celluloid/celluloid-io/issues/187) and asked for help.
 
 It turned out that Celluloid::IO was effectively unmaintained and I was told to switch to [async](https://github.com/socketry/async). While that was a viable idea, replacing the concurrency library could easily create many new bugs without fixing the underlying issue. I wanted to understand the root cause, first.
 

@@ -17,13 +17,13 @@ The interesting part is that we copy the production database to staging before c
 
 #### Push and Pull
 
-One existing solution is data push and pull implemented [here](http://www.theirishpenguin.com/2011/01/20/push-and-pull-data-between-your-local-mongodb-and-heroku-or-mongohq/). But looking at the source code, it’s a row-by-row copy! Ouch.
+One existing solution is data push and pull implemented [here](https://www.theirishpenguin.com/2011/01/20/push-and-pull-data-between-your-local-mongodb-and-heroku-or-mongohq.html). But looking at the source code, it’s a row-by-row copy! Ouch.
 
 Let's write a task that will copy one MongoDB database to another using something more efficient.
 
 #### Reading Heroku-San Configuration
 
-We’re using [Heroku-san](http://jqr.github.com/2010/08/27/easy-heroku-deploys-with-heroku-san.html), so we’ve got a _heroku.yml_ sitting in the config folder with two values for MONGOHQ_URL under _staging_ and _production_. We’ll load the file with YAML, fetch _MONGOHQ_URL_ and parse it into parts. For those using regular expressions to parse MongoHQ urls, pay attention: everything except the database name is just a regular piece of a URL.
+We’re using [Heroku-san](https://web.archive.org/web/20110704143857/http://jqr.github.com/2010/08/27/easy-heroku-deploys-with-heroku-san.html), so we’ve got a _heroku.yml_ sitting in the config folder with two values for MONGOHQ_URL under _staging_ and _production_. We’ll load the file with YAML, fetch _MONGOHQ_URL_ and parse it into parts. For those using regular expressions to parse MongoHQ urls, pay attention: everything except the database name is just a regular piece of a URL.
 
 {% highlight ruby %}
 def db_copy_load_config
@@ -48,7 +48,7 @@ I \*heart\* functions that return two values!
 
 #### Copying Databases
 
-MongoDB has a nifty `copyDatabase` (or clone) feature described [here](https://docs.mongodb.com/v2.2/reference/method/db.copyDatabase). It’s incremental, so we must drop tables before calling it. We also have to ensure that we don’t drop system tables, otherwise our database may be rendered inaccessible.
+MongoDB has a nifty `copyDatabase` (or clone) feature described [here](https://www.mongodb.com/docs/v2.2/reference/method/db.copyDatabase). It’s incremental, so we must drop tables before calling it. We also have to ensure that we don’t drop system tables, otherwise our database may be rendered inaccessible.
 
 {% highlight ruby %}
 desc "MongoDB database to database copy"

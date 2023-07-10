@@ -7,7 +7,7 @@ tags: [open source, jna, java]
 comments: true
 dblog_post_id: 173
 ---
-You might have heard about the massive controversy about [Hudson’s move to Github](http://www.infoq.com/news/2011/02/sonatype-hudson). I could have stirred a big storm in a cup for the [Java Native Access (JNA)](https://github.com/twall/jna/) project, but instead of I spent a few hours this morning resurrecting it back to some life form on [Kenai](http://kenai.com/) [[JNA-172](http://java.net/jira/browse/JNA-172)]. It was about time, even [people on Habrahabr noticed](http://habrahabr.ru/blogs/java/113436/). I heard from [@toddfast](http://java.net/people/85599-toddfast)  who is working on a 3.2.8 release too, so all will be good soon.
+You might have heard about the massive controversy about [Hudson’s move to Github](http://www.infoq.com/news/2011/02/sonatype-hudson). I could have stirred a big storm in a cup for the [Java Native Access (JNA)](https://github.com/twall/jna/) project, but instead of I spent a few hours this morning resurrecting it back to some life form on [Kenai](https://web.archive.org/web/20111005153529/http://kenai.com/) (JNA-172). It was about time, even [people on Habrahabr noticed](http://habrahabr.ru/blogs/java/113436/). I heard from [@toddfast](https://web.archive.org/web/20110217073825/http://java.net/people/85599-toddfast)  who is working on a 3.2.8 release too, so all will be good soon.
 
 #### Website
 
@@ -21,15 +21,17 @@ To celebrate the new old JNA, I added a logo. I found this one on the internet, 
 
 #### Migration
 
-I tried the Kenai Wiki and it worked quite well. But we have tons of existing content in SVN, so I created a website in the features section of the JNA project. This enabled Webdav on [https://jna.java.net/](https://jna.java.net/) and a /website/jna/ path into which I can upload files. This is [documented here](http://kenai.com/projects/help/pages/UploadWebsiteFiles). Uploading files basically brings the old content into the Kenai infrastructure. I used [BitKinex](http://www.bitkinex.com/) to upload, obviously we need to enable an SCM hook [[JNA-177](http://java.net/jira/browse/JNA-177)]. This is the same as it worked on the old java.net.
+I tried the Kenai Wiki and it worked quite well. But we have tons of existing content in SVN, so I created a website in the features section of the JNA project. This enabled Webdav on jna.java.net and a /website/jna/ path into which I can upload files. This is [documented here](https://web.archive.org/web/20111006014214/http://kenai.com/projects/help/pages/UploadWebsiteFiles). Uploading files basically brings the old content into the Kenai infrastructure. I used [BitKinex](http://www.bitkinex.com/) to upload, obviously we need to enable an SCM hook (JNA-177). This is the same as it worked on the old java.net.
 
 #### Issues?
 
-If you find issues with the JNA site, please [create them in JIRA](http://java.net/jira/browse/JNA).
+If you find issues with the JNA site, please create them in JIRA.
 
 #### Source Control
 
-Check out JNA source code from [https://svn.java.net/svn/jna~svn/trunk](https://svn.java.net/svn/jna~svn/trunk "https://svn.java.net/svn/jna~svn/trunk").
+Check out JNA source code from `svn.java.net/svn/jna~svn/trunk`. 
+
+**Update**: JNA is now [on GitHub](https://github.com/java-native-access/jna/).
 
 #### Famous Last Thoughts
 

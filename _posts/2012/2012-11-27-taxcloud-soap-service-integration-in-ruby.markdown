@@ -9,7 +9,7 @@ dblog_post_id: 360
 ---
 ![]({{ site.url }}/images/posts/2012/2012-11-27-taxcloud-soap-service-integration-in-ruby/image_3.jpg)
 
-I’ve been working on the the [tax_cloud](https://github.com/drewtempelmeyer/tax_cloud) gem for the past couple of days and am happy to announce version 0.2.0, released today. The gem was started by [@tempelmeyer](https://twitter.com/tempelmeyer/) and is now a mature wrapper for the [TaxCloud US Sales Tax calculation service](https://taxcloud.net/default.aspx).
+I’ve been working on the the [tax_cloud](https://github.com/drewtempelmeyer/tax_cloud) gem for the past couple of days and am happy to announce version 0.2.0, released today. The gem was started by [@tempelmeyer](https://twitter.com/tempelmeyer/) and is now a mature wrapper for the [TaxCloud US Sales Tax calculation service](https://taxcloud.com/).
 
 This library is also a nice example of a generic SOAP client wrapper in Ruby. I wanted to point out several successful patterns for this integration, which I cannot take credit for, for the most part.
 

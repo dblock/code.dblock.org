@@ -6,7 +6,7 @@ tags: [mongodb, mongoid]
 ---
 Coming from [mongoid-locker#57](https://github.com/mongoid/mongoid-locker/pull/57), in which I, too, wasn't sure whether calling `.utc` on a timestamp was necessary with Mongoid.
 
-The [MongoDB documentation](https://docs.mongodb.com/manual/tutorial/model-time-data/) is pretty clear - _MongoDB stores times in UTC by default, and will convert any local time representations into this form._ The [Mongoid documentation on timestamps](https://docs.mongodb.com/mongoid/master/tutorials/mongoid-documents/#timestamping) doesn't say anything about time zones, however its [confguration docs](https://docs.mongodb.com/mongoid/master/tutorials/mongoid-configuration/index.html) say that you have to set `use_utc` to `true` to _ensure all times are UTC in the app side_.
+The [MongoDB documentation](https://docs.mongodb.com/manual/tutorial/model-time-data/) is pretty clear - _MongoDB stores times in UTC by default, and will convert any local time representations into this form._ The Mongoid documentation on timestamps](https://web.archive.org/web/20210414083218/https://docs.mongodb.com/mongoid/master/tutorials/mongoid-documents/#timestamping) doesn't say anything about time zones, however its [confguration docs](https://www.mongodb.com/docs/mongoid/current/reference/configuration/) say that you have to set `use_utc` to `true` to _ensure all times are UTC in the app side_.
 
 What all of this means is that you don't have to worry about timezones unless you're trying to display a date/time to a user in their time zone. Just store a date/time, use it as you would use any timestamp regardless of where it came from, and call it a day.
 
@@ -27,7 +27,7 @@ Foo.create!
 
 The MongoDB log shows that the time is inserted in UTC, `"updated_at"=>2018-08-25 10:12:58 UTC`.
 
-According to [the documentation](https://docs.mongodb.com/manual/core/shell-types/), internally, Date objects are stored as a signed 64-bit integer representing the number of milliseconds since the Unix epoch (Jan 1, 1970). The shell returns an ISO date.
+According to [the documentation](https://www.mongodb.com/developer/products/mongodb/bson-data-types-date/), internally, Date objects are stored as a signed 64-bit integer representing the number of milliseconds since the Unix epoch (Jan 1, 1970). The shell returns an ISO date.
 
 {% highlight bash %}
 $ mongo

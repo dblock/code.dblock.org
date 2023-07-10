@@ -21,4 +21,4 @@ fjs.parentNode.insertBefore(js, fjs);
 </blockquote>
 </div></p>
 
-A [Facebook Live interview](https://www.facebook.com/NASDAQ/videos/10154582987442429) during [CTO Summit NYC 2016](http://www.ticketbase.com/events/2016-new-york-nasdaq-cto-summit) following a talk on [Inspiring Team Leads to Give Away Their Legos](http://www.slideshare.net/dblockdotorg/nasdaq-cto-summit-inspiring-team-leads-to-give-away-legos).
+A [Facebook Live interview](https://www.facebook.com/NASDAQ/videos/10154582987442429) during [CTO Summit NYC 2016](https://www.ctoconnection.com/events/in-person/2016-11-01-the-2016-new-york-cto-summit) following a talk on [Inspiring Team Leads to Give Away Their Legos](http://www.slideshare.net/dblockdotorg/nasdaq-cto-summit-inspiring-team-leads-to-give-away-legos).

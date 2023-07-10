@@ -7,11 +7,7 @@ tags: [vmware]
 comments: true
 dblog_post_id: 48
 ---
-[![VMWareTasks Library](http://i3.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=vmwaretasks&DownloadId=65246 "VMWareTasks Library")](http://vmwaretasks.codeplex.com)
-
 I've released **VMWareTasks 1.3** for VixCOM 1.6.3 and 1.7.0.
-
-[http://vmwaretasks.codeplex.com](http://vmwaretasks.codeplex.com) |
 
 #### Release Notes
 

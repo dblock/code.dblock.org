@@ -11,7 +11,7 @@ Before I start writing anything serious here, I got to get some credibility :)
 
 My name is Daniel Doubrovkine, aka dB. I've had a blog ([www.dblock.org](http://www.dblock.org)) since 1994 or something like that and I've been in technology for slightly longer than that. I've founded several companies, worked for [The Evil Empire](http://www.microsoft.com) for five years and several other businesses since.
 
-Today I am Development Manager of Products at [Application Security Inc.](http://www.appsecinc.com). I have a team of three dozen people shipping two products: [AppDetectivePro](http://www.appsecinc.com/products/appdetective/) and [DbProtect](http://www.appsecinc.com/products/dbprotect/index.shtml). I contribute to a variety of open-source projects as well on my free time and have posted a few articles on [CodeProject](http://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=913212).
+Today I am Development Manager of Products at [Application Security Inc.](https://web.archive.org/web/20131111165225/https://www.appsecinc.com). I have a team of three dozen people shipping two products: [AppDetectivePro](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/products/appdetective/) and [DbProtect](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/products/dbprotect/index.shtml). I contribute to a variety of open-source projects as well on my free time and have posted a few articles on [CodeProject](http://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=913212).
 
 I also have a rather large pet project, FoodCandy - a food social network with thousands of members. FoodCandy is powered by [SnCore](https://github.com/dblock/sncore), a social networking SDK that I wrote from scratch.
 

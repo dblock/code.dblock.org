@@ -9,7 +9,7 @@ dblog_post_id: 215
 ---
 I just released a new version of [svn2svn 1.2](https://github.com/dblock/svn2svn), a tool for replaying changes in SVN repositories.
 
-- Added /incremental (/i) mode to svn2svn; detects all previously synced revisions and starts at the latest revision that has not been synced (thx [dei79](http://www.codeplex.com/site/users/view/dei79)).
+- Added /incremental (/i) mode to svn2svn; detects all previously synced revisions and starts at the latest revision that has not been synced (thx @dei79).
 - Added fs2svn, a tool that synchronizes a file system folder to SVN.
 - Added svn2, a tool that can recycle unversioned files (sync).
 - Added /stopOnCopy[+/-] to svn2svn, default isto follow branch/copy history.

@@ -14,7 +14,7 @@ There’s a giant grey rat outside of my window and a bunch of non-union workers
 
 #### Preamble
 
-I was trying to retrieve Active Directory forest trust information via [DsGetForestTrustInformationW](http://msdn.microsoft.com/en-us/library/ms675988(VS.85).aspx). The function takes a pointer to a [PLSA_FOREST_TRUST_INFORMATION](http://msdn.microsoft.com/en-us/library/aa378335(VS.85).aspx), a pointer to a pointer to an [LSA_FOREST_TRUST_INFORMATION](http://msdn.microsoft.com/en-us/library/aa378335(VS.85).aspx) structure. So far so good, we just need to pay attention to the several levels of indirection: whenever we want the value of a pointer to something, it’s a `ByReference`.
+I was trying to retrieve Active Directory forest trust information via [DsGetForestTrustInformationW](https://learn.microsoft.com/en-us/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetforesttrustinformationw). The function takes a pointer to a [PLSA_FOREST_TRUST_INFORMATION](https://learn.microsoft.com/en-us/windows/win32/api/ntsecapi/ns-ntsecapi-lsa_forest_trust_information), a pointer to a pointer to an [LSA_FOREST_TRUST_INFORMATION](https://learn.microsoft.com/en-us/windows/win32/api/ntsecapi/ns-ntsecapi-lsa_forest_trust_information) structure. So far so good, we just need to pay attention to the several levels of indirection: whenever we want the value of a pointer to something, it’s a `ByReference`.
 
 {% highlight java %}
 public int DsGetForestTrustInformation(String serverName, String trustedDomainName, int Flags,
@@ -30,7 +30,7 @@ public static class PLSA_FOREST_TRUST_INFORMATION extends Structure {
 }
 {% endhighlight %}
 
-[LSA_FOREST_TRUST_INFORMATION](http://msdn.microsoft.com/en-us/library/aa378335(VS.85).aspx) is a structure that contains a `RecordCount` number of [PLSA_FOREST_TRUST_RECORD](http://msdn.microsoft.com/en-us/library/aa378336(v=VS.85).aspx) items. Those are pointers, so `Entries` is an array of pointers. Since we want the value of a pointer, we use `ByReference` again.
+[LSA_FOREST_TRUST_INFORMATION](https://learn.microsoft.com/en-us/windows/win32/api/ntsecapi/ns-ntsecapi-lsa_forest_trust_information) is a structure that contains a `RecordCount` number of [PLSA_FOREST_TRUST_RECORD](https://learn.microsoft.com/en-us/windows/win32/api/ntsecapi/ns-ntsecapi-lsa_forest_trust_record) items. Those are pointers, so `Entries` is an array of pointers. Since we want the value of a pointer, we use `ByReference` again.
 
 {% highlight java %}
 public static class LSA_FOREST_TRUST_INFORMATION extends Structure {
@@ -74,7 +74,7 @@ typedef struct _LSA_FOREST_TRUST_RECORD {
 } LSA_FOREST_TRUST_RECORD;
 {% endhighlight %}
 
-Note that MSDN has a mistake [here](http://msdn.microsoft.com/en-us/library/aa378336(VS.85).aspx), missing the `Time` field, which gave me lots of headache and wasted hours of my time. Got to use definitions in platform SDK.
+Note that MSDN has a mistake [here](https://learn.microsoft.com/en-us/windows/win32/api/ntsecapi/ns-ntsecapi-lsa_forest_trust_record), missing the `Time` field, which gave me lots of headache and wasted hours of my time. Got to use definitions in platform SDK.
 
 This is a union. How do you declare this in JNA?
 

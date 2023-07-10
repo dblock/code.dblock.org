@@ -7,7 +7,7 @@ tags: [open source, security, ui, dotnetinstaller, win32]
 comments: true
 dblog_post_id: 158
 ---
-Following a much pleasing trend of developers contributing major functionality to my open-source projects, [@nsleightholm](http://www.codeplex.com/site/users/view/nsleightholm) (Neil Sleightholm who works for a company called [X2Systems Ltd](http://www.x2systems.com).) has contributed support for UAC elevation on install to [dotNetInstaller 2.0](https://github.com/dblock/dotnetinstaller).
+Following a much pleasing trend of developers contributing major functionality to my open-source projects, @nsleightholm (Neil Sleightholm who works for a company called [X2Systems Ltd](http://www.x2systems.com).) has contributed support for UAC elevation on install to [dotNetInstaller 2.0](https://github.com/dblock/dotnetinstaller).
 
 Until now you had to mark your Setup.exe to elevate in the manifest and the user was prompted to elevate upfront. This is not the default behavior of MSI installers and is not an ideal user experience. It also creates a major problem for installers that need to reboot in the middle, as Windows Defender will block any process that tries to elevate while auto-starting. Both of these issues are resolved.
 

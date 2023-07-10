@@ -9,7 +9,7 @@ dblog_post_id: 316
 ---
 ![capybara4-510x394]({{ site.url }}/images/posts/2012/2012-02-12-dont-hate-ui-testing-reliably-testing-asynchronous-ui-w-rspec-capybara/capybara4-510x394_2.jpg)
 
-Last week I wrote [an article on the Art.sy Enginering blog about testing with RSpec and Capybara](http://artsy.github.com/blog/2012/02/03/reliably-testing-asynchronous-ui-w-slash-rspec-and-capybara).
+Last week I wrote [an article on the Art.sy Enginering blog about testing with RSpec and Capybara](https://artsy.github.io/blog/2012/02/03/reliably-testing-asynchronous-ui-w-slash-rspec-and-capybara).
 
 This wasn’t the first time I dealt with UI testing. And I am definitely getting a hang of it. I believe it goes in hand with the fact that I detest using mocks in tests and prefer to test the real thing. Sacrificing test purity for better coverage is better, IMHO.
 

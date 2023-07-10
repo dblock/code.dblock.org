@@ -9,7 +9,7 @@ dblog_post_id: 228
 ---
 I was a bit surprised to see mongoid drop pagination support in 2.0.2 ([here](https://github.com/mongoid/mongoid/commit/087c95aa706e4df50a6db0f302c42dd815df8b34) and [here](https://github.com/mongoid/mongoid/commit/f7f66f2345336ecc361ca27bbfa8f8a25443587f)). It got some people confused (see mongoid#983). In a project that uses [will_paginate](https://github.com/mislav/will_paginate), this results in very slow large queries, but no other breakage. It looks like Mongoid did the right thing though – their implementation was messy and other extensions do a much cleaner job.
 
-Here’s what I had to do to switch from will_paginate to [kaminari](https://github.com/amatsuda/kaminari). The latter works well with Mongoid 2.0.2.
+Here’s what I had to do to switch from will_paginate to [kaminari](https://github.com/kaminari/kaminari). The latter works well with Mongoid 2.0.2.
 
 Replace will_paginate with kaminari in Gemfile.
 
@@ -36,7 +36,7 @@ If you have a shared pagination block (eg. _app/views/shared/pagination/_paginat
   = paginate items
 {% endhighlight %}
 
-There’s a pull request [#140](https://github.com/amatsuda/kaminari/pull/140/) for _page_entries_info_, it looks like it still has a couple of issues. We’ve added [config/initializers/kaminari.rb](https://gist.github.com/dblock/1111587) for now.
+There’s a pull request [#140](https://github.com/kaminari/kaminari/pull/140/) for _page_entries_info_, it looks like it still has a couple of issues. We’ve added [config/initializers/kaminari.rb](https://gist.github.com/dblock/1111587) for now.
 
 If you’re paginating arrays you can inject a few methods into a paged result set on-the-fly to make it play nice.
 

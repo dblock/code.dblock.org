@@ -13,4 +13,4 @@ tl;dr [watch the video](https://www.youtube.com/watch?v=e9HLflRXMcA)
 
 Me announcing the open-source Garner gem, [https://github.com/artsy/garner](https://github.com/artsy/garner) and talking about server-side caching. A few people came up to me after the quick talk and said it really helped them put 2 and 2 together between If-Modified-Since, If-None-Match, E-Tags and 304s. Cool.
 
-Amongst other talks at GoRuCo I encourage you to watch [David Chelimsky’s presentation on DRY](http://confreaks.com/videos/984-goruco2012-maintaining-balance-while-reducing-duplication-part-ii) and then, of course, the [rest of the awesome talks at the best Ruby conference in the world](http://confreaks.com/events/goruco2012).
+Amongst other talks at GoRuCo I encourage you to watch [David Chelimsky’s presentation on DRY](https://www.youtube.com/watch?v=UvlyJv0eIf8) and then, of course, the [rest of the awesome talks at the best Ruby conference in the world](https://www.youtube.com/results?search_query=gogaruco+2012).

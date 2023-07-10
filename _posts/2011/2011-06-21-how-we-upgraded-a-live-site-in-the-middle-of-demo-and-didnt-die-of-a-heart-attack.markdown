@@ -23,7 +23,7 @@ A lot of small things added up to this, preventing many heart attacks and theref
 
 1. We have a culture where it’s OK to fail. Relieving as much unnecessary pressure as possible helps people make rational decisions and focus on the problem rather than on the stress.
 2. We have working continuous integration (using [CIJoe](https://github.com/defunkt/cijoe)) that builds, runs tests and deploys the system to a staging environment that looks like a copy of production.
-3. We use an automated system ([Heroku Bartender](https://code.dblock.org/ShowPost.aspx?Id=186)) for deploying to production. We can easily rollback in the case of a disaster. We’ve done this a couple of times.
+3. We use an automated system called Heroku Bartender for deploying to production. We can easily rollback in the case of a disaster. We’ve done this a couple of times.
 4. We deploy several times a day, rain or shine. We have experienced live update many times over and worked through many early failures.
 5. We deploy to a virtually zero downtime platform ( [Heroku](http://www.heroku.com/)), which compiles the application and swaps instances without terminating any requests, queuing them inside a proxy.
 6. We are very diligent about testing regressions. Our best tests are those that make sure we don’t reintroduce previously found bugs.

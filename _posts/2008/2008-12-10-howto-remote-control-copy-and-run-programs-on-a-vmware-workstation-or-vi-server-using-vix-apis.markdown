@@ -11,7 +11,7 @@ I've been playing with [VMware](http://www.vmware.com/) lately, both Workstation
 
 #### What do we use this for?
 
-We (at my [day job](http://www.appsecinc.com/aboutus/index.shtml)) developed a tool (in C#) that runs MSI installers to make sure the product installs on various knownly good or bad environments, sort of unit testing installers. We also have an ESX environment that we share.
+We (at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/aboutus/index.shtml)) developed a tool (in C#) that runs MSI installers to make sure the product installs on various knownly good or bad environments, sort of unit testing installers. We also have an ESX environment that we share.
 
 #### VMWare Programming APIs
 
@@ -24,7 +24,7 @@ There're two types of APIs.
 #### What do you need?
 
 - Either VMWare [Workstation 6.5](http://www.vmware.com/download/ws/), a VI environment (I use ESX), or both.
-- VMWare ViX. This is the SDK, obtained from  [<u>http://www.vmware.com/download/sdk/vmauto.html</u>](http://www.vmware.com/download/sdk/vmauto.html). The new 1.6.2 version is required for VI support.
+- VMWare ViX. This is the SDK, obtained from  [here](https://customerconnect.vmware.com/downloads/get-download?downloadGroup=VIXAPI114). The new 1.6.2 version is required for VI support.
 
 #### Connecting to a VMWare Workstation or ESX Server
 

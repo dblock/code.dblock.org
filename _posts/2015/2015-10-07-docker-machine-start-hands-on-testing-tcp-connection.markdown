@@ -7,7 +7,7 @@ comments: true
 ---
 This was a stubborn one.
 
-Was trying to use [Docker](https://www.docker.com) via [Dusty](http://dusty.gc.com) for the first time.
+Was trying to use [Docker](https://www.docker.com) via [Dusty](https://web.archive.org/web/20151217180459/http://dusty.gc.com/) for the first time.
 
 ```
 docker-machine --debug start dusty

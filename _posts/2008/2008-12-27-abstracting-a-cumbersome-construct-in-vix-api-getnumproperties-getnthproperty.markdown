@@ -7,7 +7,7 @@ tags: [vmware]
 comments: true
 dblog_post_id: 28
 ---
-Did I tell you how much I love **[yield return](http://msdn.microsoft.com/en-us/library/9k7k7cf0.aspx)**?
+Did I tell you how much I love **[yield return](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/yield)**?
 
 One of the peculiar VIX COM API constructs is the combination that returns arrays of properties. This is done with two functions: `GetNumProperties` and `GetNthProperties`. The first returns the number of property arrays returned by the job and the second fetches a property array at a given index. The first obvious step is to wrap the functions within the job class.
 

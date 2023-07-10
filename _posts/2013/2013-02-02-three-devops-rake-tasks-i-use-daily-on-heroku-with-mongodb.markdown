@@ -23,7 +23,7 @@ And, please remember, that with great power (and the word "production" in much o
 
 #### Execute a Rake task with local code modifications and the configuration of a production environment.
 
-This is made possible by [heroku-commander](https://github.com/dblock/heroku-commander). The library wraps the Heroku CLI (intro [here](http://artsy.github.com/blog/2013/01/31/create-mongodb-command-lines-with-mongo/)) and will run _heroku config –s_. It’s now easy to reach out to a Heroku application and retrieve its configuration programmatically without worrying about API keys (by default it will use the Heroku app defined via the "heroku" GIT remote). We will also need a bit of code to apply our application’s naming convention. This lets me change the execution environment to the one of a remote Heroku application, in Ruby.
+This is made possible by [heroku-commander](https://github.com/dblock/heroku-commander). The library wraps the Heroku CLI (intro [here](https://artsy.github.io/blog/2013/01/31/create-mongodb-command-lines-with-mongo/)) and will run _heroku config –s_. It’s now easy to reach out to a Heroku application and retrieve its configuration programmatically without worrying about API keys (by default it will use the Heroku app defined via the "heroku" GIT remote). We will also need a bit of code to apply our application’s naming convention. This lets me change the execution environment to the one of a remote Heroku application, in Ruby.
 
 {% highlight ruby %}
 module Heroku
@@ -70,7 +70,7 @@ def system!(cmdline)
 end
 {% endhighlight %}
 
-Instead of making MongoDB command lines manually, I’ve used a new gem called [mongoid-shell](https://github.com/dblock/mongoid-shell) (intro [here](http://artsy.github.com/blog/2013/01/31/create-mongodb-command-lines-with-mongo/)).
+Instead of making MongoDB command lines manually, I’ve used a new gem called [mongoid-shell](https://github.com/dblock/mongoid-shell) (intro [here](https://artsy.github.io/blog/2013/01/31/create-mongodb-command-lines-with-mongo/)).
 
 {% highlight ruby %}
 namespace :db do

@@ -7,7 +7,7 @@ tags: [waffle, jna, security, win32]
 comments: true
 dblog_post_id: 91
 ---
-I’ve been working on porting [WAFFLE](https://github.com/dblock/waffle) to Java/ [JNA](https://github.com/twall/jna/). As usual I have modest and practical goals with that project: to provide a working example for everything InitializeSecurityContext and AcceptSecurityContext and to replace the .NET -> COM -> Java bridge for [our application](http://www.appsecinc.com/products/dbprotect/). So lets get started.
+I’ve been working on porting [WAFFLE](https://github.com/dblock/waffle) to Java/ [JNA](https://github.com/twall/jna/). As usual I have modest and practical goals with that project: to provide a working example for everything InitializeSecurityContext and AcceptSecurityContext and to replace the .NET -> COM -> Java bridge for [our application](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/products/dbprotect/). So lets get started.
 
 #### The Problem
 
@@ -27,9 +27,9 @@ Protocols often require several exchanges. For example, I may need to obtain the
 
 SSPI allows you to do all this with any protocol or SSPI provider. There’s an NTLM SSPI provider, Kerberos SSPI provider, etc. SSPI describes three important calls that doo all of the above.
 
-- [AcquireCredentialsHandle](http://msdn.microsoft.com/en-us/library/aa374712(VS.85).aspx): gets a HANDLE for outbound (client) or inbound (server) credentials
-- [InitializeSecurityContext](http://msdn.microsoft.com/en-us/library/aa375506(VS.85).aspx): creates (or continues) a client-side security context
-- [AcceptSecurityContext](http://msdn.microsoft.com/en-us/library/aa374703(VS.85).aspx): creates (or continues) a server-side security context
+- [AcquireCredentialsHandle](https://learn.microsoft.com/en-us/windows/win32/api/sspi/nf-sspi-acquirecredentialshandlea): gets a HANDLE for outbound (client) or inbound (server) credentials
+- [InitializeSecurityContext](https://learn.microsoft.com/en-us/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta): creates (or continues) a client-side security context
+- [AcceptSecurityContext](https://learn.microsoft.com/en-us/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext): creates (or continues) a server-side security context
 
 #### Implementation
 

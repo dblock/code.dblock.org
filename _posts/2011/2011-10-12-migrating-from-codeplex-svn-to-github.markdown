@@ -15,4 +15,4 @@ Usernames in authors files start with `SND\`, so mine is `SND\dblock_cp`. These 
 git svn clone --authors-file=../authors.txt -r 57472:HEAD https://log4jna.svn.codeplex.com/svn log4jna
 ```
 
-I used to be a fan of CodePlex in its early days. I have about a dozen projects on it now. So why am I moving something off CodePlex to Github? It’s mostly because of comments like the one from the CodePlex’s Principal Development Manager (jwanagel) in [#20445](http://codeplex.codeplex.com/workitem/20445) and [#23350](http://codeplex.codeplex.com/workitem/25350). The latter has been open since February 2010.
+I used to be a fan of CodePlex in its early days. I have about a dozen projects on it now. So why am I moving something off CodePlex to Github? It’s mostly because of comments like the one from the CodePlex’s Principal Development Manager (jwanagel) in #20445 and #23350. The latter has been open since February 2010.

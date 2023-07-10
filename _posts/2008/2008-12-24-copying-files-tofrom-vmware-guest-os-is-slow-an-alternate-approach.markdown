@@ -53,7 +53,7 @@ public string PathToNetworkPath(string ip, string value)
 }
 {% endhighlight %}
 
-Mapping a network drive is implemented in mpr.dll with [WNetAddConnection2](http://msdn.microsoft.com/en-us/library/aa385413(VS.85).aspx). A wrapper class will do the job.
+Mapping a network drive is implemented in mpr.dll with [WNetAddConnection2](https://learn.microsoft.com/en-us/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection2a). A wrapper class will do the job.
 
 {% highlight c# %}
 public class NetworkDrive
