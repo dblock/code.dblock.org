@@ -376,6 +376,151 @@ ENDPOINT=http://localhost:8080 CONFIG_ENDPOINT=http://localhost:19071 poetry run
 < DELETE http://localhost:19071/application/v2/tenant/default/application/default - 200
 {% endhighlight %}
 
+### Weaviate
+Weaviate is a vector search engine specifically designed for natural language and numerical data. It uses contextualized embeddings in data objects to understand semantic similarity. Currently, it supports only Hierarchical Navigable Small World(HNSW) indexing and is more costly on building data to indexes however has a fast query time and high scalability. Weaviate is open-source, easy to use, flexible, extensible and has a Contributor License Agreement.
+
+After you sign up at Weaviate Cloud Services WCS, and create a new free tier Weaviate Cluster with authentication. Note your cluster URL and API key (optional). The endpoint will have the following format https://myindex.weaviate.network.
+
+It is easy to create some objects with vectors.
+
+{% highlight python %}
+
+with Client(
+    event_hooks={
+        "request": [log_request],
+        "response": [log_response, Response.raise_for_status],
+    }
+) as client:
+    # index data
+    vectors = [
+        {
+            "id": "vec1",
+            "values": [0.1, 0.2, 0.3],
+            "properties": {
+                "genre": "drama"
+            }
+        },
+        {
+            "id": "vec2",
+            "values": [0.2, 0.3, 0.4],
+            "properties": {
+                "genre": "action"
+            }
+        }
+    ]
+
+    objects = []
+    for vector in vectors:
+        obj = {
+            "class": "Vectors",
+            "properties": {
+                "vector": vector["values"]
+            }
+        }
+        objects.append(obj)
+
+    client.post(urljoin(endpoint, "/v1/batch/objects"), json={"objects": objects}, headers=headers)
+{% endhighlight %}
+
+The search is pretty straight forward. Weaviate also has a GraphQl interface online.
+
+{% highlight python %}
+    # search for data
+    query = {
+        "fields": "vector",
+        "nearVector": {
+            "vector": [0.1],
+            "certainty": 0.9
+        }
+    }
+
+    response = client.get(urljoin(endpoint, "/v1/objects"), params=query, headers=headers).json()
+    for obj in response["objects"]:
+        print(obj)
+{% endhighlight %}
+
+Deleting objects of the same class is simple.
+
+{% highlight python %}
+    client.delete(urljoin(endpoint, f"/v1/schema/Vectors"), headers=headers)
+{% endhighlight %}
+
+You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/weaviate/hello.py).
+
+
+### Qdrant
+Qdrant is similarity vector search engine designed for a wide range of applications, including recommendation systems, image search, and natural language processing. It is open-source, scalable and allows dynamic updates to the index. It is particularly suitable for scenarios where the vector data is constantly evolving and vectors may be modified without interrupting the search functionality. Quadrant is licensed under Apache 2.0.
+
+Qdrant is built upon a concept of indexes, where vectors are organized and stored in "collections" for quick retrieval. Currently it only supports HNSW (Hierarchical Navigable Small World) as vector index.
+
+After you sign up at Weaviate Cloud Services WCS, and create a new free tier Weaviate Cluster with authentication. Note your cluster URL and API key. The endpoint will have the following format https://my-cluster.cloud.qdrant.io:6333/.
+
+Create an index in the collections.
+{% highlight python %}
+
+endpoint = os.environ["ENDPOINT"]
+api_key = os.environ["API_KEY"]
+index_name = "my-index"
+
+index = {
+    "vectors": {
+        "size": 3,
+        "distance": "Cosine"
+    }
+}
+
+vectors = [
+    {
+        "id": 1,
+        "vector": [0.1, 0.2, 0.3],
+        "payload": {
+            "genre": "drama"
+        }
+    },
+    {
+        "id": 2,
+        "vector": [0.2, 0.3, 0.4],
+        "payload": {
+            "genre": "action"
+        }
+    }
+]
+
+payload = {"points": vectors}
+
+client.get(urljoin(endpoint, "collections"), headers=headers),
+
+client.put(urljoin(endpoint, f"/collections/{index_name}"),
+            json=index, headers=headers)
+{% endhighlight %}
+
+Uploading vectors and search is straight forward.
+
+{% highlight python %}
+# upload vectors
+client.put(
+    urljoin(endpoint, f"/collections/{index_name}/points?wait=true"),
+    data=dumps(payload), headers=headers)
+
+# search for vectors
+query = '{"vector": [0.1,0.2,0.3], "limit": 1}'
+response = client.post(
+    urljoin(endpoint, f"/collections/{index_name}/points/search"),
+    data=query, headers=headers)
+print(response.json())
+{% endhighlight %}
+
+It is easy to delete all vectors in an index.
+
+{% highlight python %}
+# delete the collection
+client.delete(urljoin(endpoint, f"/collections/{index_name}"),
+                headers=headers)
+{% endhighlight %}
+
+You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/qdrant/hello.py).
+
+
 ### Others
 
 This blog post and [its code](https://github.com/dblock/vectordb-hello-world/) could use your help for more examples for [Milvus](https://github.com/milvus-io/milvus), [Vector.ai](https://github.com/vector-ai/vectorai), [Qdrant](https://qdrant.tech/), [Weaviate](https://github.com/weaviate/weaviate), [NucliaDB](https://github.com/nuclia/nucliadb), [Vald](https://vald.vdaas.org/), [Postgres pgvector](https://github.com/pgvector/pgvector), etc.
