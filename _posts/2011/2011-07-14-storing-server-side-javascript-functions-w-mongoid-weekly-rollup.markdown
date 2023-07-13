@@ -7,9 +7,9 @@ tags: [mongodb]
 comments: true
 dblog_post_id: 231
 ---
-I was working on some map/reduce that rolled up daily, weekly and yearly statistics in MongoDB and discovered, to my surprise, that JavaScript Date doesn’t have a _getWeek_ method. Worse, the [piece of code](http://javascript.about.com/library/blweekyear.htm) on About.com turned out to be buggy (it has issues with week 1 and 52). Total Internet #fail. In this post I’ll show you how to add `getWeek(date)` to MongoDB/Mongoid and how to use it from a map/reduce.
+I was working on some map/reduce that rolled up daily, weekly and yearly statistics in MongoDB and discovered, to my surprise, that JavaScript Date doesn’t have a _getWeek_ method. Worse, the [piece of code](https://javascript.about.com/library/blweekyear.htm) on About.com turned out to be buggy (it has issues with week 1 and 52). Total Internet #fail. In this post I’ll show you how to add `getWeek(date)` to MongoDB/Mongoid and how to use it from a map/reduce.
 
-The server-side JavaScript is almost like a stored procedure and is documented [here](http://www.mongodb.org/display/DOCS/Server-side+Code+Execution). Let's use [this implementation](http://techblog.procurios.nl/k/n618/news/view/33796/14863/Calculate-ISO-8601-week-and-year-in-javascript.html) with a slight change in parameters and save it as [lib/javascripts/getWeek.js](https://gist.github.com/1081513). We can then store the JavaScript server-side in any Mongoid model. In our case we’ll be counting _Widgets_, so add this to _Widget.rb_.
+The server-side JavaScript is almost like a stored procedure and is documented [here](https://www.mongodb.org/display/DOCS/Server-side+Code+Execution). Let's use [this implementation](https://techblog.procurios.nl/k/n618/news/view/33796/14863/Calculate-ISO-8601-week-and-year-in-javascript.html) with a slight change in parameters and save it as [lib/javascripts/getWeek.js](https://gist.github.com/1081513). We can then store the JavaScript server-side in any Mongoid model. In our case we’ll be counting _Widgets_, so add this to _Widget.rb_.
 
 {% highlight ruby %}
 def self.install_javascript

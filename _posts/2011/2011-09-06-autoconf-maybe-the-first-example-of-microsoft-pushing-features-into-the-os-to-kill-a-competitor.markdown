@@ -19,7 +19,7 @@ Here’s the code that let you declare `DEVICE=something.sys` in your config.sys
 ;----------------------------------------------------------------------------
 {% endhighlight %}
 
-I used macros stolen from someone’s 3D rendering engine’s source code to avoid typing _push_ and _pop_ too many times. That someone was probably sitting next to me in the basement of [Infomaniak in Geneva](http://www.infomaniak.com/). ASM recursive macros must blow your mind!
+I used macros stolen from someone’s 3D rendering engine’s source code to avoid typing _push_ and _pop_ too many times. That someone was probably sitting next to me in the basement of [Infomaniak in Geneva](https://www.infomaniak.com/). ASM recursive macros must blow your mind!
 
 {% highlight asm %}
 pushx macro r1, r2, r3, r4, r5, r6, r7, r8  ;that's a usefull macro

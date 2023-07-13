@@ -23,7 +23,7 @@ Let's write a task that will copy one MongoDB database to another using somethin
 
 #### Reading Heroku-San Configuration
 
-We’re using [Heroku-san](https://web.archive.org/web/20110704143857/http://jqr.github.com/2010/08/27/easy-heroku-deploys-with-heroku-san.html), so we’ve got a _heroku.yml_ sitting in the config folder with two values for MONGOHQ_URL under _staging_ and _production_. We’ll load the file with YAML, fetch _MONGOHQ_URL_ and parse it into parts. For those using regular expressions to parse MongoHQ urls, pay attention: everything except the database name is just a regular piece of a URL.
+We’re using [Heroku-san](https://web.archive.org/web/20110704143857/https://jqr.github.com/2010/08/27/easy-heroku-deploys-with-heroku-san.html), so we’ve got a _heroku.yml_ sitting in the config folder with two values for MONGOHQ_URL under _staging_ and _production_. We’ll load the file with YAML, fetch _MONGOHQ_URL_ and parse it into parts. For those using regular expressions to parse MongoHQ urls, pay attention: everything except the database name is just a regular piece of a URL.
 
 {% highlight ruby %}
 def db_copy_load_config
@@ -89,7 +89,7 @@ Database command 'copydbgetnonce' failed: {"assertion"=>"unauthorized db:admin l
   "assertionCode"=>10057, "errmsg"=>"db assertion failure", "ok"=>0.0}
 ```
 
-This is because copyDatabase requires admin privileges, which MongoHQ doesn’t give co-located users. Too bad - we have to fall back to the silly _mongodump_ and _mongorestore_. This has two major disadvantages: it requires a local mongo installation and copies a ton of data over the network from MongoHQ, then back to MongoHQ. I hope that either MongoHQ exposes this API one day or there’s a non-admin way to do this with MongoDB [[SERVER-2846](http://jira.mongodb.org/browse/SERVER-2846)].
+This is because copyDatabase requires admin privileges, which MongoHQ doesn’t give co-located users. Too bad - we have to fall back to the silly _mongodump_ and _mongorestore_. This has two major disadvantages: it requires a local mongo installation and copies a ton of data over the network from MongoHQ, then back to MongoHQ. I hope that either MongoHQ exposes this API one day or there’s a non-admin way to do this with MongoDB [[SERVER-2846](https://jira.mongodb.org/browse/SERVER-2846)].
 
 #### Using Mongo Dump and Restore
 

@@ -73,7 +73,7 @@ def respond_to?(method_name, include_private=false)
 end
 {% endhighlight %}
 
-Unfortunately this broke [Rails 4 strong_parameters](http://edgeguides.rubyonrails.org/action_controller_overview.html#strong-parameters). Can you see why? This code always responded `true` to `permit?`. Take a look at the following example.
+Unfortunately this broke [Rails 4 strong_parameters](https://edgeguides.rubyonrails.org/action_controller_overview.html#strong-parameters). Can you see why? This code always responded `true` to `permit?`. Take a look at the following example.
 
 {% highlight ruby %}
 settings = { foo: "1", attributes: { title: "Value" } }

@@ -16,7 +16,7 @@ We want a bootstrapper with as much control of the UI as humanly possible.
 
 #### Get It
 
-Download the [latest dotNetInstaller](https://github.com/dblock/dotnetinstaller). You’ll find _htmlInstaller.exe_ in the distribution. This is a UI driver based on [HTMLayout](http://www.terrainformatica.com/) and behaves very much like the existing dotNetInstaller.exe. These two now share the same execution engine and differ mostly in UI. Both support chained configurations, downloads, etc.
+Download the [latest dotNetInstaller](https://github.com/dblock/dotnetinstaller). You’ll find _htmlInstaller.exe_ in the distribution. This is a UI driver based on [HTMLayout](https://www.terrainformatica.com/) and behaves very much like the existing dotNetInstaller.exe. These two now share the same execution engine and differ mostly in UI. Both support chained configurations, downloads, etc.
 
 #### Run It
 
@@ -85,7 +85,7 @@ Let’s look at the HTML source in this bootstrapper and see how we can make cha
 </html>
 {% endhighlight %}
 
-This is a standard HTML page with an _html_ opening tag, a _head_ and a _body_. The stylesheet is imported with a custom HTML tag, `@import` – HTMLayout-specific tags are documented [here](https://web.archive.org/web/20120802053514/http://www.terrainformatica.com/htmlayout/tags.whtm).
+This is a standard HTML page with an _html_ opening tag, a _head_ and a _body_. The stylesheet is imported with a custom HTML tag, `@import` – HTMLayout-specific tags are documented [here](https://web.archive.org/web/20120802053514/https://www.terrainformatica.com/htmlayout/tags.whtm).
 
 There’re a few built-in widgets defined by their _id_’s. All such widgets are optional and have well-known behavior within the bootstrapper.
 

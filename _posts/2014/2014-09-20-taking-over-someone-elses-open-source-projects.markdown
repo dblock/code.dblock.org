@@ -11,4 +11,4 @@ Thanks to the amazing crowd at GoGoRuCo 2014, San Francisco!
 
 ![]({{ site.url }}/images/posts/2014/2014-09-20-taking-over-someone-elses-open-source-projects/screenshot.jpg)
 
-Slides: [http://www.slideshare.net/dblockdotorg/taking-over-open-source-projects-gogaruco-2014](http://www.slideshare.net/dblockdotorg/taking-over-open-source-projects-gogaruco-2014)
+Slides: [https://www.slideshare.net/dblockdotorg/taking-over-open-source-projects-gogaruco-2014](https://www.slideshare.net/dblockdotorg/taking-over-open-source-projects-gogaruco-2014)

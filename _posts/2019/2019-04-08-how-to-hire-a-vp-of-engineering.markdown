@@ -130,7 +130,7 @@ Follow-up to an informational with an e-mail, thanking the candidate and outlini
 
 Make it extra personal by highlighting what _they_ said about the opportunity, attempting to underscore why this this job could be the absolute best choice for them.
 
-I also like to include a handy, up-to-date GMail canned response that includes links to various topics I talk about during any informational. It's a rabbit hole that will start you in the [Artsy README](http://github.com/artsy/README) and take you through some exciting company milestones to my personal blog.
+I also like to include a handy, up-to-date GMail canned response that includes links to various topics I talk about during any informational. It's a rabbit hole that will start you in the [Artsy README](https://github.com/artsy/README) and take you through some exciting company milestones to my personal blog.
 
 Pro tip: while the next step is always meeting the CEO, move faster by also scheduling a first round of onsite interviews in parallel.
 
@@ -191,6 +191,6 @@ That said, sometimes the recruiter will signal that a candidate is willing to sa
 
 #### Congratulations
 
-Congratulations, two and a half months from first intro to closing, you have a fantastic [VP of Engineering](http://artnews.com/2019/04/02/samuel-rozenberg-artsy/)!
+Congratulations, two and a half months from first intro to closing, you have a fantastic [VP of Engineering](https://artnews.com/2019/04/02/samuel-rozenberg-artsy/)!
 
 <!-- more -->

@@ -7,7 +7,7 @@ tags: [architecture, agile]
 comments: true
 dblog_post_id: 69
 ---
-In  [this very good presentation about domain driven design](http://www.infoq.com/presentations/bdd-and-ddd) (we do that, but more on that in a later post), Dan North (Thoughtworks) mentions Bug Driven Design. I love this concept.
+In  [this very good presentation about domain driven design](https://www.infoq.com/presentations/bdd-and-ddd) (we do that, but more on that in a later post), Dan North (Thoughtworks) mentions Bug Driven Design. I love this concept.
 
 >  Customer: I want a product that does X.
 > Developer: Done.

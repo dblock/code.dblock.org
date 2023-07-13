@@ -7,7 +7,7 @@ tags: [appsecinc, organizations, agile]
 comments: true
 dblog_post_id: 131
 ---
-A couple of weeks ago I asked a question on stackexchange: [_Does your company have a written policy about personal (technical) blogging?_](http://programmers.stackexchange.com/questions/12229/does-your-company-have-a-written-policy-about-personal-technical-blogging) I got the answers I expected which is _"no such policy here",_ _"my company is oblivious to this"_ and everything in between. I think the answers represent our IT industry quite well – we express policies for things that are forbidden or we naturally evolve into the "don’t ask, don’t tell" grey area. I wanted to go further at [AppSecInc.](https://web.archive.org/web/20131111165225/https://www.appsecinc.com), I wanted to encourage my developers to publish themselves, much like I do.
+A couple of weeks ago I asked a question on stackexchange: [_Does your company have a written policy about personal (technical) blogging?_](https://programmers.stackexchange.com/questions/12229/does-your-company-have-a-written-policy-about-personal-technical-blogging) I got the answers I expected which is _"no such policy here",_ _"my company is oblivious to this"_ and everything in between. I think the answers represent our IT industry quite well – we express policies for things that are forbidden or we naturally evolve into the "don’t ask, don’t tell" grey area. I wanted to go further at [AppSecInc.](https://web.archive.org/web/20131111165225/https://www.appsecinc.com), I wanted to encourage my developers to publish themselves, much like I do.
 
 We’ve implemented the following policy and are making a more general version of this part of the employee handbook.
 

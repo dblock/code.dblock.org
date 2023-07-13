@@ -41,11 +41,11 @@ That’s it.
 
 #### Demo Application
 
-A demo application can be found in the Waffle distribution in the _Samples\Tomcat\waffle-filter_ directory. Copy the entire directory into Tomcat's webapps directory and navigate to http://localhost:8080/waffle-filter.
+A demo application can be found in the Waffle distribution in the _Samples\Tomcat\waffle-filter_ directory. Copy the entire directory into Tomcat's webapps directory and navigate to https://localhost:8080/waffle-filter.
 
 #### Retrieving User Principal
 
-If you’re familiar with Tomcat you’ll be surprised that `<%= request.getUserPrincipal().getName() %>` works in a JSP page with this filter in place and no realm configuration. Theoretically Tomcat says you cannot assign a Principal to the request in a filter. The guys at the [Tomcat Security Filter Project](http://securityfilter.sourceforge.net/) found a very simple solution – wrap the request up and pass the wrapper into the next filter in the chain.
+If you’re familiar with Tomcat you’ll be surprised that `<%= request.getUserPrincipal().getName() %>` works in a JSP page with this filter in place and no realm configuration. Theoretically Tomcat says you cannot assign a Principal to the request in a filter. The guys at the [Tomcat Security Filter Project](https://securityfilter.sourceforge.net/) found a very simple solution – wrap the request up and pass the wrapper into the next filter in the chain.
 
 {% highlight java %}
 WindowsPrincipal windowsPrincipal = new WindowsPrincipal(windowsIdentity, null, _principalFormat, _roleFormat);

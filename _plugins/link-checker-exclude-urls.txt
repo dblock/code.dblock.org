@@ -1,3 +1,2 @@
-/tags/asp.net
 https://github.com/pulls?q=is:pr+author:dblock+archived:false+user:opensearch-project+is:closed
 https://github.com/pulls?q=is:pr+author:dblock+archived:false+user:opensearch-project+is:closed+is:merged

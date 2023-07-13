@@ -23,11 +23,11 @@ Here's the text. I adjust it slightly depending on the request.
 >
 > Thanks for your email and thanks for thinking of me.
 >
-> I'm not currently looking for a new position (Artsy has [recently raised a series C](https://web.archive.org/web/20150708200318/http://blogs.wsj.com/privateequity/2015/03/26/catterton-leads-25-million-funding-round-for-artsy/) and is doing very well), however I may know someone who is. Happy to refer candidates if you can, please, name the company for which you're hiring (please don't write that it's "confidential"), give me an idea of the team and target compensation (please don't write that it's "competitive").
+> I'm not currently looking for a new position (Artsy has [recently raised a series C](https://web.archive.org/web/20150708200318/https://blogs.wsj.com/privateequity/2015/03/26/catterton-leads-25-million-funding-round-for-artsy/) and is doing very well), however I may know someone who is. Happy to refer candidates if you can, please, name the company for which you're hiring (please don't write that it's "confidential"), give me an idea of the team and target compensation (please don't write that it's "competitive").
 >
 > Please understand that I also do get a very high volume of solicitations, and don't have the bandwidth to take phone calls or meet in-person. Nothing personal.
 >
-> Also, Artsy is very fortunate to have a large pool of Engineering candidates coming via our personal networks and [extensive open-source work](http://artsy.github.io/open-source). We therefore don't work with recruiters or agencies.
+> Also, Artsy is very fortunate to have a large pool of Engineering candidates coming via our personal networks and [extensive open-source work](https://artsy.github.io/open-source). We therefore don't work with recruiters or agencies.
 >
 > cheers
 > dB.

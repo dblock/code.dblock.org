@@ -24,7 +24,7 @@ I did this manually, but I realize now that there’re some nice utilities to he
 
 I stay in the City a couple days a week and used to steal internet access from a neighbor. Since then he revisited his router security and never bothered to give me his new password. It’s also a little awkward to share someone’s connection and it’s not worth it to buy permanent internet access to use it 5-6 times a month. There’s an additional problem of cellular reception in the place, you only get a decent connection (not even 3G) if you sit right by the window. So tethering with a USB cable is not an option – I needed to turn my phone into an actual wireless hotspot.
 
-This can be done with [android-wifi-tether](http://code.google.com/p/android-wifi-tether). The app did hang on me a couple of times when turning tethering on, but I did stream a full Netflix movie with very good quality without interruption one late evening.
+This can be done with [android-wifi-tether](https://code.google.com/p/android-wifi-tether). The app did hang on me a couple of times when turning tethering on, but I did stream a full Netflix movie with very good quality without interruption one late evening.
 
 #### One Click Lag Fix
 

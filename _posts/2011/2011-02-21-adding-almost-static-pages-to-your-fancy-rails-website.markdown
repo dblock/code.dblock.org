@@ -7,7 +7,7 @@ tags: [rails, ruby]
 comments: true
 dblog_post_id: 175
 ---
-So you’ve built the super amazing complicated Rails website. You are serving data from millions of documents from [MongoDB](http://www.mongodb.org/), rendering complex objects using HAML and generally doing a bunch of hardcore stuff. Then someone asks you a pretty simple question: _how do I change the "Contact Us" page that’s linked at the bottom? _
+So you’ve built the super amazing complicated Rails website. You are serving data from millions of documents from [MongoDB](https://www.mongodb.org/), rendering complex objects using HAML and generally doing a bunch of hardcore stuff. Then someone asks you a pretty simple question: _how do I change the "Contact Us" page that’s linked at the bottom? _
 
 A terrified look takes over your face. You realize that you must now explain to a non-technical person the process of committing to [Github](https://github.com/), merging and branching. Moreover, you are going to have to give that person committer rights. That’s pretty scary stuff right there. That marketing person is never, ever getting write access to my jewels!
 
@@ -61,4 +61,4 @@ In my example we introduced a convention that a footer page should be called _fo
 
 #### Profit
 
-As usual I wrote more lines of test code for this than actual lines of code. Teach your content people some [markdown basics](http://daringfireball.net/projects/markdown/basics). Not bad for half an hour of work.
+As usual I wrote more lines of test code for this than actual lines of code. Teach your content people some [markdown basics](https://daringfireball.net/projects/markdown/basics). Not bad for half an hour of work.

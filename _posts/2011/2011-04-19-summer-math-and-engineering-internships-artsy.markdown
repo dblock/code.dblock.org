@@ -17,6 +17,6 @@ We are looking for an engineering intern. You need to have hacked together a pro
 
 Most importantly, we understand that your goal is to learn and we’ll be here to teach and help you along the way.
 
-I forgot to mention that there’s an added bonus of working at [General Assembly](http://generalassemb.ly): Friday happy hour with a lot of cool people to meet and mingle with.
+I forgot to mention that there’s an added bonus of working at [General Assembly](https://generalassemb.ly): Friday happy hour with a lot of cool people to meet and mingle with.
 
 You can get in touch with me directly.

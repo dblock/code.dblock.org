@@ -9,7 +9,7 @@ comments: true
 
 The Grape ecosystem has grown tremendously in the past few years and it's time we take the next step and have the community take over in a bigger way. I am pleased to announce the creation of a new Github organization called [ruby-grape](https://github.com/ruby-grape).
 
-Grape was created by [Michael Bleigh](https://github.com/mbleigh) at [Intridea](http://www.intridea.com/) and [made its debut at RubyConf 2010 in New Orleans](https://www.youtube.com/watch?v=C7beg3OzxC4). [Jerry Cheung](https://github.com/jch) had later joined development. Grape now leaves the Intridea home to become an independent project that belongs to the Ruby community. Today I am the official Grape maintainer, but Grape is also [many related projects](http://www.ruby-grape.org/projects), each individually maintained by a growing group that is defined by rough concensus and running code. Grape is used by many thousands of developers and [numerous commercial and non-commercial applications](http://www.ruby-grape.org/users). [Grape itself](https://github.com/ruby-grape/grape) has 6,462 stars and 726 forks on Github as of the time of writing this, August 3rd, 2015.
+Grape was created by [Michael Bleigh](https://github.com/mbleigh) at [Intridea](http://intridea.com/) and [made its debut at RubyConf 2010 in New Orleans](https://www.youtube.com/watch?v=C7beg3OzxC4). [Jerry Cheung](https://github.com/jch) had later joined development. Grape now leaves the Intridea home to become an independent project that belongs to the Ruby community. Today I am the official Grape maintainer, but Grape is also [many related projects](https://www.ruby-grape.org/projects), each individually maintained by a growing group that is defined by rough concensus and running code. Grape is used by many thousands of developers and [numerous commercial and non-commercial applications](https://www.ruby-grape.org/users). [Grape itself](https://github.com/ruby-grape/grape) has 6,462 stars and 726 forks on Github as of the time of writing this, August 3rd, 2015.
 
 ## New Home
 
@@ -37,7 +37,7 @@ We encourage you to develop and support your Grape ecosystem project, expand its
 
 ## A New Site
 
-The newly remodeled [http://www.ruby-grape.org](http://www.ruby-grape.org) is now live. We want you to contribute to it, please see [CONTRIBUTING](https://github.com/ruby-grape/ruby-grape.github.io/blob/master/CONTRIBUTING.md).
+The newly remodeled [https://www.ruby-grape.org](https://www.ruby-grape.org) is now live. We want you to contribute to it, please see [CONTRIBUTING](https://github.com/ruby-grape/ruby-grape.github.io/blob/master/CONTRIBUTING.md).
 
 ## A Twitter Account
 

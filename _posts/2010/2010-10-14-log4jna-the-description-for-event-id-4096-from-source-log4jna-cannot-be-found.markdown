@@ -14,7 +14,7 @@ This is a pretty common problem with NTEventLogAppender (both log4j and [log4jna
 The Windows event log uses pre-configured sources to render messages. In order to support localization the message format and sometimes the entire message text is external to the actual message and is contained in resource DLLs. There’s a number of great articles that explain, in detail, how this works.
 
 - [CodeProject: Using mc.exe, message resources and the NT event log in your own projects](https://www.codeproject.com/Articles/4166/Using-MC-exe-message-resources-and-the-NT-event-lo)
-- [MSDN: Creating a resource DLL](http://msdn.microsoft.com/en-us/library/ms853727.aspx)
+- [MSDN: Creating a resource DLL](https://msdn.microsoft.com/en-us/library/ms853727.aspx)
 
 Both log4j and Log4jna NTEventLogAppenders ship with a simple message resource DLL. Unlike log4j’s version which contains both code to fire event log events, the log4jna version is a pure message-only resource DLL. It does not need to be on PATH and can therefore be placed in any location on your machine, usually with your application.
 

@@ -111,7 +111,7 @@ endlocal
 
 #### Demo Application
 
-A demo application can be found in the Waffle distribution in the _Samples\Tomcat\waffle-jaas_ directory. Copy the entire directory into Tomcat's webapps directory, start Tomcat as explained above, and navigate to http://localhost:8080/waffle-jaas. You will be prompted for your Windows login, enter your Windows credentials and log-in.
+A demo application can be found in the Waffle distribution in the _Samples\Tomcat\waffle-jaas_ directory. Copy the entire directory into Tomcat's webapps directory, start Tomcat as explained above, and navigate to https://localhost:8080/waffle-jaas. You will be prompted for your Windows login, enter your Windows credentials and log-in.
 
 ![]({{ site.url }}/images/posts/2010/2010-05-24-windowsactive-directory-authentication-tomcat-jaas-w-waffle/image_5.jpg)
 

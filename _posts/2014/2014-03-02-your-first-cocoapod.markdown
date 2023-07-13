@@ -7,13 +7,13 @@ tags: [objective-c, ios, open source]
 comments: true
 dblog_post_id: 408
 ---
-Right behind [Your First Ruby Gem](https://code.dblock.org/your-first-ruby-gem), here’s a walkthrough of creating your first Objective-C CocoaPod. Now, I must admit that after only two months of Objective-C programming, I am not nearly an expert. So I enlisted [Orta from CocoaPods](http://orta.github.io/) to stand behind my back and poke me with a stick whenever I did something wrong. It’s also important to note that there’s a lot of development going on in CocoaPods and my walkthrough represents the current state of affairs as of February 2014.
+Right behind [Your First Ruby Gem](https://code.dblock.org/your-first-ruby-gem), here’s a walkthrough of creating your first Objective-C CocoaPod. Now, I must admit that after only two months of Objective-C programming, I am not nearly an expert. So I enlisted [Orta from CocoaPods](https://orta.github.io/) to stand behind my back and poke me with a stick whenever I did something wrong. It’s also important to note that there’s a lot of development going on in CocoaPods and my walkthrough represents the current state of affairs as of February 2014.
 
 #### TL;DR
 
 This was really easy. Open-source in Objective-C FTW!
 
-I wrote [objc-ngram](https://github.com/dblock/objc-ngram), a small [n-gram](http://en.wikipedia.org/wiki/N-gram) library. For example, you could use it as a rudimentary full text search engine.
+I wrote [objc-ngram](https://github.com/dblock/objc-ngram), a small [n-gram](https://en.wikipedia.org/wiki/N-gram) library. For example, you could use it as a rudimentary full text search engine.
 
 ![]({{ site.url }}/images/posts/2014/2014-03-02-your-first-cocoapod/image_4.jpg)
 
@@ -27,7 +27,7 @@ $ pod lib create objc-ngram
 Creating `objc-ngram` Pod
 Configuring template
 To learn more about the template see `https://github.com/CocoaPods/pod-template`.
-To learn more about creating a new pod, see `http://guides.cocoapods.org/making/making-a-cocoapod`.
+To learn more about creating a new pod, see `https://guides.cocoapods.org/making/making-a-cocoapod`.
 ```
 
 This creates an _objc-ngram_ folder with a bunch of files. As of now, it’s missing a _Gemfile_, that I have created manually_._

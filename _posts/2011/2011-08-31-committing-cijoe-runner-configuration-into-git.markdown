@@ -30,7 +30,7 @@ We can also have two scripts, _git-config/build-worked_ and _git-config/build-fa
 {% highlight sh %}
 #!/bin/sh
 echo "
-Visit http://ci.example.com:9000/ for details
+Visit https://ci.example.com:9000/ for details
 
 Author:  $AUTHOR
 Message:

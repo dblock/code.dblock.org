@@ -11,7 +11,7 @@ dblog_post_id: 348
 
 This is an actual pull request. It’s a merge from a feature branch, which includes some (excellent) work done by several people over the course of 3 weeks. Someone started a prototype, then we all pooled for a week to finish it and decided not to waste time and keep hacking on a feature branch. A week turned into two for perfectly good business reasons. Then into three because of external influences. Some bugs required heavy lifting and a lot of code. Small improvements became big changes.
 
-I feel the same thing about feature branches as [Martin Fowler](http://www.thoughtworks.com/perspectives/30-06-2011-continuous-delivery). There’re plenty of people in [the opposite camp](http://jamesmckay.net/2011/07/why-does-martin-fowler-not-understand-feature-branches/) too.
+I feel the same thing about feature branches as [Martin Fowler](https://www.thoughtworks.com/perspectives/30-06-2011-continuous-delivery). There’re plenty of people in [the opposite camp](https://jamesmckay.net/2011/07/why-does-martin-fowler-not-understand-feature-branches/) too.
 
 Long running feature branches are a result of human, cultural and organizational behaviors. While I sometimes fail to, here’re a few ways to avoid them.
 

@@ -7,7 +7,7 @@ tags: [conferences, technology, architecture]
 comments: true
 dblog_post_id: 293
 ---
-I’m at [QConSF 2011](http://qconsf.com/sf2011/).
+I’m at [QConSF 2011](https://qconsf.com/sf2011/).
 
 ![]({{ site.url }}/images/posts/2011/2011-11-17-at-qconsf-2011/image_3.jpg)
 

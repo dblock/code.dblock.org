@@ -13,5 +13,5 @@ I am working on a talk for the DDD meet-up in January in NYC and could use some 
 
 ![]({{ site.url }}/images/posts/2010/2010-12-10-help-what-are-the-symptoms-events-or-actions-of-a-software-death-cycle/image_5.jpg)
 
-Please answer [on StackExchange](http://programmers.stackexchange.com/questions/25181/what-are-the-symptoms-events-or-actions-of-a-software-death-cycle).
+Please answer [on StackExchange](https://programmers.stackexchange.com/questions/25181/what-are-the-symptoms-events-or-actions-of-a-software-death-cycle).
 

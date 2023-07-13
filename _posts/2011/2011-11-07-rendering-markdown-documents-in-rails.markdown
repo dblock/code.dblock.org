@@ -11,7 +11,7 @@ There’s got to be a prettier way of implementing this.
 
 ![]({{ site.url }}/images/posts/2011/2011-11-07-rendering-markdown-documents-in-rails/image_19.jpg)
 
-We use the following code to render API documentation, which is written in [Markdown](http://daringfireball.net/projects/markdown/).
+We use the following code to render API documentation, which is written in [Markdown](https://daringfireball.net/projects/markdown/).
 
 Add a route that will capture the document filename in _config/routes.rb_. Bonus features: a namespaced controller and a redirect to _/api/v1/docs_ for _/api/v1_.
 

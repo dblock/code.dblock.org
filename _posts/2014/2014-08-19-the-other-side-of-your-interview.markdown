@@ -7,7 +7,7 @@ tags: [interviewing, teaching, learning, speaking, artsy]
 comments: true
 dblog_post_id: 420
 ---
-I gave a talk yesterday at the [Flatiron School](http://flatironschool.com) about the interviewing and hiring process for Engineers at [Artsy](http://artsy.net) and beyond. This focuses primarily on explaining to juniors, ie. engineers who are about to enter the tech job market and has some useful elements for career changers.
+I gave a talk yesterday at the [Flatiron School](https://flatironschool.com) about the interviewing and hiring process for Engineers at [Artsy](https://artsy.net) and beyond. This focuses primarily on explaining to juniors, ie. engineers who are about to enter the tech job market and has some useful elements for career changers.
 
 Video from the talk: [https://vimeo.com/103823447](https://vimeo.com/103823447)
 

@@ -7,7 +7,7 @@ tags: [appsecinc, jobs, people]
 comments: true
 dblog_post_id: 153
 ---
-In the past six months I’ve done dozens of engineering interviews for our many job openings, including developers and team leads. We’ve hired some excellent people in this process. I get resumes from my personal network, a few (no more than three) recruiters that I’ve known for a long time and [Craigslist](https://web.archive.org/web/20100706065015/http://newyork.craigslist.org/sof/). Since Craigslist is source of endless amusement, I took a bit of time to assemble a few numbers.
+In the past six months I’ve done dozens of engineering interviews for our many job openings, including developers and team leads. We’ve hired some excellent people in this process. I get resumes from my personal network, a few (no more than three) recruiters that I’ve known for a long time and [Craigslist](https://web.archive.org/web/20100706065015/https://newyork.craigslist.org/sof/). Since Craigslist is source of endless amusement, I took a bit of time to assemble a few numbers.
 
 Most resumes follow a pattern. I will only talk about the strange, funny and sad ones, and very little about good resumes. Before I begin, I must add that I did hire two people via Craigslist and I am extremely happy with their work. Obviously any resemblance with your resume is pure coincidence and any personal data has been removed.
 

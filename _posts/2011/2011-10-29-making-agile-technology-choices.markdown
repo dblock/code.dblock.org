@@ -7,7 +7,7 @@ tags: [technology, architecture, organizations, people]
 comments: true
 dblog_post_id: 282
 ---
-I really enjoy the conversation with software architects on how to make technology choices. I polled the members of the New York CTO club on the topic and got amazing war stories – I’ll keep those for later. I gave a talk on this yesterday @ [GeneralAssemb.ly](http://generalassemb.ly/). In this iteration I focused on what can go wrong in a traditional vendor evaluation approach taken by many corporations.
+I really enjoy the conversation with software architects on how to make technology choices. I polled the members of the New York CTO club on the topic and got amazing war stories – I’ll keep those for later. I gave a talk on this yesterday @ [GeneralAssemb.ly](https://generalassemb.ly/). In this iteration I focused on what can go wrong in a traditional vendor evaluation approach taken by many corporations.
 
 Have you ever been part of one of those? It goes something like this.
 
@@ -23,5 +23,5 @@ A bakeoff is generally worth it, but is both expensive and totally boring!
 
 At the same time, _corrosion_ is something that plagues this kind of process through corruption (lets discuss our product over a fancy dinner) or, sometimes, pure intimidation and escalation (lets discuss our product over a fancy dinner ... with your boss).
 
-This talk is about better, more agile options. IMO, it boils down to trusting people vs. process. Slides from my talk @GA [here](http://www.slideshare.net/dblockdotorg/making-agile-technology-choices).
+This talk is about better, more agile options. IMO, it boils down to trusting people vs. process. Slides from my talk @GA [here](https://www.slideshare.net/dblockdotorg/making-agile-technology-choices).
 

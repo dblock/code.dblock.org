@@ -7,7 +7,7 @@ tags: [rake, heroku, rails, ruby]
 comments: true
 dblog_post_id: 169
 ---
-Let’s say you have some Ruby file that you want to run on [Heroku](http://heroku.com/). For example, I have _stuff\things.rb_. The easiest way to run the file on Heroku seems to inspire ourselves from db:seeds an write a Rake task in _lib/tasks/stuff_things.rake_.
+Let’s say you have some Ruby file that you want to run on [Heroku](https://heroku.com/). For example, I have _stuff\things.rb_. The easiest way to run the file on Heroku seems to inspire ourselves from db:seeds an write a Rake task in _lib/tasks/stuff_things.rake_.
 
 {% highlight ruby %}
 namespace :stuff do

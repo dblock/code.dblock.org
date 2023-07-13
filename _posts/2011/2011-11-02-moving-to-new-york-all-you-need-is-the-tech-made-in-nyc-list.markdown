@@ -13,11 +13,11 @@ In the past few months I’ve talked to dozens of engineering candidates and hir
 
 For those that make the cut, but aren’t hired for headcount reasons, I will offer my help to find another startup in NYC. There’re hundreds! Here’s what I ask them to do.
 
-1. Go to [http://nytm.org/made/](http://nytm.org/made/) and make a list of five startups that you would love to work for. Email me the list.
+1. Go to [https://nytm.org/made/](https://nytm.org/made/) and make a list of five startups that you would love to work for. Email me the list.
 2. I will do my best to make a direct introduction to someone in those companies.
 
 I know a lot of people, but I don’t know folks in even half of the names in that list. I’ve been reaching out to friends and trying to use the opportunity of introducing a potential hire to make a connection for myself. It has been a winning deal and I know that a few people are now in late stages of interviewing with some of the most promising New York City startups. And I learned a ton about how other companies build software.
 
-If you work for a company on that list and don’t know me, drop me an e-mail (dblock[at]dblock[dot]org) and come visit us at [GeneralAssemb.ly](http://generalassemb.ly). I want to hear about your technology and I’ll show you ours.
+If you work for a company on that list and don’t know me, drop me an e-mail (dblock[at]dblock[dot]org) and come visit us at [GeneralAssemb.ly](https://generalassemb.ly). I want to hear about your technology and I’ll show you ours.
 
-If you’re considering moving to NYC or are here and looking for a job, don’t hesitate to drop me your resume, you never know. And check out the [Made in NYC list](http://nytm.org/made/). Pick five startups that you would want to work for and e-mail them cold, referencing this post.
+If you’re considering moving to NYC or are here and looking for a job, don’t hesitate to drop me your resume, you never know. And check out the [Made in NYC list](https://nytm.org/made/). Pick five startups that you would want to work for and e-mail them cold, referencing this post.

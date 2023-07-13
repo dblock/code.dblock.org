@@ -9,18 +9,18 @@ dblog_post_id: 96
 ---
 I often hear from .NET programmers "I’d like to get into Java, not the language, but all that J2EE stuff ...". I am one of those people so I try to use any opportunity to try something I’ve never touched before.
 
-We’re moving to a SOA model with the product at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com). One of the fundamental questions is: _"How does a service find another service?"._ The standard answer is to use a naming and directory service and in Java you talk to one of these things with [JNDI](http://java.sun.com/products/jndi/).
+We’re moving to a SOA model with the product at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com). One of the fundamental questions is: _"How does a service find another service?"._ The standard answer is to use a naming and directory service and in Java you talk to one of these things with [JNDI](https://java.sun.com/products/jndi/).
 
 First, a few basics.
 
 - **Naming service** is a fundamental facility in any computing system. It’s the means by which names are associated with objects and objects are found based on their names. For example, to access a file on the computer you must provide its name.
 - **Directory Service** is an extension of the naming services. A directory service associates names with objects and also allows such objects to have _attributes_. Thus, you not only can look up an object by its name but also get the object's attributes or search for the object based on its attributes.
 
-By using a directory service, you can simplify applications and their administration by centralizing the storage of shared information. For our purposes such information includes SOAP service URIs. For example, you can find demoService (a previously agreed-upon name of the demo service) at *http://localhost:20080/demo*.
+By using a directory service, you can simplify applications and their administration by centralizing the storage of shared information. For our purposes such information includes SOAP service URIs. For example, you can find demoService (a previously agreed-upon name of the demo service) at *https://localhost:20080/demo*.
 
 #### Client & Server
 
-I picked up [OpenDS](https://web.archive.org/web/20111001105032/http://www.opends.org/), on open-source server from Sun. After a straightforward installation (set _OPENDS_JAVA_HOME_ to a JRE location and run _setup.bat_) I had an LDAP server running as a Windows Service (OpenDS) on port 389. There’s a handy _bat\control-panel.bat_ that launches a schema and object browser.
+I picked up [OpenDS](https://web.archive.org/web/20111001105032/https://www.opends.org/), on open-source server from Sun. After a straightforward installation (set _OPENDS_JAVA_HOME_ to a JRE location and run _setup.bat_) I had an LDAP server running as a Windows Service (OpenDS) on port 389. There’s a handy _bat\control-panel.bat_ that launches a schema and object browser.
 
 We can now access this server with JNDI, which comes standard with Java Platform 1.1.2 or later.
 
@@ -144,7 +144,7 @@ A write is a call to `bind`. Binding means connecting a _name_ to an _object_. Y
 Service demoService = new Service(
         "{F6E978E7-A0BC-47ae-95A9-219CD40C5993}",
         "demoService",
-        "http://localhost:20080/demo/");
+        "https://localhost:20080/demo/");
 ctx.rebind("cn=demoService,o=Services", demoService);
 {% endhighlight %}
 
@@ -216,12 +216,12 @@ ctx.unbind("cn=demoService,o=Services");
 
 All this requires server-side Java code and keeping the LDAP port 389 open.
 
-Alternatively, OpenDS provides an implementation of Directory Services Markup Language (DSML), an XML API to directory services. It’s then possible to switch JNDI client code from LDAP to DSML using [a Sun early access JNDI client for DSML](http://java.sun.com/developer/earlyAccess/jndi/).
+Alternatively, OpenDS provides an implementation of Directory Services Markup Language (DSML), an XML API to directory services. It’s then possible to switch JNDI client code from LDAP to DSML using [a Sun early access JNDI client for DSML](https://java.sun.com/developer/earlyAccess/jndi/).
 
 #### Links
 
-- [Naming and Directory Services Tutorial](http://java.sun.com/products/jndi/tutorial/TOC.html)
-- [OpenDS Directory Server](https://web.archive.org/web/20111001105032/http://www.opends.org/)
+- [Naming and Directory Services Tutorial](https://java.sun.com/products/jndi/tutorial/TOC.html)
+- [OpenDS Directory Server](https://web.archive.org/web/20111001105032/https://www.opends.org/)
 - [Source Code for this Article](https://github.com/dblock/codeproject/tree/master/JndiDemo)
   - [Service.java](https://github.com/dblock/codeproject/blob/master/JndiDemo/src/com/example/jndi/Service.java)
   - [UnimplementedDirContext.java](https://github.com/dblock/codeproject/blob/master/JndiDemo/src/com/example/jndi/UnimplementedDirContext.java)

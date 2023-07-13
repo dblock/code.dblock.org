@@ -5,7 +5,7 @@ date: 2017-10-29
 tags: [technology, vcs]
 comments: true
 ---
-As CTO I've gone through many rounds of technical due diligence with venture capital firms, and have done a few of these from the other side as a consultant. There's a lot of information online, including [this excellent blog post](https://web.archive.org/web/20160331155537/http://blog.pasker.net/2007/08/28/a-high-tech-entrepreneurs-guide-to-surviving-technical-due-diligence) by Bob Pasker on the former, but not much on the latter other than [this old checklist](http://glemak.pbworks.com/w/page/5500952/techdd) by Mike Dunn, both industry veteran CTOs.
+As CTO I've gone through many rounds of technical due diligence with venture capital firms, and have done a few of these from the other side as a consultant. There's a lot of information online, including [this excellent blog post](https://web.archive.org/web/20160331155537/https://blog.pasker.net/2007/08/28/a-high-tech-entrepreneurs-guide-to-surviving-technical-due-diligence) by Bob Pasker on the former, but not much on the latter other than [this old checklist](https://glemak.pbworks.com/w/page/5500952/techdd) by Mike Dunn, both industry veteran CTOs.
 
 If you're doing technical due diligence for a VC for an investment or an M&A process from the acquiring side, this post is for you.
 
@@ -56,7 +56,7 @@ Once a letter of engagement, NDAs and any other required paperwork is done, you 
 
 For remote due diligence I setup a video call, then add the following.
 
-> While I mostly have a technical background I spend equal amounts of time across people, technology and business. When I am on the other side of due diligence (I currently work for [a post Series D company](https://www.artsy.net)) I often refer to [this article](https://web.archive.org/web/20160331155537/http://blog.pasker.net/2007/08/28/a-high-tech-entrepreneurs-guide-to-surviving-technical-due-diligence/amp/).
+> While I mostly have a technical background I spend equal amounts of time across people, technology and business. When I am on the other side of due diligence (I currently work for [a post Series D company](https://www.artsy.net)) I often refer to [this article](https://web.archive.org/web/20160320144334/https://blog.pasker.net/2007/08/28/a-high-tech-entrepreneurs-guide-to-surviving-technical-due-diligence/amp/).
 >
 > Things I look forward to hearing about and discussing:
 >

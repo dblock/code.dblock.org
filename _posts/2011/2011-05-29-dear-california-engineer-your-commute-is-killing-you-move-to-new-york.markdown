@@ -20,7 +20,7 @@ Here’s how I do it.
 
 **1. I look Forward to Both Ends of My Commute**
 
-I live in Brighton Beach, Brooklyn and work a couple of blocks north of Union Square in Manhattan. Every morning I walk a couple of blocks to the subway. I look forward towards arriving in Union Square where a [farmers market](http://www.grownyc.org/greenmarket/manhattan-union-square-m) takes place three times a week and I walk four blocks to [General Assembly](https://generalassemb.ly) where I get to see some of the smartest people I know, sharing a desk in our reserved area or a couch in a communal space. I love the energy of the city and I feel happy coming to work.
+I live in Brighton Beach, Brooklyn and work a couple of blocks north of Union Square in Manhattan. Every morning I walk a couple of blocks to the subway. I look forward towards arriving in Union Square where a [farmers market](https://www.grownyc.org/greenmarket/manhattan-union-square-m) takes place three times a week and I walk four blocks to [General Assembly](https://generalassemb.ly) where I get to see some of the smartest people I know, sharing a desk in our reserved area or a couch in a communal space. I love the energy of the city and I feel happy coming to work.
 
 Heading back from work means seeing my family with some additional perks, particularly enjoyable in summer. I get to walk into my apartment, change in a bathing suit and feel the sand on the beach before taking a dip in the cool water of the Atlantic. In winter, there’s also the ocean, albeit colder, but combined with an indoor pool and a Russian sauna. Brighton beach feels like a vacation that I get to take every day.
 

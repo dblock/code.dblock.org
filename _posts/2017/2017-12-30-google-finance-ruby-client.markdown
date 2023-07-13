@@ -7,7 +7,7 @@ comments: true
 ---
 There's a bunch of financial market APIs out there, and after having tried a few for [slack-market](https://market.playplay.io) I still ended up using Yahoo Finance, undocumented, but wildly popular, "API". What I really wanted was to find a plain simple HAL or GraphQL API or a Ruby client that could give me basic interday and intraday data for a given ticker, aggregated from multiple exchanges. But most options were just far too complex, extremely comprehensive to a point of being unusable for basic scenarios, not developer-friendly, or too expensive. Yahoo then suddenly and permanently discontinued their API in May 2017, in a beautiful example of how a big company fails to nurture and build upon developer relations.
 
-[Google Finance](http://finance.google.com) has a similarly undocumented web API. Hey Google, maybe you have an opportunity here to pickup where Yahoo left? Lets see how long that one lasts.
+[Google Finance](https://finance.google.com) has a similarly undocumented web API. Hey Google, maybe you have an opportunity here to pickup where Yahoo left? Lets see how long that one lasts.
 
 To abstract away the hodgepodge of undocumented and unsupported URLs and to make simple tasks easy, I wrote [google-finance-ruby-client](https://github.com/dblock/google-finance-ruby-client). The library supports retrieving stock quotes and historical prices in a structured form and returns object oriented results with properly coerced and documented properties. It also handles errors sanely.
 

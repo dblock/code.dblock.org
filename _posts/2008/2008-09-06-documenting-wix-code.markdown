@@ -13,7 +13,7 @@ I knew from day one that I'll need to document all this, so I started writing do
 
 **_Wix files are XML and we treat them as source code. They should be documented as source code!_**
 
-We use [Doxygen](http://www.doxygen.org) to generate source code documentation. Doxygen supports filters: command line tools invoked for every file. It looks like all I need is a preprocessor that can transform a .wxs file into doxygen documentation!
+We use [Doxygen](https://www.doxygen.org) to generate source code documentation. Doxygen supports filters: command line tools invoked for every file. It looks like all I need is a preprocessor that can transform a .wxs file into doxygen documentation!
 
 A .wixproj project consists of .wxs, .wxi and .wxl files. I chose to take a .wxs file as input, which may have a Product or Merge XML node representing a product or a merge module respectively. Each .wxs file may contain a number of defines which need to be expanded. There may be includes that reference other files that might contain more wix xml, other includes, etc.
 
@@ -44,7 +44,7 @@ Here's a simple wix installer.
 <?define UpgradeCode="{3485E6A2-A1F3-4329-8BB5-ED8FFCF283D4}"?>
 <?define ProductCode="*"?>
 <?define PackageCode="{????????-????-????-????-????????????}"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<Wix xmlns="https://schemas.microsoft.com/wix/2006/wi">
 <!-- This is a test MSI to demonstrate major upgrade. -->
  <Product Id="$(var.ProductCode)" Name="Upgrade Test" Language="1033"
   Version="$(var.ProductVersion)" Codepage="1252" Manufacturer="$(var.Manufacturer)"

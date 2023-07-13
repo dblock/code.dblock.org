@@ -5,7 +5,7 @@ date: 2017-04-02
 tags: [scala, spark, hive]
 comments: true
 ---
-Two weeks ago I had zero experience with Spark, Hive, or Hadoop. Two weeks later I [was able to reimplement Artsy sitemaps using Spark](http://artsy.github.io/blog/2017/04/02/generating-sitemaps-with-apache-spark) and even gave a "Getting Started" workshop to my team (with some help from [@izakp](https://github.com/izakp)). I've also made some [pull requests into Hive-JSON-Serde](https://github.com/rcongiu/Hive-JSON-Serde/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Adblock%20) and am starting to really understand what's what in this fairly complex, yet amazing ecosystem.
+Two weeks ago I had zero experience with Spark, Hive, or Hadoop. Two weeks later I [was able to reimplement Artsy sitemaps using Spark](https://artsy.github.io/blog/2017/04/02/generating-sitemaps-with-apache-spark) and even gave a "Getting Started" workshop to my team (with some help from [@izakp](https://github.com/izakp)). I've also made some [pull requests into Hive-JSON-Serde](https://github.com/rcongiu/Hive-JSON-Serde/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Adblock%20) and am starting to really understand what's what in this fairly complex, yet amazing ecosystem.
 
 This post will get you started with Hadoop, HDFS, Hive and Spark, fast.
 
@@ -31,7 +31,7 @@ A good place to start is to run a few things locally.
 
 ## Hadoop
 
-On OSX run `brew install hadoop`, then configure it ([This post](https://amodernstory.com/2014/09/23/installing-hadoop-on-mac-osx-yosemite) was helpful.) I turned the configuration into a script in my [dotfiles](https://github.com/dblock/dotfiles/tree/master/hadoop). Once installed you can run `hstart`. Once working, you can navigate to a local resource manager on `http://localhost:50070` or the job tracker on `http://localhost:8088` and run a small test.
+On OSX run `brew install hadoop`, then configure it ([This post](https://amodernstory.com/2014/09/23/installing-hadoop-on-mac-osx-yosemite) was helpful.) I turned the configuration into a script in my [dotfiles](https://github.com/dblock/dotfiles/tree/master/hadoop). Once installed you can run `hstart`. Once working, you can navigate to a local resource manager on `https://localhost:50070` or the job tracker on `https://localhost:8088` and run a small test.
 
 {% highlight shell %}
 $> wget https://www.dropbox.com/s/cyuah7lc31g0x3h/hadoop-mapreduce-examples-2.6.0.jar?dl=1 -O hadoop-mapreduce-examples-2.6.0.jar

@@ -7,7 +7,7 @@ tags: [speaking, artsy, mongodb]
 comments: true
 dblog_post_id: 274
 ---
-En route to Boston, speaking at [Mongo Boston](http://www.10gen.com/events/mongo-boston-2011) tomorrow, Monday. I’m going to talk about our history with MongoDB at [Art.sy](https://artsy.net), the challenges and, of course, about how much we like it.
+En route to Boston, speaking at [Mongo Boston](https://www.mongodb.com/events/mongo-boston-2011) tomorrow, Monday. I’m going to talk about our history with MongoDB at [Art.sy](https://artsy.net), the challenges and, of course, about how much we like it.
 
 ![]({{ site.url }}/images/posts/2011/2011-10-02-mongo-boston-2011/image_3.jpg)
 
@@ -15,4 +15,4 @@ If you’re in Boston today or going to the conference tomorrow and want to meet
 
 #### Update
 
-Slides are [here](http://www.slideshare.net/dblockdotorg/using-mongodb-for-the-art-genome-project-mongo-boston-2011).
+Slides are [here](https://www.slideshare.net/dblockdotorg/using-mongodb-for-the-art-genome-project-mongo-boston-2011).

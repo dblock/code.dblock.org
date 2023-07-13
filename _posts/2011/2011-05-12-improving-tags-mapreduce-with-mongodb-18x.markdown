@@ -7,7 +7,7 @@ tags: [mongodb, ruby]
 comments: true
 dblog_post_id: 206
 ---
-Today we’ll improve [this map/reduce implementation](http://markembling.info/2010/11/using-map-reduce-in-a-mongodb-app) that produces a collection of tags with their counts. We’ll add inline map/reduce for databases that support it, inline JavaScript and make fast incremental updates.
+Today we’ll improve [this map/reduce implementation](https://markembling.info/2010/11/using-map-reduce-in-a-mongodb-app) that produces a collection of tags with their counts. We’ll add inline map/reduce for databases that support it, inline JavaScript and make fast incremental updates.
 
 MongoDB 1.7.4 introduced inline results within map/reduce. It avoids creating a temporary collection and can be achieved by passing `{ :raw => true, :out => { :inline => 1 } }` within the map/reduce options. Since we’d like to support multiple versions of MongoDB, we’ll inspire ourselves from some code in [mongoid_fulltext](https://github.com/artsy/mongoid_fulltext) and switch between map/reduce that supports inline results (MongoDB = 1.7.4) and one that doesn’t (older versions of MongoDB).
 

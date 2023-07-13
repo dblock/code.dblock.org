@@ -7,7 +7,7 @@ tags: [grape, ruby]
 comments: true
 dblog_post_id: 381
 ---
-There’re a number of excellent micro-frameworks to author RESTful APIs in Ruby. Let’s take a look at the newcomer, [Poncho](https://github.com/stripe/poncho), from the Stripe team, [brought up](https://groups.google.com/forum/?fromgroups=#!topic/ruby-grape/4oEnuDA9e-8) on the Grape mailing list. For those that don’t know me, I’m the maintainer of [Grape](https://github.com/ruby-grape/grape) and use it very heavily at [Artsy](http://artsy.net/). I’ll do my best not to be biased.
+There’re a number of excellent micro-frameworks to author RESTful APIs in Ruby. Let’s take a look at the newcomer, [Poncho](https://github.com/stripe/poncho), from the Stripe team, [brought up](https://groups.google.com/forum/?fromgroups=#!topic/ruby-grape/4oEnuDA9e-8) on the Grape mailing list. For those that don’t know me, I’m the maintainer of [Grape](https://github.com/ruby-grape/grape) and use it very heavily at [Artsy](https://artsy.net/). I’ll do my best not to be biased.
 
 With Poncho you start by declaring resources that inherit from _Poncho::Resource_. A resource is a prescriptive way of declaring what parameters to expect and what results to render from the API. In many ways resources are similar to [Grape’s entities](https://github.com/ruby-grape/grape-entity), except that the latter are no longer part of Grape and you can use [roar](https://github.com/apotonick/roar), [rabl](https://github.com/nesquena/rabl) or any other framework to render results - you choose. Poncho resources include parameter validation, which makes sense. Personally, language matters, so I would not call values that can be assigned to the resource _parameters_, but maybe _fields_ or _attributes_.
 

@@ -136,7 +136,7 @@ end
 
 ### GraphQL IDEs
 
-The best way to try our app out is to use a [GraphQL IDE](https://github.com/andev-software/graphql-ide). Run the Rails application with `rails s` and point the IDE to `http://localhost:3000/graphql`.
+The best way to try our app out is to use a [GraphQL IDE](https://github.com/andev-software/graphql-ide). Run the Rails application with `rails s` and point the IDE to `https://localhost:3000/graphql`.
 
 ![]({{ site.url }}/images/posts/2017/2017-10-23-building-and-consuming-a-graphql-api-in-ruby-on-rails/ide.png)
 

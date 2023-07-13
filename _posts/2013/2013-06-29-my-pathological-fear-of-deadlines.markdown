@@ -7,7 +7,7 @@ tags: [agile, me me]
 comments: true
 dblog_post_id: 387
 ---
-![](http://lifeingroup5.com/wp-content/uploads/2010/08/p84_on_time.jpg)
+![](https://lifeingroup5.com/wp-content/uploads/2010/08/p84_on_time.jpg)
 
 The first step is to admit you have a problem. In such, I will not be offering any solutions in this post.
 

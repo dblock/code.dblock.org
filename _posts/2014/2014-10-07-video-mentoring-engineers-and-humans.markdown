@@ -7,8 +7,8 @@ tags: [teams, teaching, speaking]
 comments: true
 dblog_post_id: 424
 ---
-My QCon 2014 talk [Mentoring Engineers and Humans](http://www.infoq.com/presentations/mentoring-cto-club-ny).
+My QCon 2014 talk [Mentoring Engineers and Humans](https://www.infoq.com/presentations/mentoring-cto-club-ny).
 
-<a href='http://www.infoq.com/presentations/mentoring-cto-club-ny'>
+<a href='https://www.infoq.com/presentations/mentoring-cto-club-ny'>
   ![]({{ site.url }}/images/posts/2014/2014-10-07-video-mentoring-engineers-and-humans/screenshot.jpg)
 </a>

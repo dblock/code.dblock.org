@@ -13,7 +13,7 @@ I talked to a developer recently. He said:
 
 First, you’re confusing "NDA" and "Classified" or "Top Secret". I worked on Classified projects. Or have I? You’ll never know. But I have a t-shirt that says: "my project is so secret, I don’t even know what I am doing". And that’s precisely how you sound.
 
-![Conspiracy Keanu - my project is so secret I DON'T EVEN KNOW WHAT I'M DOING](http://cdn.memegenerator.net/instances/400x/18689460.jpg)
+![Conspiracy Keanu - my project is so secret I DON'T EVEN KNOW WHAT I'M DOING](https://cdn.memegenerator.net/instances/400x/18689460.jpg)
 
 Can you please tell me something useful?
 

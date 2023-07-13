@@ -27,7 +27,7 @@ $ cd octopress
 Using /home/dblock/.rvm/gems/ruby-1.9.2-p290
 
 octopress$ bundle install
-Fetching source index for http://rubygems.org/
+Fetching source index for https://rubygems.org/
 ...
 Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
 
@@ -51,7 +51,7 @@ Initialized empty Git repository in /home/username/source/octopress/_deploy/.git
 create mode 100644 index.html
 
 ---
-## Now you can deploy to http://username.github.com with `rake deploy` ##
+## Now you can deploy to https://username.github.com with `rake deploy` ##
 ```
 
 So what the heck happened here? It pointed our clone to our new repository. It also created a __deploy_ directory with another git repository that is going to contain everything that is being deployed. The remote in that directory is the same as the one in our _octopress_ directory, but the checked out branch is _master_. Btw, we’re now on the _source_ branch.
@@ -136,7 +136,7 @@ To git@github.com:username/username.github.com.git
 * [new branch]      master -> master
 ```
 
-If you go to http://username.github.com you should see your blog with the blog post once Github has regenerated the pages – usually a minute or two. And on https://github.com/username/username.github.com you should be able to see the generated files on _master_ along with a _source_ branch with the blog source.
+If you go to https://username.github.com you should see your blog with the blog post once Github has regenerated the pages – usually a minute or two. And on https://github.com/username/username.github.com you should be able to see the generated files on _master_ along with a _source_ branch with the blog source.
 
 You’ll have to do this every time you want to deploy your changes.
 

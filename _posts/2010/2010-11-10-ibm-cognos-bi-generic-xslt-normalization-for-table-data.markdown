@@ -11,8 +11,8 @@ I was recently looking at a Cognos BI dataset output in the XML format. It’s a
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
-<dataset xmlns="http://developer.cognos.com/schemas/xmldata/1/"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+<dataset xmlns="https://developer.cognos.com/schemas/xmldata/1/"
+  xmlns:xs="https://www.w3.org/2001/XMLSchema-instance">
   <metadata>
     <item name="IP Address" type="xs:string" length="102"/>
     <item name="Host" type="xs:string" length="512"/>
@@ -43,8 +43,8 @@ This is a rather annoying format to work with. Let's transform it, generically, 
 
 {% highlight xml %}
 <?xml version="1.0" encoding="iso-8859-1"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:cognos="http://developer.cognos.com/schemas/xmldata/1/">
+<xsl:stylesheet version="1.0" xmlns:xsl="https://www.w3.org/1999/XSL/Transform"
+  xmlns:cognos="https://developer.cognos.com/schemas/xmldata/1/">
     <xsl:output method="xml" version="1.0" encoding="UTF-8" standalone="yes" indent="yes"/>
   <xsl:template match="/">
     <xsl:element name="DataSet">

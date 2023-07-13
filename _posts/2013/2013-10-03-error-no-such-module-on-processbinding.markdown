@@ -51,4 +51,4 @@ CoffeeScript version 1.6.3
 
 Problem solved.
 
-Some help from [@craigspaeth](http://twitter.com/craigspaeth).
+Some help from [@craigspaeth](https://twitter.com/craigspaeth).

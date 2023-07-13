@@ -7,7 +7,7 @@ tags: [ruby]
 comments: true
 dblog_post_id: 184
 ---
-This is going to heavily quote [http://www.rubyfleebie.com/enumerations-and-ruby/](http://www.rubyfleebie.com/enumerations-and-ruby/),  please read that first. The proposed implementation lets you iterate over enumerated values, which is quite awesome. But it offers little in terms of reuse. Let's improve upon it and split the methods in a way that lets us include an Enum implementation with all its class methods along the way. Full Enum.rb at the end.
+This is going to heavily quote [https://www.rubyfleebie.com/enumerations-and-ruby/](https://www.rubyfleebie.com/enumerations-and-ruby/),  please read that first. The proposed implementation lets you iterate over enumerated values, which is quite awesome. But it offers little in terms of reuse. Let's improve upon it and split the methods in a way that lets us include an Enum implementation with all its class methods along the way. Full Enum.rb at the end.
 
 {% highlight ruby %}
 module Enum

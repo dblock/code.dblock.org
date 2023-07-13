@@ -59,7 +59,7 @@ For example, 1.5.4567.0 means that this is product version 1.5 at SVN revision 4
 
 ### Implementation with MSBuild
 
-We use [MSBuild Community Tasks](https://web.archive.org/web/20080105002641/http://msbuildtasks.tigris.org//) to generate the version number.
+We use [MSBuild Community Tasks](https://web.archive.org/web/20080105002641/https://msbuildtasks.tigris.org//) to generate the version number.
 
 #### Versioning C# Assemblies
 
@@ -81,7 +81,7 @@ A Version.h.template file looks like this.
 
  VERSION_PRODUCTVERSION_VALUE VERSION_VALUE
 
-The template replacement, task from [MSBuild Community Tasks](https://web.archive.org/web/20080105002641/http://msbuildtasks.tigris.org//).
+The template replacement, task from [MSBuild Community Tasks](https://web.archive.org/web/20080105002641/https://msbuildtasks.tigris.org//).
 
 And the version.rc file to include in every other .rc file.
 
@@ -116,7 +116,7 @@ This sets the build.number property. The build files may then use the version.fu
 
 ### Implementation in CruiseControl
 
-CruiseControl supports the concept of build publishers and labellers that work together to pickup built artifacts and deposit then in a destination folder. With my versioning scheme it's easy to create matching folder names and build numbers. None of the built-in CruiseControl.NET labellers fully support our versioning scheme but there is a [Google code project](http://code.google.com/p/svnrevisionlabeller/) available that implements an SVN Revision Labeller that works nicely with this versioning. To install this plug-in, just download [the latest version of SvnRevisionLabeller plugin](https://code.google.com/archive/p/svnrevisionlabeller/downloads), unzip it and drop ccnet.SvnRevisionLabeller.dll into your CruiseControl.NET server directory (for example, C:\Program Files\CruiseControl.NET\server).
+CruiseControl supports the concept of build publishers and labellers that work together to pickup built artifacts and deposit then in a destination folder. With my versioning scheme it's easy to create matching folder names and build numbers. None of the built-in CruiseControl.NET labellers fully support our versioning scheme but there is a [Google code project](https://code.google.com/p/svnrevisionlabeller/) available that implements an SVN Revision Labeller that works nicely with this versioning. To install this plug-in, just download [the latest version of SvnRevisionLabeller plugin](https://code.google.com/archive/p/svnrevisionlabeller/downloads), unzip it and drop ccnet.SvnRevisionLabeller.dll into your CruiseControl.NET server directory (for example, C:\Program Files\CruiseControl.NET\server).
 
 Now you can add the SVN version labeller to your CruiseControl config file. Here's a sample config file:
 

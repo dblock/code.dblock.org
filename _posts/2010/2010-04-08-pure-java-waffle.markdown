@@ -12,7 +12,7 @@ dblog_post_id: 95
 
 I finally got to porting [Waffle](https://github.com/dblock/waffle/) to pure java with [JNA](https://github.com/twall/jna/). This means you don’t need .NET framework or COM to call Waffle from Java. It’s pure Java.
 
-Waffle is a thin interface that simplifies Windows authentication and authorization, therefore providing a practical and workable back-end for NTLM, Negotiate, Kerberos and other [SPNEGOs](http://en.wikipedia.org/wiki/SPNEGO). Here’re some scenarios that you can now do without any headache directly in Java.
+Waffle is a thin interface that simplifies Windows authentication and authorization, therefore providing a practical and workable back-end for NTLM, Negotiate, Kerberos and other [SPNEGOs](https://en.wikipedia.org/wiki/SPNEGO). Here’re some scenarios that you can now do without any headache directly in Java.
 
 #### Logon a user: get his local and domain groups
 

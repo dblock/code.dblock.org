@@ -16,7 +16,7 @@ include_recipe 'mongodb3::default'
 # downgrade mongoexport, see https://jira.mongodb.org/browse/TOOLS-1039
 yum_repository 'mongodb-org-2.6' do
   description 'MongoDB 2.6 Repository'
-  baseurl 'http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/'
+  baseurl 'https://downloads-distro.mongodb.org/repo/redhat/os/x86_64/'
   gpgcheck false
   action :create
 end

@@ -8,8 +8,8 @@ comments: true
 I am late to using GitHub Actions for CI, and immediately ran into an issue trying to figure out how to conditionally install a different version of Bundler for a certain version of Rails in [radar/distance_of_time_in_words#104](https://github.com/radar/distance_of_time_in_words/pull/104). Bundler 2.x doesn't work with Rails 4, and needs to be downgraded.
 
 {% highlight bash %}
-Fetching gem metadata from http://rubygems.org/.............
-Fetching gem metadata from http://rubygems.org/.
+Fetching gem metadata from https://rubygems.org/.............
+Fetching gem metadata from https://rubygems.org/.
 Resolving dependencies...
 Bundler could not find compatible versions for gem "bundler":
   In rails_4.gemfile:

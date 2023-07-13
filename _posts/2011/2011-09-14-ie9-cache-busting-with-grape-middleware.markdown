@@ -43,4 +43,4 @@ describe ApiCacheBuster do
 end
 {% endhighlight %}
 
-The headers are inspired from [this StackOverflow article](http://stackoverflow.com/questions/711418/how-to-prevent-browser-page-caching-in-rails), which shows how to do it with plain Rails controllers.
+The headers are inspired from [this StackOverflow article](https://stackoverflow.com/questions/711418/how-to-prevent-browser-page-caching-in-rails), which shows how to do it with plain Rails controllers.

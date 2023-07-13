@@ -13,7 +13,7 @@ If a browser sends an _Accept-Encoding: gzip _header for a resource that has bot
 
 The solution is, as usual, to monkey-patch rails. We’re going to tell our Rails application to serve a compressed file if the browser includes the right headers by rendering an URL to the compressed version.
 
-In Rails 3.0 (your mileage will vary for 3.1) paths to assets are written via [ActionView::Helpers::AssetTagHelper](http://api.rubyonrails.org/v3.0.9/classes/ActionView/Helpers/AssetTagHelper.html)’s _path_to_javascript_ and _path_to_stylesheet_. We can figure out browser capabilities by examining _request.env['HTTP_ACCEPT_ENCODING']_ and rewrite those URLs to our liking.
+In Rails 3.0 (your mileage will vary for 3.1) paths to assets are written via [ActionView::Helpers::AssetTagHelper](https://api.rubyonrails.org/v3.0.9/classes/ActionView/Helpers/AssetTagHelper.html)’s _path_to_javascript_ and _path_to_stylesheet_. We can figure out browser capabilities by examining _request.env['HTTP_ACCEPT_ENCODING']_ and rewrite those URLs to our liking.
 
 {% highlight ruby %}
 module ActionView
@@ -43,7 +43,7 @@ end
 
 [config/initializers/asset_tag_helper.rb and spec/initializers/rails/asset_tag_helper_spec.rb](https://gist.github.com/1451946)_
 
-The .cgz extension replaces the .gz extension to workaround a [bug in Safari](http://stackoverflow.com/questions/1235116/safari-and-gzip). The `rewrite_path_to_gzip?` check ensures that we’re rendering something under _assets_ and that we’re using an external server (not in development). Your condition may be different.
+The .cgz extension replaces the .gz extension to workaround a [bug in Safari](https://stackoverflow.com/questions/1235116/safari-and-gzip). The `rewrite_path_to_gzip?` check ensures that we’re rendering something under _assets_ and that we’re using an external server (not in development). Your condition may be different.
 
 Finally, we must set the proper content encoding headers when pushing the assets to S3. Here’s the meat of our Rake task.
 

@@ -7,7 +7,7 @@ tags: [ruby]
 comments: true
 dblog_post_id: 400
 ---
-As always, ImageMagick is super fun after an OS upgrade. Mavericks + Ruby 2.x + RMagick failed with something very confusing today. It couldn’t find the Xext library, which is part of X11. Turns out, that was removed from Mavericks according to [http://support.apple.com/kb/HT5293](http://support.apple.com/kb/HT5293). Install XQuartz from [http://xquartz.macosforge.org/landing](http://xquartz.macosforge.org/landing) and the problem goes away.
+As always, ImageMagick is super fun after an OS upgrade. Mavericks + Ruby 2.x + RMagick failed with something very confusing today. It couldn’t find the Xext library, which is part of X11. Turns out, that was removed from Mavericks according to [https://support.apple.com/kb/HT5293](https://support.apple.com/kb/HT5293). Install XQuartz from [https://xquartz.macosforge.org/landing](https://xquartz.macosforge.org/landing) and the problem goes away.
 
 ```
 $ cat ~/.rvm/gems/ruby-2.0.0-p353@gravity/gems/rmagick-2.13.2/ext/RMagick/mkmf.log

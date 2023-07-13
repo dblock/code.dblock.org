@@ -16,8 +16,8 @@ In this post I’ll show you how to get started with installing an MSSQL databas
 First, you must add a reference to the WixDataSource extension to your Wix project and include the DataSource extension’s namespace into the Wix XML declaration.
 
 {% highlight xml %}
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
- xmlns:DataSource="http://schemas.appsecinc.com/wix/DataSourceExtension">
+<Wix xmlns="https://schemas.microsoft.com/wix/2006/wi"
+ xmlns:DataSource="https://schemas.appsecinc.com/wix/DataSourceExtension">
 {% endhighlight %}
 
 #### ODBC Connection

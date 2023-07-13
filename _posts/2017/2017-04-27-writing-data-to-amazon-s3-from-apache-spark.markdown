@@ -5,7 +5,7 @@ date: 2017-04-27
 tags: [scala, spark, s3, aws]
 comments: true
 ---
-I [recently started working with Apache Spark, Hadoop, HDFS and Hive](/2017/04/02/getting-started-with-spark-hadoop-hdfs-hive.html). I [made some jobs in Scala that generated website sitemaps](http://artsy.github.io/blog/2017/04/02/generating-sitemaps-with-apache-spark) and another that [calculated the imporance of an artwork amongst all other artist's artworks](http://artsy.github.io/blog/2017/04/21/calculating-the-importance-of-an-artwork-with-apache-spark). Today I wrote an inverted index that exploded a dictionary of art genome data.
+I [recently started working with Apache Spark, Hadoop, HDFS and Hive](/2017/04/02/getting-started-with-spark-hadoop-hdfs-hive.html). I [made some jobs in Scala that generated website sitemaps](https://artsy.github.io/blog/2017/04/02/generating-sitemaps-with-apache-spark) and another that [calculated the imporance of an artwork amongst all other artist's artworks](https://artsy.github.io/blog/2017/04/21/calculating-the-importance-of-an-artwork-with-apache-spark). Today I wrote an inverted index that exploded a dictionary of art genome data.
 
 The input is millions of rows containing a (gene name -> gene value) dictionary, stored in HDFS as `map<string,double>`, and the output is many more millions of rows of JSON such as `{ artist_id: "id", name: "gene name", value: "gene value" }` exported to S3. This index is ultimately imported back into MongoDB and used on Artsy for fast lookup of artworks or artists that have certain genes within a requested range.
 
@@ -61,5 +61,5 @@ results.sparkContext.hadoopConfiguration.set("fs.s3a.secret.key", "...")
 A few useful notes and links.
 
 * [S3 Support in Apache Hadoop](https://cwiki.apache.org/confluence/display/HADOOP2/AmazonS3)
-* [Dealing with java.lang.OutOfMemoryError : GC overhead limit exceeded in Spark](http://stackoverflow.com/a/22742982/123094)
-* [What is the difference between s3n, s3a and s3?](http://stackoverflow.com/q/33356041/123094)
+* [Dealing with java.lang.OutOfMemoryError : GC overhead limit exceeded in Spark](https://stackoverflow.com/a/22742982/123094)
+* [What is the difference between s3n, s3a and s3?](https://stackoverflow.com/q/33356041/123094)

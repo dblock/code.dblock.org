@@ -20,7 +20,7 @@ You got to love debugging JavaScript errors. Here’s one from a MongoDB map/red
 
 Examining the MongoDB log we notice that the map/reduce completes to about 70%, so this is caused by some data inside the database. In this case the issue is in the _spline_ object being accessed by the _map_ function. Indeed, the map tries to fetch _spline.reticulated_, which is hopefully a Boolean value. The error _"spline has no properties"_ is, generally, another way of saying _"spline is null"_. In my case splines live in an embedded collection inside _bones_, and aren’t expected to be _null_, so I need to track down a null _spline_ inside _bone.splines_.
 
-While we can just look for a null embedded object, more generally, we can find whether a JS object has no properties with [this isEmpty function from SO](http://stackoverflow.com/questions/3426979/javascript-checking-if-an-object-has-no-properties-or-if-a-map-associative-arra). Declare it in the mongodb console (use a 1-liner):
+While we can just look for a null embedded object, more generally, we can find whether a JS object has no properties with [this isEmpty function from SO](https://stackoverflow.com/questions/3426979/javascript-checking-if-an-object-has-no-properties-or-if-a-map-associative-arra). Declare it in the mongodb console (use a 1-liner):
 
 {% highlight js %}
 function isEmpty(map) {

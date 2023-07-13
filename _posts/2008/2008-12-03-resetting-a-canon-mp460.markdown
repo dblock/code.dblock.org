@@ -7,9 +7,9 @@ tags: [hardware]
 comments: true
 dblog_post_id: 21
 ---
-This is going to be my first hardware post. We'll start simple - I do have a copy of [The Art of Electronics](http://www.amazon.com/Art-Electronics-Paul-Horowitz/dp/0521370957) and a welder, so there's a chance I might post something meaningful one day.
+This is going to be my first hardware post. We'll start simple - I do have a copy of [The Art of Electronics](https://www.amazon.com/Art-Electronics-Paul-Horowitz/dp/0521370957) and a welder, so there's a chance I might post something meaningful one day.
 
-I was about to throw my MP460 Canon printer (80$) out of the window (8th floor, 10$ a flight of stairs). I was trying to setup a wireless print server and finally got that working, when the printer came back with an obscure 5100 error. I tried everything, including shaking it violently. What worked was a reset, and [this page](http://tricks-collections.com/2008/04/reset-printer-canon-mp140-mp160-mp180-mp210-mp220-mp460-mp470-mp500-mp510-mp530-mp600-mp610-mp800-mp820-mp810-mp830-mp960-mp970/) explains how.
+I was about to throw my MP460 Canon printer (80$) out of the window (8th floor, 10$ a flight of stairs). I was trying to setup a wireless print server and finally got that working, when the printer came back with an obscure 5100 error. I tried everything, including shaking it violently. What worked was a reset, and [this page](https://web.archive.org/web/20080820233037/http://tricks-collections.com/2008/04/reset-printer-canon-mp140-mp160-mp180-mp210-mp220-mp460-mp470-mp500-mp510-mp530-mp600-mp610-mp800-mp820-mp810-mp830-mp960-mp970/) explains how.
 
 1. Turn off the printer
 2. Hold the Resume Button (red circle in the triangle), add a printer (click "Power") an indicator light green.

@@ -27,7 +27,7 @@ namespace WixHarvest
             return id.Replace("_", ".").Replace("-", ".");
         }
 
-        const String wixns = "http://schemas.microsoft.com/wix/2006/wi";
+        const String wixns = "https://schemas.microsoft.com/wix/2006/wi";
 
         static List<String> GenerateFragment(XmlDocument doc, XmlNode parent, DirectoryInfo dir, DirectoryInfo root)
         {
@@ -101,7 +101,7 @@ namespace WixHarvest
                 }
 
                 XmlDocument doc = new XmlDocument();
-                doc.LoadXml("<Include xmlns=\"http://schemas.microsoft.com/wix/2006/wi\" />");
+                doc.LoadXml("<Include xmlns=\"https://schemas.microsoft.com/wix/2006/wi\" />");
                 DirectoryInfo root = new DirectoryInfo(args[0]);
                 List<String> componentIds = GenerateFragment(doc, doc.FirstChild, root, root);
                 XmlNode featureRef = doc.FirstChild.AppendChild(doc.CreateElement("Feature", wixns));

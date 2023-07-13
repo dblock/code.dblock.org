@@ -9,7 +9,7 @@ A few months ago I asked myself: [What does a CTO do?](/2015/05/23/what-does-a-c
 
 In 2011 I lived and commuted from Brighton Beach, Brooklyn, on the subway. I wrote a blog post, [Dear California Engineer - Your Commute is Killing You? Move to New York!](/2011/05/29/dear-california-engineer-your-commute-is-killing-you-move-to-new-york.html), which went viral, and topped Hacker News for a solid two days. The post highlighted a few interesting advantages of commuting using public transportation, notably that I could work on the subway, which served as a wonderful time box. At that time my team was just a couple of people and I spent a lot of time doing individual contributor work. My entire commute was about _getting things done_, or more specifically, about _writing code_.
 
-I've since moved back to Manhattan and live across the street from the famous Flatiron building in what was erected to look like a single family mansion 1862. The story of this construction was captured in [this Daytonian in Manhattan blog post](http://daytoninmanhattan.blogspot.com/2013/07/refined-remnants-at-nos-178-180-fifth.html), including this piece of colorful history: _She took from her wardrobe and put on a silk wrapper which Whitney had brought from Turkey, and attired in which, he had often informed her, she appeared to most advantage. She then dressed her hair in a fashion most admired by her lover, and lying down on the lounge, shot herself._ The ghost of this woman still positively roams the corridors, according to one of my psychic friends.
+I've since moved back to Manhattan and live across the street from the famous Flatiron building in what was erected to look like a single family mansion 1862. The story of this construction was captured in [this Daytonian in Manhattan blog post](https://daytoninmanhattan.blogspot.com/2013/07/refined-remnants-at-nos-178-180-fifth.html), including this piece of colorful history: _She took from her wardrobe and put on a silk wrapper which Whitney had brought from Turkey, and attired in which, he had often informed her, she appeared to most advantage. She then dressed her hair in a fashion most admired by her lover, and lying down on the lounge, shot herself._ The ghost of this woman still positively roams the corridors, according to one of my psychic friends.
 
 My new commute takes me downtown 1.8 miles via multiple routes. It usually takes 20-30 minutes past Union Square, Washington Square Park, NYU and SOHO. It's pretty amazing. I also walk back at the end of the day.
 
@@ -27,7 +27,7 @@ My mind is racing with the following thought.
 
 ### Choosing from Priorities
 
-First, I choose between _people_, _technology_ and _business_. I default to _business_, because this is my weakest domain or after reading something particularly inspirational (eg. [Breaking Smart: Season 1](http://breakingsmart.com/season-1)). I usually choose _people_ next and _technology_ last.
+First, I choose between _people_, _technology_ and _business_. I default to _business_, because this is my weakest domain or after reading something particularly inspirational (eg. [Breaking Smart: Season 1](https://breakingsmart.com/season-1)). I usually choose _people_ next and _technology_ last.
 
 ### Formulating the Question
 
@@ -35,7 +35,7 @@ I try to formulate a question in my head as I begin walking. This usually takes 
 
 > Is my Engineering team getting too comfortable and falling off-balance between freedom, pressure and responsibility?
 
-There's some background to this question. After a recent product re-org we were having hard time filling dedicated positions for one of the most exciting business opportunities: [auctions](https://www.artsy.net/auctions). I have personally worked on the early version of the system (read [Building an English Auction with MongoDB](http://artsy.github.io/blog/2014/04/17/building-an-english-auction-with-mongodb/)) and find the domain very interesting and very challenging. I definitely enjoy the parties, but while you can quickly fail and fix in other products, auctions are time-based and final. The auctions system must work every time and must work perfectly. It's a high stress, high risk and, naturally, high reward environment. It's not for everyone.
+There's some background to this question. After a recent product re-org we were having hard time filling dedicated positions for one of the most exciting business opportunities: [auctions](https://www.artsy.net/auctions). I have personally worked on the early version of the system (read [Building an English Auction with MongoDB](https://artsy.github.io/blog/2014/04/17/building-an-english-auction-with-mongodb/)) and find the domain very interesting and very challenging. I definitely enjoy the parties, but while you can quickly fail and fix in other products, auctions are time-based and final. The auctions system must work every time and must work perfectly. It's a high stress, high risk and, naturally, high reward environment. It's not for everyone.
 
 ### Answering the Question
 

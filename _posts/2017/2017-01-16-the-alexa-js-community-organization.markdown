@@ -7,7 +7,7 @@ comments: true
 ---
 ![alexa-js]({{ site.url }}/images/posts/2017/2017-01-16-the-alexa-js-community-organization/echo-dot.png)
 
-You may have seen my previous posts on [Bringing Artsy to Amazon Echo](http://artsy.github.io/blog/2016/11/30/bringing-artsy-to-amazon-echo-alexa) and [Hacking on Multiple Alexas](/2016/12/15/hacking-on-multiple-amazon-echo-alexas.html).
+You may have seen my previous posts on [Bringing Artsy to Amazon Echo](https://artsy.github.io/blog/2016/11/30/bringing-artsy-to-amazon-echo-alexa) and [Hacking on Multiple Alexas](/2016/12/15/hacking-on-multiple-amazon-echo-alexas.html).
 
 I found the Amazon JavaScript ecosystem around Alexa too terse and the independent efforts to address that somewhat spread out, despite some excellent open-source libraries, such as [alexa-app](https://github.com/alexa-js/alexa-app). Over the past couple of weeks I tried to help out by creating a home for the many Alexa Javascript projects. The new home for these is [github.com/alexa-js](https://github.com/alexa-js) and the many library maintainers have kindly agreed to move their projects into it.
 

@@ -9,8 +9,8 @@ dblog_post_id: 320
 ---
 Waffle is a native C# and Java library that does everything Windows authentication (Negotiate, NTLM and Kerberos), on Windows - [https://github.com/dblock/waffle/](https://github.com/dblock/waffle).
 
-Slides from my presentation [here](http://www.slideshare.net/dblockdotorg/waffle-windows-authentication-in-java).
+Slides from my presentation [here](https://www.slideshare.net/dblockdotorg/waffle-windows-authentication-in-java).
 
 ![]({{ site.url }}/images/posts/2012/2012-02-24-waffle-nyjavasig/image_7.jpg)
 
-Oh, and yes, if you’re still writing JNI code, stop and switch to [JNA](http://github.com/twall/jna).
+Oh, and yes, if you’re still writing JNI code, stop and switch to [JNA](https://github.com/twall/jna).

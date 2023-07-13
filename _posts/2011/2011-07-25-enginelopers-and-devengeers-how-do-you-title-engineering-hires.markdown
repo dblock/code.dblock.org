@@ -9,7 +9,7 @@ dblog_post_id: 237
 ---
 ![]({{ site.url }}/images/posts/2011/2011-07-25-enginelopers-and-devengeers-how-do-you-title-engineering-hires/image_14.jpg)
 
-"What would you call such an animal?", asked someone at work about a future new hire in our engineering team. A rather artsy discussion ensued – working with a bunch of creative people across art and technology disciplines often sparks fun conversations. Next thing you know I am reading [rickwebb’s tumble on engineering titles](http://rickwebb.tumblr.com/post/7938077259/whats-the-worse-piece-of-advice-youve-ever-received).
+"What would you call such an animal?", asked someone at work about a future new hire in our engineering team. A rather artsy discussion ensued – working with a bunch of creative people across art and technology disciplines often sparks fun conversations. Next thing you know I am reading [rickwebb’s tumble on engineering titles](https://rickwebb.tumblr.com/post/7938077259/whats-the-worse-piece-of-advice-youve-ever-received).
 
 > _"That myth is that titles are bad, and people hate managers [...] then there are titles. Same deal. There are some people who don’t care about titles. God bless ‘em. There are, however, many people that do."_
 
@@ -21,7 +21,7 @@ In a startup we’d like not to think about titles too much. So my creative coll
 
 #### Enginelopers and Devengeers
 
-I watched [this excellent presentation](http://www.infoq.com/presentations/Craft-and-Software-Engineering) that compared Software Engineering with other Engineering disciplines. I don’t like to think about anyone on my team as "a pair of hands" or "a brain on a stick". Software is a creative business that translates into both an artistic and a disciplined process. The word "Engineer" carries too much context around planning, architecting and thinking, while the word "Developer", not enough. Are we a new breed of "Enginelopers"?
+I watched [this excellent presentation](https://www.infoq.com/presentations/Craft-and-Software-Engineering) that compared Software Engineering with other Engineering disciplines. I don’t like to think about anyone on my team as "a pair of hands" or "a brain on a stick". Software is a creative business that translates into both an artistic and a disciplined process. The word "Engineer" carries too much context around planning, architecting and thinking, while the word "Developer", not enough. Are we a new breed of "Enginelopers"?
 
 There’s something romantic-sounding in the reverse combination of the two words. It evokes a bit of "Adventurer" and "Evangelist".
 

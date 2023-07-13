@@ -9,7 +9,7 @@ dblog_post_id: 368
 ---
 ![]({{ site.url }}/images/posts/2013/2013-01-12-help-me-fix-tech-recruiting-become-a-recruiter/image_7.jpg)
 
-[Nele Brönner and Luca Bogoni](http://www.lucabogoni.com)
+[Nele Brönner and Luca Bogoni](https://www.lucabogoni.com)
 
 Recruiting is broken and a plethora of startups are attempting to fix it with better mouse traps, in which you, the magical engineering unicorn that everybody wants, continue being a mouse. Trapped. The basic problem is the same: no matter what recruiters tell you, however genuinely helpful they try to be, they don’t have your best interest at heart, except in a single case where you want to maximize your money. More on that in the final words of this post.
 
@@ -29,9 +29,9 @@ I don’t want anything from these connections except an opportunity to learn fr
 
 When I worked at Microsoft my manager used to talk about an "open door policy". Everyone literally had a small personal office and keeping the door open meant allowing anyone to walk in and talk to you. Today I still keep a wide open virtual door.
 
-I’ve written several blog posts that have gone viral, including [Your Commute is Killing You, Move to New York](http://www.dblock.org/your-commute-is-killing-you-move-to-new-york), followed by  [Moving to New York? A Guide for Software Engineers](/moving-to-new-york-a-guide-for-software-engineers) and even a more comical [Sitting is Killing You? Move to New York](/sitting-is-killing-you-move-to-new-york). (You get the idea – move to New York!) Since then I’ve received hundreds of emails and have invited countless engineers to visit me at work. A disproportionate amount of these are talented developers stuck in a cubicle working for the BORG or generally unhappy with their current situation. But more than a new job, they want a first, personal, connection to the New York startup scene. Someone helped me with this a long time ago – I owe it to them to return the favor.
+I’ve written several blog posts that have gone viral, including [Your Commute is Killing You, Move to New York](https://www.dblock.org/your-commute-is-killing-you-move-to-new-york), followed by  [Moving to New York? A Guide for Software Engineers](/moving-to-new-york-a-guide-for-software-engineers) and even a more comical [Sitting is Killing You? Move to New York](/sitting-is-killing-you-move-to-new-york). (You get the idea – move to New York!) Since then I’ve received hundreds of emails and have invited countless engineers to visit me at work. A disproportionate amount of these are talented developers stuck in a cubicle working for the BORG or generally unhappy with their current situation. But more than a new job, they want a first, personal, connection to the New York startup scene. Someone helped me with this a long time ago – I owe it to them to return the favor.
 
-I’ve offered at least 3 personal connections to every one of these engineers visiting me. I’ve directed others to [NYTM](http://nytm.org/made-in-nyc) and offered more personal help if cold connections failed. I’ve hooked up people with startup CEOs running tiny teams at GeneralAssemb.ly where we used to have our office and that was my entry in the NYC startup scene, engineering managers that are actively hiring at other NYC startups or other technologists with similar technical interests at large.
+I’ve offered at least 3 personal connections to every one of these engineers visiting me. I’ve directed others to [NYTM](https://nytm.org/made-in-nyc) and offered more personal help if cold connections failed. I’ve hooked up people with startup CEOs running tiny teams at GeneralAssemb.ly where we used to have our office and that was my entry in the NYC startup scene, engineering managers that are actively hiring at other NYC startups or other technologists with similar technical interests at large.
 
 I don’t want anything from these referrals except an opportunity to help them. I am very emotionally attached to New York and helping a single engineer helps the NYC tech scene rise.
 

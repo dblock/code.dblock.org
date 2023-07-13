@@ -15,7 +15,7 @@ I see two major attack vectors.
 
 #### Mass Assignment
 
-Read [Homakov’s post](http://homakov.blogspot.com/2012/03/how-to.html). If it’s not clear, read it again until it’s clear.
+Read [Homakov’s post](https://homakov.blogspot.com/2012/03/how-to.html). If it’s not clear, read it again until it’s clear.
 
 Given models Parent and Child where children belong to parents - can I post a parent’s ID to a form that updates a child and therefore change which parent a child belongs to? If so, you have a problem. Go fix it first thing in the morning in a systematic way, by writing a test that reproduces the issue, then by protecting the attributes with an _attr_accessible_ method. This will filter out everything that’s not in the list when you call _update_attributes_. Make sure you just use this on all models, all the time.
 
@@ -31,6 +31,6 @@ My recommendation is to use something like [CanCan](https://github.com/ryanb/can
 
 #### Dear Github
 
-I still love you. This happens to the best people out there. Shameless plug for my former [Team SHATTER](http://www.teamshatter.com/), if you want a list. Move on and learn from it.
+I still love you. This happens to the best people out there. Shameless plug for my former [Team SHATTER](https://web.archive.org/web/20101125033914/https://www.teamshatter.com/), if you want a list. Move on and learn from it.
 
 ![]({{ site.url }}/images/posts/2012/2012-03-05-github-hacked-things-to-do-on-monday/image_3.jpg)

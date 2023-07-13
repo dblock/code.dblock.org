@@ -57,7 +57,7 @@ Start a local Jekyll server.
 bundle exec jekyll serve 
 ```
 
-Navigate to http://localhost:4000 to see the blog.
+Navigate to https://localhost:4000 to see the blog.
 
 ## Contribute Content
 
@@ -75,7 +75,7 @@ git checkout -b my-feature-branch
 
 Add or edit a post.
 
-Make sure that it displays correctly locally at http://localhost:4000.
+Make sure that it displays correctly locally at https://localhost:4000.
 
 ### Commit Changes
 

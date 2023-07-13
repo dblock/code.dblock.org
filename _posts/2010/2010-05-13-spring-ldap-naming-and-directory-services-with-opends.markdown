@@ -9,7 +9,7 @@ dblog_post_id: 102
 ---
 ![]({{ site.url }}/images/posts/2010/2010-05-13-spring-ldap-naming-and-directory-services-with-opends/image_4.jpg)
 
-In a [previous post](/jndi-naming-and-directory-services-with-opends) I’ve described an initial implementation of OpenDS as a naming and directory service, including extending the directory schema and reading and writing directory objects with JNDI. As actual (read: competent) Java developers took over my prototype, they switched from JNDI to [spring-ldap](http://www.springsource.org/ldap). The resulting code is much more pleasant, and I got to learn a bit more about Spring.
+In a [previous post](/jndi-naming-and-directory-services-with-opends) I’ve described an initial implementation of OpenDS as a naming and directory service, including extending the directory schema and reading and writing directory objects with JNDI. As actual (read: competent) Java developers took over my prototype, they switched from JNDI to [spring-ldap](https://www.springsource.org/ldap). The resulting code is much more pleasant, and I got to learn a bit more about Spring.
 
 #### Service Object
 
@@ -87,9 +87,9 @@ To make it all work we need some configuration. We can define a _springldap.xml_
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+<beans xmlns="https://www.springframework.org/schema/beans"
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
     <bean id="contextSource"
         class="org.springframework.ldap.core.support.LdapContextSource">
         <property name="url" value="ldap://localhost:389" />
@@ -171,13 +171,13 @@ public Service getServiceByName(String name) throws NameNotFoundException {
 You can run the source code from this article with OpenDS and Eclipse.
 
 1. Check out the source code from [here](https://github.com/dblock/codeproject/tree/master/JndiDemo).
-2. Install OpenDS from [https://web.archive.org/web/20111001105032/http://www.opends.org](https://web.archive.org/web/20111001105032/http://www.opends.org).
+2. Install OpenDS from [https://web.archive.org/web/20111001105032/https://www.opends.org](https://web.archive.org/web/20111001105032/https://www.opends.org).
 3. Copy _schema\Services.ldif_ into _OpenDS\config\schema\100-Services.ldif_ and restart OpenDS.
 4. Import the _JndiDemo_ project into Eclipse and run JUnit tests in the _src-test_ package.
 
 #### Links
 
 - [Source Code for this Article](https://github.com/dblock/codeproject/tree/master/JndiDemo)
-- [OpenDS Directory Server](https://web.archive.org/web/20111001105032/http://www.opends.org/)
+- [OpenDS Directory Server](https://web.archive.org/web/20111001105032/https://www.opends.org/)
 - [Getting Started with JNDI and OpenDS](/jndi-naming-and-directory-services-with-opends)
-- [Spring-LDAP](http://www.springsource.org/ldap)
+- [Spring-LDAP](https://www.springsource.org/ldap)

@@ -9,7 +9,7 @@ dblog_post_id: 367
 ---
 ![]({{ site.url }}/images/posts/2012/2012-12-23-10-things-engineers-and-non-engineers-can-do-to-make-a-website-faster/image_3.jpg)
 
-> An investor, a startup CEO, and an engineer walk into a bar to discuss [Page Weight Matters](http://blog.chriszacharias.com/page-weight-matters). They naturally end up talking about their own slow website.
+> An investor, a startup CEO, and an engineer walk into a bar to discuss [Page Weight Matters](https://blog.chriszacharias.com/page-weight-matters). They naturally end up talking about their own slow website.
 >
 > The CEO’s friend works in finance. She invested a bit of cash in her friend’s startup. She came home late, made herself dinner and read her personal email (her bank won’t let her do that at work). The website’s newsletter had something interesting, so she clicked. She stared at a white page for a bit, then it finally loaded after 8 seconds. She was already bored and figured it’s not worth it. "Something’s wrong with my internet", she thought. Google came up instantly, though, so she emailed her CEO friend.
 >
@@ -17,7 +17,7 @@ dblog_post_id: 367
 >
 > The engineer was watching an API response graph that oscillated abnormally with 4 seconds peaks fetching the 2D spline when he received the investor’s email forwarded by the CEO. A large code refactor that enables a much faster 2D spline page rendering finally had a successful build and was now ready to be merged onto the master branch, pending code review. He replied to the CEO’s email with the good news of progress being made before leaving the office.
 >
-> They all meet at [Tom & Jerry’s](http://www.yelp.com/biz/tom-and-jerrys-new-york). Where else?
+> They all meet at [Tom & Jerry’s](https://www.yelp.com/biz/tom-and-jerrys-new-york). Where else?
 
 If you can find yourself in my story, you’re in a good place. You have the CEO doing his job having visions of the future based on the experiences of the past. You have engaged users that want you to succeed and are willing to provide feedback. You have engineers doing their job building new features as fast as they can and fixing issues, including performance, as they are found incrementally. You are in a bar in New York with cheap drinks.
 

@@ -9,7 +9,7 @@ dblog_post_id: 253
 ---
 ![image_thumb5]({{ site.url }}/images/posts/2011/2011-09-01-cijoe-jenkins-ci/headshot7.jpg)
 
-We’ve switched from [CIJoe](https://github.com/defunkt/cijoe) to [Jenkins](http://jenkins-ci.org/). I guess we’ve "graduated" to Jenkins, but in retrospect we should have just used that in the first place. I think CIJoe is fine, we did thousands of builds with it, thank you CIJoe. But it’s actually easier to setup Jenkins and it’s much lighter than what I anticipated. As someone said, there’s no need to have CI written in Ruby to build Ruby projects.
+We’ve switched from [CIJoe](https://github.com/defunkt/cijoe) to [Jenkins](https://jenkins-ci.org/). I guess we’ve "graduated" to Jenkins, but in retrospect we should have just used that in the first place. I think CIJoe is fine, we did thousands of builds with it, thank you CIJoe. But it’s actually easier to setup Jenkins and it’s much lighter than what I anticipated. As someone said, there’s no need to have CI written in Ruby to build Ruby projects.
 
 This is what I see after spending a day with Jenkins.
 
@@ -22,7 +22,7 @@ Jenkins is a lot closer to my BuildTracker project at Microsoft – we were doin
 
 Long story ...
 
-I couldn’t get CIJoe to use RVM and went down the rabbit hole of a global Ruby installation and running CIJoe as root. I managed to get CIJoe to auto-start on boot using a script from [this post](https://web.archive.org/web/20110907040936/http://www.acalling.co.uk/articles/ci-joe-cause-knowing-how-to-set-it-up-is-half-the-battle), but I was still having trouble getting repeatable builds. I am sure all these issues are resolvable, but it smelled wrong to me, especially since RVM is built to fix most of those problems. After fighting it for half a day I decided to give [JenkinsCI](http://jenkins-ci.org/) a try. An _apt-get_ later I had it running. From the start Jenkins runs as a user, _jenkins_, which can have a regular RVM setup without any headaches – nice!
+I couldn’t get CIJoe to use RVM and went down the rabbit hole of a global Ruby installation and running CIJoe as root. I managed to get CIJoe to auto-start on boot using a script from [this post](https://web.archive.org/web/20110907040936/https://www.acalling.co.uk/articles/ci-joe-cause-knowing-how-to-set-it-up-is-half-the-battle), but I was still having trouble getting repeatable builds. I am sure all these issues are resolvable, but it smelled wrong to me, especially since RVM is built to fix most of those problems. After fighting it for half a day I decided to give [JenkinsCI](https://jenkins-ci.org/) a try. An _apt-get_ later I had it running. From the start Jenkins runs as a user, _jenkins_, which can have a regular RVM setup without any headaches – nice!
 
 We used to commit CIJoe runner configuration into Git (like [this](/committing-cijoe-runner-configuration-into-git)). It doesn’t look quite possible with Jenkins unless you commit the entire build script. I think we’ll move the remaining steps into a Rake task and execute that with a Jenkins Rake plugin.
 
@@ -39,6 +39,6 @@ git push git@heroku.com:app-name.git $GIT_COMMIT:master
 My wish list for Jenkins today includes the following. I am sure it will grow. If you want to code some open-source stuff, I'll be [happy to help you in any way I can](/contribute-to-any-of-these-open-source-projects-and-i-will-help-you-in-any-way-i-can) in exchange.
 
 - Colorize ANSI console output
-- Let me setup a project where I can choose which revision to build. This could make functionality similar to [heroku-bartender](http://github.com/sarcilav/heroku-bartender).
+- Let me setup a project where I can choose which revision to build. This could make functionality similar to [heroku-bartender](https://github.com/sarcilav/heroku-bartender).
 
 I am Jenkins noob, so looking forward to your comments.

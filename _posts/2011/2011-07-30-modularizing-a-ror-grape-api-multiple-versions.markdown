@@ -7,7 +7,7 @@ tags: [grape, rails, ruby]
 comments: true
 dblog_post_id: 239
 ---
-We made some progress with modularizing our Grape API in the [last post](/modularizing-a-ror-grape-api). But we only had one version and declared _Api_v1_ as our main API entry. Unless you’re Netflix and need an API per device family (I know, [wow!](https://web.archive.org/web/20111126224934/http://blog.programmableweb.com/2011/07/28/redesigning-the-netflix-api-no-versions-many-endpoints/), 18’000 different devices use the Netflix API), you might want to make a Grape API with two versions.
+We made some progress with modularizing our Grape API in the [last post](/modularizing-a-ror-grape-api). But we only had one version and declared _Api_v1_ as our main API entry. Unless you’re Netflix and need an API per device family (I know, [wow!](https://web.archive.org/web/20111126224934/https://blog.programmableweb.com/2011/07/28/redesigning-the-netflix-api-no-versions-many-endpoints/), 18’000 different devices use the Netflix API), you might want to make a Grape API with two versions.
 
 We’ll start by declaring an API class the way we would like to see it.
 

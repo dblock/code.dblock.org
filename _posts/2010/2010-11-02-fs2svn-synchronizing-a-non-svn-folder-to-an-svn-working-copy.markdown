@@ -12,7 +12,7 @@ dblog_post_id: 135
 
 I’ve recently needed to update [Waffle](https://github.com/dblock/waffle/)’s Tomcat from version 6.0.14 to 6.0.28. The Tomcat distribution lives in a _ThirdParty/tomcat _folder and is committed to SVN. I needed to compare the two versions and figure out which files were deleted or added, then _svn add/delete_ them. That’s a rather time-consuming, error-prone and most annoying process.
 
-We can do better. I added a new tool to the [Svn2svn project](https://github.com/dblock/svn2svn), _fs2svn_ that does just that. It uses [FolderSync](http://www.codeproject.com/KB/files/kratfoldersync.aspx) with [SharpSVN](https://github.com/AmpScm/SharpSvn) and will perform the appropriate svn action for each file or directory. You can run it in simulation mode too. It won’t commit anything, you can examine the results and commit them on your time.
+We can do better. I added a new tool to the [Svn2svn project](https://github.com/dblock/svn2svn), _fs2svn_ that does just that. It uses [FolderSync](https://www.codeproject.com/KB/files/kratfoldersync.aspx) with [SharpSVN](https://github.com/AmpScm/SharpSvn) and will perform the appropriate svn action for each file or directory. You can run it in simulation mode too. It won’t commit anything, you can examine the results and commit them on your time.
 
 ```
 Fs2Svn:

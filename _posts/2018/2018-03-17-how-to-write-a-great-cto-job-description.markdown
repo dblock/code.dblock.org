@@ -20,7 +20,7 @@ A good CTO job description would actually be read and have positive impact on hi
 
 Most hiring managers or good recruiters engage with CTO-level candidates in-person, or at least on the phone, attempting to convey the _incredible opportunity of working with a company_ with dramatic and emotional voice-over effect. They may have been building a relationship for years by the time the job becomes available. So many job descriptions are sent as documentation or placeholders, later, for the unlikely event of the job description being shared more broadly.
 
-A [quick search of "CTO job descriptions"](http://bfy.tw/H3TB) reveals a staggering lack of imagination, personality or voice. According to some, a CTO must have _excellent communication skills_, _a problem-solving aptitude_, _mentor team members_, and even _be proficient at Microsoft Office Suite_.
+A [quick search of "CTO job descriptions"](https://bfy.tw/H3TB) reveals a staggering lack of imagination, personality or voice. According to some, a CTO must have _excellent communication skills_, _a problem-solving aptitude_, _mentor team members_, and even _be proficient at Microsoft Office Suite_.
 
 Many CTO job descriptions are kitchen sink descriptions of anything remotely technical, such as _IT_ or _maintenance of an internal ERP system_. This is often the list of everything that is currently broken or anything that has to do with computers. This makes the breakdown of responsibilities unclear, and the role very confusing.
 

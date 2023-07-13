@@ -15,7 +15,7 @@ You’ve got a client and a server. For example, a browser and a web server. Bot
 
 #### SSPI
 
-On Windows, this works because of the [Security Support Provider Interface, aka SSPI](http://technet.microsoft.com/en-us/library/bb742535.aspx). SSPI is a well-defined API for obtaining integrated security services for, among other things, authentication for any distributed application protocol. A client-server conversation is an example of such an application. SSPI is a Microsoft proprietary implementation of [GSSAPI](http://en.wikipedia.org/wiki/Generic_Security_Services_Application_Program_Interface), an IETF standard. Who cares about standards, we just want it to work, right?
+On Windows, this works because of the [Security Support Provider Interface, aka SSPI](https://technet.microsoft.com/en-us/library/bb742535.aspx). SSPI is a well-defined API for obtaining integrated security services for, among other things, authentication for any distributed application protocol. A client-server conversation is an example of such an application. SSPI is a Microsoft proprietary implementation of [GSSAPI](https://en.wikipedia.org/wiki/Generic_Security_Services_Application_Program_Interface), an IETF standard. Who cares about standards, we just want it to work, right?
 
 When a client wants to authenticate to a server, it needs to supply credentials and send them to the server. The server needs to validate this, reply that the credentials were kosher and possibly continue executing code on behalf of the client.
 

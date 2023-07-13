@@ -61,7 +61,7 @@ end
 
 We’re familiar with MongoDB _mongodump_ and _mongorestore_. The strategy is to create a local backup, compress it and ship it to Amazon S3 into a _daily_ folder that rotates backups. This way we’re going to have a backup every day – the _Monday_ backup, the _Tuesday_ backup, etc. We’ll then copy the latest backup on Amazon itself into a monthly folder to keep forever. This helps us avoid worrying about an ever-growing storage problem as it seems silly to keep years of daily backups.
 
-The complete **db_backup.rake** code below. It’s an iteration over some code that [@sarcilav](https://web.archive.org/web/20120629110557/http://blog.sarcilav.com//) wrote, so I can’t take all the credit. The bonus feature is to be able to backup any current environment to S3 as well as another environment (eg. backup _production_ from the _staging_ server) remotely.
+The complete **db_backup.rake** code below. It’s an iteration over some code that [@sarcilav](https://web.archive.org/web/20120629110557/https://blog.sarcilav.com//) wrote, so I can’t take all the credit. The bonus feature is to be able to backup any current environment to S3 as well as another environment (eg. backup _production_ from the _staging_ server) remotely.
 
 {% highlight ruby %}
 namespace :db do

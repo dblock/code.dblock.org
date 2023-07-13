@@ -22,7 +22,7 @@ Let's step up a notch.
 
 I spend a lot of time with managers digesting their problems with running a team and working through complex relationships between individuals. I generally focus on helping them identify what they do poorly and finding opportunities to improve. That helps them avoid making the same mistakes twice, but nobody ever walks out of such a conversation inspired to become truly great at anything.
 
-The most useful piece of advice I can ever give to someone who wants to become great at their job is to _work themselves out of it_, better explained in Molly Graham's [Give Away Your Legos](http://firstround.com/review/give-away-your-legos-and-other-commandments-for-scaling-startups).
+The most useful piece of advice I can ever give to someone who wants to become great at their job is to _work themselves out of it_, better explained in Molly Graham's [Give Away Your Legos](https://firstround.com/review/give-away-your-legos-and-other-commandments-for-scaling-startups).
 
 > So, how do you inspire leads to give away their legos?
 

@@ -9,7 +9,7 @@ dblog_post_id: 54
 ---
 This was my first commercial product. It has been available for a while with [full x86 assembly source code](https://github.com/dblock/autoconf). It's useful if you still run a DOS system ;)
 
-[http://www.vestris.com/software/autoconf.html](https://web.archive.org/web/20040222160628/http://www.vestris.com/software/autoconf.html)
+[https://www.vestris.com/software/autoconf.html](https://web.archive.org/web/20040222160628/https://www.vestris.com/software/autoconf.html)
 
 #### Update (2015)
 

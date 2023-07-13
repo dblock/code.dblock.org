@@ -13,7 +13,7 @@ You may have noticed some Ruby on Rails posts lately on my blog. That’s becaus
 
 I tried _mongodump_ and _mongorestore_. Those are straightforward tools that let you export and import Mongo data (Mongo people did their job very well there, much less hassle than with a traditional RDBMS where you have to backup the database, deal with the transaction log, bla bla bla). All is well when working with local machines. Remotely, you need to go the extra step of figuring out the database address, username and password. This gets messier with Heroku and eventually starts smelling bad.
 
-I want to do this the "Rails Way" by invoking a single _rake_ command that imports and exports Mongo data in any of my environments. The following is based on [this post](http://joshowens.me/grow-your-app-from-seeds), but we’re doing this with MongoDB and will take it a little further. We’ll put our tasks in _lib/tasks/db_import_export.rake_.
+I want to do this the "Rails Way" by invoking a single _rake_ command that imports and exports Mongo data in any of my environments. The following is based on [this post](https://joshowens.dev/grow-your-app-from-seeds), but we’re doing this with MongoDB and will take it a little further. We’ll put our tasks in _lib/tasks/db_import_export.rake_.
 
 #### Exporting Data
 
@@ -35,7 +35,7 @@ end
 
 #### Importing Data
 
-Importing data is the inverse operation. We have to clear the model data – I couldn’t figure out how to instantiate an object that exists and resave it with changes [[thread](http://groups.google.com/group/mongoid/browse_thread/thread/0c28c14d0c1c48cd#)].
+Importing data is the inverse operation. We have to clear the model data – I couldn’t figure out how to instantiate an object that exists and resave it with changes [[thread](https://groups.google.com/group/mongoid/browse_thread/thread/0c28c14d0c1c48cd#)].
 
 {% highlight ruby %}
 task :import, [:model, :filename] => :environment do |t, args|
@@ -96,7 +96,7 @@ object = model.new.from_json line.strip
 object.password = "password" if (object.respond_to? 'password')
 {% endhighlight %}
 
-The second feature is that we don’t want real user data to be exported, but we’d like to preserve the relationships in the existing database. We use [faker](https://web.archive.org/web/20110319202004/http://faker.rubyforge.org/) to replace all names, e-mails and websites. This can be further applied to all kinds of properties.
+The second feature is that we don’t want real user data to be exported, but we’d like to preserve the relationships in the existing database. We use [faker](https://web.archive.org/web/20110319202004/https://faker.rubyforge.org/) to replace all names, e-mails and websites. This can be further applied to all kinds of properties.
 
 {% highlight ruby %}
 object.name = Faker::Name.name

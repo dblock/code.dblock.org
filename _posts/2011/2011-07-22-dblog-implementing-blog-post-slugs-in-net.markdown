@@ -7,7 +7,7 @@ tags: [dotnet, asp.net]
 comments: true
 dblog_post_id: 235
 ---
-I was showing some [Coffeescript](http://coffeescript.org/) to a candidate today. It happened to be a [Backbone.js](http://backbonejs.org/) model with a field called _slug_. "What’s a slug?" – he asked.
+I was showing some [Coffeescript](https://coffeescript.org/) to a candidate today. It happened to be a [Backbone.js](https://backbonejs.org/) model with a field called _slug_. "What’s a slug?" – he asked.
 
 A slug is an external identity to an object reachable by an API call. For example, Steven Assael’s amazing graphite drawing entitled "Amber with Peacock Feathers" has a "_steven-assael-amber-with-peacock-feathers"_ slug. Slugs are much more readable than a database object identity, such as _"4dc706fb46895e000100128f"_. They make URLs prettier and helps search engines index data. Slugs also enable developers to change the way data is stored. In general, I recommend hiding internal IDs and creating external IDs for every object that is exposed to the outside world.
 
@@ -26,12 +26,12 @@ class Artwork
 end
 {% endhighlight %}
 
-I decided to implement the same thing for this blog, which is a bit obsolete architecture-wise and is written in ASP.NET. To keep things simple, I added a slug field to my _Post_ model as an _nvarchar(256) _and slapped a unique key constraint on it. To generate an actual slug from a title I stole some code from [here](https://web.archive.org/web/20120330194232/http://www.intrepidstudios.com/blog/2009/2/10/function-to-generate-a-url-friendly-string.aspx). It basically strips any non-alphanumeric text from the post’s title.
+I decided to implement the same thing for this blog, which is a bit obsolete architecture-wise and is written in ASP.NET. To keep things simple, I added a slug field to my _Post_ model as an _nvarchar(256) _and slapped a unique key constraint on it. To generate an actual slug from a title I stole some code from [here](https://web.archive.org/web/20120330194232/https://www.intrepidstudios.com/blog/2009/2/10/function-to-generate-a-url-friendly-string.aspx). It basically strips any non-alphanumeric text from the post’s title.
 
 {% highlight c# %}
 /// <summary>
 /// Transform a string into a slug.
-/// See http://www.intrepidstudios.com/blog/2009/2/10/function-to-generate-a-url-friendly-string.aspx
+/// See https://www.intrepidstudios.com/blog/2009/2/10/function-to-generate-a-url-friendly-string.aspx
 /// </summary>
 /// <param name="s"></param>
 /// <returns></returns>
@@ -119,4 +119,4 @@ The URL has changed, yet Discus comments are fine (phew.) – they use my unique
 
 ![]({{ site.url }}/images/posts/2011/2011-07-22-dblog-implementing-blog-post-slugs-in-net/image_7.jpg)
 
-314 RTs, holy crap! This blog’s source code is available under the MIT license [on Github](http://github.com/dblock/dblog).
+314 RTs, holy crap! This blog’s source code is available under the MIT license [on Github](https://github.com/dblock/dblog).

@@ -9,7 +9,7 @@ dblog_post_id: 51
 ---
 Legend has it that a group of Eastern monks are the keepers of three towers on which sit 64 golden rings. Originally all 64 rings were stacked on one tower with each ring smaller than the one beneath. The monks are to move the rings from this first tower to the third tower one at a time but never moving a larger ring on top of a smaller one. Once the 64 rings have all been moved, the world will come to an end.
 
-It seems that the "Towers of Hanoi" puzzle was actually invented from scratch probably together with the accompanying legend only in 1883 by the French mathematician Edouard Lucas. At least there is no known written record about the puzzle or the legend prior to 1883 [> Read More](http://hanoitower.mkolar.org/)  [> Original Puzzle Instructions](https://web.archive.org/web/20230424060529/https://www.cs.wm.edu/~pkstoc/toh.html)
+It seems that the "Towers of Hanoi" puzzle was actually invented from scratch probably together with the accompanying legend only in 1883 by the French mathematician Edouard Lucas. At least there is no known written record about the puzzle or the legend prior to 1883 [> Read More](https://hanoitower.mkolar.org/)  [> Original Puzzle Instructions](https://web.archive.org/web/20230424060529/https://www.cs.wm.edu/~pkstoc/toh.html)
 
 I dug up an implementation in scheme. There's the classic recursive method. But my classmate Radu Stancu came up (independently) with an iterative implementation. This is from 1995.
 

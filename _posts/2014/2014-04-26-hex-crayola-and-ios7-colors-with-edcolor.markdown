@@ -55,6 +55,6 @@ UIColor *greenGradientStart = [UIColor iOS7greenGradientStartColor];
 UIColor *greenGradientEnd = [UIColor iOS7greenGradientEndColor];
 {% endhighlight %}
 
-I [contributed](https://github.com/thisandagain/color/pull/17) the iOS7 colors implementation from [here](https://github.com/mobilemagicdevelopers/UIColor-iOS7Colors), and found two bugs while writing tests. So, if you find another color library, you should merge it in as well. I reached out to [Caran d’Ache](http://www.carandache.com/) to get their color palette, but didn’t get a reply.
+I [contributed](https://github.com/thisandagain/color/pull/17) the iOS7 colors implementation from [here](https://github.com/mobilemagicdevelopers/UIColor-iOS7Colors), and found two bugs while writing tests. So, if you find another color library, you should merge it in as well. I reached out to [Caran d’Ache](https://www.carandache.com/) to get their color palette, but didn’t get a reply.
 
 ![](https://cloud.githubusercontent.com/assets/542335/2783933/2adda48c-cb34-11e3-831b-f134774f35d3.gif)

@@ -57,7 +57,7 @@ Artsy launched as _art.sy_ in October 2012 in partnership with just 50 art insti
 
 After failing to purchase artsy.com a few times, I bought artsy.net as a defensive move from an Artsy user. That was a lucky call, because on January 1st, 2013 our DNS records with the Syrian TLD have expired, and art.sy disappeared from the Internet. We were able to relaunch as [artsy.net](https://www.artsy.net/) in 24 hours and were never able to renew the art.sy domain because of U.S. sanctions imposed on Syria.
 
-In September 2013 we shipped the Artsy iOS app that was quickly downloaded by 100,000 people and is now used by millions. The rest of 2013 and 2014 are best summarized in [2013.artsy.net](https://web.archive.org/web/20140325063413/http://2013.artsy.net/) and [2014.artsy.net](http://2014.artsy.net).
+In September 2013 we shipped the Artsy iOS app that was quickly downloaded by 100,000 people and is now used by millions. The rest of 2013 and 2014 are best summarized in [2013.artsy.net](https://web.archive.org/web/20140325063413/https://2013.artsy.net/) and [2014.artsy.net](https://2014.artsy.net).
 
 The Armory Show 2013 was the biggest transformational moment for Artsy. By then we became a real player in the online art space with a paid subscription service for Galleries and Institutions.
 

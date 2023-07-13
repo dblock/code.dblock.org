@@ -143,13 +143,13 @@ Run `yarn relay`. Generally you will be running `yarn relay --watch`, which gene
 
 ### Environment
 
-Copy-paste a relay environment into `app/Environment.js`. Note my hard-coded `http://localhost:3000/graphql` for the Rails server. I will make this dynamic in the future.
+Copy-paste a relay environment into `app/Environment.js`. Note my hard-coded `https://localhost:3000/graphql` for the Rails server. I will make this dynamic in the future.
 
 {% highlight js %}
 import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 
 function fetchQuery(operation, variables) {
-  return fetch('http://localhost:3000/graphql', {
+  return fetch('https://localhost:3000/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

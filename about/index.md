@@ -34,4 +34,4 @@ I speak frequently at conferences and meetups. See [this page](/speaking) for de
 
 My full resume is [on LinkedIn](https://www.linkedin.com/in/dblock).
 
-Finally, if you had enough of this tech stuff, check out [my art blog](http://art.dblock.org) or [my running blog](http://run.dblock.org).
+Finally, if you had enough of this tech stuff, check out [my art blog](https://art.dblock.org) or [my running blog](https://run.dblock.org).

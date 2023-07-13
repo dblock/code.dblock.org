@@ -9,7 +9,7 @@ dblog_post_id: 378
 ---
 I’m very excited to Release Grape 0.4.0 today. Again, thanks to the 10 (!) contributors to this release.
 
-Is this a solid release? You bet. I’ve upgraded our largest API project at [artsy.net](http://artsy.net) to Grape 0.4.0 and all of the 1870 API specs have passed.
+Is this a solid release? You bet. I’ve upgraded our largest API project at [artsy.net](https://artsy.net) to Grape 0.4.0 and all of the 1870 API specs have passed.
 
 The complete [CHANGELOG is here](https://github.com/ruby-grape/grape/blob/master/CHANGELOG.md). There’re a few backwards incompatible changes that you might want to check out while you’re upgrading.
 

@@ -7,9 +7,9 @@ tags: [rails, ruby, architecture, testing]
 comments: true
 dblog_post_id: 177
 ---
-![](http://www.clker.com/cliparts/f/a/b/8/11949856441703715891another_folder_icon_01.svg.thumb.png)
+![](https://www.clker.com/cliparts/f/a/b/8/11949856441703715891another_folder_icon_01.svg.thumb.png)
 
-I am a huge fan of the comical version of ["bug-driven development"](http://blogs.sun.com/toddfast/entry/bug_driven_development), which I earlier called "bug driven design". Today, I want to propose a new methodology: _folder-driven development_. I cannot take credit for inventing it, a colleague of mine suggested it earlier this week. I found the idea a useful subset of the _"divide to conquer"_ rule, and felt the need to put a bit of structure around it.
+I am a huge fan of the comical version of ["bug-driven development"](https://web.archive.org/web/20100212134923/https://blogs.sun.com/toddfast/entry/bug_driven_development), which I earlier called "bug driven design". Today, I want to propose a new methodology: _folder-driven development_. I cannot take credit for inventing it, a colleague of mine suggested it earlier this week. I found the idea a useful subset of the _"divide to conquer"_ rule, and felt the need to put a bit of structure around it.
 
 #### Guiding Principles
 

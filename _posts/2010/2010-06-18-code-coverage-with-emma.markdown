@@ -17,7 +17,7 @@ If you asked me yesterday, I would have said that Waffle unit tests cover 99% of
 
 It took me half an hour to integrate Emma. Pretty easy. You should do it too.
 
-I downloaded Emma from [http://emma.sourceforge.net](http://emma.sourceforge.net) and added it to ThirdParty/emma. What I want next is a _cover_ target that can execute all unit tests with code coverage. We’re doing this in ANT with JUnit.
+I downloaded Emma from [https://emma.sourceforge.net](https://emma.sourceforge.net) and added it to ThirdParty/emma. What I want next is a _cover_ target that can execute all unit tests with code coverage. We’re doing this in ANT with JUnit.
 
 _Define Emma JARs Location and ClassPath_
 
@@ -86,5 +86,5 @@ I see a lot of red. Emma doesn’t think I am doing such a great job after-all.
 
 #### Links
 
-- [EMMA on SourceForge](http://emma.sourceforge.net/)
+- [EMMA on SourceForge](https://emma.sourceforge.net/)
 

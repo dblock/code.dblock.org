@@ -91,9 +91,9 @@ end
 
 #### Links
 
-- [spreadsheet gem home](http://spreadsheet.ch/), [rubygems](https://rubygems.org/gems/spreadsheet) and [patch for frozen hash in encoding](http://groups.google.com/group/rubyspreadsheet/browse_frm/thread/29debd680f45fd6)
-- [to_xls home](http://github.com/splendeo/to_xls) and [rubygems](https://rubygems.org/gems/to_xls) and [my pull request to to_xls with as_xls support](https://github.com/splendeo/to_xls/pull/2)
-- [plataforma’s blog post](http://blog.plataformatec.com.br/2009/09/exporting-data-to-csv-and-excel-in-your-rails-app/) on the topic that helped me steer in the right direction
+- [spreadsheet gem home](https://spreadsheet.ch/), [rubygems](https://rubygems.org/gems/spreadsheet) and [patch for frozen hash in encoding](https://groups.google.com/group/rubyspreadsheet/browse_frm/thread/29debd680f45fd6)
+- [to_xls home](https://github.com/splendeo/to_xls) and [rubygems](https://rubygems.org/gems/to_xls) and [my pull request to to_xls with as_xls support](https://github.com/splendeo/to_xls/pull/2)
+- [plataforma’s blog post](https://blog.plataformatec.com.br/2009/09/exporting-data-to-csv-and-excel-in-your-rails-app/) on the topic that helped me steer in the right direction
 - [spreadsheet_encodings.rb monkey patch](https://gist.github.com/1187549)
 - original [to_csv](https://github.com/arydjmal/to_csv) that inspired to_xls
 - [an alternative using rxsl templates](https://github.com/10to1/spreadsheet_on_rails)

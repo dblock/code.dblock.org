@@ -7,9 +7,9 @@ tags: [interviewing, education, teams, teaching, hiring, people]
 comments: true
 dblog_post_id: 403
 ---
-"Wednesday night’s American Horror Story: Coven delivered an interesting theory on youth culture: Millennials are actually dead inside." I’m quoting [Bustle’s article](http://www.bustle.com/articles/9317-american-horror-story-coven-paints-millennials-as-numb-narcissists-who-are-dead-inside), which quotes the show itself. "I am a millennial. Generation Y, born between the birth of aids and 9/11 give or take. They call us the Global Generation. We are known for our entitlement and narcissism. Some say it’s because we’re the first generation where every kid gets a trophy just for showing up."
+"Wednesday night’s American Horror Story: Coven delivered an interesting theory on youth culture: Millennials are actually dead inside." I’m quoting [Bustle’s article](https://www.bustle.com/articles/9317-american-horror-story-coven-paints-millennials-as-numb-narcissists-who-are-dead-inside), which quotes the show itself. "I am a millennial. Generation Y, born between the birth of aids and 9/11 give or take. They call us the Global Generation. We are known for our entitlement and narcissism. Some say it’s because we’re the first generation where every kid gets a trophy just for showing up."
 
-Why am I quoting this? In the recent months some non-trivial number of junior candidates have shown up to a second interview without really knowing what we actually do as a company. They have never been beyond the homepage of [our website](http://artsy.net), have never even read the "about" section or landed on [our Engineering blog](http://artsy.github.io/). They have not even created an account on the website that offers you to create one the first time you visit.
+Why am I quoting this? In the recent months some non-trivial number of junior candidates have shown up to a second interview without really knowing what we actually do as a company. They have never been beyond the homepage of [our website](https://artsy.net), have never even read the "about" section or landed on [our Engineering blog](https://artsy.github.io/). They have not even created an account on the website that offers you to create one the first time you visit.
 
 They just showed up.
 

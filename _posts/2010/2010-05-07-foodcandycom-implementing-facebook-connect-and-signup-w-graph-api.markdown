@@ -32,13 +32,13 @@ I had to do some wrestling with JavaScript and the Facebook API at login. Most o
 
 #### Application Registration
 
-I registered [an application](http://www.facebook.com/#!/developers/apps.php), which gave me an API key and a shared secret. The first is public, but the latter is going to be stored on the back-end and used to verify login signatures or make authenticated calls to Facebook. You would typically store both in some configuration file, SnCore has a settings framework that lets you store both public information and "password"-like settings accessible to the back-end only.
+I registered [an application](https://www.facebook.com/#!/developers/apps.php), which gave me an API key and a shared secret. The first is public, but the latter is going to be stored on the back-end and used to verify login signatures or make authenticated calls to Facebook. You would typically store both in some configuration file, SnCore has a settings framework that lets you store both public information and "password"-like settings accessible to the back-end only.
 
 ![]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image_3.jpg)
 
 #### Single Sign On
 
-The best document to read first is [here](http://developers.facebook.com/docs/guides/web).
+The best document to read first is [here](https://developers.facebook.com/docs/guides/web).
 
 _A Facebook Login Button_
 
@@ -47,7 +47,7 @@ I want a login button that gives users a choice of logging into the site with a 
 {% highlight c# %}
 public string GetLoginUrl(string returnUrl)
 {
-    return string.Format("http://www.facebook.com/login.php?api_key={0}&extern=1&fbconnect=1&req_perms=publish_stream,email&return_session=1&v=1.0&next={1}&fb_connect=1&cancel_url={1}",
+    return string.Format("https://www.facebook.com/login.php?api_key={0}&extern=1&fbconnect=1&req_perms=publish_stream,email&return_session=1&v=1.0&next={1}&fb_connect=1&cancel_url={1}",
         FacebookAPIKey, Renderer.UrlEncode(string.Format("{0}/FacebookConnect.aspx?connect=1&ReturnUrl={1}", mSessionManager.WebsiteUrl, Renderer.UrlEncode(returnUrl))));
 }
 {% endhighlight %}
@@ -61,7 +61,7 @@ _Redirect After Login_
 
 A logged-in user is now returned to FacebookConnect.aspx with a number of parameters in the URL that contain session information.
 
-Facebook JavaScript can process all that into cookies. The cookie names start with the API key. You can find a lot more detail about cookies [here](https://web.archive.org/web/20091223093524/http://wiki.developers.facebook.com/index.php/Verifying_The_Signature#Signatures_and_Facebook_Connect_Sites).
+Facebook JavaScript can process all that into cookies. The cookie names start with the API key. You can find a lot more detail about cookies [here](https://web.archive.org/web/20091223093524/https://wiki.developers.facebook.com/index.php/Verifying_The_Signature#Signatures_and_Facebook_Connect_Sites).
 
 ![]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image_9.jpg)
 
@@ -71,7 +71,7 @@ The following code works every time.
 
 {% highlight html %}
 <div id="fb-root"></div>
-<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
+<script src="https://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
 <script type="text/javascript">
   var facebookAPIKey = "<% Response.Write(FacebookAPIKey); %>";
   FB.init(facebookAPIKey);
@@ -95,7 +95,7 @@ _Verifying the Signature_
 
 FacebookConnect.aspx does the job at performing a cross-site Facebook login, then redirects back to the initial login page. The latter must now verify that the login is legit and locate a FoodCandy account associated with this Facebook login. I do this work in the actual login page.
 
-If you’re doing all of this on the client side, read [this document](https://web.archive.org/web/20091223093524/http://wiki.developers.facebook.com/index.php/Verifying_The_Signature) for background and use the [Facebook Connect library](https://web.archive.org/web/20100522114321/http://fbconnectauth.codeplex.com/). I had to split the process between the front-end and the back-end and used it for a reference implementation.
+If you’re doing all of this on the client side, read [this document](https://web.archive.org/web/20091223093524/https://wiki.developers.facebook.com/index.php/Verifying_The_Signature) for background and use the [Facebook Connect library](https://web.archive.org/web/20100522114321/https://fbconnectauth.codeplex.com/). I had to split the process between the front-end and the back-end and used it for a reference implementation.
 
 Facebook cookies are collected in a sorted list, concatenated and signed.
 
@@ -151,9 +151,9 @@ AccountFacebook account = (AccountFacebook)session.CreateCriteria(typeof(Account
 
 #### FoodCandy Signup with Facebook
 
-The signup process first goes through the same logon process as described above, except that the final landing page is one that will create an account. Most of what I describe below is well explained [here](http://devtacular.com/articles/bkonrad/how-to-retrieve-user-data-from-facebook-connect-in-aspnet), albeit for an older version of the API. This should serve as a refresher.
+The signup process first goes through the same logon process as described above, except that the final landing page is one that will create an account. Most of what I describe below is well explained [here](https://web.archive.org/web/20160315103809/http://devtacular.com/articles/bkonrad/how-to-retrieve-user-data-from-facebook-connect-in-aspnet/), albeit for an older version of the API. This should serve as a refresher.
 
-First, I got hold of the [Facebook Developer Toolkit](https://web.archive.org/web/20100531012447/http://facebooktoolkit.codeplex.com/) that implements calls to Facebook using the [Facebook Graph API](http://developers.facebook.com/docs/api). It is initialized with the API key, the secret and a session key. The toolkit is going to be making server-to-server calls from FoodCandy to Facebook, it’s all back-end operation.
+First, I got hold of the [Facebook Developer Toolkit](https://web.archive.org/web/20100531012447/https://facebooktoolkit.codeplex.com/) that implements calls to Facebook using the [Facebook Graph API](https://developers.facebook.com/docs/api). It is initialized with the API key, the secret and a session key. The toolkit is going to be making server-to-server calls from FoodCandy to Facebook, it’s all back-end operation.
 
 {% highlight c# %}
 Facebook.Session.ConnectSession facebookSession = new Facebook.Session.ConnectSession(

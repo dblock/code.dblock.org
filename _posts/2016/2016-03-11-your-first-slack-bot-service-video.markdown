@@ -17,7 +17,7 @@ It contains an overview of Slack APIs and various integration options, including
 #### Talk
 
 * [Video (52 minutes)](https://vimeo.com/158686783)
-* [Slides Only (PDF)](http://www.slideshare.net/dblockdotorg/your-first-slack-bot-service-nyc-slack-meetup)
+* [Slides Only (PDF)](https://www.slideshare.net/dblockdotorg/your-first-slack-bot-service-nyc-slack-meetup)
 * [Walkthrough Code (Github)](https://github.com/dblock/your-first-slack-ruby-bot-in-ruby)
 
 #### Libraries
@@ -29,10 +29,10 @@ It contains an overview of Slack APIs and various integration options, including
 
 #### Apps
 
-* [playplay.io](http://playplay.io)
-* [slack-market](http://market.playplay.io)
-* [api-explorer](http://api-explorer.playplay.io)
-* [shell](http://shell.playplay.io)
+* [playplay.io](https://www.playplay.io)
+* [slack-market](https://market.playplay.io)
+* [api-explorer](https://api-explorer.playplay.io)
+* [shell](https://shell.playplay.io)
 
 #### Slack
 

@@ -5,9 +5,9 @@ date: 2015-01-15
 tags: [jekyll]
 comments: true
 ---
-I've recently [moved this blog to Jekyll](/2015/01/07/the-new-code-dblock-dot-org.html), moved all my art-related posts to a new [art.dblock.org](http://art.dblock.org) Jekyll blog and replaced [www.dblock.org](http://www.dblock.org) with a landing page. The last bit is to redirect any old popular content from the old www.dblock.org, such as [Your Commute is Killing You: Move to New York](/2011/05/29/dear-california-engineer-your-commute-is-killing-you-move-to-new-york.html) or [How To Frame and Hang Very Big Drawings](http://art.dblock.org/2007/12/18/big-frame-hanging.html) to one or the other site.
+I've recently [moved this blog to Jekyll](/2015/01/07/the-new-code-dblock-dot-org.html), moved all my art-related posts to a new [art.dblock.org](https://art.dblock.org) Jekyll blog and replaced [www.dblock.org](https://www.dblock.org) with a landing page. The last bit is to redirect any old popular content from the old www.dblock.org, such as [Your Commute is Killing You: Move to New York](/2011/05/29/dear-california-engineer-your-commute-is-killing-you-move-to-new-york.html) or [How To Frame and Hang Very Big Drawings](https://art.dblock.org/2007/12/18/big-frame-hanging.html) to one or the other site.
 
-The landing [www.dblock.org](http://www.dblock.org) site is also a Jekyll site.
+The landing [www.dblock.org](https://www.dblock.org) site is also a Jekyll site.
 
 #### Include the Redirect Gem
 
@@ -82,6 +82,6 @@ if (url) {
 
 #### Try It
 
-Try [www.dblock.org/your-commute-is-killing-you-move-to-new-york](http://www.dblock.org/your-commute-is-killing-you-move-to-new-york) and [code.dblock.org/ShowPost.aspx?id=103](/2010/05/20/single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle.html).
+Try [www.dblock.org/your-commute-is-killing-you-move-to-new-york](https://www.dblock.org/your-commute-is-killing-you-move-to-new-york) and [code.dblock.org/ShowPost.aspx?id=103](/2010/05/20/single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle.html).
 
 Everything is open-source. Click [here](https://github.com/dblock/www.dblock.org/commit/85ac18118feac15f25b1f6eb2b1a441ef69d0c53) for the source code for the plain redirect and [here](https://github.com/dblock/code.dblock.org/commit/66e15c163704569a9eec6eef45ecf1c667d5ab44) for the more complicated ASPX one.

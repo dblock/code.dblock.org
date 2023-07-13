@@ -9,7 +9,7 @@ dblog_post_id: 416
 ---
 I’ve recorded a screencast during the Anatomy of a Ruby Gem meetup in New York. It’s a deep dive into [Grape](https://github.com/ruby-grape/grape) internals.
 
-<a href='http://vimeo.com/98830727'>
+<a href='https://vimeo.com/98830727'>
   ![]({{ site.url }}/images/posts/2014/2014-06-23-anatomy-of-a-ruby-gem-grape/screenshot.jpg)
 </a>
 

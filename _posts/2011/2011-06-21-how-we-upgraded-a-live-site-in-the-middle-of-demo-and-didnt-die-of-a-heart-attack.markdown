@@ -9,7 +9,7 @@ dblog_post_id: 220
 ---
 ![]({{ site.url }}/images/posts/2011/2011-06-21-how-we-upgraded-a-live-site-in-the-middle-of-demo-and-didnt-die-of-a-heart-attack/image_9.jpg)
 
-Last week I got to experience Art Basel from the inside. [Art.sy](https://artsy.net) was presented at the "most exclusive event" at the Beyeler Foundation, to quote [an article](http://www.artinfo.com/news/story/37897/from-christian-marclay-to-will-ferrell-see-the-stars-at-the-elite-and-highly-eclectic-bash-for-the-launch-of-artsy-in-basel/). Behind all the hype, we were very nervous. I had high confidence in the mountain of work that was put into the site by our A-team of 5 engineers, but it was really the first time we were showing it live to so many partners. There was no plan B, it just had to work. Then we  had to upgrade the site on-the-fly during the big demo.
+Last week I got to experience Art Basel from the inside. [Art.sy](https://artsy.net) was presented at the "most exclusive event" at the Beyeler Foundation, to quote [an article](https://www.artinfo.com/news/story/37897/from-christian-marclay-to-will-ferrell-see-the-stars-at-the-elite-and-highly-eclectic-bash-for-the-launch-of-artsy-in-basel/). Behind all the hype, we were very nervous. I had high confidence in the mountain of work that was put into the site by our A-team of 5 engineers, but it was really the first time we were showing it live to so many partners. There was no plan B, it just had to work. Then we  had to upgrade the site on-the-fly during the big demo.
 
 What?!
 
@@ -25,7 +25,7 @@ A lot of small things added up to this, preventing many heart attacks and theref
 2. We have working continuous integration (using [CIJoe](https://github.com/defunkt/cijoe)) that builds, runs tests and deploys the system to a staging environment that looks like a copy of production.
 3. We use an automated system called Heroku Bartender for deploying to production. We can easily rollback in the case of a disaster. We’ve done this a couple of times.
 4. We deploy several times a day, rain or shine. We have experienced live update many times over and worked through many early failures.
-5. We deploy to a virtually zero downtime platform ( [Heroku](http://www.heroku.com/)), which compiles the application and swaps instances without terminating any requests, queuing them inside a proxy.
+5. We deploy to a virtually zero downtime platform ( [Heroku](https://www.heroku.com/)), which compiles the application and swaps instances without terminating any requests, queuing them inside a proxy.
 6. We are very diligent about testing regressions. Our best tests are those that make sure we don’t reintroduce previously found bugs.
 7. We’re pragmatic about test-driven development. While we always try to write tests upfront, we spend much more time writing regression tests.
 8. We use copies of production data (with faked user data) in all our development, testing and staging environments.

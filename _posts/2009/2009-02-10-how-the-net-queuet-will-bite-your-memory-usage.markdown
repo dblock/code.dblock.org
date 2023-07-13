@@ -7,9 +7,9 @@ tags: [dotnet]
 comments: true
 dblog_post_id: 32
 ---
-I was profiling an application at my real job with [MemProfiler](http://memprofiler.com/). It yielded a very high number of instances in a .NET `Queue<T>`. What was abnormal is a constant growth of the numbers over time.
+I was profiling an application at my real job with [MemProfiler](https://memprofiler.com/). It yielded a very high number of instances in a .NET `Queue<T>`. What was abnormal is a constant growth of the numbers over time.
 
-I narrowed this down to the .NET Queue class. If you [examine the .NET Queue source code](http://blogs.msdn.com/sburke/archive/2008/01/16/configuring-visual-studio-to-debug-net-framework-source-code.aspx), you will notice that it grows infinitely by design in a rotating window pattern. Enqueue means incrementing the pointer modulo the length of the array and Dequeue means decrement the pointer, except when on a collision and needing to resize. In this case everything is copied to a larger array that grows by a factor.
+I narrowed this down to the .NET Queue class. If you [examine the .NET Queue source code](https://blogs.msdn.com/sburke/archive/2008/01/16/configuring-visual-studio-to-debug-net-framework-source-code.aspx), you will notice that it grows infinitely by design in a rotating window pattern. Enqueue means incrementing the pointer modulo the length of the array and Dequeue means decrement the pointer, except when on a collision and needing to resize. In this case everything is copied to a larger array that grows by a factor.
 
 {% highlight c# %}
 public T Dequeue() {

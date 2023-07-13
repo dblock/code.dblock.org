@@ -7,7 +7,7 @@ tags: [vmware]
 comments: true
 dblog_post_id: 24
 ---
-I've been playing with [VMware](http://www.vmware.com/) lately, both Workstation and VMware Infrastructure (VI). The company has really stepped up with the new SDKs and the level of programmable interfaces, making some excellent implementation decisions that enable us to drive virtual machines for primarily unit-testing purposes. The doc is a little light today, so this should help.
+I've been playing with [VMware](https://www.vmware.com/) lately, both Workstation and VMware Infrastructure (VI). The company has really stepped up with the new SDKs and the level of programmable interfaces, making some excellent implementation decisions that enable us to drive virtual machines for primarily unit-testing purposes. The doc is a little light today, so this should help.
 
 #### What do we use this for?
 
@@ -23,7 +23,7 @@ There're two types of APIs.
 
 #### What do you need?
 
-- Either VMWare [Workstation 6.5](http://www.vmware.com/download/ws/), a VI environment (I use ESX), or both.
+- Either VMWare [Workstation 6.5](https://www.vmware.com/download/ws/), a VI environment (I use ESX), or both.
 - VMWare ViX. This is the SDK, obtained from  [here](https://customerconnect.vmware.com/downloads/get-download?downloadGroup=VIXAPI114). The new 1.6.2 version is required for VI support.
 
 #### Connecting to a VMWare Workstation or ESX Server

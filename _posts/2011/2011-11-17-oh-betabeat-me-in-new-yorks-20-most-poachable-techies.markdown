@@ -7,4 +7,4 @@ tags: [artsy, jobs, people]
 comments: true
 dblog_post_id: 294
 ---
-I mean, I am flattered to be [#20 of the most poachable techies in NYC list](http://www.betabeat.com/2011/11/17/new-york-techs-20-most-poachable-players/#slide20), and you got about half of your facts right (eg. [my Github account](http://github.com/dblock)) but seriously?
+I mean, I am flattered to be [#20 of the most poachable techies in NYC list](https://www.betabeat.com/2011/11/17/new-york-techs-20-most-poachable-players/#slide20), and you got about half of your facts right (eg. [my Github account](https://github.com/dblock)) but seriously?

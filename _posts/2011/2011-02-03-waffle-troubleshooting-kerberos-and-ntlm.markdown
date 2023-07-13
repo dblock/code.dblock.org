@@ -15,16 +15,16 @@ Fortunately this is open-source software and where I fail others can pickup the 
 
 #### Troubleshooting Kerberos
 
-- [Enabling Kerberos Logging](http://support.microsoft.com/?id=262177)
+- [Enabling Kerberos Logging](https://support.microsoft.com/?id=262177)
 - [Troubleshooting Kerberos Delegation](https://support.microsoft.com/en-us/help/907272/kerberos-authentication-and-troubleshooting-delegation-issues)
 
 #### Troubleshooting NTLM
 
-- [Enabling NTLM Logging](http://blogs.technet.com/b/askds/archive/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7.aspx)
+- [Enabling NTLM Logging](https://blogs.technet.com/b/askds/archive/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7.aspx)
 
 #### Useful KBs
 
 - [https://mskb.pkisolutions.com/kb/896861](https://mskb.pkisolutions.com/kb/896861)
-- [http://technet.microsoft.com/en-us/library/dd566199(v=WS.10).aspx](http://technet.microsoft.com/en-us/library/dd566199(v=WS.10).aspx)
-- [http://support.microsoft.com/kb/326040](http://support.microsoft.com/kb/326040)
+- [https://technet.microsoft.com/en-us/library/dd566199(v=WS.10).aspx](https://technet.microsoft.com/en-us/library/dd566199(v=WS.10).aspx)
+- [https://support.microsoft.com/kb/326040](https://support.microsoft.com/kb/326040)
 

@@ -64,8 +64,8 @@ fjs.parentNode.insertBefore(js, fjs);
 [Taking over Someone Else's Open-Source Projects](https://www.youtube.com/watch?v=8ijzefV-B7U)
 Golden Gate Ruby Conference, San Francisco, 2014
 
-<a href="http://www.infoq.com/presentations/mentoring-cto-club-ny"><img alt="Mentoring Humans and Engineers at QCon" src="/images/about/mentoring-humans-and-engineers.png"></a><br>
-[Mentoring Humans and Engineers](http://www.infoq.com/presentations/mentoring-cto-club-ny)
+<a href="https://www.infoq.com/presentations/mentoring-cto-club-ny"><img alt="Mentoring Humans and Engineers at QCon" src="/images/about/mentoring-humans-and-engineers.png"></a><br>
+[Mentoring Humans and Engineers](https://www.infoq.com/presentations/mentoring-cto-club-ny)
 QCon, New York, 2014
 
 <a href="https://www.youtube.com/watch?v=QvHf94hxzRc"><img alt="Building and Scaling a Test Driven Culture at AppNexus" src="/images/about/building-and-scaling-a-test-driven-culture.png"></a><br>
@@ -78,6 +78,6 @@ AppNexus Engineering at Scale, New York, 2013
 <a href="https://vimeo.com/136554627"><img alt="Becoming Open-Source By Default at Artsy" src="/images/about/becoming-open-source-by-default.png"></a><br>
 [Becoming Open-Source by Default](https://vimeo.com/136554627): Recorded for the Artsy offsite in August 2015.
 
-[CTO Cast #6, Подкаст о технологиях, процессах, инфраструктуре и людях в IT-компаниях](https://soundcloud.com/ctocastcom/6-daniel-doubrovkine/): on Open-Source, in Russian. Also ["Оттого что они не пишут open source, они плохими инженерами не стали".](http://habrahabr.ru/company/caspowa/blog/255585/).
+[CTO Cast #6, Подкаст о технологиях, процессах, инфраструктуре и людях в IT-компаниях](https://soundcloud.com/ctocastcom/6-daniel-doubrovkine/): on Open-Source, in Russian. Also ["Оттого что они не пишут open source, они плохими инженерами не стали".](https://habrahabr.ru/company/caspowa/blog/255585/).
 
 More talks under [the cut](/tags/speaking/).

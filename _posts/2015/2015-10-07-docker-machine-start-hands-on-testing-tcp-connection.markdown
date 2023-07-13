@@ -7,7 +7,7 @@ comments: true
 ---
 This was a stubborn one.
 
-Was trying to use [Docker](https://www.docker.com) via [Dusty](https://web.archive.org/web/20151217180459/http://dusty.gc.com/) for the first time.
+Was trying to use [Docker](https://www.docker.com) via [Dusty](https://web.archive.org/web/20151217180459/https://dusty.gc.com/) for the first time.
 
 ```
 docker-machine --debug start dusty
@@ -25,7 +25,7 @@ Testing TCP connection to: localhost:64623
 
 No problems connecting to `localhost:64623` via `ssh localhost -p 64623`.
 
-No issues navigating to http://localhost:64623. I would see a page with the SSH server version.
+No issues navigating to https://localhost:64623. I would see a page with the SSH server version.
 
 ```
 SSH-2.0-OpenSSH_6.4

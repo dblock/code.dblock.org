@@ -9,7 +9,7 @@ dblog_post_id: 338
 ---
 A recording of me speaking at MongoNYC 2012.
 
-[http://www.10gen.com/presentations/MongoNYC-2012/Using-MongoDB-to-Build-Artsy](http://www.10gen.com/presentations/MongoNYC-2012/Using-MongoDB-to-Build-Artsy)
+[https://www.mongodb.com/presentations/MongoNYC-2012/Using-MongoDB-to-Build-Artsy](https://www.mongodb.com/presentations/MongoNYC-2012/Using-MongoDB-to-Build-Artsy)
 
 ![]({{ site.url }}/images/posts/2012/2012-06-03-mongonyc-2012-using-mongodb-to-build-artsy-video/image_9.jpg)
 

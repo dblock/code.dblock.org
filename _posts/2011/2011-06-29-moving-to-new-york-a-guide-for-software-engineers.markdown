@@ -41,7 +41,7 @@ I am totally not kidding about number 4.
 
 #### Craftsmanship
 
-I think what makes New York an incredible technology scene today is the surging number of technology startups with that include [bit.ly](http://bit.ly/), [10gen](http://www.10gen.com/) or [Foursquare](https://foursquare.com/). The list is pretty long, check out [nytm.org/made](https://nytm.org/made).
+I think what makes New York an incredible technology scene today is the surging number of technology startups with that include [bit.ly](https://bit.ly/), [10gen](https://www.mongodb.com/) or [Foursquare](https://foursquare.com/). The list is pretty long, check out [nytm.org/made](https://nytm.org/made).
 
 ![]({{ site.url }}/images/posts/2011/2011-06-29-moving-to-new-york-a-guide-for-software-engineers/image_4.jpg)
 
@@ -55,7 +55,7 @@ _The idea that startups would sacrifice much needed working capital because they
 
 If you’re moving, you might just want money. Hedge funds and banks will gladly throw tons of cash at you. Unfortunately many have different numbers behind the phrase "tons of cash". A friend of mine has a 5MM$ house in Seattle suburbs, you can imagine what "tons" means to him!
 
-A rule of thumb is that salaries above 200K$ don’t exist and that an engineer can expect to make the usual range of 60K$ to about 140K$ depending on your level of experience. The financial sector has huge bonus potential, but then you might want to [read this](https://web.archive.org/web/20120618163609/http://adgrok.com/why-founding-a-three-person-startup-with-zero-revenue-is-better-than-working-for-goldman-sachs/). IMHO, if you just need a great salary right now, working for a financial firm may just be the right thing for you. When that bonus lands you’ll be happy as a cat getting dry chicken treats.
+A rule of thumb is that salaries above 200K$ don’t exist and that an engineer can expect to make the usual range of 60K$ to about 140K$ depending on your level of experience. The financial sector has huge bonus potential, but then you might want to [read this](https://web.archive.org/web/20120618163609/https://adgrok.com/why-founding-a-three-person-startup-with-zero-revenue-is-better-than-working-for-goldman-sachs/). IMHO, if you just need a great salary right now, working for a financial firm may just be the right thing for you. When that bonus lands you’ll be happy as a cat getting dry chicken treats.
 
 _The idea that cost of living or the fact that there’s city and state tax in New York somehow means that people pay higher salaries is false. You make the same, which really means you make less._
 
@@ -87,6 +87,6 @@ _The idea that all of New York lives the life of the kids in Gossip Girl is simp
 
 #### Famous Last Words
 
-Of course this is an interested post: we are [hiring at art.sy](https://artsy.net/jobs). We are at the amazing [GeneralAssemb.ly](http://generalassemb.ly) office space in Union Square and definitely fall into that "craftsmanship" category. If you like what you read, don’t hesitate to drop me a note at dblock[at]dblock[dot]org. And if a startup is too much for your stomach, I’d be more than happy to introduce you to a good recruiter that knows about all tech jobs in the city and is not a sweatshop and will treat you as the engineering princess slash rare animal that you are.
+Of course this is an interested post: we are [hiring at art.sy](https://artsy.net/jobs). We are at the amazing [GeneralAssemb.ly](https://generalassemb.ly) office space in Union Square and definitely fall into that "craftsmanship" category. If you like what you read, don’t hesitate to drop me a note at dblock[at]dblock[dot]org. And if a startup is too much for your stomach, I’d be more than happy to introduce you to a good recruiter that knows about all tech jobs in the city and is not a sweatshop and will treat you as the engineering princess slash rare animal that you are.
 
 See you in NYC!

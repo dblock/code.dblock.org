@@ -21,13 +21,13 @@ We were not unhappy with the old Java.net site, it worked fine and while it didn
 
 Java.net has been and continues to be about content management, but developers want collaboration. The fundamental goals don’t align with what we need.
 
-Oracle has outsourced Java.net in March to a company called Cognisync. The first thing Cognisync did was a [press release](https://web.archive.org/web/20111027183752/http://www.cognisync.com/news/company/03_01_11_javanet).
+Oracle has outsourced Java.net in March to a company called Cognisync. The first thing Cognisync did was a [press release](https://web.archive.org/web/20111027183752/https://www.cognisync.com/news/company/03_01_11_javanet).
 
 You can imagine a few sales execs in a room making a deal and celebrating with a nice bottle of expensive French champagne, before instructing the marketing team to make a press release and throwing the thing over the cubicle walls to an understaffed team of developers. How do you feel about improving this giant mess? It’s so crappy, it’s a challenge, you’re going to love it! I’ve lived through some of similar scenarios in various big and small companies, my opinion is that it’s highly unlikely that Cognisync or anybody else is capable of transforming Java.net from a dying weed into a thriving flower.
 
 ![]({{ site.url }}/images/posts/2011/2011-06-20-jna-is-now-a-githubber/image_18.jpg)
 
-The user experience of Java.net sends you back by a decade. It seems that the team never had a designer. There’re big navigation problems and some small ones. For example, you cannot get rid of the links about Java.net under the "Get Involved" section. If I am looking at JNA and I see "Get Involved", I want to get involved in JNA, duh. The same goes for "Get Informed". It leads to all kinds of places. Generally 80% of the layout has nothing to do with your project and replacing the whole thing with your own site (seems possible, Glassfish has [done it](http://glassfish.java.net/)) is a total overkill for smaller teams like JNA. I’d rather write some more code for the project itself than have to struggle with building a website on top of Kenai.
+The user experience of Java.net sends you back by a decade. It seems that the team never had a designer. There’re big navigation problems and some small ones. For example, you cannot get rid of the links about Java.net under the "Get Involved" section. If I am looking at JNA and I see "Get Involved", I want to get involved in JNA, duh. The same goes for "Get Informed". It leads to all kinds of places. Generally 80% of the layout has nothing to do with your project and replacing the whole thing with your own site (seems possible, Glassfish has [done it](https://glassfish.java.net/)) is a total overkill for smaller teams like JNA. I’d rather write some more code for the project itself than have to struggle with building a website on top of Kenai.
 
 ![]({{ site.url }}/images/posts/2011/2011-06-20-jna-is-now-a-githubber/image_14.jpg)
 

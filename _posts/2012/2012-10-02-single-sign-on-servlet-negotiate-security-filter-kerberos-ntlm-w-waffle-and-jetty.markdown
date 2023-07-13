@@ -16,5 +16,5 @@ Jetty is just another servlet container, so the setup is very similar to [Tomcat
 3. Place the **waffle-filter** demo app contents into **webapps\waffle-filter**.
 4. Place all Waffle JARs into Jetty’s **lib** directory.
 5. Start Jetty with **java -jar start.jar**.
-6. In Internet Explorer, choose **Tools** , **Internet Options** and add http://localhost to **Local Intranet** in the **Security** tab.
-7. Navigate to http://localhost:8080/waffle-filter, you should see the logged in page with all kinds of logged in info.
+6. In Internet Explorer, choose **Tools** , **Internet Options** and add https://localhost to **Local Intranet** in the **Security** tab.
+7. Navigate to https://localhost:8080/waffle-filter, you should see the logged in page with all kinds of logged in info.

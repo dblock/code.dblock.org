@@ -9,7 +9,7 @@ dblog_post_id: 26
 ---
 I really like VMWare VIX API's _CopyFileFromGuestToHost_ and _CopyFileFromHostToGuest_. These automatically copy a single file or an entire directory tree. Easy. Unfortunately I am copying large (150-300 Mb) files to/from a VMWare guest OS and it's taking an hour to copy a hundred megs. I bet VMWare API was developed by Russian developers, so it's probably sending UTF-8 encoded bytes in Russian via SOAP. You might remember that I am writing a tool that lets one test a cross-product of installers and virtual machine snapshots: three MSIs multipled by twenty snapshots equals days of file copying! It's not going to work.
 
-I posted a [question about this in VMWare Communities](http://communities.vmware.com/thread/184489?tstart=0) and got a satisfactory response: _I don't think there is a workaround. We are aware of the issue (we run in to it internally) and hope to fix it in a future release._
+I posted a [question about this in VMWare Communities](https://communities.vmware.com/thread/184489?tstart=0) and got a satisfactory response: _I don't think there is a workaround. We are aware of the issue (we run in to it internally) and hope to fix it in a future release._
 
 In the meantime, I need a short term solution.
 

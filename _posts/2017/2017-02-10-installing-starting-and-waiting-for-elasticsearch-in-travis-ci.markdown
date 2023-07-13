@@ -12,13 +12,13 @@ before_install:
   - curl -O https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.5.2.deb
   - sudo dpkg -i --force-confnew elasticsearch-1.5.2.deb
   - sudo /etc/init.d/elasticsearch start
-  - until curl --silent -XGET --fail http://localhost:9200; do printf '.'; sleep 1; done
+  - until curl --silent -XGET --fail https://localhost:9200; do printf '.'; sleep 1; done
 {% endhighlight %}
 
 Which gives ...
 
 {% highlight bash %}
-$ until curl --silent -XGET --fail http://localhost:9200; do printf '.'; sleep 1; done
+$ until curl --silent -XGET --fail https://localhost:9200; do printf '.'; sleep 1; done
 .......{
   "status" : 200,
   "name" : "Silver Scorpion",

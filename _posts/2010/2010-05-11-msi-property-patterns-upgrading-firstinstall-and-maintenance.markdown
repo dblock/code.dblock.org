@@ -19,7 +19,7 @@ Runtime.wxi follows.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
-<Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<Include xmlns="https://schemas.microsoft.com/wix/2006/wi">
 
   <!--
    FirstInstall: when product is installed for the first time

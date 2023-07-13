@@ -46,7 +46,7 @@ This causes immediate execution of the job in the [following code](https://githu
 Delayed::Worker.delay_job?(job) ? job.save : job.invoke_job
 {% endhighlight %}
 
-[Since 4.1.0](https://github.com/collectiveidea/delayed_job/commit/ce88693429188a63793b16daaab67056a4e4e0bf), `Delayed::Worker.delay_jobs` can also be a `Proc`. You may want to delay jobs that are scheduled in the future and immediately execute all other jobs. This is our default setup in [Ruby projects at Artsy](http://artsy.github.io).
+[Since 4.1.0](https://github.com/collectiveidea/delayed_job/commit/ce88693429188a63793b16daaab67056a4e4e0bf), `Delayed::Worker.delay_jobs` can also be a `Proc`. You may want to delay jobs that are scheduled in the future and immediately execute all other jobs. This is our default setup in [Ruby projects at Artsy](https://artsy.github.io).
 
 {% highlight ruby %}
 RSpec.configure do |config|

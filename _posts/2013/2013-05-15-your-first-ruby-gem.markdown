@@ -9,15 +9,15 @@ dblog_post_id: 382
 ---
 *UPDATE*: I did another iteration of live-coding a Ruby gem at Flatiron School in January 2018. The code, a very similar but more complete and up-to-date checklist is [here](https://github.com/dblock/frgom).
 
-![](http://photos1.meetupstatic.com/photos/event/6/5/a/3/global_20906019.jpeg)
+![](https://photos1.meetupstatic.com/photos/event/6/5/a/3/global_20906019.jpeg)
 
-I live-coded a new gem called [Ruby::Enum](https://github.com/dblock/ruby-enum) at [NYC.rb](http://www.meetup.com/NYC-rb/events/88141492/) on Tuesday. This library adds enum-like functionality to Ruby.
+I live-coded a new gem called [Ruby::Enum](https://github.com/dblock/ruby-enum) at [NYC.rb](https://www.meetup.com/NYC-rb/events/88141492/) on Tuesday. This library adds enum-like functionality to Ruby.
 
 Here’s my checklist for creating a new gem.
 
 #### Check the Name
 
-Ruby gems are registered with [Rubygems](http://rubygems.org/) and managed in your projects using [Bundler](http://gembundler.com/). Search for the new gem name on Rubygems to make sure it's not taken.
+Ruby gems are registered with [Rubygems](https://rubygems.org/) and managed in your projects using [Bundler](https://gembundler.com/). Search for the new gem name on Rubygems to make sure it's not taken.
 
 #### Create a Folder
 
@@ -37,7 +37,7 @@ Initialized empty Git repository in /home/dblock/source/ruby-enum/dblock/.git/
 
 #### Create a Github Repo
 
-Create a new repository on [Github](http://github.com/).
+Create a new repository on [Github](https://github.com/).
 
 ![]({{ site.url }}/images/posts/2013/2013-05-15-your-first-ruby-gem/image4.jpg)
 
@@ -81,7 +81,7 @@ This project is licenced under the [MIT License](LICENSE.md).
 
 #### Gemfile
 
-A Gemfile is something that comes with [Bundler](http://gembundler.com/) and declares gem dependencies.
+A Gemfile is something that comes with [Bundler](https://gembundler.com/) and declares gem dependencies.
 
 Install Bundler.
 
@@ -97,7 +97,7 @@ Installing RDoc documentation for bundler-1.3.5...
 Create a Gemfile. For now it just says where to get other gems from.
 
 {% highlight ruby %}
-source "http://rubygems.org"
+source "https://rubygems.org"
 {% endhighlight %}
 
 Run `bundle install`.
@@ -182,7 +182,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = '>= 1.3.6'
   s.files = `git ls-files`.split("\n")
   s.require_paths = ["lib"]
-  s.homepage = "http://github.com/dblock/ruby-enum"
+  s.homepage = "https://github.com/dblock/ruby-enum"
   s.licenses = ["MIT"]
   s.summary = "Enum-like Behavior for Ruby"
 end
@@ -191,7 +191,7 @@ end
 The declaration can be loaded in _Gemfile_, so that we can list dependencies in one place.
 
 {% highlight ruby %}
-source "http://rubygems.org"
+source "https://rubygems.org"
 gemspec
 {% endhighlight %}
 

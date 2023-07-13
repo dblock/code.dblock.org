@@ -15,5 +15,5 @@ My talk from JUG NYC from last summer has finally been uploaded to YouTube!
 
 [https://www.youtube.com/watch?v=LkrI3D8gxw0](https://www.youtube.com/watch?v=LkrI3D8gxw0)
 
-There’s also a summary with all the links in [this blog post](https://artsy.github.io/blog/2012/05/27/using-jenkins-for-ruby-and-ruby-on-rails-teams/) and the [slides here](http://www.slideshare.net/dblockdotorg/graduating-to-jenkins-ci-for-rubyonrails-teams).
+There’s also a summary with all the links in [this blog post](https://artsy.github.io/blog/2012/05/27/using-jenkins-for-ruby-and-ruby-on-rails-teams/) and the [slides here](https://www.slideshare.net/dblockdotorg/graduating-to-jenkins-ci-for-rubyonrails-teams).
 

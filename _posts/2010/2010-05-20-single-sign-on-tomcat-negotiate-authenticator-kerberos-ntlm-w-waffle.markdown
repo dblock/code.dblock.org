@@ -19,7 +19,7 @@ Download [Waffle 1.3](https://github.com/dblock/waffle/). The zip contains _Waff
 
 _Copy Files_
 
-I started with a default installation of Tomcat 6. Checked that I could start the server and navigate to http://localhost:8080. Copy the following files into tomcat’s _lib_ directory.
+I started with a default installation of Tomcat 6. Checked that I could start the server and navigate to https://localhost:8080. Copy the following files into tomcat’s _lib_ directory.
 
 - _jna.jar_: Java Native Access
 - _platform.jar_: JNA platform-specific API
@@ -65,7 +65,7 @@ Restrict access to website resources. For example, to restrict the entire websit
 
 #### Test
 
-Restart Tomcat and navigate to http://localhost:8080.
+Restart Tomcat and navigate to https://localhost:8080.
 
 You should be prompted for a logon with a popup. This is because by default localhost is not in the _Intranet Zone _and the server returned a 401 Unauthorized. Internet servers with a fully qualified named are detected automatically.
 
@@ -87,7 +87,7 @@ The target website must be in the Intranet Zone.
 4. Click the _Sites_ button.
 5. Check _Autmatically detect intranet network_.
 6. For localhost, click _Advanced_.
-7. Add _http://localhost_ to the list.
+7. Add _https://localhost_ to the list.
 
 _Firefox_
 
@@ -96,7 +96,7 @@ _Firefox_
 3. Put your server name as the value. If you have more than one server, you can enter them all as a comma separated list.
 4. Close the tab.
 
-Navigate to _http://localhost:8080_ after adding it to the Intranet Zone.
+Navigate to _https://localhost:8080_ after adding it to the Intranet Zone.
 
 ![]({{ site.url }}/images/posts/2010/2010-05-20-single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle/image_2.jpg)
 
@@ -131,7 +131,7 @@ My laptop is not a member of an Active Directory domain, but you would see domai
 
 #### Related Projects
 
-- [Tomcat SPNEGO by Dominique Guerrin](https://web.archive.org/web/20120114182927/http://tomcatspnego.codeplex.com/): this is a very good prototype of a filter. It uses JNI and not JNA, doesn’t support NTLM POST and the code is pretty thick.
-- [SPNEGO Sourceforge](http://spnego.sourceforge.net/): it’s a nightmare to configure, doesn’t work without an Active Directory domain and requires an SPN
-- [JCIFS NTLM](http://jcifs.samba.org/src/docs/ntlmhttpauth.html): no longer supported and they recommend using Jespa
-- [Jespa](http://www.ioplex.com/jespa.html): a commercial implementation that claims to do the same thing as Waffle, but uses the Netlogon service instead of the native Windows API
+- [Tomcat SPNEGO by Dominique Guerrin](https://web.archive.org/web/20120114182927/https://tomcatspnego.codeplex.com/): this is a very good prototype of a filter. It uses JNI and not JNA, doesn’t support NTLM POST and the code is pretty thick.
+- [SPNEGO Sourceforge](https://spnego.sourceforge.net/): it’s a nightmare to configure, doesn’t work without an Active Directory domain and requires an SPN
+- [JCIFS NTLM](https://jcifs.samba.org/src/docs/ntlmhttpauth.html): no longer supported and they recommend using Jespa
+- [Jespa](https://www.ioplex.com/jespa.html): a commercial implementation that claims to do the same thing as Waffle, but uses the Netlogon service instead of the native Windows API

@@ -7,9 +7,9 @@ tags: [rspec, artsy, rake, rails, ruby, testing]
 comments: true
 dblog_post_id: 244
 ---
-Inspired by [this post](http://kpumuk.info/ruby-on-rails/my-top-7-rspec-best-practices/) on RSpec best practices and updated for RSpec2.
+Inspired by [this post](https://kpumuk.info/ruby-on-rails/my-top-7-rspec-best-practices/) on RSpec best practices and updated for RSpec2.
 
-We’re rapidly approaching 2000 tests in our main project, adding about 100 tests every week. Everyone got really crafty at figuring out the optimal terminal window width to make the twenty or so rows of green and yellow dots from RSpec progress to align nicely. So we replaced the RSpec formatter with the awesome [Fuubar](https://github.com/jeffkreeftmeijer/fuubar) (see [introductory post](http://jeffkreeftmeijer.com/2010/fuubar-the-instafailing-rspec-progress-bar-formatter/)) which now gives us ETA and shows error details as they appear. Nice.
+We’re rapidly approaching 2000 tests in our main project, adding about 100 tests every week. Everyone got really crafty at figuring out the optimal terminal window width to make the twenty or so rows of green and yellow dots from RSpec progress to align nicely. So we replaced the RSpec formatter with the awesome [Fuubar](https://github.com/jeffkreeftmeijer/fuubar) (see [introductory post](https://jeffkreeftmeijer.com/2010/fuubar-the-instafailing-rspec-progress-bar-formatter/)) which now gives us ETA and shows error details as they appear. Nice.
 
 ![]({{ site.url }}/images/posts/2011/2011-08-16-rspec-fuubar-breaking-tests-into-suites/image_11.jpg)
 

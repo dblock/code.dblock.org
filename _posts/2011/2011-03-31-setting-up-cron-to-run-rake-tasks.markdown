@@ -33,4 +33,4 @@ To propagate the settings to crontab, use the following command.
 $ whenever --update-crontab
 ```
 
-All credit for this one goes to [@sarcilav](https://web.archive.org/web/20120629110557/http://blog.sarcilav.com//) – I wanted to wrap up our dev-ops story in one place on my blog.
+All credit for this one goes to [@sarcilav](https://web.archive.org/web/20120629110557/https://blog.sarcilav.com//) – I wanted to wrap up our dev-ops story in one place on my blog.

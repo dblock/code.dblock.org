@@ -15,4 +15,4 @@ I totally agree. You can now resize this blog – see how the highlights on the 
 
 ![]({{ site.url }}/images/posts/2011/2011-08-02-dblog-implementing-skeleton-css-boilerplate/image_8.jpg)
 
-This makes it actually readable on a mobile device – I tried it on my Android and it was a massive improvement from the old view! The implementation was very straightforward, most of the time was spent battling the ASP.NET grids and lists that are primarily table-based. This blog’s code is [here](http://github.com/dblock/dblog/) if you care. Please also do let me know if something doesn’t work or can be improved.
+This makes it actually readable on a mobile device – I tried it on my Android and it was a massive improvement from the old view! The implementation was very straightforward, most of the time was spent battling the ASP.NET grids and lists that are primarily table-based. This blog’s code is [here](https://github.com/dblock/dblog/) if you care. Please also do let me know if something doesn’t work or can be improved.

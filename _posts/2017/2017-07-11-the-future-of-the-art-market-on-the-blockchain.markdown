@@ -5,9 +5,9 @@ date: 2017-07-11
 tags: [blockchain, art market]
 comments: true
 ---
-I recently gave a talk at the "ETH Meets New York" Blockchain Symposium with a catchy title of "The Platform View of the Blockchain" ([video](http://www.video.ethz.ch/events/2017/eth-meets-ny/blockchain/26c6cde8-7239-439b-bfc3-9a96f84e49ca.html)). I have been thinking about Blockchain a lot at [Artsy](https://www.artsy.net), but I am not, by any means, a Blockchain expert (unlike the intimidating group of speakers that included [Meltem Demirors](https://www.linkedin.com/in/meltdem/) and [Joe Lubin](https://www.linkedin.com/in/joseph-lubin-48406489/)). I've also never owned any coins. Finally, I work for a platform, which should, a priori, dislike the idea of decentralized anything. I am, however, very excited about the possibilities that this new technology brings to the Art World and so I would like to clear the confusion that is perpetrated by a perplexed press, as highlighted by a [recent article in Art Market Monitor](http://www.artmarketmonitor.com/2017/07/10/the-continuing-confusion-around-art-coin-art-block-chain/), in the short lighting talk below and in this post.
+I recently gave a talk at the "ETH Meets New York" Blockchain Symposium with a catchy title of "The Platform View of the Blockchain" ([video](https://www.video.ethz.ch/events/2017/eth-meets-ny/blockchain/26c6cde8-7239-439b-bfc3-9a96f84e49ca.html)). I have been thinking about Blockchain a lot at [Artsy](https://www.artsy.net), but I am not, by any means, a Blockchain expert (unlike the intimidating group of speakers that included [Meltem Demirors](https://www.linkedin.com/in/meltdem/) and [Joe Lubin](https://www.linkedin.com/in/joseph-lubin-48406489/)). I've also never owned any coins. Finally, I work for a platform, which should, a priori, dislike the idea of decentralized anything. I am, however, very excited about the possibilities that this new technology brings to the Art World and so I would like to clear the confusion that is perpetrated by a perplexed press, as highlighted by a [recent article in Art Market Monitor](https://www.artmarketmonitor.com/2017/07/10/the-continuing-confusion-around-art-coin-art-block-chain/), in the short lighting talk below and in this post.
 
-<iframe width="416" height="234" src="http://www.video.ethz.ch/etc/designs/mmp/paella/video.html?id=26c6cde8-7239-439b-bfc3-9a96f84e49ca" frameborder="0" allowfullscreen></iframe>
+<iframe width="416" height="234" src="https://www.video.ethz.ch/etc/designs/mmp/paella/video.html?id=26c6cde8-7239-439b-bfc3-9a96f84e49ca" frameborder="0" allowfullscreen></iframe>
 
 ### What is Bitcoin and Blockchain?
 
@@ -21,11 +21,11 @@ If that video got you interested and you're curious about some computer science 
 
 ### Who is Working with Blockchain in the Art World?
 
-There's a nice starter list of companies active in the art world and Blockchain compiled by Jess Houlgrave as part of her work for an M.A. at the Sotheby's Institute of Art on [The Arts Slack #blockchain channel](https://thearts.slack.com/archives/C5YN7BY6R/p1498230417603305) (you can join [here](https://web.archive.org/web/20160731120137/http://thearts.herokuapp.com/)). I've selected a few and categorized them by the type of problem they attempt to solve.
+There's a nice starter list of companies active in the art world and Blockchain compiled by Jess Houlgrave as part of her work for an M.A. at the Sotheby's Institute of Art on [The Arts Slack #blockchain channel](https://thearts.slack.com/archives/C5YN7BY6R/p1498230417603305) (you can join [here](https://web.archive.org/web/20160731120137/https://thearts.herokuapp.com/)). I've selected a few and categorized them by the type of problem they attempt to solve.
 
 #### How do I buy digital art?
 
-Perhaps the most obvious and natural application of Blockchain in the art market is to produce, display, and sell (for Bitcoin) downloadable objects. This is the mission of [Left.Gallery](https://left.gallery) and [Cointemporary](https://web.archive.org/web/20170912005750/http://cointemporary.com).
+Perhaps the most obvious and natural application of Blockchain in the art market is to produce, display, and sell (for Bitcoin) downloadable objects. This is the mission of [Left.Gallery](https://left.gallery) and [Cointemporary](https://web.archive.org/web/20170912005750/https://cointemporary.com).
 
 #### How can I make money selling my work?
 
@@ -37,7 +37,7 @@ Provenance can significantly increase (eg. a work was bought my a major collecto
 
 #### Is this work authentic?
 
-Reducing risks around authenticity is the mission of [Everledger](https://www.everledger.io), [TagSmart](http://www.tagsmart.com) and [Verisart](https://www.verisart.com). These can work well in tandem with technology that uniquely identifies a work, such as [Artmyn](https://artmyn.com) that can 3D-scan a work in-depth and Provenire that uses synthetic DNA polymers to specifically and uniquely mark artwork.
+Reducing risks around authenticity is the mission of [Everledger](https://www.everledger.io), [TagSmart](https://www.tagsmart.com) and [Verisart](https://www.verisart.com). These can work well in tandem with technology that uniquely identifies a work, such as [Artmyn](https://artmyn.com) that can 3D-scan a work in-depth and Provenire that uses synthetic DNA polymers to specifically and uniquely mark artwork.
 
 #### Who is using a copy of this digital work?
 
@@ -57,7 +57,7 @@ It may be possible to completely disassemble and reassemble the art market and f
 
 #### What is art?
 
-My favorite applications of the Blockchain question art itself. One of such examples is [Furtherfield](http://furtherfield.org) with a very interesting [exhibition called New World Order](https://www.furtherfield.org/new-world-order), which displayed such works as the [Plantoid](http://okhaos.com/plantoids), a Blockchain life form which hires an artist to produce a work of art once you send it enough Bitcoin.
+My favorite applications of the Blockchain question art itself. One of such examples is [Furtherfield](https://furtherfield.org) with a very interesting [exhibition called New World Order](https://www.furtherfield.org/new-world-order), which displayed such works as the [Plantoid](https://okhaos.com/plantoids), a Blockchain life form which hires an artist to produce a work of art once you send it enough Bitcoin.
 
 ### Fear, Uncertainty and Data
 

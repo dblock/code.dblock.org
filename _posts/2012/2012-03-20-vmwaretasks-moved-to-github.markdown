@@ -9,7 +9,7 @@ dblog_post_id: 328
 ---
 I moved the popular VMWareTasks C# library from CodePlex to Github.
 
-The new home is: [https://github.com/dblock/vmwaretasks](https://github.com/dblock/vmwaretasks). There’s also a [new Google Group](http://groups.google.com/group/vmwaretasks) for discussions.
+The new home is: [https://github.com/dblock/vmwaretasks](https://github.com/dblock/vmwaretasks). There’s also a [new Google Group](https://groups.google.com/group/vmwaretasks) for discussions.
 
 ![]({{ site.url }}/images/posts/2012/2012-03-20-vmwaretasks-moved-to-github/image_5.jpg)
 

@@ -22,7 +22,7 @@ Exception in thread "main" java.lang.UnsatisfiedLinkError:
         at com.jacob.jacobgen.Jacobgen.main(Jacobgen.java:544)
 ```
 
-We use [JacobGen](http://sourceforge.net/projects/jacob-project) to generate a Java-COM bridge. It’s a convoluted setup: a C# library is exported to COM, then a bridge is generated to use it from Java. Some legacy applications still use this and while it works, I find it a bit too thick. I recommend implementing whatever you have in C# in Java and using [JNA](https://github.com/twall/jna) if you need to invoke native functions. While that’s nice in theory, we still need to fix the build.
+We use [JacobGen](https://sourceforge.net/projects/jacob-project) to generate a Java-COM bridge. It’s a convoluted setup: a C# library is exported to COM, then a bridge is generated to use it from Java. Some legacy applications still use this and while it works, I find it a bit too thick. I recommend implementing whatever you have in C# in Java and using [JNA](https://github.com/twall/jna) if you need to invoke native functions. While that’s nice in theory, we still need to fix the build.
 
 I found the error strange, since JacobGen carries a 32-bit and a 64-bit native DLL and one would think that that intended to "just work" on a 64-bit system. This is how we call JacobGen:
 
@@ -43,7 +43,7 @@ endlocal
 
 This looks perfectly correct – note that path set to `%PROCESSOR_ARCHITECTURE%`. I ran the batch file manually and the build succeeded without any changes!
 
-The problem turned out to be in MSBuild, where 32-bit MSBuild re-defines `PROCESSOR_ARCHITECTURE` as `x86` ([helpful post](https://web.archive.org/web/20100421162834/http://abstractcode.com/abstractblog/archive/2009/07/03/171.aspx)). Another variable, `PROCESSOR_ARCHITEW6432` is available on 64-bit systems and is set to `AMD64` in my setup. To fix the problem I added a couple of lines to Jacobgen.bat.
+The problem turned out to be in MSBuild, where 32-bit MSBuild re-defines `PROCESSOR_ARCHITECTURE` as `x86` ([helpful post](https://web.archive.org/web/20100421162834/https://abstractcode.com/abstractblog/archive/2009/07/03/171.aspx)). Another variable, `PROCESSOR_ARCHITEW6432` is available on 64-bit systems and is set to `AMD64` in my setup. To fix the problem I added a couple of lines to Jacobgen.bat.
 
 {% highlight bat %}
 if NOT "%PROCESSOR_ARCHITEW6432%"=="" (

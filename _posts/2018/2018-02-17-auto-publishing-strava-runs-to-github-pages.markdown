@@ -5,7 +5,7 @@ date: 2018-02-17
 tags: [running, ruby, blog, strava]
 comments: true
 ---
-I always hated running. And now I have a [open-source running blog](http://run.dblock.org). Most entries are automatically generated from runs recorded in [Strava](https://www.strava.com/athletes/dblockdotorg) - I'm just too lazy to do it by hand :)
+I always hated running. And now I have a [open-source running blog](https://run.dblock.org). Most entries are automatically generated from runs recorded in [Strava](https://www.strava.com/athletes/dblockdotorg) - I'm just too lazy to do it by hand :)
 
 These are the implementation details.
 
@@ -97,7 +97,7 @@ date: "#{activity.start_date_local.strftime('%F %T')}"
 EOS
 {% endhighlight %}
 
-For example, [2018/2018-01-21-run-13.34mi-1h47m18s.md](https://github.com/dblock/run.dblock.org/blob/gh-pages/_posts/2018/2018-01-21-run-13.34mi-1h47m18s.md) is generated for a post titled [#FLMH](http://run.dblock.org/2018/01/21/run-13.34mi-1h47m18s.html).
+For example, [2018/2018-01-21-run-13.34mi-1h47m18s.md](https://github.com/dblock/run.dblock.org/blob/gh-pages/_posts/2018/2018-01-21-run-13.34mi-1h47m18s.md) is generated for a post titled [#FLMH](https://run.dblock.org/2018/01/21/run-13.34mi-1h47m18s.html).
 
 You can see the complete Rake task [here](https://github.com/dblock/run.dblock.org/blob/gh-pages/Rakefile).
 
@@ -161,4 +161,4 @@ The Strava refresh token must be kept secret and therefore I encrypted it with `
 
 ### Finally
 
-Find my running blog at [run.dblock.org](http://run.dblock.org), the latest code for this post at [github.com/dblock/run.dblock.org](https://github.com/dblock/run.dblock.org) and read about why I run [here](http://run.dblock.org/2017/10/01/why-do-i-run.html).
+Find my running blog at [run.dblock.org](https://run.dblock.org), the latest code for this post at [github.com/dblock/run.dblock.org](https://github.com/dblock/run.dblock.org) and read about why I run [here](https://run.dblock.org/2017/10/01/why-do-i-run.html).

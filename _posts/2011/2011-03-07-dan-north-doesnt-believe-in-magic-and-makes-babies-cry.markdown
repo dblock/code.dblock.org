@@ -7,7 +7,7 @@ tags: [rails, ruby]
 comments: true
 dblog_post_id: 181
 ---
-I’ve watched many [Dan North’s InfoQ videos](http://www.infoq.com/author/Dan-North). I like 95% of what you say, Dan. But your [latest Twitter whining](http://twitter.com/tastapod) on Ruby/Rails #fail have left my 2 y.o. son extremely disappointed. The thing is, you don’t believe in magic. And magic is what makes us, children, so very happy.
+I’ve watched many [Dan North’s InfoQ videos](https://www.infoq.com/author/Dan-North). I like 95% of what you say, Dan. But your [latest Twitter whining](https://twitter.com/tastapod) on Ruby/Rails #fail have left my 2 y.o. son extremely disappointed. The thing is, you don’t believe in magic. And magic is what makes us, children, so very happy.
 
 ![]({{ site.url }}/images/posts/2011/2011-03-07-dan-north-doesnt-believe-in-magic-and-makes-babies-cry/image_13.jpg)
 

@@ -14,7 +14,7 @@ No app specified.
 Run this command from an app folder or specify which app to use with --app <app name>
 ```
 
-To fix this, you need to add a remote Git repository for your heroku application and tell the heroku gem to use it as default. Answer found [here](http://groups.google.com/group/heroku/browse_thread/thread/4fc0cc1caa366bfe). Like this.
+To fix this, you need to add a remote Git repository for your heroku application and tell the heroku gem to use it as default. Answer found [here](https://groups.google.com/group/heroku/browse_thread/thread/4fc0cc1caa366bfe). Like this.
 
 ```
 git remote add heroku git@heroku.com:your-app-name.git

@@ -7,5 +7,5 @@ tags: [organizations, people, agile]
 comments: true
 dblog_post_id: 74
 ---
-I feel like I live in this presentation by Mary Poppendieck: [The Tyranny of the Plan](http://www.infoq.com/presentations/tyranny-of-plan).
+I feel like I live in this presentation by Mary Poppendieck: [The Tyranny of the Plan](https://www.infoq.com/presentations/tyranny-of-plan).
 

@@ -5,7 +5,7 @@ date: 2016-11-19
 tags: [hackathons, mit, artsy]
 comments: true
 ---
-I have the honor of serving as judge for another year at [MIT Hacking Arts 2016 Hackathon](http://hackingarts.com/#ha2016) that follows an incredibly inspiring conference filled with panels on the intersection of technology and art.
+I have the honor of serving as judge for another year at [MIT Hacking Arts 2016 Hackathon](https://hackingarts.com/#ha2016) that follows an incredibly inspiring conference filled with panels on the intersection of technology and art.
 
 [![hallucination]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-conference/hallucination.png)](https://twitter.com/dblockdotorg)
 
@@ -13,33 +13,33 @@ More quotes below.
 
 ### Dance & New Media
 
-[![Renegade PG]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-conference/renegadepg.jpg)](http://www.renegadepg.com)
+[![Renegade PG]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-conference/renegadepg.jpg)](https://www.renegadepg.com)
 
 First time I heard the term _X-Shaped_ when describing a designer: a combination of science, art, technology and business.
 
 My favorite quote is from Mio.
 
-> The way people code and people move don't relate well to each other. This is unlike music. <small>/[Christian "Mio" Loclair](http://princemio.net), [Waltzbinaire](http://waltzbinaire.com)</small>
+> The way people code and people move don't relate well to each other. This is unlike music. <small>/[Christian "Mio" Loclair](https://christianmioloclair.com), [Waltzbinaire](https://waltzbinaire.com)</small>
 
 And more ...
 
-> What motivates me in my work is boredom and curiosity. I use technology as a metaphor for spirituality that comes out through light or sound. <small>/[Maziar Ghaderi, Playperformance](http://maziart.ca)</small>
+> What motivates me in my work is boredom and curiosity. I use technology as a metaphor for spirituality that comes out through light or sound. <small>/[Maziar Ghaderi, Playperformance](https://maziart.ca)</small>
 
-> A machine tries to behave as human while humans try to become robotic. Then they overlap and we see what can overlap and what can be replaced. When we subtract all the overlapping parts, we get the real human result. <small>/[Christian "Mio" Loclair](http://princemio.net), [Waltzbinaire](http://waltzbinaire.com)</small>
+> A machine tries to behave as human while humans try to become robotic. Then they overlap and we see what can overlap and what can be replaced. When we subtract all the overlapping parts, we get the real human result. <small>/[Christian "Mio" Loclair](https://christianmioloclair.com), [Waltzbinaire](https://waltzbinaire.com)</small>
 
-> I think about how I can control the atmosphere." <small>/[Sidra Bell](http://www.sidrabelldanceny.org)</small>
+> I think about how I can control the atmosphere." <small>/[Sidra Bell](https://www.sidrabelldanceny.org)</small>
 
-> I am interested in inserting black culture as featuring mechanisms into digital media, narrative or text. To explore superposition of digital and human. <small>/[Andre M. Zachery, Renegade Performance Group](http://www.renegadepg.com)</small>
+> I am interested in inserting black culture as featuring mechanisms into digital media, narrative or text. To explore superposition of digital and human. <small>/[Andre M. Zachery, Renegade Performance Group](https://www.renegadepg.com)</small>
 
-> Technology can provide agency to movement and dance, but also allow audiences to interact with it. <small>/[Sidra Bell](http://www.sidrabelldanceny.org)</small>
+> Technology can provide agency to movement and dance, but also allow audiences to interact with it. <small>/[Sidra Bell](https://www.sidrabelldanceny.org)</small>
 
-> Technology is part of our life. Dance can add a creative element to technology, it can make it more expressive. <small>/[Maria Takeuchi - Asphyxia](https://web.archive.org/web/20150314213400/http://www.asphyxia-project.com/)</small>
+> Technology is part of our life. Dance can add a creative element to technology, it can make it more expressive. <small>/[Maria Takeuchi - Asphyxia](https://web.archive.org/web/20150314213400/https://www.asphyxia-project.com/)</small>
 
-There was a lively discussion about tools, [Isadora](http://troikatronix.com/isadora) was mentioned several times.
+There was a lively discussion about tools, [Isadora](https://troikatronix.com/isadora) was mentioned several times.
 
 ### Biotech and Arts
 
-Joe Davis is a living mad scientist at the Thomas Schwartz Lab, MIT Biology. Joe notably created the first digital image out of molecules of DNA ([Microvenus](https://web.archive.org/web/20161028133415/http://geneticsandculture.com/genetics_culture/pages_genetics_culture/gc_w03/davis_microvenus.htm)). Things have evolved a bit and we now have [CRISPR](https://en.wikipedia.org/wiki/CRISPR) and can store movies in DNA. Since Earth will evolve into something DNA-based that is not us, maybe we can store the entire human history in the earth biome? DNA will be our time machine!
+Joe Davis is a living mad scientist at the Thomas Schwartz Lab, MIT Biology. Joe notably created the first digital image out of molecules of DNA ([Microvenus](https://web.archive.org/web/20161028133415/https://geneticsandculture.com/genetics_culture/pages_genetics_culture/gc_w03/davis_microvenus.htm)). Things have evolved a bit and we now have [CRISPR](https://en.wikipedia.org/wiki/CRISPR) and can store movies in DNA. Since Earth will evolve into something DNA-based that is not us, maybe we can store the entire human history in the earth biome? DNA will be our time machine!
 
 ![Joe Davis, Mad Scientist, MIT]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-conference/joedavis.jpg)
 
@@ -47,21 +47,21 @@ Joe Davis is a living mad scientist at the Thomas Schwartz Lab, MIT Biology. Joe
 
 [![Adidas' biodegradable sneakers]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-conference/adidas.jpg)](https://techcrunch.com/2016/11/17/adidas)
 
-> We live in a brave new world of synthetic biology. <small>/[David Sun Kong](http://www.davidsunkong.com)</small>
+> We live in a brave new world of synthetic biology. <small>/[David Sun Kong](https://www.davidsunkong.com)</small>
 
-> Nature -> Science -> Technology -> Society is bullshit. These are all interconnected. <small>/[Christina Agapakis](http://agapakis.com)</small>
+> Nature -> Science -> Technology -> Society is bullshit. These are all interconnected. <small>/[Christina Agapakis](https://agapakis.com)</small>
 
-> A lot of great design and artwork was done by collaborating with synthetic biologists. With the right tools we can help a seven year old become a synthetic biologist in a week-end. <small>/[Julie Legault](http://julielegault.com)</small>
+> A lot of great design and artwork was done by collaborating with synthetic biologists. With the right tools we can help a seven year old become a synthetic biologist in a week-end. <small>/[Julie Legault](https://julielegault.com)</small>
 
 > Artists play an important role in the demystification of the biotech ideas. <small>/[Natalie Kuldell](http://educationgroup.mit.edu/HHMIEducationGroup/?page_id=2918)</small>
 
-> Now is the time for art to be critical. Look out for all of us during the new administration. <small>/[Christina Agapakis](http://agapakis.com)</small>
+> Now is the time for art to be critical. Look out for all of us during the new administration. <small>/[Christina Agapakis](https://agapakis.com)</small>
 
-> Before biowork we had Dracula and Frankenstein. <small>/[Joe Davis](https://web.archive.org/web/20161211224511/http://geneticsandculture.com/genetics_culture/pages_genetics_culture/gc_w03/davis_joe.htm)</small>
+> Before biowork we had Dracula and Frankenstein. <small>/[Joe Davis](https://web.archive.org/web/20161211224511/https://geneticsandculture.com/genetics_culture/pages_genetics_culture/gc_w03/davis_joe.htm)</small>
 
 And my favorite.
 
-> Just like with the printing press, there're some concerns with A.I. <small>/[Julie Legault](http://julielegault.com)</small>
+> Just like with the printing press, there're some concerns with A.I. <small>/[Julie Legault](https://julielegault.com)</small>
 
 ![Biotech Art]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-conference/biotechart.jpg)
 
@@ -69,19 +69,19 @@ And my favorite.
 
 Web art has also taken a turn for the worst once the browser wars were over. Things change. While [last year at MIT Hacking Arts](/2015/09/25/mit-hacking-arts-2015.html) was all about Virtual Reality, this year was all about Augmented Reality. Commercial pitches included how mixed reality to help solve real problems, such as filling prescriptions accurately.
 
-> AR is the tissue between physical and virtual reality. <small>/[Allison Woods, Reify](http://reify.nyc)</small>
+> AR is the tissue between physical and virtual reality. <small>/[Allison Woods, Reify](https://reify.nyc)</small>
 
 ![holoart]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-conference/holoart.jpg)
 
-> AR is a new dimension of storytelling. Inspired by [Picasso's light painting](http://time.com/3746330/behind-the-picture-picasso-draws-with-light) HoloArt is now a new art media. It can be used as a way to enhance flow, provide full immersion. <small>/[Judith Amores](http://fluid.media.mit.edu/people/judith-amores)</small>
+> AR is a new dimension of storytelling. Inspired by [Picasso's light painting](https://time.com/3746330/behind-the-picture-picasso-draws-with-light) HoloArt is now a new art media. It can be used as a way to enhance flow, provide full immersion. <small>/[Judith Amores](https://fluid.media.mit.edu/people/judith-amores)</small>
 
-> Public art is always dependent on authorization by authority. It doesn't have to be subversive, but I like subversive. <small>/[George Fifield](https://web.archive.org/web/20160531181333/http://bostoncyberarts.org/festival/george-fifield), [bostoncyberarts.org](http://bostoncyberarts.org)</small>
+> Public art is always dependent on authorization by authority. It doesn't have to be subversive, but I like subversive. <small>/[George Fifield](https://web.archive.org/web/20160531181333/https://bostoncyberarts.org/festival/george-fifield), [bostoncyberarts.org](https://bostoncyberarts.org)</small>
 
-> AR can help us shape how we look and how we look at each other. <small>/[Jacob Loweenstein, VR@MIT](http://vratmit.com)</small>
+> AR can help us shape how we look and how we look at each other. <small>/[Jacob Loweenstein, VR@MIT](https://vratmit.com)</small>
 
-> Use the human more in AR. In a conspiracy story you can tell someone that "the man with a cell phone is spying on you" - there's always a man with a cell phone in a crowd. Slightly disorienting in a positive way. I see the world as pretty great, still. <small>/[Peter Wittig, Motive.io](http://www.motive.io)</small>
+> Use the human more in AR. In a conspiracy story you can tell someone that "the man with a cell phone is spying on you" - there's always a man with a cell phone in a crowd. Slightly disorienting in a positive way. I see the world as pretty great, still. <small>/[Peter Wittig, Motive.io](https://www.motive.io)</small>
 
-> The reality is that we need companies to fund our experiments. It's important for creatives to grapple with this and to define what it looks like when moving forward. <small>/[Allison Woods](http://reify.nyc)</small>
+> The reality is that we need companies to fund our experiments. It's important for creatives to grapple with this and to define what it looks like when moving forward. <small>/[Allison Woods](https://reify.nyc)</small>
 
 ### Virtual Storytelling
 

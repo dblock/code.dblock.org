@@ -116,7 +116,7 @@ end
 
 #### XApp
 
-Our simpler scenario includes registered applications making calls without users being logged in. [@sarcilav](http://github.com/sarcilav) labeled this _XApp_.
+Our simpler scenario includes registered applications making calls without users being logged in. [@sarcilav](https://github.com/sarcilav) labeled this _XApp_.
 
 To get an XApp token one would call the _xapp_token_ API method with the client _ID_ and _secret_. The authenticated method will now look for an _xapp_token_ parameter.
 

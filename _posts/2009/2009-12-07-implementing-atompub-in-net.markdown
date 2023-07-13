@@ -7,16 +7,16 @@ tags: [syndication, codeproject, dotnet, asp.net, blog]
 comments: true
 dblog_post_id: 70
 ---
-I’ve been wanting to implement a POST protocol for my blog for a while. The urge got really bad since I’ve started using [LiveWriter](https://support.microsoft.com/en-us/windows/windows-essentials-2707b879-5004-4349-c4a4-e5900945f2a9) at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/). It’s such a nice piece of software compared to blogging with the online HTML editor with it’s, often too smart, HTML cleanup, struggling with embedded pictures and loosing drafts. I even considered abandoning my own creation and using [WordPress](https://wordpress.org/) or some other blogging engine. Then the "not invented here" syndrome took over. I spent a few hours implementing a large part of AtomPUB, [RFC-5023](http://tools.ietf.org/html/rfc5023).
+I’ve been wanting to implement a POST protocol for my blog for a while. The urge got really bad since I’ve started using [LiveWriter](https://support.microsoft.com/en-us/windows/windows-essentials-2707b879-5004-4349-c4a4-e5900945f2a9) at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/). It’s such a nice piece of software compared to blogging with the online HTML editor with it’s, often too smart, HTML cleanup, struggling with embedded pictures and loosing drafts. I even considered abandoning my own creation and using [WordPress](https://wordpress.org/) or some other blogging engine. Then the "not invented here" syndrome took over. I spent a few hours implementing a large part of AtomPUB, [RFC-5023](https://tools.ietf.org/html/rfc5023).
 
-The [Atom Publishing Protocol](http://bitworking.org/projects/atom/rfc5023.html) is an application-level protocol for publishing and editing web resources. The protocol is based on HTTP transfer of Atom-formatted representations. The Atom format is documented in the Atom Syndication Format, [RFC-4287](http://tools.ietf.org/html/rfc4287).
+The [Atom Publishing Protocol](https://bitworking.org/projects/atom/rfc5023.html) is an application-level protocol for publishing and editing web resources. The protocol is based on HTTP transfer of Atom-formatted representations. The Atom format is documented in the Atom Syndication Format, [RFC-4287](https://tools.ietf.org/html/rfc4287).
 
 ### Generating Atom Feeds
 
 My current blog implementation supports ATOM. This is done by using an asp:Repeater to which I bind a data set.
 
 {% highlight xml %}
-<feed xml:lang="en-us" version="0.3" xmlns="http://purl.org/atom/ns#">
+<feed xml:lang="en-us" version="0.3" xmlns="https://purl.org/atom/ns#">
   <title>Title</title>
   <link rel="alternate" type="application/xhtml+xml" href="AtomPost.aspx" />
   <asp:Repeater id="repeater" runat="server">
@@ -31,7 +31,7 @@ My current blog implementation supports ATOM. This is done by using an asp:Repea
           <name>author</name>
         </author>
         <content type="text/html" mode="xhtml">
-          <body xmlns="http://www.w3.org/1999/xhtml">
+          <body xmlns="https://www.w3.org/1999/xhtml">
             <![CDATA[
               <%# Eval("Body") %>
             ]]>
@@ -45,7 +45,7 @@ My current blog implementation supports ATOM. This is done by using an asp:Repea
 </feed>
 {% endhighlight %}
 
-This works fine for generating feeds, but in order to consume ATOM posts I will need an object model for feed items. That’s where the "not invented here" syndrome has to stop and I am going to let [Argotic](https://web.archive.org/web/20091227163034/http://argotic.codeplex.com//) do the job. First, by rewriting the above ASP.NET code in C#.
+This works fine for generating feeds, but in order to consume ATOM posts I will need an object model for feed items. That’s where the "not invented here" syndrome has to stop and I am going to let [Argotic](https://web.archive.org/web/20091227163034/https://argotic.codeplex.com//) do the job. First, by rewriting the above ASP.NET code in C#.
 
 {% highlight c# %}
 Response.ContentType = "application/atom+xml;charset=\"utf-8\"";
@@ -92,10 +92,10 @@ A client that creates posts must be able to find out where to POST to. This is d
 The service document describes a workspace with collections. We have two: one for posts and another for images. The one for posts includes post categories.
 
 {% highlight xml %}
-<service xmlns="http://www.w3.org/2007/app" xmlns:atom="http://www.w3.org/2005/Atom">
+<service xmlns="https://www.w3.org/2007/app" xmlns:atom="https://www.w3.org/2005/Atom">
   <workspace>
     <atom:title>DBlog.NET</atom:title>
-    <collection href="http://localhost/dblog/AtomPost.aspx">
+    <collection href="https://localhost/dblog/AtomPost.aspx">
       <atom:title>Posts</atom:title>
       <accept>application/atom+xml;type=entry</accept>
       <categories>
@@ -103,7 +103,7 @@ The service document describes a workspace with collections. We have two: one fo
         <atom:category term="category2" />
       </categories>
     </collection>
-    <collection href="http://localhost/dblog/AtomImage.aspx">
+    <collection href="https://localhost/dblog/AtomImage.aspx">
       <atom:title>Images</atom:title>
       <accept>image/jpeg</accept>
       <accept>image/gif</accept>

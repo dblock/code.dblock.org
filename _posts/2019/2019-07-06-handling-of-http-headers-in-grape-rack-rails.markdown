@@ -50,7 +50,7 @@ The default headers in a Rack test are `Cookie` and `Host`.
 Curl sends more headers by default.
 
 {% highlight bash %}
-$ curl http://localhost:9292/api/headers
+$ curl https://localhost:9292/api/headers
 
 {"Host":"localhost:9292","User-Agent":"curl/7.54.0","Accept":"*/*","Version":"HTTP/1.1"}
 {% endhighlight %}
@@ -60,7 +60,7 @@ $ curl http://localhost:9292/api/headers
 Headers in Grape are always [converted](https://github.com/ruby-grape/grape/commit/f6f585ea6cc720e779a37f756b9e9cda4786dad2) to pascal-case.
 
 {% highlight bash %}
-$ curl -H eLiTe:42 http://localhost:9292/api/headers/Elite
+$ curl -H eLiTe:42 https://localhost:9292/api/headers/Elite
 
 {"Elite":"42"}
 {% endhighlight %}
@@ -68,14 +68,14 @@ $ curl -H eLiTe:42 http://localhost:9292/api/headers/Elite
 This means that a pascal-case-looking header `ReticulatedSpline` is converted to `Reticulatedspline`.
 
 {% highlight bash %}
-curl -H ReticulatedSpline:42 http://localhost:9292/api/headers/Reticulatedspline
+curl -H ReticulatedSpline:42 https://localhost:9292/api/headers/Reticulatedspline
 {"Reticulatedspline":"42"}
 {% endhighlight %}
 
 And a lowercase `reticulated-spline` is converted to `Reticulated-Spline`, similarly to `User-Agent`.
 
 {% highlight bash %}
-curl -H reticulated-spline:42 http://localhost:9292/api/headers/Reticulated-Spline 
+curl -H reticulated-spline:42 https://localhost:9292/api/headers/Reticulated-Spline 
 {"Reticulated-Spline":"42"}
 {% endhighlight %}
 

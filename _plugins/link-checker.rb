@@ -55,7 +55,7 @@ module Jekyll::LinkChecker
 
   ##
   # Pattern of local paths to ignore
-  @ignored_paths = %r{(^/javadocs|^mailto:)}.freeze
+  @ignored_paths = %r{(^/tags|^mailto:)}.freeze
 
   ##
   # Holds the list of failures
@@ -88,7 +88,7 @@ module Jekyll::LinkChecker
 
       @external_link_checker = LinkChecker::Typhoeus::Hydra::Checker.new(
         logger: Jekyll.logger,
-        hydra: { max_concurrency: 2 },
+        hydra: { max_concurrency: 5 },
         retries: 1,
         user_agent: 'dblock.org Link Checker/1.0'
       )

@@ -39,7 +39,7 @@ Always look for what's missing. No tests in this project? Add some. No documenta
 
 ### How to Behave
 
-As a new employee you have no idea what the culture or environment is, but there're things that are universally applicable. Be _modest and respectful_, be _concise, brief and clear_ in your communication and _make accurate statements_. Check out [Unwritten Laws of Engineering](http://www.amazon.com/Unwritten-Laws-Engineering-Revised-Updated/dp/0791801624), a good read that is still relevant today.
+As a new employee you have no idea what the culture or environment is, but there're things that are universally applicable. Be _modest and respectful_, be _concise, brief and clear_ in your communication and _make accurate statements_. Check out [Unwritten Laws of Engineering](https://www.amazon.com/Unwritten-Laws-Engineering-Revised-Updated/dp/0791801624), a good read that is still relevant today.
 
 Don't forget that you work for someone. You will be praised for your accomplishments, but your team lead will take the responsibility of your failures. Work with them and pay attention to what they are saying or want you to do more than from others.
 

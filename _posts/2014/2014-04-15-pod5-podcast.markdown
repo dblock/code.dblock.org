@@ -13,5 +13,5 @@ Orta and I are recording episode 3 of Pod5, a new bite-sized podcast about new O
 
 ![]({{ site.url }}/images/posts/2014/2014-04-15-pod5-podcast/image_thumb_1.jpg)
 
-Subscribe on iTunes, check out http://pod5.io and follow @pod5podcast.
+Subscribe on iTunes, check out https://pod5.io and follow @pod5podcast.
 

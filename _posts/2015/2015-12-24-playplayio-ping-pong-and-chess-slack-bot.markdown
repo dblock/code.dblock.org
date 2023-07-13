@@ -5,13 +5,13 @@ date: 2015-12-24
 tags: [slack, bot, ping pong, chess, pool, tic-tac-toe]
 comments: true
 ---
-I've launched [playplay.io](http://playplay.io), based on my open-source [slack-gamebot](https://github.com/dblock/slack-gamebot). It can currently track your ping pong, pool, chess and tic-tac-toe games.
+I've launched [playplay.io](https://www.playplay.io), based on my open-source [slack-gamebot](https://github.com/dblock/slack-gamebot). It can currently track your ping pong, pool, chess and tic-tac-toe games.
 
-[![playplay.io]({{ site.url }}/images/posts/2015/2015-12-24-playplayio-ping-pong-and-chess-slack-bot/playplayio.png)](http://playplay.io)
+[![playplay.io]({{ site.url }}/images/posts/2015/2015-12-24-playplayio-ping-pong-and-chess-slack-bot/playplayio.png)](https://www.playplay.io)
 
 * Give it some love [on ProductHunt](https://www.producthunt.com/tech/playplay-io).
 * Follow [@playplayio](https://twitter.com/playplayio) on Twitter for updates.
-* Sign up your team for free [on playplay.io](http://playplay.io).
+* Sign up your team for free [on playplay.io](https://www.playplay.io).
 
 ### Implementation Details
 

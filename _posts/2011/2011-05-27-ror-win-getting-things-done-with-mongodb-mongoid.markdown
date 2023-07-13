@@ -9,7 +9,7 @@ dblog_post_id: 210
 ---
 ![mongoid-logo-small]({{ site.url }}/images/posts/2011/2011-05-27-ror-win-getting-things-done-with-mongodb-mongoid/mongoid-logo-small_2.jpg)
 
-We high five each other and claim "Rails Win!" when someone finds a gem that solves a really big problem in ~~a few lines~~ one line of code. In this post I’ll list a few interesting addons to the RoR [Mongoid ORM](http://mongoid.org/) that are slowly adding up to a feature-rich ecosystem of plug-and-play modules that work with [Mongoid](http://mongoid.org/). This list should convince you that you should at least [try MongoDB](http://www.mongodb.org/). You can get a ton of functionality "for free".
+We high five each other and claim "Rails Win!" when someone finds a gem that solves a really big problem in ~~a few lines~~ one line of code. In this post I’ll list a few interesting addons to the RoR [Mongoid ORM](https://www.mongodb.com/docs/mongoid/current/) that are slowly adding up to a feature-rich ecosystem of plug-and-play modules that work with [Mongoid](https://www.mongodb.com/docs/mongoid/current/). This list should convince you that you should at least [try MongoDB](https://www.mongodb.org/). You can get a ton of functionality "for free".
 
 - [Mongoid::Timestamps](https://web.archive.org/web/20111028104558/http://mongoid.org/docs/extras.html): adds a timestamp to a model. IMHO all useful models should have a _created_at_ and a _modified_at_ field – it’s just a matter of time till someone asks you when your widget was modified. We use this.
 - [Mongoid::Versioning](https://web.archive.org/web/20111028104558/http://mongoid.org/docs/extras.html): stores multiple versions of the document. We’ve tried to use this, but ended up switching to Mongoid::History (below).

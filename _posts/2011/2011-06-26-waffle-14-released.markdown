@@ -9,7 +9,7 @@ dblog_post_id: 222
 ---
 ![waffle]({{ site.url }}/images/posts/2011/2011-06-26-waffle-14-released/waffle_4.jpg)
 
-WAFFLE exposes native Windows authentication facilities to C# and Java clients using [JNA](http://github.com/twall/jna). Version 1.4 has shipped Tuesday, June 21, 2010, exactly 11 months after the very popular 1.3 release. WAFFLE has seen massive production adoption over the past year. This version notably introduces support for impersonation, bringing Waffle almost at par with IIS native Windows authentication.
+WAFFLE exposes native Windows authentication facilities to C# and Java clients using [JNA](https://github.com/twall/jna). Version 1.4 has shipped Tuesday, June 21, 2010, exactly 11 months after the very popular 1.3 release. WAFFLE has seen massive production adoption over the past year. This version notably introduces support for impersonation, bringing Waffle almost at par with IIS native Windows authentication.
 
 Build is 1.4.8182.0.
 

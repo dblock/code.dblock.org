@@ -38,13 +38,13 @@ You now have an energized engineer that feels ownership and has a little taste o
 
 Instead of flipping a coin we can use simple logic that has nothing to do with technology per-se. For example, you can choose something that worked for you before. It’s a safe bet. You can pick a different framework from one that worked for you because you want to try something new, making things a bit exciting. Finally, you can choose technology because someone else uses it for a tangent problem space.
 
-We knew we needed a NoSQL database. So we picked [MongoDB](http://mongodb.org) because [Foursquare](http://foursquare.com) uses. It also happened that [10gen](http://10gen.com), the company behind MongoDB was two blocs away and we had a chance to meet with some really smart people that work there. But frankly, at the moment of that decision we had no technical reason for picking MongoDB out of the dozens of NoSQL databases on the market. In fact, many could have easily demonstrated better reliability and scalability. Strangely, we haven’t regretted this choice - it just felt right and continues to feel so today.
+We knew we needed a NoSQL database. So we picked [MongoDB](https://mongodb.org) because [Foursquare](https://foursquare.com) uses. It also happened that [10gen](https://10gen.com), the company behind MongoDB was two blocs away and we had a chance to meet with some really smart people that work there. But frankly, at the moment of that decision we had no technical reason for picking MongoDB out of the dozens of NoSQL databases on the market. In fact, many could have easily demonstrated better reliability and scalability. Strangely, we haven’t regretted this choice - it just felt right and continues to feel so today.
 
 #### Iterative and Pragmatic
 
 ![]({{ site.url }}/images/posts/2011/2011-07-06-non-traditional-methods-of-choosing-technology-for-a-software-project/image_11.jpg)
 
-My most frequent approach to choosing technology is a pragmatic one. I encourage my team to try anything, iterate on it and decide to keep or toss something later, once we know better. For example, Gib just tried Sugarskull on a 30-second pitch by [hij1nx](http://twitter.com/hij1nx). He spent a couple of days replacing Backbone.js routes with it and was jazzed to do it. Sugarskull just came out of the oven, still steaming hot! Right now it feels amazing, but none of us have any idea whether this was an excellent choice or a decision that will run the project into the ground.
+My most frequent approach to choosing technology is a pragmatic one. I encourage my team to try anything, iterate on it and decide to keep or toss something later, once we know better. For example, Gib just tried Sugarskull on a 30-second pitch by [hij1nx](https://twitter.com/hij1nx). He spent a couple of days replacing Backbone.js routes with it and was jazzed to do it. Sugarskull just came out of the oven, still steaming hot! Right now it feels amazing, but none of us have any idea whether this was an excellent choice or a decision that will run the project into the ground.
 
 The pragmatic approach means making choices based on these criteria.
 

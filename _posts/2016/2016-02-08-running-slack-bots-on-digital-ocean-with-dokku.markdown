@@ -5,7 +5,7 @@ date: 2016-02-08
 tags: [slack, api, digitalocean]
 comments: true
 ---
-Slack bot experimentation, especially for not-too-serious purposes, has become a little too expensive on Heroku. There's no free tier for maintaining apps running 24/7, so the dollars add up quickly at 7x12=84$ a year per application. I am currently running [playplay.io](http://playplay.io), [shell](http://shell.playplay.io), [api-explorer](http://api-explorer.playplay.io) and [market](http://market.playplay.io). Add another $18x12 = $216 for a non-free-tier MongoDB for one of the apps and it's no longer a coffee-money bill.
+Slack bot experimentation, especially for not-too-serious purposes, has become a little too expensive on Heroku. There's no free tier for maintaining apps running 24/7, so the dollars add up quickly at 7x12=84$ a year per application. I am currently running [playplay.io](https://www.playplay.io), [shell](https://shell.playplay.io), [api-explorer](https://api-explorer.playplay.io) and [market](https://market.playplay.io). Add another $18x12 = $216 for a non-free-tier MongoDB for one of the apps and it's no longer a coffee-money bill.
 
 I've always liked and thought highly of DigitalOcean, but loved the convenience of Heroku and enjoyed having all my apps in one place with a consistent git workflow. Yesterday one of DigitalOcean developers kindly offered me some droplet credits to run one of the bots their team uses. I decided that _free_ beats _convenient_ and that it's time to do some work, save money and learn a few things.
 

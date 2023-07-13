@@ -7,7 +7,7 @@ tags: [open source, people]
 comments: true
 dblog_post_id: 182
 ---
-This morning OpenSource.com published my new article: [How to become and amazing contributor to an open-source project](http://opensource.com/life/11/3/how-become-amazing-contributor-open-source-project).
+This morning OpenSource.com published my new article: [How to become and amazing contributor to an open-source project](https://opensource.com/life/11/3/how-become-amazing-contributor-open-source-project).
 
 ![EDU_participation]({{ site.url }}/images/posts/2011/2011-03-09-how-to-become-an-amazing-contributor-to-an-open-source-project/edu_participation_3.jpg)
 

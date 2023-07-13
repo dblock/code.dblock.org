@@ -9,13 +9,13 @@ dblog_post_id: 360
 ---
 ![]({{ site.url }}/images/posts/2012/2012-11-27-taxcloud-soap-service-integration-in-ruby/image_3.jpg)
 
-I’ve been working on the the [tax_cloud](https://github.com/drewtempelmeyer/tax_cloud) gem for the past couple of days and am happy to announce version 0.2.0, released today. The gem was started by [@tempelmeyer](https://twitter.com/tempelmeyer/) and is now a mature wrapper for the [TaxCloud US Sales Tax calculation service](https://taxcloud.com/).
+I’ve been working on the the [tax_cloud](https://github.com/txcrb/tax_cloud) gem for the past couple of days and am happy to announce version 0.2.0, released today. The gem was started by [@tempelmeyer](https://twitter.com/tempelmeyer/) and is now a mature wrapper for the [TaxCloud US Sales Tax calculation service](https://taxcloud.com/).
 
 This library is also a nice example of a generic SOAP client wrapper in Ruby. I wanted to point out several successful patterns for this integration, which I cannot take credit for, for the most part.
 
 #### Error Handling
 
-I borrowed error handling from [@modetojoy](https://twitter.com/modetojoy)’s Mongoid. Today someone said: "I had a bug in a spec and Durran told me how to fix it in an error message." True story. To accomplish this we define a base error that holds the problem, summary and resolution. In tax_cloud’s case this is  [TaxCloud::Errors::TaxCloudError](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud/errors/tax_cloud_error.rb) paired with [config/locales/en.yml](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/config/locales/en.yml), a locale file that does the error formatting. There’re two things to do in order for the error code to find the message: add the locale file to the load path, in [tax_cloud.rb](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud.rb), and do a bit of formatting with I18n.
+I borrowed error handling from [@modetojoy](https://twitter.com/modetojoy)’s Mongoid. Today someone said: "I had a bug in a spec and Durran told me how to fix it in an error message." True story. To accomplish this we define a base error that holds the problem, summary and resolution. In tax_cloud’s case this is  [TaxCloud::Errors::TaxCloudError](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud/errors/tax_cloud_error.rb) paired with [config/locales/en.yml](https://github.com/txcrb/tax_cloud/blob/master/lib/config/locales/en.yml), a locale file that does the error formatting. There’re two things to do in order for the error code to find the message: add the locale file to the load path, in [tax_cloud.rb](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud.rb), and do a bit of formatting with I18n.
 
 {% highlight ruby %}
 I18n.load_path << File.join(File.dirname(__FILE__), "config", "locales", "en.yml")
@@ -33,7 +33,7 @@ Problem:
 Summary:
   TaxCloud requires an API login ID and key.
 Resolution:
-  Create a TaxCloud merchant account at http://www.taxcloud.net.
+  Create a TaxCloud merchant account at https://www.taxcloud.net.
   Add a website to your TaxCloud account.
   This will generate an API ID and API Key that you will need to use the service.
   Configure the TaxCloud gem. For example, add the following to `config/initializers/tax_cloud.rb`.
@@ -94,11 +94,11 @@ def safe(&block)
 end
 {% endhighlight %}
 
-The complete code can be found in [client.rb](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud/client.rb). The error itself is parsed in [soap_error.rb](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud/errors/soap_error.rb) – SOAP faults come in standard format.
+The complete code can be found in [client.rb](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud/client.rb). The error itself is parsed in [soap_error.rb](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud/errors/soap_error.rb) – SOAP faults come in standard format.
 
 #### Parsing Responses
 
-We will now raise a good-looking exception on SOAP failures, but we still must protect ourselves from unexpected data or successful SOAP requests that return API errors. That possibility is the thing I detest most about SOAP (vs. REST) – it makes programming a client unnecessarily complicated. The TaxCloud service returns a SOAP body with different values in _key_response/key_result/response_type_, where the key will be the name of the method invoked (eg. _ping_response_). A bit of meta-programming can make a [base class](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud/responses/base.rb), which can parse a response and match an XML path, raising errors where appropriate. It can be subclassed into a [generic response type](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud/responses/generic.rb) and, finally, into specific declarative implementations such as [ping](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud/responses/ping.rb) or [authorized](https://github.com/drewtempelmeyer/tax_cloud/blob/master/lib/tax_cloud/responses/authorized.rb).
+We will now raise a good-looking exception on SOAP failures, but we still must protect ourselves from unexpected data or successful SOAP requests that return API errors. That possibility is the thing I detest most about SOAP (vs. REST) – it makes programming a client unnecessarily complicated. The TaxCloud service returns a SOAP body with different values in _key_response/key_result/response_type_, where the key will be the name of the method invoked (eg. _ping_response_). A bit of meta-programming can make a [base class](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud/responses/base.rb), which can parse a response and match an XML path, raising errors where appropriate. It can be subclassed into a [generic response type](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud/responses/generic.rb) and, finally, into specific declarative implementations such as [ping](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud/responses/ping.rb) or [authorized](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud/responses/authorized.rb).
 
 Most services have a common response pattern, generalizing it yields a very productive framework where adding support for new calls requires very little to no code. And you must never, ever expose to the user that you’re making SOAP requests and return any kind of raw SOAP object. Return domain-specific classes with attributes on success and raise exceptions otherwise.
 
@@ -142,8 +142,8 @@ def test_ping
 end
 {% endhighlight %}
 
-You can see the rest of the tests [here](https://github.com/drewtempelmeyer/tax_cloud/tree/master/test).
+You can see the rest of the tests [here](https://github.com/txcrb/tax_cloud/tree/master/test).
 
 #### Finally
 
-Let me know if you use some of these ideas, post your comments and suggestions and please help improve the tax_cloud gem [on Github](https://github.com/drewtempelmeyer/tax_cloud).
+Let me know if you use some of these ideas, post your comments and suggestions and please help improve the tax_cloud gem [on Github](https://github.com/txcrb/tax_cloud).

@@ -66,30 +66,30 @@ Try it on my demo project in [https://github.com/dblock/grape-on-rack-v1-inside-
 By default we get the root of v2 and the only_in_v1 method implemented on v1.
 
 ```
-curl http://localhost:9292/
+curl https://localhost:9292/
 {"version":"v2"}
 
-curl http://localhost:9292/only_in_v1
+curl https://localhost:9292/only_in_v1
 {"only_in_v1":"true"}
 ```
 
 With version two, we get the same thing.
 
 ```
-curl http://localhost:9292 -H "Accept:application/vnd.acme-v2+json"
+curl https://localhost:9292 -H "Accept:application/vnd.acme-v2+json"
 {"version":"v2"}
 
-curl http://localhost:9292/only_in_v1 -H "Accept:application/vnd.acme-v2+json"
+curl https://localhost:9292/only_in_v1 -H "Accept:application/vnd.acme-v2+json"
 {"only_in_v1":"true"}
 ```
 
 With version 1 we get the old behavior.
 
 ```
-curl http://localhost:9292 -H "Accept:application/vnd.acme-v1+json"
+curl https://localhost:9292 -H "Accept:application/vnd.acme-v1+json"
 {"version":"v1"}
 
-curl http://localhost:9292/only_in_v1 -H "Accept:application/vnd.acme-v1+json"
+curl https://localhost:9292/only_in_v1 -H "Accept:application/vnd.acme-v1+json"
 {"only_in_v1":"true"}
 ```
 

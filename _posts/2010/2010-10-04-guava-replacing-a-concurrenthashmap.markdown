@@ -11,7 +11,7 @@ I found half an hour this morning to look at [Waffle](https://github.com/dblock/
 
 Negotiate is a multi-step protocol. After an initial request the Waffle authentication provider will add an entry to a hashtable mapping the new connection IDs to a newly obtained security context. At a subsequent step, the security context is retrieved from the hastable and used to continue the authentication protocol. If the connection is abandoned half way through this process, a handle will remain in the hashtable forever.
 
-One of the solutions is to swap the hash structure for a cache that expires entries. I found [Guava (aka Google-collections)](http://code.google.com/p/guava-libraries/). Here’s my new concurrent hashmap with expiration.
+One of the solutions is to swap the hash structure for a cache that expires entries. I found [Guava (aka Google-collections)](https://code.google.com/p/guava-libraries/). Here’s my new concurrent hashmap with expiration.
 
 {% highlight java %}
 ConcurrentMap<String, CtxtHandle> _continueContexts = new MapMaker()

@@ -60,7 +60,7 @@ You may declare the group as a role.
 </security-role>
 {% endhighlight %}
 
-You can now navigate to http://localhost:8080/ and perform single sign-on. In the logs you’ll see something like this.
+You can now navigate to https://localhost:8080/ and perform single sign-on. In the logs you’ll see something like this.
 
 ```
 Nov 30, 2010 10:17:02 AM waffle.apache.NegotiateAuthenticator authenticate

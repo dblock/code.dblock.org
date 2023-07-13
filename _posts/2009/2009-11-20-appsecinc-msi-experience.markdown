@@ -16,7 +16,7 @@ Then the customer would try to upgrade ...
 I saw large teams deal with these problems before at Microsoft, quite successfully, so I had my team turn around 180 degrees and set course on changing deployment technology to something enterprise-ready and robust.
 
 - We made every single developer care about installation and everyone learned through brown bags how to write an installer or what Windows installer is about and why it's harder than it seems.
-- We changed technology to [Wix](http://wixtoolset.org/) so that we can share the work load across the organization and so that every developer adding a file makes sure to take care of the installer at the same time. We made installer code just like C++, C# or Java code.
+- We changed technology to [Wix](https://wixtoolset.org/) so that we can share the work load across the organization and so that every developer adding a file makes sure to take care of the installer at the same time. We made installer code just like C++, C# or Java code.
 - We re-thought individual installable components from scratch and how they assemble into a working product. We wrote brand new merge modules and MSI installers.
 - We developed C++ custom actions (DTF didn't exist in the public then to write managed ones) and Wix extensions that not available in wix and that are now open-sourced as [AppSecInc. MSI Extensions](https://github.com/dblock/msiext). We evolved a unit-test system from an MSI shim to using the MSI engine for every single CA to make sure they are robust.
 - We re-thought suite deployment and settled on [dotNetInstaller](https://github.com/dblock/dotnetinstaller) bootstrapper to chain the whole thing together, contributing some features as well.

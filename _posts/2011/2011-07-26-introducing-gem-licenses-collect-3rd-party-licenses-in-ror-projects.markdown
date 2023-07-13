@@ -41,7 +41,7 @@ Finally, if you are a gem author, please take the time  to specify which license
 {% highlight ruby %}
 Jeweler::Tasks.new do |gem|
   gem.name = "gem-licenses"
-  gem.homepage = "http://github.com/dblock/gem-licenses"
+  gem.homepage = "https://github.com/dblock/gem-licenses"
   gem.license = "MIT"
   gem.summary = "List all gem licenses."
   gem.description = "Attempts to figure out what licenses various gems use."

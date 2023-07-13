@@ -11,7 +11,7 @@ I was very happy upgrading to Windows 7. Virtually everything worked. All kinds 
 
 On Windows 7 the behavior of `MSIOpenPackage` has changed. We use it to run unit tests by creating a database (`MSICreateDatabase`) and calling `MSIOpenPackage` to get a working handle. On Windows 7 code that worked earlier always returns _0x80070645: This action is only valid for products that are currently installed_. This is one obscure error code! Why do I need an installed product to open an MSI package?
 
-Microsoft.public.platformsdk.msi was helpful [[thread](http://groups.google.com/group/microsoft.public.platformsdk.msi/browse_thread/thread/5c3ffc48f1ecda30#)]. For `MsiOpenPackage` to succeed you now have to have a `Property` table with a populated `ProductCode` value in the MSI file itself. MsiExt shim code now looks like this. The two `Execute` statements are new. This incidentally demonstrates what fields you need in the MSI summary to get a valid MSI.
+Microsoft.public.platformsdk.msi was helpful [[thread](https://groups.google.com/group/microsoft.public.platformsdk.msi/browse_thread/thread/5c3ffc48f1ecda30#)]. For `MsiOpenPackage` to succeed you now have to have a `Property` table with a populated `ProductCode` value in the MSI file itself. MsiExt shim code now looks like this. The two `Execute` statements are new. This incidentally demonstrates what fields you need in the MSI summary to get a valid MSI.
 
 {% highlight autoit %}
 _database.Create(_filename);
@@ -42,4 +42,4 @@ Open(_filename);
 
 Hope this saves you hours of fruitless debugging.
 
-Maybe [Raymond](http://blogs.msdn.com/oldnewthing/) can answer why this change in behavior in Windows 7?
+Maybe [Raymond](https://blogs.msdn.com/oldnewthing/) can answer why this change in behavior in Windows 7?

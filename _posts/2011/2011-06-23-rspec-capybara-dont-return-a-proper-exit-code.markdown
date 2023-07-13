@@ -19,7 +19,7 @@ fail "rspec spec failed with exit code #{$?.exitstatus}" if (rc.nil? || ! rc || 
 
 The culprit turned out to be a bug in Ruby ([#4400](https://bugs.ruby-lang.org/issues/4400), present in 1.9.2-p180) where nested _at_exit_ calls are not unwound in reverse order of registration. There’s a long thread ( [capybara #178](https://github.com/jnicklas/capybara/issues/178)) that discusses it. What happens is that the Capybara driver registers an _at_exit_ block to terminate the browser, which executes after the RSpec _at_exit_ block and causes the calling process to loose a previously set exit code. There’s a neat workaround that was committed to minitest ([diff](https://github.com/seattlerb/minitest/commit/979406d726fa1866aba6dc4e3ed7692a4758c0ec)) and applying the same workaround to _rspec-core_ ([pull #410](https://github.com/rspec/rspec-core/pull/410), [diff](https://github.com/dblock/rspec-core/commit/1cf9265989e976888baf7ea838ba70e50b5f4707), or just try [my fork](https://github.com/dblock/rspec-core)) resolves this issue. I hope rspec-core takes my pull request, it looks pretty innocent.
 
-There’s also a fun part to the story: [@febuiles](http://twitter.com/febuiles) who I had the pleasure to work with for a bit, tweeted this:
+There’s also a fun part to the story: [@febuiles](https://twitter.com/febuiles) who I had the pleasure to work with for a bit, tweeted this:
 
 ![]({{ site.url }}/images/posts/2011/2011-06-23-rspec-capybara-dont-return-a-proper-exit-code/image_5.jpg)
 

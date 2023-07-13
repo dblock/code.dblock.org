@@ -9,7 +9,7 @@ If you've never listened to the Artsy podcast, I highly recommend it. Available 
 
 First, _enable Artsy_, then _ask artsy to play the latest podcast_ or _ask Artsy for a summary of the latest podcast_. The code uses the audio player functionality introduced in [alexa-app](https://github.com/alexa-js/alexa-app) 2.4.0 and is [artsy/elderfield#56](https://github.com/artsy/elderfield/pull/56).
 
-The Artsy editorial team uploads the podcast to SoundCloud, which exposes an [RSS feed](http://feeds.soundcloud.com/users/soundcloud:users:211089382/sounds.rss) that is used to publish to iTunes. YMMV wrt how you generate an RSS feed - when I was new to podcasting with Pod5, I had settled on a [Jekyll-based system](https://github.com/pod5/pod5.github.io).
+The Artsy editorial team uploads the podcast to SoundCloud, which exposes an [RSS feed](https://feeds.soundcloud.com/users/soundcloud:users:211089382/sounds.rss) that is used to publish to iTunes. YMMV wrt how you generate an RSS feed - when I was new to podcasting with Pod5, I had settled on a [Jekyll-based system](https://github.com/pod5/pod5.github.io).
 
 The intent retrieves the podcast, extracts the MP3 URL and calls `audioPlayerPlayStream`.
 
@@ -24,7 +24,7 @@ app.intent('PodcastIntent', {},
     var podcastStream = ...;
     return podcastStream.then(function(audioMpegEnclosure) {
       // SSL required by Amazon, available on SoundCloud
-      var streamUrl = audioMpegEnclosure.url.replace('http://', 'https://');
+      var streamUrl = audioMpegEnclosure.url.replace('https://', 'https://');
       var stream = {
         url: streamUrl,
         token: streamUrl,

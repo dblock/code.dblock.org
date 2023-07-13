@@ -9,7 +9,7 @@ dblog_post_id: 263
 ---
 You love markdown? We do too.
 
-I’m going to show you how to enable dynamic authoring of mail templates in your Rails app in [Markdown](http://daringfireball.net/projects/markdown/). This includes [Devise](https://github.com/plataformatec/devise) mailers. You can already customize templates with files in _app/views_, but we’ll take an extra step and expose an editable model in the database and allow our application administrators to author and edit templates in Markdown.
+I’m going to show you how to enable dynamic authoring of mail templates in your Rails app in [Markdown](https://daringfireball.net/projects/markdown/). This includes [Devise](https://github.com/plataformatec/devise) mailers. You can already customize templates with files in _app/views_, but we’ll take an extra step and expose an editable model in the database and allow our application administrators to author and edit templates in Markdown.
 
 #### Template Model
 
@@ -111,7 +111,7 @@ Hello <%=@resource.email%>!
 Someone has requested a link to change your password, and you can do this through the link below.
 
 ```
-[Change my password](http://example.com/users/password/edit?reset_password_token=<%=@resource.reset_password_token%>)
+[Change my password](https://example.com/users/password/edit?reset_password_token=<%=@resource.reset_password_token%>)
 
 If you didn't request a password reset, please ignore this email.
 Your password won't change until you access the link above and create a new one.

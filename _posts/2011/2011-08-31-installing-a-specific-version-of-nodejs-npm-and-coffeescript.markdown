@@ -26,12 +26,12 @@ make install
 #### Latest NPM
 
 ```
-curl http://npmjs.org/install.sh | sh
+curl https://npmjs.org/install.sh | sh
 ```
 
 #### CoffeeScript 1.0.1
 
 ```
-npm config set registry http://registry.npmjs.org
+npm config set registry https://registry.npmjs.org
 npm install -g coffee-script@1.0.1
 ```

@@ -7,7 +7,7 @@ tags: [teams, teaching, technology, artsy, open source, people, agile]
 comments: true
 dblog_post_id: 340
 ---
-I had a short, but lively debate over code reviews with [@skamille](https://twitter.com/skamille) at New York’s QCon 2012. That same day she wrote an [interesting blog post on code reviews](http://whilefalse.blogspot.com/2012/06/code-reviews-code-stories.html). She argues that "code reviews are just as likely to used to bully, score points, or waste time on pedantic style notes as they are to produce great software". Certainly, not the kind of team I’d ever want to work with!
+I had a short, but lively debate over code reviews with [@skamille](https://twitter.com/skamille) at New York’s QCon 2012. That same day she wrote an [interesting blog post on code reviews](https://whilefalse.blogspot.com/2012/06/code-reviews-code-stories.html). She argues that "code reviews are just as likely to used to bully, score points, or waste time on pedantic style notes as they are to produce great software". Certainly, not the kind of team I’d ever want to work with!
 
 I feel very strongly about the positive effect of code reviews. I would get rid of as much "process" as possible, but not code reviews.
 

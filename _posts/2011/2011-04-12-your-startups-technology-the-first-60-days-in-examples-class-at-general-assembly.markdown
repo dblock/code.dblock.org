@@ -7,7 +7,7 @@ tags: [artsy, architecture, agile]
 comments: true
 dblog_post_id: 197
 ---
-I’m teaching [a class at General Assembly on April 20th](http://yourtechnology.eventbrite.com).
+I’m teaching [a class at General Assembly on April 20th](https://yourtechnology.eventbrite.com).
 
 ![]({{ site.url }}/images/posts/2011/2011-04-12-your-startups-technology-the-first-60-days-in-examples-class-at-general-assembly/image_3.jpg)
 

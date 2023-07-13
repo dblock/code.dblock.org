@@ -4,7 +4,7 @@ title: "React Native Hello World"
 date: "2018-07-28"
 tags: [react native, 33 minutes]
 ---
-I've made [too many Slack bots](/tags/slack/) since 2015, so I decided to try something new and less comfortable. If you've written many services and back-ends as I have, you may have developed the same mental block as I when it came to client-side or front-end code. Since Artsy had been doing [amazing things with React Native](http://artsy.github.io/series/react-native-at-artsy) for a while, I committed myself to writing a mobile app in React Native, from scratch.
+I've made [too many Slack bots](/tags/slack/) since 2015, so I decided to try something new and less comfortable. If you've written many services and back-ends as I have, you may have developed the same mental block as I when it came to client-side or front-end code. Since Artsy had been doing [amazing things with React Native](https://artsy.github.io/series/react-native-at-artsy) for a while, I committed myself to writing a mobile app in React Native, from scratch.
 
 My pet project is called *33 Minutes*, and it's a "Strava for meetings", starting with a basic weekly meeting budget tracker.
 
