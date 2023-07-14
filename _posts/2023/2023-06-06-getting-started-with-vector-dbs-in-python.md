@@ -377,9 +377,10 @@ ENDPOINT=http://localhost:8080 CONFIG_ENDPOINT=http://localhost:19071 poetry run
 {% endhighlight %}
 
 ### Weaviate
-Weaviate is a vector search engine specifically designed for natural language and numerical data. It uses contextualized embeddings in data objects to understand semantic similarity. Currently, it supports only Hierarchical Navigable Small World(HNSW) indexing and is more costly on building data to indexes however has a fast query time and high scalability. Weaviate is open-source, easy to use, flexible, extensible and has a Contributor License Agreement.
 
-After you sign up at Weaviate Cloud Services WCS, and create a new free tier Weaviate Cluster with authentication. Note your cluster URL and API key (optional). The endpoint will have the following format https://myindex.weaviate.network.
+[Weaviate](https://weaviate.io) is a vector search engine specifically designed for natural language numerical data. It uses contextualized embeddings in data objects to understand semantic similarity. Currently, it supports only Hierarchical Navigable Small World (HNSW) indexing, and is more costly on building data to indexes. However, it has a fast query time and high scalability. Weaviate is open-source, easy to use, flexible, extensible, and has a Contributor License Agreement.
+
+After you sign up at Weaviate Cloud Services WCS, create a new free tier Weaviate Cluster with authentication. Note your cluster URL and API key (optional). The endpoint will have the following format https://myindex.weaviate.network.
 
 It is easy to create some objects with vectors.
 
@@ -422,7 +423,7 @@ with Client(
     client.post(urljoin(endpoint, "/v1/batch/objects"), json={"objects": objects}, headers=headers)
 {% endhighlight %}
 
-The search is pretty straight forward. Weaviate also has a GraphQl interface online.
+The search is pretty straightforward. Weaviate also has a GraphQL interface.
 
 {% highlight python %}
     # search for data
@@ -447,15 +448,16 @@ Deleting objects of the same class is simple.
 
 You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/weaviate/hello.py).
 
-
 ### Qdrant
-Qdrant is similarity vector search engine designed for a wide range of applications, including recommendation systems, image search, and natural language processing. It is open-source, scalable and allows dynamic updates to the index. It is particularly suitable for scenarios where the vector data is constantly evolving and vectors may be modified without interrupting the search functionality. Quadrant is licensed under Apache 2.0.
 
-Qdrant is built upon a concept of indexes, where vectors are organized and stored in "collections" for quick retrieval. Currently it only supports HNSW (Hierarchical Navigable Small World) as vector index.
+[Qdrant](https://qdrant.tech/) is a similarity vector search engine designed for a wide range of applications, including recommendation systems, image search, and natural language processing. It is scalable and allows dynamic updates to the index. It is particularly suitable for scenarios where the vector data is constantly evolving and vectors may be modified without interrupting the search functionality. Quadrant is licensed under Apache 2.0.
 
-After you sign up at Weaviate Cloud Services WCS, and create a new free tier Weaviate Cluster with authentication. Note your cluster URL and API key. The endpoint will have the following format https://my-cluster.cloud.qdrant.io:6333/.
+Qdrant is built upon a concept of indexes, where vectors are organized and stored in "collections" for quick retrieval. Currently, it only supports HNSW (Hierarchical Navigable Small World) as vector index.
 
-Create an index in the collections.
+After you sign up at Qdrant Cloud Services, create a new free tier Qdrant Cluster with authentication. Note your cluster URL and API key. The endpoint will have the following format https://my-cluster.cloud.qdrant.io:6333/.
+
+We can create an index in collections.
+
 {% highlight python %}
 
 endpoint = os.environ["ENDPOINT"]
@@ -494,7 +496,7 @@ client.put(urljoin(endpoint, f"/collections/{index_name}"),
             json=index, headers=headers)
 {% endhighlight %}
 
-Uploading vectors and search is straight forward.
+Uploading vectors and search is straightforward.
 
 {% highlight python %}
 # upload vectors
@@ -520,9 +522,8 @@ client.delete(urljoin(endpoint, f"/collections/{index_name}"),
 
 You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/qdrant/hello.py).
 
-
 ### Others
 
-This blog post and [its code](https://github.com/dblock/vectordb-hello-world/) could use your help for more examples for [Milvus](https://github.com/milvus-io/milvus), [Vector.ai](https://github.com/vector-ai/vectorai), [Qdrant](https://qdrant.tech/), [Weaviate](https://github.com/weaviate/weaviate), [NucliaDB](https://github.com/nuclia/nucliadb), [Vald](https://vald.vdaas.org/), [Postgres pgvector](https://github.com/pgvector/pgvector), etc.
+This blog post and [its code](https://github.com/dblock/vectordb-hello-world/) could use your help for more examples for [Milvus](https://github.com/milvus-io/milvus), [Vector.ai](https://github.com/vector-ai/vectorai),  [NucliaDB](https://github.com/nuclia/nucliadb), [Vald](https://vald.vdaas.org/), [Postgres pgvector](https://github.com/pgvector/pgvector), etc.
 
 I also wonder whether we need a generic client that's agnostic to which vector DB is being used to help make code portable? I [took a stab at a very simple prototype](https://github.com/dblock/vectordb-client).
