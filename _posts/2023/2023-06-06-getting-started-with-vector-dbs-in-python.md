@@ -10,7 +10,7 @@ Vector databases are all the rage today.
 
 I've built a few iterations of vector search, beginning in 2011 at Artsy, powered by the [Art Genome Project](https://en.wikipedia.org/wiki/The_Art_Genome_Project). Compared to LLM use-cases today, Artsy is a small, 1200-dimensional sparse vector and semantic search engine. The first attempt at vector search resulted in a brute-force exact k-nearest-neighbor search with data stored in MongoDB, written in Ruby. The second attempt was an approximate nearest-neighbor implementation using [LSH](https://en.wikipedia.org/wiki/Locality-sensitive_hashing), and finally [NN-Descent](https://www.cs.princeton.edu/cass/papers/www11.pdf). Around 2017 we migrated to Elasticsearch, and I am speculating the team has moved to OpenSearch by now because it's open-source.
 
-Things have evolved rapidly with generative AI, so let's try to index and search some vectors in 2023 in Python, and without using any specialized client libraries. You can draw your own conclusions of which engines are better and/or easier to use. Working code for this blog post is [here](https://github.com/dblock/vectordb-hello-world).
+Things have evolved rapidly with generative AI, so let's try to index and search some vectors in 2023 in Python, using pure HTTP, ie. without using any specialized client libraries, except for Redis. You can draw your own conclusions of which engines are better and/or easier to use. Working code for this blog post is [here](https://github.com/dblock/vectordb-hello-world).
 
 ### Pinecone
 
@@ -615,6 +615,107 @@ API_KEY=... ENDPOINT=https://my-cluster.cloud.qdrant.io:6333 poetry run src/qdra
 {'result': [{'id': 1, 'version': 0, 'score': 0.9999998, 'payload': None, 'vector': None}], 'status': 'ok', 'time': 0.000117235}
 > DELETE https://my-cluster.cloud.qdrant.io:6333/collections/my-index
 < DELETE https://my-cluster.cloud.qdrant.io:6333/collections/my-index - 200
+{% endhighlight %}
+
+### Redis
+
+[Redis](https://redis.io/) is a fast, opinionated, open-source database. Its [similarity vector search](https://redis.io/docs/interact/search-and-query/search/vectors/) comes with `FLAT` and `HNSW` indexing methods (field types). Redis is licensed under BSD.
+
+I prefer to run Redis locally in Docker with `docker run -p 6379:6379 redislabs/redisearch:latest`, but managed service options with free tiers also [exist](https://redis.com/).
+
+Redis speaks [RESP](https://redis.io/docs/reference/protocol-spec/), which is not HTTP, hence we're going to use [redis-py](https://github.com/redis/redis-py). I realize that this is a bit of a departure from other "pure HTTP" samples, but I wanted to include Redis for completeness.
+
+{% highlight python %}
+r = Redis(host='localhost', port=6379, decode_responses=True)
+{% endhighlight %}
+
+We create an `HNSW` index called `vectors` of documents with a given `doc:` prefix. This is unlike other databases where you write docs into an index.
+
+{% highlight python %}
+index_name = "vectors"
+doc_prefix = "doc:"
+
+schema = (
+    TagField("genre"),
+    VectorField("values",
+        "HNSW", {
+            "TYPE": "FLOAT32",
+            "DIM": 3,
+            "DISTANCE_METRIC": "COSINE"
+        }
+    )
+)
+
+definition = IndexDefinition(
+    prefix=[doc_prefix],
+    index_type=IndexType.HASH
+)
+
+r.ft(index_name).create_index(fields=schema, definition=definition)
+{% endhighlight %}
+
+Insert some vectors. Note that redis doesn't support a deep dictionary for metadata, so we will index and filter by `genre` in search.
+
+{% highlight python %}
+pipe = r.ft(index_name).pipeline()
+
+vectors = [
+    {
+        "id": 1,
+        "values": [0.1, 0.2, 0.3],
+        "metadata": {"genre": "drama"},
+    },
+    {
+        "id": 2,
+        "values": [0.2, 0.3, 0.4],
+        "metadata": {"genre": "action"},
+    },
+]
+
+for vector in vectors:
+    key = f"{doc_prefix}{vector['id']}"
+    value = {
+        "genre": vector["metadata"]["genre"],
+        "values": np.array(vector["values"]).astype(np.float32).tobytes()
+    }
+    pipe.hset(key, mapping=value)
+
+pipe.execute()
+{% endhighlight %}
+
+Search. We filter by `genre` with `@genre:{ action })`. Use `**` instead if you don't want filtering.
+
+{% highlight python %}
+query = (
+    Query("(@genre:{ action })=>[KNN 2 @values $vector as score]")
+    .sort_by("score")
+    .return_fields("id", "score", "genre")
+    .dialect(2)
+)
+
+query_params = {
+    "vector": np.array([0.1, 0.2, 0.3]).astype(np.float32).tobytes()
+}
+
+results = r.ft(index_name).search(query, query_params).docs
+for result in results:
+    print(result)
+{% endhighlight %}
+
+Finally, delete the index with its vectors.
+
+{% highlight python %}
+r.ft(index_name).dropindex(True)
+{% endhighlight %}
+
+You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/redis/hello.py).
+
+{% highlight bash %}
+cd src/redis
+poetry install
+poetry run ./hello.py
+
+Document {'id': 'doc:2', 'payload': None, 'score': '0.00741678476334', 'genre': 'action'}
 {% endhighlight %}
 
 ### Others
