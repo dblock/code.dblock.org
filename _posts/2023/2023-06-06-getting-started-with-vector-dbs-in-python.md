@@ -228,8 +228,6 @@ await conn.execute(f"DROP DATABASE \"{database}\"")
 You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/pgvector/hello.py).
 
 {% highlight bash %}
-cd src/pgvector
-poetry install
 PGPORT=5433 PGUSER=postgres PGPASSWORD=password poetry run ./hello.py
 
 <Record id='vec2' values=array([0.2, 0.3, 0.4], dtype=float32) metadata='{"genre": "action"}'> (action)
@@ -539,8 +537,6 @@ r.ft(index_name).dropindex(True)
 You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/redis/hello.py).
 
 {% highlight bash %}
-cd src/redis
-poetry install
 poetry run ./hello.py
 
 Document {'id': 'doc:2', 'payload': None, 'score': '0.00741678476334', 'genre': 'action'}
@@ -637,7 +633,7 @@ curl \
     -XPOST localhost:19071/application/v2/tenant/default/session
 {% endhighlight %}
 
-In Python code, setup the client.
+Setup the client.
 
 {% highlight python %}
 endpoint = "https://localhost:8080"
@@ -648,7 +644,7 @@ headers = {
 }
 {% endhighlight %}
 
-Ingest some sample documents.
+Ingest some vectors.
 
 {% highlight python %}
 vectors = [
@@ -673,7 +669,7 @@ for vector in vectors:
     )
 {% endhighlight %}
 
-Finally, to search we can run the following query.
+Search.
 
 {% highlight python %}
 query = "yql=select * from sources * where {targetHits: 1} nearestNeighbor(values,vector_query_embedding)" \
