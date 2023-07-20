@@ -14,6 +14,8 @@ Things have evolved rapidly with generative AI, so let's try to index and search
 
 In alphabetical order.
 
+- [ClickHouse](#clickhouse)
+- [MyScale](#myscale)
 - [OpenSearch](#opensearch)
 - [pgVector](#pgvector)
 - [Pinecone](#pinecone)
@@ -22,6 +24,126 @@ In alphabetical order.
 - [Vespa](#vespa)
 - [Weaviate](#weaviate)
 - [Others](#others)
+
+### ClickHouse
+
+[ClickHouse](https://clickhouse.com/) is a fast and resource efficient open-source database for real-time apps and analytics. You can [download a free version](https://clickhouse.com/#getting_started) or use [ClickHouse Cloud](https://clickhouse.com/).
+
+{% highlight bash %}
+docker run -p 9000:9000 -p 9009:9009 -p 8123:8123 --platform linux/amd64 --ulimit nofile=262144:262144 clickhouse/clickhouse-server
+{% endhighlight %}
+
+ClickHouse offers an HTTP interface.
+
+{% highlight python %}
+endpoint = os.getenv("ENDPOINT", "http://localhost:8123")
+client = Client()
+print(client.get(endpoint).text)
+{% endhighlight %}
+
+Create a table with a k-nn index. Note `allow_experimental_annoy_index=1` in the query string that turns on the [approximate nearest neighbor](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/annindexes) index feature.
+
+{% highlight python %}
+client.post(endpoint, params="allow_experimental_annoy_index=1", data=
+    "CREATE TABLE IF NOT EXISTS default.vectors (" \
+        "id String," \
+        "values Array(Float32)," \
+        "metadata Map(String, String)," \
+        "CONSTRAINT check_length CHECK length(values) = 3," \
+        "INDEX values_index values TYPE annoy GRANULARITY 100" \
+    ") " \
+    "ENGINE = MergeTree " \
+    "ORDER BY id"
+)
+{% endhighlight %}
+
+Insert some vectors.
+
+{% highlight python %}
+vectors = [
+    {
+        "id": "vec1",
+        "values": [0.1, 0.2, 0.3],
+        "metadata": {"genre": "drama"},
+    },
+    {
+        "id": "vec2",
+        "values": [0.2, 0.3, 0.4],
+        "metadata": {"genre": "action"},
+    },
+]
+
+for vector in vectors:
+    client.post(endpoint, data=
+        f"INSERT INTO default.vectors (id, values, metadata) " \
+        f"VALUES (\'{vector['id']}\', {vector['values']}, {vector['metadata']})"
+    )
+{% endhighlight %}
+
+Search.
+
+{% highlight python %}
+results = client.post(endpoint, data=
+    "SELECT * " \
+    "FROM default.vectors " \
+    "WHERE metadata['genre']='action' " \
+    "ORDER BY L2Distance(values, [0.2, 0.3, 0.4])"
+)
+
+print(results.text)  
+{% endhighlight %}
+
+You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/click_house/hello.py).
+
+{% highlight bash %}
+poetry run ./hello.py
+
+> POST http://localhost:8123?allow_experimental_annoy_index=1
+  CREATE TABLE IF NOT EXISTS default.vectors (id String,values Array(Float32),metadata Map(String, String),CONSTRAINT check_length CHECK length(values) = 3,INDEX values_index values TYPE annoy GRANULARITY 100) ENGINE = MergeTree ORDER BY id
+< POST http://localhost:8123?allow_experimental_annoy_index=1 - 200
+> POST http://localhost:8123
+  INSERT INTO default.vectors (id, values, metadata) VALUES ('vec1', [0.1, 0.2, 0.3], {'genre': 'drama'})
+< POST http://localhost:8123 - 200
+> POST http://localhost:8123
+  INSERT INTO default.vectors (id, values, metadata) VALUES ('vec2', [0.2, 0.3, 0.4], {'genre': 'action'})
+< POST http://localhost:8123 - 200
+> POST http://localhost:8123
+  SELECT * FROM default.vectors WHERE metadata['genre']='action' ORDER BY L2Distance(values, [0.2, 0.3, 0.4])
+< POST http://localhost:8123 - 200
+vec2	[0.2,0.3,0.4]	{'genre':'action'}
+
+> POST http://localhost:8123
+  DROP TABLE default.vectors
+< POST http://localhost:8123 - 200
+{% endhighlight %}
+
+### MyScale
+
+[MyScale](https://myscale.com) performs vector search in SQL, and [claims](https://blog.myscale.com/2023/05/17/myscale-outperform-special-vectordb/) to outperform other solutions by using a proprietary algorithm called `MSTG`. MyScale is built on the open-source ClickHouse, so the code is almost identical, except that one uses `VECTOR INDEX values_index values TYPE MSTG`.
+
+Sign up [on their website](https://myscale.com) for a test cluster, note the username and password. You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/my_scale/hello.py).
+
+{% highlight bash %}
+USERNAME=... PASSWORD=... ENDPOINT=https://...aws.myscale.com:443 poetry run ./hello.py
+
+> POST https://...aws.myscale.com
+  CREATE TABLE IF NOT EXISTS default.vectors (id String,values Array(Float32),metadata Map(String, String),CONSTRAINT check_length CHECK length(values) = 3,VECTOR INDEX values_index values TYPE MSTG) ENGINE = MergeTree ORDER BY id
+< POST https://...aws.myscale.com - 200
+> POST https://...aws.myscale.com
+  INSERT INTO default.vectors (id, values, metadata) VALUES ('vec1', [0.1, 0.2, 0.3], {'genre': 'drama'})
+< POST https://...aws.myscale.com - 200
+> POST https://...aws.myscale.com
+  INSERT INTO default.vectors (id, values, metadata) VALUES ('vec2', [0.2, 0.3, 0.4], {'genre': 'action'})
+< POST https://...aws.myscale.com - 200
+> POST https://...aws.myscale.com
+  SELECT * FROM default.vectors WHERE metadata['genre']='action' ORDER BY L2Distance(values, [0.2, 0.3, 0.4])
+< POST https://...aws.myscale.com - 200
+vec2	[0.2,0.3,0.4]	{'genre':'action'}
+
+> POST https://...aws.myscale.com
+  DROP TABLE default.vectors
+< POST https://...aws.myscale.com - 200
+{% endhighlight %}
 
 ### OpenSearch
 
