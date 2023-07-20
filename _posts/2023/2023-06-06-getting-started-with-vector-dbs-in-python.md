@@ -347,7 +347,7 @@ Finally, drop this database.
 await conn.execute(f"DROP DATABASE \"{database}\"")
 {% endhighlight %}
 
-You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/pgvector/hello.py).
+You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/pg_vector/hello.py).
 
 {% highlight bash %}
 PGPORT=5433 PGUSER=postgres PGPASSWORD=password poetry run ./hello.py
