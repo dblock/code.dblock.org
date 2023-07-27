@@ -14,6 +14,7 @@ Things have evolved rapidly with generative AI, so let's try to index and search
 
 In alphabetical order.
 
+- [Chroma](#chroma)
 - [ClickHouse](#clickhouse)
 - [MyScale](#myscale)
 - [OpenSearch](#opensearch)
@@ -24,6 +25,109 @@ In alphabetical order.
 - [Vespa](#vespa)
 - [Weaviate](#weaviate)
 - [Others](#others)
+
+### Chroma
+
+[Chroma](https://www.trychroma.com/) is an AI-native open-source embedding database. You can clone Chroma from GitHub and run it locally.
+
+{% highlight bash %}
+git clone https://github.com/chroma-core/chroma.git
+cd chroma
+docker-compose up -d --build
+{% endhighlight %}
+
+Chroma comes with a Python and JavaScript client, but underneath it uses a fairly straightforward [http interface](https://github.com/chroma-core/chroma/blob/main/chromadb/api/fastapi.py#L46) that talks JSON. The following produces the server version number.
+
+{% highlight python %}
+endpoint = os.getenv("ENDPOINT", 'http://localhost:8000')
+api_url = urljoin(endpoint, '/api/v1/')
+client = Client()
+print(client.get(urljoin(api_url, 'version')).json())
+{% endhighlight %}
+
+You can check whether a collection exists by querying `/api/v1/collections/name`, but Chroma returns 500s when it doesn't, so it gets messy. It also seems to allow you to refer to the collection by name and ID, but not in all APIs, so we need the ID anyway. Let's get it either from `collections` or from the return value of creating a collection.
+
+{% highlight python %}
+collection_name = "my-collection"
+collections = client.get(urljoin(api_url, "collections")).json()
+collection = next((x for x in collections if x["name"] == collection_name), None)
+if not collection:
+    collection = client.post(
+        urljoin(api_url, "collections"),
+        headers=headers,
+        json={
+            "name": collection_name
+        },
+    ).json()
+{% endhighlight %}
+
+Chroma is opinionated in how it likes to receive data with arrays of IDs, embeddings, metadata, etc.
+
+{% highlight python %}
+vectors = [
+    {
+        "id": "d8f940f1-d6c1-4d8e-82c1-488eb7801e57",
+        "values": [0.1, 0.2, 0.3],
+        "metadata": {"genre": "drama"},
+    },
+    {
+        "id": "c47eade8-59b9-4c49-9172-a0ce3d9dd0af",
+        "values": [0.2, 0.3, 0.4],
+        "metadata": {"genre": "action"},
+    },
+]
+
+data = {
+    "ids": [],
+    "embeddings": [],
+    "metadatas": []
+}
+
+for vector in vectors:
+    data["ids"].append(vector["id"])
+    data["embeddings"].append(vector["values"])
+    data["metadatas"].append(vector["metadata"])
+
+client.post(urljoin(api_url, f"collections/{collection['id']}/add"), json=data)
+{% endhighlight %}
+
+Search is similar. Chroma handles tokenization, embedding, and indexing automatically, but also does support basic vector search with `query_embeddings`.
+
+{% highlight python %}
+query = {
+    "query_embeddings": [[0.15, 0.12, 1.23]], 
+    "n_results": 1,
+    "include":["embeddings", "metadatas"]
+}
+
+results = client.post(
+    urljoin(api_url, f"collections/{collection['id']}/query"), json=query
+).json()
+
+print(results)
+{% endhighlight %}
+
+You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/chroma/hello.py).
+
+{% highlight bash %}
+ENDPOINT=http://localhost:8000 poetry run ./hello.py
+
+$ ENDPOINT=http://localhost:8000 poetry run ./hello.py
+> GET http://localhost:8000/api/v1/version
+< GET http://localhost:8000/api/v1/version - 200
+Chroma 0.4.3
+> GET http://localhost:8000/api/v1/collections
+< GET http://localhost:8000/api/v1/collections - 200
+> POST http://localhost:8000/api/v1/collections
+< POST http://localhost:8000/api/v1/collections - 200
+> POST http://localhost:8000/api/v1/collections/f5aae9cc-a0c1-4990-9942-7a47542b9f64/add
+< POST http://localhost:8000/api/v1/collections/f5aae9cc-a0c1-4990-9942-7a47542b9f64/add - 201
+> POST http://localhost:8000/api/v1/collections/f5aae9cc-a0c1-4990-9942-7a47542b9f64/query
+< POST http://localhost:8000/api/v1/collections/f5aae9cc-a0c1-4990-9942-7a47542b9f64/query - 200
+{'ids': [['c47eade8-59b9-4c49-9172-a0ce3d9dd0af']], 'distances': None, 'metadatas': [[{'genre': 'action'}]], 'embeddings': [[[0.2, 0.3, 0.4]]], 'documents': None}
+> DELETE http://localhost:8000/api/v1/collections/my-collection
+< DELETE http://localhost:8000/api/v1/collections/my-collection - 200
+{% endhighlight %}
 
 ### ClickHouse
 
