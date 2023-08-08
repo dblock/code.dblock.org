@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Howto: Changing the admin password in OpenSearch"
+title: "Changing the default admin password in OpenSearch"
 date: 2023-08-08
 tags: [opensearch]
 comments: true
