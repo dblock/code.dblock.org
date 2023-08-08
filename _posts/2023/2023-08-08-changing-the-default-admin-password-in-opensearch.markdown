@@ -82,7 +82,7 @@ curl --insecure -u admin:password -XPUT "https://localhost:9200/_plugins/_securi
 {"status":"FORBIDDEN","message":"Resource 'admin' is read-only."}
 {% endhighlight %}
 
-We'll have to do it the hard way.
+I found [security#1576](https://github.com/opensearch-project/security/issues/1576) that aims to fix this, but in the meantime, we'll have to do it the hard way.
 
 ### The Hard Way
 
@@ -204,3 +204,5 @@ $ curl --insecure -u admin:password https://localhost:9200
   "tagline" : "The OpenSearch Project: https://opensearch.org/"
 }
 {% endhighlight %}
+
+Note that restarting the Docker container will override your changes with a clean image.
