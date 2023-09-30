@@ -763,6 +763,17 @@ footer #donate {
   font-style: italic;
 }
 
+.black {
+  padding: 3px;
+  background-color: black;	
+  text-align: center;
+  border-radius: 10px;
+  img {
+	margin: auto;
+	display: block;
+  }
+}
+
 .suggest, .license {
   margin-top: 10px;
 }
