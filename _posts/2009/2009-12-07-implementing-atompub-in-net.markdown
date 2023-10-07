@@ -92,7 +92,7 @@ A client that creates posts must be able to find out where to POST to. This is d
 The service document describes a workspace with collections. We have two: one for posts and another for images. The one for posts includes post categories.
 
 {% highlight xml %}
-<service xmlns="https://www.w3.org/2007/app" xmlns:atom="https://www.w3.org/2005/Atom">
+<service xmlns="http://www.w3.org/2007/app" xmlns:atom="http://www.w3.org/2005/Atom">
   <workspace>
     <atom:title>DBlog.NET</atom:title>
     <collection href="https://localhost/dblog/AtomPost.aspx">

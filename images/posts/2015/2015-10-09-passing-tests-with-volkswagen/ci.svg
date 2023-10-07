@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="105px" height="20px" viewBox="0 0 105 20" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:sketch="https://www.bohemiancoding.com/sketch/ns">
+<svg width="105px" height="20px" viewBox="0 0 105 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.3 (12081) - https://www.bohemiancoding.com/sketch -->
     <title>volkswargen_ci</title>
     <desc>Created with Sketch.</desc>
@@ -15,7 +15,7 @@
                     <path fill="#4c1" d="M37 0h4v20h-4z"/>
                     <rect rx="3" width="105" height="20" fill="url(#a)"/>
 
-                    <g xmlns="https://www.w3.org/2000/svg" fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11"><text x="19.5" y="15" fill="#010101" fill-opacity=".3">build</text><text x="19.5" y="14">build</text><text x="62.5" y="15" fill="#010101" fill-opacity=".3">passing</text><text x="62.5" y="14">passing</text></g>
+                    <g xmlns="http://www.w3.org/2000/svg" fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11"><text x="19.5" y="15" fill="#010101" fill-opacity=".3">build</text><text x="19.5" y="14">build</text><text x="62.5" y="15" fill="#010101" fill-opacity=".3">passing</text><text x="62.5" y="14">passing</text></g>
                     <g id="1444267215_Volkswagen_2-Copy" transform="translate(88.000000, 6.000000)" fill-opacity="0.3" fill="#000000" sketch:type="MSShapeGroup">
                         <g id="Group">
                             <path d="M5.5,0 C2.46243177,0 0,2.46243177 0,5.5 C0,8.53756823 2.46243177,11 5.5,11 C8.53756823,11 11,8.53756823 11,5.5 C11,2.46243177 8.53756823,0 5.5,0 L5.5,0 L5.5,0 Z M5.5,10.5071283 C2.73463136,10.5071283 0.49287169,8.26536864 0.49287169,5.5 C0.49287169,2.73463136 2.73463136,0.49287169 5.5,0.49287169 C8.26536864,0.49287169 10.5071283,2.73463136 10.5071283,5.5 C10.5071283,8.26536864 8.26536864,10.5071283 5.5,10.5071283 L5.5,10.5071283 L5.5,10.5071283 Z" id="Shape"></path>
