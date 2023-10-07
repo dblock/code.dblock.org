@@ -87,8 +87,8 @@ To make it all work we need some configuration. We can define a _springldap.xml_
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="https://www.springframework.org/schema/beans"
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
     <bean id="contextSource"
         class="org.springframework.ldap.core.support.LdapContextSource">
