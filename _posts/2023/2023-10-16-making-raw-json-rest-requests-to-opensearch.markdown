@@ -205,7 +205,7 @@ client.transport.perform_request("POST", "/movies/_search", body = query)
 client.transport.perform_request("DELETE", "/movies")
 {% endhighlight %}
 
-[Documentation](https://github.com/dblock/opensearch-py/blob/doc-making-raw-json-requests/guides/json.md) and [working demo](https://github.com/dblock/opensearch-py/tree/doc-making-raw-json-requests/samples/json) in opensearch-py.
+See the [updated documentation](https://github.com/dblock/opensearch-py/blob/doc-making-raw-json-requests/guides/json.md) and [working demo](https://github.com/dblock/opensearch-py/tree/doc-making-raw-json-requests/samples/json) for more information.
 
 ### DotNet
 
@@ -220,10 +220,79 @@ Feature request, [opensearch-net#403](https://github.com/opensearch-project/open
 
 #### [opensearch-rs](https://docs.rs/opensearch/latest/opensearch/)
 
+The rust client directly supports `JsonBody<_>` on request, and `.json()` on response.
+
 {% highlight rust %}
+let info: Value = client
+    .send::<(), ()>(Method::Get, "/", HeaderMap::new(), None, None, None)
+    .await?
+    .json()
+    .await?;
+    
+println!(
+    "{}: {}",
+    info["version"]["distribution"].as_str().unwrap(),
+    info["version"]["number"].as_str().unwrap()
+);
 {% endhighlight %}
 
-Feature request, [opensearch-rs#193](https://github.com/opensearch-project/opensearch-rs/issues/193).
+{% highlight rust %}
+let document: JsonBody<_> = json!({
+    "title": "Moneyball",
+    "director": "Bennett Miller",
+    "year": "2011"
+}).into();
+
+client.send(
+    Method::Put,
+    "movies/_doc/1",
+    HeaderMap::new(),
+    Some(&[("refresh", "true")]),
+    Some(document),
+    None,
+).await?;
+{% endhighlight %}
+
+{% highlight rust %}
+let query: JsonBody<_> = json!({
+  "size": 5,
+  "query": {
+      "multi_match": {
+          "query": "miller",
+          "fields": ["title^2", "director"]
+      }
+  }
+}).into();
+
+let search_response = client.send(
+    Method::Post,
+    &"/movies/_search",
+    HeaderMap::new(),
+    Option::<&()>::None,
+    Some(query),
+    None,
+)
+.await?;
+
+let search_result = search_response.json::<Value>().await?;
+
+println!("Hits: {:#?}", search_result["hits"]["hits"].as_array().unwrap());
+{% endhighlight %}
+
+{% highlight rust %}
+client.send::<(), ()>(
+  Method::Delete,
+  "/movies",
+  HeaderMap::new(),
+  None,
+  None,
+  None,
+)
+.await?;
+
+{% endhighlight %}
+
+See the [updated user guide](https://github.com/opensearch-project/opensearch-rs/blob/main/USER_GUIDE.md#make-raw-json-requests), [a working demo](https://github.com/opensearch-project/opensearch-rs/blob/main/opensearch/examples/json.rs) and a [API vs. raw JSON diff](https://github.com/dblock/opensearch-rust-client-demo/compare/raw-json?expand=1) for more information.
 
 ### PHP
 
