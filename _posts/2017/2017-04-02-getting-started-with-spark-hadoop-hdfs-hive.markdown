@@ -31,7 +31,7 @@ A good place to start is to run a few things locally.
 
 ## Hadoop
 
-On OSX run `brew install hadoop`, then configure it ([This post](https://amodernstory.com/2014/09/23/installing-hadoop-on-mac-osx-yosemite) was helpful.) I turned the configuration into a script in my [dotfiles](https://github.com/dblock/dotfiles/tree/master/hadoop). Once installed you can run `hstart`. Once working, you can navigate to a local resource manager on `https://localhost:50070` or the job tracker on `https://localhost:8088` and run a small test.
+On OSX run `brew install hadoop`, then configure it ([This post](https://web.archive.org/web/20171228072050/https://amodernstory.com/2014/09/23/installing-hadoop-on-mac-osx-yosemite/) was helpful.) I turned the configuration into a script in my [dotfiles](https://github.com/dblock/dotfiles/tree/master/hadoop). Once installed you can run `hstart`. Once working, you can navigate to a local resource manager on `https://localhost:50070` or the job tracker on `https://localhost:8088` and run a small test.
 
 {% highlight shell %}
 $> wget https://www.dropbox.com/s/cyuah7lc31g0x3h/hadoop-mapreduce-examples-2.6.0.jar?dl=1 -O hadoop-mapreduce-examples-2.6.0.jar

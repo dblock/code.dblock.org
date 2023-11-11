@@ -69,7 +69,7 @@ And my favorite.
 
 Web art has also taken a turn for the worst once the browser wars were over. Things change. While [last year at MIT Hacking Arts](/2015/09/25/mit-hacking-arts-2015.html) was all about Virtual Reality, this year was all about Augmented Reality. Commercial pitches included how mixed reality to help solve real problems, such as filling prescriptions accurately.
 
-> AR is the tissue between physical and virtual reality. <small>/[Allison Woods, Reify](https://reify.nyc)</small>
+> AR is the tissue between physical and virtual reality. <small>/[Allison Woods, Reify](https://web.archive.org/web/20161105063828/https://reify.nyc/)</small>
 
 ![holoart]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-conference/holoart.jpg)
 

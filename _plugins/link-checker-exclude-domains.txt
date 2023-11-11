@@ -11,3 +11,7 @@ www.microsoft.com
 www.inc.com
 stephesblog.blogs.com
 etherscan.io
+www.nytimes.com
+web.archive.org
+www.skillshare.com
+bfy.tw

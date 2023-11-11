@@ -21,7 +21,7 @@ To celebrate the new old JNA, I added a logo. I found this one on the internet, 
 
 #### Migration
 
-I tried the Kenai Wiki and it worked quite well. But we have tons of existing content in SVN, so I created a website in the features section of the JNA project. This enabled Webdav on jna.java.net and a /website/jna/ path into which I can upload files. This is [documented here](https://web.archive.org/web/20111006014214/https://kenai.com/projects/help/pages/UploadWebsiteFiles). Uploading files basically brings the old content into the Kenai infrastructure. I used [BitKinex](http://www.bitkinex.com/) to upload, obviously we need to enable an SCM hook (JNA-177). This is the same as it worked on the old java.net.
+I tried the Kenai Wiki and it worked quite well. But we have tons of existing content in SVN, so I created a website in the features section of the JNA project. This enabled Webdav on jna.java.net and a /website/jna/ path into which I can upload files. This is [documented here](https://web.archive.org/web/20111006014214/https://kenai.com/projects/help/pages/UploadWebsiteFiles). Uploading files basically brings the old content into the Kenai infrastructure. I used [BitKinex](https://web.archive.org/web/20111126174833/http://www.bitkinex.com/) to upload, obviously we need to enable an SCM hook (JNA-177). This is the same as it worked on the old java.net.
 
 #### Issues?
 

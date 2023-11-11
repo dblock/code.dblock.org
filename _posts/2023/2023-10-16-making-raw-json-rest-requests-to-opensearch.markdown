@@ -205,7 +205,7 @@ client.transport.perform_request("POST", "/movies/_search", body = query)
 client.transport.perform_request("DELETE", "/movies")
 {% endhighlight %}
 
-See the [updated documentation](https://github.com/dblock/opensearch-py/blob/doc-making-raw-json-requests/guides/json.md) and [working demo](https://github.com/dblock/opensearch-py/tree/doc-making-raw-json-requests/samples/json) for more information.
+See the [updated documentation](https://github.com/opensearch-project/opensearch-py/blob/main/guides/json.md) and [working demo](https://github.com/opensearch-project/opensearch-py/tree/main/samples/json) for more information. I also [made a PR](https://github.com/opensearch-project/opensearch-py/pull/544) for a higher level DSL.
 
 ### DotNet
 
