@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2   
       - run: |
-        ./check-manifest ${{ martix.manifest }}
+        ./check-manifest ${{ matrix.manifest }}
 {% endhighlight %}
 
 We'll definitely forget to update the matrix when a new file is created, so let's just list those files dynamically, and generate a matrix from the list.
@@ -53,7 +53,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2   
       - run: |
-        ./check-manifest ${{ martix.manifest }}
+        ./check-manifest ${{ matrix.manifest }}
 {% endraw %}
 {% endhighlight %}
 
