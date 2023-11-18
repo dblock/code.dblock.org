@@ -9,7 +9,7 @@ dblog_post_id: 220
 ---
 ![]({{ site.url }}/images/posts/2011/2011-06-21-how-we-upgraded-a-live-site-in-the-middle-of-demo-and-didnt-die-of-a-heart-attack/image_9.jpg)
 
-Last week I got to experience Art Basel from the inside. [Art.sy](https://artsy.net) was presented at the "most exclusive event" at the Beyeler Foundation, to quote [an article](https://www.artinfo.com/news/story/37897/from-christian-marclay-to-will-ferrell-see-the-stars-at-the-elite-and-highly-eclectic-bash-for-the-launch-of-artsy-in-basel/). Behind all the hype, we were very nervous. I had high confidence in the mountain of work that was put into the site by our A-team of 5 engineers, but it was really the first time we were showing it live to so many partners. There was no plan B, it just had to work. Then we  had to upgrade the site on-the-fly during the big demo.
+Last week I got to experience Art Basel from the inside. [Art.sy](https://artsy.net) was presented at the "most exclusive event" at the Beyeler Foundation, to quote [an article](https://web.archive.org/web/20110723022833/https://www.artinfo.com/news/story/37897/from-christian-marclay-to-will-ferrell-see-the-stars-at-the-elite-and-highly-eclectic-bash-for-the-launch-of-artsy-in-basel). Behind all the hype, we were very nervous. I had high confidence in the mountain of work that was put into the site by our A-team of 5 engineers, but it was really the first time we were showing it live to so many partners. There was no plan B, it just had to work. Then we  had to upgrade the site on-the-fly during the big demo.
 
 What?!
 

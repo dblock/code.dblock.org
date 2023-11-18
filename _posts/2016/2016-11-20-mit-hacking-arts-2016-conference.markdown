@@ -81,7 +81,7 @@ Web art has also taken a turn for the worst once the browser wars were over. Thi
 
 > Use the human more in AR. In a conspiracy story you can tell someone that "the man with a cell phone is spying on you" - there's always a man with a cell phone in a crowd. Slightly disorienting in a positive way. I see the world as pretty great, still. <small>/[Peter Wittig, Motive.io](https://www.motive.io)</small>
 
-> The reality is that we need companies to fund our experiments. It's important for creatives to grapple with this and to define what it looks like when moving forward. <small>/[Allison Woods](https://reify.nyc)</small>
+> The reality is that we need companies to fund our experiments. It's important for creatives to grapple with this and to define what it looks like when moving forward. <small>/[Allison Woods](https://web.archive.org/web/20161105063828/https://reify.nyc/)</small>
 
 ### Virtual Storytelling
 

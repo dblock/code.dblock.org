@@ -223,7 +223,7 @@ vec2	[0.2,0.3,0.4]	{'genre':'action'}
 
 ### MyScale
 
-[MyScale](https://myscale.com) performs vector search in SQL, and [claims](https://blog.myscale.com/2023/05/17/myscale-outperform-special-vectordb/) to outperform other solutions by using a proprietary algorithm called `MSTG`. MyScale is built on the open-source ClickHouse, so the code is almost identical, except that one uses `VECTOR INDEX values_index values TYPE MSTG`.
+[MyScale](https://myscale.com) performs vector search in SQL, and [claims](https://web.archive.org/web/20230517145148/https://blog.myscale.com/2023/05/17/myscale-outperform-special-vectordb/) to outperform other solutions by using a proprietary algorithm called `MSTG`. MyScale is built on the open-source ClickHouse, so the code is almost identical, except that one uses `VECTOR INDEX values_index values TYPE MSTG`.
 
 Sign up [on their website](https://myscale.com) for a test cluster, note the username and password. You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/my_scale/hello.py).
 
