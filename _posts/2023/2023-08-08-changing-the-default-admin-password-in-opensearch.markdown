@@ -110,6 +110,7 @@ Run the security plugin configuration tool to output the current configuration.
 $ mkdir current-config
 
 $ /usr/share/opensearch/plugins/opensearch-security/tools/securityadmin.sh \
+  -icl \
   -cacert /usr/share/opensearch/config/root-ca.pem \
   -cert /usr/share/opensearch/config/kirk.pem \
   -key /usr/share/opensearch/config/kirk-key.pem \
@@ -155,6 +156,7 @@ Upload the configuration.
 
 {% highlight bash %}
 $ /usr/share/opensearch/plugins/opensearch-security/tools/securityadmin.sh \
+  -icl \
   -t internalusers \
   -f current-config/internal_users_[your file name here].yml \
   -cacert /usr/share/opensearch/config/root-ca.pem \
