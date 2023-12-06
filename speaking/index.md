@@ -11,13 +11,17 @@ I speak frequently on topics ranging from the intersection of technology and art
 
 ## Recorded Talks
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TZy7ViZbbHc?si=3pS7bkbK0hpR_V86" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=TZy7ViZbbHc">OpenSearchCon 2023: Writing OpenSearch Plugins and Extensions (in Python)</a>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B8NlDg_Mevw?si=t0qIDfHxaLn6xTyK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=B8NlDg_Mevw">Linux Foundation Open Source Summit (Europe) 2023: FORK IT ALL if You Fork It</a>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IKiJHgM9tko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=IKiJHgM9tko">OpenSearchCon 2022: Hundreds of Terabytes of Data</a>
 
 <a target="_blank" href="https://www.ctoconnection.com/topics/engineering-influencers/videos/2019-04-19-building-an-open-source-engineering-brand">![]({{site.url}}/images/posts/2019/2019-05-12-building-an-open-source-engineering-brand/cto-summit.png)</a><br>
 [Building an Open-Source Engineering Brand](https://www.ctoconnection.com/topics/engineering-influencers/videos/2019-04-19-building-an-open-source-engineering-brand), Austin CTO Summit '19
 
-<a href='https://www.youtube.com/watch?v=LxWfMp0gzSU&t=31m'>![]({{site.url}}/images/posts/2019/2019-03-07-art-market-one-point-o/daniel-doubrovkine-speaking-uzh.png)</a><br>
-[Art Market 1.0](https://www.youtube.com/watch?v=LxWfMp0gzSU&t=31m), University of Zurich
+<!--<a href='https://www.youtube.com/watch?v=LxWfMp0gzSU&t=31m'>![]({{site.url}}/images/posts/2019/2019-03-07-art-market-one-point-o/daniel-doubrovkine-speaking-uzh.png)</a><br>
+[Art Market 1.0](https://www.youtube.com/watch?v=LxWfMp0gzSU&t=31m), University of Zurich-->
 
 <a href='https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s'>![]({{site.url}}/images/posts/2018/2018-07-17-christies-art-tech-summit-exploring-blockchain/daniel-doubrovkine-speaking.png)</a><br>
 [The Future is Art, Christie's Art & Tech Summit: Exploring Blockchain](https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s), London

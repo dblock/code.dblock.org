@@ -112,6 +112,9 @@ msi:
 open source:
   name: open source
   count: 55
+opensearch:
+  name: opensearch
+  count: 6
 organizations:
   name: organizations
   count: 22
@@ -150,7 +153,7 @@ slack:
   count: 16
 speaking:
   name: speaking
-  count: 30
+  count: 31
 strava:
   name: strava
   count: 5

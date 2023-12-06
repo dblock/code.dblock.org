@@ -2,9 +2,13 @@
 layout: post
 title: "Writing OpenSearch Plugins and Extensions (in Python)"
 date: 2023-09-29
-tags: [opensearch]
+tags: [opensearch, speaking]
 comments: true
 ---
+Check out [this talk recorded at OpenSearchCon 2023](https://www.youtube.com/watch?v=TZy7ViZbbHc), or continue reading.
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/TZy7ViZbbHc?si=3pS7bkbK0hpR_V86" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+
 Most custom functionality in [OpenSearch](https://opensearch.org) is implemented with [plugins](https://opensearch.org/docs/latest/install-and-configure/plugins/). That is, in theory. In practice, much of core functionality is also implemented in plugins. For example, security or k-NN search are both plugins, even though one would reasonably expect a security framework to be part of the core engine (with multiple implementations in plugins), or for k-NN search to be living right next to full text search. Furthermore, some plugins, such repository-s3 that reads and writes snapshots from/to Amazon S3, live in core, whereas one would expect optional functionality to be ... optional. The location for plugins is more a consequence of business and organizational decisions than technical. Software architecture really tends to line up to our business structures!
 
 The default distribution of OpenSearch 2.10 ships with [20 plugins](https://github.com/opensearch-project/opensearch-plugins/blob/main/plugins/.meta), all enabled by default, erasing much of the difference between what's _core_ vs. what's _a plugin_. A vast majority of users install and run the whole thing.
