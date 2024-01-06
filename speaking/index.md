@@ -11,6 +11,9 @@ I speak frequently on topics ranging from the intersection of technology and art
 
 ## Recorded Talks
 
+<a href='https://topenddevs.com/podcasts/ruby-rogues/episodes/understanding-framework-flexibility-ruby-617'>![]({{ site.url }}/images/posts/2023/2023-12-13-ruby-rogues/ruby-rogues.png)</a><br>
+[Understanding Grape Framework Flexibility (RUBY 617)](https://topenddevs.com/podcasts/ruby-rogues/episodes/understanding-framework-flexibility-ruby-617), Ruby Rogues Podcast
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TZy7ViZbbHc?si=3pS7bkbK0hpR_V86" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=TZy7ViZbbHc">OpenSearchCon 2023: Writing OpenSearch Plugins and Extensions (in Python)</a>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B8NlDg_Mevw?si=t0qIDfHxaLn6xTyK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=B8NlDg_Mevw">Linux Foundation Open Source Summit (Europe) 2023: FORK IT ALL if You Fork It</a>
