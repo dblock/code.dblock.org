@@ -73,7 +73,7 @@ System.out.println(info.version().distribution() + ": " + info.version().number(
 httpClient.close();
 {% endhighlight %}
 
-Working demo in [opensearch-java-client-demo](https://github.com/dblock/opensearch-java-client-demo).
+Working demo in Java in [opensearch-java-client-demo](https://github.com/dblock/opensearch-java-client-demo), and another one written in Kotlin in [opensearch-kotlin-client-demo](https://github.com/dblock/opensearch-kotlin-client-demo).
 
 #### [aws-request-signing-apache-interceptor](https://github.com/acm19/aws-request-signing-apache-interceptor)
 
