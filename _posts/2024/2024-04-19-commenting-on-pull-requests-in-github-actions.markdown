@@ -10,6 +10,7 @@ The [OpenSearch API specification](https://github.com/opensearch-project/opensea
 To surface this information in pull requests I wanted to add a comment in the API coverage workflow. This required a PAT token, so I initially authored that workflow with `pull_request_target` in [opensearch-api-specification#196](https://github.com/opensearch-project/opensearch-api-specification/pull/196).
 
 {% highlight yaml %}
+{% raw %}
 - name: Gather Coverage
   id: coverage
   shell: bash
@@ -26,6 +27,7 @@ To surface this information in pull requests I wanted to add a comment in the AP
     issue-number: ${{ github.event.number }}
     body: |
         API specs implemented for ${{ steps.coverage.outputs.current }}/${{ steps.coverage.outputs.total }} (${{ steps.coverage.outputs.percent }}%) APIs.
+{% endraw %}
 {% endhighlight %}
 
 This is actually insecure because we run a JavaScript tool to generate the API spec with source code coming from the pull request, and a user can execute arbitrary code this way and gain access to the secure token. One solution is to run the tool from `main`, but we can [do better](https://securitylab.github.com/research/github-actions-preventing-pwn-requests/).
@@ -33,6 +35,7 @@ This is actually insecure because we run a JavaScript tool to generate the API s
 In [opensearch-api-specification#251](https://github.com/opensearch-project/opensearch-api-specification/pull/251) I split the coverage workflow in one that gathered information into a JSON file and uploaded it as an artifact of the pull request workflow, and another that downloaded the artifact and commented on the pull request.
 
 {% highlight yaml %}
+{% raw %}
 name: Gather API Coverage
 on: [push, pull_request]
 
@@ -53,9 +56,11 @@ on: [push, pull_request]
   with:
     name: coverage
     path: coverage.json
+{% endraw %}
 {% endhighlight %}
 
 {% highlight yaml %}
+{% raw %}
 name: Comment with API Coverage
 
 on:
@@ -92,6 +97,7 @@ jobs:
               issue_number: data.pull_request,
               body: `API specs implemented for ${data.current}/${data.total} (${data.percent}%) APIs.`
             });
+{% endraw %}
 {% endhighlight %}
 
 This is a very convenient pattern of passing structured data from a pull request workflow to one that has access to write data in a GitHub repository. Check out the [latest versions of the coverage workflows](https://github.com/opensearch-project/opensearch-api-specification/tree/main/.github/workflows) if you are going to use them.
