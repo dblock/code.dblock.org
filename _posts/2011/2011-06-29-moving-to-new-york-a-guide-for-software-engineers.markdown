@@ -41,7 +41,7 @@ I am totally not kidding about number 4.
 
 #### Craftsmanship
 
-I think what makes New York an incredible technology scene today is the surging number of technology startups with that include [bit.ly](https://bit.ly/), [10gen](https://www.mongodb.com/) or [Foursquare](https://foursquare.com/). The list is pretty long, check out [nytm.org/made](https://nytm.org/made).
+I think what makes New York an incredible technology scene today is the surging number of technology startups with that include [bit.ly](https://bit.ly/), [10gen](https://www.mongodb.com/) or [Foursquare](https://foursquare.com/). The list is pretty long, check out [nytm.org/made](https://web.archive.org/web/20170112034617/https://nytm.org/made).
 
 ![]({{ site.url }}/images/posts/2011/2011-06-29-moving-to-new-york-a-guide-for-software-engineers/image_4.jpg)
 

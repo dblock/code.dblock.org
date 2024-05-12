@@ -27,7 +27,7 @@ My mind is racing with the following thought.
 
 ### Choosing from Priorities
 
-First, I choose between _people_, _technology_ and _business_. I default to _business_, because this is my weakest domain or after reading something particularly inspirational (eg. [Breaking Smart: Season 1](https://breakingsmart.com/season-1)). I usually choose _people_ next and _technology_ last.
+First, I choose between _people_, _technology_ and _business_. I default to _business_, because this is my weakest domain or after reading something particularly inspirational (eg. [Breaking Smart: Season 1](https://web.archive.org/web/20160117124314/http://breakingsmart.com/season-1/)). I usually choose _people_ next and _technology_ last.
 
 ### Formulating the Question
 

@@ -9,7 +9,7 @@ dblog_post_id: 353
 ---
 ![]({{ site.url }}/images/posts/2012/2012-10-20-jna-350-released/image_7.jpg)
 
-JNA 3.5.0 has been quietly released last week. JNA stands for Java Native Access and probably powers tens of thousands of applications that need to access native library functions without the hassle of JNI. Check out the 3.5.0 [CHANGELOG](https://github.com/twall/jna/blob/master/CHANGES.md) and get it from [Github](https://github.com/twall/jna) or [Java.net Maven](https://maven.java.net/index.html#nexus-search;quick~jna).
+JNA 3.5.0 has been quietly released last week. JNA stands for Java Native Access and probably powers tens of thousands of applications that need to access native library functions without the hassle of JNI. Check out the 3.5.0 [CHANGELOG](https://github.com/twall/jna/blob/master/CHANGES.md) and get it from [Github](https://github.com/twall/jna).
 
 > [https://github.com/twall/jna](https://github.com/twall/jna)
 

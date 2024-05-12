@@ -102,6 +102,6 @@ This is often a matter of preference or strong opinions.
 
 I believe that any unexpected behavior outside of a happy path should raise an exception unless it can be explicitly avoided ahead of time. I also prefer to deal with two scenarios rather than three: _it worked_ and _it didn't work_ vs. _it worked_, _it didn't work in some predictable way_ and _it didn't work in some unpredictable way_. Practically, this means I want to see a `StandardError` when something failed, vs. having to check for an `.errors` field in my business logic.
 
-The Github [graphql-client](https://github.com/github/graphql-client) library does not raise exceptions except when otherwise for all types of errors and parses server-side errors in potentially problematic ways (see [graphql-client#132](https://github.com/github/graphql-client/pull/132)), leaving you having to both handle exceptions and check for `.data.errors` and `.errors`.
+The Github [graphql-client](https://github.com/github-community-projects/graphql-client) library does not raise exceptions except when otherwise for all types of errors and parses server-side errors in potentially problematic ways (see graphql-client#132), leaving you having to both handle exceptions and check for `.data.errors` and `.errors`.
 
 The [graphlient](https://github.com/ashkan18/graphlient) library built on top of graphql-client attempts to make sense out of the many scenarios and always raises exceptions of `Graphlient::Errors::Error` variety for server-side problems. It's simpler to use and requires less `if` statements.

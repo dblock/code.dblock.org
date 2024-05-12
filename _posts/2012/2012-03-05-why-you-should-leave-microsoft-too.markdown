@@ -55,4 +55,4 @@ In my experience, few people return to their mother ship. But it’s there.
 
 #### Want to Jump?
 
-None of this may be for you. But, as always, my offer to help you stands. If you want to work for any of the companies in the [NYTM.org list](https://nytm.org/made/) after reading this post, drop me a note. I’ll help you with direct introductions to the hiring managers.
+None of this may be for you. But, as always, my offer to help you stands. If you want to work for any of the companies in the [NYTM.org list](https://web.archive.org/web/20170112034617/https://nytm.org/made/) after reading this post, drop me a note. I’ll help you with direct introductions to the hiring managers.

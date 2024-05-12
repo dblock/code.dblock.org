@@ -11,7 +11,7 @@ dblog_post_id: 191
 
 Now that we have a Rake task to copy MongoDB databases, we are facing the next problem. We store images on Amazon S3 and each environment has its own S3 bucket. So copying data from production to staging also needs to synchronize the _production_ and the _staging_ S3 buckets, hopefully very quickly for a very large number of files.
 
-We’ll inspire ourselves from [this post](https://www.pedaldrivenprogramming.com/2011/02/copy-contents-of-one-s3-bucket-to-another//) and use [right_aws](https://github.com/rightscale/right_aws) to connect to S3 in Ruby. Our S3 keys are stored in the _heroku.yml_ file, your mileage may vary.
+We’ll inspire ourselves from [this post](https://web.archive.org/web/20130801073007/https://www.pedaldrivenprogramming.com/2011/02/copy-contents-of-one-s3-bucket-to-another/) and use [right_aws](https://github.com/rightscale/right_aws) to connect to S3 in Ruby. Our S3 keys are stored in the _heroku.yml_ file, your mileage may vary.
 
 {% highlight ruby %}
 def s3i

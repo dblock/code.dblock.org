@@ -140,11 +140,11 @@ The best way to try our app out is to use a [GraphQL IDE](https://github.com/and
 
 ![]({{ site.url }}/images/posts/2017/2017-10-23-building-and-consuming-a-graphql-api-in-ruby-on-rails/ide.png)
 
-You can use various clients to consume the API from our applications, including [graphlient](https://github.com/ashkan18/graphlient) or [graphql-client](https://github.com/github/graphql-client).
+You can use various clients to consume the API from our applications, including [graphlient](https://github.com/ashkan18/graphlient) or [graphql-client](https://github.com/github-community-projects/graphql-client).
 
 ### Tests
 
-Add [graphlient](https://github.com/ashkan18/graphlient), which is a small library built on top of [graphql-client](https://github.com/github/graphql-client) and that's a bit easier to use.
+Add [graphlient](https://github.com/ashkan18/graphlient), which is a small library built on top of [graphql-client](https://github.com/github-community-projects/graphql-client) and that's a bit easier to use.
 
 Define a shared client context in [spec/support/graphql/client.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/spec/support/graphql/client.rb).
 

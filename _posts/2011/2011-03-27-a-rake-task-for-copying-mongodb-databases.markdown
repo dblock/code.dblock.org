@@ -82,7 +82,7 @@ end
 
 #### No Admin for you on MongoHQ
 
-If your destination database is on [MongoHQ](http://mongohq.com) you will get the following error.
+If your destination database is on [MongoHQ](https://web.archive.org/web/20110202114207/https://mongohq.com/home) you will get the following error.
 
 ```
 Database command 'copydbgetnonce' failed: {"assertion"=>"unauthorized db:admin lock type:1 client:ip",

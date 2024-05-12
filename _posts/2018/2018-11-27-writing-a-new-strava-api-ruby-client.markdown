@@ -5,7 +5,7 @@ date: 2018-11-27
 tags: [strava, api, ruby]
 comments: true
 ---
-Despite an existing Swagger-compatible API, most of Strava interactions written in Ruby don't use any auto-generated code and prefer [strava-api-v3](https://github.com/jaredholdcroft/strava-api-v3), a thin client that covers the majority of the Strava API. This is a much cleaner than any swagger-generated mess, but only comes with bare minimum extras. For example, the client can retrieve an activity, but does not have any code to convert a distance from meters to miles or calculate an athlete's pace. It will also leave you having to refer to the Strava documentation on whether `distance` is in meters, yards or feet.
+Despite an existing Swagger-compatible API, most of Strava interactions written in Ruby don't use any auto-generated code and prefer [strava-api-v3](https://rubygems.org/gems/strava-api-v3) (update: this gem was yanked in 2024), a thin client that covers the majority of the Strava API. This is a much cleaner than any swagger-generated mess, but only comes with bare minimum extras. For example, the client can retrieve an activity, but does not have any code to convert a distance from meters to miles or calculate an athlete's pace. It will also leave you having to refer to the Strava documentation on whether `distance` is in meters, yards or feet.
 
 That seems reasonable for a thin client, but I've already had to copy-paste a ton of code between [publishing my runs to github pages](/2018/02/17/auto-publishing-strava-runs-to-github-pages.html) and my [Strava Slack bot](https://code.dblock.org/2018/04/03/slava-slack-bot-for-strava.html). I considered adding that code to the strava-api-v3 client, but found its implementation gross enough to write a brand new one.
 

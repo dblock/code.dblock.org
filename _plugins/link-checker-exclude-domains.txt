@@ -15,3 +15,5 @@ www.nytimes.com
 web.archive.org
 www.skillshare.com
 bfy.tw
+www.reddit.com
+leetcode.com
