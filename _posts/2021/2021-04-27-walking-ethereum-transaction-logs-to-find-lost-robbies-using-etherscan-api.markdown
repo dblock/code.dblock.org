@@ -12,7 +12,7 @@ During the event [SuperRare](https://superrare.com/) partnered with [Jason Baile
 
 A small handful of these original NFTs are known to still exist. We'll call them "Robbies". On April 5th, 2021, [frame 269](https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-269-459) sold for 125ETH ($265K). 
 
-If you enjoyed the forensics in [Rare “Lost Robbie” AI Nude NFTs Worth Millions Surface](https://digitalartcollector.com/rare-lost-robbie-ai-nude-nfts-worth-millions-surface/), or if you just want to know how SuperRare or other marketplaces display token history, this post is for you. We'll walk the Ethereum blockchain transaction logs to find all the Robbies using [etherscan-api](https://www.npmjs.com/package/etherscan-api) ([Etherscan API](https://etherscan.io/apis)). 
+If you enjoyed the forensics in [Rare “Lost Robbie” AI Nude NFTs Worth Millions Surface](https://web.archive.org/web/20211022010940/https://digitalartcollector.com/rare-lost-robbie-ai-nude-nfts-worth-millions-surface/), or if you just want to know how SuperRare or other marketplaces display token history, this post is for you. We'll walk the Ethereum blockchain transaction logs to find all the Robbies using [etherscan-api](https://www.npmjs.com/package/etherscan-api) ([Etherscan API](https://etherscan.io/apis)). 
 
 Please do note that I am no expert, and that I would greatly appreciate suggestions and fixes to my approach and [the code](https://github.com/dblock/lost-robbies).
 

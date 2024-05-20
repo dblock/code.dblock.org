@@ -51,8 +51,7 @@ I signed up and watched a webinar.
 
 Questions?
 
-Become my patron at any level via [Patreon](https://www.patreon.com/dblock) and send me an e-mail! All proceeds donated to Charity.
-
+[Sponsor me via GitHub](https://github.com/sponsors/dblock) and send me an e-mail!
 
 
 

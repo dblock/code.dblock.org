@@ -9,7 +9,7 @@ In [opensearch-api-specification#260](https://github.com/opensearch-project/open
 
 First, I followed the [getting started with eslint guide](https://eslint.org/docs/latest/use/getting-started), which essentially tells you to run `npm init @eslint/config@latest`.
 
-Rewrite `eslint.config.mjs` using the newer flat configuration format, making sure that the `ignores` and `rules` section appears last, as it will overwrite the defaults. For my TypeScript project, see the complete file [here](https://github.com/opensearch-project/opensearch-api-specification/blob/main/tools/eslint.config.mjs).
+Rewrite `eslint.config.mjs` using the newer flat configuration format, making sure that the `ignores` and `rules` section appears last, as it will overwrite the defaults. For my TypeScript project, see the complete file [here](https://github.com/opensearch-project/opensearch-api-specification/blob/main/eslint.config.mjs).
 
 {% highlight javascript %}
 export default [
