@@ -5,9 +5,9 @@ date: 2023-10-16
 tags: [opensearch]
 comments: true
 ---
-OpenSearch clients implement various high-level REST DSLs to invoke OpenSearch APIs. Efforts such as [opensearch-clients#19](https://github.com/opensearch-project/opensearch-clients/issues/19) aim at generating these from spec in order to always be up-to-date with the default distribution, including plugins. However this is a game that cannot be won. Clients will always lag behind, and users often find themselves in a situation that requires them to invoke an API that is not supported by the client. Thus, in [opensearch-clients#62](https://github.com/opensearch-project/opensearch-clients/issues/62) I proposed we level up all OpenSearch language clients in their capability to make raw JSON REST requests. You help on these issues would be very much appreciated.
+OpenSearch clients implement various high-level REST DSLs to invoke OpenSearch APIs. Efforts such as [opensearch-clients#19](https://github.com/opensearch-project/opensearch-clients/issues/19) aim at generating these from spec in order to always be up-to-date with the default distribution, including plugins. However this is a game that cannot be won. Clients will always lag behind, and users often find themselves in a situation that requires them to invoke an API that is not supported by the client. Thus, in [opensearch-clients#62](https://github.com/opensearch-project/opensearch-clients/issues/62) I proposed we level up all OpenSearch language clients in their capability to make raw JSON REST requests. I am happy to report that six months later we have support for sending raw JSON to OpenSearch in all language clients!
 
-In this post I'll keep current state with links to working samples, similar to [Making AWS SigV4 Authenticated Requests to Amazon OpenSearch](/2022/07/11/making-sigv4-authenticated-requests-to-managed-opensearch.html). For all these I am running a local copy of OpenSearch 2.9 in docker.
+In this post I'll keep current state with links to working samples, similar to [Making AWS SigV4 Authenticated Requests to Amazon OpenSearch](/2022/07/11/making-sigv4-authenticated-requests-to-managed-opensearch.html). For many of these I am running a local copy of OpenSearch 2.9 in docker.
 
 {% highlight bash %}
 docker run \
@@ -143,39 +143,159 @@ curl -k -u admin:admin \
 
 #### [opensearch-java](https://github.com/opensearch-project/opensearch-java)
 
+The Java client added `.generic()` that returns a `OpenSearchGenericClient` in [2.10.0](https://github.com/opensearch-project/opensearch-java/pull/910) and fixed the implementation for AWS transport options in [2.10.3](https://github.com/opensearch-project/opensearch-java/pull/978).
+
 {% highlight java %}
+OpenSearchClient client = new OpenSearchClient(...)
+
+OpenSearchGenericClient genericClient = client
+  .generic()
+  .withClientOptions(ClientOptions.throwOnHttpErrors());
 {% endhighlight %}
 
-Feature request, [opensearch-java#257](https://github.com/opensearch-project/opensearch-java/issues/257).
+The client can be used to `execute` a simple `GET` request/response.
+
+{% highlight java %}
+Response response = genericClient.execute(
+  Requests.builder()
+    .endpoint("/")
+    .method("GET")
+    .build());
+
+System.out.println(response.getBody().get().bodyAsString());
+{% endhighlight %}
+
+Sending JSON data is similar.
+
+{% highlight java %}
+Requests.builder()
+  .endpoint(index + "/_doc/1")
+  .method("POST")
+  .json("{\"director\":\"Bennett Miller\",\"title\":\"Moneyball\",\"year\":2011}")
+  .build();
+{% endhighlight %}
+
+You can parse responses as generic JSON as well. Here's a search example.
+
+{% highlight java %}
+Response searchResponse = genericClient.execute(
+  Requests.builder().endpoint(index + "/_search").method("POST")
+    .json("{"
+    + " \"query\": {"
+    + "  \"match\": {"
+    + "    \"title\": {"
+    + "      \"query\": \"Moneyball 2\""
+    + "    }"
+    + "  }"
+    + " }"
+    + "}")
+    .build());
+
+  JsonNode json = searchResponse.getBody()
+    .map(b -> Bodies.json(b, JsonNode.class, client._transport().jsonpMapper()))
+    .orElse(null);
+
+  JsonNode hits = json.get("hits").get("hits");
+  for (int i = 0; i < hits.size(); i++) {
+    System.out.println(hits.get(i).get("_source").toString());
+  }
+{% endhighlight %}
+
+See the [updated documentation](https://github.com/opensearch-project/opensearch-java/blob/main/guides/generic.md) and [working demo](https://github.com/dblock/opensearch-java-client-demo) for more information.
 
 ### Ruby
 
 #### [opensearch-ruby](https://github.com/opensearch-project/opensearch-ruby)
 
+The Ruby client added `.http` in 3.1.0.
+
+A simple `GET`.
+
 {% highlight ruby %}
+client = OpenSearch::Client.new(...)
+
+info = client.http.get('/')
+puts info
 {% endhighlight %}
 
-Feature request, [opensearch-ruby#209](https://github.com/opensearch-project/opensearch-ruby/issues/209). Should also be possible via `client.perform_request`.
+Create a document.
+
+{% highlight ruby %}
+document = { title: 'Moneyball', director: 'Bennett Miller', year: 2011 }
+client.http.post("/movies/_doc/1", body: document)
+{% endhighlight %}
+
+Search for a document.
+
+{% highlight ruby %}
+results = client.http.post(
+  "/movies/_search", 
+  body: { query: { match: { director: 'miller' } } }
+)
+
+results['hits']['hits'].each do |hit|
+  puts hit
+end
+{% endhighlight %}
+
+Raw JSON also works with `bulk` by automatically transforming arrays into nd-json.
+
+{% highlight ruby %}
+body = [
+  { index: { _index: 'books', _id: 1 } },
+  { title: 'The Lion King', year: 1994 },
+  { index: { _index: 'books', _id: 2 } },
+  { title: 'Beauty and the Beast', year: 1991 }
+]
+
+client.http.post('_bulk', body: body)
+{% endhighlight %}
+
+See the [updated documentation](https://github.com/opensearch-project/opensearch-ruby/blob/main/guides/json.md) and [working demo](https://github.com/dblock/opensearch-ruby-client-demo) for more information.
 
 ### Node.js
 
 #### [opensearch-js](https://github.com/opensearch-project/opensearch-js)
 
+The Node.js client has long supported `client.transport.perform_request` and wrapped it up in the `http` namespace in [2.5.0](https://github.com/opensearch-project/opensearch-js/pull/649).
+
 {% highlight typescript %}
+info = client.http.get("/")
+print(f"Welcome to {info["version"]["distribution"]} {info["version"]["number"]}!")
 {% endhighlight %}
 
-Feature request, [opensearch-js#631](https://github.com/opensearch-project/opensearch-js/issues/631). Should also be possible via `transport.request`.
+Use `body` to send JSON data.
+
+{% highlight typescript %}
+q = "miller"
+
+query = {
+  "size": 5,
+  "query": {
+    "multi_match": {
+      "query": q,
+      "fields": ["title^2", "director"]
+    }
+  }
+}
+
+client.http.post("/movies/_search", body = query)
+{% endhighlight %}
+
+See the [updated documentation](https://github.com/opensearch-project/opensearch-py/blob/main/guides/json.md) and [working demo](https://github.com/opensearch-project/opensearch-py/tree/main/samples/json) for more information.
 
 ### Python
 
 #### [opensearch-py](https://github.com/opensearch-project/opensearch-py)
 
-The Python client exposes `client.transport.perform_request`.
+The Python client has long exposed `client.transport.perform_request` and wrapped it up in an `http` namespace in [2.4.0](https://github.com/opensearch-project/opensearch-py/pull/544).
 
 {% highlight python %}
-info = client.transport.perform_request('GET', '/')
+info = client.http.get('/')
 print(f"Welcome to {info['version']['distribution']} {info['version']['number']}!")
 {% endhighlight %}
+
+Create a document.
 
 {% highlight python %}
 document = {
@@ -184,8 +304,10 @@ document = {
   'year': '2011'
 }
 
-client.transport.perform_request("PUT", "/movies/_doc/1?refresh=true", body = document)
+client.http.put("/movies/_doc/1?refresh=true", body = document)
 {% endhighlight %}
+
+Search for a document.
 
 {% highlight python %}
 query = {
@@ -198,23 +320,57 @@ query = {
   }
 }
 
-client.transport.perform_request("POST", "/movies/_search", body = query)
+client.http.post("/movies/_search", body = query)
 {% endhighlight %}
+
+Delete an index.
 
 {% highlight python %}
-client.transport.perform_request("DELETE", "/movies")
+client.http.delete("/movies")
 {% endhighlight %}
 
-See the [updated documentation](https://github.com/opensearch-project/opensearch-py/blob/main/guides/json.md) and [working demo](https://github.com/opensearch-project/opensearch-py/tree/main/samples/json) for more information. I also [made a PR](https://github.com/opensearch-project/opensearch-py/pull/544) for a higher level DSL.
+See the [updated documentation](https://github.com/opensearch-project/opensearch-py/blob/main/guides/json.md) and [working demo](https://github.com/opensearch-project/opensearch-py/tree/main/samples/json) for more information.
 
 ### DotNet
 
 #### [opensearch-net](https://github.com/opensearch-project/opensearch-net)
 
+The .NET client added a high level DSL in [1.6.0](https://github.com/opensearch-project/opensearch-net/pull/447).
+
 {% highlight csharp %}
+var info = await client.Http.GetAsync<DynamicResponse>("/");
+Console.WriteLine($"Welcome to {info.Body.version.distribution} {info.Body.version.number}!");
 {% endhighlight %}
 
-Feature request, [opensearch-net#403](https://github.com/opensearch-project/opensearch-net/issues/403).
+Search for a document.
+
+{% highlight csharp %}
+const string q = "miller";
+
+var query = new
+{
+  size = 5,
+  query = new { 
+    multi_match = new { 
+      query = q, 
+      fields = new[] { 
+        "title^2", "director" 
+      } 
+    } 
+  }
+};
+
+var search = await client.Http.PostAsync<DynamicResponse>(
+  "/movies/_search", 
+  d => d.SerializableBody(query)
+);
+
+foreach (var hit in search.Body.hits.hits) {
+  Console.WriteLine($"Search Hit: {hit["_source"]["title"]}");
+}
+{% endhighlight %}
+
+See the [updated documentation](https://github.com/opensearch-project/opensearch-net/blob/main/guides/json.md) and [working demo](https://github.com/opensearch-project/opensearch-net/tree/main/samples/Samples/RawJson) for more information.
 
 ### Rust
 
@@ -298,16 +454,74 @@ See the [updated user guide](https://github.com/opensearch-project/opensearch-rs
 
 #### [opensearch-php](https://github.com/opensearch-project/opensearch-php)
 
+The PHP client has added a `request()` wrapper in [2.3.0](https://github.com/opensearch-project/opensearch-php/pull/177).
+
 {% highlight php %}
+$info = $client->request('GET', '/');
+
+echo "{$info['version']['distribution']}: {$info['version']['number']}\n";
+
+$indexName = "movies";
+
+$client->request('POST', "/$indexName/_doc/1", [
+    'body' => [
+        'title' => 'Moneyball',
+        'director' => 'Bennett Miller',
+        'year' => 2011
+    ]
+]);
+
+$result = $client->request('POST', "/$indexName/_search", [
+    'body' => [
+        'query' => [
+            'multi_match' => [
+                'query' => 'miller',
+                'fields' => ['title^2', 'director']
+            ]
+        ]
+    ]
+]);
+
+print_r($result['hits']['hits'][0], false);
+
+$client->request('DELETE', "/$indexName/_doc/1");
+
+$client->request('DELETE', "/$indexName");
 {% endhighlight %}
 
-Feature request, [opensearch-php#166](https://github.com/opensearch-project/opensearch-php/issues/166).
+See the [updated documentation](https://github.com/opensearch-project/opensearch-php/blob/main/guides/raw-request.md) and a [working demo](https://github.com/dblock/opensearch-php-client-demo) for more information. A higher level DSL is a feature request, [opensearch-php#192](https://github.com/opensearch-project/opensearch-php/issues/192).
 
 ### Go
 
 #### [opensearch-go](https://github.com/opensearch-project/opensearch-go)
 
+The go client has long supported `Client.NewRequest` and `Perform`.
+
 {% highlight go %}
+infoRequest, _ := http.NewRequest("GET", "/", nil)
+infoResponse, _ := client.Client.Perform(infoRequest)
+resBody, _ := io.ReadAll(infoResponse.Body)
+fmt.Printf("client info: %s\n", resBody)
 {% endhighlight %}
 
-Feature request, [opensearch-go#395](https://github.com/opensearch-project/opensearch-go/issues/395).
+Sending data is similar.
+
+{% highlight go %}
+query := strings.NewReader(`{
+  "size": 5,
+  "query": {
+    "multi_match": {
+      "query": "miller",
+        "fields": ["title^2", "director"]
+      }
+    }
+   }`)
+
+searchRequest, _ := http.NewRequest("POST", "/movies/_search", query)
+searchRequest.Header["Content-Type"] = []string{"application/json"}
+searchResp, _ := client.Client.Perform(searchRequest)
+searchRespBody, _ := io.ReadAll(searchResp.Body)
+fmt.Println("search: ", string(searchRespBody))
+{% endhighlight %}
+
+See the [updated documentation](https://github.com/opensearch-project/opensearch-go/blob/main/guides/json.md) for more information, and please contribute a working demo to the project or [opensearch-go-client-demo](https://github.com/dblock/opensearch-go-client-demo) as I am too lazy to write [all the error handlers](https://code.dblock.org/2022/12/27/programming-languages.html).
