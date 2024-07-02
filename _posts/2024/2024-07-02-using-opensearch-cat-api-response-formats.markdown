@@ -119,5 +119,13 @@ $ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?form
 ...
 {% endhighlight %}
 
-Yes, the data is prefixed with `:)`. I tried to find a command-line processor for it, and even build [unsmile](https://github.com/pierre/libsmile) on MacOS (arm64), but [failed](https://github.com/pierre/libsmile/issues/5).
+Yes, the data is prefixed with `:)`. Use [smile-tool](https://www.npmjs.com/package/smile-tool) to decode the data.
+
+{% highlight bash %}
+$ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?format=smile | smile-tool -d
+{% endhighlight %}
+
+{% highlight json %}
+[{"health": "green", "status": "open", "index": ".plugins-ml-model-group", "uuid": "LDXIur-YTqim9fiEHLJZ1w", "pri": "1", "rep": "0", "docs.count": "0", "docs.deleted": "0", "store.size": "10.3kb", "pri.store.size": "10.3kb"}, {"health": "yellow", "status": "open", "index": "security-auditlog-2024.05.30", "uuid": "7yBZpI7HS22-6mZtPrVg2g", "pri": "1", "rep": "1", "docs.count": "62", "docs.deleted": "0", "store.size": "78.8kb", "pri.store.size": "78.8kb"}]
+{% endhighlight %}
 
