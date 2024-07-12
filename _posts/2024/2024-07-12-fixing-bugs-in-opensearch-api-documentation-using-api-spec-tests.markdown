@@ -49,9 +49,7 @@ Then, I tried using the query parameters.
       index: movies
       ignore_unavailable: true
       allow_no_indices: false
-      expand_wildcard: all
-    response:
-      status: 200
+      expand_wildcard: all # incorrect
 {% endhighlight %}
 
 This failed.
@@ -83,6 +81,19 @@ ERROR   refresh.yaml (.../tests/indices/refresh.yaml)
 {% endhighlight %}
 
 The failure is with the `expand_wildcard` parameter, which is misspelled and should be `expand_wildcards`.
+
+{% highlight yaml %}
+- synopsis: Refresh an index.
+    path: /{index}/_refresh
+    method: POST
+    parameters:
+      index: movies
+      ignore_unavailable: true
+      allow_no_indices: false
+      expand_wildcards: all
+    response:
+      status: 200
+{% endhighlight %}
 
 The corrected test passes.
 
