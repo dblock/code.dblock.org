@@ -141,7 +141,7 @@ return (
 
 ### Not Taking Advantage of Redwood.js
 
-So far I used Redwood.js similarly to how one would use Rails without models, views or controllers, just to host some Ruby code on a web page. Redwood has lots of features, including cells and side-loading. Seems like a missed opportunity! So I asked the Redwood.js community to [help me leverage Redwood.js better](https://community.redwoodjs.com/t/how-can-i-wire-up-a-graphql-api-to-redwoodjs/1112). The answer is more generally described in the documentation under [Server-Side API Integration](https://redwoodjs.com/cookbook/using-a-third-party-api#server-side-api-integration).
+So far I used Redwood.js similarly to how one would use Rails without models, views or controllers, just to host some Ruby code on a web page. Redwood has lots of features, including cells and side-loading. Seems like a missed opportunity! So I asked the Redwood.js community to [help me leverage Redwood.js better](https://community.redwoodjs.com/t/how-can-i-wire-up-a-graphql-api-to-redwoodjs/1112). The answer is more generally described in the documentation under [Server-Side API Integration](https://web.archive.org/web/20200426200719/https://redwoodjs.com/cookbook/using-a-third-party-api#server-side-api-integration).
 
 ### Expose Restaurants Side-Loading
 

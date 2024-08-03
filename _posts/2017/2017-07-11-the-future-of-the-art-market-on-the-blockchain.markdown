@@ -29,7 +29,7 @@ Perhaps the most obvious and natural application of Blockchain in the art market
 
 #### How can I make money selling my work?
 
-Distribution and content monetization, supporting multiple actors ranging from brokers to ad networks is the domain of [Monegraph](https://monegraph.com).
+Distribution and content monetization, supporting multiple actors ranging from brokers to ad networks is the domain of [Monegraph](https://web.archive.org/web/20170714042636/https://monegraph.com/).
 
 #### Where does this work come from?
 
@@ -37,7 +37,7 @@ Provenance can significantly increase (eg. a work was bought my a major collecto
 
 #### Is this work authentic?
 
-Reducing risks around authenticity is the mission of [Everledger](https://www.everledger.io), [TagSmart](https://www.tagsmart.com) and [Verisart](https://www.verisart.com). These can work well in tandem with technology that uniquely identifies a work, such as [Artmyn](https://artmyn.com) that can 3D-scan a work in-depth and Provenire that uses synthetic DNA polymers to specifically and uniquely mark artwork.
+Reducing risks around authenticity is the mission of [Everledger](https://web.archive.org/web/20171123115834/https://www.everledger.io/), [TagSmart](https://www.tagsmart.com) and [Verisart](https://www.verisart.com). These can work well in tandem with technology that uniquely identifies a work, such as [Artmyn](https://artmyn.com) that can 3D-scan a work in-depth and Provenire that uses synthetic DNA polymers to specifically and uniquely mark artwork.
 
 #### Who is using a copy of this digital work?
 

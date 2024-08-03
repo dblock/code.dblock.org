@@ -26,5 +26,5 @@ Fortunately this is open-source software and where I fail others can pickup the 
 
 - [https://mskb.pkisolutions.com/kb/896861](https://mskb.pkisolutions.com/kb/896861)
 - [https://technet.microsoft.com/en-us/library/dd566199(v=WS.10).aspx](https://technet.microsoft.com/en-us/library/dd566199(v=WS.10).aspx)
-- [https://support.microsoft.com/kb/326040](https://support.microsoft.com/kb/326040)
+- [https://support.microsoft.com/kb/326040](https://web.archive.org/web/20111231164659/https://support.microsoft.com/kb/326040)
 

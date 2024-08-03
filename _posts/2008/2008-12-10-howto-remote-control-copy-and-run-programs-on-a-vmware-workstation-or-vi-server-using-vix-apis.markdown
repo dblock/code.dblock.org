@@ -23,7 +23,7 @@ There're two types of APIs.
 
 #### What do you need?
 
-- Either VMWare [Workstation 6.5](https://www.vmware.com/download/ws/), a VI environment (I use ESX), or both.
+- Either VMWare [Workstation 6.5](https://archive.org/details/vmwareworkstation6.5.5328052), a VI environment (I use ESX), or both.
 - VMWare ViX. This is the SDK, obtained from  [here](https://customerconnect.vmware.com/downloads/get-download?downloadGroup=VIXAPI114). The new 1.6.2 version is required for VI support.
 
 #### Connecting to a VMWare Workstation or ESX Server
