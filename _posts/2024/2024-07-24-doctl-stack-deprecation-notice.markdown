@@ -9,17 +9,16 @@ I use [DigitalOcean](https://m.do.co/c/5b26011f9a9b) to [run a bunch of apps](ht
 
 Yesterday, they sent me an email with a menacing _"Ubuntu 18 is no longer supported and so it’s not receiving security updates."_ note. To be fair, Ubuntu 18 is very old.
 
-Their email included instructions to go to settings to find out what stack you're using. Let's find out what apps use what stack on the command line to save time using [doctl](https://docs.digitalocean.com/reference/doctl/).
+Their email included instructions to go to settings to find out what stack you're using. Let's find out what apps use what stack on the command line to save time using [doctl](https://docs.digitalocean.com/reference/doctl/) and [yq](https://github.com/mikefarah/yq).
 
 {% highlight bash %}
-$ for app_id in $(doctl apps list --no-header | cut -d' ' -f1); \
-    do echo $app_id; \
-    doctl apps spec get $app_id | yq .features; \
+$ for app_id in $(doctl apps list --no-header | cut -d' ' -f1); do \
+    doctl apps spec get $app_id | yq ".name,.features"; \
     done
 
-110f5185-5570-444e-819c-9651d574c20c
+app-1
 - buildpack-stack=ubuntu-22
-e74dcb40-f10e-4ed1-87e1-0ffadd983cea
+app-2
 - buildpack-stack=ubuntu-18
 {% endhighlight %}
 
