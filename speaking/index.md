@@ -11,6 +11,8 @@ I speak frequently on topics ranging from the intersection of technology and art
 
 ## Recorded Talks
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jinLuHur9ws?si=zJBiWjox8IoGRFwB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=jinLuHur9ws">Linux Foundation Open Source Summit EU 2024: Innovating in Open Source in Your Enterprise</a>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UsN7YkCCw-c?si=7yEUnbxGIch1ZFfZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=UsN7YkCCw-c&list=PLzgr9zSpws14zCETcKtCBwcOuTGMccpV9&index=20">OpenSearchCon EU 2024: How to become an OpenSearch Project Repo Maintainer</a>
 
 <a href='https://topenddevs.com/podcasts/ruby-rogues/episodes/understanding-framework-flexibility-ruby-617'>![]({{ site.url }}/images/posts/2023/2023-12-13-ruby-rogues/ruby-rogues.png)</a><br>
