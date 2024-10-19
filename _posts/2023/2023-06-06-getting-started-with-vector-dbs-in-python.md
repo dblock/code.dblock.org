@@ -16,6 +16,7 @@ In alphabetical order.
 
 - [Chroma](#chroma)
 - [ClickHouse](#clickhouse)
+- [MongoDB](#mongodb)
 - [MyScale](#myscale)
 - [OpenSearch](#opensearch)
 - [pgVector](#pgvector)
@@ -107,7 +108,7 @@ results = client.post(
 print(results)
 {% endhighlight %}
 
-You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/chroma/hello.py).
+A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/chroma/hello.py).
 
 {% highlight bash %}
 ENDPOINT=http://localhost:8000 poetry run ./hello.py
@@ -197,7 +198,7 @@ results = client.post(endpoint, data=
 print(results.text)  
 {% endhighlight %}
 
-You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/click_house/hello.py).
+A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/click_house/hello.py).
 
 {% highlight bash %}
 poetry run ./hello.py
@@ -221,11 +222,115 @@ vec2	[0.2,0.3,0.4]	{'genre':'action'}
 < POST http://localhost:8123 - 200
 {% endhighlight %}
 
+### MongoDB
+
+[MongoDB Atlas](https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-overview/) enables semantic, hybrid, generative search, and supports filtering in the serverless version. Sign up on [on their website](https://cloud.mongodb.com/) and create a new database on the free tier. 
+
+Connecting to MongoDB Atlas using [pymongo](https://pymongo.readthedocs.io/en/stable/) is similar to any MongoDB.
+
+{% highlight python %}
+client = MongoClient(
+    os.environ["ENDPOINT"],
+    username=os.environ["USERNAME"],
+    password=os.environ["PASSWORD"]
+)
+
+print(f"Connected to MongoDB Atlas {client.server_info()['version']}.")
+{% endhighlight %}
+
+Create a collection.
+
+{% highlight python %}
+coll = db.create_collection("vectors")
+{% endhighlight %}
+
+A separate search index is needed for vector search. While indexes are attached to a collection, they also have a lifecycle of their own and take several seconds to come online.
+
+{% highlight python %}
+model = SearchIndexModel(
+    definition={
+        "dynamic": True,
+        "fields": [
+            {
+                "type": "vector",
+                "numDimensions": 3,
+                "path": "values",
+                "similarity": "cosine"
+            }
+        ]
+    },
+    name="vector_index",
+    type="vectorSearch"
+)
+
+coll.create_search_index(model)
+{% endhighlight %}
+
+Insert vectors. Note that indexing isn't immediate, so search results will not be available until the search index catches up.
+
+{% highlight python %}
+vectors = [
+    {
+        "id": "vec1",
+        "values": [0.1, 0.2, 0.3],
+        "metadata": {"genre": "drama"},
+    },
+    {
+        "id": "vec2",
+        "values": [0.2, 0.3, 0.4],
+        "metadata": {"genre": "action"},
+    },
+]
+
+for vector in vectors:
+    coll.insert_one(vector)
+{% endhighlight %}
+
+Use an aggregation to search for vectors.
+
+{% highlight python %}
+results = coll.aggregate(
+    [
+        {
+            '$vectorSearch': {
+                "index": "vector_index",
+                "path": "values",
+                "queryVector": [0.25, 0.3, 0.5],
+                "numCandidates": 5,
+                "limit": 5,
+            }
+        }
+    ]
+)
+
+for result in results:
+    print(result)
+{% endhighlight %}
+
+A working sample that waits for the index to come online is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/mongodb/hello.py).
+
+{% highlight bash %}
+poetry install
+USERNAME=... PASSWORD... ENDPOINT=mongodb+srv://vector-cluster.xyz.mongodb.net poetry run ./hello.py
+
+Connected to MongoDB Atlas 7.0.14.
+Using vectordb-hello-world.
+Creating a collection ...
+Using the vectors collection.
+Creating a search index ...
+Waiting for the search index to come online ... READY.
+Inserted 2 record(s).
+Searching ........ 2 result(s)
+{'_id': ObjectId('671394d5e17d031610d84b2e'), 'id': 'vec2', 'values': [0.2, 0.3, 0.4], 'metadata': {'genre': 'action'}}
+{'_id': ObjectId('671394d5e17d031610d84b2d'), 'id': 'vec1', 'values': [0.1, 0.2, 0.3], 'metadata': {'genre': 'drama'}}
+Cleaning up ... DONE.
+{% endhighlight %}
+
 ### MyScale
 
 [MyScale](https://myscale.com) performs vector search in SQL, and [claims](https://web.archive.org/web/20230517145148/https://blog.myscale.com/2023/05/17/myscale-outperform-special-vectordb/) to outperform other solutions by using a proprietary algorithm called `MSTG`. MyScale is built on the open-source ClickHouse, so the code is almost identical, except that one uses `VECTOR INDEX values_index values TYPE MSTG`.
 
-Sign up [on their website](https://myscale.com) for a test cluster, note the username and password. You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/my_scale/hello.py).
+Sign up [on their website](https://myscale.com) for a test cluster, note the username and password. A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/my_scale/hello.py).
 
 {% highlight bash %}
 USERNAME=... PASSWORD=... ENDPOINT=https://...aws.myscale.com:443 poetry run ./hello.py
@@ -363,7 +468,7 @@ results = client.post(
 ).json()
 {% endhighlight %}
 
-You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/open_search/hello.py).
+A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/open_search/hello.py).
 
 {% highlight bash %}
 USERNAME=admin PASSWORD=admin ENDPOINT=https://localhost:9200 poetry run src/open_search/hello.py
@@ -451,7 +556,7 @@ Finally, drop this database.
 await conn.execute(f"DROP DATABASE \"{database}\"")
 {% endhighlight %}
 
-You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/pg_vector/hello.py).
+A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/pg_vector/hello.py).
 
 {% highlight bash %}
 PGPORT=5433 PGUSER=postgres PGPASSWORD=password poetry run ./hello.py
@@ -549,7 +654,7 @@ results = client.post(
 ).json()
 {% endhighlight %}
 
-You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/pinecone/hello.py).
+A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/pinecone/hello.py).
 
 {% highlight bash %}
 API_KEY=... PROJECT_ID=... ENDPOINT=https://us-west4-gcp-free.pinecone.io poetry run src/pinecone/hello.py
@@ -651,7 +756,7 @@ client.delete(
 )
 {% endhighlight %}
 
-You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/qdrant/hello.py).
+A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/qdrant/hello.py).
 
 {% highlight bash %}
 API_KEY=... ENDPOINT=https://my-cluster.cloud.qdrant.io:6333 poetry run src/qdrant/hello.py
@@ -760,7 +865,7 @@ Finally, delete the index with its vectors.
 r.ft(index_name).dropindex(True)
 {% endhighlight %}
 
-You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/redis/hello.py).
+A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/redis/hello.py).
 
 {% highlight bash %}
 poetry run ./hello.py
@@ -912,7 +1017,7 @@ results = client.get(
 print(results["root"]["children"][0]["fields"])
 {% endhighlight %}
 
-You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/vespa/hello.py).
+A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/vespa/hello.py).
 
 {% highlight bash %}
 ENDPOINT=https://localhost:8080 CONFIG_ENDPOINT=https://localhost:19071 poetry run src/vespa/hello.py
@@ -1016,7 +1121,7 @@ client.delete(
 )
 {% endhighlight %}
 
-You can see and run a [working sample from here](https://github.com/dblock/vectordb-hello-world/blob/main/src/weaviate/hello.py).
+A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/weaviate/hello.py).
 
 {% highlight bash %}
 API_KEY=... ENDPOINT=https://my-cluster.weaviate.network poetry run src/weaviate/hello.py
