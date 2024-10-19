@@ -24,7 +24,7 @@ app-2
 
 Should I upgrade now, or wait till the second and third notice?
 
-Update: many of my Ruby apps required a Ruby 3.x upgrade before booting successfully on Ubuntu 22.
+Update: many of my Ruby apps required a Ruby 3.x upgrade before booting successfully on Ubuntu 22. Links to the upgrade diffs/commits below.
 
 * [slack-strava](https://github.com/dblock/slack-strava/compare/55ccd64e130d504277b3522af1b72ae70e797cd7..5a595b2ba1c736d52a7b4f936585b2ce2deb4230)
 * [slack-sup2](https://github.com/dblock/slack-sup2/commit/5bf423375cd9e390a76d7a1fdf828edbaabe46b5)
@@ -34,3 +34,4 @@ Update: many of my Ruby apps required a Ruby 3.x upgrade before booting successf
 * [discord-strava](https://github.com/dblock/discord-strava/compare/bba2ce971e0142ff5e56c8244df79e9b3a3d160b..db09ffe396e4ad4ee7cb42c16a4766cda7bbd70c)
 * [slack-invite](https://github.com/vestris/slack-invite/commit/744ec76aedbcd0548ba93b57126db29abcd98686)
 * [slack-arena](https://github.com/dblock/slack-arena/commit/d08efa5d4913c22e40aec4ee6d03472002306877)
+* [slack-moji](https://github.com/dblock/slack-moji/commit/e240efa93305334c06e7ea5dc1d0322824f864a6)
