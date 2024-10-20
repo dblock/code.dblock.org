@@ -24,7 +24,7 @@ app-2
 
 Should I upgrade now, or wait till the second and third notice?
 
-Update: many of my Ruby apps required a Ruby 3.x upgrade before booting successfully on Ubuntu 22. Links to the upgrade diffs/commits below.
+**Update 10/24**: many of my Ruby apps required an upgrade to Ruby 3.3 before booting successfully on Ubuntu 22, failing with an `Faraday::SSLError: SSL_CTX_load_verify_file` error, caused by various HTTP libraries attempting to set their SSL certificate paths in older versions. There were many related changes as a consequence of upgrading Mongoid and ActiveSupport, RuboCop, slack-ruby-client, Faraday, and others. Links to the upgrade diffs/commits below in case you're going through something similar.
 
 * [slack-strava](https://github.com/dblock/slack-strava/compare/55ccd64e130d504277b3522af1b72ae70e797cd7..5a595b2ba1c736d52a7b4f936585b2ce2deb4230)
 * [slack-sup2](https://github.com/dblock/slack-sup2/commit/5bf423375cd9e390a76d7a1fdf828edbaabe46b5)
@@ -35,3 +35,5 @@ Update: many of my Ruby apps required a Ruby 3.x upgrade before booting successf
 * [slack-invite](https://github.com/vestris/slack-invite/commit/744ec76aedbcd0548ba93b57126db29abcd98686)
 * [slack-arena](https://github.com/dblock/slack-arena/commit/d08efa5d4913c22e40aec4ee6d03472002306877)
 * [slack-moji](https://github.com/dblock/slack-moji/commit/e240efa93305334c06e7ea5dc1d0322824f864a6)
+* [slack-shellbot](https://github.com/slack-ruby/slack-shellbot/commit/2ef842e0ea322f3d1033939d17fad340ebbc26f1)
+* [slack-api-explorer](https://github.com/slack-ruby/slack-api-explorer/commit/87914daaed45457afd5369aa347494ec3213018d)
