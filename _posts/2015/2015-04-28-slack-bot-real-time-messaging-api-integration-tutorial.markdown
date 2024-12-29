@@ -82,9 +82,9 @@ Slack automatically parses and translates things like `<@userid>`. That's it.
 
 ![]({{ site.url }}/images/posts/2015/2015-04-28-slack-bot-real-time-messaging-api-integration-tutorial/hi.png)
 
-### Turning GameBot into an App
+### Turning Gamebot into an App
 
-I turned GameBot into a runnable app with some bells and whistles at [github.com/dblock/slack-gamebot](https://github.com/dblock/slack-gamebot).
+I turned Gamebot into a runnable app with some bells and whistles at [github.com/dblock/slack-gamebot](https://github.com/dblock/slack-gamebot).
 
 ### Update: Bot Framework and Integration with Rails
 

@@ -7,7 +7,7 @@ tags: [mongoid, rails, ruby]
 comments: true
 dblog_post_id: 278
 ---
-Sorting tables in Rails is a common problem. It must have been done before, right? In fact it has been done so many times that it’s really hard to find anything that "just works".  Turned out to waste a lot of time of at least two people with creative libraries that fall short in many rather trivial ways. Of the good ones, a colleague tried [sortable_table](https://github.com/thoughtbot/sortable_table), but it’s not maintained and we finally settled on the much better [handles_sortable_columns](https://github.com/dadooda/handles_sortable_columns), which needed a tiny bit of integration work for Mongoid.
+Sorting tables in Rails is a common problem. It must have been done before, right? In fact it has been done so many times that it's really hard to find anything that "just works".  Turned out to waste a lot of time of at least two people with creative libraries that fall short in many rather trivial ways. Of the good ones, a colleague tried [sortable_table](https://github.com/thoughtbot/sortable_table), but it's not maintained and we finally settled on the much better [handles_sortable_columns](https://github.com/dadooda/handles_sortable_columns), which needed a tiny bit of integration work for Mongoid.
 
 Let's make all our controllers support sorting with the _sort_by_ parameter. Add the following to your _ApplicationController_.
 
@@ -40,10 +40,10 @@ sortable_column_order do |column, direction|
 end
 {% endhighlight %}
 
-There’re several issues with this.
+There are several issues with this.
 
-We’ve just enabled parameter injection where one can send all kinds of wonderful queries into the Mongoid model by editing the URL.
-There’s no clear default sorting, for tags we’d like to sort by count in descending order.
+We've just enabled parameter injection where one can send all kinds of wonderful queries into the Mongoid model by editing the URL.
+There's no clear default sorting, for tags we'd like to sort by count in descending order.
 
 The first issue can be solved by checking whether the direction is one of _:asc_ or _:desc_ and whether a column is a field in the model (added to _config/initializers/mongoid_document.rb_).
 

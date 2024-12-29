@@ -7,7 +7,7 @@ tags: [rails, ruby, testing]
 comments: true
 dblog_post_id: 312
 ---
-We use the [Analytical](https://github.com/jkrall/analytical) gem to include various thirdparty Javascripts in our Rails application. Our test environment was configured with dummy values in _config/analytical.yml_.
+We use the [Analytical](https://github.com/jkrall/analytical) gem to include various thirdparty Javascript in our Rails application. Our test environment was configured with dummy values in _config/analytical.yml_.
 
 {% highlight yaml %}
 production:
@@ -65,7 +65,7 @@ context "kiss-metrics analytics" do
 end
 {% endhighlight %}
 
-The drawback of this approach is that the Analytical code is included with every other test that doesn’t need it. With every Capybara test that runs in a browser, this hits DNS, then makes an HTTP request to Google and Kissmetrics. We cannot stub that with VCR or another gem because we’re using a real browser. But we can selectively enable Analytics without a configuration file by emptying the _:test_ block in _config/analytical.yml _by configuring it before any test that needs it.
+The drawback of this approach is that the Analytical code is included with every other test that doesn't need it. With every Capybara test that runs in a browser, this hits DNS, then makes an HTTP request to Google and Kissmetrics. We cannot stub that with VCR or another gem because we're using a real browser. But we can selectively enable Analytics without a configuration file by emptying the _:test_ block in _config/analytical.yml _by configuring it before any test that needs it.
 
 {% highlight ruby %}
 before :each do
@@ -82,4 +82,4 @@ after :each do
 end
 {% endhighlight %}
 
-It helps to be open-source. Looking at the internals of Analytical, its options are processed inside each controller on load, then merged with request options on every request before anything is rendered. The code above updates the configuration between those two steps. Note that since we’re modifying a static we have to make sure to cleanup after ourselves.
+It helps to be open-source. Looking at the internals of Analytical, its options are processed inside each controller on load, then merged with request options on every request before anything is rendered. The code above updates the configuration between those two steps. Note that since we're modifying a static we have to make sure to cleanup after ourselves.

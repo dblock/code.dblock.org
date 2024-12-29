@@ -66,7 +66,7 @@ MsiOpenPackage(handle, & hproduct);
 
 ### Calling a Custom Action
 
-There're two ways of calling the custom. You can import the CustomAction table that contains the name and reference to your CA, subject of another future post. This works for all types of custom actions, but it can get a little involved since you have to import several tables: CustomAction and Binary. For simpler C++ custom actions, simply fetch the CA's entry point and pass the MSI handle obtained from MsiOpenPackage.
+There are two ways of calling the custom. You can import the CustomAction table that contains the name and reference to your CA, subject of another future post. This works for all types of custom actions, but it can get a little involved since you have to import several tables: CustomAction and Binary. For simpler C++ custom actions, simply fetch the CA's entry point and pass the MSI handle obtained from MsiOpenPackage.
 
 {% highlight c %}
 // load CustomAction.dll

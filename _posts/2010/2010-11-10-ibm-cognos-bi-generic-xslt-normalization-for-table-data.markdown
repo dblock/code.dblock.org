@@ -7,7 +7,7 @@ tags: [xslt, xml, cognos]
 comments: true
 dblog_post_id: 143
 ---
-I was recently looking at a Cognos BI dataset output in the XML format. It’s a pretty generic approach for data sets that don’t know what type of data they are looking at upfront. It looks like this.
+I was recently looking at a Cognos BI dataset output in the XML format. It's a pretty generic approach for data sets that don't know what type of data they are looking at upfront. It looks like this.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
@@ -39,7 +39,7 @@ I was recently looking at a Cognos BI dataset output in the XML format. It’s a
 </dataset>
 {% endhighlight %}
 
-This is a rather annoying format to work with. Let's transform it, generically, into something normalized (or strongly typed). We can nest two XSLT foreach statements – for each row, for each item, output a node with the name of the item and the corresponding value. The node name cannot contain special characters and will need to have some replacements. We’ll also have to count rows and items to get the right mapping.
+This is a rather annoying format to work with. Let's transform it, generically, into something normalized (or strongly typed). We can nest two XSLT foreach statements – for each row, for each item, output a node with the name of the item and the corresponding value. The node name cannot contain special characters and will need to have some replacements. We'll also have to count rows and items to get the right mapping.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="iso-8859-1"?>
@@ -65,7 +65,7 @@ This is a rather annoying format to work with. Let's transform it, generically, 
 </xsl:stylesheet>
 {% endhighlight %}
 
-Here’s the output.
+Here's the output.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -87,4 +87,4 @@ Here’s the output.
 </DataSet>
 {% endhighlight %}
 
-If we need to transform this data further, we now have a stable format to work with. The order of columns in the report may change, but we won’t have to rewrite the XSLT again.
+If we need to transform this data further, we now have a stable format to work with. The order of columns in the report may change, but we won't have to rewrite the XSLT again.

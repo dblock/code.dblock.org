@@ -7,7 +7,7 @@ tags: [testing, msi, win32]
 comments: true
 dblog_post_id: 81
 ---
-I was very happy upgrading to Windows 7. Virtually everything worked. All kinds of source code that I am writing compiles and runs without issues. It’s only a week later that I had to touch the [AppSecInc. Community MSI extensions](https://github.com/dblock/msiext) and discovered that most unit tests are failing. I talked about [unit testing custom actions earlier](/unit-testing-msi-custom-actions). I finally got to the bottom of it.
+I was very happy upgrading to Windows 7. Virtually everything worked. All kinds of source code that I am writing compiles and runs without issues. It's only a week later that I had to touch the [AppSecInc. Community MSI extensions](https://github.com/dblock/msiext) and discovered that most unit tests are failing. I talked about [unit testing custom actions earlier](/unit-testing-msi-custom-actions). I finally got to the bottom of it.
 
 On Windows 7 the behavior of `MSIOpenPackage` has changed. We use it to run unit tests by creating a database (`MSICreateDatabase`) and calling `MSIOpenPackage` to get a working handle. On Windows 7 code that worked earlier always returns _0x80070645: This action is only valid for products that are currently installed_. This is one obscure error code! Why do I need an installed product to open an MSI package?
 

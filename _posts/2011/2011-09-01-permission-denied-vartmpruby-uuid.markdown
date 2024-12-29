@@ -7,7 +7,7 @@ tags: [rails, ruby, testing]
 comments: true
 dblog_post_id: 252
 ---
-I’ve been fighting a trivial RoR controller test failure on a new build machine. The spec is rather trivial.
+I've been fighting a trivial RoR controller test failure on a new build machine. The spec is rather trivial.
 
 {% highlight ruby %}
 def mock_widget(stubs={})
@@ -35,7 +35,7 @@ def create
 end
 {% endhighlight %}
 
-Today’s spec failure was rather curious.
+Today's spec failure was rather curious.
 
 ```
 Permission denied - /var/tmp/ruby-uuid

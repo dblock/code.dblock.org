@@ -21,7 +21,7 @@ Note the elevation icon next to the install button!
 
 #### How does it work?
 
-dotNetInstaller will check whether you’re running a compatible operating system. If you’re on Windows XP, it will require the user to have administrative rights and fail with a message if those aren’t present. On Vista and Windows 7, it will re-launch an elevated version of itself. Although many samples are available on the internet, the code was quite involved – thanks Neil!
+dotNetInstaller will check whether you're running a compatible operating system. If you're on Windows XP, it will require the user to have administrative rights and fail with a message if those aren't present. On Vista and Windows 7, it will re-launch an elevated version of itself. Although many samples are available on the internet, the code was quite involved – thanks Neil!
 
 #### How do I enable UAC elevation?
 
@@ -29,13 +29,13 @@ Set _administrator_required_ to _true _in your installer configuration (note tha
 
 #### Do I need to change the embedded manifest?
 
-We’ve changed the default manifest to include all of the following, but if you’re embedding your own manifest, you must declare these.
+We've changed the default manifest to include all of the following, but if you're embedding your own manifest, you must declare these.
 
 - The executable must not elevate by default, hence it should be marked to execute _asInvoker_.
 - It must be declared compatible with Windows Vista and Windows 7 to prevent the Windows compatibility assistant from complaining.
 - The UAC icon comes from Windows visual styles, hence it must have a dependency on Windows common-controls.
 
-Here’s the complete manifest from the packaged setup sample.
+Here's the complete manifest from the packaged setup sample.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -68,7 +68,7 @@ Here’s the complete manifest from the packaged setup sample.
 
 #### Which build?
 
-This feature is available since this week’s build 2.0.386.0. There’re still some rough edges being polished.
+This feature is available since this week's build 2.0.386.0. There are still some rough edges being polished.
 
 #### What about htmlInstaller?
 

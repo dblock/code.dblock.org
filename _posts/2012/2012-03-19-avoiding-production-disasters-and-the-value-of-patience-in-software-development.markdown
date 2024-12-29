@@ -13,7 +13,7 @@ I am not a patient person. But years of software practice have taught me how to 
 
 Otherwise known as _process becomes automation_.
 
-You need a lot of patience when operating a manual change on a live system. You’re always _this_ close to dropping the _users_ table. So I learned a decent way to prevent mistakes: always run commands in a test environment, first. But that’s the same as walking on a cable between two chairs, before trying it between two skyscrapers – there’s still no safety net.
+You need a lot of patience when operating a manual change on a live system. You're always _this_ close to dropping the _users_ table. So I learned a decent way to prevent mistakes: always run commands in a test environment, first. But that's the same as walking on a cable between two chairs, before trying it between two skyscrapers – there's still no safety net.
 
 ![]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image_3.jpg)
 
@@ -21,7 +21,7 @@ _"first, he tried it at home between two chairs"_
 
 Instead, transform any manual task into a feature. In the Ruby world we write Rake tasks.
 
-The cost of transforming a task into a feature is about half a day of work. But it’s still less than one production disaster for every 100 such instances.
+The cost of transforming a task into a feature is about half a day of work. But it's still less than one production disaster for every 100 such instances.
 
 #### Automated Tasks Become Business Logic with Tests
 
@@ -39,7 +39,7 @@ desc "Send a reminder to all users that haven't been reminded yet."
 end
 {% endhighlight %}
 
-It’s pretty concise. Unfortunately, _user.reminded?_ has a bug and you now have a communication disaster on your hands.
+It's pretty concise. Unfortunately, _user.reminded?_ has a bug and you now have a communication disaster on your hands.
 
 ![]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image_18.jpg)
 
@@ -107,13 +107,13 @@ The cost of this change depends on the complexity of the task, but it tends towa
 
 Why do something today when you can do it tomorrow?
 
-It’s Friday night and happy hour is about to start. Plan that next deploy for Monday morning, when everybody is in the office.
+It's Friday night and happy hour is about to start. Plan that next deploy for Monday morning, when everybody is in the office.
 
 ![]({{ site.url }}/images/posts/2012/2012-03-19-avoiding-production-disasters-and-the-value-of-patience-in-software-development/image_22.jpg)
 
-_"she just spent her week-end undoing Friday’s mess"_
+_"she just spent her week-end undoing Friday's mess"_
 
-Spending a week-end in the office fixing what you (or someone else) broke on a Friday shoots your Monday’s productivity. You’ll feel like exhausted heroes, at the cost of three days of work (week-end included) multiplied by the number of people involved.
+Spending a week-end in the office fixing what you (or someone else) broke on a Friday shoots your Monday's productivity. You'll feel like exhausted heroes, at the cost of three days of work (week-end included) multiplied by the number of people involved.
 
 #### This Week Becomes This or Next Sprint
 
@@ -125,9 +125,9 @@ _"he over-promised and under-delivered"_
 
 Never promise anything for tomorrow, day-after-tomorrow or even this week.
 
-I see the best engineers learn to answer requests with "this sprint" and working really hard and getting it done for the next day. I love that. They don’t have an impossible deadline, and aren’t required to cut corners and can do things patiently (implement the request as a feature, write tests and get a code review).
+I see the best engineers learn to answer requests with "this sprint" and working really hard and getting it done for the next day. I love that. They don't have an impossible deadline, and aren't required to cut corners and can do things patiently (implement the request as a feature, write tests and get a code review).
 
-The person on the receiving end is juggling a hundred things too, and generally they don’t expect anything to be done immediately, either. They also never remember when something was done in a day vs. two or five, but they remember well when something made in a hurry produced a production outage.
+The person on the receiving end is juggling a hundred things too, and generally they don't expect anything to be done immediately, either. They also never remember when something was done in a day vs. two or five, but they remember well when something made in a hurry produced a production outage.
 
 #### Asking a Person Becomes Asking The Team
 
@@ -137,6 +137,6 @@ As the team via the team lead when you need a feature.
 
 _"she will gladly implement your feature request, right now"_
 
-We’re creatures of habit. So we ask the same person who implemented our previous request to do it again. Asking a team lead is really not a matter of process, – I don’t get offended when someone goes directly to a developer to ask for something (in fact, I love when this happens in some cases) – it’s a matter of actually getting you what’s important, first. A team lead has a complete view of everything that’s going on and will be able to find hands for your request. It will get done much sooner.
+We're creatures of habit. So we ask the same person who implemented our previous request to do it again. Asking a team lead is really not a matter of process, – I don't get offended when someone goes directly to a developer to ask for something (in fact, I love when this happens in some cases) – it's a matter of actually getting you what's important, first. A team lead has a complete view of everything that's going on and will be able to find hands for your request. It will get done much sooner.
 
-It’s Friday afternoon and you’re about to make a clean break and grab a beer. Someone wants you, a developer, to e-mail a million users and remind them about their account being suspended. Rewind through my blog post.
+It's Friday afternoon and you're about to make a clean break and grab a beer. Someone wants you, a developer, to e-mail a million users and remind them about their account being suspended. Rewind through my blog post.

@@ -13,7 +13,7 @@ dblog_post_id: 382
 
 I live-coded a new gem called [Ruby::Enum](https://github.com/dblock/ruby-enum) at [NYC.rb](https://www.meetup.com/NYC-rb/events/88141492/) on Tuesday. This library adds enum-like functionality to Ruby.
 
-Here’s my checklist for creating a new gem.
+Here's my checklist for creating a new gem.
 
 #### Check the Name
 
@@ -72,7 +72,7 @@ To git@github.com:dblock/ruby-enum.git
 
 #### Add a License
 
-Every project needs a license. I use [the MIT license](https://github.com/dblock/ruby-enum/blob/master/LICENSE.md) because it’s short and nobody has time to read licenses. Add a copyright notice to the README, don't forget future contributors.
+Every project needs a license. I use [the MIT license](https://github.com/dblock/ruby-enum/blob/master/LICENSE.md) because it's short and nobody has time to read licenses. Add a copyright notice to the README, don't forget future contributors.
 
 ```
 Copyright (c) 2013, Daniel Doubrovkine and Contributors. All Rights Reserved.

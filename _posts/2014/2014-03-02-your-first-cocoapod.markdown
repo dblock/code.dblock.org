@@ -7,7 +7,7 @@ tags: [objective-c, ios, open source]
 comments: true
 dblog_post_id: 408
 ---
-Right behind [Your First Ruby Gem](https://code.dblock.org/your-first-ruby-gem), here’s a walkthrough of creating your first Objective-C CocoaPod. Now, I must admit that after only two months of Objective-C programming, I am not nearly an expert. So I enlisted [Orta from CocoaPods](https://orta.github.io/) to stand behind my back and poke me with a stick whenever I did something wrong. It’s also important to note that there’s a lot of development going on in CocoaPods and my walkthrough represents the current state of affairs as of February 2014.
+Right behind [Your First Ruby Gem](https://code.dblock.org/your-first-ruby-gem), here's a walkthrough of creating your first Objective-C CocoaPod. Now, I must admit that after only two months of Objective-C programming, I am not nearly an expert. So I enlisted [Orta from CocoaPods](https://orta.github.io/) to stand behind my back and poke me with a stick whenever I did something wrong. It's also important to note that there's a lot of development going on in CocoaPods and my walkthrough represents the current state of affairs as of February 2014.
 
 #### TL;DR
 
@@ -30,7 +30,7 @@ To learn more about the template see `https://github.com/CocoaPods/pod-template`
 To learn more about creating a new pod, see `https://guides.cocoapods.org/making/making-a-cocoapod`.
 ```
 
-This creates an _objc-ngram_ folder with a bunch of files. As of now, it’s missing a _Gemfile_, that I have created manually_._
+This creates an _objc-ngram_ folder with a bunch of files. As of now, it's missing a _Gemfile_, that I have created manually_._
 
 {% highlight ruby %}
 source 'https://rubygems.org'
@@ -38,7 +38,7 @@ source 'https://rubygems.org'
 gem 'cocoapods'
 {% endhighlight %}
 
-Run `bundle install`, which will generate a _Gemfile.lock _and a _.bundle_ folder. We don’t intend to lock the version of CocoaPods, so add _Gemfile.lock_ and .bundle to _.gitignore_.
+Run `bundle install`, which will generate a _Gemfile.lock _and a _.bundle_ folder. We don't intend to lock the version of CocoaPods, so add _Gemfile.lock_ and .bundle to _.gitignore_.
 
 #### Create a Demo/Test Project
 
@@ -52,7 +52,7 @@ Create a new iOS Single View Application project and place it into the folder cr
 
 ![]({{ site.url }}/images/posts/2014/2014-03-02-your-first-cocoapod/image_10.jpg)
 
-Inside the Demo folder, create a Podfile. Yes, we’re going to write tests, using [Specta](https://github.com/specta/specta) and [Expecta](https://github.com/specta/expecta).
+Inside the Demo folder, create a Podfile. Yes, we're going to write tests, using [Specta](https://github.com/specta/specta) and [Expecta](https://github.com/specta/expecta).
 
 {% highlight ruby %}
 pod "objc-ngram", :path => "../objc-ngram.podspec"
@@ -90,7 +90,7 @@ Create a repository on Github and push the code you have so far.
 
 #### Continuous Integration
 
-There’s no excuse not to have tests or continuous integration for an open-source project.
+There's no excuse not to have tests or continuous integration for an open-source project.
 
 In XCode, open _Manage Schemes _and make the _Demo_ scheme shared.
 

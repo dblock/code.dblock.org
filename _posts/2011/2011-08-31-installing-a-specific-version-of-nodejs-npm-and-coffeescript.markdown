@@ -7,7 +7,7 @@ tags: [npm, nodejs, coffeescript, linux]
 comments: true
 dblog_post_id: 250
 ---
-The latest version of Node was segfaulting on my Linode. Here’s how to install a specific version.
+The latest version of Node was segfaulting on my Linode. Here's how to install a specific version.
 
 I want Node 0.5.0, the latest NPM and CoffeeScript 1.0.1.
 

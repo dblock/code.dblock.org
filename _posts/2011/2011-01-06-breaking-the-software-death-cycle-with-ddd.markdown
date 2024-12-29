@@ -11,4 +11,4 @@ Thanks to everyone for attending my "Breaking the Software Death Cycle with DDD"
 
 [Slides](https://www.slideshare.net/dblockdotorg/breaking-the-software-death-cycle-with-domaindriven-design)
 
-There were a few first-timers to DDD and I love to hear things like: _"When we discuss a new feature we must often pause and ask ourselves whether we’re talking about the same thing. By the time we figure it out, hours have passed and we haven’t made any progress."_. Good! You now know why you need DDD. And with a lot of hard work and a bit of luck you can turn large failing products around.
+There were a few first-timers to DDD and I love to hear things like: _"When we discuss a new feature we must often pause and ask ourselves whether we're talking about the same thing. By the time we figure it out, hours have passed and we haven't made any progress."_. Good! You now know why you need DDD. And with a lot of hard work and a bit of luck you can turn large failing products around.

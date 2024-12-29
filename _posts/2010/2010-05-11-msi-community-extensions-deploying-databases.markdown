@@ -7,13 +7,13 @@ tags: [databases, msi, wix]
 comments: true
 dblog_post_id: 100
 ---
-I announced in a previous post that AppSecInc. has open-sourced its Wix extensions. We’ve continued developing the project for our own needs and have seen some adoption, especially for installing databases. This was expected, since what distinguishes these extensions from stock Wix ones is a programming model that is not narrowly focused on MSSQL, effectively supporting any ODBC database today and creating the opportunity to support other database targets, such as Oracle.
+I announced in a previous post that AppSecInc. has open-sourced its Wix extensions. We've continued developing the project for our own needs and have seen some adoption, especially for installing databases. This was expected, since what distinguishes these extensions from stock Wix ones is a programming model that is not narrowly focused on MSSQL, effectively supporting any ODBC database today and creating the opportunity to support other database targets, such as Oracle.
 
-In this post I’ll show you how to get started with installing an MSSQL database in just a few lines of code.
+In this post I'll show you how to get started with installing an MSSQL database in just a few lines of code.
 
 #### Adding References
 
-First, you must add a reference to the WixDataSource extension to your Wix project and include the DataSource extension’s namespace into the Wix XML declaration.
+First, you must add a reference to the WixDataSource extension to your Wix project and include the DataSource extension's namespace into the Wix XML declaration.
 
 {% highlight xml %}
 <Wix xmlns="https://schemas.microsoft.com/wix/2006/wi"
@@ -22,7 +22,7 @@ First, you must add a reference to the WixDataSource extension to your Wix proje
 
 #### ODBC Connection
 
-To connect to a database you need an ODBC connection. For now, we don’t have `ODBC_CONNECTION_STRING` defined, so each implementation that uses this connection will need (and does) supply its own default. For example, SQL server extensions assume that the default connection string refers to a local database with Windows authentication.
+To connect to a database you need an ODBC connection. For now, we don't have `ODBC_CONNECTION_STRING` defined, so each implementation that uses this connection will need (and does) supply its own default. For example, SQL server extensions assume that the default connection string refers to a local database with Windows authentication.
 
 {% highlight xml %}
 <DataSource:ODBCConnection Id="DemoSQLServerConnection" ConnectionString="[ODBC_CONNECTION_STRING]" />
@@ -40,11 +40,11 @@ We can now define an MSSQL database.
 </Component>
 {% endhighlight %}
 
-What’s happening here?
+What's happening here?
 
-We tell the extension to create a database called _DemoDatabase_ using the _DemoSQLServerConnection_. We tell it to create the database on install and not to drop it on uninstall. We also tell it to check whether the database exists and not to fail if that’s the case. This is a typical scenario where a DBA will pre-create the database and the installer will need to create tables and upload initial data into it.
+We tell the extension to create a database called _DemoDatabase_ using the _DemoSQLServerConnection_. We tell it to create the database on install and not to drop it on uninstall. We also tell it to check whether the database exists and not to fail if that's the case. This is a typical scenario where a DBA will pre-create the database and the installer will need to create tables and upload initial data into it.
 
-We’ve nested the database under a component, so component rules apply. You can include the component into a feature and the user can, for example, choose to install or not install the feature. You can add other conditions at many levels here, etc.
+We've nested the database under a component, so component rules apply. You can include the component into a feature and the user can, for example, choose to install or not install the feature. You can add other conditions at many levels here, etc.
 
 #### Database Schema
 
@@ -60,7 +60,7 @@ A database without a schema is not very useful. We author a .sql file that creat
 
 To simplify things for the purposes of this post, the Schema.sql file knows how to handle its own upgrade.
 
-There’re some more interesting things here. Notice that we use a generic _ODBCExecute_ extension that works for this specific MSSQL database. The declaration has a _Type="SqlServer"_. This is a new feature in [MSI Extensions 1.2](https://github.com/dblock/msiext) – the file will be parsed with an actual SQL parser, split by GO statements (configurable) and execute the statements one-by-one. The idea is that the parsers can one day become converters and adjust syntax from, for example, HQL to SQL of a specific database target. For now, this makes SQL execution identical to one in MSSQL Query Analyzer.
+There are some more interesting things here. Notice that we use a generic _ODBCExecute_ extension that works for this specific MSSQL database. The declaration has a _Type="SqlServer"_. This is a new feature in [MSI Extensions 1.2](https://github.com/dblock/msiext) – the file will be parsed with an actual SQL parser, split by GO statements (configurable) and execute the statements one-by-one. The idea is that the parsers can one day become converters and adjust syntax from, for example, HQL to SQL of a specific database target. For now, this makes SQL execution identical to one in MSSQL Query Analyzer.
 
 Secondly, with MSI Extensions 1.2, Schema.sql may be an ANSI or a UTF-8 file. This is detected automatically. You can finally deploy your databases with Russian table names or content.
 
@@ -107,4 +107,4 @@ The `DbCreateCredDlg` looks like this and publishes the `ODBC_CONNECTION_STRING`
 
 ### Conclusion
 
-That’s it. You now have a working database installer with virtually zero lines of code.
+That's it. You now have a working database installer with virtually zero lines of code.

@@ -9,4 +9,4 @@ dblog_post_id: 216
 ---
 This one drove me crazy for a while. Compass would fail with “Syntax error: Invalid US-ASCII character "\xE2". So I checked the files, found nothing changed since last time and spent a while googling. Finally found the culprit, explained [here](https://github.com/haml/haml/issues/269).
 
-The easiest workaround is to set `LANG=en_US.UTF-8` in the system’s environment.
+The easiest workaround is to set `LANG=en_US.UTF-8` in the system's environment.

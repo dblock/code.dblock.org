@@ -7,20 +7,20 @@ tags: [soa, jndi, java, active directory]
 comments: true
 dblog_post_id: 96
 ---
-I often hear from .NET programmers "I’d like to get into Java, not the language, but all that J2EE stuff ...". I am one of those people so I try to use any opportunity to try something I’ve never touched before.
+I often hear from .NET programmers "I'd like to get into Java, not the language, but all that J2EE stuff ...". I am one of those people so I try to use any opportunity to try something I've never touched before.
 
-We’re moving to a SOA model with the product at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com). One of the fundamental questions is: _"How does a service find another service?"._ The standard answer is to use a naming and directory service and in Java you talk to one of these things with [JNDI](https://java.sun.com/products/jndi/).
+We're moving to a SOA model with the product at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com). One of the fundamental questions is: _"How does a service find another service?"._ The standard answer is to use a naming and directory service and in Java you talk to one of these things with [JNDI](https://java.sun.com/products/jndi/).
 
 First, a few basics.
 
-- **Naming service** is a fundamental facility in any computing system. It’s the means by which names are associated with objects and objects are found based on their names. For example, to access a file on the computer you must provide its name.
+- **Naming service** is a fundamental facility in any computing system. It's the means by which names are associated with objects and objects are found based on their names. For example, to access a file on the computer you must provide its name.
 - **Directory Service** is an extension of the naming services. A directory service associates names with objects and also allows such objects to have _attributes_. Thus, you not only can look up an object by its name but also get the object's attributes or search for the object based on its attributes.
 
 By using a directory service, you can simplify applications and their administration by centralizing the storage of shared information. For our purposes such information includes SOAP service URIs. For example, you can find demoService (a previously agreed-upon name of the demo service) at *https://localhost:20080/demo*.
 
 #### Client & Server
 
-I picked up [OpenDS](https://web.archive.org/web/20111001105032/https://www.opends.org/), on open-source server from Sun. After a straightforward installation (set _OPENDS_JAVA_HOME_ to a JRE location and run _setup.bat_) I had an LDAP server running as a Windows Service (OpenDS) on port 389. There’s a handy _bat\control-panel.bat_ that launches a schema and object browser.
+I picked up [OpenDS](https://web.archive.org/web/20111001105032/https://www.opends.org/), on open-source server from Sun. After a straightforward installation (set _OPENDS_JAVA_HOME_ to a JRE location and run _setup.bat_) I had an LDAP server running as a Windows Service (OpenDS) on port 389. There's a handy _bat\control-panel.bat_ that launches a schema and object browser.
 
 We can now access this server with JNDI, which comes standard with Java Platform 1.1.2 or later.
 
@@ -49,13 +49,13 @@ objectClass: domain, top
 
 #### The Goal
 
-Let’s create a directory for our SOAP services. The goal is to be able to store a collection of service objects, each containing a well-defined URL and retrieve service URLs using the service names.
+Let's create a directory for our SOAP services. The goal is to be able to store a collection of service objects, each containing a well-defined URL and retrieve service URLs using the service names.
 
 #### Extending the Schema
 
-The OpenDS schema is stored in .ldif files in the config\schema directory. The directory schema can be extended by importing LDIF files, modifying those in the schema directory or programmatically with JNDI. I’ll write an import an .ldif file.
+The OpenDS schema is stored in .ldif files in the config\schema directory. The directory schema can be extended by importing LDIF files, modifying those in the schema directory or programmatically with JNDI. I'll write an import an .ldif file.
 
-There’re several RFCs with various well-known attribute types, such as _name_ or _uid_. We’re only missing _serviceUri_, which we can define as a custom attribute.
+There are several RFCs with various well-known attribute types, such as _name_ or _uid_. We're only missing _serviceUri_, which we can define as a custom attribute.
 
 ```
 attributeTypes: ( 1.2.840.113556.1.8000.2554.999999.1 NAME 'serviceUri'
@@ -73,7 +73,7 @@ objectClasses: ( 1.2.840.113556.1.8000.2554.999999.2 NAME 'Service'
 
 #### OIDs
 
-You can generate a root OID using [this script](https://learn.microsoft.com/en-us/windows/win32/ad/obtaining-an-object-identifier-from-microsoft) (save the script to disk and run `cscript script.vbs`) and keep adding numbers to it. It’s just a globally unique number that identifies an attribute or a class. I generated OID 1.2.840.113556.1.8000.2554.999999.
+You can generate a root OID using [this script](https://learn.microsoft.com/en-us/windows/win32/ad/obtaining-an-object-identifier-from-microsoft) (save the script to disk and run `cscript script.vbs`) and keep adding numbers to it. It's just a globally unique number that identifies an attribute or a class. I generated OID 1.2.840.113556.1.8000.2554.999999.
 
 #### Service in Java
 
@@ -134,7 +134,7 @@ This is a simple container for attributes. The `UnimplementedDirContext` is an e
 
 #### A Services Organization
 
-We’d like to organize services under a Services organization. I’ve created that manually in the directory. The full directory path to the OU is `o=Services,dc=example,dc=com`.
+We'd like to organize services under a Services organization. I've created that manually in the directory. The full directory path to the OU is `o=Services,dc=example,dc=com`.
 
 #### Writing to the Directory
 
@@ -148,7 +148,7 @@ Service demoService = new Service(
 ctx.rebind("cn=demoService,o=Services", demoService);
 {% endhighlight %}
 
-Here’s what we have in the directory now (this is the _Manage Entries_ UI from the control panel tool that comes with OpenDS).
+Here's what we have in the directory now (this is the _Manage Entries_ UI from the control panel tool that comes with OpenDS).
 
 ![]({{ site.url }}/images/posts/2010/2010-04-13-jndi-naming-and-directory-services-with-opends/image_14.jpg)
 
@@ -216,7 +216,7 @@ ctx.unbind("cn=demoService,o=Services");
 
 All this requires server-side Java code and keeping the LDAP port 389 open.
 
-Alternatively, OpenDS provides an implementation of Directory Services Markup Language (DSML), an XML API to directory services. It’s then possible to switch JNDI client code from LDAP to DSML using [a Sun early access JNDI client for DSML](https://java.sun.com/developer/earlyAccess/jndi/).
+Alternatively, OpenDS provides an implementation of Directory Services Markup Language (DSML), an XML API to directory services. It's then possible to switch JNDI client code from LDAP to DSML using [a Sun early access JNDI client for DSML](https://java.sun.com/developer/earlyAccess/jndi/).
 
 #### Links
 

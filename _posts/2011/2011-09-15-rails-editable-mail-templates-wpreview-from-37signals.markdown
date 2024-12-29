@@ -7,7 +7,7 @@ tags: [rails, ruby]
 comments: true
 dblog_post_id: 267
 ---
-Last time we added custom editable mail templates to our mailers and made them Markdown format [[read first](/rails-custom-and-editable-mailer-templates-in-markdown)]. Awesome. Let's add a preview to the templates with [37-signals mail_view](https://github.com/37signals/mail_view). I don’t know how we lived without this before!
+Last time we added custom editable mail templates to our mailers and made them Markdown format [[read first](/rails-custom-and-editable-mailer-templates-in-markdown)]. Awesome. Let's add a preview to the templates with [37-signals mail_view](https://github.com/37signals/mail_view). I don't know how we lived without this before!
 
 #### Gemfile
 
@@ -53,9 +53,9 @@ class DeviseMailer < Devise::Mailer
 end
 {% endhighlight %}
 
-Why Chuck Norris? I’ve been enjoying the [Chuck Norris Jenkins Plugin](https://plugins.jenkins.io/chucknorris) too much lately. Chuck Norris can preview mail templates in PDF!
+Why Chuck Norris? I've been enjoying the [Chuck Norris Jenkins Plugin](https://plugins.jenkins.io/chucknorris) too much lately. Chuck Norris can preview mail templates in PDF!
 
-Here’s our mail templates admin page with a link to the preview (_mail_templates/index.html.haml_).
+Here's our mail templates admin page with a link to the preview (_mail_templates/index.html.haml_).
 
 {% highlight haml %}
 %h1 Mail Templates
@@ -79,7 +79,7 @@ Here’s our mail templates admin page with a link to the preview (_mail_templat
         :target => '_blank'
 {% endhighlight %}
 
-Well, that’s it. You need to add a _Preview_ class for every mailer.
+Well, that's it. You need to add a _Preview_ class for every mailer.
 
 #### Screenshot
 

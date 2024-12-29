@@ -9,7 +9,7 @@ dblog_post_id: 103
 ---
 ![]({{ site.url }}/images/posts/2010/2010-05-20-single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle/image_12.jpg)
 
-I’ve added a Tomcat Negotiate (Kerberos + NTLM) authenticator to [Waffle](https://github.com/dblock/waffle) 1.3 for Tomcat 6. Here’s how to use it.
+I've added a Tomcat Negotiate (Kerberos + NTLM) authenticator to [Waffle](https://github.com/dblock/waffle) 1.3 for Tomcat 6. Here's how to use it.
 
 #### Download
 
@@ -19,7 +19,7 @@ Download [Waffle 1.3](https://github.com/dblock/waffle/). The zip contains _Waff
 
 _Copy Files_
 
-I started with a default installation of Tomcat 6. Checked that I could start the server and navigate to https://localhost:8080. Copy the following files into tomcat’s _lib_ directory.
+I started with a default installation of Tomcat 6. Checked that I could start the server and navigate to https://localhost:8080. Copy the following files into tomcat's _lib_ directory.
 
 - _jna.jar_: Java Native Access
 - _platform.jar_: JNA platform-specific API
@@ -38,7 +38,7 @@ Add a valve and a realm to the application context in your context.xml (for an a
 
 _Security Roles_
 
-Configure security roles in your application’s _web.xml_. The Waffle authenticator adds all user's security groups (including nested and domain groups) as roles during authentication.
+Configure security roles in your application's _web.xml_. The Waffle authenticator adds all user's security groups (including nested and domain groups) as roles during authentication.
 
 {% highlight xml %}
 <security-role>
@@ -127,11 +127,11 @@ logged in user: dblock-green\dblock (S-1-5-21-3442045183-1395134217-4167419351-1
 successfully logged in user: dblock-green\dblock
 ```
 
-My laptop is not a member of an Active Directory domain, but you would see domain groups, including nested ones here. There’s nothing special to do for Active Directory. The authenticator also automatically handles all aspects of the Negotiate protocol, chooses Kerberos vs. NTLM and supports NTLM POST. It basically has the same effect in Tomcat as choosing Integrated Windows authentication options in IIS.
+My laptop is not a member of an Active Directory domain, but you would see domain groups, including nested ones here. There's nothing special to do for Active Directory. The authenticator also automatically handles all aspects of the Negotiate protocol, chooses Kerberos vs. NTLM and supports NTLM POST. It basically has the same effect in Tomcat as choosing Integrated Windows authentication options in IIS.
 
 #### Related Projects
 
-- [Tomcat SPNEGO by Dominique Guerrin](https://web.archive.org/web/20120114182927/https://tomcatspnego.codeplex.com/): this is a very good prototype of a filter. It uses JNI and not JNA, doesn’t support NTLM POST and the code is pretty thick.
-- [SPNEGO Sourceforge](https://spnego.sourceforge.net/): it’s a nightmare to configure, doesn’t work without an Active Directory domain and requires an SPN
+- [Tomcat SPNEGO by Dominique Guerrin](https://web.archive.org/web/20120114182927/https://tomcatspnego.codeplex.com/): this is a very good prototype of a filter. It uses JNI and not JNA, doesn't support NTLM POST and the code is pretty thick.
+- [SPNEGO Sourceforge](https://spnego.sourceforge.net/): it's a nightmare to configure, doesn't work without an Active Directory domain and requires an SPN
 - [JCIFS NTLM](https://web.archive.org/web/20130117024232/https://jcifs.samba.org/src/docs/ntlmhttpauth.html): no longer supported and they recommend using Jespa
 - [Jespa](https://www.ioplex.com/jespa.html): a commercial implementation that claims to do the same thing as Waffle, but uses the Netlogon service instead of the native Windows API

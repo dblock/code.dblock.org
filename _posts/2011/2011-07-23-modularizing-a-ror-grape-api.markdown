@@ -7,9 +7,9 @@ tags: [rails, ruby, architecture]
 comments: true
 dblog_post_id: 236
 ---
-A lot of people ask me whether we use Rails controllers for our API. We don’t, we use [Grape](https://github.com/ruby-grape/grape). Grape is a Rack-based system and a DSL that provides a cleaner separation, some API-specific  functionality and generally a better syntax. Now that we have [dealt with exceptions](/grape-trapping-all-exceptions-within-the-api) and [authentication](/grape-api-authentication-w-devise) we realized that the amount of functionality exposed in the API has grown exponentially in one single Ruby file. Let's refactor it into modules.
+A lot of people ask me whether we use Rails controllers for our API. We don't, we use [Grape](https://github.com/ruby-grape/grape). Grape is a Rack-based system and a DSL that provides a cleaner separation, some API-specific  functionality and generally a better syntax. Now that we have [dealt with exceptions](/grape-trapping-all-exceptions-within-the-api) and [authentication](/grape-api-authentication-w-devise) we realized that the amount of functionality exposed in the API has grown exponentially in one single Ruby file. Let's refactor it into modules.
 
-Here’s our current code from API v1.
+Here's our current code from API v1.
 
 {% highlight ruby %}
 class Api_v1 < Grape::API
@@ -76,7 +76,7 @@ class Api_v1 < Grape::API
 end
 {% endhighlight %}
 
-The nice thing about this implementation is that we can now compose an API v2 with a bunch of v1 modules and some v2 ones. The not-so-nice part is the _included_ construct. I’d like to write the following.
+The nice thing about this implementation is that we can now compose an API v2 with a bunch of v1 modules and some v2 ones. The not-so-nice part is the _included_ construct. I'd like to write the following.
 
 {% highlight ruby %}
 module Api_v1_Me

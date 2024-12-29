@@ -7,9 +7,9 @@ tags: [mongodb, ruby]
 comments: true
 dblog_post_id: 206
 ---
-Today we’ll improve [this map/reduce implementation](https://markembling.info/2010/11/using-map-reduce-in-a-mongodb-app) that produces a collection of tags with their counts. We’ll add inline map/reduce for databases that support it, inline JavaScript and make fast incremental updates.
+Today we'll improve [this map/reduce implementation](https://markembling.info/2010/11/using-map-reduce-in-a-mongodb-app) that produces a collection of tags with their counts. We'll add inline map/reduce for databases that support it, inline JavaScript and make fast incremental updates.
 
-MongoDB 1.7.4 introduced inline results within map/reduce. It avoids creating a temporary collection and can be achieved by passing `{ :raw => true, :out => { :inline => 1 } }` within the map/reduce options. Since we’d like to support multiple versions of MongoDB, we’ll inspire ourselves from some code in [mongoid_fulltext](https://github.com/artsy/mongoid_fulltext) and switch between map/reduce that supports inline results (MongoDB = 1.7.4) and one that doesn’t (older versions of MongoDB).
+MongoDB 1.7.4 introduced inline results within map/reduce. It avoids creating a temporary collection and can be achieved by passing `{ :raw => true, :out => { :inline => 1 } }` within the map/reduce options. Since we'd like to support multiple versions of MongoDB, we'll inspire ourselves from some code in [mongoid_fulltext](https://github.com/artsy/mongoid_fulltext) and switch between map/reduce that supports inline results (MongoDB = 1.7.4) and one that doesn't (older versions of MongoDB).
 
 {% highlight ruby %}
 if collection.db.connection.server_version >= '1.7.4'
@@ -19,7 +19,7 @@ else
 end
 {% endhighlight %}
 
-Let's also learn to declare JavaScript functions inline. It’s prettier than a string.
+Let's also learn to declare JavaScript functions inline. It's prettier than a string.
 
 {% highlight ruby %}
 map = <<-EOS
@@ -43,7 +43,7 @@ EOS
 
 The `map` function emits a count for each tag and the reduce function sums the counts up.
 
-To make the tags update incremental, let's collect all the tags upfront into a hash (it’s a tradeoff which consumes more memory, but avoids a lengthy cursor that can potentially lead to a sever timeout with very large collections). The following code transforms the array of Tag instances into a hash with the tag name as key.
+To make the tags update incremental, let's collect all the tags upfront into a hash (it's a tradeoff which consumes more memory, but avoids a lengthy cursor that can potentially lead to a sever timeout with very large collections). The following code transforms the array of Tag instances into a hash with the tag name as key.
 
 {% highlight ruby %}
 tags_before = Hash[*Tag.all.collect { |tag|
@@ -65,7 +65,7 @@ else
 end
 {% endhighlight %}
 
-We’ll also have to remember to delete tags that no longer exist.
+We'll also have to remember to delete tags that no longer exist.
 
 {% highlight ruby %}
 (tags_before.values - tags_after).each do |tag|

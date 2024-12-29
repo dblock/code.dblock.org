@@ -9,7 +9,7 @@ dblog_post_id: 260
 ---
 17 ears ago I wrote autoconf that enabled DOS users to boot multiple configurations without any menus or pause. I admit, I copied the original source from SVM, but ended up working on it for a very long time and extending the features for at least two or three years. The name was unfortunate since GNU already had an autoconf, but I was completely unfamiliar with the *nix side of the world since all I had was a 386 PC. Autoconf went on to be widely used, especially in Europe until DOS 6.2 which introduced multiple configurations that were "good enough". I spent a month writing a converter from DOS configurations into Autoconf configurations, but it was too late, Microsoft pushed me out of the multi-boot market by embedding a crappier default implementation into the operating system. Anyway, I forgive you, Bill.
 
-Here’s the code that let you declare `DEVICE=something.sys` in your config.sys file. I included the juiciest commented parts below. The preamble is already priceless.
+Here's the code that let you declare `DEVICE=something.sys` in your config.sys file. I included the juiciest commented parts below. The preamble is already priceless.
 
 {% highlight asm %}
 ;----------------------------------------------------------------------------
@@ -19,7 +19,7 @@ Here’s the code that let you declare `DEVICE=something.sys` in your config.sys
 ;----------------------------------------------------------------------------
 {% endhighlight %}
 
-I used macros stolen from someone’s 3D rendering engine’s source code to avoid typing _push_ and _pop_ too many times. That someone was probably sitting next to me in the basement of [Infomaniak in Geneva](https://www.infomaniak.com/). ASM recursive macros must blow your mind!
+I used macros stolen from someone's 3D rendering engine's source code to avoid typing _push_ and _pop_ too many times. That someone was probably sitting next to me in the basement of [Infomaniak in Geneva](https://www.infomaniak.com/). ASM recursive macros must blow your mind!
 
 {% highlight asm %}
 pushx macro r1, r2, r3, r4, r5, r6, r7, r8  ;that's a usefull macro
@@ -69,4 +69,4 @@ Finally ...
 END                     ;oh finally the end...
 {% endhighlight %}
 
-The entire source for this gem is [here](https://raw.github.com/dblock/autoconf/master/src/CLRBUFF.ASM). And I’ve published the complete autoconf source [here on Github](https://github.com/dblock/autoconf).
+The entire source for this gem is [here](https://raw.github.com/dblock/autoconf/master/src/CLRBUFF.ASM). And I've published the complete autoconf source [here on Github](https://github.com/dblock/autoconf).

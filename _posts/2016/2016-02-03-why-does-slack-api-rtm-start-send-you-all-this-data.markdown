@@ -44,6 +44,6 @@ What's in this for you? With the 0.6.0 release of slack-ruby-client you can acce
 
 What about the store getting out of sync? Slack maintains a queue of events server-side and seems to either guarantee or try it's best to deliver all messages, regardless of network conditions. This means that as long as the client was able to maintain a websocket connection, all events will eventually arrive in-order.
 
-You probably also don't want a store backed by a database without doing additional work - you want an in-memory one for the duration of the RealTime session. There're a few methods that can help rewind events and catch up, including `channels.history`, `groups.history`, `im.history` and `mpim.history`, which call for a more sophisticated implementation.
+You probably also don't want a store backed by a database without doing additional work - you want an in-memory one for the duration of the RealTime session. There are a few methods that can help rewind events and catch up, including `channels.history`, `groups.history`, `im.history` and `mpim.history`, which call for a more sophisticated implementation.
 
 Give slack-ruby-client 0.6.0 a try from Github HEAD, `gem 'slack-ruby-client', github: 'dblock/slack-ruby-client'`. It will ship shortly.

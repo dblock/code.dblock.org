@@ -7,7 +7,7 @@ tags: [cocoapods, ios, open source]
 comments: true
 dblog_post_id: 412
 ---
-If you are in the market for a color library, you’ll find many. I needed to convert a hex color into a _UIColor_. Let's try with Artsy purple. Rumor is that it was inspired by Kenny Scharf's "Purple".
+If you are in the market for a color library, you'll find many. I needed to convert a hex color into a _UIColor_. Let's try with Artsy purple. Rumor is that it was inspired by Kenny Scharf's "Purple".
 
 {% highlight objc %}
 + (UIColor *)artsyPurple
@@ -16,7 +16,7 @@ If you are in the market for a color library, you’ll find many. I needed to co
 }
 {% endhighlight %}
 
-Gross. One of the bigger problems with this code is that it creates a different color on 32-bit vs. 64-bit as a result of a non-integer division. Yes, we do write tests that compare snapshot images with [ios-snapshot-testcase](https://github.com/facebook/ios-snapshot-test-case) and those created on 32-bit simulators will fail on 64-bit ones. Also, someone with good vision will notice that our brand purple isn’t quite the same purple :)
+Gross. One of the bigger problems with this code is that it creates a different color on 32-bit vs. 64-bit as a result of a non-integer division. Yes, we do write tests that compare snapshot images with [ios-snapshot-testcase](https://github.com/facebook/ios-snapshot-test-case) and those created on 32-bit simulators will fail on 64-bit ones. Also, someone with good vision will notice that our brand purple isn't quite the same purple :)
 
 What we want is to convert the color from its hex color.
 
@@ -27,7 +27,7 @@ What we want is to convert the color from its hex color.
 }
 {% endhighlight %}
 
-What happens in every developer’s mind is a mystery to me: seems like _everyone_ has rolled out their own conversion macro or library. I have counted no less than twelve implementations, two in our own codebase. This is why I personally don’t like the approach taken by the Apple and Microsoft, which only expose the lowest level API possible as a general rule.
+What happens in every developer's mind is a mystery to me: seems like _everyone_ has rolled out their own conversion macro or library. I have counted no less than twelve implementations, two in our own codebase. This is why I personally don't like the approach taken by the Apple and Microsoft, which only expose the lowest level API possible as a general rule.
 
 The library to end this madness is [EDColor](https://github.com/thisandagain/color). It also supports HSL, HSB, CIELAB and even Crayola crayon colors.
 
@@ -55,6 +55,6 @@ UIColor *greenGradientStart = [UIColor iOS7greenGradientStartColor];
 UIColor *greenGradientEnd = [UIColor iOS7greenGradientEndColor];
 {% endhighlight %}
 
-I [contributed](https://github.com/thisandagain/color/pull/17) the iOS7 colors implementation from [here](https://github.com/mobilemagicdevelopers/UIColor-iOS7Colors), and found two bugs while writing tests. So, if you find another color library, you should merge it in as well. I reached out to [Caran d’Ache](https://www.carandache.com/) to get their color palette, but didn’t get a reply.
+I [contributed](https://github.com/thisandagain/color/pull/17) the iOS7 colors implementation from [here](https://github.com/mobilemagicdevelopers/UIColor-iOS7Colors), and found two bugs while writing tests. So, if you find another color library, you should merge it in as well. I reached out to [Caran d'Ache](https://www.carandache.com/) to get their color palette, but didn't get a reply.
 
 ![](https://cloud.githubusercontent.com/assets/542335/2783933/2adda48c-cb34-11e3-831b-f134774f35d3.gif)

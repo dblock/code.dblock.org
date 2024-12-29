@@ -7,13 +7,13 @@ tags: [cocoapods, ios, open source]
 comments: true
 dblog_post_id: 410
 ---
-My first CocoaPod described in [this post](/your-first-cocoapod) sparked [a discussion](https://github.com/CocoaPods/pod-template/issues/25) with the CocoaPods team. There’re a few things I didn’t like about the project organization.
+My first CocoaPod described in [this post](/your-first-cocoapod) sparked [a discussion](https://github.com/CocoaPods/pod-template/issues/25) with the CocoaPods team. There are a few things I didn't like about the project organization.
 
 1. The name of the workspace was "Demo". I would expect the project to have the same name as the pod being written.
 2. The demo project contained the Podfile, requiring developers to cd into Demo, then run _pod install_. I would expect the Podfile to live in the root of the project.
 3. The demo project contained tests for the pod. I would expect the demo to be a demo and to have a test project that unit tests the pod being written.
 
-All these issues can be addressed. I’ve reorganized two of my pods, [ARASCIIImageSwizzle](https://github.com/dblock/ARASCIISwizzle) and [ARTiledImageView](https://github.com/dblock/ARTiledImageView) and fixed all the issues above.
+All these issues can be addressed. I've reorganized two of my pods, [ARASCIIImageSwizzle](https://github.com/dblock/ARASCIISwizzle) and [ARTiledImageView](https://github.com/dblock/ARTiledImageView) and fixed all the issues above.
 
 #### Folder Structure
 
@@ -27,7 +27,7 @@ pod 'ARASCIISwizzle', :path => 'ARASCIISwizzle.podspec'
 xcodeproj 'Demo.xcodeproj'
 {% endhighlight %}
 
-You’ll have to update .travis.yml to build a different workspace and to reference the development pod in the same folder.
+You'll have to update .travis.yml to build a different workspace and to reference the development pod in the same folder.
 
 {% highlight yaml %}
 language: objective-c
@@ -51,7 +51,7 @@ You can [see this commit in ARTiledImageView](https://github.com/dblock/ARTiledI
 
 #### Integration Tests
 
-The tests that are part of the Demo project are really integration tests. I’ve renamed those consequently with a bulk replace of file names and within the source code. You can see it in [this commit](https://github.com/dblock/ARTiledImageView/commit/5e4fbf975af6b291e3650c85fa00f8b3e89c5735) in ARTiledImageView.
+The tests that are part of the Demo project are really integration tests. I've renamed those consequently with a bulk replace of file names and within the source code. You can see it in [this commit](https://github.com/dblock/ARTiledImageView/commit/5e4fbf975af6b291e3650c85fa00f8b3e89c5735) in ARTiledImageView.
 
 #### Unit Tests
 
@@ -67,7 +67,7 @@ Choose Cocoa Touch Unit Testing bundle.
 
 ![]({{ site.url }}/images/posts/2014/2014-03-26-reorganizing-cocoapod-folder-structure-for-unit-and-integration-testing/screenshot_4.jpg)
 
-Open _Manage Schemes_ and make sure the scheme is Shared. Then edit the Test project’s scheme and check the Run box under the Build action.
+Open _Manage Schemes_ and make sure the scheme is Shared. Then edit the Test project's scheme and check the Run box under the Build action.
 
 ![]({{ site.url }}/images/posts/2014/2014-03-26-reorganizing-cocoapod-folder-structure-for-unit-and-integration-testing/screenshot_5.jpg)
 

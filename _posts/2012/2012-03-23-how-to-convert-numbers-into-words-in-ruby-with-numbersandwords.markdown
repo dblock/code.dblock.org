@@ -7,9 +7,9 @@ tags: [ruby]
 comments: true
 dblog_post_id: 329
 ---
-You’d think someone has implemented simple conversion of numbers into English by now? For example 42 becomes "forty-two".
+You'd think someone has implemented simple conversion of numbers into English by now? For example 42 becomes "forty-two".
 
-I found a few interesting posts, a couple of gems and even a competition. All had issues that fit in two buckets: they could only do English or their implementation was scary. While I didn’t really _need_ a converter that worked for different languages, none of the libraries inspired much confidence. Finally, I ran into a I18n implementation that was generic, well implemented and properly tested for Russian. It needed some minor English work, but you can be sure that the Russian version is _much_ more complicated.
+I found a few interesting posts, a couple of gems and even a competition. All had issues that fit in two buckets: they could only do English or their implementation was scary. While I didn't really _need_ a converter that worked for different languages, none of the libraries inspired much confidence. Finally, I ran into a I18n implementation that was generic, well implemented and properly tested for Russian. It needed some minor English work, but you can be sure that the Russian version is _much_ more complicated.
 
 A few pull requests later, please welcome a new gem, [numbers_and_words](https://github.com/kslazarev/numbers_and_words). [Kirill](https://github.com/kslazarev/) designed the library with conversion strategies and proper localization in-mind.
 

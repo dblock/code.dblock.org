@@ -5,7 +5,7 @@ date: 2015-11-02
 tags: [testing, delayed job, ruby, rspec]
 comments: true
 ---
-There're two ways to test [delayed jobs](https://github.com/collectiveidea/delayed_job) under RSpec.
+There are two ways to test [delayed jobs](https://github.com/collectiveidea/delayed_job) under RSpec.
 
 The first is to use the library "as is", invoking `Delayed::Worker.new.work_off` and examining the job results.
 

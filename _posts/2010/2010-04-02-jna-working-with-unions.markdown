@@ -10,11 +10,11 @@ dblog_post_id: 93
 
 #### The Grey Rat
 
-There’s a giant grey rat outside of my window and a bunch of non-union workers laboring in the rain. The union guy who’s guarding the rat and giving away flyers got too cold and went inside the building. But I digress, the post is about working with Unions in [Java Native Access (JNA).](https://github.com/twall/jna/)
+There's a giant grey rat outside of my window and a bunch of non-union workers laboring in the rain. The union guy who's guarding the rat and giving away flyers got too cold and went inside the building. But I digress, the post is about working with Unions in [Java Native Access (JNA).](https://github.com/twall/jna/)
 
 #### Preamble
 
-I was trying to retrieve Active Directory forest trust information via [DsGetForestTrustInformationW](https://learn.microsoft.com/en-us/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetforesttrustinformationw). The function takes a pointer to a [PLSA_FOREST_TRUST_INFORMATION](https://learn.microsoft.com/en-us/windows/win32/api/ntsecapi/ns-ntsecapi-lsa_forest_trust_information), a pointer to a pointer to an [LSA_FOREST_TRUST_INFORMATION](https://learn.microsoft.com/en-us/windows/win32/api/ntsecapi/ns-ntsecapi-lsa_forest_trust_information) structure. So far so good, we just need to pay attention to the several levels of indirection: whenever we want the value of a pointer to something, it’s a `ByReference`.
+I was trying to retrieve Active Directory forest trust information via [DsGetForestTrustInformationW](https://learn.microsoft.com/en-us/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetforesttrustinformationw). The function takes a pointer to a [PLSA_FOREST_TRUST_INFORMATION](https://learn.microsoft.com/en-us/windows/win32/api/ntsecapi/ns-ntsecapi-lsa_forest_trust_information), a pointer to a pointer to an [LSA_FOREST_TRUST_INFORMATION](https://learn.microsoft.com/en-us/windows/win32/api/ntsecapi/ns-ntsecapi-lsa_forest_trust_information) structure. So far so good, we just need to pay attention to the several levels of indirection: whenever we want the value of a pointer to something, it's a `ByReference`.
 
 {% highlight java %}
 public int DsGetForestTrustInformation(String serverName, String trustedDomainName, int Flags,

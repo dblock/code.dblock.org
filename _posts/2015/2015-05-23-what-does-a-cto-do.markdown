@@ -57,7 +57,7 @@ My first actual work item was to reach out to team leads and ask: _What can I do
 >
 > I have been watching our increasingly strong Engineering team and am so happy to see it be totally self-sufficient and autonomous and really driving the company forward when it comes to software delivery, technology, etc. I am also excited about a newly forming product organization.
 >
-> I am a bit less needed around day-to-day code things, which probably means we're on the right track! And I have the luxury of having a bit more time to focus on new things, and am in a really privileged place where I know the company inside-out. I have a strong feeling that there're a lot of things I could be doing as CTO that I am not doing today that could make *your* job a lot easier. It could be meeting with customers, or something else, I want to find out! Two questions:
+> I am a bit less needed around day-to-day code things, which probably means we're on the right track! And I have the luxury of having a bit more time to focus on new things, and am in a really privileged place where I know the company inside-out. I have a strong feeling that there are a lot of things I could be doing as CTO that I am not doing today that could make *your* job a lot easier. It could be meeting with customers, or something else, I want to find out! Two questions:
 >
 >  - What are the outcomes you are looking to achieve in *your* position in 2015?
 >  - For any such outcome, is there anything *I* can do to help you achieve it?

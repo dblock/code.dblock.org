@@ -7,11 +7,11 @@ tags: [waffle, jna, security, win32]
 comments: true
 dblog_post_id: 91
 ---
-I’ve been working on porting [WAFFLE](https://github.com/dblock/waffle) to Java/ [JNA](https://github.com/twall/jna/). As usual I have modest and practical goals with that project: to provide a working example for everything InitializeSecurityContext and AcceptSecurityContext and to replace the .NET -> COM -> Java bridge for [our application](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/products/dbprotect/). So lets get started.
+I've been working on porting [WAFFLE](https://github.com/dblock/waffle) to Java/ [JNA](https://github.com/twall/jna/). As usual I have modest and practical goals with that project: to provide a working example for everything InitializeSecurityContext and AcceptSecurityContext and to replace the .NET -> COM -> Java bridge for [our application](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/products/dbprotect/). So lets get started.
 
 #### The Problem
 
-You’ve got a client and a server. For example, a browser and a web server. Both are joined to the same Active Directory domain. When you navigate to the website on your web server you don’t get prompted for credentials. How can this happen?
+You've got a client and a server. For example, a browser and a web server. Both are joined to the same Active Directory domain. When you navigate to the website on your web server you don't get prompted for credentials. How can this happen?
 
 #### SSPI
 
@@ -19,13 +19,13 @@ On Windows, this works because of the [Security Support Provider Interface, aka 
 
 When a client wants to authenticate to a server, it needs to supply credentials and send them to the server. The server needs to validate this, reply that the credentials were kosher and possibly continue executing code on behalf of the client.
 
-Credentials can come in a variety of forms, such as a username and password or a notarized birth certificate from City Hall. Sending those to the server needs to be secure: you don’t want to send credentials to the wrong server, the server wants to make sure you’re really who you claim to be and nobody should be able to intercept this data on the wire and reuse it. The how part of this is the job of the authentication protocol, such as, for example, NTLM or Kerberos.
+Credentials can come in a variety of forms, such as a username and password or a notarized birth certificate from City Hall. Sending those to the server needs to be secure: you don't want to send credentials to the wrong server, the server wants to make sure you're really who you claim to be and nobody should be able to intercept this data on the wire and reuse it. The how part of this is the job of the authentication protocol, such as, for example, NTLM or Kerberos.
 
-Because there’re many protocols, SSPI exchanges so called _tokens_, opaque blobs of data. the protocol can put anything in the blobs.
+Because there are many protocols, SSPI exchanges so called _tokens_, opaque blobs of data. the protocol can put anything in the blobs.
 
-Protocols often require several exchanges. For example, I may need to obtain the server’s public key, encrypt credentials, send them with my public key and receive an encrypted confirmation of success. Therefore both client and server maintain a so called _security context_ during this conversation.
+Protocols often require several exchanges. For example, I may need to obtain the server's public key, encrypt credentials, send them with my public key and receive an encrypted confirmation of success. Therefore both client and server maintain a so called _security context_ during this conversation.
 
-SSPI allows you to do all this with any protocol or SSPI provider. There’s an NTLM SSPI provider, Kerberos SSPI provider, etc. SSPI describes three important calls that doo all of the above.
+SSPI allows you to do all this with any protocol or SSPI provider. There's an NTLM SSPI provider, Kerberos SSPI provider, etc. SSPI describes three important calls that doo all of the above.
 
 - [AcquireCredentialsHandle](https://learn.microsoft.com/en-us/windows/win32/api/sspi/nf-sspi-acquirecredentialshandlea): gets a HANDLE for outbound (client) or inbound (server) credentials
 - [InitializeSecurityContext](https://learn.microsoft.com/en-us/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta): creates (or continues) a client-side security context
@@ -39,7 +39,7 @@ You can now guess how this works.
 
 #### Structures
 
-We’re going to do this in JNA. First, some structure definitions.
+We're going to do this in JNA. First, some structure definitions.
 
 A security handle is a pointer that holds credentials, context, etc. The `SecHandle`, `CtxtHandle` and `CredHandle` are all the same thing.
 

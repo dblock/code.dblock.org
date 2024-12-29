@@ -8,7 +8,7 @@ comments: true
 dblog_post_id: 139
 ---
 
-I struggled with this one. Here’s how to get [JNA](https://github.com/twall/jna) and [Waffle](https://github.com/dblock/waffle/) to work under a Java security manager. In my case I have a Tomcat 5.5 which is launched with _-security_. Here’s the complete command-line.
+I struggled with this one. Here's how to get [JNA](https://github.com/twall/jna) and [Waffle](https://github.com/dblock/waffle/) to work under a Java security manager. In my case I have a Tomcat 5.5 which is launched with _-security_. Here's the complete command-line.
 
 {% highlight bat %}
 @echo off
@@ -42,7 +42,7 @@ grant codeBase "file:${catalina.home}/waffle/lib/-" {
 };
 ```
 
-Because we’re dealing with authenticators in Waffle, grant catalina authenticator and realm classes runtime permissions.
+Because we're dealing with authenticators in Waffle, grant catalina authenticator and realm classes runtime permissions.
 
 ```
 permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.*";

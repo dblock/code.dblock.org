@@ -7,13 +7,13 @@ tags: [s3, rake, mongodb]
 comments: true
 dblog_post_id: 192
 ---
-It’s time to connect MongoDB with S3 and write a task that backs up a MongoDB database to Amazon S3. This follows a series of articles, so before you read this you might want to check these out.
+It's time to connect MongoDB with S3 and write a task that backs up a MongoDB database to Amazon S3. This follows a series of articles, so before you read this you might want to check these out.
 
 - [Exporting and Importing MongoDB Data with Rake](/seeding-exporting-and-importing-mongodb-data-with-rake)
 - [A Rake Task for Copying MongoDB Databases](/a-rake-task-for-copying-mongodb-databases)
 - [A Rake Task for Copying Data Between Amazon S3 Buckets](/a-rake-task-for-copying-data-between-amazon-s3-buckets)
 
-We’re now reusing two pieces of code in all these tasks (I put them into _s3.rake_ and _mongohq.rake _with some bug fixes).
+We're now reusing two pieces of code in all these tasks (I put them into _s3.rake_ and _mongohq.rake _with some bug fixes).
 
 #### mongohq.rake
 
@@ -59,9 +59,9 @@ end
 
 #### Backup a MongoDB Database
 
-We’re familiar with MongoDB _mongodump_ and _mongorestore_. The strategy is to create a local backup, compress it and ship it to Amazon S3 into a _daily_ folder that rotates backups. This way we’re going to have a backup every day – the _Monday_ backup, the _Tuesday_ backup, etc. We’ll then copy the latest backup on Amazon itself into a monthly folder to keep forever. This helps us avoid worrying about an ever-growing storage problem as it seems silly to keep years of daily backups.
+We're familiar with MongoDB _mongodump_ and _mongorestore_. The strategy is to create a local backup, compress it and ship it to Amazon S3 into a _daily_ folder that rotates backups. This way we're going to have a backup every day – the _Monday_ backup, the _Tuesday_ backup, etc. We'll then copy the latest backup on Amazon itself into a monthly folder to keep forever. This helps us avoid worrying about an ever-growing storage problem as it seems silly to keep years of daily backups.
 
-The complete **db_backup.rake** code below. It’s an iteration over some code that [@sarcilav](https://web.archive.org/web/20120629110557/https://blog.sarcilav.com//) wrote, so I can’t take all the credit. The bonus feature is to be able to backup any current environment to S3 as well as another environment (eg. backup _production_ from the _staging_ server) remotely.
+The complete **db_backup.rake** code below. It's an iteration over some code that [@sarcilav](https://web.archive.org/web/20120629110557/https://blog.sarcilav.com//) wrote, so I can't take all the credit. The bonus feature is to be able to backup any current environment to S3 as well as another environment (eg. backup _production_ from the _staging_ server) remotely.
 
 {% highlight ruby %}
 namespace :db do

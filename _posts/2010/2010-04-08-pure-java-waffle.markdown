@@ -10,9 +10,9 @@ dblog_post_id: 95
 
 [![](https://github.com/dblock/waffle/raw/master/waffle.jpg)](https://github.com/dblock/waffle/)
 
-I finally got to porting [Waffle](https://github.com/dblock/waffle/) to pure java with [JNA](https://github.com/twall/jna/). This means you don’t need .NET framework or COM to call Waffle from Java. It’s pure Java.
+I finally got to porting [Waffle](https://github.com/dblock/waffle/) to pure java with [JNA](https://github.com/twall/jna/). This means you don't need .NET framework or COM to call Waffle from Java. It's pure Java.
 
-Waffle is a thin interface that simplifies Windows authentication and authorization, therefore providing a practical and workable back-end for NTLM, Negotiate, Kerberos and other [SPNEGOs](https://en.wikipedia.org/wiki/SPNEGO). Here’re some scenarios that you can now do without any headache directly in Java.
+Waffle is a thin interface that simplifies Windows authentication and authorization, therefore providing a practical and workable back-end for NTLM, Negotiate, Kerberos and other [SPNEGOs](https://en.wikipedia.org/wiki/SPNEGO). Here are some scenarios that you can now do without any headache directly in Java.
 
 #### Logon a user: get his local and domain groups
 
@@ -27,7 +27,7 @@ for(IWindowsAccount group : identity.getGroups()) {
 }
 {% endhighlight %}
 
-Here’re the first lines of output for my current user:
+Here are the first lines of output for my current user:
 
 ```
 User identity: dblock-green\dblock
@@ -61,7 +61,7 @@ System.out.println(computer.getJoinStatus());
 System.out.println(computer.getMemberOf());
 {% endhighlight %}
 
-For systems that run both with and without active directory you need to programmatically figure out whether a computer is joined to a domain or a workgroup. If it’s joined to a domain or a workgroup you want to know what domain the computer is joined to.
+For systems that run both with and without active directory you need to programmatically figure out whether a computer is joined to a domain or a workgroup. If it's joined to a domain or a workgroup you want to know what domain the computer is joined to.
 
 #### Local machine: enumerate local groups
 

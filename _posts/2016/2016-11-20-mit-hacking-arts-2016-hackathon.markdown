@@ -7,13 +7,13 @@ comments: true
 ---
 This was an awesome hackathon with some strong projects. The judges deliberated for a while - we ended up having to do another blind round to pick our winner.
 
-I think Techcrunch [did a good job quoting me](https://techcrunch.com/2016/11/20/harmony-space-win-top-prize-at-mit-hacking-arts-for-music-learning-app-that-feels-like-pokemon-go).
+I think TechCrunch [did a good job quoting me](https://techcrunch.com/2016/11/20/harmony-space-win-top-prize-at-mit-hacking-arts-for-music-learning-app-that-feels-like-pokemon-go).
 
 [![techcrunch]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-hackathon/techcrunch-header.png)](https://techcrunch.com/2016/11/20/harmony-space-win-top-prize-at-mit-hacking-arts-for-music-learning-app-that-feels-like-pokemon-go/)
 
 > Artsy CTO Daniel Doubrovkine, who participated on the judging panel for the Hacking Arts 2015 and 2016 Hackathons, said emphasis had shifted from virtual reality to augmented reality from 2015 to 2016 at the hackathon.
 >
-> This years’ participants had been very music-focused, with about half of the finalist teams incorporating sound design into their projects in some way, he said. Surprisingly, in a year when the Echo became mainstream, no finalists used voice recognition or voice control in their projects.
+> This years' participants had been very music-focused, with about half of the finalist teams incorporating sound design into their projects in some way, he said. Surprisingly, in a year when the Echo became mainstream, no finalists used voice recognition or voice control in their projects.
 >
 > The CTO said he was inspired by the prototypes built and demonstrated at the event, but would advise teams to be even more experimental in their work at school and on these projects.
 >

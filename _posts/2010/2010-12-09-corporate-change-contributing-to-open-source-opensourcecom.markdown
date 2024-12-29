@@ -11,4 +11,4 @@ My first article on opensource.com > [read](https://opensource.com/life/10/12/co
 
 ![]({{ site.url }}/images/posts/2010/2010-12-09-corporate-change-contributing-to-open-source-opensourcecom/image_9.jpg)
 
-I’d love to hear your story about open-sourcing a first project within your dot.corp for my next article.
+I'd love to hear your story about open-sourcing a first project within your dot.corp for my next article.

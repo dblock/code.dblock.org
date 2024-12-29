@@ -7,9 +7,9 @@ tags: [mongoid, mongodb, ruby]
 comments: true
 dblog_post_id: 330
 ---
-Sometimes you need to iterate over a large MongoDB collection. The biggest issue is that, by default, cursors timeout after 10 minutes of inactivity. For very large collections it’s not uncommon to take longer than that to process results and you get an exception half way through the iteration. A cursor is a server-side construct, how about a client-side cursor?
+Sometimes you need to iterate over a large MongoDB collection. The biggest issue is that, by default, cursors timeout after 10 minutes of inactivity. For very large collections it's not uncommon to take longer than that to process results and you get an exception half way through the iteration. A cursor is a server-side construct, how about a client-side cursor?
 
-Here’s a Mongo Ruby iterator that will call Mongo::Collection.find in increments.
+Here's a Mongo Ruby iterator that will call Mongo::Collection.find in increments.
 
 {% highlight ruby %}
 module Mongo
@@ -49,5 +49,5 @@ module Mongoid
 end
 {% endhighlight %}
 
-Of course you must be careful that the collection doesn’t change during the iteration. If you add or remove an item before you, or will skip elements or process some elements twice.
+Of course you must be careful that the collection doesn't change during the iteration. If you add or remove an item before you, or will skip elements or process some elements twice.
 

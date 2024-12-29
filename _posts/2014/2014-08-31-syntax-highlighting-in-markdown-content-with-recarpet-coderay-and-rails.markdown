@@ -7,7 +7,7 @@ tags: [artsy, rails, ruby]
 comments: true
 dblog_post_id: 421
 ---
-I wanted Ruby and JSON code blocks ala [Github’s Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) when rendering markdown documents in [doppler](https://github.com/artsy/doppler). The idea is that we can API documentation authored in markdown, and rendered within a Rails application.
+I wanted Ruby and JSON code blocks ala [Github's Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) when rendering markdown documents in [doppler](https://github.com/artsy/doppler). The idea is that we can API documentation authored in markdown, and rendered within a Rails application.
 
 The first, harder part, is doing markdown rendering with syntax  highlighting. You render markdown with your favorite markdown gem (eg. [Redcarpet](https://github.com/vmg/redcarpet)), then parse the document and replace all code divs with a syntax highlighted version produced by [Coderay](https://github.com/rubychan/coderay). I had to also do some div swapping to avoid nested `<pre>` and `<code>` blocks.
 
@@ -61,7 +61,7 @@ get '/terms', to: 'pages#show', id: 'terms'
 
 See [https://github.com/artsy/doppler/pull/24](https://github.com/artsy/doppler/pull/24) for a complete pull request with the above.
 
-And here’s a screenshot of a rendered page.
+And here's a screenshot of a rendered page.
 
 ![]({{ site.url }}/images/posts/2014/2014-08-31-syntax-highlighting-in-markdown-content-with-recarpet-coderay-and-rails/screenshot_5.jpg)
 

@@ -15,7 +15,7 @@ Finally, the part that had my classroom most engaged was about non-traditional m
 
 ![]({{ site.url }}/images/posts/2011/2011-07-06-non-traditional-methods-of-choosing-technology-for-a-software-project/image_2.jpg)
 
-Most experienced engineers that I get a chance to talk to believe that traditional approaches yield about the same quality of results as flipping a coin. Committee-type technology decisions that evaluate many angles often make poor choices that produce average outcomes. For instance, after eliminating all the dumb and inapplicable choices for a web project, can you really choose between Ruby-on-Rails, Pythonon-Django or Lift-on-Scala? It’s a matter of preference and experience and good developers can make almost any of these work.
+Most experienced engineers that I get a chance to talk to believe that traditional approaches yield about the same quality of results as flipping a coin. Committee-type technology decisions that evaluate many angles often make poor choices that produce average outcomes. For instance, after eliminating all the dumb and inapplicable choices for a web project, can you really choose between Ruby-on-Rails, Pythonon-Django or Lift-on-Scala? It's a matter of preference and experience and good developers can make almost any of these work.
 
 Flip a coin. See which way the wind blows.
 
@@ -23,22 +23,22 @@ Flip a coin. See which way the wind blows.
 
 ![]({{ site.url }}/images/posts/2011/2011-07-06-non-traditional-methods-of-choosing-technology-for-a-software-project/image_5.jpg)
 
-What makes developers happy? Large engineering organizations tend to believe that it’s ping-pong tables and free pizza. They are wrong. Engineers like to make their own choices, love to work on cutting edge technology, solving really hard problems. They like when their brains stream code. Your project can easily achieve all these goals by putting developer happiness on the top of the decision-making stack and by demonstrating trust in choices made by the hard-working individual contributors. Sometimes technology managers can (and must) help make those happy choices.
+What makes developers happy? Large engineering organizations tend to believe that it's ping-pong tables and free pizza. They are wrong. Engineers like to make their own choices, love to work on cutting edge technology, solving really hard problems. They like when their brains stream code. Your project can easily achieve all these goals by putting developer happiness on the top of the decision-making stack and by demonstrating trust in choices made by the hard-working individual contributors. Sometimes technology managers can (and must) help make those happy choices.
 
 > - Bob, what technology would you like to use for project X?
-> - I’m comfortable with Java since I’ve been doing it for the last 100 years.
+> - I'm comfortable with Java since I've been doing it for the last 100 years.
 > - Bob, would you like to try Scala instead?
 > - Wow! Yes!
 
-You now have an energized engineer that feels ownership and has a little taste of the risky and unknown. He’s going to work twice as hard and inspire others.
+You now have an energized engineer that feels ownership and has a little taste of the risky and unknown. He's going to work twice as hard and inspire others.
 
 #### Bullet Proof Logic
 
 ![]({{ site.url }}/images/posts/2011/2011-07-06-non-traditional-methods-of-choosing-technology-for-a-software-project/image_8.jpg)
 
-Instead of flipping a coin we can use simple logic that has nothing to do with technology per-se. For example, you can choose something that worked for you before. It’s a safe bet. You can pick a different framework from one that worked for you because you want to try something new, making things a bit exciting. Finally, you can choose technology because someone else uses it for a tangent problem space.
+Instead of flipping a coin we can use simple logic that has nothing to do with technology per-se. For example, you can choose something that worked for you before. It's a safe bet. You can pick a different framework from one that worked for you because you want to try something new, making things a bit exciting. Finally, you can choose technology because someone else uses it for a tangent problem space.
 
-We knew we needed a NoSQL database. So we picked [MongoDB](https://mongodb.org) because [Foursquare](https://foursquare.com) uses. It also happened that [10gen](https://10gen.com), the company behind MongoDB was two blocs away and we had a chance to meet with some really smart people that work there. But frankly, at the moment of that decision we had no technical reason for picking MongoDB out of the dozens of NoSQL databases on the market. In fact, many could have easily demonstrated better reliability and scalability. Strangely, we haven’t regretted this choice - it just felt right and continues to feel so today.
+We knew we needed a NoSQL database. So we picked [MongoDB](https://mongodb.org) because [Foursquare](https://foursquare.com) uses. It also happened that [10gen](https://10gen.com), the company behind MongoDB was two blocs away and we had a chance to meet with some really smart people that work there. But frankly, at the moment of that decision we had no technical reason for picking MongoDB out of the dozens of NoSQL databases on the market. In fact, many could have easily demonstrated better reliability and scalability. Strangely, we haven't regretted this choice - it just felt right and continues to feel so today.
 
 #### Iterative and Pragmatic
 

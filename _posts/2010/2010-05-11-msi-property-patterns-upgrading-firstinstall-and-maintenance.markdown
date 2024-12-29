@@ -69,7 +69,7 @@ Runtime.wxi follows.
 </Include>
 {% endhighlight %}
 
-Don’t forget to define the `OLDERVERSION_BEINGUPGRADED` and `NEWERVERSION_INSTALLED` properties in the `Upgrade` table.
+Don't forget to define the `OLDERVERSION_BEINGUPGRADED` and `NEWERVERSION_INSTALLED` properties in the `Upgrade` table.
 
 {% highlight xml %}
 <Upgrade Id="$(var.UpgradeCode)">
@@ -92,4 +92,4 @@ And change the install sequence for major upgrade.
 </InstallUISequence>
 {% endhighlight %}
 
-Initially we had to deal with a legacy InstallShield installer and these properties were more complicated. Read [this post](/upgrading-freshinstall-maintenance-and-other-msi-convenience-properties) instead if that’s what you’re trying to do.
+Initially we had to deal with a legacy InstallShield installer and these properties were more complicated. Read [this post](/upgrading-freshinstall-maintenance-and-other-msi-convenience-properties) instead if that's what you're trying to do.

@@ -7,9 +7,9 @@ tags: [speaking, ruby]
 comments: true
 dblog_post_id: 419
 ---
-I’m very excited to be speaking at GoGaRuCo in San Francisco in September about taking over open-source projects, along with people like [@wycats](https://twitter.com/wycats), [@ultrasaurus](https://twitter.com/ultrasaurus) and [@pat](https://twitter.com/pat). No pressure.
+I'm very excited to be speaking at GoGaRuCo in San Francisco in September about taking over open-source projects, along with people like [@wycats](https://twitter.com/wycats), [@ultrasaurus](https://twitter.com/ultrasaurus) and [@pat](https://twitter.com/pat). No pressure.
 
-I want to hear about your experiences about taking over someone else’s open-source work! Email me at dblock[at]dblock[dot]org.
+I want to hear about your experiences about taking over someone else's open-source work! Email me at dblock[at]dblock[dot]org.
 
 ![]({{ site.url }}/images/posts/2014/2014-07-18-golden-gate-ruby-conference-2014/image_6.jpg)
 

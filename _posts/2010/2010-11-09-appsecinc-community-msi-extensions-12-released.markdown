@@ -11,7 +11,7 @@ dblog_post_id: 142
 
 We take our custom actions seriously.
 
-This is the second open-source release of our [community MSI custom actions and WIX extensions](https://github.com/dblock/msiext/). Here’re some highlights.
+This is the second open-source release of our [community MSI custom actions and WIX extensions](https://github.com/dblock/msiext/). Here are some highlights.
 
 - Added support for SQL error commands and sqlvariant in all ODBC and SQLServer custom actions and extensions.
 - Corrected a number of issues with SQL Server 2000 in ODBC custom actions and extensions.

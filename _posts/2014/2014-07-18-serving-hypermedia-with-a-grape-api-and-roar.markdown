@@ -7,11 +7,11 @@ tags: [apis, grape]
 comments: true
 dblog_post_id: 418
 ---
-I’ve begun experimenting with Hypermedia APIs a bit more seriously, trying to come up with a good infrastructure for the next version of the [Artsy](https://artsy.net) API. It might even be a public one, but I am not making any promises right now. I’ve played with serialization and attempted to use ActiveModel::Serializers with the [grape-activemodel_serializers](https://github.com/jrhe/grape-active_model_serializers) gem and HAL with [Roar](https://github.com/apotonick/roar). It turned out that we do need a little bit of help with Roar, so I released a new gem called [grape-roar](https://github.com/dblock/grape-roar), which enables using Grape’s _present_ keyword.
+I've begun experimenting with Hypermedia APIs a bit more seriously, trying to come up with a good infrastructure for the next version of the [Artsy](https://artsy.net) API. It might even be a public one, but I am not making any promises right now. I've played with serialization and attempted to use ActiveModel::Serializers with the [grape-activemodel_serializers](https://github.com/jrhe/grape-active_model_serializers) gem and HAL with [Roar](https://github.com/apotonick/roar). It turned out that we do need a little bit of help with Roar, so I released a new gem called [grape-roar](https://github.com/dblock/grape-roar), which enables using Grape's _present_ keyword.
 
 Check out an example application deployed at grape-with-roar.herokuapp.com, source code in [https://github.com/dblock/grape-with-roar](https://github.com/dblock/grape-with-roar).
 
-First, swap the JSON formatter for _Grape::Formatter::Roar_. It’s implementation is almost identical to the default JSON formatter, except that it passes _env_ along to the _to_json_ call.
+First, swap the JSON formatter for _Grape::Formatter::Roar_. It's implementation is almost identical to the default JSON formatter, except that it passes _env_ along to the _to_json_ call.
 
 {% highlight ruby %}
 module Acme
@@ -73,4 +73,4 @@ end
 
 Representing collections is similar, check out [https://github.com/dblock/grape-with-roar](https://github.com/dblock/grape-with-roar) for a complete example with bonus pagination support.
 
-I’d love it if someone could contribute a POST/PUT example.
+I'd love it if someone could contribute a POST/PUT example.

@@ -9,7 +9,7 @@ dblog_post_id: 144
 ---
 ![crane]({{ site.url }}/images/posts/2010/2010-11-18-msbuild-setting-up-a-build-environment-w-nunit/crane_5.jpg)
 
-Here’re a few helpful tricks for setting up a build environment, finding the most recent version of [NUnit](https://www.nunit.org/) and using it with [MSBuild Community Tasks](https://web.archive.org/web/20080105002641/https://msbuildtasks.tigris.org//) programmatically (assuming you’re not checking in NUnit alongside your source code, which you probably should).
+Here are a few helpful tricks for setting up a build environment, finding the most recent version of [NUnit](https://www.nunit.org/) and using it with [MSBuild Community Tasks](https://web.archive.org/web/20080105002641/https://msbuildtasks.tigris.org//) programmatically (assuming you're not checking in NUnit alongside your source code, which you probably should).
 
 We wrap build into a _build.cmd_ that sets up a basic build environment. This avoids users the headache of launching anything except a command prompt upfront. We want a certain version of Visual Studio, targeting  a certain version of .NET Framework and NUnit. This is a typical project setup.
 
@@ -33,7 +33,7 @@ if EXIST "%VisualStudioCmd%" call "%VisualStudioCmd%"
 
 #### .NET Framework
 
-We can simply define the version of .NET Framework and it’s path. In this case we want 3.5, but we could also specify any version available in `%SystemRoot%\Microsoft.NET\Framework`.
+We can simply define the version of .NET Framework and it's path. In this case we want 3.5, but we could also specify any version available in `%SystemRoot%\Microsoft.NET\Framework`.
 
 {% highlight bat %}
 set FrameworkVersion=v3.5
@@ -42,7 +42,7 @@ set FrameworkDir=%SystemRoot%\Microsoft.NET\Framework
 
 #### NUnit
 
-NUnit is a bit trickier since we don’t know the version of NUnit installed on this machine. Plus NUnit project has been doing some moving files around. We will define NUnitBinDir and we will also check whether we found it.
+NUnit is a bit trickier since we don't know the version of NUnit installed on this machine. Plus NUnit project has been doing some moving files around. We will define NUnitBinDir and we will also check whether we found it.
 
 {% highlight bat %}
 for /D %%n in ( "%ProgramFilesDir%\NUnit*" ) do (
@@ -75,4 +75,4 @@ if NOT %ERRORLEVEL%==0 exit /b %ERRORLEVEL%
 
 #### Examples
 
-I tend to use a stock _build.cmd_ in many projects and it has simplified our life quite a bit. Here’s a [complete one](https://github.com/resourcelib/resourcelib/blob/1.3/build.cmd). You can type `build all /p:Configuration=Release` for example to build the project release configuration.
+I tend to use a stock _build.cmd_ in many projects and it has simplified our life quite a bit. Here's a [complete one](https://github.com/resourcelib/resourcelib/blob/1.3/build.cmd). You can type `build all /p:Configuration=Release` for example to build the project release configuration.

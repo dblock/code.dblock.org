@@ -15,7 +15,7 @@ We (at my [day job](https://web.archive.org/web/20131111165225/https://www.appse
 
 #### VMWare Programming APIs
 
-There're two types of APIs.
+There are two types of APIs.
 
 - **VMWare Virtual Infrastructure SDK** : a set of tools and APIs to manage a VMWare Infrastructure environment. A toolkit has also been released that contains managed wrappers on top of the SOAP interface provided by a VMWare deployment. It's focused on VMWare ESX or VirtualCenter management and is beyond the scope of this post.
 
@@ -79,7 +79,7 @@ public void OpenFile(string fileName)
 
 #### Power-on, power-off, copy and execute
 
-These are straightforward operations supported by the SDK via the IVM interface returned set by the above-mentioned OpenFile method. Here're some examples.
+These are straightforward operations supported by the SDK via the IVM interface returned set by the above-mentioned OpenFile method. Here are some examples.
 
 {% highlight c# %}
 IJob PowerOn(int powerOnOptions, IVixHandle propertyList, ICallback jobDoneCallback);

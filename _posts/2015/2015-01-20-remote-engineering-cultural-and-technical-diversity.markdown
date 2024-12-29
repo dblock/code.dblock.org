@@ -17,11 +17,11 @@ As a non-American I don't feel as patriotic. I eagerly advise European engineers
 
 As a followup to Graham's post entitled [_How Paul Graham is Wrong_](https://ma.tt/2014/12/how-paul-graham-is-wrong/) Matt Mullenweg writes:
 
-> If 95% of great programmers aren’t in the US, ... set up your company to take advantage of that fact as a strength, not a weakness.
+> If 95% of great programmers aren't in the US, ... set up your company to take advantage of that fact as a strength, not a weakness.
 
 Taking the opposite position in [_Why Remote Engineering is So Difficult_](https://blog.learningbyshipping.com/2014/12/30/why-remote-engineering-is-so-difficult), Steven Sinofsky lists the challenges of doing just that. He writes:
 
-> If I had to sum up all of these in one challenge, it is that however you find you can divide the work across geography at a point in time, it simply isn’t sustainable.
+> If I had to sum up all of these in one challenge, it is that however you find you can divide the work across geography at a point in time, it simply isn't sustainable.
 
 Let's unwind this last one. In my personal experience working there, Microsoft's remote teams were always treated as second category citizens and were never given a chance to succeed. During the first decade of the 21st century the company's executives spent a tremendous amount of time and effort destroying organizations that were acquired world-wide. New York's own [Massive Inc.](https://en.wikipedia.org/wiki/Massive_Incorporated) was a perfect example, wound down from a successful engineering culture into oblivion of the Seattle suburbs in just a few years. Amongst all the reasons Sinofsky listed in his post, he omitted the one I would write about the most - Microsoft's senior management prefers to hold power close to Redmond, where individuals look more alike, and control structures already in place can be exercised quickly, swiftly and at scale.
 

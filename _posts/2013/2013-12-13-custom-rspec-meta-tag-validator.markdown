@@ -7,7 +7,7 @@ tags: [rspec, capybara, ruby]
 comments: true
 dblog_post_id: 401
 ---
-I’ve written my share of RSpec tests that look for specific meta tags in a web page under Capybara. It would be nice to be able to spell the following.
+I've written my share of RSpec tests that look for specific meta tags in a web page under Capybara. It would be nice to be able to spell the following.
 
 {% highlight ruby %}
 visit "/"

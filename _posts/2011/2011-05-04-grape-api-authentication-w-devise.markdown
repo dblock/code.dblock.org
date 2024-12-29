@@ -7,20 +7,20 @@ tags: [rails, ruby, security]
 comments: true
 dblog_post_id: 204
 ---
-Now that we have dealt with exceptions in our API we need to provide various methods of authentication. We’re going to be talking [grape](https://github.com/ruby-grape/grape) and [devise](https://github.com/plataformatec/devise).
+Now that we have dealt with exceptions in our API we need to provide various methods of authentication. We're going to be talking [grape](https://github.com/ruby-grape/grape) and [devise](https://github.com/plataformatec/devise).
 
-There’re several scenarios and issues to consider.
+There are several scenarios and issues to consider.
 
 1. We want some public APIs not to require authentication or registration at all. In our case this is only _ping_, the idea being that an absolute minimum set of code runs underneath.
 2. We want public APIs that require the caller to register an application. This gives us some ability to do accounting as well as to block a misbehaving application in the wild.
-3. We want users to be able to login via OAuth2 and we’d like to distinguish users between administrators and other types of users.
-4. When a user is logged into the website with a form, we’d like to allow browsing and exercising the API without having to do OAuth.
+3. We want users to be able to login via OAuth2 and we'd like to distinguish users between administrators and other types of users.
+4. When a user is logged into the website with a form, we'd like to allow browsing and exercising the API without having to do OAuth.
 
-Here’s what we did. It’s far from ideal, please comment and suggest ways to move forward, especially if you think something belongs in Grape or Devise proper.
+Here's what we did. It's far from ideal, please comment and suggest ways to move forward, especially if you think something belongs in Grape or Devise proper.
 
 #### No Authentication
 
-No authentication is easy. We don’t do anything.
+No authentication is easy. We don't do anything.
 
 {% highlight ruby %}
 get "ping" do
@@ -30,7 +30,7 @@ end
 
 #### A User Logged in with a Form
 
-A previously logged in user is authenticated with Devise (based on Warden). There’s nothing special to do for the API except to insert an _authenticated_user_ method in those APIs that require it.
+A previously logged in user is authenticated with Devise (based on Warden). There's nothing special to do for the API except to insert an _authenticated_user_ method in those APIs that require it.
 
 {% highlight ruby %}
 get "me" do
@@ -61,7 +61,7 @@ We have a straightforward way to register _ClientApplications_ which yield an ap
 
 #### Access Grants
 
-Before we hookup user authentication, note that we have multiple authentication schemes that yield some kind of access. We can all it an _AccessGrant_. We want the grant to expire. We’ll store the grant in the back-end so that we can check the grant after it has been handed out. A future version may improve on this by signing and serializing the grant to the client, therefore avoiding the database hit.
+Before we hookup user authentication, note that we have multiple authentication schemes that yield some kind of access. We can all it an _AccessGrant_. We want the grant to expire. We'll store the grant in the back-end so that we can check the grant after it has been handed out. A future version may improve on this by signing and serializing the grant to the client, therefore avoiding the database hit.
 
 {% highlight ruby %}
 class AccessGrant
@@ -147,9 +147,9 @@ def authenticated
 end
 {% endhighlight %}
 
-This is an improvement over schemes like BASIC authentication. We’re only sending actual credentials (client ID and secret) once during authentication, which would happen under SSL. If subsequent unprotected traffic were to be logged and the logs stolen, the XApp token would have a limited value since it expires.
+This is an improvement over schemes like BASIC authentication. We're only sending actual credentials (client ID and secret) once during authentication, which would happen under SSL. If subsequent unprotected traffic were to be logged and the logs stolen, the XApp token would have a limited value since it expires.
 
-We found that the XApp authentication model is ideal for client apps that don’t require user registration.
+We found that the XApp authentication model is ideal for client apps that don't require user registration.
 
 #### OAuth2
 
@@ -164,7 +164,7 @@ def self.find_for_token_authentication(params = {})
 end
 {% endhighlight %}
 
-How does a user obtain such a token with OAuth2? We’ll need two routes.
+How does a user obtain such a token with OAuth2? We'll need two routes.
 
 {% highlight ruby %}
 match '/oauth2/authorize'    => 'oauth#authorize',    :via => [:get, :post]

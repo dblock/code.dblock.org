@@ -61,7 +61,7 @@ Joe Davis is a living mad scientist at the Thomas Schwartz Lab, MIT Biology. Joe
 
 And my favorite.
 
-> Just like with the printing press, there're some concerns with A.I. <small>/[Julie Legault](https://julielegault.com)</small>
+> Just like with the printing press, there are some concerns with A.I. <small>/[Julie Legault](https://julielegault.com)</small>
 
 ![Biotech Art]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-conference/biotechart.jpg)
 

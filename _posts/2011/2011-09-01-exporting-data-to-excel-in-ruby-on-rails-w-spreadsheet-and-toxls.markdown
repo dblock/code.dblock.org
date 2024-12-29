@@ -9,9 +9,9 @@ dblog_post_id: 254
 ---
 ![]({{ site.url }}/images/posts/2011/2011-09-01-exporting-data-to-excel-in-ruby-on-rails-w-spreadsheet-and-toxls/image_7.jpg)
 
-We’re going to export data to Excel from our RoR application, in about five lines of code. There’re many options available out there and it’s all pretty confusing. People try to export CSV and XML formats.
+We're going to export data to Excel from our RoR application, in about five lines of code. There are many options available out there and it's all pretty confusing. People try to export CSV and XML formats.
 
-Here’s how we do it, and so should you.
+Here's how we do it, and so should you.
 
 #### Just Do It!
 
@@ -28,7 +28,7 @@ Register the Excel MIME type in _config/initializers/mime_types.rb_.
 Mime::Type.register "application/vnd.ms-excel", :xls
 {% endhighlight %}
 
-Add a _as_xls_ method to any model that you want to export that contains the fields of interest. Here’s what I added to _app/models/user.rb_.
+Add a _as_xls_ method to any model that you want to export that contains the fields of interest. Here's what I added to _app/models/user.rb_.
 
 {% highlight ruby %}
 def as_xls(options = {})
@@ -45,7 +45,7 @@ end
 
 You can also simply call _as_json_ inside _as_xls_. Note that currently only top-level keys are exported.
 
-Add support for the .XLS format in any controller out of which you want to export Excel files. Here’s what I added to _app/controllers/users_controller.rb_.
+Add support for the .XLS format in any controller out of which you want to export Excel files. Here's what I added to _app/controllers/users_controller.rb_.
 
 {% highlight ruby %}
 def index
@@ -57,13 +57,13 @@ def index
 end
 {% endhighlight %}
 
-Add a link on the users view. Here’s what I added to _app/views/users.html.haml_. The parameter merging lets you reuse whatever parameters were passed in the page.
+Add a link on the users view. Here's what I added to _app/views/users.html.haml_. The parameter merging lets you reuse whatever parameters were passed in the page.
 
 {% highlight ruby %}
 = link_to 'Export', users_path(request.parameters.merge({:format => :xls}))
 {% endhighlight %}
 
-We added some styles, so here’s what the export button looks like next to another one.
+We added some styles, so here's what the export button looks like next to another one.
 
 ![]({{ site.url }}/images/posts/2011/2011-09-01-exporting-data-to-excel-in-ruby-on-rails-w-spreadsheet-and-toxls/image_17.jpg)
 
@@ -93,7 +93,7 @@ end
 
 - [spreadsheet gem home](https://spreadsheet.ch/), [rubygems](https://rubygems.org/gems/spreadsheet) and [patch for frozen hash in encoding](https://groups.google.com/group/rubyspreadsheet/browse_frm/thread/29debd680f45fd6)
 - [to_xls home](https://github.com/splendeo/to_xls) and [rubygems](https://rubygems.org/gems/to_xls) and [my pull request to to_xls with as_xls support](https://github.com/splendeo/to_xls/pull/2)
-- [plataforma’s blog post](https://blog.plataformatec.com.br/2009/09/exporting-data-to-csv-and-excel-in-your-rails-app/) on the topic that helped me steer in the right direction
+- [plataforma's blog post](https://blog.plataformatec.com.br/2009/09/exporting-data-to-csv-and-excel-in-your-rails-app/) on the topic that helped me steer in the right direction
 - [spreadsheet_encodings.rb monkey patch](https://gist.github.com/1187549)
 - original [to_csv](https://github.com/arydjmal/to_csv) that inspired to_xls
 - [an alternative using rxsl templates](https://github.com/10to1/spreadsheet_on_rails)

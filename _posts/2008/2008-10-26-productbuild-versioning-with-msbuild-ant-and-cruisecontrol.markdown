@@ -53,7 +53,7 @@ Out of all conversations and options I've picked the following 4-digit scheme.
 - **Major** : the major version of the product, changed manually with every product release with a large new feature set.
 - **Minor** : the minor version of the product, changed manually with every minor product release containing some features.
 - **SVN Revision** : the latest source-control revision of the codebase used for this build.
-- **Zero** : the last number is 0. If there're more than one builds at the same revision, it is an auto-incremented number.
+- **Zero** : the last number is 0. If there are more than one builds at the same revision, it is an auto-incremented number.
 
 For example, 1.5.4567.0 means that this is product version 1.5 at SVN revision 4567.
 
@@ -133,7 +133,7 @@ We also unit test versions. We want to make sure that all our binaries are prope
 
 ### Notes
 
-Incrementing the major or minor build number is done during branching. The only place to do it is the MSBuild project file or the ANT properties file. There're no other manual steps, ever.
+Incrementing the major or minor build number is done during branching. The only place to do it is the MSBuild project file or the ANT properties file. There are no other manual steps, ever.
 
 Another great thing about this versioning scheme is that we can now build with CruiseControl on a trigger. Every check-in can generate a build. We don't do daily scheduled builds any more. This is truly agile, continuous integration.
 

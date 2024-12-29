@@ -7,7 +7,7 @@ tags: [performance, ruby]
 comments: true
 dblog_post_id: 399
 ---
-Got a chance to play with [Goliath](https://postrank-labs.github.io/goliath/) for a bit. You don’t need to do much work to mount [Grape](https://github.com/ruby-grape/grape) behind it. Grape figures out content-negotiation and formatting for you, so just stream the response through Goliath.
+Got a chance to play with [Goliath](https://postrank-labs.github.io/goliath/) for a bit. You don't need to do much work to mount [Grape](https://github.com/ruby-grape/grape) behind it. Grape figures out content-negotiation and formatting for you, so just stream the response through Goliath.
 
 {% highlight ruby %}
 module Acme
@@ -45,4 +45,4 @@ end
 
 Working code in [https://github.com/dblock/grape-on-goliath](https://github.com/dblock/grape-on-goliath).
 
-There’s also a very complete demo with asynchronous IO and PostgreSQL [here](https://github.com/djones/grape-goliath-example). Haven’t tried it, but looks very promising.
+There's also a very complete demo with asynchronous IO and PostgreSQL [here](https://github.com/djones/grape-goliath-example). Haven't tried it, but looks very promising.

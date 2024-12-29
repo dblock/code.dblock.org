@@ -174,7 +174,7 @@ You can see the complete server-side code in [33-minutes-server@11c324](https://
 
 ### Relay-Style Connections
 
-Relay’s support for pagination relies on the GraphQL server exposing connections in a [standardized way](https://facebook.github.io/relay/graphql/connections.htm). To expose user's meetings as a GraphQL field you would write `field :meetings, -> { !types[Types::MeetingType] }`. To enable this to be Relay-style, use `connection`.
+Relay's support for pagination relies on the GraphQL server exposing connections in a [standardized way](https://facebook.github.io/relay/graphql/connections.htm). To expose user's meetings as a GraphQL field you would write `field :meetings, -> { !types[Types::MeetingType] }`. To enable this to be Relay-style, use `connection`.
 
 {% highlight ruby %}
 Types::UserType = GraphQL::ObjectType.define do

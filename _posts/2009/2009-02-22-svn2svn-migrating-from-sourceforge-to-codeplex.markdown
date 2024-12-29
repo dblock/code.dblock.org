@@ -23,7 +23,7 @@ Someone has to do the work, so please welcome my new svn2svn project, [https://w
 - simulation mode
 - prompts on commit
 
-Alpha build on it's way.
+Alpha build on its way.
 
 #### Update (2015)
 

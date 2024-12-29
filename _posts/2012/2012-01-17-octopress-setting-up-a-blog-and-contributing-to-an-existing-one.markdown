@@ -7,7 +7,7 @@ tags: [octopress, technology, blog]
 comments: true
 dblog_post_id: 309
 ---
-[Octopress](http://octopress.org) documentation can be quite confusing. It took me a while to understand what the heck Octopress is doing to branches and remote origins. It’s actually pretty simple, so I am going to try to un-confuse you. I will also show you a better way to contribute to an existing blog and explain what’s happening in those Rake tasks.
+[Octopress](http://octopress.org) documentation can be quite confusing. It took me a while to understand what the heck Octopress is doing to branches and remote origins. It's actually pretty simple, so I am going to try to un-confuse you. I will also show you a better way to contribute to an existing blog and explain what's happening in those Rake tasks.
 
 We are going to deploy a blog to Github pages, so we need a project, such as _username.github.com_. Go to Github to create one. Use your username instead of "username".
 
@@ -54,7 +54,7 @@ create mode 100644 index.html
 ## Now you can deploy to https://username.github.com with `rake deploy` ##
 ```
 
-So what the heck happened here? It pointed our clone to our new repository. It also created a __deploy_ directory with another git repository that is going to contain everything that is being deployed. The remote in that directory is the same as the one in our _octopress_ directory, but the checked out branch is _master_. Btw, we’re now on the _source_ branch.
+So what the heck happened here? It pointed our clone to our new repository. It also created a __deploy_ directory with another git repository that is going to contain everything that is being deployed. The remote in that directory is the same as the one in our _octopress_ directory, but the checked out branch is _master_. Btw, we're now on the _source_ branch.
 
 ```
 octopress$ git remote -v
@@ -103,7 +103,7 @@ Successfully generated site: source -> public
 
 You can also preview it with `rake preview`.
 
-Before we deploy the blog, save the source and push it to Github. Note that we’re pushing our source branch.
+Before we deploy the blog, save the source and push it to Github. Note that we're pushing our source branch.
 
 ```
 octopress$ git add .
@@ -120,7 +120,7 @@ To git@github.com:username/username.github.com.git
 * [new branch]      source -> source
 ```
 
-You’ll have to repeat the above every time you make changes, to save them.
+You'll have to repeat the above every time you make changes, to save them.
 
 Deploy the blog. What this does it rake everything inside __deploy_ and push it onto the _master_ branch.
 
@@ -138,7 +138,7 @@ To git@github.com:username/username.github.com.git
 
 If you go to https://username.github.com you should see your blog with the blog post once Github has regenerated the pages – usually a minute or two. And on https://github.com/username/username.github.com you should be able to see the generated files on _master_ along with a _source_ branch with the blog source.
 
-You’ll have to do this every time you want to deploy your changes.
+You'll have to do this every time you want to deploy your changes.
 
 So how does one start contributing to an existing Octopress blog (or yourself from a new computer)? What we want is the same setup as above, but not from scratch.
 
@@ -155,4 +155,4 @@ username.github.com/_deploy$ cd ..
 username.github.com$
 ```
 
-You’re all set. Create posts and stuff. Happy blogging with Octopress.
+You're all set. Create posts and stuff. Happy blogging with Octopress.

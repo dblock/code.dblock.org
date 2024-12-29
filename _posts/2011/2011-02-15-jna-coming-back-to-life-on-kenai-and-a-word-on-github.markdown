@@ -7,7 +7,7 @@ tags: [open source, jna, java]
 comments: true
 dblog_post_id: 173
 ---
-You might have heard about the massive controversy about [Hudson’s move to Github](https://www.infoq.com/news/2011/02/sonatype-hudson). I could have stirred a big storm in a cup for the [Java Native Access (JNA)](https://github.com/twall/jna/) project, but instead of I spent a few hours this morning resurrecting it back to some life form on [Kenai](https://web.archive.org/web/20111005153529/https://kenai.com/) (JNA-172). It was about time, even [people on Habrahabr noticed](https://habrahabr.ru/blogs/java/113436/). I heard from [@toddfast](https://web.archive.org/web/20110217073825/https://java.net/people/85599-toddfast)  who is working on a 3.2.8 release too, so all will be good soon.
+You might have heard about the massive controversy about [Hudson's move to Github](https://www.infoq.com/news/2011/02/sonatype-hudson). I could have stirred a big storm in a cup for the [Java Native Access (JNA)](https://github.com/twall/jna/) project, but instead of I spent a few hours this morning resurrecting it back to some life form on [Kenai](https://web.archive.org/web/20111005153529/https://kenai.com/) (JNA-172). It was about time, even [people on Habrahabr noticed](https://habrahabr.ru/blogs/java/113436/). I heard from [@toddfast](https://web.archive.org/web/20110217073825/https://java.net/people/85599-toddfast)  who is working on a 3.2.8 release too, so all will be good soon.
 
 #### Website
 
@@ -35,7 +35,7 @@ Check out JNA source code from `svn.java.net/svn/jna~svn/trunk`.
 
 #### Famous Last Thoughts
 
-I would pick [Github](https://github.com/) over Kenai for any new project ten times out of ten. Kenai is fairly ugly and feels a bit clunky. It’s a collection of somewhat aggregated services, including decent wiki markup and JIRA. Where Kenai fails miserably is at creating a true collaborative environment around the open-source code, something that Github is awesome at (think pull requests and markdown rendering tightly integrated around code). IMHO those collaboration tools is what makes Github so wonderful! (Note that I still do like CodePlex, so I would pick Github over CodePlex maybe 3 times out of 5 :))
+I would pick [Github](https://github.com/) over Kenai for any new project ten times out of ten. Kenai is fairly ugly and feels a bit clunky. It's a collection of somewhat aggregated services, including decent wiki markup and JIRA. Where Kenai fails miserably is at creating a true collaborative environment around the open-source code, something that Github is awesome at (think pull requests and markdown rendering tightly integrated around code). IMHO those collaboration tools is what makes Github so wonderful! (Note that I still do like CodePlex, so I would pick Github over CodePlex maybe 3 times out of 5 :))
 
 #### Update (2015)
 

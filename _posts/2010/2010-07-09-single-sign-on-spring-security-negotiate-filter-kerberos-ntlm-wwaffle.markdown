@@ -10,7 +10,7 @@ dblog_post_id: 114
 
 ![springwaffle]({{ site.url }}/images/posts/2010/2010-07-09-single-sign-on-spring-security-negotiate-filter-kerberos-ntlm-wwaffle/springwaffle_3.jpg)
 
-In this post I’ll explain how to configure the Waffle Spring-Security Negotiate filter to do single-sign-on on Windows and touch on how much more elegant the spring-based filter configuration is versus, for example, a generic servlet filter.
+In this post I'll explain how to configure the Waffle Spring-Security Negotiate filter to do single-sign-on on Windows and touch on how much more elegant the spring-based filter configuration is versus, for example, a generic servlet filter.
 
 #### Download
 
@@ -42,7 +42,7 @@ We'll assume that [Spring-Security](https://static.springsource.org/spring-secur
 
 _Package Files_
 
-You need waffle-jna.jar, jna.jar, platform.jar and commons-logging-1.1.1.jar from the Waffle distribution as well as Spring and Spring-security JARs. Those should be placed in your application’s classpath (eg. packaged in WAR). If you’re using Tomcat, for demo purposes you can put these files in Tomcat’s _lib_.
+You need waffle-jna.jar, jna.jar, platform.jar and commons-logging-1.1.1.jar from the Waffle distribution as well as Spring and Spring-security JARs. Those should be placed in your application's classpath (eg. packaged in WAR). If you're using Tomcat, for demo purposes you can put these files in Tomcat's _lib_.
 
 _Windows Authentication Provider_
 
@@ -75,7 +75,7 @@ Declare a collection of Waffle security filter providers that implement various 
 </bean>
 {% endhighlight %}
 
-If you’re not very familiar with Spring, you will start loving it right here. We’re adding two providers to a collection in a configuration file. This means that we don’t need to have another configuration mechanism than this one to add or remove one. We don’t need to do this in code either. Each class instance (bean) is also configurable individually – we can, for example, configure the name of the realm for Basic authentication.
+If you're not very familiar with Spring, you will start loving it right here. We're adding two providers to a collection in a configuration file. This means that we don't need to have another configuration mechanism than this one to add or remove one. We don't need to do this in code either. Each class instance (bean) is also configurable individually – we can, for example, configure the name of the realm for Basic authentication.
 
 {% highlight xml %}
 <bean id="basicSecurityFilterProvider" class="waffle.servlet.spi.BasicSecurityFilterProvider">
@@ -84,7 +84,7 @@ If you’re not very familiar with Spring, you will start loving it right here. 
 </bean>
 {% endhighlight %}
 
-It’s more verbose, but it’s much more flexible.
+It's more verbose, but it's much more flexible.
 
 _Add a Waffle Security Filter_
 
@@ -103,7 +103,7 @@ Add the Waffle security filter and entry point to the _sec:http_ configuration s
 
 _Spring-Security Authentication Manager_
 
-Define a required default Spring-Security authentication manager. We’re not going to use it in this setup because the filter takes care of authentication and the user doesn’t have a way to supply, for example, a username and password.
+Define a required default Spring-Security authentication manager. We're not going to use it in this setup because the filter takes care of authentication and the user doesn't have a way to supply, for example, a username and password.
 
 {% highlight xml %}
 <sec:authentication-manager alias="authenticationProvider" />

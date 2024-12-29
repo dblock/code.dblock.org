@@ -13,15 +13,15 @@ One of my rake tasks failed with an interesting error this morning.
 uncaught exception: error: { "$err" : "not master and slaveok=false", "code" : 13435 }
 ```
 
-Qu’est-ce que c’est?
+Qu'est-ce que c'est?
 
-The problem is that I am connecting to a slave in a replica set and trying to execute a write operation that must happen on a master node. That’s because I was lazy and was executing command-line update queries, such as this one. I was being lazy. Shame on me.
+The problem is that I am connecting to a slave in a replica set and trying to execute a write operation that must happen on a master node. That's because I was lazy and was executing command-line update queries, such as this one. I was being lazy. Shame on me.
 
 {% highlight ruby %}
 system "mongo #{db_host}:#{db_port}/#{db_name} -u #{db_user} -p#{db_password} --eval 'db.widgets.drop()'"
 {% endhighlight %}
 
-This is run in a Rake task. Let's replace this with some Ruby code, the way it’s ought to be.
+This is run in a Rake task. Let's replace this with some Ruby code, the way it's ought to be.
 
 {% highlight ruby %}
 db = Mongo::Connection.new(db_host, db_port).db(db_name)
@@ -29,7 +29,7 @@ db.authenticate(db_user, db_password) unless (db.user.nil? || db.user.blank?)
 db.collection("widgets").drop()
 {% endhighlight %}
 
-It’s actually a lot cleaner, I am not sure why I was hung up on the command line thing. Unfortunately it doesn’t fix our problem. In a replica set we need to use a `ReplSetConnection` that will automatically load-balance requests and send writes to the master. It takes a list of hosts, something like
+It's actually a lot cleaner, I am not sure why I was hung up on the command line thing. Unfortunately it doesn't fix our problem. In a replica set we need to use a `ReplSetConnection` that will automatically load-balance requests and send writes to the master. It takes a list of hosts, something like
 
 {% highlight ruby %}
 db_connection = Mongo::ReplSetConnection.new(db_host_list).db(db_name)

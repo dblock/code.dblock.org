@@ -1,0 +1,32 @@
+matrix:
+  - name: Markdown
+    aspell:
+      lang: en
+      ignore-case: true
+    dictionary:
+      wordlists:
+        - .pyspelling.words
+      encoding: utf-8
+    pipeline:
+      - pyspelling.filters.context:
+          context_visible_first: true
+          # ignore highlights
+          delimiters:
+            # ignore jekyll multiline magic highlights {% ... %}
+            - open: '(?s)^\{\% highlight .* \%\}$'
+              close: '^\{\% endhighlight \%\}$'
+            # ignore the rest of jekyll magic commands
+            - open: '{%'
+              close: '%}'
+      - pyspelling.filters.markdown:
+          markdown_extensions:
+            - pymdownx.superfences
+      - pyspelling.filters.html:
+          comments: false
+          ignores:
+            - code
+            - pre
+    sources:
+      - "**/*.md"
+      - "**/*.markdown"
+    default_encoding: utf-8

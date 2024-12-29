@@ -8,8 +8,8 @@ comments: true
 dblog_post_id: 336
 ---
 
-I’ve released ResourceLib 1.3.
+I've released ResourceLib 1.3.
 
 > [https://github.com/dblock/resourcelib](https://github.com/dblock/resourcelib)
 
-ResourceLib is a library that lets you read and write native Win32 resources. It’s written in C#, enumerates resources and implements both read and write of the file version `VS_VERSIONINFO`, string resources such as company, copyright and product information, `RT_GROUP_ICON` and `RT_ICON`, `RT_CURSOR`, `RT_BITMAP`, `RT_MENU`, `RT_DIALOG`, `RT_STRING`, `RT_ACCELERATOR`, `RT_FONT` and `RT_FONTDIR` and `RT_MANIFEST` resources. It is unit-tested and documented.
+ResourceLib is a library that lets you read and write native Win32 resources. It's written in C#, enumerates resources and implements both read and write of the file version `VS_VERSIONINFO`, string resources such as company, copyright and product information, `RT_GROUP_ICON` and `RT_ICON`, `RT_CURSOR`, `RT_BITMAP`, `RT_MENU`, `RT_DIALOG`, `RT_STRING`, `RT_ACCELERATOR`, `RT_FONT` and `RT_FONTDIR` and `RT_MANIFEST` resources. It is unit-tested and documented.

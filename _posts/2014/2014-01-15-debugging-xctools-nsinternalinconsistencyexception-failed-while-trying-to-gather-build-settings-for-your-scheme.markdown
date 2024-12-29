@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Debugging XCTool’s NSInternalInconsistencyException: Failed while trying to gather build settings for your scheme"
+title: "Debugging XCTool's NSInternalInconsistencyException: Failed while trying to gather build settings for your scheme"
 redirect_from: "/debugging-xctools-nsinternalinconsistencyexception-failed-while-trying-to-gather-build-settings-for-your-scheme/"
 date: 2014-01-15 15:05:00
 tags: [xcode, ios, travis-ci]
@@ -46,7 +46,7 @@ make: *** [clean] Abort trap: 6
 
 It says: _Failed while trying to gather build settings for your scheme; tried with actions: build, test, analyze._
 
-After some digging through xctool’s source code I found that it [tries to run the following command](https://github.com/facebook/xctool/blob/master/xctool/xctool/XcodeSubjectInfo.m#L764):
+After some digging through xctool's source code I found that it [tries to run the following command](https://github.com/facebook/xctool/blob/master/xctool/xctool/XcodeSubjectInfo.m#L764):
 
 ```
 SHOW_ONLY_BUILD_SETTINGS_FOR_FIRST_BUILDABLE=YES
@@ -58,7 +58,7 @@ test
 -scheme FBSnapshotTestCaseDemo
 ```
 
-It’s just trying to collect build settings for the scheme specified.
+It's just trying to collect build settings for the scheme specified.
 
 Interestingly, this succeeds locally for me, but fails on Travis with the following error.
 
@@ -76,4 +76,4 @@ You can change this in [Manage Schemes](https://developer.apple.com/library/ios/
 
 Opened [https://github.com/facebook/xctool/issues/295](https://github.com/facebook/xctool/issues/295) to improve the error messaging in XCTool.
 
-And [here’s a successful build of the ios-snapshot-test-case-expecta project on Travis](https://travis-ci.org/dblock/ios-snapshot-test-case-expecta).
+And [here's a successful build of the ios-snapshot-test-case-expecta project on Travis](https://travis-ci.org/dblock/ios-snapshot-test-case-expecta).

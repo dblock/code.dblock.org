@@ -5,7 +5,7 @@ date: 2017-04-27
 tags: [scala, spark, s3, aws]
 comments: true
 ---
-I [recently started working with Apache Spark, Hadoop, HDFS and Hive](/2017/04/02/getting-started-with-spark-hadoop-hdfs-hive.html). I [made some jobs in Scala that generated website sitemaps](https://artsy.github.io/blog/2017/04/02/generating-sitemaps-with-apache-spark) and another that [calculated the imporance of an artwork amongst all other artist's artworks](https://artsy.github.io/blog/2017/04/21/calculating-the-importance-of-an-artwork-with-apache-spark). Today I wrote an inverted index that exploded a dictionary of art genome data.
+I [recently started working with Apache Spark, Hadoop, HDFS and Hive](/2017/04/02/getting-started-with-spark-hadoop-hdfs-hive.html). I [made some jobs in Scala that generated website sitemaps](https://artsy.github.io/blog/2017/04/02/generating-sitemaps-with-apache-spark) and another that [calculated the importance of an artwork amongst all other artist's artworks](https://artsy.github.io/blog/2017/04/21/calculating-the-importance-of-an-artwork-with-apache-spark). Today I wrote an inverted index that exploded a dictionary of art genome data.
 
 The input is millions of rows containing a (gene name -> gene value) dictionary, stored in HDFS as `map<string,double>`, and the output is many more millions of rows of JSON such as `{ artist_id: "id", name: "gene name", value: "gene value" }` exported to S3. This index is ultimately imported back into MongoDB and used on Artsy for fast lookup of artworks or artists that have certain genes within a requested range.
 

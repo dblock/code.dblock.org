@@ -40,7 +40,7 @@ I speak frequently on topics ranging from the intersection of technology and art
 <a href='https://www.facebook.com/brunchwork/videos/152715542060400/'>Technology, AR and Artsy, in Conversation with Andrew Russeth, ArtNews Magazine Editor, for Brunchwork</a>
 
 <a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>![]({{ site.url }}/images/posts/2017/2017-11-07-sothebys-institute-mass-appeal-tech-new-role-in-art-collecting-and-fundraising/screenshot.png)</a><br>
-<a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>Mass Appeal: Tech’s New Role in Art Collecting + Fundraising - a conversation with Kickstarter Soraya Haas and Sotheby's Noah Wunsch, moderated by Christine Kuan at Sotheby's Institute.</a>
+<a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>Mass Appeal: Tech's New Role in Art Collecting + Fundraising - a conversation with Kickstarter Soraya Haas and Sotheby's Noah Wunsch, moderated by Christine Kuan at Sotheby's Institute.</a>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lS9KehRHrho" frameborder="0" allowfullscreen></iframe><a href="https://www.youtube.com/watch?feature=youtu.be&v=lS9KehRHrho">Artist Marc Gumpinger and Artsy CTO Daniel Doubrovkine, moderated by HG Contemporary gallerist Philippe Hoerle-Guggenheim, discuss the past, present, and future of art and technology during the "Contemporary Art in a Technology Driven World" panel, New York, October 28, 2017</a>
 

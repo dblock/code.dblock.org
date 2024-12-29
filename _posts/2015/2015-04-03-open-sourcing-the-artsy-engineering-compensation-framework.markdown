@@ -19,7 +19,7 @@ I presented my two ladders to the rest of senior management and got a lot of neg
 
 One of the suggestions made during an early review suddenly clicked for me.
 
-> Make performance evaluation a combination of the _what_, i.e. what you achieve that contributes to your team’s goals and ultimately Artsy goals, and the _how_, i.e. how you act and how those actions contribute to Artsy’s culture and values.
+> Make performance evaluation a combination of the _what_, i.e. what you achieve that contributes to your team's goals and ultimately Artsy goals, and the _how_, i.e. how you act and how those actions contribute to Artsy's culture and values.
 
 The _what_ part for an engineer would then be expressed in an individual contributor ladder, which could describe typical growth from someone who has recently graduated to an inspiring technologist. It could also be replicated to other teams and list the specific elements of an individual contributor's job description. The _how_ part would be entirely left to your team lead, and would be defined by the company as a whole. The leadership ladder was no longer necessary, because that could be fully grounded in literature, specifically in [Tribal Leadership](https://www.amazon.com/Tribal-Leadership-Leveraging-Thriving-Organization/dp/0061251321) for Artsy.
 

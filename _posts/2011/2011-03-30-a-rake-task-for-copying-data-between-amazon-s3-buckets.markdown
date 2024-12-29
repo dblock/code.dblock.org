@@ -11,7 +11,7 @@ dblog_post_id: 191
 
 Now that we have a Rake task to copy MongoDB databases, we are facing the next problem. We store images on Amazon S3 and each environment has its own S3 bucket. So copying data from production to staging also needs to synchronize the _production_ and the _staging_ S3 buckets, hopefully very quickly for a very large number of files.
 
-We’ll inspire ourselves from [this post](https://web.archive.org/web/20130801073007/https://www.pedaldrivenprogramming.com/2011/02/copy-contents-of-one-s3-bucket-to-another/) and use [right_aws](https://github.com/rightscale/right_aws) to connect to S3 in Ruby. Our S3 keys are stored in the _heroku.yml_ file, your mileage may vary.
+We'll inspire ourselves from [this post](https://web.archive.org/web/20130801073007/https://www.pedaldrivenprogramming.com/2011/02/copy-contents-of-one-s3-bucket-to-another/) and use [right_aws](https://github.com/rightscale/right_aws) to connect to S3 in Ruby. Our S3 keys are stored in the _heroku.yml_ file, your mileage may vary.
 
 {% highlight ruby %}
 def s3i
@@ -26,7 +26,7 @@ def s3i_open
 end
 {% endhighlight %}
 
-Once connected we need to fetch all the source keys from the source bucket. You might have heard that Amazon S3 limits a single query to 1000 items, but the right_aws _S3Interface_ has a nice incremental feature. Since we’ll need to compare source and target collections, lets put the items in a hash.
+Once connected we need to fetch all the source keys from the source bucket. You might have heard that Amazon S3 limits a single query to 1000 items, but the right_aws _S3Interface_ has a nice incremental feature. Since we'll need to compare source and target collections, lets put the items in a hash.
 
 {% highlight ruby %}
 logger.info("[#{Time.now}] fetching keys from #{args[:from]}")
@@ -38,9 +38,9 @@ s3i.incrementally_list_bucket(args[:from]) do |response|
 end
 {% endhighlight %}
 
-My first implementation used the S3 bucket object, which turned out to be very slow. The enumeration with S3Interface takes roughly 30 seconds per 1000 items, cool.  The rest is easy: we’ll walk the source hash, copy any new or changed items and then walk the target hash to delete any old items.
+My first implementation used the S3 bucket object, which turned out to be very slow. The enumeration with S3Interface takes roughly 30 seconds per 1000 items, cool.  The rest is easy: we'll walk the source hash, copy any new or changed items and then walk the target hash to delete any old items.
 
-Here’s the full Rake task. Edit your bucket names and run _rake s3:sync:production:to_staging_.
+Here's the full Rake task. Edit your bucket names and run _rake s3:sync:production:to_staging_.
 
 {% highlight ruby %}
 require 'logger'
@@ -116,7 +116,7 @@ namespace :s3 do
 end
 {% endhighlight %}
 
-The last issue is object permissions. Files copied via S3Interface don’t have their ACLs copied. In our case we want the newly created files to be public. I started by writing a task to copy permissions from the bucket itself.
+The last issue is object permissions. Files copied via S3Interface don't have their ACLs copied. In our case we want the newly created files to be public. I started by writing a task to copy permissions from the bucket itself.
 
 {% highlight ruby %}
 desc "Apply bucket's ACLs on all keys in it."
@@ -130,7 +130,7 @@ task :applyAcl, [:bucket] => :environment do |t, args|
 end
 {% endhighlight %}
 
-Unfortunately, this forces me to have a public bucket, meaning the list of files can be enumerated. That’s not what I want. Digging deeper, the S3 interface takes an [x-amz-acl header](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) that allows us to specify a canned target ACL during copy.
+Unfortunately, this forces me to have a public bucket, meaning the list of files can be enumerated. That's not what I want. Digging deeper, the S3 interface takes an [x-amz-acl header](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) that allows us to specify a canned target ACL during copy.
 
 {% highlight ruby %}
 s3i.copy(args[:from], key, args[:to], key, :copy, { 'x-amz-acl' => 'public-read' } )

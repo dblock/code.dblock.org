@@ -9,7 +9,7 @@ dblog_post_id: 285
 ---
 Let's filter out some unwanted browsers from displaying broken pages in our Rails application. We could disallow IE6, for example, but allow IE7, 8 and 9.
 
-Bring in the _useragent_ gem – we’ll need to take it from a popular [jillion fork](https://github.com/jilion/useragent) –  it has a ton of fixes that became too hard to merge back to its parent. The latter has many bugs in version comparisons to make it useful for our purposes as of the time of writing this.
+Bring in the _useragent_ gem – we'll need to take it from a popular [jillion fork](https://github.com/jilion/useragent) –  it has a ton of fixes that became too hard to merge back to its parent. The latter has many bugs in version comparisons to make it useful for our purposes as of the time of writing this.
 
 {% highlight ruby %}
 gem "useragent", :git => "https://github.com/jilion/useragent.git"
@@ -63,7 +63,7 @@ UNSUPPORTED_BROWSERS = [
 ]
 {% endhighlight %}
 
-Finally, we let everyone with an unknown browser through – we can’t possibly whitelist hundreds of search engine user-agents.
+Finally, we let everyone with an unknown browser through – we can't possibly whitelist hundreds of search engine user-agents.
 
 {% highlight ruby %}
 def is_browser_unsupported?

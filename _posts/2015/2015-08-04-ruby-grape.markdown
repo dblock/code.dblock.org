@@ -27,7 +27,7 @@ The first two member projects are [Grape itself](https://github.com/ruby-grape/g
 
 We welcome all contributors to the Grape ecosystem, built upon rough consensus and running code, a principle described in [the Tao of IETF](https://www.ietf.org/tao.html). We are highly inclusive, try to be nice and helpful to both experienced and new developers. We encourage you to participate and to be pragmatic. To quote David Clark, _"We reject kings, presidents and voting"_, and Jon Postel, _"Be conservative in what you send and liberal in what you accept."_
 
-The organization will be grown with an increasing number of maintainers. As we bring more projects in, we will promote more people to organizational admin level. Michael Bleigh ([@mbleigh](https://github.com/mbleigh)) and I ([@dblock](https://github.com/dblock)) to start and others to join as we grow! There're many maintainers of various Grape projects and we want to give everyone an opportunity to rise to the bigger community effort by actively contributing.
+The organization will be grown with an increasing number of maintainers. As we bring more projects in, we will promote more people to organizational admin level. Michael Bleigh ([@mbleigh](https://github.com/mbleigh)) and I ([@dblock](https://github.com/dblock)) to start and others to join as we grow! There are many maintainers of various Grape projects and we want to give everyone an opportunity to rise to the bigger community effort by actively contributing.
 
 My personal goal is to end up quickly with 6 ruby-grape admins from old time contributors.
 

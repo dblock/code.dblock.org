@@ -52,4 +52,4 @@ module Enumerable
 end
 {% endhighlight %}
 
-I don’t think this can this be done with the current Ruby standard library without introducing a temporary variable, and _Enumerable##Lazy_ won’t help_._
+I don't think this can this be done with the current Ruby standard library without introducing a temporary variable, and _Enumerable##Lazy_ won't help_._

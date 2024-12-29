@@ -7,9 +7,9 @@ tags: [dotnet, asp.net]
 comments: true
 dblog_post_id: 235
 ---
-I was showing some [Coffeescript](https://coffeescript.org/) to a candidate today. It happened to be a [Backbone.js](https://backbonejs.org/) model with a field called _slug_. "What’s a slug?" – he asked.
+I was showing some [CoffeeScript](https://coffeescript.org/) to a candidate today. It happened to be a [Backbone.js](https://backbonejs.org/) model with a field called _slug_. "What's a slug?" – he asked.
 
-A slug is an external identity to an object reachable by an API call. For example, Steven Assael’s amazing graphite drawing entitled "Amber with Peacock Feathers" has a "_steven-assael-amber-with-peacock-feathers"_ slug. Slugs are much more readable than a database object identity, such as _"4dc706fb46895e000100128f"_. They make URLs prettier and helps search engines index data. Slugs also enable developers to change the way data is stored. In general, I recommend hiding internal IDs and creating external IDs for every object that is exposed to the outside world.
+A slug is an external identity to an object reachable by an API call. For example, Steven Assael's amazing graphite drawing entitled "Amber with Peacock Feathers" has a "_steven-assael-amber-with-peacock-feathers"_ slug. Slugs are much more readable than a database object identity, such as _"4dc706fb46895e000100128f"_. They make URLs prettier and helps search engines index data. Slugs also enable developers to change the way data is stored. In general, I recommend hiding internal IDs and creating external IDs for every object that is exposed to the outside world.
 
 In Ruby we use the [mongoid-slug](https://github.com/mongoid/mongoid-slug) gem. To set this up we include _Mongoid::Slug_ and specify which field to use to generate it.
 
@@ -26,7 +26,7 @@ class Artwork
 end
 {% endhighlight %}
 
-I decided to implement the same thing for this blog, which is a bit obsolete architecture-wise and is written in ASP.NET. To keep things simple, I added a slug field to my _Post_ model as an _nvarchar(256) _and slapped a unique key constraint on it. To generate an actual slug from a title I stole some code from [here](https://web.archive.org/web/20120330194232/https://www.intrepidstudios.com/blog/2009/2/10/function-to-generate-a-url-friendly-string.aspx). It basically strips any non-alphanumeric text from the post’s title.
+I decided to implement the same thing for this blog, which is a bit obsolete architecture-wise and is written in ASP.NET. To keep things simple, I added a slug field to my _Post_ model as an _nvarchar(256) _and slapped a unique key constraint on it. To generate an actual slug from a title I stole some code from [here](https://web.archive.org/web/20120330194232/https://www.intrepidstudios.com/blog/2009/2/10/function-to-generate-a-url-friendly-string.aspx). It basically strips any non-alphanumeric text from the post's title.
 
 {% highlight c# %}
 /// <summary>
@@ -48,7 +48,7 @@ public static string ToSlug(string s)
 }
 {% endhighlight %}
 
-Slugs are unique, so we must avoid duplicates. While there’re more effective approaches to generating a unique slug, we’ll simply iterate until we find a unique value. After all, how often do we need to generate a new slug?
+Slugs are unique, so we must avoid duplicates. While there are more effective approaches to generating a unique slug, we'll simply iterate until we find a unique value. After all, how often do we need to generate a new slug?
 
 {% highlight c# %}
 public void GenerateSlug(ISession session)
@@ -94,9 +94,9 @@ if (! string.IsNullOrEmpty(path))
 }
 {% endhighlight %}
 
-First, we’re removing the virtual path from the request URL, stripping the _/blog/_ part from applications hosted at a _/blog/_ virtual directory. Then, we’re going to assume that anything that doesn’t have a period (.) in the URL is a slug and is being redirected to _ShowPost.aspx_. An alternative is to rely on a _/posts/_ path, but that will break all relative URLs in my existing application since, for example, _/Style.css_ is not the same as _/posts/Style.css_. Naturally your mileage may vary depending on your existing requirements.
+First, we're removing the virtual path from the request URL, stripping the _/blog/_ part from applications hosted at a _/blog/_ virtual directory. Then, we're going to assume that anything that doesn't have a period (.) in the URL is a slug and is being redirected to _ShowPost.aspx_. An alternative is to rely on a _/posts/_ path, but that will break all relative URLs in my existing application since, for example, _/Style.css_ is not the same as _/posts/Style.css_. Naturally your mileage may vary depending on your existing requirements.
 
-Secondly, we’d like to permanently redirect anyone with a _ShowPost.aspx?id=Integer_ link to the new slugged URL and anyone directly hitting the _ShowPost.aspx?id=slug_ url to the slug itself. This way there’s only one way to address a post, by it’s slug.
+Secondly, we'd like to permanently redirect anyone with a _ShowPost.aspx?id=Integer_ link to the new slugged URL and anyone directly hitting the _ShowPost.aspx?id=slug_ url to the slug itself. This way there's only one way to address a post, by it's slug.
 
 {% highlight c# %}
 // rewrite ShowPost.aspx link to a slug
@@ -111,12 +111,12 @@ else if (path == "ShowPost.aspx" && !string.IsNullOrEmpty(Request["slug"]))
 }
 {% endhighlight %}
 
-Here’s a URL that I get after running a task to re-slug all existing posts to my infamous Github is Your New Resume post. It’s a lot nicer!
+Here's a URL that I get after running a task to re-slug all existing posts to my infamous Github is Your New Resume post. It's a lot nicer!
 
 [code.dblock.org/github-is-your-new-resume](https://code.dblock.org/github-is-your-new-resume)
 
-The URL has changed, yet Discus comments are fine (phew.) – they use my unique identifier. The twitter RT count is lost though and is reset at zero, since Twitter is a URL-based system. Too bad, here’s a screenshot for the memories.
+The URL has changed, yet Discus comments are fine (phew.) – they use my unique identifier. The twitter RT count is lost though and is reset at zero, since Twitter is a URL-based system. Too bad, here's a screenshot for the memories.
 
 ![]({{ site.url }}/images/posts/2011/2011-07-22-dblog-implementing-blog-post-slugs-in-net/image_7.jpg)
 
-314 RTs, holy crap! This blog’s source code is available under the MIT license [on Github](https://github.com/dblock/dblog).
+314 RTs, holy crap! This blog's source code is available under the MIT license [on Github](https://github.com/dblock/dblog).
