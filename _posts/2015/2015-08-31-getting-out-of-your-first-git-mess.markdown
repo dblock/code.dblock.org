@@ -23,7 +23,7 @@ Switched to branch 'master'
 Your branch is up-to-date with 'origin/master'.
 ```
 
-Make sure there're no changes currently on master.
+Make sure there are no changes currently on master.
 
 ```
 (master)$ git status
@@ -32,7 +32,7 @@ Your branch is up-to-date with 'origin/master'.
 nothing to commit, working directory clean
 ```
 
-If there're any changes here, `git stash` them away. If you were in the middle of a merge, run `git merge --abort`. If you were in the middle of a rebase, run `git rebase --abort`. Run `git status` again and make sure everything is clean.
+If there are any changes here, `git stash` them away. If you were in the middle of a merge, run `git merge --abort`. If you were in the middle of a rebase, run `git rebase --abort`. Run `git status` again and make sure everything is clean.
 
 ### Save Your Work
 

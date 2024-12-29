@@ -7,7 +7,7 @@ tags: [wix]
 comments: true
 dblog_post_id: 13
 ---
-Two sprints into working on a large deployment project I had already created two big installers under which the .wxs and .wxi files were multiplying only slower than components and features in them. For instance, there're 30 .wxi files that compose a single enterprise component installer accounting for 8 merge modules.
+Two sprints into working on a large deployment project I had already created two big installers under which the .wxs and .wxi files were multiplying only slower than components and features in them. For instance, there are 30 .wxi files that compose a single enterprise component installer accounting for 8 merge modules.
 
 I knew from day one that I'll need to document all this, so I started writing documentation at the same time as the code. Unfortunately the amount of change in the source code was discouraging - I constantly had to go back and edit documentation trying to figure out everything I had changed. This wasn't going to scale. I needed a different solution.
 

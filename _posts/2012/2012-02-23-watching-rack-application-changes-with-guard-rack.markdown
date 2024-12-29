@@ -36,4 +36,4 @@ end
 
 Run with _bundle exec guard_. Watch _rackup_ happen every time you change files.
 
-I’ve added this to my [grape-on-rack](https://github.com/dblock/grape-on-rack) demo.
+I've added this to my [grape-on-rack](https://github.com/dblock/grape-on-rack) demo.

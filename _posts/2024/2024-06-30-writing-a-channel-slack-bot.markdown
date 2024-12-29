@@ -5,7 +5,7 @@ date: 2024-06-30
 tags: [ruby, slack]
 comments: true
 ---
-In 2020 Slack [introduced granular permissions](https://medium.com/slack-developer-blog/more-precision-less-restrictions-a3550006f9c3) and has begun enforcing that legacy applications use them. I've [previously migrated](/2020/11/30/migrating-classic-slack-ruby-bots-to-granular-permissions.html) a simple bot to use those in-place, but it has come time to rewrite my larger, more complex [S'Up for Slack Teams](https://sup2.playplay.io/) and [GameBot Leaderboard](https://gamebot2.playplay.io/) bots. Furthermore, the previous versions of the bots only allowed one S'Up group and one leaderboard per team, so I decided to take this opportunity to add support for actions and user settings in both DMs and individual channels. 
+In 2020 Slack [introduced granular permissions](https://medium.com/slack-developer-blog/more-precision-less-restrictions-a3550006f9c3) and has begun enforcing that legacy applications use them. I've [previously migrated](/2020/11/30/migrating-classic-slack-ruby-bots-to-granular-permissions.html) a simple bot to use those in-place, but it has come time to rewrite my larger, more complex [S'Up for Slack Teams](https://sup2.playplay.io/) and [Gamebot Leaderboard](https://gamebot2.playplay.io/) bots. Furthermore, the previous versions of the bots only allowed one S'Up group and one leaderboard per team, so I decided to take this opportunity to add support for actions and user settings in both DMs and individual channels. 
 
 Here's a rundown of the [code of Slack Gamebot](https://github.com/dblock/slack-gamebot2). It's MIT-licensed, open-source. Install it from [gamebot2.playplay.io](https://gamebot2.playplay.io/).
 
@@ -63,5 +63,5 @@ This is an interesting pattern that is not natively supported by Slack events. I
 
 ### Links
 
-Code for Slack GameBot is [here](https://github.com/dblock/slack-gamebot2), and the code for S'Up is [here](https://github.com/dblock/slack-sup2). Try the bots out from [sup2.playplay.io](https://sup2.playplay.io/) and [gamebot2.playplay.io](https://gamebot2.playplay.io/).
+Code for Slack Gamebot is [here](https://github.com/dblock/slack-gamebot2), and the code for S'Up is [here](https://github.com/dblock/slack-sup2). Try the bots out from [sup2.playplay.io](https://sup2.playplay.io/) and [gamebot2.playplay.io](https://gamebot2.playplay.io/).
 

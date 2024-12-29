@@ -7,7 +7,7 @@ tags: [performance, grape, rails, ruby]
 comments: true
 dblog_post_id: 270
 ---
-We’re using [Grape](https://github.com/ruby-grape/grape) in our Rails app on Heroku, which comes with New Relic instrumentation out-of-the-box. Let's get the Grape API route details to show in New Relic as well.
+We're using [Grape](https://github.com/ruby-grape/grape) in our Rails app on Heroku, which comes with New Relic instrumentation out-of-the-box. Let's get the Grape API route details to show in New Relic as well.
 
 #### Gemfile
 
@@ -36,7 +36,7 @@ I use New Relic in production only, hence the _if_ block. But this is not good e
 
 #### API Instrumentation
 
-Examining the source code for NewRelic’s Rack module, we can make a few small changes and show the API path itself. Copy-paste the code from my [config/initializers/new_relic_agent_instrumentation_api.rb](https://gist.github.com/1233422), importing it with `extend NewRelic::Agent::Instrumentation::API` in the API class. All it does is figure out a better name for New Relic to record – in this case the API path without forward slashes and an appended lowercase method after the #.
+Examining the source code for NewRelic's Rack module, we can make a few small changes and show the API path itself. Copy-paste the code from my [config/initializers/new_relic_agent_instrumentation_api.rb](https://gist.github.com/1233422), importing it with `extend NewRelic::Agent::Instrumentation::API` in the API class. All it does is figure out a better name for New Relic to record – in this case the API path without forward slashes and an appended lowercase method after the #.
 
 #### New Relic Screenshots
 

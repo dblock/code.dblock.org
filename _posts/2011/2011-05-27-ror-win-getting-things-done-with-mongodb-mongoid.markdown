@@ -9,13 +9,13 @@ dblog_post_id: 210
 ---
 ![mongoid-logo-small]({{ site.url }}/images/posts/2011/2011-05-27-ror-win-getting-things-done-with-mongodb-mongoid/mongoid-logo-small_2.jpg)
 
-We high five each other and claim "Rails Win!" when someone finds a gem that solves a really big problem in ~~a few lines~~ one line of code. In this post I’ll list a few interesting addons to the RoR [Mongoid ORM](https://www.mongodb.com/docs/mongoid/current/) that are slowly adding up to a feature-rich ecosystem of plug-and-play modules that work with [Mongoid](https://www.mongodb.com/docs/mongoid/current/). This list should convince you that you should at least [try MongoDB](https://www.mongodb.org/). You can get a ton of functionality "for free".
+We high five each other and claim "Rails Win!" when someone finds a gem that solves a really big problem in ~~a few lines~~ one line of code. In this post I'll list a few interesting addons to the RoR [Mongoid ORM](https://www.mongodb.com/docs/mongoid/current/) that are slowly adding up to a feature-rich ecosystem of plug-and-play modules that work with [Mongoid](https://www.mongodb.com/docs/mongoid/current/). This list should convince you that you should at least [try MongoDB](https://www.mongodb.org/). You can get a ton of functionality "for free".
 
-- [Mongoid::Timestamps](https://web.archive.org/web/20111028104558/http://mongoid.org/docs/extras.html): adds a timestamp to a model. IMHO all useful models should have a _created_at_ and a _modified_at_ field – it’s just a matter of time till someone asks you when your widget was modified. We use this.
-- [Mongoid::Versioning](https://web.archive.org/web/20111028104558/http://mongoid.org/docs/extras.html): stores multiple versions of the document. We’ve tried to use this, but ended up switching to Mongoid::History (below).
+- [Mongoid::Timestamps](https://web.archive.org/web/20111028104558/http://mongoid.org/docs/extras.html): adds a timestamp to a model. IMHO all useful models should have a _created_at_ and a _modified_at_ field – it's just a matter of time till someone asks you when your widget was modified. We use this.
+- [Mongoid::Versioning](https://web.archive.org/web/20111028104558/http://mongoid.org/docs/extras.html): stores multiple versions of the document. We've tried to use this, but ended up switching to Mongoid::History (below).
 - [Mongoid::Paranoya](https://web.archive.org/web/20111028104558/http://mongoid.org/docs/extras.html): marks documents as deleted instead of actually deleting them.
 - [Mongoid::Slug](https://github.com/mongoid/mongoid-slug): adds a URL-like field to a model. For example, our public API uses this field instead of the BSON ID itself, making the data portable across systems.
-- [Mongoid::History](https://github.com/aq1018/mongoid-history): creates an audit trail for all changes in a model. It’s possible to undo and redo changes as well. We integrate this with our authentication and tag the identity of the person who made the change. I’ve been pushing features into this gem recently, including basic support for tracking object destruction.
+- [Mongoid::History](https://github.com/aq1018/mongoid-history): creates an audit trail for all changes in a model. It's possible to undo and redo changes as well. We integrate this with our authentication and tag the identity of the person who made the change. I've been pushing features into this gem recently, including basic support for tracking object destruction.
 - [Mongoid::Tracking](https://github.com/twoixter/trackoid): another tracker for document changes, more suitable when you need to embed tracking logic such as increments.
 - [Mongoid::Taggable](https://github.com/wilkerlucio/mongoid_taggable): adds tags to documents and make documents searchable by all or some tags.
 - [Mongoid::TaggableWithContext](https://github.com/aq1018/mongoid_taggable_with_context): adds tagging support with pre-aggregation.
@@ -28,6 +28,6 @@ We high five each other and claim "Rails Win!" when someone finds a gem that sol
 - [Mongoid::Orderable](https://github.com/arkxu/mongoid_order) and [ActsAsList::Mongoid](https://github.com/kristianmandrup/acts_as_list_mongoid): makes your models orderable.
 - [Mongoid::Atomic](https://github.com/jcoene/mongoid_atomic): atomic updates.
 
-This is all made possible by the fact that MongoDB documents don’t need a schema and that mongoid has a very simple callback mechanism that can invoke your function when an object is created, modified or destroyed. If you want a skeleton for writing an extension, look at the [source code of Mongoid::Fulltext](https://github.com/artsy/mongoid_fulltext) – yes, the whole thing is 150 lines of code.
+This is all made possible by the fact that MongoDB documents don't need a schema and that mongoid has a very simple callback mechanism that can invoke your function when an object is created, modified or destroyed. If you want a skeleton for writing an extension, look at the [source code of Mongoid::Fulltext](https://github.com/artsy/mongoid_fulltext) – yes, the whole thing is 150 lines of code.
 
 What other useful mongoid gems do you know about?

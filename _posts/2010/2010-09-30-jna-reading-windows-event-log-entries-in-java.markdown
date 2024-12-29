@@ -10,13 +10,13 @@ dblog_post_id: 125
 
 ![Windows-Event-Viewer-Icon-Large]({{ site.url }}/images/posts/2010/2010-09-30-jna-reading-windows-event-log-entries-in-java/windows-event-viewer-icon-large_4.jpg)
 
-I’ve recently had to deal with writing Windows event log entries in Java, part of the [Log4jna](https://github.com/dblock/log4jna) experiment. Writing was easy, but I have a stretch goal in my mind for our application: I would like to leverage the Windows event log for all kinds of operational events. We could write a service that reads the event log for events that services within our enterprise services conglomerate and reports events that have not much in common except that they were fired by our software.
+I've recently had to deal with writing Windows event log entries in Java, part of the [Log4jna](https://github.com/dblock/log4jna) experiment. Writing was easy, but I have a stretch goal in my mind for our application: I would like to leverage the Windows event log for all kinds of operational events. We could write a service that reads the event log for events that services within our enterprise services conglomerate and reports events that have not much in common except that they were fired by our software.
 
-Let’s read the Windows event log in Java with [JNA](https://github.com/twall/jna).
+Let's read the Windows event log in Java with [JNA](https://github.com/twall/jna).
 
 #### I Want Candy
 
-I certainly don’t want to deal with the actual event log in my code - I’d like to be able to write something like this.
+I certainly don't want to deal with the actual event log in my code - I'd like to be able to write something like this.
 
 {% highlight java %}
 EventLogIterator iter = new EventLogIterator("Application");
@@ -29,11 +29,11 @@ while(iter.hasNext()) {
 }
 {% endhighlight %}
 
-If you don’t care about how it’s implemented, get the latest JNA build (this code will ship in JNA 3.2.8) and just use it. Otherwise keep reading.
+If you don't care about how it's implemented, get the latest JNA build (this code will ship in JNA 3.2.8) and just use it. Otherwise keep reading.
 
 #### Reading Events
 
-Let’s step back and examine the Win32 API for events. The first call opens and closes an event log. An event log lives on a certain machine (null for current) and has a name (eg. _Application_ or _System_).
+Let's step back and examine the Win32 API for events. The first call opens and closes an event log. An event log lives on a certain machine (null for current) and has a name (eg. _Application_ or _System_).
 
 {% highlight java %}
 public HANDLE OpenEventLog(String lpUNCServerName, String lpSourceName);
@@ -55,7 +55,7 @@ public boolean ReadEventLog(HANDLE hEventLog, int dwReadFlags, int dwRecordOffse
         IntByReference pnMinNumberOfBytesNeeded);
 {% endhighlight %}
 
-The `ReadEventLog` function is meant to be called until there’re no more events. It will read forwards or backwards depending on the flags (`EVENTLOG_FORWARDS_READ` or `EVENTLOG_BACKWARDS_READ`). It will fill the buffer with data from multiple records or fail, telling us that the buffer is not large enough to hold even one record (`ERROR_INSUFFICIENT_BUFFER`). Finally, it will finish signaling that it has read all the entries (`ERROR_HANDLE_EOF`).
+The `ReadEventLog` function is meant to be called until there are no more events. It will read forwards or backwards depending on the flags (`EVENTLOG_FORWARDS_READ` or `EVENTLOG_BACKWARDS_READ`). It will fill the buffer with data from multiple records or fail, telling us that the buffer is not large enough to hold even one record (`ERROR_INSUFFICIENT_BUFFER`). Finally, it will finish signaling that it has read all the entries (`ERROR_HANDLE_EOF`).
 
 {% highlight java %}
 if (! Advapi32.INSTANCE.ReadEventLog(_h,
@@ -76,7 +76,7 @@ if (! Advapi32.INSTANCE.ReadEventLog(_h,
 // read succeeded, iterate in the buffer
 {% endhighlight %}
 
-After a successful `ReadEventLog` call we receive a buffer with multiple entries of the `EVENTLOGRECORD` type (it’s a simple structure with a bunch of fields). Each record has a different size (each record contains the same header, but different data). We can iterate through it by incrementing a native pointer (JNA’s `Pointer.share` returns a pointer to an offset from an existing pointer value).
+After a successful `ReadEventLog` call we receive a buffer with multiple entries of the `EVENTLOGRECORD` type (it's a simple structure with a bunch of fields). Each record has a different size (each record contains the same header, but different data). We can iterate through it by incrementing a native pointer (JNA's `Pointer.share` returns a pointer to an offset from an existing pointer value).
 
 {% highlight java %}
 int dwRead = ... // number of bytes read this time
@@ -134,9 +134,9 @@ public void testReadEventLogEntries() {
 
 #### Iterator
 
-Let’s go back to our goal to write an iterator and break the above test apart.
+Let's go back to our goal to write an iterator and break the above test apart.
 
-First, we’ll declare an `EventLogRecord` class that encapsulates the the auto-incremented record ID, the event source and the record data itself.
+First, we'll declare an `EventLogRecord` class that encapsulates the the auto-incremented record ID, the event source and the record data itself.
 
 {% highlight java %}
 public static class EventLogRecord {
@@ -146,7 +146,7 @@ public static class EventLogRecord {
     ...
 {% endhighlight %}
 
-We’ll write an iterator for this type. It will need to hold the handle to the event log, the buffer to store events, a flag that indicates that the iteration has finished, the number of bytes remaining in the current buffer, a pointer to the current record and the auto-incremented logical record ID. The latter will have to start at some number, ie. the oldest record ID.
+We'll write an iterator for this type. It will need to hold the handle to the event log, the buffer to store events, a flag that indicates that the iteration has finished, the number of bytes remaining in the current buffer, a pointer to the current record and the auto-incremented logical record ID. The latter will have to start at some number, ie. the oldest record ID.
 
 {% highlight java %}
 public static class EventLogIterator
@@ -176,7 +176,7 @@ public static class EventLogIterator
     }
 {% endhighlight %}
 
-Eventually the iterator will have to terminate and close the event log. Let’s implement _close_. If the caller must abandon the iterator half way through the iteration or on an exception, it must call close to avoid leaking a handle.
+Eventually the iterator will have to terminate and close the event log. Let's implement _close_. If the caller must abandon the iterator half way through the iteration or on an exception, it must call close to avoid leaking a handle.
 
 {% highlight java %}
 public void close() {
@@ -190,7 +190,7 @@ public void close() {
 }
 {% endhighlight %}
 
-Knowing whether there’re more records in the iterator involves reading ahead and returning whether the iterator is done.
+Knowing whether there are more records in the iterator involves reading ahead and returning whether the iterator is done.
 
 {% highlight java %}
 @Override
@@ -214,7 +214,7 @@ public EventLogRecord next() {
 }
 {% endhighlight %}
 
-Finally, the actual `read`. Do nothing, for as long as there’re bytes in the current buffer and read the next block otherwise. Apply the same logic for resizing the buffer and for finishing the iteration.
+Finally, the actual `read`. Do nothing, for as long as there are bytes in the current buffer and read the next block otherwise. Apply the same logic for resizing the buffer and for finishing the iteration.
 
 {% highlight java %}
 private boolean read() {

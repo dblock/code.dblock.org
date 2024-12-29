@@ -1,0 +1,20 @@
+name: Check Spelling
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: tj-actions/changed-files@v45
+        id: changed_files
+        with:
+          files: |
+            **/**.md
+            **/**.markdown
+      - name: Check Spelling
+        uses: rojopolis/spellcheck-github-actions@0.45.0
+        with:
+          task_name: Markdown
+          config_path: .pyspelling.yml
+          source_files: ${{ steps.changed_files.outputs.all_changed_files }}
+

@@ -9,7 +9,7 @@ dblog_post_id: 77
 ---
 [![](https://github.com/dblock/dotnetinstaller/raw/master/Documentation/Images/Logo.gif)](https://github.com/dblock/dotnetinstaller)
 
-dotNetInstaller 1.8 was released today, January 24th, 2010. Build 1.8.7120.0 has been beta, then a release candidate for over a month now with no major issues reported. Here’re some highlights.
+dotNetInstaller 1.8 was released today, January 24th, 2010. Build 1.8.7120.0 has been beta, then a release candidate for over a month now with no major issues reported. Here are some highlights.
 
 - Added support for uninstall sequences with new command-line /i and /x switches, supports_install, supports_uninstall global options in configurations, components and controls. Added extended uninstall parameters in cmd and msi components.
 - Added user-defined form controls and input for labels, checkboxes, edit boxes, hyperlinks and file/directory browse controls.
@@ -20,5 +20,5 @@ dotNetInstaller 1.8 was released today, January 24th, 2010. Build 1.8.7120.0 has
 - Cabbing now embeds files that belong in components in separate resource streams, extracting only those files that are necessary for installation of a particular component. Embedded files outside of components continue to always be extracted.
 - CAB extraction uses the memory-mapped resource streams and no longer writes temporary files to extract embedded components. This significantly reduces disk space requirements and improves extraction speed.
 
-dotNetInstaller continues being the most widely used setup bootstrapper. Please reply to [this thread](https://web.archive.org/web/20160801173120/https://dotnetinstaller.codeplex.com/discussions/48275) if you’re using it too.
+dotNetInstaller continues being the most widely used setup bootstrapper. Please reply to [this thread](https://web.archive.org/web/20160801173120/https://dotnetinstaller.codeplex.com/discussions/48275) if you're using it too.
 

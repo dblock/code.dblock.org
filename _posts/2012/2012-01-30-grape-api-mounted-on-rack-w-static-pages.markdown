@@ -9,9 +9,9 @@ dblog_post_id: 311
 ---
 _tl;dr_ – the source is [here](https://github.com/dblock/grape-on-rack)
 
-Here’s how I mount a [Grape](https://github.com/ruby-grape/grape) API on Rack and also serve static pages. Most useful for building a service with documentation.
+Here's how I mount a [Grape](https://github.com/ruby-grape/grape) API on Rack and also serve static pages. Most useful for building a service with documentation.
 
-Setup bundler with the required gems. I am using the next version of Grape (_frontier_ branch and the next version of _rack-contrib_ which contains _Rack::TryStatic _that we’re going to want to use).
+Setup bundler with the required gems. I am using the next version of Grape (_frontier_ branch and the next version of _rack-contrib_ which contains _Rack::TryStatic _that we're going to want to use).
 
 {% highlight ruby %}
 source "https://rubygems.org"
@@ -23,7 +23,7 @@ gem "grape", :git => "https://github.com/ruby-grape/grape.git", :branch => "fron
 
 Static content goes to a new _public_ folder, for example _public/index.html_.
 
-Our application will need to boot with all these gems, we’ll do it Rails-style by starting with a _config/boot.rb_ file. It brings in Bundler.
+Our application will need to boot with all these gems, we'll do it Rails-style by starting with a _config/boot.rb_ file. It brings in Bundler.
 
 {% highlight ruby %}
 require 'rubygems'
@@ -56,9 +56,9 @@ Bundler.require :default, ENV['RACK_ENV']
 require File.expand_path('../../api/api', __FILE__)
 {% endhighlight %}
 
-Note the odd _File.expand_path_ construct, borrowed from Rails, - it translates a relative path to the current file into an absolute path, there’re allowing us to run the application from any directory – useful for hosting where you never know who boots the application.
+Note the odd _File.expand_path_ construct, borrowed from Rails, - it translates a relative path to the current file into an absolute path, there are allowing us to run the application from any directory – useful for hosting where you never know who boots the application.
 
-Continuing to borrow from Rails, we will want different environments (development, production, etc.), so it’s a good idea to keep things organized. Setup the environment in _config/environment.rb _and then load the application.
+Continuing to borrow from Rails, we will want different environments (development, production, etc.), so it's a good idea to keep things organized. Setup the environment in _config/environment.rb _and then load the application.
 
 {% highlight ruby %}
 ENV['RACK_ENV'] ||= :test

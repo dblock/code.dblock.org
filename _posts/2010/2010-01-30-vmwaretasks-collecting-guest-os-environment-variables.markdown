@@ -7,7 +7,7 @@ tags: [vmware]
 comments: true
 dblog_post_id: 79
 ---
-All VMWare VixCOM users eventually go through a moment of being puzzled with the behavior of VixCOM ReadVariable function used with `VIX_GUEST_ENVIRONMENT_VARIABLE` ([read this thread](https://communities.vmware.com/message/1166742)). This is supposed to return values for the guest OS environment variables. You can get the value for `%TMP%`, but not for `%ProgramFiles%`. It’s probably due to the fact that VMWareTools aren’t really creating a user environment after login, but who cares, that renders the function virtually useless.
+All VMWare VixCOM users eventually go through a moment of being puzzled with the behavior of VixCOM ReadVariable function used with `VIX_GUEST_ENVIRONMENT_VARIABLE` ([read this thread](https://communities.vmware.com/message/1166742)). This is supposed to return values for the guest OS environment variables. You can get the value for `%TMP%`, but not for `%ProgramFiles%`. It's probably due to the fact that VMWareTools aren't really creating a user environment after login, but who cares, that renders the function virtually useless.
 
 Can we work around it?
 
@@ -37,7 +37,7 @@ public Dictionary<string, string> GetEnvironmentVariables()
 }
 {% endhighlight %}
 
-Implemented as `Vestris.VMWareLib.Tools.Windows.Shell.GetEnvironmentVariables()` in [VMWareTasks](https://github.com/dblock/vmwaretasks). It’s a method rather than a property because it actually executes remote commands and environment variables change over time.
+Implemented as `Vestris.VMWareLib.Tools.Windows.Shell.GetEnvironmentVariables()` in [VMWareTasks](https://github.com/dblock/vmwaretasks). It's a method rather than a property because it actually executes remote commands and environment variables change over time.
 
 {% highlight c# %}
 Dictionary<string, string> env = guestShell.GetEnvironmentVariables();

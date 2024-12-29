@@ -8,9 +8,9 @@ comments: true
 dblog_post_id: 133
 ---
 
-I often need to delete not-versioned files in SVN. Although I am supposed to create projects that place all output outside of the SVN client structure, it’s not always practical. So all those pesky generated files are hard to get rid of and pollute my _svn status_. I frequently dump the output of `svn status | findstr "^?_"` into a .cmd file and edit it replacing all ? with `del /Q`.
+I often need to delete not-versioned files in SVN. Although I am supposed to create projects that place all output outside of the SVN client structure, it's not always practical. So all those pesky generated files are hard to get rid of and pollute my _svn status_. I frequently dump the output of `svn status | findstr "^?_"` into a .cmd file and edit it replacing all ? with `del /Q`.
 
-We can do better. I added a new tool, _svn2_ to the [Svn2Svn project](https://github.com/dblock/svn2svn/). Svn2 has a _sync_ command that sends all non-versioned files to the recycle bin. Use at your own risk – this _will_ delete files that haven’t been svn-added.
+We can do better. I added a new tool, _svn2_ to the [Svn2Svn project](https://github.com/dblock/svn2svn/). Svn2 has a _sync_ command that sends all non-versioned files to the recycle bin. Use at your own risk – this _will_ delete files that haven't been svn-added.
 
 #### Implementation
 

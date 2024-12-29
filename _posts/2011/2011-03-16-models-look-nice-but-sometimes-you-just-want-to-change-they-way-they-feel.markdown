@@ -7,7 +7,7 @@ tags: [mongodb, rails, ruby]
 comments: true
 dblog_post_id: 183
 ---
-MongoId models provide an excellent level of abstraction. Consider a _User_ model.
+Mongoid models provide an excellent level of abstraction. Consider a _User_ model.
 
 {% highlight ruby %}
 class User

@@ -15,7 +15,7 @@ The [Wix](https://wixtoolset.org/) mailing list is full of conversations about a
 - Embedding all dependencies into a single Setup.exe
 - Embedding OS resource info; branding setup with company and version information
 
-There're two dozen other features contributed by developers around the world, notably silent install. This made DNI a very well featured boostrapper with some rich capabilities.
+There are two dozen other features contributed by developers around the world, notably silent install. This made DNI a very well featured boostrapper with some rich capabilities.
 
 DNI's design is not the best and a lot of things could be done better. But it's a project born of rather practical needs and works well. If you're looking for a bootstrapper right now, check it out.
 

@@ -20,15 +20,15 @@ I finally found some time to implement Facebook Connect for foodCandy.com. You c
 
 #### Is it hard?
 
-It’s not. There’s about a day of work for all the items above, including this post.
+It's not. There's about a day of work for all the items above, including this post.
 
 #### Why am I writing this?
 
 Two reasons.
 
-There’re several interesting aspects to the FoodCandy service model, in particular that the website is just a front-end UI to SnCore and cannot do authentication. It needs to pass all data to the services back-end via a SOAP API, which in turn will do authentication. This means that we need to do more work and less magic.
+There are several interesting aspects to the FoodCandy service model, in particular that the website is just a front-end UI to SnCore and cannot do authentication. It needs to pass all data to the services back-end via a SOAP API, which in turn will do authentication. This means that we need to do more work and less magic.
 
-I had to do some wrestling with JavaScript and the Facebook API at login. Most of the examples I found didn’t quite work. This post should, hopefully, be more helpful to those implementing Facebook Connect in C# / ASP.NET.
+I had to do some wrestling with JavaScript and the Facebook API at login. Most of the examples I found didn't quite work. This post should, hopefully, be more helpful to those implementing Facebook Connect in C# / ASP.NET.
 
 #### Application Registration
 
@@ -42,7 +42,7 @@ The best document to read first is [here](https://developers.facebook.com/docs/g
 
 _A Facebook Login Button_
 
-I want a login button that gives users a choice of logging into the site with a username and a password, an OpenId and now with a Facebook login. The recommended way is to include some JavaScript and use FBML (a simple markup language) to render it. That approach caused me to have a click-popup-reload cycle, which I didn’t like at all. An alternate suggested way is to generate a login URL manually and let the user navigate away from the site, login to Facebook and return. This is simpler, IMHO, code non-withstanding.
+I want a login button that gives users a choice of logging into the site with a username and a password, an OpenId and now with a Facebook login. The recommended way is to include some JavaScript and use FBML (a simple markup language) to render it. That approach caused me to have a click-popup-reload cycle, which I didn't like at all. An alternate suggested way is to generate a login URL manually and let the user navigate away from the site, login to Facebook and return. This is simpler, IMHO, code non-withstanding.
 
 {% highlight c# %}
 public string GetLoginUrl(string returnUrl)
@@ -55,7 +55,7 @@ public string GetLoginUrl(string returnUrl)
 The URL specifies the following.
 
 - Tell Facebook login to return to FacebookConnect.aspx with parameters that will indicate the redirect location after a successful login. Facebook application settings require you to specify a single login return location. In addition this must be a dynamic page with a ? in the URL.
-- Tell Facebook that we want _publish_stream_ and _email_ access. The _publish_stream_ option asks the user to authorize our application to publish content on Facebook, which is beyond the scope of this post. The _email_ option asks the user to authorize our application to send the user an e-mail. You don’t actually ever get the user’s e-mail, but an application-specific e-mail forward address.
+- Tell Facebook that we want _publish_stream_ and _email_ access. The _publish_stream_ option asks the user to authorize our application to publish content on Facebook, which is beyond the scope of this post. The _email_ option asks the user to authorize our application to send the user an e-mail. You don't actually ever get the user's e-mail, but an application-specific e-mail forward address.
 
 _Redirect After Login_
 
@@ -95,7 +95,7 @@ _Verifying the Signature_
 
 FacebookConnect.aspx does the job at performing a cross-site Facebook login, then redirects back to the initial login page. The latter must now verify that the login is legit and locate a FoodCandy account associated with this Facebook login. I do this work in the actual login page.
 
-If you’re doing all of this on the client side, read [this document](https://web.archive.org/web/20091223093524/https://wiki.developers.facebook.com/index.php/Verifying_The_Signature) for background and use the [Facebook Connect library](https://web.archive.org/web/20100522114321/https://fbconnectauth.codeplex.com/). I had to split the process between the front-end and the back-end and used it for a reference implementation.
+If you're doing all of this on the client side, read [this document](https://web.archive.org/web/20091223093524/https://wiki.developers.facebook.com/index.php/Verifying_The_Signature) for background and use the [Facebook Connect library](https://web.archive.org/web/20100522114321/https://fbconnectauth.codeplex.com/). I had to split the process between the front-end and the back-end and used it for a reference implementation.
 
 Facebook cookies are collected in a sorted list, concatenated and signed.
 
@@ -141,7 +141,7 @@ return computedHash.ToString().ToLowerInvariant() == signature.ToLowerInvariant(
 
 _Facebook Account Id to FoodCandy Account Id_
 
-Once the signature is verified, you can trust the Facebook user id stored in the "user" cookie. It’s a 64-bit integer. I created a new table in SnCore called _AccountFacebook_ and allow users to associate facebook IDs with their account. If the back-end can locate such an account, an SnCore login ticket is issued, which completes the login operation.
+Once the signature is verified, you can trust the Facebook user id stored in the "user" cookie. It's a 64-bit integer. I created a new table in SnCore called _AccountFacebook_ and allow users to associate facebook IDs with their account. If the back-end can locate such an account, an SnCore login ticket is issued, which completes the login operation.
 
 {% highlight c# %}
 AccountFacebook account = (AccountFacebook)session.CreateCriteria(typeof(AccountFacebook))
@@ -153,7 +153,7 @@ AccountFacebook account = (AccountFacebook)session.CreateCriteria(typeof(Account
 
 The signup process first goes through the same logon process as described above, except that the final landing page is one that will create an account. Most of what I describe below is well explained [here](https://web.archive.org/web/20160315103809/http://devtacular.com/articles/bkonrad/how-to-retrieve-user-data-from-facebook-connect-in-aspnet/), albeit for an older version of the API. This should serve as a refresher.
 
-First, I got hold of the [Facebook Developer Toolkit](https://web.archive.org/web/20100531012447/https://facebooktoolkit.codeplex.com/) that implements calls to Facebook using the [Facebook Graph API](https://developers.facebook.com/docs/api). It is initialized with the API key, the secret and a session key. The toolkit is going to be making server-to-server calls from FoodCandy to Facebook, it’s all back-end operation.
+First, I got hold of the [Facebook Developer Toolkit](https://web.archive.org/web/20100531012447/https://facebooktoolkit.codeplex.com/) that implements calls to Facebook using the [Facebook Graph API](https://developers.facebook.com/docs/api). It is initialized with the API key, the secret and a session key. The toolkit is going to be making server-to-server calls from FoodCandy to Facebook, it's all back-end operation.
 
 {% highlight c# %}
 Facebook.Session.ConnectSession facebookSession = new Facebook.Session.ConnectSession(
@@ -164,7 +164,7 @@ facebookSession.UserId = long.Parse(facebookCookies["user"]);
 Facebook.Rest.Api facebookAPI = new Facebook.Rest.Api(facebookSession);
 {% endhighlight %}
 
-At signup I need the user’s name, e-mail and birthday. I’d also like to get the user’s location and maybe even a picture.
+At signup I need the user's name, e-mail and birthday. I'd also like to get the user's location and maybe even a picture.
 
 {% highlight c# %}
 Facebook.Schema.user user = facebookAPI.Users.GetInfo();
@@ -204,7 +204,7 @@ SnCore.Data.Hibernate.Session.Flush();
 return acct.Id;
 {% endhighlight %}
 
-That’s a lot of private information that you gave me with a single click! Let's look at the created account.
+That's a lot of private information that you gave me with a single click! Let's look at the created account.
 
 ![]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/image_25.jpg)
 

@@ -31,7 +31,7 @@ I let my students practice on their own, until they can have one full side and a
 
 ### Solve the Second Row
 
-Place the cube "opposite" to its destination and follow the following algorithm. There're two versions, from left-to-right and from right-to-left.
+Place the cube "opposite" to its destination and follow the following algorithm. There are two versions, from left-to-right and from right-to-left.
 
 ![]({{ site.url }}/images/posts/2017/2017-07-03-solving-a-3x3-rubiks-cube/two.png)
 

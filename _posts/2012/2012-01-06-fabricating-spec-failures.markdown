@@ -38,7 +38,7 @@ end
 
 What could possibly go wrong here?
 
-I made a beginner mistake that just looks like someone else’s fault (specs fail depending on which order you run them). To get a failed test we fabricate 8 users before this spec is run. The next two users that are fabricated are _Joe 9_ and _Joe 10_. When sorted alphabetically _Joe 10_ comes before _Joe 9_, duh. It’s a good lesson in not relying on external behavior for tests – in this case we should not rely on knowing how names are generated in a fabricator to test that the users are sorted by name. Instead, we should assign names explicitly.
+I made a beginner mistake that just looks like someone else's fault (specs fail depending on which order you run them). To get a failed test we fabricate 8 users before this spec is run. The next two users that are fabricated are _Joe 9_ and _Joe 10_. When sorted alphabetically _Joe 10_ comes before _Joe 9_, duh. It's a good lesson in not relying on external behavior for tests – in this case we should not rely on knowing how names are generated in a fabricator to test that the users are sorted by name. Instead, we should assign names explicitly.
 
 {% highlight ruby %}
 it "returns users in alphabetical order" do

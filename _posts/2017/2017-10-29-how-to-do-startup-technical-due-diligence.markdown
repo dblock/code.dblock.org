@@ -126,7 +126,7 @@ The 3 most important questions I am trying to answer are the following.
 
 ## Final Report
 
-The final report is a lengthy document that includes a summary of the technology developed by the company and its underlying infrastructure, technology advantages and risks, external dependencies, an evaluation of whether the technology is best in class and its future roadmap, a summary of the organization and the team’s technical credibility and capability across all product and technical areas, product quality and development process and the degree at which future plans seem viable.
+The final report is a lengthy document that includes a summary of the technology developed by the company and its underlying infrastructure, technology advantages and risks, external dependencies, an evaluation of whether the technology is best in class and its future roadmap, a summary of the organization and the team's technical credibility and capability across all product and technical areas, product quality and development process and the degree at which future plans seem viable.
 
 I use the following structure.
 
@@ -142,7 +142,7 @@ The purpose of the technology due diligence report, typically _to determine whet
 
 A description of the business problem and typical technical challenges of such business. An end-to-end explanation of how the product works from the technical point of view, whether the proposed idea works and a summary of the current state of the systems and people involved, including a take on senior leadership, its track record and current progress. The company in its context and time line, compared to other enterprises of similar size, scale and stage. A clear evaluation of confidence in the overall ability of the team.
 
-The important takeaway from this section is whether _this report will express a fairly high level of confidence in the team’s ability to continue delivering on the company’s product roadmap, while incrementally improving the underlying technology_.
+The important takeaway from this section is whether _this report will express a fairly high level of confidence in the team's ability to continue delivering on the company's product roadmap, while incrementally improving the underlying technology_.
 
 #### Technology Platform
 

@@ -9,9 +9,9 @@ dblog_post_id: 332
 ---
 I talked to a developer recently. He said:
 
-> _"I cannot talk about this project, because it’s under NDA." ... followed by silence_
+> _"I cannot talk about this project, because it's under NDA." ... followed by silence_
 
-First, you’re confusing "NDA" and "Classified" or "Top Secret". I worked on Classified projects. Or have I? You’ll never know. But I have a t-shirt that says: "my project is so secret, I don’t even know what I am doing". And that’s precisely how you sound.
+First, you're confusing "NDA" and "Classified" or "Top Secret". I worked on Classified projects. Or have I? You'll never know. But I have a t-shirt that says: "my project is so secret, I don't even know what I am doing". And that's precisely how you sound.
 
 ![Conspiracy Keanu - my project is so secret I DON'T EVEN KNOW WHAT I'M DOING](https://cdn.memegenerator.net/instances/400x/18689460.jpg)
 
@@ -21,4 +21,4 @@ Start by describing your project in abstract terms without violating any of thes
 
 > _"Our project was in the daily deals space. I cannot describe the exact purpose of the project, but it involved deals ... daily ones. One of the interesting problems I worked consisted of moving a million instances of data between 3 and 5Kb each from a node located in South America to a node in the U.S. I used MongoDB to store the data and a Redis queue for processing."_
 
-Now we’re talking.
+Now we're talking.

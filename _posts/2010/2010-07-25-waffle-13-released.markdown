@@ -10,7 +10,7 @@ dblog_post_id: 116
 
 ![waffle]({{ site.url }}/images/posts/2010/2010-07-25-waffle-13-released/waffle_4.jpg)
 
-If you’re writing PInvoke in C# or Java code for Windows authentication, save yourself some time, WAFFLE has these features for you.
+If you're writing PInvoke in C# or Java code for Windows authentication, save yourself some time, WAFFLE has these features for you.
 
 - Account lookup locally and in Active Directory via Win32 API with zero configuration.
 - Enumerating Active Directory domains and domain information.

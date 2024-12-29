@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Carrierwave: Saving Best Image Geometry"
+title: "CarrierWave: Saving Best Image Geometry"
 redirect_from: "/carrierwave-saving-best-image-geometry/"
 date: 2011-04-04 15:54:14
 tags: [rails, ruby]
 comments: true
 dblog_post_id: 194
 ---
-I recently needed to find out the geometry of the image being uploaded via Carrierwave. Images come in many different sizes and shapes. What I want is to have a "best" image and store its actual size along with my image model.
+I recently needed to find out the geometry of the image being uploaded via CarrierWave. Images come in many different sizes and shapes. What I want is to have a "best" image and store its actual size along with my image model.
 
 #### Define a Best Image
 
-First, lets define a "best" version of the image. That’s one that’s not being resized, only converted into JPG.
+First, lets define a "best" version of the image. That's one that's not being resized, only converted into JPG.
 
 {% highlight ruby %}
 class ArtworkUploader < CarrierWave::Uploader::Base
@@ -49,7 +49,7 @@ end
 
 #### Save Geometry
 
-Finally, we would like to store _best_width_ and _best_height_ with the _Image_ model. We use MongoId, so we can fetch the geometry _before_save_.
+Finally, we would like to store _best_width_ and _best_height_ with the _Image_ model. We use Mongoid, so we can fetch the geometry _before_save_.
 
 {% highlight ruby %}
 class Image
@@ -70,4 +70,4 @@ class Image
 end
 {% endhighlight %}
 
-I think image geometry should be a built-in function and property of Carrierwave. Maybe this can be improved further and make it into the library?
+I think image geometry should be a built-in function and property of CarrierWave. Maybe this can be improved further and make it into the library?

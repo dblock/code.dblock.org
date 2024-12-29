@@ -11,7 +11,7 @@ Expanding from my [previous post](https://code.dblock.org/grape-api-mounted-on-r
 
 #### Refactoring the Application Instance
 
-Instead of sticking all of the Rack application code into _config.ru_, lets build a cleaner _Acme::App _(in [app/acme_app.rb](https://github.com/dblock/grape-on-rack/blob/master/app/acme_app.rb)). We’re going to drop _Rack::TryStatic_ and build this logic ourselves, since we might need to deal with other error codes than 404 (depending on your URL strategy you may be tripping over a 405). The logic remains the same: we try a bunch of static files and delegate to the API otherwise. You can also build primitive routing instead, so that everything requesting _/api_ goes to the API and everything else goes to _Rack::Static_. Your mileage will vary.
+Instead of sticking all of the Rack application code into _config.ru_, lets build a cleaner _Acme::App _(in [app/acme_app.rb](https://github.com/dblock/grape-on-rack/blob/master/app/acme_app.rb)). We're going to drop _Rack::TryStatic_ and build this logic ourselves, since we might need to deal with other error codes than 404 (depending on your URL strategy you may be tripping over a 405). The logic remains the same: we try a bunch of static files and delegate to the API otherwise. You can also build primitive routing instead, so that everything requesting _/api_ goes to the API and everything else goes to _Rack::Static_. Your mileage will vary.
 
 {% highlight ruby %}
 module Acme
@@ -94,7 +94,7 @@ end
 
 #### RSpec Capybara Integration Tests
 
-Notice that in the tests above we’re mounting the Rack application and making requests directly to it. Does it actually work in a browser? Do we see the _public/index.html_ page?
+Notice that in the tests above we're mounting the Rack application and making requests directly to it. Does it actually work in a browser? Do we see the _public/index.html_ page?
 
 We start by adding capybara into Gemfile. At the time of the writing we need to use the code from Capybara head, since it adds support for _Capybara.app_.
 

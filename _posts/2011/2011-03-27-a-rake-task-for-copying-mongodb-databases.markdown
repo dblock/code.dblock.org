@@ -7,7 +7,7 @@ tags: [rake, mongodb, rails, ruby]
 comments: true
 dblog_post_id: 189
 ---
-Now that we have a staging and a production environment, we want to copy all production data to staging at the same time as we push new code to staging via continuous integration. While our code has to generally be resilient to data schema changes – we use NoSQL MongoDB – we don’t want to be in the business of carrying backward compatibility code for too long. Instead, we create data migrations that can run after the new code has been deployed and kill the backward compatibility parts with a future commit after we’ve made sure the data has been properly converted.
+Now that we have a staging and a production environment, we want to copy all production data to staging at the same time as we push new code to staging via continuous integration. While our code has to generally be resilient to data schema changes – we use NoSQL MongoDB – we don't want to be in the business of carrying backward compatibility code for too long. Instead, we create data migrations that can run after the new code has been deployed and kill the backward compatibility parts with a future commit after we've made sure the data has been properly converted.
 
 The entire continuous integration and continuous deployment process looks like this.
 
@@ -17,13 +17,13 @@ The interesting part is that we copy the production database to staging before c
 
 #### Push and Pull
 
-One existing solution is data push and pull implemented [here](https://www.theirishpenguin.com/2011/01/20/push-and-pull-data-between-your-local-mongodb-and-heroku-or-mongohq.html). But looking at the source code, it’s a row-by-row copy! Ouch.
+One existing solution is data push and pull implemented [here](https://www.theirishpenguin.com/2011/01/20/push-and-pull-data-between-your-local-mongodb-and-heroku-or-mongohq.html). But looking at the source code, it's a row-by-row copy! Ouch.
 
 Let's write a task that will copy one MongoDB database to another using something more efficient.
 
 #### Reading Heroku-San Configuration
 
-We’re using [Heroku-san](https://web.archive.org/web/20110704143857/https://jqr.github.com/2010/08/27/easy-heroku-deploys-with-heroku-san.html), so we’ve got a _heroku.yml_ sitting in the config folder with two values for MONGOHQ_URL under _staging_ and _production_. We’ll load the file with YAML, fetch _MONGOHQ_URL_ and parse it into parts. For those using regular expressions to parse MongoHQ urls, pay attention: everything except the database name is just a regular piece of a URL.
+We're using [Heroku-san](https://web.archive.org/web/20110704143857/https://jqr.github.com/2010/08/27/easy-heroku-deploys-with-heroku-san.html), so we've got a _heroku.yml_ sitting in the config folder with two values for MONGOHQ_URL under _staging_ and _production_. We'll load the file with YAML, fetch _MONGOHQ_URL_ and parse it into parts. For those using regular expressions to parse MongoHQ urls, pay attention: everything except the database name is just a regular piece of a URL.
 
 {% highlight ruby %}
 def db_copy_load_config
@@ -48,7 +48,7 @@ I \*heart\* functions that return two values!
 
 #### Copying Databases
 
-MongoDB has a nifty `copyDatabase` (or clone) feature described [here](https://www.mongodb.com/docs/v2.2/reference/method/db.copyDatabase). It’s incremental, so we must drop tables before calling it. We also have to ensure that we don’t drop system tables, otherwise our database may be rendered inaccessible.
+MongoDB has a nifty `copyDatabase` (or clone) feature described [here](https://www.mongodb.com/docs/v2.2/reference/method/db.copyDatabase). It's incremental, so we must drop tables before calling it. We also have to ensure that we don't drop system tables, otherwise our database may be rendered inaccessible.
 
 {% highlight ruby %}
 desc "MongoDB database to database copy"
@@ -89,11 +89,11 @@ Database command 'copydbgetnonce' failed: {"assertion"=>"unauthorized db:admin l
   "assertionCode"=>10057, "errmsg"=>"db assertion failure", "ok"=>0.0}
 ```
 
-This is because copyDatabase requires admin privileges, which MongoHQ doesn’t give co-located users. Too bad - we have to fall back to the silly _mongodump_ and _mongorestore_. This has two major disadvantages: it requires a local mongo installation and copies a ton of data over the network from MongoHQ, then back to MongoHQ. I hope that either MongoHQ exposes this API one day or there’s a non-admin way to do this with MongoDB [[SERVER-2846](https://jira.mongodb.org/browse/SERVER-2846)].
+This is because copyDatabase requires admin privileges, which MongoHQ doesn't give co-located users. Too bad - we have to fall back to the silly _mongodump_ and _mongorestore_. This has two major disadvantages: it requires a local mongo installation and copies a ton of data over the network from MongoHQ, then back to MongoHQ. I hope that either MongoHQ exposes this API one day or there's a non-admin way to do this with MongoDB [[SERVER-2846](https://jira.mongodb.org/browse/SERVER-2846)].
 
 #### Using Mongo Dump and Restore
 
-Falling back to mongodump and mongorestore is trivial. It hurts to do it, but it does work. Here’s the complete _lib/tasks/db_copy.rake_.
+Falling back to mongodump and mongorestore is trivial. It hurts to do it, but it does work. Here's the complete _lib/tasks/db_copy.rake_.
 
 {% highlight ruby %}
 namespace :db do

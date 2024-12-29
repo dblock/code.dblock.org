@@ -9,13 +9,13 @@ dblog_post_id: 262
 ---
 ![jenkins]({{ site.url }}/images/posts/2011/2011-09-07-implementing-my-first-jenkins-plugin-ansicolor/jenkins_3.jpg)
 
-I installed Jenkins last week for the very first time. A couple of days later I was able to publish my first plugin, called [AnsiColor](https://plugins.jenkins.io/ansicolor), which colorizes ANSI output. It’s the [plugin you’ve all been waiting for](https://code.dblock.org/the-jenkins-ansicolor-plugin-youve-all-been-waiting-for).
+I installed Jenkins last week for the very first time. A couple of days later I was able to publish my first plugin, called [AnsiColor](https://plugins.jenkins.io/ansicolor), which colorizes ANSI output. It's the [plugin you've all been waiting for](https://code.dblock.org/the-jenkins-ansicolor-plugin-youve-all-been-waiting-for).
 
-The [Jenkins plugin tutorial](https://wiki.jenkins-ci.org/display/JENKINS/Plugin+tutorial) is quite good, I recommend you just follow it. It has a maven-based cookbook to generate a new project. But if you’re like me, you’ll reconstruct a plugin from scratch (and possibly trade time for a better understanding). I’ll just mention a few things that could have been helpful to me.
+The [Jenkins plugin tutorial](https://wiki.jenkins-ci.org/display/JENKINS/Plugin+tutorial) is quite good, I recommend you just follow it. It has a maven-based cookbook to generate a new project. But if you're like me, you'll reconstruct a plugin from scratch (and possibly trade time for a better understanding). I'll just mention a few things that could have been helpful to me.
 
 #### Basics
 
-A plugin extends _hudson.Plugin_. This class isn’t even necessary, but it’s a good opportunity to setup a logger that’s going to tell us that the plugin is actually being loaded. Whether you’re testing the plugin locally or running a production instance of Jenkins, this will come handy.
+A plugin extends _hudson.Plugin_. This class isn't even necessary, but it's a good opportunity to setup a logger that's going to tell us that the plugin is actually being loaded. Whether you're testing the plugin locally or running a production instance of Jenkins, this will come handy.
 
 {% highlight java %}
 public class PluginImpl extends Plugin {
@@ -45,7 +45,7 @@ public class AnsiColorConsoleLogFilter extends ConsoleLogFilter {
 }
 {% endhighlight %}
 
-What’s that _AnsiColorizer_? It’s a stream processing class that inherits from _hudson.console.LineTransformationOutputStream _that overrides a method called _eol_, called for each output line. It decorates our logger. Notice that the bytes passed into the _eol_ method are pre-allocated, hence the _len_ parameter. You get a lot more bytes than in the current line, but it’s garbage from previous output after _len_.
+What's that _AnsiColorizer_? It's a stream processing class that inherits from _hudson.console.LineTransformationOutputStream _that overrides a method called _eol_, called for each output line. It decorates our logger. Notice that the bytes passed into the _eol_ method are pre-allocated, hence the _len_ parameter. You get a lot more bytes than in the current line, but it's garbage from previous output after _len_.
 
 The following code will strip all ANSI markup.
 
@@ -60,20 +60,20 @@ protected void eol(byte[] b, int len) throws IOException {
 }
 {% endhighlight %}
 
-Pretty simple, right? Well, it only works if we want to remove stuff or add text and doesn’t work for HTML. Console output gets HTML-encoded as it passed through subsequent filtering, so inserting HTML, such as color, will end up encoded too. Sad face.
+Pretty simple, right? Well, it only works if we want to remove stuff or add text and doesn't work for HTML. Console output gets HTML-encoded as it passed through subsequent filtering, so inserting HTML, such as color, will end up encoded too. Sad face.
 
 #### Console Notes
 
 Jenkins has another extension point, [BuildWrapper](https://www.jenkins.io/doc/developer/extensions#Extensionpoints-hudson.tasks.BuildWrapper). It will add an option to every build project to enable the decoration of the build logger to which we can attach a [ConsoleAnnotationDescriptor](https://www.jenkins.io/doc/developer/extensions#Extensionpoints-hudson.console.ConsoleAnnotationDescriptor). All this is rather convoluted, but constructed with good intentions of being able to stream data. As a recent Rubyist I raised all of my eyebrows time-and-again – I forgot how much people love factories in Java. Anyway, that lets you insert _ConsoleNote_ elements before and after a line of log output. The note is HTML. But ANSI characters can be anywhere in the string, so how is this helpful?
 
-Let's use the extra brain cells that didn’t die while sorting out wrappers, factories, decorators and annotators. Given a string, such as `Hello ]32mCruel Java World`, how do we make it display `"Hello <span style="color: green">Cruel Java World</span>` given that we can only prepend and append text? Like this.
+Let's use the extra brain cells that didn't die while sorting out wrappers, factories, decorators and annotators. Given a string, such as `Hello ]32mCruel Java World`, how do we make it display `"Hello <span style="color: green">Cruel Java World</span>` given that we can only prepend and append text? Like this.
 
 {% highlight html %}
 Hello <span style="color: green">Cruel Java World</span>
 <span style="display: none">Hello ]32mCruel Java World</span>
 {% endhighlight %}
 
-I know, it’s a total hack, but it works and nobody will complain.
+I know, it's a total hack, but it works and nobody will complain.
 
 {% highlight java %}
 String colorizedData = colorize(this.data);

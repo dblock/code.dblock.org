@@ -7,9 +7,9 @@ tags: [grape, rails, ruby]
 comments: true
 dblog_post_id: 239
 ---
-We made some progress with modularizing our Grape API in the [last post](/modularizing-a-ror-grape-api). But we only had one version and declared _Api_v1_ as our main API entry. Unless you’re Netflix and need an API per device family (I know, [wow!](https://web.archive.org/web/20111126224934/https://blog.programmableweb.com/2011/07/28/redesigning-the-netflix-api-no-versions-many-endpoints/), 18’000 different devices use the Netflix API), you might want to make a Grape API with two versions.
+We made some progress with modularizing our Grape API in the [last post](/modularizing-a-ror-grape-api). But we only had one version and declared _Api_v1_ as our main API entry. Unless you're Netflix and need an API per device family (I know, [wow!](https://web.archive.org/web/20111126224934/https://blog.programmableweb.com/2011/07/28/redesigning-the-netflix-api-no-versions-many-endpoints/), 18'000 different devices use the Netflix API), you might want to make a Grape API with two versions.
 
-We’ll start by declaring an API class the way we would like to see it.
+We'll start by declaring an API class the way we would like to see it.
 
 {% highlight ruby %}
 class Api < Grape::API
@@ -28,7 +28,7 @@ match '/api/v1/\*other' => Api
 match '/api/v2/\*other' => Api
 {% endhighlight %}
 
-What does _Api_v1_ or _Api_v2_ look like? It’s  a little tricky. We need to include api modules into the parent Grape API, like this.
+What does _Api_v1_ or _Api_v2_ look like? It's  a little tricky. We need to include api modules into the parent Grape API, like this.
 
 {% highlight ruby %}
 module Api_v1
@@ -40,7 +40,7 @@ module Api_v1
 end
 {% endhighlight %}
 
-Unfortunately _Module::include_ is private. Let’s expose it as _module_ by extending the _Api_ class with the methods of _ApiModule::ClassMethods_. I personally find this _included / extend_ pair particularly elegant.
+Unfortunately _Module::include_ is private. Let's expose it as _module_ by extending the _Api_ class with the methods of _ApiModule::ClassMethods_. I personally find this _included / extend_ pair particularly elegant.
 
 {% highlight ruby %}
 module ApiModule
@@ -72,7 +72,7 @@ module Api_v1
 end
 {% endhighlight %}
 
-Don’t forget to write some tests. I’ve made [a pull request](https://github.com/ruby-grape/grape/pull/48) into Grape exposing API _versions_ and _routes_, so I can actually write a test now that makes sure we have both versions of the API properly loaded. This goes into _spec/requests/api_spec.rb_.
+Don't forget to write some tests. I've made [a pull request](https://github.com/ruby-grape/grape/pull/48) into Grape exposing API _versions_ and _routes_, so I can actually write a test now that makes sure we have both versions of the API properly loaded. This goes into _spec/requests/api_spec.rb_.
 
 {% highlight ruby %}
 require 'spec_helper'

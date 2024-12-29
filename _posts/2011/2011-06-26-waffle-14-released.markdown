@@ -21,7 +21,7 @@ Build is 1.4.8182.0.
 - #9854: Added support for query strings with multiple parameters to MixedAuthenticator.
 - #243081: Filter providers and protocols specified in configuration can be separated by any type of space.
 
-There’re Waffle forks for Tomcat 5, 7 and Spring-Security 2.
+There are Waffle forks for Tomcat 5, 7 and Spring-Security 2.
 
 #### Update (2015)
 

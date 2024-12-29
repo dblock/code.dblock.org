@@ -7,11 +7,11 @@ tags: [rails, ruby]
 comments: true
 dblog_post_id: 175
 ---
-So you’ve built the super amazing complicated Rails website. You are serving data from millions of documents from [MongoDB](https://www.mongodb.org/), rendering complex objects using HAML and generally doing a bunch of hardcore stuff. Then someone asks you a pretty simple question: _how do I change the "Contact Us" page that’s linked at the bottom? _
+So you've built the super amazing complicated Rails website. You are serving data from millions of documents from [MongoDB](https://www.mongodb.org/), rendering complex objects using HAML and generally doing a bunch of hardcore stuff. Then someone asks you a pretty simple question: _how do I change the "Contact Us" page that's linked at the bottom? _
 
-A terrified look takes over your face. You realize that you must now explain to a non-technical person the process of committing to [Github](https://github.com/), merging and branching. Moreover, you are going to have to give that person committer rights. That’s pretty scary stuff right there. That marketing person is never, ever getting write access to my jewels!
+A terrified look takes over your face. You realize that you must now explain to a non-technical person the process of committing to [Github](https://github.com/), merging and branching. Moreover, you are going to have to give that person committer rights. That's pretty scary stuff right there. That marketing person is never, ever getting write access to my jewels!
 
-Let’s turn our Rails site into a wiki in a few simple steps.
+Let's turn our Rails site into a wiki in a few simple steps.
 
 #### Create a Page Model
 
@@ -31,7 +31,7 @@ Create basic controllers and UI to edit and view the pages – boring Rails stuf
 
 #### Enable Markdown
 
-Assume _:content_ is in a wiki (markdown) format. No need to stand on your head if you’re using HAML. The HAML _:markdown_ filter will just render your content field in HTML. You have to use the Ruby #{} syntax to evaluate the actual expression. Here’s the entire _views/pages/show.html.haml_.
+Assume _:content_ is in a wiki (markdown) format. No need to stand on your head if you're using HAML. The HAML _:markdown_ filter will just render your content field in HTML. You have to use the Ruby #{} syntax to evaluate the actual expression. Here's the entire _views/pages/show.html.haml_.
 
 {% highlight haml %}
 %div
@@ -57,7 +57,7 @@ end
   #{Page.content_by_name('footer')}
 {% endhighlight %}
 
-In my example we introduced a convention that a footer page should be called _footer_. In the footer page I’ll place a `[Contact](/pages/Contact)` line to link the _Contact_ page. Someone from marketing can create and edit that.
+In my example we introduced a convention that a footer page should be called _footer_. In the footer page I'll place a `[Contact](/pages/Contact)` line to link the _Contact_ page. Someone from marketing can create and edit that.
 
 #### Profit
 

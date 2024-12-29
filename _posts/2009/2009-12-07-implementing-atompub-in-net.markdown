@@ -7,7 +7,7 @@ tags: [syndication, codeproject, dotnet, asp.net, blog]
 comments: true
 dblog_post_id: 70
 ---
-I’ve been wanting to implement a POST protocol for my blog for a while. The urge got really bad since I’ve started using [LiveWriter](https://support.microsoft.com/en-us/windows/windows-essentials-2707b879-5004-4349-c4a4-e5900945f2a9) at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/). It’s such a nice piece of software compared to blogging with the online HTML editor with it’s, often too smart, HTML cleanup, struggling with embedded pictures and loosing drafts. I even considered abandoning my own creation and using [WordPress](https://wordpress.org/) or some other blogging engine. Then the "not invented here" syndrome took over. I spent a few hours implementing a large part of AtomPUB, [RFC-5023](https://tools.ietf.org/html/rfc5023).
+I've been wanting to implement a POST protocol for my blog for a while. The urge got really bad since I've started using [LiveWriter](https://support.microsoft.com/en-us/windows/windows-essentials-2707b879-5004-4349-c4a4-e5900945f2a9) at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/). It's such a nice piece of software compared to blogging with the online HTML editor with its, often too smart, HTML cleanup, struggling with embedded pictures and loosing drafts. I even considered abandoning my own creation and using [WordPress](https://wordpress.org/) or some other blogging engine. Then the "not invented here" syndrome took over. I spent a few hours implementing a large part of AtomPUB, [RFC-5023](https://tools.ietf.org/html/rfc5023).
 
 The [Atom Publishing Protocol](https://bitworking.org/projects/atom/rfc5023.html) is an application-level protocol for publishing and editing web resources. The protocol is based on HTTP transfer of Atom-formatted representations. The Atom format is documented in the Atom Syndication Format, [RFC-4287](https://tools.ietf.org/html/rfc4287).
 
@@ -45,7 +45,7 @@ My current blog implementation supports ATOM. This is done by using an asp:Repea
 </feed>
 {% endhighlight %}
 
-This works fine for generating feeds, but in order to consume ATOM posts I will need an object model for feed items. That’s where the "not invented here" syndrome has to stop and I am going to let [Argotic](https://web.archive.org/web/20091227163034/https://argotic.codeplex.com//) do the job. First, by rewriting the above ASP.NET code in C#.
+This works fine for generating feeds, but in order to consume ATOM posts I will need an object model for feed items. That's where the "not invented here" syndrome has to stop and I am going to let [Argotic](https://web.archive.org/web/20091227163034/https://argotic.codeplex.com//) do the job. First, by rewriting the above ASP.NET code in C#.
 
 {% highlight c# %}
 Response.ContentType = "application/atom+xml;charset=\"utf-8\"";
@@ -113,7 +113,7 @@ The service document describes a workspace with collections. We have two: one fo
 </service>
 {% endhighlight %}
 
-We now have Default.aspx that points to the service document, which points to AtomPost.aspx that can generate a feed. The rest doesn’t exist yet, but this is enough to make LiveWriter happy and allow it to register the blog. LiveWriter will automatically detect the Posts collection and, since it’s still a little thick, prompt to which image collection to post images to (we only have one).
+We now have Default.aspx that points to the service document, which points to AtomPost.aspx that can generate a feed. The rest doesn't exist yet, but this is enough to make LiveWriter happy and allow it to register the blog. LiveWriter will automatically detect the Posts collection and, since it's still a little thick, prompt to which image collection to post images to (we only have one).
 
 ### Creating Posts
 
@@ -126,7 +126,7 @@ AtomEntry atomEntry = new AtomEntry();
 atomEntry.Load(Request.InputStream);
 {% endhighlight %}
 
-The blog system has objects of type Post that are going to be created. Also note that the post comes with ATOM categories – here you would need to recognize which ones must be created and which ones exist as well as associate the categories with the new post. We’ll omit that code to simplify things.
+The blog system has objects of type Post that are going to be created. Also note that the post comes with ATOM categories – here you would need to recognize which ones must be created and which ones exist as well as associate the categories with the new post. We'll omit that code to simplify things.
 
 {% highlight c# %}
 Post post = new Post();
@@ -149,7 +149,7 @@ Response.Headers.Add("Location", location);
 Response.Headers.Add("Content-Location", location);
 {% endhighlight %}
 
-We’ll also add metadata that describes the new post ID and location and return the post to the client.
+We'll also add metadata that describes the new post ID and location and return the post to the client.
 
 {% highlight c# %}
 atomEntry.Id = new AtomId(new Uri(string.Format("Post/{0}", post.Id)));
@@ -161,7 +161,7 @@ atomEntry.Links.Add(atomEntryUri);
 atomEntry.Save(Response.OutputStream);
 {% endhighlight %}
 
-There’s no more data to be written to the client. Note that this throws a `ThreadAbortException` that must be trapped in the page code.
+There's no more data to be written to the client. Note that this throws a `ThreadAbortException` that must be trapped in the page code.
 
 {% highlight c# %}
 Response.End();
@@ -169,7 +169,7 @@ Response.End();
 
 ### Updating and Retrieving Posts
 
-There’re actually four scenarios to implement in AtomPost.
+There are actually four scenarios to implement in AtomPost.
 
 - **GET** : retrieve all posts – see Generating Atom Feeds code above.
 - **GET** with a post ID: retrieve a specific post - a subset of GET for all posts.

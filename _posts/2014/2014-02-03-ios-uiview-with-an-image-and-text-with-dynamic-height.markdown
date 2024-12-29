@@ -52,7 +52,7 @@ We use a custom _UIView_ with a fixed height of 120px to display a separator, an
 
 This is obviously problematic for tall images and cropping art is a major offense. How do we dynamically calculate the height of the view based on the image and/or text height? Since the image is loaded dynamically, are we going to have to write some pretty involved code to wait until its height is known? Do we need to auto-size the label and calculate its height after it wraps over multiple lines?
 
-The answer is that we don’t need to do any of this. With auto-layout we need to attach the image and the text to the bottom of the containing view.
+The answer is that we don't need to do any of this. With auto-layout we need to attach the image and the text to the bottom of the containing view.
 
 {% highlight objc %}
 [self alignBottomEdgeWithView:labelView predicate:@"10"];

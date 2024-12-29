@@ -9,11 +9,11 @@ dblog_post_id: 157
 ---
 ![]({{ site.url }}/images/posts/2011/2011-01-18-waffle-single-sign-on-user-impersonation-in-tomcat/image_3.jpg)
 
-A generous contributor (Nicolas Guillaumin, @nguillaumin) who works for a company called Funnelback, has committed the much requested impersonation support to Waffle. This is pretty exciting, since it fills in a bunch of squares in the puzzle that we’re trying to assemble with the [Waffle project](https://github.com/dblock/waffle).
+A generous contributor (Nicolas Guillaumin, @nguillaumin) who works for a company called Funnelback, has committed the much requested impersonation support to Waffle. This is pretty exciting, since it fills in a bunch of squares in the puzzle that we're trying to assemble with the [Waffle project](https://github.com/dblock/waffle).
 
 I tried it out with build 1.4.1744.0.
 
-First, there’s a line of code in the _index.jsp_ that displays the current Windows thread identity by calling a Win32 API via JNA.
+First, there's a line of code in the _index.jsp_ that displays the current Windows thread identity by calling a Win32 API via JNA.
 
 {% highlight jsp %}
 You are logged in as remote user <b><%= request.getRemoteUser() %></b> in session <b><%= session.getId() %></b>.<br>
@@ -26,7 +26,7 @@ I have two users, _dblock-gray\dblock_ and _dblock-gray\test_. I am running the 
 
 This means that while I am logged in as the test user (`request.getRemoteUser()` returns _dblock-gray\test_), the Windows thread identity is the same one as of the Tomcat server (_dblock-gray\dblock_).
 
-Let’s add _impersonate_ into  web.xml.
+Let's add _impersonate_ into  web.xml.
 
 {% highlight xml %}
 <filter>
@@ -43,4 +43,4 @@ Tomcat now impersonates _dblock-gray\test_.
 
 ![test-user]({{ site.url }}/images/posts/2011/2011-01-18-waffle-single-sign-on-user-impersonation-in-tomcat/test-user_4.jpg)
 
-This is great news: I can now operate on behalf of _dblock-gray\test_ to, for example, access files that test owns on the server. Also note that this is the default behavior of IIS when you enable Windows Authentication and we’re now accomplishing the same with Tomcat or any other servlet-compliant server.
+This is great news: I can now operate on behalf of _dblock-gray\test_ to, for example, access files that test owns on the server. Also note that this is the default behavior of IIS when you enable Windows Authentication and we're now accomplishing the same with Tomcat or any other servlet-compliant server.

@@ -39,7 +39,7 @@ end
 
 You can call `OrderState.all` and `OrderState::CREATED`.
 
-#### What’s next?
+#### What's next?
 
 I want to be able to write `define :CREATED = "CREATED"` inside `OrderState` class and I want to prevent instances of `OrderState` outside of within `Enum`. First one to accomplish both gets a beer.
 

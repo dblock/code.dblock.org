@@ -5,7 +5,7 @@ date: 2016-03-25
 tags: [git, github, open-source, shell]
 comments: true
 ---
-I have thousands of Github clones on my computer. You might also know that I have a massive OCD for organizing things. I organize my personal documents by year, going back to 1994 and photos by date. I freak out if there're too many top level folders.
+I have thousands of Github clones on my computer. You might also know that I have a massive OCD for organizing things. I organize my personal documents by year, going back to 1994 and photos by date. I freak out if there are too many top level folders.
 
 Most people `git clone` a repo (eg. `grape`), then `git clone` their forks into another folder (eg. `grape2`), which makes a huge mess and makes me nervous.
 
@@ -71,7 +71,7 @@ drwxr-xr-x  22 dblock  staff  748 Mar 25 11:43 codegram
 drwxr-xr-x  22 dblock  staff  748 Mar 25 11:43 dblock
 ```
 
-There're two git remotes in `dblock`, `origin` and `upstream`.
+There are two git remotes in `dblock`, `origin` and `upstream`.
 
 ```sh
 ~/source/hyperclient/dblock (master)$ git remote -v
@@ -125,7 +125,7 @@ drwxr-xr-x  22 dblock  staff  748 Mar 25 11:43 dblock
 drwxr-xr-x  22 dblock  staff  748 Mar 25 11:43 ruby-grape
 ```
 
-There're two git remotes in `dblock`, `origin` and `upstream`.
+There are two git remotes in `dblock`, `origin` and `upstream`.
 
 ```sh
 ~/source/grape/grape-swagger/dblock (master)$ git remote -v

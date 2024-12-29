@@ -9,7 +9,7 @@ dblog_post_id: 263
 ---
 You love markdown? We do too.
 
-I’m going to show you how to enable dynamic authoring of mail templates in your Rails app in [Markdown](https://daringfireball.net/projects/markdown/). This includes [Devise](https://github.com/plataformatec/devise) mailers. You can already customize templates with files in _app/views_, but we’ll take an extra step and expose an editable model in the database and allow our application administrators to author and edit templates in Markdown.
+I'm going to show you how to enable dynamic authoring of mail templates in your Rails app in [Markdown](https://daringfireball.net/projects/markdown/). This includes [Devise](https://github.com/plataformatec/devise) mailers. You can already customize templates with files in _app/views_, but we'll take an extra step and expose an editable model in the database and allow our application administrators to author and edit templates in Markdown.
 
 #### Template Model
 
@@ -53,7 +53,7 @@ And a simple view, _app/views/mail_templates/show.html.haml_.
 
 You can add a form to edit such a mail template, left as an exercise.
 
-There’re a lot of mailers, so having to create each template by hand doesn’t make a lot of sense. There’s no easy way to enumerate all mailers, so lets define the in some central location and write a Rake task to create these in the database. I wrote _app/mailers/mailers.rb._
+There are a lot of mailers, so having to create each template by hand doesn't make a lot of sense. There's no easy way to enumerate all mailers, so lets define the in some central location and write a Rake task to create these in the database. I wrote _app/mailers/mailers.rb._
 
 {% highlight ruby %}
 module Mailers
@@ -102,7 +102,7 @@ module Mailers
 end
 {% endhighlight %}
 
-It’s all pretty straightforward. You can add other mailers to _Mailers.ALL_. A rake task can invoke _Mailers.create_templates!_ so that we get a record in the database with the default data. Here’s an example of _app/views/devise/mailer/reset_password_instructions.md_. Note that this is already written in markdown!
+It's all pretty straightforward. You can add other mailers to _Mailers.ALL_. A rake task can invoke _Mailers.create_templates!_ so that we get a record in the database with the default data. Here's an example of _app/views/devise/mailer/reset_password_instructions.md_. Note that this is already written in markdown!
 
 ```
 Hello <%=@resource.email%>!
@@ -156,7 +156,7 @@ end
 
 #### Tests
 
-A simple test is to make sure we can actually render an e-mail. Here’s what my _spec/mailers/devise_mailer_spec.rb_ looks like.
+A simple test is to make sure we can actually render an e-mail. Here's what my _spec/mailers/devise_mailer_spec.rb_ looks like.
 
 {% highlight ruby %}
 require "spec_helper"

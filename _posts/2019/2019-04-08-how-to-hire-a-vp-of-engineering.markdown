@@ -55,7 +55,7 @@ We aimed at protecting and growing our uniquely open culture.
 
 And we decided, ultimately, to concentrate the responsibility of achieving healthy velocity and growth within this critical role.
 
-> As Vice President of Engineering you will report to the company Chief Technology Officer and serve a team of Directors that lead product and infrastructure teams. You will be responsible for all software delivery, the Engineering team’s growth through hiring and internally, compensation and goal setting. You will recruit, support, inspire, and scale a culture of craftsmanship, innovation and commitment within Engineering. Together with your team you will make the right strategic decisions in the way we build software, and navigate the balance of delivering an amazing product, investing in the future and paying technical debt.
+> As Vice President of Engineering you will report to the company Chief Technology Officer and serve a team of Directors that lead product and infrastructure teams. You will be responsible for all software delivery, the Engineering team's growth through hiring and internally, compensation and goal setting. You will recruit, support, inspire, and scale a culture of craftsmanship, innovation and commitment within Engineering. Together with your team you will make the right strategic decisions in the way we build software, and navigate the balance of delivering an amazing product, investing in the future and paying technical debt.
 
 The job description spelled out responsibilities.
 
@@ -108,7 +108,7 @@ Pro tip: let the CFO or the COO negotiate the recruiter retainer and fees. Bad c
 
 It's your responsibility as the hiring manager to _own_ the candidate and to keep them engaged, and not HR's.
 
-At Artsy, half the executive-level candidates at the top of the funnel came from the team’s personal networks, and the other half via the search firm. I had to make a list of "ideal" candidates and discuss various desired attributes with the recruiter.
+At Artsy, half the executive-level candidates at the top of the funnel came from the team's personal networks, and the other half via the search firm. I had to make a list of "ideal" candidates and discuss various desired attributes with the recruiter.
 
 External candidates engaged via a recruiter pitch, then were connected with me for an informational. Internal candidates first met with me, then were connected with the external firm.
 
@@ -144,7 +144,7 @@ The way Artsy interviews any Engineer is best described in [this blog post](http
 
 #### References
 
-The most accurate predictor of future job performance is past job performance, not how well someone can perform in an interview. Therefore references are used to calculate an NPS score for the candidate based on questions such as _Please rank the candidate in your team and explain what separates them from #1._. The final hiring decision at the company is designed to be 50% one’s interview and 50% references and is ultimately made entirely by the hiring manager.
+The most accurate predictor of future job performance is past job performance, not how well someone can perform in an interview. Therefore references are used to calculate an NPS score for the candidate based on questions such as _Please rank the candidate in your team and explain what separates them from #1._. The final hiring decision at the company is designed to be 50% one's interview and 50% references and is ultimately made entirely by the hiring manager.
 
 I typically ask the CEO and the internal recruiter to do at least one reference call, and take the rest.
 

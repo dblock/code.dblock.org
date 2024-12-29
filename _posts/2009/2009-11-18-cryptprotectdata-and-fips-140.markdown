@@ -15,7 +15,7 @@ When I worked at Microsoft I spent quite a bit of time in building 41 (if I reme
 
 Anyway, Microsoft support was very helpful. So while they update the documentation here's the gist of it.
 
-> DPAPI uses a FIPS-validated cryptographic implementation for encrypting data in Windows XP and later OS versions.  DPAPI’s encryption functionality in Windows 2000 used DES, which is no longer an Approved algorithm under FIPS 140.
+> DPAPI uses a FIPS-validated cryptographic implementation for encrypting data in Windows XP and later OS versions.  DPAPI's encryption functionality in Windows 2000 used DES, which is no longer an Approved algorithm under FIPS 140.
 
 You don't have to turn any registry switches or do anything magical to get FIPS-140. Good reason to stick to this simple API to get your crypto on Windows.
 

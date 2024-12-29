@@ -13,4 +13,4 @@ Slides from my presentation [here](https://www.slideshare.net/dblockdotorg/waffl
 
 ![]({{ site.url }}/images/posts/2012/2012-02-24-waffle-nyjavasig/image_7.jpg)
 
-Oh, and yes, if you’re still writing JNI code, stop and switch to [JNA](https://github.com/twall/jna).
+Oh, and yes, if you're still writing JNI code, stop and switch to [JNA](https://github.com/twall/jna).

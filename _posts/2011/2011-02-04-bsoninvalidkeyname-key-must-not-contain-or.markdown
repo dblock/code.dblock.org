@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "BSON::InvalidKeyName: key must not contain '.' or ‘$’"
+title: "BSON::InvalidKeyName: key must not contain '.' or ‘$'"
 redirect_from: "/bsoninvalidkeyname-key-must-not-contain-or/"
 date: 2011-02-04 15:14:01
 tags: [mongodb, ruby]
 comments: true
 dblog_post_id: 168
 ---
-I ran into an error from Mongo, _BSON::InvalidKeyName: key must not contain '.'_ (or sometimes ‘$’ instead of ‘.’). It would happen randomly under RSpec (I do plan to check out Cucumber and Steak - together with BiSON this is going to be delicious), which presents a nice exception summary rather than a full stack trace. The first lesson was how to catch and re-raise a Ruby exceptions to output more detail. I wrapped the failing code with a _begin/rescue_ block.
+I ran into an error from Mongo, _BSON::InvalidKeyName: key must not contain '.'_ (or sometimes ‘$' instead of ‘.'). It would happen randomly under RSpec (I do plan to check out Cucumber and Steak - together with BiSON this is going to be delicious), which presents a nice exception summary rather than a full stack trace. The first lesson was how to catch and re-raise a Ruby exceptions to output more detail. I wrapped the failing code with a _begin/rescue_ block.
 
 {% highlight ruby %}
 begin
@@ -36,4 +36,4 @@ C:/Ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callback
 ...
 ```
 
-BSON serializes documents and collections into a binary stream that gets sent to MongoDB. That bson_c.rb is a thin wrapper on top of some native code. Rather than using my obsolete C/C++ skills and digging into C code I decided to check whether there was a newer version of bson. I am on 1.1.5, but there’s already a 1.2.0 update. Problem went away after swapping for a newer version. Someone must have done something right. If you know the actual bug fixed, please do share.
+BSON serializes documents and collections into a binary stream that gets sent to MongoDB. That bson_c.rb is a thin wrapper on top of some native code. Rather than using my obsolete C/C++ skills and digging into C code I decided to check whether there was a newer version of bson. I am on 1.1.5, but there's already a 1.2.0 update. Problem went away after swapping for a newer version. Someone must have done something right. If you know the actual bug fixed, please do share.

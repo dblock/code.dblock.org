@@ -7,7 +7,7 @@ tags: [grape, rails, ruby]
 comments: true
 dblog_post_id: 289
 ---
-There’s got to be a prettier way of implementing this.
+There's got to be a prettier way of implementing this.
 
 ![]({{ site.url }}/images/posts/2011/2011-11-07-rendering-markdown-documents-in-rails/image_19.jpg)
 
@@ -46,4 +46,4 @@ end
 
 You can now create _public/api/v1/docs/something.md_ and it will render under _api/v1/docs/something_.
 
-What I’d like to do is take the Markdown renderer out of this controller, define it as a generic handler, and swap the template being rendered to the _filename_ instead. How do I do that?
+What I'd like to do is take the Markdown renderer out of this controller, define it as a generic handler, and swap the template being rendered to the _filename_ instead. How do I do that?

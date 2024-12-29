@@ -25,7 +25,7 @@ I helped move [opensearch-plugin-template-java](https://github.com/opensearch-pr
 
 There are also some challenges.
 
-I often hear that Amazon isn't contributing enough to open-source, and I prefer to acknowledge that my colleagues and I can do more. So we do. As of today, I counted 191 out of 401 contributors to OpenSearch that don’t work for Amazon, two dozen Amazon contributors to Lucene, etc. 
+I often hear that Amazon isn't contributing enough to open-source, and I prefer to acknowledge that my colleagues and I can do more. So we do. As of today, I counted 191 out of 401 contributors to OpenSearch that don't work for Amazon, two dozen Amazon contributors to Lucene, etc. 
 
 Across my larger organization, and AWS as a whole, open-source is still considered as an "upstream" activity. Engineers working in proprietary software tend to implement solutions in their territory, and then to open-source some parts (they never get enough time to do it). Doing open-source is perceived as, at the very least, a time-consuming "expense", or at most a "risk". Neither is actually true. Open-source is cheaper to write, and solves a number of real problems: it eases access to a more diverse group of experts, improves collaboration in code, creates higher quality software when done right, favors longer term product and design thinking, reduces staff attrition, and improves transparency and security. Open-source software, such as the Apache-licensed OpenSearch, powers many businesses and delivers real customer value to anyone who cares to run the software. Some then choose to invest their time and money into development, while retaining the freedom to do whatever they want with the results.
 

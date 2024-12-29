@@ -9,7 +9,7 @@ dblog_post_id: 98
 ---
 ![java-logo_svg-a]({{ site.url }}/images/posts/2010/2010-04-28-java-native-access-jna-325-shipped/java-logo_svg-a_6.jpg) 3.2.5 shipped quietly last week.
 
-JNA now includes _platform.jar_ that has cross-platform mappings and mappings for a number of commonly used platform functions, including a large number of Win32 mappings as well as a set of utility classes that simplify native access. The code is tested and the utility interfaces ensure that native memory management is taken care of correctly. I’ve contributed a boatload of code in this area, so when something doesn’t work you can blame me.
+JNA now includes _platform.jar_ that has cross-platform mappings and mappings for a number of commonly used platform functions, including a large number of Win32 mappings as well as a set of utility classes that simplify native access. The code is tested and the utility interfaces ensure that native memory management is taken care of correctly. I've contributed a boatload of code in this area, so when something doesn't work you can blame me.
 
 Before you map your own functions, check the JavaDoc for an already mapped one.
 
@@ -17,5 +17,5 @@ Platform-specific structures are mapped by header. For example, *ShlObj.h* struc
 
 The following large areas have been covered to some extent in native interfaces and utility libraries: Registry, SSPI, Active Directory, DPAPI, Users and Groups and Shell.
 
-There will be more refactoring and coverage in the next release. It also seems to have picked up a little traction on the mailing list as people have been sending patches with more Win32 code. I’ll do my best at committing that, so send more. The goal is to eventually cover all of win32 SDK and put the Java to Win32 interoperability problem to rest.
+There will be more refactoring and coverage in the next release. It also seems to have picked up a little traction on the mailing list as people have been sending patches with more Win32 code. I'll do my best at committing that, so send more. The goal is to eventually cover all of win32 SDK and put the Java to Win32 interoperability problem to rest.
 

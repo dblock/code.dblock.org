@@ -9,7 +9,7 @@ dblog_post_id: 107
 ---
 ![waffle]({{ site.url }}/images/posts/2010/2010-05-27-tomcat-single-sign-on-mixed-with-form-authentication-w-waffle/waffle_3.jpg)
 
-Most Tomcat users begin by implement Form-based authentication. Those deploying applications into enterprises soon discover that those enterprises use an Active Directory and have single sign-on on all intranet sites. They eventually find [Waffle](https://github.com/dblock/waffle/), but don’t want to take the ability to do form-based logon away.
+Most Tomcat users begin by implement Form-based authentication. Those deploying applications into enterprises soon discover that those enterprises use an Active Directory and have single sign-on on all intranet sites. They eventually find [Waffle](https://github.com/dblock/waffle/), but don't want to take the ability to do form-based logon away.
 
 _How do we give users a way to logon either way?_
 
@@ -87,9 +87,9 @@ Configure Form Login parameters with the location of the login page (repeated fr
 
 _Login Page_
 
-Create a login page based on the following code. There're two requirements for the login form. The form-based authentication must post to any valid location with the _j_security_check_ parameter. The destination page will be loaded after a successful login. The single sign-on form must similarly post to any valid location with the _j_negotiate_check_ parameter in the query string.
+Create a login page based on the following code. There are two requirements for the login form. The form-based authentication must post to any valid location with the _j_security_check_ parameter. The destination page will be loaded after a successful login. The single sign-on form must similarly post to any valid location with the _j_negotiate_check_ parameter in the query string.
 
-Here’s a rudimentary example that lands an authenticated user on _index.jsp_.
+Here's a rudimentary example that lands an authenticated user on _index.jsp_.
 
 {% highlight html %}
 <form method="POST" name="loginform" action="index.jsp?j_security_check">

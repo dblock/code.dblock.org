@@ -7,7 +7,7 @@ tags: [jna, java, win32]
 comments: true
 dblog_post_id: 92
 ---
-I recently had a few drinks too many with my coworkers at the Russian Vodka Room and took the subway home. It’s a thirty minute ride during which I tried to implement [EnumerateSecurityPackages](https://learn.microsoft.com/en-us/windows/win32/api/sspi/nf-sspi-enumeratesecuritypackagesa) in JNA. It was not a success and resulted in three dozen logs from JVM crashes. A good night sleep helped make it actually work.
+I recently had a few drinks too many with my coworkers at the Russian Vodka Room and took the subway home. It's a thirty minute ride during which I tried to implement [EnumerateSecurityPackages](https://learn.microsoft.com/en-us/windows/win32/api/sspi/nf-sspi-enumeratesecuritypackagesa) in JNA. It was not a success and resulted in three dozen logs from JVM crashes. A good night sleep helped make it actually work.
 
 {% highlight java %}
 SECURITY_STATUS SEC_Entry EnumerateSecurityPackages(
@@ -49,7 +49,7 @@ public static class SecPkgInfo extends Structure {
 }
 {% endhighlight %}
 
-So what’s a pointer to an array of these? It’s another structure that has the first item in the array as a reference within it. The first item can also auto-magically give us the entire array of a given size.
+So what's a pointer to an array of these? It's another structure that has the first item in the array as a reference within it. The first item can also auto-magically give us the entire array of a given size.
 
 {% highlight java %}
 public static class PSecPkgInfo extends Structure {
@@ -62,7 +62,7 @@ public static class PSecPkgInfo extends Structure {
 }
 {% endhighlight %}
 
-What’s a pointer to `PSecPkgInfo` now? It’s a `PSecPkgInfo.ByReference`. `EnumerateSecurityPackages` becomes:
+What's a pointer to `PSecPkgInfo` now? It's a `PSecPkgInfo.ByReference`. `EnumerateSecurityPackages` becomes:
 
 {% highlight java %}
 public int EnumerateSecurityPackages(IntByReference pcPackages,

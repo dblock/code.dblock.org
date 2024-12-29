@@ -71,7 +71,7 @@ Without doubt people will want to and continue to want to discover art online. T
 
 #### Uniquely Identifying Objects
 
-There're [thousands of Koons' balloon dogs](https://www.artsy.net/search?q=balloon%20dog), small and large, exchanging hands between collectors, galleries and auction houses. Distinguishing one balloon dog from another is a difficult problem, and Blockchain can most definitely become the place where we establish origin and identity.
+There are [thousands of Koons' balloon dogs](https://www.artsy.net/search?q=balloon%20dog), small and large, exchanging hands between collectors, galleries and auction houses. Distinguishing one balloon dog from another is a difficult problem, and Blockchain can most definitely become the place where we establish origin and identity.
 
 #### Establishing Provenance and Authenticity
 
@@ -83,7 +83,7 @@ Credit card payments are making progress for lower priced works, but these are e
 
 #### Proving Identity, Ownership and Capital
 
-The art market wants to make sure collectors don't flip works, and therefore care about who the work is being sold to. Proving identity or ownership on the Blockchain has the advantage of not requiring escrow or a trusted authority. Finally, you can demonstrate that you haver enough funds to enter an auction without having to send bank statements.
+The art market wants to make sure collectors don't flip works, and therefore care about who the work is being sold to. Proving identity or ownership on the Blockchain has the advantage of not requiring escrow or a trusted authority. Finally, you can demonstrate that you have enough funds to enter an auction without having to send bank statements.
 
 #### Making Market Data Available
 

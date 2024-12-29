@@ -21,7 +21,7 @@ First and foremost, I generally try to be _helpful_. I am a big fan of [IFYYFME]
 
 Why do I do this? A few years ago I wasn't able to answer this question. Today I can. Turns out, being helpful, for me, is a way of earning trust towards a more useful purpose - _connecting people_. Helping someone achieve what they need creates a strong connection between an individual and myself, and an opportunity to connect such individuals between themselves to enable _magic_. This is straight out of [Tribal Leadership](https://www.triballeadership.net/book), where a _triad_ is the building block of a Stage Four culture.
 
-> The most valuable relationships are not made of two people, they’re made of three. A third person will always stabilize and grow the relationship between the other two. It’s called a triad, and the more you create, the stronger your network.
+> The most valuable relationships are not made of two people, they're made of three. A third person will always stabilize and grow the relationship between the other two. It's called a triad, and the more you create, the stronger your network.
 
 > Leaders lead when they take positions, when they connect with their tribes, and when they help the tribe connect to itself.
 

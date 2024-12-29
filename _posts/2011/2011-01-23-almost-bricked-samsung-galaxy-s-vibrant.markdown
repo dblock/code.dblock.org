@@ -15,7 +15,7 @@ I was facing the beautiful Samsung logo in frustration. I had a problem. Thank G
 
 Two hours into reading confusing instructions on the internet, I got really good at getting the system update mode (power off, hold up and down key, press power, release power) an the download mode (power off, hold up and down key, then plug a USB cable). I downloaded the TMobile ROM for my phone and Odin. The first time I ran Odin it hung in trying to update cache.frs.
 
-After I rebooted my phone again, I got the screen of death. Since many posts talk about people throwing their phones out of the window after seeing this, I really thought I just bricked mine. I was already thinking of hitting my phone with a hammer or sinking it in a bucket of acid (I do have a bucket of acid and the "I am stupid" phone insurance that covers everything, provided you don’t root your phone or the repair people can’t figure out what happened).
+After I rebooted my phone again, I got the screen of death. Since many posts talk about people throwing their phones out of the window after seeing this, I really thought I just bricked mine. I was already thinking of hitting my phone with a hammer or sinking it in a bucket of acid (I do have a bucket of acid and the "I am stupid" phone insurance that covers everything, provided you don't root your phone or the repair people can't figure out what happened).
 
 ![]({{ site.url }}/images/posts/2011/2011-01-23-almost-bricked-samsung-galaxy-s-vibrant/image_12.jpg)
 
@@ -23,7 +23,7 @@ I then read [an article](https://web.archive.org/web/20160227185208/https://www.
 
 ![]({{ site.url }}/images/posts/2011/2011-01-23-almost-bricked-samsung-galaxy-s-vibrant/image_16.jpg)
 
-To fix the cache.frs hang, I had to disable driver signature verification on my Windows 7 (didn’t need to reboot).
+To fix the cache.frs hang, I had to disable driver signature verification on my Windows 7 (didn't need to reboot).
 
 ![bricked2]({{ site.url }}/images/posts/2011/2011-01-23-almost-bricked-samsung-galaxy-s-vibrant/bricked2_3.jpg)
 
@@ -35,7 +35,7 @@ The phone rebooted with Android 2.1. Success!
 
 #### Upgrading to Froyo
 
-I have my phone back. So what can I do to make things worse? Android 2.2 is really here for the Galaxy! T-Mobile told me the update would be available "shortly" in September, but I am familiar with software schedules slipping. I knew they meant January. Did I really care? I was perfectly happy with 2.1. But 2.2 > 2.1, so I had to try it. I followed the instructions [here](https://web.archive.org/web/20110207230012/https://forums.t-mobile.com/t5/Samsung-Vibrant/Samsung-Vibrant-software-upgrade-to-Android-2-2-Froyo-now/td-p/678871). It didn’t quite work and produced download errors at first. Then, after restarting Kies as Administrator (I am on Windows 7) it decided to update itself.
+I have my phone back. So what can I do to make things worse? Android 2.2 is really here for the Galaxy! T-Mobile told me the update would be available "shortly" in September, but I am familiar with software schedules slipping. I knew they meant January. Did I really care? I was perfectly happy with 2.1. But 2.2 > 2.1, so I had to try it. I followed the instructions [here](https://web.archive.org/web/20110207230012/https://forums.t-mobile.com/t5/Samsung-Vibrant/Samsung-Vibrant-software-upgrade-to-Android-2-2-Froyo-now/td-p/678871). It didn't quite work and produced download errors at first. Then, after restarting Kies as Administrator (I am on Windows 7) it decided to update itself.
 
 ![]({{ site.url }}/images/posts/2011/2011-01-23-almost-bricked-samsung-galaxy-s-vibrant/image_5.jpg)
 

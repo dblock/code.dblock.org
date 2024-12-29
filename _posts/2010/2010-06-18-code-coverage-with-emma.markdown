@@ -9,15 +9,15 @@ dblog_post_id: 111
 ---
 ![]({{ site.url }}/images/posts/2010/2010-06-18-code-coverage-with-emma/image_9.jpg)
 
-I’ve written an unusually high number of unit tests for the Java portion of [Waffle](https://github.com/dblock/waffle/), mostly because the project became popular really fast with all those Java people trying to do Windows authentication. Some have succeeded and some filed several rather complicated bug reports that dealt with concurrency, sessions across HTTP requests, etc. It all needed to be unit-tested in order to make industrial-grade software.
+I've written an unusually high number of unit tests for the Java portion of [Waffle](https://github.com/dblock/waffle/), mostly because the project became popular really fast with all those Java people trying to do Windows authentication. Some have succeeded and some filed several rather complicated bug reports that dealt with concurrency, sessions across HTTP requests, etc. It all needed to be unit-tested in order to make industrial-grade software.
 
-If you asked me yesterday, I would have said that Waffle unit tests cover 99% of the code. But Emma says otherwise, and it’s probably right.
+If you asked me yesterday, I would have said that Waffle unit tests cover 99% of the code. But Emma says otherwise, and it's probably right.
 
 #### Running Emma with JUnit
 
 It took me half an hour to integrate Emma. Pretty easy. You should do it too.
 
-I downloaded Emma from [https://emma.sourceforge.net](https://emma.sourceforge.net) and added it to ThirdParty/emma. What I want next is a _cover_ target that can execute all unit tests with code coverage. We’re doing this in ANT with JUnit.
+I downloaded Emma from [https://emma.sourceforge.net](https://emma.sourceforge.net) and added it to ThirdParty/emma. What I want next is a _cover_ target that can execute all unit tests with code coverage. We're doing this in ANT with JUnit.
 
 _Define Emma JARs Location and ClassPath_
 
@@ -33,7 +33,7 @@ _Define Emma JARs Location and ClassPath_
 
 _Instrument Files_
 
-I went the route of not changing my build tasks and instrumenting the .class files already built. Then I swap in those files with the instrumented ones. Note that Emma only generates .class files for instrumentable classes – those not containing debugging information, interface definitions and such aren’t included.
+I went the route of not changing my build tasks and instrumenting the .class files already built. Then I swap in those files with the instrumented ones. Note that Emma only generates .class files for instrumentable classes – those not containing debugging information, interface definitions and such aren't included.
 
 {% highlight xml %}
 <target name="instrument">
@@ -78,11 +78,11 @@ Finally, we want to get a nice HTML document that summarizes coverage.
 </target>
 {% endhighlight %}
 
-Here’s an output.
+Here's an output.
 
 ![]({{ site.url }}/images/posts/2010/2010-06-18-code-coverage-with-emma/image_10.jpg)
 
-I see a lot of red. Emma doesn’t think I am doing such a great job after-all.
+I see a lot of red. Emma doesn't think I am doing such a great job after-all.
 
 #### Links
 

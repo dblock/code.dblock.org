@@ -11,5 +11,5 @@ dblog_post_id: 137
 
 [VMWareTasks 1.5](https://github.com/dblock/vmwaretasks) was released today, November 3rd 2010.
 
-VMWareTasks is a VixCOM wrapper and is the de-facto standard library for interacting with VMWare virtual machines in .NET. Version 1.5 adds support for VixCOM 1.8.1 through 1.10.1. There’re also a few bug fixes and a new set of experimental MSBuild tasks.
+VMWareTasks is a VixCOM wrapper and is the de-facto standard library for interacting with VMWare virtual machines in .NET. Version 1.5 adds support for VixCOM 1.8.1 through 1.10.1. There are also a few bug fixes and a new set of experimental MSBuild tasks.
 

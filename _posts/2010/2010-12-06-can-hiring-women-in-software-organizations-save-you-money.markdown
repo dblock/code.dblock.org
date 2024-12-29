@@ -30,9 +30,9 @@ To: ME
 Subject: RE: please buy plungers for 2 bathrooms
 ------------------------------------------------
 
-We do not have incidents in women’s bathroom just an FYI.
+We do not have incidents in women's bathroom just an FYI.
 
-We’ll buy 1.
+We'll buy 1.
 
 -Facilities
 ```

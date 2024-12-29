@@ -7,9 +7,9 @@ tags: [apis, rack, grape, ruby]
 comments: true
 dblog_post_id: 388
 ---
-I’ve seen two common API versioning strategies in the wild. The first is to use a single API version and gradually deprecate methods. This usually means introducing new API routes, while retiring old ones, and representing the same objects in multiple, versioned, formats. Fast forward a few years and you are likely to inherit a significant amount of technical debt. The second strategy involves making a clean cut, leaving the version one of the API alone and building a fresh, new, API version two.
+I've seen two common API versioning strategies in the wild. The first is to use a single API version and gradually deprecate methods. This usually means introducing new API routes, while retiring old ones, and representing the same objects in multiple, versioned, formats. Fast forward a few years and you are likely to inherit a significant amount of technical debt. The second strategy involves making a clean cut, leaving the version one of the API alone and building a fresh, new, API version two.
 
-Starting with the Grape 0.6.0 you can have a third alternative: building a new API version incrementally on top of a previous one. There’re no hacks involved. Consider the following trivial API.
+Starting with the Grape 0.6.0 you can have a third alternative: building a new API version incrementally on top of a previous one. There are no hacks involved. Consider the following trivial API.
 
 {% highlight ruby %}
 module Acme
@@ -46,7 +46,7 @@ module Acme
 end
 {% endhighlight %}
 
-At this point we want _v1_ to be identical to _v2_, except for the root method. We’ll start by allowing _v1_ to respond to both _v1_ and _v2_ requests.
+At this point we want _v1_ to be identical to _v2_, except for the root method. We'll start by allowing _v1_ to respond to both _v1_ and _v2_ requests.
 
 {% highlight ruby %}
 version ['v2', 'v1'], using: :header, vendor: 'acme', format: :json

@@ -9,7 +9,7 @@ dblog_post_id: 78
 ---
 This is a pretty common question on the VixCOM forum: _How do I run a command in the virtual machine and collect its output?_
 
-VixCOM doesn’t have any support for this, so is there something we can do about it? I want to have a RunCommandInGuest to execute shell and other commands that returns StdOut and StdErr. So this is what I want to write:
+VixCOM doesn't have any support for this, so is there something we can do about it? I want to have a RunCommandInGuest to execute shell and other commands that returns StdOut and StdErr. So this is what I want to write:
 
 {% highlight c# %}
 Shell.ShellOutput output = guestShell.RunCommandInGuest("dir");

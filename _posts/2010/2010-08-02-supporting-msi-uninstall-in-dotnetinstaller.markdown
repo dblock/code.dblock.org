@@ -8,15 +8,15 @@ comments: true
 dblog_post_id: 118
 ---
 
-Someone recently [asked](https://web.archive.org/web/20140901030820/https://dotnetinstaller.codeplex.com/discussions/205186) how to support uninstall in dotNetInstaller, specifically with MSI components. It’s a question that comes up frequently, and it’s a powerful feature of dotNetInstaller. We use it for a very large bootstrapper (1.2GB) across a dozen installers, including some big ones that we didn’t write (IBM Cognos).
+Someone recently [asked](https://web.archive.org/web/20140901030820/https://dotnetinstaller.codeplex.com/discussions/205186) how to support uninstall in dotNetInstaller, specifically with MSI components. It's a question that comes up frequently, and it's a powerful feature of dotNetInstaller. We use it for a very large bootstrapper (1.2GB) across a dozen installers, including some big ones that we didn't write (IBM Cognos).
 
-While the documentation explains the basics, it’s a bit thick. This is a step-by-step tutorial.
+While the documentation explains the basics, it's a bit thick. This is a step-by-step tutorial.
 
 #### The Basics
 
 _Create an Installer_
 
-Create a basic WIX MSI, MySetup. I’ve added a dummy component and feature to it.
+Create a basic WIX MSI, MySetup. I've added a dummy component and feature to it.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -53,7 +53,7 @@ Note that the GUID matches the UpgradeCode in the WIX MSI we have created above.
 
 _Link the Bootstrapper_
 
-You can now link the bootstrapper with InstallerLinker. We’ll use MSBuild to automate our build.
+You can now link the bootstrapper with InstallerLinker. We'll use MSBuild to automate our build.
 
 {% highlight xml %}
 <Target Name="build-bootsrapper">
@@ -64,13 +64,13 @@ You can now link the bootstrapper with InstallerLinker. We’ll use MSBuild to a
 
 _Run the Bootstrapper_
 
-You can run the bootstrapper and MySetup.msi will be installed. Run the bootstrapper again, and it will offer you to uninstall MySetup.msi. It has detected that it’s already installed and will automatically switch to uninstall mode. This will uninstall the application and it works.
+You can run the bootstrapper and MySetup.msi will be installed. Run the bootstrapper again, and it will offer you to uninstall MySetup.msi. It has detected that it's already installed and will automatically switch to uninstall mode. This will uninstall the application and it works.
 
 ![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image_23.jpg)
 
 #### Great! I have an uninstaller, right?
 
-Not really. The problem with what we have created is that the bootstrapper needs to be left on the machine after installation. With my 1.2GB bootstrapper that’s really not an option. That’s also a chicken-and-egg problem, because the bootstrapper needs to contain itself to be included in an installer to be used for uninstall if we wanted to create, for example a shortcut.
+Not really. The problem with what we have created is that the bootstrapper needs to be left on the machine after installation. With my 1.2GB bootstrapper that's really not an option. That's also a chicken-and-egg problem, because the bootstrapper needs to contain itself to be included in an installer to be used for uninstall if we wanted to create, for example a shortcut.
 
 What we need is a bootstrapper that can do uninstall, and that can be included in MySetup.msi, installed and used post-installation.
 
@@ -94,7 +94,7 @@ It is now possible to use this product code from registry for the _uninstall pac
 
 _Including the Bootstrapper in the MSI_
 
-First, let's build this bootstrapper without embedded files. It’s the same command line with `/Embed-`. We’ll place the output to _Uninstall.exe_.
+First, let's build this bootstrapper without embedded files. It's the same command line with `/Embed-`. We'll place the output to _Uninstall.exe_.
 
 {% highlight xml %}
 <Target Name="build-uninstall">

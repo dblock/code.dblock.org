@@ -109,7 +109,7 @@ raise Ruby::Enum::Errors::UninitializedConstantError.new({
 })
 {% endhighlight %}
 
-Here’s the result.
+Here's the result.
 
 ```
 1.9.3-p362 :002 > require 'ruby-enum'

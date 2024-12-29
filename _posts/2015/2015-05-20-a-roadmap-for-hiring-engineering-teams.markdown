@@ -5,7 +5,7 @@ date: 2015-05-20
 tags: [jobs, hiring]
 comments: true
 ---
-If there is a single thing I can point to as the key to creating a successful engineering organization, it’s the extreme focus on recruiting the best people in the world who share common values, and are passionate about working together to achieve a mission. Attracting the best talent is hard, and it's always my number one focus and priority.
+If there is a single thing I can point to as the key to creating a successful engineering organization, it's the extreme focus on recruiting the best people in the world who share common values, and are passionate about working together to achieve a mission. Attracting the best talent is hard, and it's always my number one focus and priority.
 
 ### Hiring for Product Needs
 

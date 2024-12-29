@@ -13,4 +13,4 @@ It takes me 30-45 seconds to load a Rails page in development. Finally someone d
 
 [rails-dev-boost](https://github.com/thedarkone/rails-dev-boost)
 
-The gem replaces the default reloading mechanism by something much more involved that tracks dependencies. Obviously it’s a lot faster. Works with Rails 3. I feel like a human again developing UI.
+The gem replaces the default reloading mechanism by something much more involved that tracks dependencies. Obviously it's a lot faster. Works with Rails 3. I feel like a human again developing UI.

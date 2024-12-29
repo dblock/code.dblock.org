@@ -5,7 +5,7 @@ date: 2017-02-09
 tags: [alexa, amazon, echo]
 comments: true
 ---
-If you've never listened to the Artsy podcast, I highly recommend it. Available on [iTunes](https://itunes.apple.com/us/podcast/artsy/id1096194516) and [Soundcloud](https://soundcloud.com/artsypodcast) and now on your Amazon Echo.
+If you've never listened to the Artsy podcast, I highly recommend it. Available on [iTunes](https://itunes.apple.com/us/podcast/artsy/id1096194516) and [SoundCloud](https://soundcloud.com/artsypodcast) and now on your Amazon Echo.
 
 First, _enable Artsy_, then _ask artsy to play the latest podcast_ or _ask Artsy for a summary of the latest podcast_. The code uses the audio player functionality introduced in [alexa-app](https://github.com/alexa-js/alexa-app) 2.4.0 and is [artsy/elderfield#56](https://github.com/artsy/elderfield/pull/56).
 
