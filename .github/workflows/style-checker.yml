@@ -1,0 +1,11 @@
+name: Check Style
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: errata-ai/vale-action@v2.1.1
+        with:
+          version: 3.7.1
+          reporter: github-check
