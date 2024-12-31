@@ -153,7 +153,7 @@ AccountFacebook account = (AccountFacebook)session.CreateCriteria(typeof(Account
 
 The signup process first goes through the same logon process as described above, except that the final landing page is one that will create an account. Most of what I describe below is well explained [here](https://web.archive.org/web/20160315103809/http://devtacular.com/articles/bkonrad/how-to-retrieve-user-data-from-facebook-connect-in-aspnet/), albeit for an older version of the API. This should serve as a refresher.
 
-First, I got hold of the [Facebook Developer Toolkit](https://web.archive.org/web/20100531012447/https://facebooktoolkit.codeplex.com/) that implements calls to Facebook using the [Facebook Graph API](https://developers.facebook.com/docs/api). It is initialized with the API key, the secret and a session key. The toolkit is going to be making server-to-server calls from FoodCandy to Facebook, it's all back-end operation.
+First, I got hold of the [Facebook Developer Toolkit](https://web.archive.org/web/20100531012447/https://facebooktoolkit.codeplex.com/) that implements calls to Facebook using the [Facebook Graph API](https://developers.facebook.com/docs/graph-api). It is initialized with the API key, the secret and a session key. The toolkit is going to be making server-to-server calls from FoodCandy to Facebook, it's all back-end operation.
 
 {% highlight c# %}
 Facebook.Session.ConnectSession facebookSession = new Facebook.Session.ConnectSession(
