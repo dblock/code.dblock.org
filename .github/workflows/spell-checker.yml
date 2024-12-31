@@ -11,6 +11,7 @@ jobs:
           files: |
             **/**.md
             **/**.markdown
+            !_styles/**/*.md
       - name: Check Spelling
         uses: rojopolis/spellcheck-github-actions@0.45.0
         with:
