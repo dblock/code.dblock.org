@@ -17,6 +17,7 @@ Introducing my new spam auto-reply.
 > So, I've decided to prioritize and use this as an opportunity. I am [running](https://run.dblock.org) the New York marathon in 2018 for the first time and raising money for the Team for Kids charity. You can earn my attention for $20 donated directly by clicking [here](https://runwithtfk.org/Profile/PublicPage/61018).
 >
 > In exchange for $20 (or more) I promise you to make a genuine effort with the following.
+>
 > - Reading your entire email.
 > - Carefully reviewing the materials that you may have sent.
 > - Providing a thoughtful reply of at least a couple of sentences.

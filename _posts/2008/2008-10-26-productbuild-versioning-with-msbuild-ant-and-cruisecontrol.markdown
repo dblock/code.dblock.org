@@ -50,6 +50,7 @@ Before setting a versioning scheme I must outline several ingredients of success
 Out of all conversations and options I've picked the following 4-digit scheme.
 
 > **Major.Minor.SVN Revision.Zero
+
 - **Major** : the major version of the product, changed manually with every product release with a large new feature set.
 - **Minor** : the minor version of the product, changed manually with every minor product release containing some features.
 - **SVN Revision** : the latest source-control revision of the codebase used for this build.
