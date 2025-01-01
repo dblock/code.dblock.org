@@ -8,9 +8,9 @@ extends: null
 MD001: true
 
 # MD003/heading-style : Heading style : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md003.md
-MD003: false
-  # # Heading style
-  # style: "consistent"
+MD003:
+  # Heading style
+  style: "consistent"
 
 # MD004/ul-style : Unordered list style : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md004.md
 MD004: false

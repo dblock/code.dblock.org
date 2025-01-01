@@ -35,7 +35,7 @@ jobs:
 
 {% endraw %}
 
-To run PySpelling locally ensure you have a working version of Python, install PySpelling with `pip install pyspelling`, and [aspell](http://aspell.net/) with `brew install aspell` on a Mac. In [my configuration]() I also use `pymdownx` from [pymdown-extensions](https://facelessuser.github.io/pymdown-extensions) which is installed with `pip install pymdown-extensions`.
+To run PySpelling locally ensure you have a working version of Python, install PySpelling with `pip install pyspelling`, and [aspell](http://aspell.net/) with `brew install aspell` on a Mac. In [my configuration](https://github.com/dblock/code.dblock.org/blob/gh-pages/.pyspelling.yml) I also use `pymdownx` from [pymdown-extensions](https://facelessuser.github.io/pymdown-extensions) which is installed with `pip install pymdown-extensions`.
 
 You need a [.pyspelling.yml](https://github.com/dblock/code.dblock.org/blob/gh-pages/.pyspelling.yml) and you can run it as follows.
 
