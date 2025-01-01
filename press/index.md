@@ -45,7 +45,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ![Artsy in W Magazine](https://art.dblock.org/images/posts/2015/2015-04-23-artsy-in-w-magazine/artsy.jpg)
 
-> The Internet is the ultimate blank canvas. W salutes some of the enterprising teams stretching the boundaries of the art world online. 
+> The Internet is the ultimate blank canvas. W salutes some of the enterprising teams stretching the boundaries of the art world online.
 
 ### [L'Hebdo: New York: Vers Quel Nouveau Rêve?](https://web.archive.org/web/20151018232702/https://www.hebdo.ch/hebdo/cadrages/detail/new-york-vers-quel-nouveau-r%C3%AAve)
 

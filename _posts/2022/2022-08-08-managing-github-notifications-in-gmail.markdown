@@ -7,7 +7,7 @@ comments: true
 ---
 My e-mail inbox is flooded with GitHub notifications, just like yours.
 
-Having tried half a dozen ways to get a queue of notifications, I settled on creating a filter and use it to label the email, and remove it from the inbox, the first time I receive a new notification for a repo I am subscribed to on GitHub. 
+Having tried half a dozen ways to get a queue of notifications, I settled on creating a filter and use it to label the email, and remove it from the inbox, the first time I receive a new notification for a repo I am subscribed to on GitHub.
 
 <img src="{{ site.url }}/images/posts/2022/2022-08-08-managing-github-notifications-in-gmail/rules.gif" />
 

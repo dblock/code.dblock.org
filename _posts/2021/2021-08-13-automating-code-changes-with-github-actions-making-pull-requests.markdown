@@ -21,7 +21,7 @@ name: Check for new Project Repos
 on:
   push:
     branches:
-      - main  
+      - main
   schedule:
     - cron: "0 0 * * *"
 ```
@@ -39,7 +39,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Update project repositories
   env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}      
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 {% endraw %}
 ```
 

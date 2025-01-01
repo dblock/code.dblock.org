@@ -141,7 +141,9 @@ Github pages don't support syntax highlighting the same way all markdown content
 # Ruby code goes here
 
 ```
+
 {% endraw %}
+
 ```
 
 #### Tags and Related Posts

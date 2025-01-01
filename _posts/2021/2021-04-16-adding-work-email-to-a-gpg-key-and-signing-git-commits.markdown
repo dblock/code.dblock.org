@@ -6,12 +6,12 @@ tags: [git, gpg, security, privacy]
 comments: true
 ---
 Last week I joined the [OpenSearch Team](https://opensearch.org/) at AWS, a community-driven, open source fork of Elasticsearch and Kibana (read more about it [here](https://aws.amazon.com/blogs/opensource/introducing-opensearch/)).
- 
+
 Security is always our top priority at AWS, so I had to learn some new development best practices in this area. One of my colleagues, and Apache contributor [@nknize](https://github.com/nknize) has been signing his commits with GPG. I decided to add my work e-mail address to my existing GPG key, and setup git signing as well.
 
 ### Generating Keys
 
-If you don't already have a key, install [gpg2](https://gnupg.org/download/) (e.g. `brew install gpg`), and follow the instructions in [this doc](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-gpg-key). It will tell you to run `gpg --full-generate-key`. 
+If you don't already have a key, install [gpg2](https://gnupg.org/download/) (e.g. `brew install gpg`), and follow the instructions in [this doc](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-gpg-key). It will tell you to run `gpg --full-generate-key`.
 
 You can list keys with `gpg --list-secret-keys --keyid-format LONG` and note the key ID.
 
@@ -28,7 +28,7 @@ In my example the key ID is `75BF031B7C94E183`.
 
 ### Backing up Keys
 
-I export and store a copy of my GPG keys in Dropbox and store the private key passphrase in 1Password. The latter is required to export or import a private key (gpg will prompt you). 
+I export and store a copy of my GPG keys in Dropbox and store the private key passphrase in 1Password. The latter is required to export or import a private key (gpg will prompt you).
 
 ```bash
 gpg --export-secret-key 75BF031B7C94E183 > 75BF031B7C94E183.gpg

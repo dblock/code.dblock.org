@@ -82,6 +82,6 @@ export default [
 
 Now run `npm run lint -- --fix`. Not all rules have an autofixer, but if yours does it will make the code changes, and you can now remove if rom the config and finally turn back all other rules to `warn`.
 
-Here's my [second pull request](https://github.com/opensearch-project/opensearch-api-specification/pull/265) that fixed most self-correcting violations. 
+Here's my [second pull request](https://github.com/opensearch-project/opensearch-api-specification/pull/265) that fixed most self-correcting violations.
 
 A word of caution, beware of `--fix`. In the project above the `dot-notation` autofix made a destructive change that caused tests to fail (and that I have yet to debug).

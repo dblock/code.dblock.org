@@ -17,7 +17,7 @@ The bot's [code](https://github.com/dblock/slack-strava/) extensively uses [ERB]
 </script>
 ```
 
-Aside of being not very elegant, this almost works. Unfortunately, because we are trying to pass an argument into JavaScript the page will be broken if the value of `name` contains a line break. 
+Aside of being not very elegant, this almost works. Unfortunately, because we are trying to pass an argument into JavaScript the page will be broken if the value of `name` contains a line break.
 
 ```html
 <script>
@@ -71,7 +71,7 @@ $ irb
 
 3.3.5 :001 > require 'erb'
 3.3.5 :002 > ERB::Util::html_escape("Daniel's Team")
- => "Daniel&#39;s Team" 
+ => "Daniel&#39;s Team"
 3.3.5 :003 > ERB::Util::html_escape("\"Daniel's Team\"")
  => "&quot;Daniel&#39;s Team&quot;"
 ```
@@ -105,9 +105,9 @@ We can fix this by converting the safe value to JSON. This will quote and escape
 3.3.5 :004 > JSON.generate(ERB::Util::html_escape("Daniel's Team"))
  => "\"Daniel&#39;s Team\""
 3.3.5 :005 > JSON.generate(ERB::Util::html_escape("\"Daniel's Team\""))
- => "\"line1\\nline2\"" 
+ => "\"line1\\nline2\""
 3.3.5 :006 > "\"&quot;Daniel&#39;s Team&quot;\""
- => "\"line1\\nline2\"" 
+ => "\"line1\\nline2\""
 3.3.5 :007 > JSON.generate(ERB::Util::html_escape("<script>alert('xss');</script>"))
  => "\"&lt;script&gt;alert(&#39;xss&#39;);&lt;/script&gt;\""
 ```

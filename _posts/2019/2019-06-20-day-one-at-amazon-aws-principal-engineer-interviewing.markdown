@@ -23,7 +23,7 @@ On the topic of learning, I left a healthy Engineering team at Artsy that was fo
 
 ### PE Interviewing Tips
 
-There is a lot of information online about AWS interviews. My personal experience was very consistent with [these](https://www.quora.com/What-is-the-interview-like-for-Principal-SDE-at-Amazon). 
+There is a lot of information online about AWS interviews. My personal experience was very consistent with [these](https://www.quora.com/What-is-the-interview-like-for-Principal-SDE-at-Amazon).
 
 Amazon is customer obsessed and closely follows its [leadership principles](https://www.amazon.jobs/en/principles). Think of good examples from your past experience where you have demonstrated each principle and make sure you can talk about that in depth and breadth, in an orderly and methodical way. Most questions were behavioral and [these videos](https://www.youtube.com/watch?v=gL3WTLzOP5E
 ) helped me approach answers with the traditional STAR method (discussing the specific situation, task, action, and result of the situation).

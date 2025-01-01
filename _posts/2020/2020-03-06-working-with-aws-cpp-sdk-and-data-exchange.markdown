@@ -37,7 +37,7 @@ You don't have to create a `build` directory inside the source directory, but it
 
 ### Installing the AWS SDK for C++
 
-You must install the SDK with `make install`. I used the defaults, which is to copy the output to `/usr/local` on *nix systems, including MacOS. 
+You must install the SDK with `make install`. I used the defaults, which is to copy the output to `/usr/local` on *nix systems, including MacOS.
 
 This destination is configured with `DCMAKE_INSTALL_PREFIX`. For example, the following builds the `Release` flavor and installs the SDK into `$HOME/bin/aws-sdk`.
 
@@ -99,7 +99,7 @@ I had started from an example in [this blog post](https://aws.amazon.com/blogs/d
 * The `find_package` arguments changed to `AWSSDK` (looks for `AWSSDKConfig.cmake`), `REQUIRED` (generates a fatal error if `AWSSDK` is not found), and `COMPONENTS`, followed by a list of components (e.g. `s3 dataexchange`).
 * The `BUILD_SHARED_LIBS` option changed to being on, because the SDK recently started defaulting to building shared vs. static libraries.
 * The `target_compile_features(my-example PUBLIC cxx_std_11)` was added to default to the C++ 11 standard required by the SDK code. This is potentially avoidable, see [aws-sdk-cpp#1338](https://github.com/aws/aws-sdk-cpp/issues/1338).
-* When installed into a custom location, any reference to `-Daws-sdk-cpp_DIR` needed to become `-DAWSSDK_DIR` because of the new name for `AWSSDKConfig.cmake`. 
+* When installed into a custom location, any reference to `-Daws-sdk-cpp_DIR` needed to become `-DAWSSDK_DIR` because of the new name for `AWSSDKConfig.cmake`.
 * The `target_link_libraries` arguments changed to include `${AWSSDK_LINK_LIBRARIES}` to avoid having to list all dependencies manually.
 
 The minimal `CMakeLists.txt` example has been corrected in [aws-doc-sdk-examples#1022](https://github.com/awsdocs/aws-doc-sdk-examples/pull/1022), and the documentation in [aws-cpp-developer-guide#37](https://github.com/awsdocs/aws-cpp-developer-guide/pull/37).

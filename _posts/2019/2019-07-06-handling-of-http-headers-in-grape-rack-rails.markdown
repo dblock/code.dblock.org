@@ -30,7 +30,7 @@ end
 
 ### Default Headers
 
-The default headers in a Rack test are `Cookie` and `Host`. 
+The default headers in a Rack test are `Cookie` and `Host`.
 
 ```ruby
   it 'returns all headers' do
@@ -75,13 +75,13 @@ curl -H ReticulatedSpline:42 https://localhost:9292/api/headers/Reticulatedsplin
 And a lowercase `reticulated-spline` is converted to `Reticulated-Spline`, similarly to `User-Agent`.
 
 ```bash
-curl -H reticulated-spline:42 https://localhost:9292/api/headers/Reticulated-Spline 
+curl -H reticulated-spline:42 https://localhost:9292/api/headers/Reticulated-Spline
 {"Reticulated-Spline":"42"}
 ```
 
 ### Rack
 
-Rack stores HTTP headers in `ENV` as all uppercase with an `HTTP_` prefix. You can pass the Rack env as the the second parameter in your specs. In the example below `HTTP_RETICULATED_SPLINE` becomes `Reticulated-Spline` and `SOMETHING_ELSE` is only available in `ENV['SOMETHING_ELSE']` and is not a header. 
+Rack stores HTTP headers in `ENV` as all uppercase with an `HTTP_` prefix. You can pass the Rack env as the the second parameter in your specs. In the example below `HTTP_RETICULATED_SPLINE` becomes `Reticulated-Spline` and `SOMETHING_ELSE` is only available in `ENV['SOMETHING_ELSE']` and is not a header.
 
 ```ruby
 get '/api/headers', nil, { 

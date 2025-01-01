@@ -10,6 +10,7 @@ I found it annoyingly non-trivial to add a spell checker to this blog.
 For now, I settled on [GitHub Spellcheck Action](https://github.com/marketplace/actions/github-spellcheck-action#extra-configuration-for-markdown) that uses [PySpelling](https://facelessuser.github.io/pyspelling) on files changed in the commit or pull request as described in [this blog post](https://swild.dev/self-hosting/github-spellcheck-lint-action/).
 
 {% raw %}
+
 ```yaml
 name: Check Spelling
 on: [push, pull_request]
@@ -31,6 +32,7 @@ jobs:
           config_path: .pyspelling.yml
           source_files: ${{ steps.changed_files.outputs.all_changed_files }}
 ```
+
 {% endraw %}
 
 To run PySpelling locally ensure you have a working version of Python, install PySpelling with `pip install pyspelling`, and [aspell](http://aspell.net/) with `brew install aspell` on a Mac. In [my configuration]() I also use `pymdownx` from [pymdown-extensions](https://facelessuser.github.io/pymdown-extensions) which is installed with `pip install pymdown-extensions`.
@@ -44,6 +46,7 @@ pyspelling --config .pyspelling.yml
 This is a Jekyll blog in which we want to ignore code, wrapped between Jekyll magic commands for syntax highlighting. This can be accomplished with a PySpelling pipeline in the above-mentioned configuration file.
 
 {% raw %}
+
 ```yaml
 pipeline:
   - pyspelling.filters.context:
@@ -56,6 +59,7 @@ pipeline:
         - open: '{%'
           close: '%}'
 ```
+
 {% endraw %}
 
 Finally, we can collect the initial set of words to potentially exclude from existing posts into [.pyspelling.words](https://github.com/dblock/code.dblock.org/blob/gh-pages/.pyspelling.words).
@@ -74,6 +78,7 @@ The file helped me spot a few spelling mistakes, now fixed. See [code.dblock.org
 Update: I eventually switched to using regular backticks for code when adding a style checker in [#136](https://github.com/dblock/code.dblock.org/pull/136), so the above `delimiters` rule changed as follows.
 
 {% raw %}
+
 ```yaml
 - pyspelling.filters.context:
     context_visible_first: true
@@ -86,4 +91,5 @@ Update: I eventually switched to using regular backticks for code when adding a 
       - open: '{%'
         close: '%}'
 ```
+
 {% endraw %}

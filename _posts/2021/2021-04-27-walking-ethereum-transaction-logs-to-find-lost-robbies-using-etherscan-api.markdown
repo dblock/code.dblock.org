@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Walking Ethereum Transaction Logs to Find Lost Robbies w/Etherscan API   
+title: Walking Ethereum Transaction Logs to Find Lost Robbies w/Etherscan API
 date: 2021-04-27
 tags: [ethereum, etherscan, crypto, robbies]
 redirect_from: "/2021/04/27/walking-etherium-transaction-logs-to-find-lost-robbies-using-etherscan-api.html"
@@ -8,11 +8,11 @@ comments: true
 ---
 On July 17, 2018, I [spoke](https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s) at the Christies first ever annual Tech Summit entitled "Exploring Blockchain", in London. I even got a freebie NFT!
 
-During the event [SuperRare](https://superrare.com/) partnered with [Jason Bailey](https://www.artnome.com/about-artnome) and enlisted [Robbie Barrat](https://robbiebarrat.github.io/), the first artist to ever tokenize on SuperRare. Robbie created "AI Generated Nude Portrait #7" for the event, which he intended as 300 separate frames of a single artwork. Each of the 300 frames was tokenized separately and added to redeemable ETH gift cards with directions for how to claim the 1/1 token. 
+During the event [SuperRare](https://superrare.com/) partnered with [Jason Bailey](https://www.artnome.com/about-artnome) and enlisted [Robbie Barrat](https://robbiebarrat.github.io/), the first artist to ever tokenize on SuperRare. Robbie created "AI Generated Nude Portrait #7" for the event, which he intended as 300 separate frames of a single artwork. Each of the 300 frames was tokenized separately and added to redeemable ETH gift cards with directions for how to claim the 1/1 token.
 
-A small handful of these original NFTs are known to still exist. We'll call them "Robbies". On April 5th, 2021, [frame 269](https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-269-459) sold for 125ETH ($265K). 
+A small handful of these original NFTs are known to still exist. We'll call them "Robbies". On April 5th, 2021, [frame 269](https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-269-459) sold for 125ETH ($265K).
 
-If you enjoyed the forensics in [Rare “Lost Robbie” AI Nude NFTs Worth Millions Surface](https://web.archive.org/web/20211022010940/https://digitalartcollector.com/rare-lost-robbie-ai-nude-nfts-worth-millions-surface/), or if you just want to know how SuperRare or other marketplaces display token history, this post is for you. We'll walk the Ethereum blockchain transaction logs to find all the Robbies using [etherscan-api](https://www.npmjs.com/package/etherscan-api) ([Etherscan API](https://etherscan.io/apis)). 
+If you enjoyed the forensics in [Rare “Lost Robbie” AI Nude NFTs Worth Millions Surface](https://web.archive.org/web/20211022010940/https://digitalartcollector.com/rare-lost-robbie-ai-nude-nfts-worth-millions-surface/), or if you just want to know how SuperRare or other marketplaces display token history, this post is for you. We'll walk the Ethereum blockchain transaction logs to find all the Robbies using [etherscan-api](https://www.npmjs.com/package/etherscan-api) ([Etherscan API](https://etherscan.io/apis)).
 
 Please do note that I am no expert, and that I would greatly appreciate suggestions and fixes to my approach and [the code](https://github.com/dblock/lost-robbies).
 
@@ -34,7 +34,7 @@ async function init() {
   if (! etherscanApiKey) { throw new Error('Missing ETHERSCAN_API_KEY') }
   api = EtherscanApi.init(etherscanApiKey);
 }
-  
+
 async function main() {
   try {
     await init();
@@ -134,16 +134,16 @@ api.log.getLogs(
 
 ### Examining a Transaction
 
-Now that we have a collection of 300 logs, we can, for each `log`, get the corresponding transactions, decode input data, identify the method called, etc. 
+Now that we have a collection of 300 logs, we can, for each `log`, get the corresponding transactions, decode input data, identify the method called, etc.
 
 ```typescript
 var tx = (await api.proxy.eth_getTransactionByHash(log.transactionHash)).result;
 
 // _uri: https://ipfs.pixura.io/ipfs/QmWkvzP1FZBrwBXjj3vD258RQm9MtV25G69zcqzYmc1cGd
-const decodedInputData = inputDataDecoder.decodeData(tx.input); 
+const decodedInputData = inputDataDecoder.decodeData(tx.input);
 
 // addNewToken
-const method = decodedInputData.method; 
+const method = decodedInputData.method;
 ```
 
 ### First Transfers
@@ -163,7 +163,7 @@ api.log.getLogs(
 
 ### Sales and Bids
 
-Reading the contract shows that `bid`, `acceptBid` and `buy` event logs are indexed by `tokenId` as the 3rd topic. 
+Reading the contract shows that `bid`, `acceptBid` and `buy` event logs are indexed by `tokenId` as the 3rd topic.
 
 ```typescript
 // e.g. '0x0000000000000000000000000000000000000000000000000000000000000126'
@@ -201,7 +201,7 @@ Decoding inputs in these logs tells us, for example, the amount for the sale pri
 
 ### Putting It All Together
 
-The complete code to this blog post is [here](https://github.com/dblock/lost-robbies). It fetches and stores the initial create transactions, subsequent transfer transactions, then all the sales transactions. 
+The complete code to this blog post is [here](https://github.com/dblock/lost-robbies). It fetches and stores the initial create transactions, subsequent transfer transactions, then all the sales transactions.
 
 Run `npm run update` to fetch any new data updates, cached locally, and `npm run sales` to show the most recent sales.
 

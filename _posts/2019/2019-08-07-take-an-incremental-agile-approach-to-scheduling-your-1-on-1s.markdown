@@ -35,4 +35,4 @@ I could manage my own volume and generally scheduled **no more than two 1:1s** p
 
 To avoid stress and running out of time in the usual case when a previous meeting ran late I always scheduled an **entire hour**, while often keeping the actual meeting to 45 minutes.
 
-Finally, I tried to **never express to my team frustrations around the volume of 1:1s, or whether they were a chore**. In general, I always enjoy talking to people, learning about their work, gathering actionable information and helping them in any way I can. 
+Finally, I tried to **never express to my team frustrations around the volume of 1:1s, or whether they were a chore**. In general, I always enjoy talking to people, learning about their work, gathering actionable information and helping them in any way I can.

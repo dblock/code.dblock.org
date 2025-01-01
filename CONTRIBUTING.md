@@ -13,7 +13,7 @@
     - [Be Patient](#be-patient)
   - [Thank You](#thank-you)
 
-# Contributing to code.dblock.org
+## Contributing to code.dblock.org
 
 Other than millions of readers, this blog occasionally has [contributors](https://github.com/dblock/code.dblock.org/graphs/contributors).
 
@@ -54,7 +54,7 @@ bundle install
 Start a local Jekyll server.
 
 ```
-bundle exec jekyll serve 
+bundle exec jekyll serve
 ```
 
 Navigate to https://localhost:4000 to see the blog.

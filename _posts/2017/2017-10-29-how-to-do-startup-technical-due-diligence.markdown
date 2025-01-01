@@ -50,7 +50,7 @@ I often break down the expected hours into phone interviews, travel and on-site 
 
 ## Due Diligence Interviews
 
-#### CEO
+### CEO
 
 Once a letter of engagement, NDAs and any other required paperwork is done, you can kick off the due diligence process. Typically the VC should introduce you to the CEO and the CTO, first. My standard reply includes a thank you and an invitation to talk, eg. _What's a good time to have a talk, probably 45 minutes or so? I'll try to accommodate your schedule at best, give me some options. I'm in New York on EST._
 
@@ -74,7 +74,7 @@ I drive the call with questions, but try to speak as little as possible and take
 
 I always follow-up with a standard _Thanks for taking the time for the call today, it was very informative and educational. Please don't hesitate to reach out if there's anything I can be helpful with._
 
-#### CTO, VP of Engineering or Head of Engineering
+### CTO, VP of Engineering or Head of Engineering
 
 A well prepared, transparent and open process says a lot about the maturity of the organization and its leaders. The CTO conversation needs to quickly dig deep into technology, therefore my list of items to discuss changes significantly. For larger organizations with multiple Engineering leads I will cherry-pick from the following list of items and always set expectations in e-mail 24 hours in advance.
 
@@ -100,7 +100,7 @@ The 3 most important questions I am trying to answer are the following.
 * Do I respect the technical and organizational abilities of the technology leadership?
 * Would I theoretically want to hire any of the technical people into my own Engineering team?
 
-#### CPO, CMO and Heads of Product, Marketing and Design
+### CPO, CMO and Heads of Product, Marketing and Design
 
 When given the opportunity I like to spend time with other executives. These are likely to be the heads of Product, Marketing or Design, which are often the biggest areas of contention. The relationships between these teams are critical for the success of the company.
 
@@ -130,39 +130,39 @@ The final report is a lengthy document that includes a summary of the technology
 
 I use the following structure.
 
-#### Overview
+### Overview
 
 A high level overview of the process followed, the level of access provided, and the amount of time spent talking to people and evaluating assets. The takeaway from this section is _what I had to work with_.
 
-#### Objective
+### Objective
 
 The purpose of the technology due diligence report, typically _to determine whether the company is in a position to execute on its roadmap and objectives from the technology point of view, evaluate the software and hardware platform, determine technical debt, understand and uncover technical risks, highlight technical advantages and provide an independent evaluation of the team in place and its relationships within the larger company organization_.
 
-#### Executive Summary
+### Executive Summary
 
 A description of the business problem and typical technical challenges of such business. An end-to-end explanation of how the product works from the technical point of view, whether the proposed idea works and a summary of the current state of the systems and people involved, including a take on senior leadership, its track record and current progress. The company in its context and time line, compared to other enterprises of similar size, scale and stage. A clear evaluation of confidence in the overall ability of the team.
 
 The important takeaway from this section is whether _this report will express a fairly high level of confidence in the team's ability to continue delivering on the company's product roadmap, while incrementally improving the underlying technology_.
 
-#### Technology Platform
+### Technology Platform
 
 A detailed overview of the current technology platform, architecture diagrams and as much detailed information as possible along with an evaluation of the system. The important takeaway from this section is whether _the current system is messy or clean and whether it's typical to see such a system at a startup in this stage_.
 
 An overview of the next technology platform iteration. The important takeaway for this section is whether _the team has a clear idea of what to do next from the technology point of view_.
 
-#### Technology Organization
+### Technology Organization
 
 A walk-through of the organizational chart. The important takeaway for this section is whether _the distribution of the team makes sense, whether the team is too small or too large, how the team grows, promotes, develops and hires and whether organizational plans seem reasonable_.
 
-#### Technology Collaboration
+### Technology Collaboration
 
 A deep dive into how the CEO and other teams collaborate with the technology organization, company culture around technology, where ideas are born, how they are turned into code and how they make it into the production production used by customers. The important takeaway from this section is whether _the team is standing in its own way to enable success_.
 
-#### Risks
+### Risks
 
 Risks from the technology perspective. The takeaways from this section are the _possible scenarios that would cause the organization to fail to execute_ and some basics, such as _whether the code contains any polluting GPL-licensed software_.
 
-#### Conclusion
+### Conclusion
 
 A recommendation on the overall solidity of the technology organization. The takeaways from the entire report include _the level of risks and my personal confidence in the leadership team, based on the conversations and available data_.
 
