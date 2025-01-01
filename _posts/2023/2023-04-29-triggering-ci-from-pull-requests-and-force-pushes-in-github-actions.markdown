@@ -11,7 +11,7 @@ Let's automate this using GitHub Actions (GHA)! We'll need some advanced token-f
 
 A basic job that runs on cron, daily at 11:15PM.
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 name: Update API
 on:
@@ -22,21 +22,21 @@ jobs:
   update-api:
     runs-on: ubuntu-latest
 {% endraw %}
-{% endhighlight %}
+```
 
 Scope permissions to r/w access to repo contents and pull requests.
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 permissions:
   contents: write
   pull-requests: write
 {% endraw %}
-{% endhighlight %}
+```
 
 Check-out the code, and run the `rake` task that updates the API.
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 steps:
   - uses: actions/checkout@v3
@@ -50,11 +50,11 @@ steps:
   - name: Update API from slack-api-ref
     run: bundle exec rake slack:api:update
 {% endraw %}
-{% endhighlight %}
+```
 
 Create a pull request with the changes.
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 - name: Create pull request
   id: cpr
@@ -68,7 +68,7 @@ Create a pull request with the changes.
     branch: automated-api-update
     base: master
 {% endraw %}
-{% endhighlight %}
+```
 
 This works, but does not trigger CI. This is by design, because `GITHUB_TOKEN` is [not allowed to](https://github.com/peter-evans/create-pull-request/issues/48).
 
@@ -76,7 +76,7 @@ To trigger CI we need a different token. You can create a personal access token 
 
 Get the the app token in GHA.
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 - name: GitHub App token
   id: github_app_token
@@ -86,11 +86,11 @@ Get the the app token in GHA.
     private_key: ${{ secrets.CI_APP_PRIVATE_KEY }}
     installation_id: 36985419
 {% endraw %}
-{% endhighlight %}
+```
 
 Use it in the pull request GHA, with a fallback to `GITHUB_TOKEN` for testing the GHA in my fork.
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 - name: Create pull request
   id: cpr
@@ -98,11 +98,11 @@ Use it in the pull request GHA, with a fallback to `GITHUB_TOKEN` for testing th
   with:
     token: ${{ steps.github_app_token.outputs.token || secrets.GITHUB_TOKEN }}
 {% endraw %}
-{% endhighlight %}
+```
 
 Now that PRs trigger CI, and commits are made by `slack-ruby-ci-bot`, let's update `CHANGELOG.md` with the PR number output by the `create-pull-request` action. A text search-and-replace will do.
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 - uses: jacobtomlinson/gha-find-replace@v3
   if: ${{ steps.cpr.outputs.pull-request-number != '' }}
@@ -111,11 +111,11 @@ Now that PRs trigger CI, and commits are made by `slack-ruby-ci-bot`, let's upda
     find: "\\* Your contribution here."
     replace: "* [#${{steps.cpr.outputs.pull-request-number}}] ...\n* Your contribution here."
 {% endraw %}
-{% endhighlight %}
+```
 
 We can amend the previous pull request and force-push the change back to GitHub. To authenticate to GitHub using the above-mentioned token we generate a base64-encoded BASIC auth `x-access-token:token` header, then stuff it into all HTTP requests made by `git`. This is what the `create-pull-request` action actually does in code, too.
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 - name: Commit and Push
   run: |
@@ -129,24 +129,24 @@ We can amend the previous pull request and force-push the change back to GitHub.
     git commit --amend --no-edit
     git push origin automated-api-update -f
 {% endraw %}
-{% endhighlight %}
+```
 
 Bonus features include getting the current date and the git commit of the updated submodule that contains the API reference to make the CHANGELOG and the commit messages pretty.
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 - name: Get current date
   id: date
   run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 {% endraw %}
-{% endhighlight %}
+```
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 - name: Get slack-api-ref ref
   id: api-ref
   run: echo "::set-output name=api-ref::$(git rev-parse --short HEAD:lib/slack/web/api/slack-api-ref)"
 {% endraw %}
-{% endhighlight %}
+```
 
 The final result is [here](https://github.com/slack-ruby/slack-ruby-client/blob/master/.github/workflows/update_api.yml) and you can see it in action in [slack-ruby-client#465](https://github.com/slack-ruby/slack-ruby-client/pull/465).

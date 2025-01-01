@@ -9,13 +9,13 @@ In June 2018 users started reporting slack-side disconnects in their Ruby bots, 
 
 Because this was a new behavior I assumed that the client was not seeing or handling some new type of communication error correctly at the websocket library layer. This has been an issue before, and in the case of Celluloid, IO exceptions had to be handled by emitting a `:close` event [here](https://github.com/slack-ruby/slack-ruby-client/blob/v0.15.1/lib/slack/real_time/concurrency/celluloid.rb#L39). That is, the websocket library was seeing a problem and raising an exception, but the client didn't properly emit a close event, so the bots just sat there waiting for something to happen.
 
-{% highlight ruby %}
+```ruby
 def run_loop
   loop { read }
 rescue EOFError, Errno::ECONNRESET, Errno::EPIPE => e
   driver.emit(:close, WebSocket::Driver::CloseEvent.new(1001, 'server closed connection'))
 end
-{% endhighlight %}
+```
 
 The `Faye::WebSocket::Client` implementation has not seen a similar problem as it deferred reading data to `WebSocket::Driver::StreamReader`, which seemed to bubble up disconnects properly until these reports.
 
@@ -25,7 +25,7 @@ The server-side disconnects had started happening without any code changes, so n
 
 To relieve the immediate problem I stuck a restart into my bots (eg. [slack-strava@bc29324](https://github.com/dblock/slack-strava/commit/bc293248bae678dd9299b1d2888443adedae4da8)) and began seeing about a dozen of these server-side disconnects every hour.
 
-{% highlight ruby %}
+```ruby
 def cron
   once_and_every 60 * 60 do
     ping_teams!
@@ -50,7 +50,7 @@ def ping_teams!
     end
   end
 end
-{% endhighlight %}
+```
 
 Gross, but effective.
 

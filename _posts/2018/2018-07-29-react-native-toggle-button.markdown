@@ -10,7 +10,7 @@ In the [previous post](/2018/07/28/react-native-hello-world.html) I've setup a "
 
 The button itself is changes title depending on whether a meeting has started or not. The initial state of a meeting will default to `false`.
 
-{% highlight jsx %}
+```jsx
 export default class App extends React.Component {
   state = {
     isMeetingStarted: false
@@ -24,21 +24,21 @@ export default class App extends React.Component {
     )
   }
 }
-{% endhighlight %}
+```
 
 State is a core concept in React Native: every time state changes, all components affected by state will re-render. We will toggle the state of `isMeetingStarted` in JavaScript.
 
-{% highlight jsx %}
+```jsx
 toggleMeeting() {
   this.setState({
     isMeetingStarted: !this.state.isMeetingStarted
   })
 }
-{% endhighlight %}
+```
 
-{% highlight jsx %}
+```jsx
 <Button onPress={() => this.toggleMeeting()} ... />
-{% endhighlight %}
+```
 
 ### Code, Tests and Travis CI
 

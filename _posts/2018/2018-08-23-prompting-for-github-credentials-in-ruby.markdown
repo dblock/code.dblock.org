@@ -10,7 +10,7 @@ Last week I [wrote a tool](/2018/08/15/finding-a-github-users-email-address.html
 
 Reading a username is fairly straightforward with `$stdin.gets.chomp`. We can improve a bit upon it and fetch it from `git config` instead.
 
-{% highlight ruby %}
+```ruby
 def username
   @username ||= begin
     username = `git config github.user`.chomp
@@ -25,11 +25,11 @@ def get_username
 rescue Interrupt => e
   raise e, 'ctrl + c'
 end
-{% endhighlight %}
+```
 
 We don't want to echo passwords.
 
-{% highlight ruby %}
+```ruby
 def password
   @password ||= get_password
 end
@@ -58,7 +58,7 @@ rescue Interrupt => e
 ensure
   system "stty #{current_tty}" unless current_tty.empty?
 end
-{% endhighlight %}
+```
 
 Note how we [change stty](https://stackoverflow.com/questions/22832933/what-does-stty-raw-echo-do-on-os-x), support backspace, echo `*` and bail on Ctrl + C.
 
@@ -66,15 +66,15 @@ Note how we [change stty](https://stackoverflow.com/questions/22832933/what-does
 
 We can use [github_api](https://github.com/piotrmurach/github) to authenticate against Github with a username and password.
 
-{% highlight ruby %}
+```ruby
 Github.new do |config|
   config.basic_auth = [username, password].join(':')
 end
-{% endhighlight %}
+```
 
 However, most users now hopefully have two-factor authentication enabled. Github auth will fail with `Github::Error::Unauthorized` and return a `X-GitHub-OTP` header with the value of `required; app` to signal that a 2FA code is required. The latter will need to be sent back in the `X-GitHub-OTP` header.
 
-{% highlight ruby %}
+```ruby
 def github(code = nil)
   Github.new do |config|
     config.basic_auth = [username, password].join(':')
@@ -87,21 +87,21 @@ def github(code = nil)
     end
   end
 end
-{% endhighlight %}
+```
 
 ### Create a Github Token
 
 To create a token we supply a note that uniquely identifies it on the Github personal tokens page. Once created tokens cannot be retrieved, so we will store the value locally. To uniquely identify tokens we include the local host name in the note.
 
-{% highlight ruby %}
+```ruby
 def note
   "MyApp on #{Socket.gethostname}"
 end
-{% endhighlight %}
+```
 
 We recurse with 2FA until a token can be successfully created with `auth.create` or an error occurs. One such interesting error is when trying to create a token that already exists. Since token values cannot be obtained after creation, we must tell the user to delete the token manually. And we don't want to delete the token automatically because it will possibly break another app instance that has created it.
 
-{% highlight ruby %}
+```ruby
 def get_code
   print 'Enter GitHub 2FA code: '
   get_secure
@@ -119,13 +119,13 @@ rescue Github::Error::Unauthorized => e
 rescue Github::Error::UnprocessableEntity => e
   raise e, 'A token already exists! Please revoke it from https://github.com/settings/tokens.'
 end
-{% endhighlight %}
+```
 
 ### Storing in Keychain
 
 We use the command-line `security add-internet-password` tool to store Internet passwords in Keychain and `security find-internet-password` to retrieve one.
 
-{% highlight ruby %}
+```ruby
 def store!(options)
   system security('add', options)
 end
@@ -148,11 +148,11 @@ def security(command = nil, options = nil)
   end
   run.join ' '
 end
-{% endhighlight %}
+```
 
 ### Putting It Together
 
-{% highlight bash %}
+```bash
 $ fue find defunkt
 
 Enter dblock's GitHub password (never stored): ******************
@@ -161,7 +161,7 @@ Token saved to keychain.
 
 Chris Wanstrath <chris@ozmm.org>
 Chris Wanstrath <chris@github.com>
-{% endhighlight %}
+```
 
 Running the tool the second time no longer prompts for credentials!
 

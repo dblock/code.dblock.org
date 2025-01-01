@@ -11,7 +11,7 @@ Mongoid 5 has been released. The repository has been moved to the MongoDB organi
 
 Gems are being upgraded to Mongoid 5. I maintain half a dozen of those, so I am going to keep an up-to-date list of the gems that support the new version, which will incidentally help everyone find their favorite Mongoid gems to stay productive, much like [my 2011 post](/2011/05/27/ror-win-getting-things-done-with-mongodb-mongoid.html) did.
 
-So far I have added Mongoid 5 suport to two, and it was fairly easy - [mongoid-scroll@d398c4e9](https://github.com/dblock/mongoid-scroll/commit/d398c4e9ce8279d4659dc26f18f3a77ef38decdb), [mongoid-tag-collectible@5813b77f](https://github.com/dblock/mongoid-tag-collectible/commit/5813b77f3981c5725f8253ff8b6df09e816f099b) and [mongoid-autoinc@2be7377a](https://github.com/suweller/mongoid-autoinc/commit/2be7377aa54f25cecc77ded6a642e675d04e4f11) should help you add support to other gems.
+So far I have added Mongoid 5 support to two, and it was fairly easy - [mongoid-scroll@d398c4e9](https://github.com/dblock/mongoid-scroll/commit/d398c4e9ce8279d4659dc26f18f3a77ef38decdb), [mongoid-tag-collectible@5813b77f](https://github.com/dblock/mongoid-tag-collectible/commit/5813b77f3981c5725f8253ff8b6df09e816f099b) and [mongoid-autoinc@2be7377a](https://github.com/suweller/mongoid-autoinc/commit/2be7377aa54f25cecc77ded6a642e675d04e4f11) should help you add support to other gems.
 
 Since writing this I have also published a [mongoid-compatibility gem](https://github.com/dblock/mongoid-compatibility) that avoids redundant version checking code and introduces a thin compatibility layer for things like `Moped::BSON::ObjectId.legal?(value)` (Mongoid 3) vs. `BSON::ObjectId.legal?(value)` (Mongoid 4 and 5).
 

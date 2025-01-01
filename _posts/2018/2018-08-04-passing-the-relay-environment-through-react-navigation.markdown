@@ -8,7 +8,7 @@ Passing the [Relay environment](https://github.com/33-minutes/33-minutes-app/blo
 
 ### screenProps at App Level
 
-{% highlight js %}
+```js
 import React, { Component } from 'react';
 import { createRootNavigator } from './app/Main';
 import environment from './app/Environment';
@@ -28,13 +28,13 @@ export default class App extends Component {
     );
   }
 }
-{% endhighlight %}
+```
 
 ### withMappedNavigationProps at Component Level
 
 Using [react-navigation-props-mapper](https://github.com/vonovak/react-navigation-props-mapper) in each separate screen such as [Settings](https://github.com/33-minutes/33-minutes-app/blob/master/app/screens/Settings.js).
 
-{% highlight js %}
+```js
 import { withMappedNavigationProps } from 'react-navigation-props-mapper';
 
 @withMappedNavigationProps()
@@ -49,11 +49,11 @@ class Settings extends React.Component {
     )
   }
 }
-{% endhighlight %}
+```
 
 You no longer have to `import` the Relay environment all over the place.
 
-{% highlight js %}
+```js
 _signup() {
   const environment = this.props.relay.environment;
   CreateUserMutation.commit({
@@ -63,4 +63,4 @@ _signup() {
     }
   });
 }
-{% endhighlight %}
+```

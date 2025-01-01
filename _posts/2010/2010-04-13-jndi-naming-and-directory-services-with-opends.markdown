@@ -24,7 +24,7 @@ I picked up [OpenDS](https://web.archive.org/web/20111001105032/https://www.open
 
 We can now access this server with JNDI, which comes standard with Java Platform 1.1.2 or later.
 
-{% highlight c# %}
+```csharp
 Hashtable<String, String> env = new Hashtable<String, String>();
 env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
 env.put(Context.PROVIDER_URL, "ldap://localhost:389/dc=example,dc=com");
@@ -38,7 +38,7 @@ while(e.hasMore()) {
     System.out.println(e.next());
 }
 ctx.close();
-{% endhighlight %}
+```
 
 This outputs the attributes of my initial domain context that was created at setup time.
 
@@ -79,7 +79,7 @@ You can generate a root OID using [this script](https://learn.microsoft.com/en-u
 
 Let's define a Service Java class that can be used to read and write objects to the directory.
 
-{% highlight java %}
+```java
 package com.example.jndi;
 
 import javax.naming.NameNotFoundException;
@@ -128,7 +128,7 @@ public class Service extends UnimplementedDirContext {
         return _name + " @ " + _serviceUri;
     }
 }
-{% endhighlight %}
+```
 
 This is a simple container for attributes. The `UnimplementedDirContext` is an empty class that throws NotImplementedException on two dozen methods that are required by a full `DirContext`.
 
@@ -140,13 +140,13 @@ We'd like to organize services under a Services organization. I've created that 
 
 A write is a call to `bind`. Binding means connecting a _name_ to an _object_. You can `rebind`, ie. either create or update an existing object.
 
-{% highlight java %}
+```java
 Service demoService = new Service(
         "{F6E978E7-A0BC-47ae-95A9-219CD40C5993}",
         "demoService",
         "https://localhost:20080/demo/");
 ctx.rebind("cn=demoService,o=Services", demoService);
-{% endhighlight %}
+```
 
 Here's what we have in the directory now (this is the _Manage Entries_ UI from the control panel tool that comes with OpenDS).
 
@@ -156,7 +156,7 @@ Here's what we have in the directory now (this is the _Manage Entries_ UI from t
 
 In order to retrieve a strongly typed object from the directory we must supply an object factory. When the factory encounters an object with an `objectClass=Service`, it will create an instance of such.
 
-{% highlight java %}
+```java
 package com.example.jndi;
 
 import javax.naming.*;
@@ -190,27 +190,27 @@ public class ServiceFactory implements DirObjectFactory {
         return getObjectInstance(obj, name, ctx, env, null);
     }
 }
-{% endhighlight %}
+```
 
 The initial directory context must be told to use this factory.
 
-{% highlight java %}
+```java
 env.put(Context.OBJECT_FACTORIES, "com.example.jndi.ServiceFactory");
-{% endhighlight %}
+```
 
 Finally, the retrieval becomes a simple lookup.
 
-{% highlight java %}
+```java
 Service demoService = (Service) ctx.lookup("cn=demoService,o=Services");
-{% endhighlight %}
+```
 
 #### Deleting Directory Objects
 
 To complete the picture, let's delete a directory object. This is the opposite of `bind`, `unbind`.
 
-{% highlight java %}
+```java
 ctx.unbind("cn=demoService,o=Services");
-{% endhighlight %}
+```
 
 #### A Word on XML
 

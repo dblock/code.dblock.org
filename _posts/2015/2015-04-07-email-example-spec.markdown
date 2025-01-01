@@ -11,22 +11,22 @@ Testing e-mail body, subject, to and from addresses with expectations works, but
 
 ### Install
 
-{% highlight ruby %}
+```ruby
 gem 'email-example-spec'
-{% endhighlight %}
+```
 
 ### Configure
 
-{% highlight ruby %}
+```ruby
 EmailExampleSpec.configure do |config|
   config.record = true # record new e-mails, don't commit this!
   config.fixture_path = File.join(Rails.root, 'spec/support/fixtures/emails')
 end
-{% endhighlight %}
+```
 
 ### Use
 
-{% highlight ruby %}
+```ruby
 describe WelcomeMailer do
   let(:user) { User.new }
   subject do
@@ -36,5 +36,5 @@ describe WelcomeMailer do
     expect(subject).to match_email_example_in 'welcome_mail.txt'
   end
 end
-{% endhighlight %}
+```
 

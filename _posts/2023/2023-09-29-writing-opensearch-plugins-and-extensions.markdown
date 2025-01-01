@@ -17,7 +17,7 @@ Plugins suffer from 3 major limitations: rigid version compatibility, lack of is
 
 A plugin inherits from `Plugin` and our plugin implements `ActionPlugin` (a plugin that exposes actions via REST). Our REST handler responds to `GET` requests.
 
-{% highlight java %}
+```java
 public class HelloPlugin extends Plugin implements ActionPlugin {
     @Override
     public List getRestHandlers(final Settings settings,
@@ -30,9 +30,9 @@ public class HelloPlugin extends Plugin implements ActionPlugin {
             return singletonList(new RestHelloAction());
     }
 }
-{% endhighlight %}
+```
 
-{% highlight java %}
+```java
 public class RestHelloAction extends BaseRestHandler {
     @Override
     public List routes() {
@@ -54,7 +54,7 @@ public class RestHelloAction extends BaseRestHandler {
         );
     }
 }
-{% endhighlight %}
+```
 
 Let's install the plugin, start OpenSearch, and make an HTTP request to the newly added endpoint on the OpenSearch node. The request will be forwarded to the plugin and the REST handler will handle it.
 
@@ -68,16 +68,16 @@ In OpenSearch 2.9 we have introduced a new concept called _extensions_ and shipp
 
 The code for an extension with its REST handler is almost identical to the one for a plugin. This was done on purpose to help migrations. The complete source code for this extension is [here](https://github.com/opensearch-project/opensearch-sdk-java/tree/main/src/main/java/org/opensearch/sdk/sample/helloworld).
 
-{% highlight java %}
+```java
 public class HelloWorldExtension extends BaseExtension implements ActionExtension {
     @Override
     public List<ExtensionRestHandler> getExtensionRestHandlers() {
         return List.of(new RestHelloAction());
     );
 }
-{% endhighlight %}
+```
 
-{% highlight java %}
+```java
 public class RestHelloAction extends BaseExtensionRestHandler {
     @Override
     public List<NamedRoute> routes() {
@@ -95,7 +95,7 @@ public class RestHelloAction extends BaseExtensionRestHandler {
             );
         }
 }
-{% endhighlight %}
+```
 
 Let's enable the experimental extensions feature in OpenSearch, install and run this extension.
 
@@ -107,7 +107,7 @@ Other than reducing costs, what else can we use this technology for?
 
 Python is the language of machine learning. Unlike a plugin, we can also write an extension in Python. The complete source code for the sample below is [here](https://github.com/opensearch-project/opensearch-sdk-py/tree/main/samples/hello) and it looks very similar to the Java one.
 
-{% highlight python %}
+```python
 class HelloExtension(Extension, ActionExtension):
     def __init__(self):
         Extension.__init__(self, "hello-world")
@@ -116,9 +116,9 @@ class HelloExtension(Extension, ActionExtension):
     @property
     def rest_handlers(self):
         return [HelloRestHandler()]
-{% endhighlight %}
+```
 
-{% highlight python %}
+```python
 class HelloRestHandler(ExtensionRestHandler):
     def handle_request(self, rest_request):
         return ExtensionRestResponse(
@@ -132,7 +132,7 @@ class HelloRestHandler(ExtensionRestHandler):
         return [
             NamedRoute(method=RestMethod.GET, path="/hello")
         ]
-{% endhighlight %}
+```
 
 Let's enable the experimental extensions feature in OpenSearch, install and run this extension.
 

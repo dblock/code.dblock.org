@@ -16,7 +16,7 @@ Below are some implementation details from [opensearch-project/project-meta](htt
 
 The job is executed on all changes to `main` and daily at midnight.
 
-{% highlight yaml %}
+```yaml
 name: Check for new Project Repos
 on:
   push:
@@ -24,13 +24,13 @@ on:
       - main  
   schedule:
     - cron: "0 0 * * *"
-{% endhighlight %}
+```
 
 ### Permissions and Tokens
 
 The job checks out code, and needs a `GITHUB_TOKEN` in `env.` to make pull requests.
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 jobs:
   check-project-repos:
@@ -41,7 +41,7 @@ jobs:
   env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}      
 {% endraw %}
-{% endhighlight %}
+```
 
 ### Generating a PR Title and Body
 
@@ -54,9 +54,9 @@ At first I was hard-coding PR titles and commit messages. That's not ideal. Comp
 This can be achieved by setting an environment variable during the workflow execution by piping it into `$GITHUB_ENV`, and reusing it in the PR.
 
 
-{% highlight bash %}
+```bash
 echo REPOS_ADDED=$(git diff --unified=0 .gitignore | grep '+/' | cut -f2 -d'/' | paste -sd ',' - | sed "s/,/, /g" | sed 's/\(.*\),/\1 and/') >> $GITHUB_ENV
-{% endhighlight %}
+```
 
 1. The workflow modifies `.gitignore` by adding lines to it, such as `/cross-cluster-replication/`.
 2. Find all additions that start with `+/` using `| grep '+/'`.
@@ -68,7 +68,7 @@ echo REPOS_ADDED=$(git diff --unified=0 .gitignore | grep '+/' | cut -f2 -d'/' |
 
 ### Make a Pull Request
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 - name: Create Pull Request
   uses: peter-evans/create-pull-request@v3
@@ -83,7 +83,7 @@ echo REPOS_ADDED=$(git diff --unified=0 .gitignore | grep '+/' | cut -f2 -d'/' |
     echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
     echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
 {% endraw %}
-{% endhighlight %}
+```
 
 ### Profit
 

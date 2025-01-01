@@ -11,7 +11,7 @@ Here's a minimal example.
 
 ![]({{ site.url }}/images/posts/2015/2015-07-18-the-easiest-way-to-write-a-slack-bot-in-ruby/demo.gif)
 
-{% highlight ruby %}
+```ruby
 require 'slack-ruby-bot'
 
 class PongBot < SlackRubyBot::Bot
@@ -21,7 +21,7 @@ class PongBot < SlackRubyBot::Bot
 end
 
 PongBot.run
-{% endhighlight %}
+```
 
 Add `gem 'slack-ruby-bot'` to your *Gemfile* and party on. Unlike [Lita](https://github.com/jimmycuadra/lita) it's not trying to be anything other than a Slack bot boilerplate. Source code [on Github](https://github.com/dblock/slack-ruby-bot).
 

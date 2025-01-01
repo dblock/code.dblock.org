@@ -46,13 +46,13 @@ Lower the DNS TTL to a minute about an hour prior to migration.
 3. Export data from MongoDB with `dokku mongo:export app > app.dump.gz`.
 4. Fetch the data from the droplet and back it up with `scp root@domain:/path/to/data/app.dump.gz .`.
 5. Restore data into the new managed MongoDB database.
-    {% highlight bash %}
+    ```bash
 mongorestore
   --uri "mongodb+srv://doadmin:password@db/admin?authSource=admin&replicaSet=db&tls=true" 
   --gzip
   --archive=app.dump.gz
   --nsInclude=app.*`.
-{% endhighlight %}
+```
 
 #### Create an App
 

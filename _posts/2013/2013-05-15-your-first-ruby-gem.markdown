@@ -96,9 +96,9 @@ Installing RDoc documentation for bundler-1.3.5...
 
 Create a Gemfile. For now it just says where to get other gems from.
 
-{% highlight ruby %}
+```ruby
 source "https://rubygems.org"
-{% endhighlight %}
+```
 
 Run `bundle install`.
 
@@ -120,13 +120,13 @@ Gemfile.lock
 
 Create _lib/ruby-enum.rb _and _lib/ruby-enum/version.rb_.
 
-{% highlight ruby %}
+```ruby
 require 'ruby-enum/version'
 
 module Ruby::Enum
   VERSION = '0.1.0'
 end
-{% endhighlight %}
+```
 
 #### Tests
 
@@ -134,30 +134,30 @@ You. Must. Test.
 
 Add RSpec to _Gemfile_.
 
-{% highlight ruby %}
+```ruby
 gem "rspec"
-{% endhighlight %}
+```
 
 Tests need some setup, specifically to load the code in _lib_. Create _spec/spec_helper.rb_.
 
-{% highlight ruby %}
+```ruby
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
 require 'rubygems'
 require 'rspec'
 require 'ruby-enum'
-{% endhighlight %}
+```
 
 Create a test in _spec/ruby-enum/version.rb_.
 
-{% highlight ruby %}
+```ruby
 require 'spec_helper'
 describe Ruby::Enum do
   it "has a version" do
     Ruby::Enum::VERSION.should_not be_nil
   end
 end
-{% endhighlight %}
+```
 
 Add .rspec to pretty-print test output.
 
@@ -170,7 +170,7 @@ Add .rspec to pretty-print test output.
 
 A _ruby-enum.gemspec_ is a gem declaration.
 
-{% highlight ruby %}
+```ruby
 $:.push File.expand_path("../lib", __FILE__)
 require "ruby-enum/version"
 Gem::Specification.new do |s|
@@ -186,14 +186,14 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.summary = "Enum-like Behavior for Ruby"
 end
-{% endhighlight %}
+```
 
 The declaration can be loaded in _Gemfile_, so that we can list dependencies in one place.
 
-{% highlight ruby %}
+```ruby
 source "https://rubygems.org"
 gemspec
-{% endhighlight %}
+```
 
 When running under Bundler, the _Gemfile_ will automatically be loaded, which will automatically load the gem specification.
 
@@ -209,17 +209,17 @@ $ bundle exec irb
 
 Bundler comes with a number of Rake tasks to release a gem. Add Rake to Gemfile.
 
-{% highlight ruby %}
+```ruby
 gem "rake"
-{% endhighlight %}
+```
 
 Create a _Rakefile_.
 
-{% highlight ruby %}
+```ruby
 require 'rubygems'
 require 'bundler/gem_tasks'
 Bundler.setup(:default, :development)
-{% endhighlight %}
+```
 
 ```
 $ rake -T
@@ -235,7 +235,7 @@ Add _pkg_ to _.gitignore_.
 
 #### Default Rakefile to Running Tests
 
-{% highlight ruby %}
+```ruby
 require 'rspec/core'
 require 'rspec/core/rake_task'
 
@@ -244,20 +244,20 @@ RSpec::Core::RakeTask.new(:spec) do |spec|
 end
 
 task :default => :spec
-{% endhighlight %}
+```
 
 #### Travis-CI
 
 Add _.travis.yml_, register the project on [travis-ci.org](https://travis-ci.org/) and add a badge.
 
-{% highlight yaml %}
+```yaml
 rvm:
   - 1.8.7
   - 1.9.3
   - 2.0.0
   - jruby-19mode
   - rbx-19mode
-{% endhighlight %}
+```
 
 ```
 [![Build Status](https://travis-ci.org/dblock/ruby-enum.png)](https://travis-ci.org/dblock/ruby-enum)

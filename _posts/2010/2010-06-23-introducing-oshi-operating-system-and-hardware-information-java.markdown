@@ -33,7 +33,7 @@ Memory: 532.1 MB/2.0 GB
 
 Here's the code for the above.
 
-{% highlight java %}
+```java
 SystemInfo si = new SystemInfo();
 OperatingSystem os = si.getOperatingSystem();
 System.out.println(os);
@@ -45,7 +45,7 @@ for(Processor cpu : hal.getProcessors()) {
 System.out.println("Memory: " +
     FormatUtil.formatBytes(hal.getMemory().getAvailable()) + "/" +
     FormatUtil.formatBytes(hal.getMemory().getTotal()));
-{% endhighlight %}
+```
 
 #### What's Next?
 

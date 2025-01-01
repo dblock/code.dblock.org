@@ -21,7 +21,7 @@ I created an app on Strava and noted the access token from [strava.com/settings/
 
 Note that this token expires quickly. See [this post](/2018/11/17/dealing-with-strava-api-token-migration.html) for how to refresh it, in general, and below for how to make this process work in Travis-CI.
 
-{% highlight ruby %}
+```ruby
 client = Strava::Api::V3::Client.new(access_token: ENV['STRAVA_API_TOKEN'])
 
 client.athlete_activities do |activity|
@@ -30,15 +30,15 @@ client.athlete_activities do |activity|
   activity.average_speed # => ...
   activity.pace_per_mile # => ...
 end
-{% endhighlight %}
+```
 
 ### Plotting Runs with Google Maps
 
 Each activity comes with an encoded summary polyline in `activity.map.summary_polyline`, which can be passed directly to Google Static Maps API with the `enc:` prefix to render a nice image.
 
-{% highlight html %}
+```html
 <img src='https://maps.googleapis.com/maps/api/staticmap?maptype=roadmap&path=enc:#{activity.map.summary_polyline}&key=...&size=800x800'>
-{% endhighlight %}
+```
 
 Google Static Maps API requires a key that you can get from the [console](https://developers.google.com/maps/documentation/static-maps/get-api-key).
 
@@ -46,14 +46,14 @@ Google Static Maps API requires a key that you can get from the [console](https:
 
 Strava API does not [unfortunately return precise-enough coordinates to plot start and finish of the runs](https://groups.google.com/forum/#!searchin/strava-api/start_latlng$20maps%7Csort:date/strava-api/ZUAZX8idGaE/MVzOJFH-wjwJ), but we can pluck these out from the decoded polyline using the [polylines gem](https://github.com/joshuaclayton/polylines).
 
-{% highlight ruby %}
+```ruby
 require 'polylines'
 
 summary_polyline = activity.map.summary_polyline
 decoded_polyline = Polylines::Decoder.decode_polyline(summary_polyline)
 start_latlng = decoded_polyline[0]
 end_latlng = decoded_polyline[-1]
-{% endhighlight %}
+```
 
 These markers are added to the map with `&markers=color:yellow|label:S|#{start_latlng[0]},#{start_latlng[1]}` and `&markers=color:green|label:F|#{end_latlng[0]},#{end_latlng[1]}`.
 
@@ -61,18 +61,18 @@ These markers are added to the map with `&markers=color:yellow|label:S|#{start_l
 
 By default Strava API only returns the primary photo. Call `activity_photos` to get all of them and specify `size` for anything other than thumbnails. Note that this seems to be an undocumented Strava API.
 
-{% highlight ruby %}
+```ruby
 client.activity_photos(activity.id, size: '600').each do |photo|
   url = photo.urls['600']
   # ...
 end
-{% endhighlight %}
+```
 
 ### Generating Jekyll Pages
 
 I wrote a Rake task that iterates over Strava activities and outputs a `.md` file for each run.
 
-{% highlight ruby %}
+```ruby
 filename = [
   "_posts/#{activity.start_date_local.year}/#{activity.start_date_local.strftime('%Y-%m-%d')}",
   activity.type.downcase,
@@ -95,7 +95,7 @@ date: "#{activity.start_date_local.strftime('%F %T')}"
  <li>Pace: #{activity.pace_per_mile}</li>
 </ul>
 EOS
-{% endhighlight %}
+```
 
 For example, [2018/2018-01-21-run-13.34mi-1h47m18s.md](https://github.com/dblock/run.dblock.org/blob/gh-pages/_posts/2018/2018-01-21-run-13.34mi-1h47m18s.md) is generated for a post titled [#FLMH](https://run.dblock.org/2018/01/21/run-13.34mi-1h47m18s.html).
 
@@ -107,7 +107,7 @@ I wrote a bash script that runs `rake strava:update` and commits changes, if any
 
 To commit to Github you need a `public_repo` permission token. Create one in [github.com/settings/tokens](https://github.com/settings/tokens). Set it as `GH_TOKEN`.
 
-{% highlight yaml %}
+```yaml
 #!/bin/bash
 
 set -e
@@ -133,11 +133,11 @@ if ! git diff --quiet --staged
  else
    echo "Nothing has changed! I hope that's what you expected." >&2
 fi
-{% endhighlight %}
+```
 
 And configured Travis-CI to run the script in `.travis.yml`.
 
-{% highlight yaml %}
+```yaml
 language: ruby
 
 rvm:
@@ -149,7 +149,7 @@ script:
 branches:
   only:
     - gh-pages
-{% endhighlight %}
+```
 
 This is [run.dblock.org@2a08d5ec](https://github.com/dblock/run.dblock.org/commit/2a08d5ec0b97a49003ccf8f69c467d7a693ad2a2).
 

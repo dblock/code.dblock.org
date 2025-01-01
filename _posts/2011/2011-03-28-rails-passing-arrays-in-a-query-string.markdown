@@ -17,11 +17,11 @@ What the heck is this [] syntax?! Why is there multiple widget entries?! There a
 
 Here's what Rails parses from this query string.
 
-{% highlight ruby %}
+```ruby
 {
     :widget => ["first-widget",  "another widget"],
     :gadget => ["a-gadget"]
 }
-{% endhighlight %}
+```
 
 Awesome.

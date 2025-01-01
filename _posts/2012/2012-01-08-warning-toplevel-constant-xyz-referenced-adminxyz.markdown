@@ -15,11 +15,11 @@ This was only happening under Spork, so I posted [a similar question](https://gr
 
 I also found a workaround, to require the Admin controllers first in _spec/spec_helper.rb_.
 
-{% highlight ruby %}
+```ruby
 Dir[File.expand_path("app/controllers/admin/\*.rb")].each do |file|
   require file
 end
-{% endhighlight %}
+```
 
 Finally, [@tilsammans](https://twitter.com/#!/tilsammans) figured it out. It's the same problem as what I have: an Admin namespace and an Admin class.
 

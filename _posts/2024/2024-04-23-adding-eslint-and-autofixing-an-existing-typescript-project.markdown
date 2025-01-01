@@ -11,7 +11,7 @@ First, I followed the [getting started with eslint guide](https://eslint.org/doc
 
 Rewrite `eslint.config.mjs` using the newer flat configuration format, making sure that the `ignores` and `rules` section appears last, as it will overwrite the defaults. For my TypeScript project, see the complete file [here](https://github.com/opensearch-project/opensearch-api-specification/blob/main/eslint.config.mjs).
 
-{% highlight javascript %}
+```javascript
 export default [
   pluginJs.configs.recommended,
   ...compat.extends('standard-with-typescript'),
@@ -25,23 +25,23 @@ export default [
     }
   }
 ]
-{% endhighlight %}
+```
 
 Add the linter to scripts.
 
-{% highlight json %}
+```json
 "scripts": {
   "lint": "eslint .",
 }
-{% endhighlight %}
+```
 
 Run the linter with `npm run lint`. My first run resulted in a lot of violations. I exctracted the list of them with `jq` and pasted it into `rules`.
 
-{% highlight bash %}
+```bash
 $ npm run --silent lint -- --format json | jq '.[].messages[] | select(.line != null) .ruleId' | sort | uniq
-{% endhighlight %}
+```
 
-{% highlight javascript %}
+```javascript
 export default [
   pluginJs.configs.recommended,
   ...compat.extends('standard-with-typescript'),
@@ -54,19 +54,19 @@ export default [
     }
   }
 ]
-{% endhighlight %}
+```
 
 Now, `npm run lint` will execute successfully showing warnings only.
 
-{% highlight bash %}
+```bash
 ../tools/test/linter/factories/schema_file.ts
    4:17  warning  Function name `schema_file` must match one of the following formats: camelCase, PascalCase, UPPER_CASE         @typescript-eslint/naming-convention
   10:32  warning  void is not valid as a constituent in a union type                                                             @typescript-eslint/no-invalid-void-type
-{% endhighlight %}
+```
 
 To auto-fix, first disable all rules with `off` and enable the one you want to auto-fix with `error`.
 
-{% highlight javascript %}
+```javascript
 export default [
   pluginJs.configs.recommended,
   ...compat.extends('standard-with-typescript'),
@@ -78,7 +78,7 @@ export default [
     }
   }
 ]
-{% endhighlight %}
+```
 
 Now run `npm run lint -- --fix`. Not all rules have an autofixer, but if yours does it will make the code changes, and you can now remove if rom the config and finally turn back all other rules to `warn`.
 

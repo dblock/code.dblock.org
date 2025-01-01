@@ -33,7 +33,7 @@ If you start a CHANGELOG, tell me about it!
 
 Finally, here's some Ruby to generate a TOC till EOY.
 
-{% highlight ruby %}
+```ruby
 require 'date'
 
 start_date = Date.today
@@ -41,4 +41,4 @@ end_date = Date.new(Date.today.year, 12, 31)
 (start_date..end_date).select(&:monday?).reverse.each do |dt|
     puts "* [[#{dt}]]"
 end
-{% endhighlight %}
+```

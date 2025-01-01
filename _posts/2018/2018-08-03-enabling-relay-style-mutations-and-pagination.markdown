@@ -18,7 +18,7 @@ Relay has a [specified](https://relay.dev/docs/guided-tour/updating-data/graphql
 
 To enable this on the server, return the range connection and edge from the mutation.
 
-{% highlight ruby %}
+```ruby
 Mutations::CreateMeetingMutation = GraphQL::Relay::Mutation.define do
   name 'createMeeting'
 
@@ -53,11 +53,11 @@ Mutations::CreateMeetingMutation = GraphQL::Relay::Mutation.define do
     }
   }
 end
-{% endhighlight %}
+```
 
 The client-side mutation needs a parent ID (a user ID), has to request the edge, and include `RANGE_ADD` in its configs.
 
-{% highlight js %}
+```js
 import { graphql } from 'react-relay'
 import commitMutation from 'relay-commit-mutation-promise'
 
@@ -100,7 +100,7 @@ function commit(userId, { environment, input }) {
 export default {
   commit
 }
-{% endhighlight %}
+```
 
 You can see the complete server-side code in [33-minutes-server@2a70b7](https://github.com/33-minutes/33-minutes-server/commit/2a70b7ec7e7b2197d2b48156880ddaf3120d5ac3) and client-side code in [33-minutes-app@f253e4](https://github.com/33-minutes/33-minutes-app/commit/f253e488b754f77df9ff050b7bd56ef7ed92a3b3).
 
@@ -108,7 +108,7 @@ You can see the complete server-side code in [33-minutes-server@2a70b7](https://
 
 The server has to return `deletedId`.
 
-{% highlight ruby %}
+```ruby
 Mutations::DeleteMeetingMutation = GraphQL::Relay::Mutation.define do
   name 'deleteMeeting'
 
@@ -125,11 +125,11 @@ Mutations::DeleteMeetingMutation = GraphQL::Relay::Mutation.define do
     }
   }
 end
-{% endhighlight %}
+```
 
 The client-side mutation needs the parent ID (a user ID) and to include a `NODE_DELETE` in its configs.
 
-{% highlight js %}
+```js
 import { graphql } from 'react-relay'
 import commitMutation from 'relay-commit-mutation-promise'
 
@@ -158,17 +158,17 @@ function commit(userId, { environment, input }) {
 export default {
   commit
 }
-{% endhighlight %}
+```
 
 Note that `NODE_DELETE` empties a node in the local store, but doesn't remove it. Therefore a `if (node)` is needed in the list renderer. This is [relay#2155](https://github.com/facebook/relay/issues/2155).
 
-{% highlight js %}
+```js
 let meetings = this.props.user.meetings.edges.map(({node}) => {
   if (node) {
     return <Meeting key={node.__id} meeting={node} deleteMethod={ () => this.removeMeetingById(node.__id) } />
   }
 })
-{% endhighlight %}
+```
 
 You can see the complete server-side code in [33-minutes-server@11c324](https://github.com/33-minutes/33-minutes-server/commit/11c324a5be457edcfc3b09a94d3f326633b22c16) and client-side code in [33-minutes-app@f253e4](https://github.com/33-minutes/33-minutes-app/commit/f253e488b754f77df9ff050b7bd56ef7ed92a3b3).
 
@@ -176,7 +176,7 @@ You can see the complete server-side code in [33-minutes-server@11c324](https://
 
 Relay's support for pagination relies on the GraphQL server exposing connections in a [standardized way](https://facebook.github.io/relay/graphql/connections.htm). To expose user's meetings as a GraphQL field you would write `field :meetings, -> { !types[Types::MeetingType] }`. To enable this to be Relay-style, use `connection`.
 
-{% highlight ruby %}
+```ruby
 Types::UserType = GraphQL::ObjectType.define do
    name 'User'
    field :id, types.ID, 'User ID.'
@@ -184,7 +184,7 @@ Types::UserType = GraphQL::ObjectType.define do
 
    connection :meetings, Types::MeetingType.connection_type
 end
-{% endhighlight %}
+```
 
 This returns meetings with `edge` and `node` elements along with `pageInfo` and much more.
 

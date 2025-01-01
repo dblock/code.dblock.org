@@ -13,31 +13,31 @@ To abstract away the hodgepodge of undocumented and unsupported URLs and to make
 
 ### Get a Quote
 
-{% highlight ruby %}
+```ruby
 quote = GoogleFinance::Quote.get('MSFT')
 
 quote.last_trade_price # 84.26
 quote.change # 0.09
 quote.change_in_percent # 0.11
 quote.change_in_percent_s # "+0.11%"
-{% endhighlight %}
+```
 
 ### Interday Prices
 
-{% highlight ruby %}
+```ruby
 prices = GoogleFinance::History.get('MSFT')
 
 prices.first # #<GoogleFinance::Price close=85.54 date=#<Date: 2017-12-29> high=86.05 low=85.5 open=85.63 volume=18717406>
-{% endhighlight %}
+```
 
 ### Intraday Prices
 
-{% highlight ruby %}
+```ruby
 prices = GoogleFinance::Prices.get('GOOG', interval: 60 * 60, period: '1d')
 
 prices.count # 7
 
 prices # array of GoogleFinance::Price, date=2017-12-29 10:00AM, 11:00AM, etc.
-{% endhighlight %}
+```
 
 IANAL, but do note that if your application is for public consumption, using the Google Finance API [seems to be against Google's terms of service](https://groups.google.com/forum/#!msg/google-finance-apis/O8fjsgnamHE/-ZKSjif4yDIJ). YMMV.

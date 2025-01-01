@@ -9,64 +9,64 @@ A user [reported a bug](https://github.com/dblock/slack-strava/issues/171) in [S
 
 The bot's [code](https://github.com/dblock/slack-strava/) extensively uses [ERB](https://github.com/ruby/erb), the standard Ruby templating system. The implementation attempts to render a team name in **bold**. The [recommended way](https://stackoverflow.com/questions/75389277/how-to-make-a-text-bold-in-helper-rb-ruby-file-inside-a-string) to do this is to combine `.html_safe` with the displayed value.
 
-{% highlight html %}
+```html
 <script>
   $(document).ready(function() {
     message('<%= "Welcome <b>".html_safe + name + "</b>!".html_safe %>');
   });
 </script>
-{% endhighlight %}
+```
 
 Aside of being not very elegant, this almost works. Unfortunately, because we are trying to pass an argument into JavaScript the page will be broken if the value of `name` contains a line break. 
 
-{% highlight html %}
+```html
 <script>
   $(document).ready(function() {
     message('<%= "Welcome <b>".html_safe + "line1
 line2" + "</b>!".html_safe %>');
   });
 </script>
-{% endhighlight %}
+```
 
 So how do we fix that?
 
 First, we try to avoid using the cumbersome `html_safe` by sending a value into a JavaScript variable directly, which lets us reuse it later without having to mix Ruby ERB markup.
 
-{% highlight html %}
+```html
 <script>
   $(document).ready(function() {
     var name = '<%= name %>';
   });
 </script>
-{% endhighlight %}
+```
 
 This looks unsafe, but assuming it works, we can reuse this variable directly.
 
-{% highlight html %}
+```html
 <script>
   $(document).ready(function() {
     var name = '<%= name %>';
     message('Welcome <b>' + name + '</b>!');
   });
 </script>
-{% endhighlight %}
+```
 
 For the same reason as above the page will be broken when the name has a quote, a double quote, or a carriage return. This value must be encoded in a safe manner before rendering it.
 
 The standard ERB way to make a value safe is to escape it with [html_escape](https://apidock.com/rails/v5.2.3/ERB/Util/html_escape), abbreviated as `h`.
 
-{% highlight html %}
+```html
 <script>
   $(document).ready(function() {
     var name = '<%=h name %>';
     message('Welcome <b>' + name + '</b>!');
   });
 </script>
-{% endhighlight %}
+```
 
 This does fix the issue with single and double quotes.
 
-{% highlight bash %}
+```bash
 $ irb
 
 3.3.5 :001 > require 'erb'
@@ -74,11 +74,11 @@ $ irb
  => "Daniel&#39;s Team" 
 3.3.5 :003 > ERB::Util::html_escape("\"Daniel's Team\"")
  => "&quot;Daniel&#39;s Team&quot;"
-{% endhighlight %}
+```
 
 However, it will still render a carriage return, causing the following invalid JavaScript with the team name is "line1\nline2".
 
-{% highlight js %}
+```js
 <script>
   $(document).ready(function() {
     var name = "line 1
@@ -86,18 +86,18 @@ line 2";
     message('Welcome <b>' + name + '</b>!');
   });
 </script>
-{% endhighlight %}
+```
 
 This is because ERB considers line breaks as safe.
 
-{% highlight bash %}
+```bash
 3.3.5 :001 > ERB::Util::html_escape("line1\nline2")
  => "line1\nline2"
-{% endhighlight %}
+```
 
 We can fix this by converting the safe value to JSON. This will quote and escape it for us, works for `nil`, and will prevent XSS.
 
-{% highlight bash %}
+```bash
 3.3.5 :001 > require 'erb'
 3.3.5 :002 > require 'json'
 3.3.5 :003 > JSON.generate(ERB::Util::html_escape(nil))
@@ -110,18 +110,18 @@ We can fix this by converting the safe value to JSON. This will quote and escape
  => "\"line1\\nline2\"" 
 3.3.5 :007 > JSON.generate(ERB::Util::html_escape("<script>alert('xss');</script>"))
  => "\"&lt;script&gt;alert(&#39;xss&#39;);&lt;/script&gt;\""
-{% endhighlight %}
+```
 
 The value can thus be rendered directly without extra quotes.
 
-{% highlight html %}
+```html
 <script>
   $(document).ready(function() {
     var name = <%= JSON.generate(ERB::Util::html_escape(name)) %>;
     message('Welcome <b>' + name + '</b>!');
   });
 </script>
-{% endhighlight %}
+```
 
 In Rails, something similar is available as `"<%= j name %>"`, or [escape_javascript](https://api.rubyonrails.org/classes/ActionView/Helpers/JavaScriptHelper.html#method-i-escape_javascript).
 

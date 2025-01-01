@@ -13,11 +13,11 @@ The landing [www.dblock.org](https://www.dblock.org) site is also a Jekyll site.
 
 Include the _jekyll-redirect-from_ gem in __config.yml_.
 
-{% highlight yaml %}
+```yaml
 gems:
   - jekyll-redirect-from
 
-{% endhighlight %}
+```
 
 #### Create Redirect Pages
 
@@ -47,7 +47,7 @@ dblog_post_id: 95
 
 We can create a plain HTML page that will extract the ID from the query string and use a map to perform a redirect. Jekyll will not serve _.aspx_ pages, but if you try to retrieve a folder without a trailing slash, you will be redirected to its _index.html_ page. This is part of the HTTP standard. I created _posts/ShowPost.aspx.html_ that iterates over all posts and performs the redirect.
 
-{% highlight html %}
+```html
 {% raw %}
 ---
 permalink: '/ShowPost.aspx/'
@@ -78,7 +78,7 @@ if (url) {
 }
 </script>
 {% endraw %}
-{% endhighlight %}
+```
 
 #### Try It
 

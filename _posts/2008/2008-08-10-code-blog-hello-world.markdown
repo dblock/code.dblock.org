@@ -9,23 +9,23 @@ dblog_post_id: 1
 ---
 This is the first post in my new code blog, in which I plan to blabber about technology and code in which I am involved.
 
-{% highlight asm %}
+```asm
 int 10h;
-{% endhighlight %}
+```
 
-{% highlight c %}
+```c
 printf("Hello World");
-{% endhighlight %}
+```
 
-{% highlight cpp %}
+```cpp
 std::wcout << L"Hello World" << std::endl;
-{% endhighlight %}
+```
 
-{% highlight c# %}
+```csharp
 Console.WriteLine("Hello World");
-{% endhighlight %}
+```
 
-{% highlight js %}
+```js
 console.log("Hello World");
-{% endhighlight %}
+```
 

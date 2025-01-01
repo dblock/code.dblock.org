@@ -39,19 +39,19 @@ You can run `dokku` to get all the available commands.
 
 My bot stores data in MongoDB, so I need to get that into Dokku.
 
-{% highlight bash %}
+```bash
 dokku plugin:install https://github.com/dokku/dokku-mongo.git mongo
-{% endhighlight %}
+```
 
 Create a database. This actually starts a MongoDB instance which is not accessible from the outside world.
 
-{% highlight bash %}
+```bash
 root@dblock-plum:/# dokku mongo:create market-bot
 -----> Starting container
        Waiting for container to be ready
 =====> MongoDB container created: market-bot
        DSN: mongodb://market-bot:******@dokku-mongo-market-bot:27017/market-bot
-{% endhighlight %}
+```
 
 Of course you don't have to do any of this and signup for a MongoDB hosting provider like MongoLab or Compose, too.
 
@@ -61,35 +61,35 @@ See also [Installing and Upgrading MongoDB in Dokku](/2018/07/27/installing-and-
 
 Creating an app is very similar to Heroku. In fact, this uses [herokuish](https://github.com/gliderlabs/herokuish), a utility for emulating Heroku build and runtime tasks in containers, so from now on everything pretty much looks like Heroku.
 
-{% highlight bash %}
+```bash
 root@dblock-plum:/# dokku apps:create market-bot
 Creating market-bot... done
-{% endhighlight %}
+```
 
 We want to link the MongoDB container to this app, ie. publish a `MONGO_URL` configuration setting to the app and connect the apps logically.
 
-{% highlight bash %}
+```bash
 root@dblock-plum:/# dokku mongo:link market-bot market-bot
 no config vars for market-bot
 -----> Setting config vars
        MONGO_URL: mongodb://market-bot:******@dokku-mongo-market-bot:27017/market-bot
 -----> Restarting app market-bot
 App market-bot has not been deployed
-{% endhighlight %}
+```
 
 Any other environment variable can be set as well.
 
-{% highlight bash %}
+```bash
 root@dblock-plum:/# dokku config:set market-bot SLACK_CLIENT_ID=... SLACK_CLIENT_SECRET=... RACK_ENV=production LANG=en_US.UTF-8
-{% endhighlight %}
+```
 
 ### Supervisord
 
 Install [dokku-logging-supervisord](https://github.com/sehrope/dokku-logging-supervisord) to auto-restart crashing processes, just like on Heroku. Use [this fork](https://github.com/rsteckler/dokku-logging-supervisord) to avoid [docker-locking-supervisord#34](https://github.com/sehrope/dokku-logging-supervisord/issues/34) which points to [docker#18543](https://github.com/docker/docker/issues/18543) as a bug that causes hangs on restart.
 
-{% highlight bash %}
+```bash
 root@dblock-plum:/# dokku plugin:install https://github.com/rsteckler/dokku-logging-supervisord.git
-{% endhighlight %}
+```
 
 This will also cause application log files to go into `/var/log/dokku/[app name]`, so you can `tail -f` those normally.
 
@@ -97,17 +97,17 @@ This will also cause application log files to go into `/var/log/dokku/[app name]
 
 Dokku supports Git workflow. Add a remote and push code to it.
 
-{% highlight bash %}
+```bash
 ~/slack-market (master)$ git remote add dokku dokku@dblock-plum.digitalocean.playplay.io:market-bot
 ...
 
 ~/slack-market (master)$ git push dokku master
 ...
-{% endhighlight %}
+```
 
 The app is now available at _market-bot.dblock-plum.digitalocean.playplay.io_, much like any _herokuapp.com_ applications. I added a DNS CNAME [market.playplay.io](https://market.playplay.io) entry pointing here and told Dokku about it.
 
-{% highlight bash %}
+```bash
 root@dblock-plum:~# dokku domains:add market-bot market.playplay.io
 -----> Configuring market-bot.dblock-plum.digitalocean.playplay.io...(using /var/lib/dokku/plugins/available/nginx-vhosts/templates/nginx.conf.template)
 -----> Configuring market.playplay.io...(using /var/lib/dokku/plugins/available/nginx-vhosts/templates/nginx.conf.template)
@@ -115,17 +115,17 @@ root@dblock-plum:~# dokku domains:add market-bot market.playplay.io
 -----> Running nginx-pre-reload
        Reloading nginx
 -----> Added market.playplay.io to market-bot
-{% endhighlight %}
+```
 
 ### Hot Deploys
 
 When a new version of a bot is deployed, Dokku will wait `DOKKU_WAIT_TO_RETIRE` to shutdown the previous instance. You may not want two instances of a bot to hang around and either set this time to zero or a smaller number.
 
-{% highlight bash %}
+```bash
 root@dblock-plum:~# dokku config:set --global DOKKU_WAIT_TO_RETIRE=0
 -----> Setting config vars
        DOKKU_WAIT_TO_RETIRE: 5
-{% endhighlight %}
+```
 
 ### New Relic
 
@@ -133,22 +133,22 @@ Sign up for New Relic and configure it for Docker as described [here](https://do
 
 ![NewRelic]({{ site.url }}/images/posts/2016/2016-02-08-running-slack-bots-on-digital-ocean-with-dokku/newrelic.png)
 
-{% highlight bash %}
+```bash
 dokku config:set market-bot NEW_RELIC_APP_NAME=market-bot NEW_RELIC_LICENSE_KEY=...
-{% endhighlight %}
+```
 
 ### Lets Encrypt
 
 Setup SSL as described [here](https://medium.com/@pimterry/effortlessly-add-https-to-dokku-with-lets-encrypt-900696366890).
 
-{% highlight bash %}
+```bash
 root@dblock-plum:~# dokku plugin:update letsencrypt
 ...
-{% endhighlight %}
+```
 
 For a new app.
 
-{% highlight bash %}
+```bash
 root@dblock-plum:~# dokku domains:add market-bot market.playplay.io
 -----> Added market.playplay.io to market-bot
 ...
@@ -161,7 +161,7 @@ root@dblock-plum:~# dokku letsencrypt market-bot
 =====> Let's Encrypt market-bot
 ...
 done
-{% endhighlight %}
+```
 
 ### Things I Will Miss
 

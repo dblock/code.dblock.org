@@ -28,7 +28,7 @@ at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
 
 We're in the middle of an Ajax POST. Examining the HTTP request we find that it doesn't have a body. This explains why GWT is throwing this exception, but doesn't explain why this happens. I asked for help on both the [GWT group](https://groups.google.com/group/google-web-toolkit/browse_thread/thread/6039401ab4221f7c) and on EXTJs premium forum, but didn't get anything useful.
 
-{% highlight http %}
+```http
 POST /dbprotect/com.example.gwt.main/service/ServiceRPC HTTP/1.1
 Accept: */*
 Accept-Language: en-us
@@ -40,7 +40,7 @@ Content-Length: 0
 Connection: Keep-Alive
 Cache-Control: no-cache
 Authorization: Negotiate TlRMTVNTUAABAAAAB7IIogkACQAxAAAACQAJACgAAAAFAs4OAAAAD0RET1VCLVJFRFdPUktHUk9VUA==
-{% endhighlight %}
+```
 
 #### The Issue
 

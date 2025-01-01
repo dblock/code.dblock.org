@@ -15,7 +15,7 @@ To author tests, I started with reading the API documentation. For example, I [r
 
 The basic example that refreshes all indices was easy.
 
-{% highlight yaml %}
+```yaml
 $schema: ../../json_schemas/test_story.schema.yaml
 
 description: Test _refresh.
@@ -26,9 +26,9 @@ chapters:
     method: POST
     response:
       status: 200
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```bash
 $ npm run test:spec--insecure -- --tests tests/indices/refresh.yaml 
 
 > opensearch_api_tools@1.0.0 test:spec--insecure
@@ -37,11 +37,11 @@ $ npm run test:spec--insecure -- --tests tests/indices/refresh.yaml
 OpenSearch 2.15.0
 
 PASSED  refresh.yaml (.../tests/indices/refresh.yaml)
-{% endhighlight %}
+```
 
 Then, I tried using the query parameters.
 
-{% highlight yaml %}
+```yaml
 - synopsis: Refresh an index.
     path: /{index}/_refresh
     method: POST
@@ -50,11 +50,11 @@ Then, I tried using the query parameters.
       ignore_unavailable: true
       allow_no_indices: false
       expand_wildcard: all # incorrect
-{% endhighlight %}
+```
 
 This failed.
 
-{% highlight bash %}
+```bash
 $ npm run test:spec--insecure -- --tests tests/indices/refresh.yaml 
 
 > opensearch_api_tools@1.0.0 test:spec--insecure
@@ -78,11 +78,11 @@ ERROR   refresh.yaml (.../tests/indices/refresh.yaml)
             ERROR   RESPONSE STATUS (Expected status 200, ...)
             SKIPPED RESPONSE PAYLOAD BODY
             SKIPPED RESPONSE PAYLOAD SCHEMA
-{% endhighlight %}
+```
 
 The failure is with the `expand_wildcard` parameter, which is misspelled and should be `expand_wildcards`.
 
-{% highlight yaml %}
+```yaml
 - synopsis: Refresh an index.
     path: /{index}/_refresh
     method: POST
@@ -93,11 +93,11 @@ The failure is with the `expand_wildcard` parameter, which is misspelled and sho
       expand_wildcards: all
     response:
       status: 200
-{% endhighlight %}
+```
 
 The corrected test passes.
 
-{% highlight bash %}
+```bash
 $ npm run test:spec--insecure -- --tests tests/indices/refresh.yaml --verbose
 
 > opensearch_api_tools@1.0.0 test:spec--insecure
@@ -121,7 +121,7 @@ PASSED  refresh.yaml (.../tests/indices/refresh.yaml)
             PASSED  RESPONSE STATUS
             PASSED  RESPONSE PAYLOAD BODY
             PASSED  RESPONSE PAYLOAD SCHEMA
-{% endhighlight %}
+```
 
 All we have left is to fix the documentation in [documentation-website#7620](https://github.com/opensearch-project/documentation-website/pull/7620). I also fixed a bug in `PUT mapping` in [documentation-website#7652](https://github.com/opensearch-project/documentation-website/pull/7652) and corrected the type of `include_defaults` in `GET /_settings` in [documentation-website#7657](https://github.com/opensearch-project/documentation-website/pull/7657).
 

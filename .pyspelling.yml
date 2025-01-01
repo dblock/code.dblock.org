@@ -10,23 +10,31 @@ matrix:
     pipeline:
       - pyspelling.filters.context:
           context_visible_first: true
-          # ignore highlights
+          escapes: \\[\\`~]
           delimiters:
-            # ignore jekyll multiline magic highlights {% ... %}
-            - open: '(?s)^\{\% highlight .* \%\}$'
-              close: '^\{\% endhighlight \%\}$'
-            # ignore the rest of jekyll magic commands
-            - open: '{%'
-              close: '%}'
+            - open: "(?s)^(?P<open> *`{3,})([a-z+]*)$"
+              close: "^(?P=open)$"
+            - open: "(?P<open>`+)"
+              close: "(?P=open)"
+            - open: "{%"
+              close: "%}"
+            - open: "^(redirect_from:)"
+              close: "$"
       - pyspelling.filters.markdown:
           markdown_extensions:
             - pymdownx.superfences
+            - markdown.extensions.extra
       - pyspelling.filters.html:
-          comments: false
+          comments: true
+          attributes:
+            - title
+            - alt
           ignores:
-            - code
-            - pre
+            - ":matches(code, pre)"
+            - "code"
+            - "pre"
     sources:
+      - "!_styles/**/*.md"
       - "**/*.md"
       - "**/*.markdown"
     default_encoding: utf-8

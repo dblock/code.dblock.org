@@ -11,13 +11,13 @@ In writing new MSI installers, you must think about upgrade. I always recommend 
 
 We include the following file in every installer, as is.
 
-{% highlight xml %}
+```xml
 <?include Runtime.wxi?>
-{% endhighlight %}
+```
 
 Runtime.wxi follows.
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Include xmlns="https://schemas.microsoft.com/wix/2006/wi">
 
@@ -67,20 +67,20 @@ Runtime.wxi follows.
     </Custom>
   </InstallUISequence>
 </Include>
-{% endhighlight %}
+```
 
 Don't forget to define the `OLDERVERSION_BEINGUPGRADED` and `NEWERVERSION_INSTALLED` properties in the `Upgrade` table.
 
-{% highlight xml %}
+```xml
 <Upgrade Id="$(var.UpgradeCode)">
   <UpgradeVersion Property="OLDERVERSION_BEINGUPGRADED" Minimum="0.0.0" Maximum="$(var.ProductVersion)" IncludeMaximum="no" />
   <UpgradeVersion Property="NEWERVERSION_INSTALLED" OnlyDetect="yes" Minimum="$(var.ProductVersion)" IncludeMinimum="no" />
 </Upgrade>
-{% endhighlight %}
+```
 
 And change the install sequence for major upgrade.
 
-{% highlight xml %}
+```xml
 <InstallExecuteSequence>
   <FindRelatedProducts Before="AppSearch" />
   <AppSearch Before="LaunchConditions" />
@@ -90,6 +90,6 @@ And change the install sequence for major upgrade.
   <FindRelatedProducts Before="AppSearch" />
   <AppSearch Before="LaunchConditions" />
 </InstallUISequence>
-{% endhighlight %}
+```
 
 Initially we had to deal with a legacy InstallShield installer and these properties were more complicated. Read [this post](/upgrading-freshinstall-maintenance-and-other-msi-convenience-properties) instead if that's what you're trying to do.

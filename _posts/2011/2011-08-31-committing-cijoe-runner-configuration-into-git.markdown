@@ -13,7 +13,7 @@ Here's what a typical _git-config/config_ looks like. It's the same as your usua
 
 We're going to have a remote [origin] and a [cijoe] section that tells CIJoe what to do.
 
-{% highlight ini %}
+```ini
 [remote "origin"]
   fetch = +refs/heads/\*:refs/remotes/origin/\*
   url = git@github.com:name/project.git
@@ -23,11 +23,11 @@ We're going to have a remote [origin] and a [cijoe] section that tells CIJoe wha
 [cijoe]
   runner = ((bundle check || bundle install) && bundle exec spec spec )
   buildqueue = true
-{% endhighlight %}
+```
 
 We can also have two scripts, _git-config/build-worked_ and _git-config/build-failed_. Here's the latter.
 
-{% highlight sh %}
+```sh
 #!/bin/sh
 echo "
 Visit https://ci.example.com:9000/ for details
@@ -38,7 +38,7 @@ $MESSAGE
 
 $OUTPUT
 " | mail -s "[example] BUILD FAILED $SHA" --to dev@example.com
-{% endhighlight %}
+```
 
 How do we hook this up? CIJoe tells us to place all this stuff into _.git/hooks_.
 

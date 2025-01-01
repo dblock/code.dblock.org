@@ -9,7 +9,7 @@ dblog_post_id: 180
 ---
 ![anarchy]({{ site.url }}/images/posts/2011/2011-03-03-ruby-unlearning-oop-and-embracing-anarchy/anarchy_4.jpg)
 
-Ruby is an object oriented language, but not quite in the sense of Java or C++. It's a **D** ynamically **I** nterpreted **L** anguage **B** ecoming **E** ventually **R** eflective and **T** yped (DILBERT), with a lot of OOP flavor sprinkled all over it. It's basically magical.
+Ruby is an object oriented language, but not quite in the sense of Java or C++. It's a Dynamically Interpreted Language Becoming Eventually Reflective and Typed (DILBERT), with a lot of OOP flavor sprinkled all over it. It's basically magical.
 
 Today I had to unlearn interfaces.
 

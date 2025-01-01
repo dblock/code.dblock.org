@@ -11,7 +11,7 @@ I recently helped debug [Grape#1880](https://github.com/ruby-grape/grape/issues/
 
 Let's write a simple Grape API that returns a value for a header.
 
-{% highlight ruby %}
+```ruby
 module Acme
   class Headers < Grape::API
     format :json
@@ -26,13 +26,13 @@ module Acme
     end
   end
 end
-{% endhighlight %}
+```
 
 ### Default Headers
 
 The default headers in a Rack test are `Cookie` and `Host`. 
 
-{% highlight ruby %}
+```ruby
   it 'returns all headers' do
     get '/api/headers'
     expect(JSON.parse(last_response.body)).to eq(
@@ -45,45 +45,45 @@ The default headers in a Rack test are `Cookie` and `Host`.
     get '/api/headers/Host'
     expect(JSON.parse(last_response.body)).to eq('Host' => 'example.org')
   end
-{% endhighlight %}
+```
 
 Curl sends more headers by default.
 
-{% highlight bash %}
+```bash
 $ curl https://localhost:9292/api/headers
 
 {"Host":"localhost:9292","User-Agent":"curl/7.54.0","Accept":"*/*","Version":"HTTP/1.1"}
-{% endhighlight %}
+```
 
 ### Pascal Case Conversion
 
 Headers in Grape are always [converted](https://github.com/ruby-grape/grape/commit/f6f585ea6cc720e779a37f756b9e9cda4786dad2) to pascal-case.
 
-{% highlight bash %}
+```bash
 $ curl -H eLiTe:42 https://localhost:9292/api/headers/Elite
 
 {"Elite":"42"}
-{% endhighlight %}
+```
 
 This means that a pascal-case-looking header `ReticulatedSpline` is converted to `Reticulatedspline`.
 
-{% highlight bash %}
+```bash
 curl -H ReticulatedSpline:42 https://localhost:9292/api/headers/Reticulatedspline
 {"Reticulatedspline":"42"}
-{% endhighlight %}
+```
 
 And a lowercase `reticulated-spline` is converted to `Reticulated-Spline`, similarly to `User-Agent`.
 
-{% highlight bash %}
+```bash
 curl -H reticulated-spline:42 https://localhost:9292/api/headers/Reticulated-Spline 
 {"Reticulated-Spline":"42"}
-{% endhighlight %}
+```
 
 ### Rack
 
 Rack stores HTTP headers in `ENV` as all uppercase with an `HTTP_` prefix. You can pass the Rack env as the the second parameter in your specs. In the example below `HTTP_RETICULATED_SPLINE` becomes `Reticulated-Spline` and `SOMETHING_ELSE` is only available in `ENV['SOMETHING_ELSE']` and is not a header. 
 
-{% highlight ruby %}
+```ruby
 get '/api/headers', nil, { 
   'HTTP_RETICULATED_SPLINE' => 42, 
   'SOMETHING_ELSE' => 1 
@@ -94,21 +94,21 @@ expect(JSON.parse(last_response.body)).to eq(
   'Reticulated-Spline' => 42
 )
 end
-{% endhighlight %}
+```
 
 To avoid confusion use the `header` helper that behaves as one would expect.
 
-{% highlight ruby %}
+```ruby
 header 'Reticulated-Spline', 42
 get '/api/headers/Reticulated-Spline'
 expect(JSON.parse(last_response.body)).to eq('Reticulated-Spline' => 42)
-{% endhighlight %}
+```
 
 ### Rails
 
 Rails `get` takes a `Hash`, but it's still a wrapper on top of Rack, sort of. You can specify a header as `Header` or `HTTP_...`.
 
-{% highlight ruby %}
+```ruby
 get '/api/headers', headers: {
   'HTTP_RETICULATED_SPLINE' => 42,
   'Something' => 1,
@@ -121,7 +121,7 @@ expect(JSON.parse(response.body)).to eq(
   'Reticulated-Spline' => 42,
   'Something' => 1
 )
-{% endhighlight %}
+```
 
 ### Links
 

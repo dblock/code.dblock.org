@@ -9,21 +9,21 @@ This is a neat feature available in OpenSearch via an optional `ingest-attachmen
 
 Download OpenSearch, install the `ingest-attachment` plugin, and start it.
 
-{% highlight bash %}
+```bash
 wget https://artifacts.opensearch.org/releases/bundle/opensearch/2.10.0/opensearch-2.10.0-linux-x64.tar.gz
 tar vfxz opensearch-2.10.0-linux-x64.tar.gz
 cd opensearch-2.10.0/
 ./bin/opensearch-plugin install ingest-attachment
 ./opensearch-tar-install.sh
-{% endhighlight %}
+```
 
 I'm using OpenSearch 2.10.
 
-{% highlight bash %}
+```bash
 curl -u admin:admin -k https://localhost:9200 | jq
-{% endhighlight %}
+```
 
-{% highlight json %}
+```json
 {
   "name": "ip-172-31-42-1",
   "cluster_name": "opensearch",
@@ -41,33 +41,33 @@ curl -u admin:admin -k https://localhost:9200 | jq
   },
   "tagline": "The OpenSearch Project: https://opensearch.org/"
 }
-{% endhighlight %}
+```
 
 Create an ingest pipeline.
 
-{% highlight bash %}
+```bash
 $ curl -k -u admin:admin -X PUT -H "Content-type:application/json" --data '{"description":"Extract","processors":[{"attachment":{"field":"data","indexed_chars":-1}}]}' https://localhost:9200/_ingest/pipeline/attachment | jq
-{% endhighlight %}
+```
 
-{% highlight json %}
+```json
 {
     "acknowledged": true
 }
-{% endhighlight %}
+```
 
 Download a dummy PDF.
 
-{% highlight bash %}
+```bash
 $ wget https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
-{% endhighlight %}
+```
 
 Ingest the PDF.
 
-{% highlight bash %}
+```bash
 $ curl -k -u admin:admin -X PUT -H "Content-type:application/json" --data '{"filename":"dummy.pdf","title":"Dummy PDF","data":"'"$(base64 -w 0 dummy.pdf)"'"}' https://localhost:9200/my_index/_doc/1?pipeline=attachment | jq
-{% endhighlight %}
+```
 
-{% highlight json %}
+```json
 {
     "_index": "my_index",
     "_id": "1",
@@ -81,15 +81,15 @@ $ curl -k -u admin:admin -X PUT -H "Content-type:application/json" --data '{"fil
     "_seq_no": 0,
     "_primary_term": 1
 }
-{% endhighlight %}
+```
 
 Search.
 
-{% highlight bash %}
+```bash
 $ curl -k -u admin:admin -X POST -H "Content-type:application/json" --data '{"query":{"match":{"attachment.content":{"query":"dummy"}}}}' https://localhost:9200/my_index/_search | jq
-{% endhighlight %}
+```
 
-{% highlight json %}
+```json
 {
   "took": 2,
   "timed_out": false,
@@ -127,5 +127,5 @@ $ curl -k -u admin:admin -X POST -H "Content-type:application/json" --data '{"qu
     ]
   }
 }
-{% endhighlight %}
+```
 

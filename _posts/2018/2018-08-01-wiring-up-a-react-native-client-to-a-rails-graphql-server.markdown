@@ -22,15 +22,15 @@ Make a Rails API server with MongoDB.
 
 Follow [my tutorial on exposing a GraphQL API](https://code.dblock.org/2017/10/23/building-and-consuming-a-graphql-api-in-ruby-on-rails.html) and use warden to keep authenticated user context. Since Warden requires cookies, re-add the `ActionDispatch::Cookies` middleware to `config/application.rb`.
 
-{% highlight ruby %}
+```ruby
 config.middleware.use ActionDispatch::Cookies
 config.middleware.use ActionDispatch::Session::CookieStore, key: '_namespace_key'
-{% endhighlight %}
+```
 
 
 A GraphQL mutation creates a user.
 
-{% highlight ruby %}
+```ruby
 Mutations::CreateUserMutation = GraphQL::Relay::Mutation.define do
   name 'createUser'
   input_field :email, !types.String
@@ -47,14 +47,14 @@ Mutations::CreateUserMutation = GraphQL::Relay::Mutation.define do
   { user: user }
 }
 end
-{% endhighlight %}
+```
 
 
 Similar GraphQL mutations login and logout users.
 
 When serializing users with Warden, don't serialize the whole object or you'll get a `ActionDispatch::Cookies::CookieOverflow` exception.
 
-{% highlight ruby %}
+```ruby
 Rails.application.config.middleware.insert_after Rack::ETag, Warden::Manager do |manager|
   manager.failure_app = GraphqlController
   Warden::Manager.serialize_into_session do |user|
@@ -64,7 +64,7 @@ Rails.application.config.middleware.insert_after Rack::ETag, Warden::Manager do 
     User.find(id)
   end
 end
-{% endhighlight %}
+```
 
 You can see the entire code in [33-minutes-server@52a249](https://github.com/33-minutes/33-minutes-server/commit/52a24924b5b0bfae41fa33ef8141099cbf66c351) and [33-minutes-server@0c3c4d](https://github.com/33-minutes/33-minutes-server/commit/0c3c4dea50b1d0eff4af27b9f540d129f78dbcaa).
 
@@ -78,7 +78,7 @@ Run `rake graphql:schema:idl` to generate a `schema.graphql` file and copy it to
 
 I used a switch navigator to toggle between the signed-in and signed-out states in [33-minutes-app@9f252c](https://github.com/33-minutes/33-minutes-app/commit/9f252cba4a92a89d006b14cf3fb7630e19b62636). Each state is its own stack navigator.
 
-{% highlight js %}
+```js
 const SignedOut = createStackNavigator({
   SignIn: {
     screen: SignIn
@@ -112,11 +112,11 @@ export const createRootNavigator = (signedIn = false) => {
     }
   )
 }
-{% endhighlight %}
+```
 
 The entire app is that navigator.
 
-{% highlight js %}
+```js
 export default class App extends Component {
   render() {
     const Layout = createRootNavigator();
@@ -125,7 +125,7 @@ export default class App extends Component {
     );
   }
 }
-{% endhighlight %}
+```
 
 To toggle between the states, navigate to either `SignedIn` or `SignedOut` (see the mutations below).
 
@@ -133,11 +133,11 @@ To toggle between the states, navigate to either `SignedIn` or `SignedOut` (see 
 
 The [Relay Quick Start Guide](https://web.archive.org/web/20210514161819/https://relay.dev/docs/v10.1.0/quick-start-guide/) is pretty good. We throw in `react-relay` with `yarn add react-relay` and `relay-compiler` with `yarn add -dev relay-compiler`. Add a `relay` script into `package.json`.
 
-{% highlight json %}
+```json
 "scripts": {
   "relay": "relay-compiler --src ./ --schema ./schema/schema.graphql --extensions=js --extensions=jsx"
 }
-{% endhighlight %}
+```
 
 Run `yarn relay`. Generally you will be running `yarn relay --watch`, which generates JavaScript code under a `__generated__` folders every time something changes. You will also have to restart this process when schema changes. This is not integrated with the rest of the compiler toolchain because <strike>that would be too easy</strike>.
 
@@ -145,7 +145,7 @@ Run `yarn relay`. Generally you will be running `yarn relay --watch`, which gene
 
 Copy-paste a relay environment into `app/Environment.js`. Note my hard-coded `https://localhost:3000/graphql` for the Rails server. I will make this dynamic in the future.
 
-{% highlight js %}
+```js
 import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 
 function fetchQuery(operation, variables) {
@@ -169,13 +169,13 @@ const environment = new Environment({
 });
 
 export default environment;
-{% endhighlight %}
+```
 
 ### Create User Mutation
 
 Copy-paste a relay-style mutation into `app/mutations/CreateUserMutation.js`.
 
-{% highlight js %}
+```js
 import { graphql } from 'react-relay'
 import commitMutation from 'relay-commit-mutation-promise'
 
@@ -200,13 +200,13 @@ function commit({ environment, input }) {
 export default {
   commit
 }
-{% endhighlight %}
+```
 
 ### Create a User
 
 Invoke the mutation, switch to a signed-in navigator upon success, or set an error message otherwise.
 
-{% highlight js %}
+```js
 CreateUserMutation.commit({
   environment,
   input: {
@@ -219,7 +219,7 @@ CreateUserMutation.commit({
 }).catch(error => {
   this.setState({ message: error.message });
 });
-{% endhighlight %}
+```
 
 Login is very similar. For now we're using cookies to store a session and don't remember anything on the client, which means that reloading the app logs the user out.
 
@@ -227,7 +227,7 @@ Login is very similar. For now we're using cookies to store a session and don't 
 
 To show data wrap up a GraphQL query into a [QueryRenderer](https://web.archive.org/web/20240530124102/https://relay.dev/docs/v9.1.0/query-renderer/). You'll always need one.
 
-{% highlight js %}
+```js
 render() {
   return (
     <QueryRenderer
@@ -255,7 +255,7 @@ render() {
     />
   )
 }
-{% endhighlight %}
+```
 
 ## Code
 
