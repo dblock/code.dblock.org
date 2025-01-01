@@ -1,2 +1,5 @@
 https://github.com/pulls?q=is:pr+author:dblock+archived:false+user:opensearch-project+is:closed
 https://github.com/pulls?q=is:pr+author:dblock+archived:false+user:opensearch-project+is:closed+is:merged
+https://github.com/pulls?q=is%3Apr+author%3Adblock+archived%3Afalse+user%3Aopensearch-project+is%3Aclosed+is%3Amerged+merged%3A2022-06-01..2024-09-16
+https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+org%3Aopensearch-project+label%3A%22good+first+issue%22
+https://github.com/issues?q=is%3Aopen+is%3Aissue+author%3Adblock+archived%3Afalse+label%3A%22good+first+issue%22%2C%22help+wanted%22
