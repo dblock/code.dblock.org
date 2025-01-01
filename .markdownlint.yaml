@@ -30,13 +30,13 @@ MD007: false
   # start_indent: 2
 
 # MD009/no-trailing-spaces : Trailing spaces : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md009.md
-MD009: false
-  # # Spaces for line break
-  # br_spaces: 2
-  # # Allow spaces for empty lines in list items
-  # list_item_empty_lines: false
-  # # Include unnecessary breaks
-  # strict: false
+MD009:
+  # Spaces for line break
+  br_spaces: 2
+  # Allow spaces for empty lines in list items
+  list_item_empty_lines: false
+  # Include unnecessary breaks
+  strict: false
 
 # MD010/no-hard-tabs : Hard tabs : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md010.md
 # MD010: false

@@ -224,7 +224,7 @@ vec2	[0.2,0.3,0.4]	{'genre':'action'}
 
 ### MongoDB
 
-[MongoDB Atlas](https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-overview/) enables semantic, hybrid, generative search, and supports filtering in the serverless version. Sign up on [on their website](https://cloud.mongodb.com/) and create a new database on the free tier. 
+[MongoDB Atlas](https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-overview/) enables semantic, hybrid, generative search, and supports filtering in the serverless version. Sign up on [on their website](https://cloud.mongodb.com/) and create a new database on the free tier.
 
 Connecting to MongoDB Atlas using [pymongo](https://pymongo.readthedocs.io/en/stable/) is similar to any MongoDB.
 
@@ -900,6 +900,7 @@ vector-app/
 ```
 
 `services.xml`:
+
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <services version="1.0" xmlns:deploy="vespa" xmlns:preprocess="properties">
@@ -923,6 +924,7 @@ vector-app/
 ```
 
 `vector.sd`:
+
 ```xml
 schema vector {
     document vector {

@@ -5,7 +5,7 @@ date: 2024-07-12
 tags: [opensearch]
 comments: true
 ---
-I've previously [written](/2024/07/02/using-opensearch-cat-api-response-formats.html) about the [OpenSearch OpenAPI Specification](https://github.com/opensearch-project/opensearch-api-specification). 
+I've previously [written](/2024/07/02/using-opensearch-cat-api-response-formats.html) about the [OpenSearch OpenAPI Specification](https://github.com/opensearch-project/opensearch-api-specification).
 
 One of the neat features of the API spec repo is [a set of declarative YAML integration tests](https://github.com/opensearch-project/opensearch-api-specification/tree/main/tests). This turned out to be really useful in fixing bugs in the [OpenSearch API reference documentation](https://github.com/opensearch-project/documentation-website) that is [published to opensearch.org](https://opensearch.org/docs/latest/api-reference).
 
@@ -29,7 +29,7 @@ chapters:
 ```
 
 ```bash
-$ npm run test:spec--insecure -- --tests tests/indices/refresh.yaml 
+$ npm run test:spec--insecure -- --tests tests/indices/refresh.yaml
 
 > opensearch_api_tools@1.0.0 test:spec--insecure
 > ts-node tools/src/tester/test.ts --opensearch-insecure --tests tests/indices/refresh.yaml
@@ -55,7 +55,7 @@ Then, I tried using the query parameters.
 This failed.
 
 ```bash
-$ npm run test:spec--insecure -- --tests tests/indices/refresh.yaml 
+$ npm run test:spec--insecure -- --tests tests/indices/refresh.yaml
 
 > opensearch_api_tools@1.0.0 test:spec--insecure
 > ts-node tools/src/tester/test.ts --opensearch-insecure --tests tests/indices/refresh.yaml

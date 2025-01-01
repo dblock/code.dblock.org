@@ -11,7 +11,7 @@ Thus, I recently added support for [`text/plain`](https://github.com/opensearch-
 
 I've heard of YAML, but what is SMILE or CBOR?!
 
-OpenSearch `_cat` API stands for "Compact and Aligned Text". 
+OpenSearch `_cat` API stands for "Compact and Aligned Text".
 
 ```bash
 $ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat

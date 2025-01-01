@@ -45,7 +45,7 @@ As projects evolve, their codebase can become messy and difficult to maintain. C
 
 Most projects have automated linting rules in place to enforce coding standards and best practices. Contributors can help by identifying and fixing linting errors, ensuring that the codebase adheres to the project's coding standards.
 
-You can begin by adding a linter if there isn't one such as [opensearch-api-specification#312](https://github.com/opensearch-project/opensearch-api-specification/pull/312), upgrade RuboCop in Ruby projects such as [grape#2497](https://github.com/ruby-grape/grape/pull/2497), or fix actual violations being ignored in `.rubocop_todo.yml` such as in [grape#2459](https://github.com/ruby-grape/grape/pull/2459). 
+You can begin by adding a linter if there isn't one such as [opensearch-api-specification#312](https://github.com/opensearch-project/opensearch-api-specification/pull/312), upgrade RuboCop in Ruby projects such as [grape#2497](https://github.com/ruby-grape/grape/pull/2497), or fix actual violations being ignored in `.rubocop_todo.yml` such as in [grape#2459](https://github.com/ruby-grape/grape/pull/2459).
 
 #### Reporting and Engaging on Issues
 

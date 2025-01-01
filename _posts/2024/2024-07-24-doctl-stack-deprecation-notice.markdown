@@ -5,7 +5,7 @@ date: 2024-07-24
 tags: [digitalocean]
 comments: true
 ---
-I use [DigitalOcean](https://m.do.co/c/5b26011f9a9b) to [run a bunch of apps](https://code.dblock.org/2023/01/15/migrating-from-dokku-to-digital-ocean-apps.html). It's working out great. 
+I use [DigitalOcean](https://m.do.co/c/5b26011f9a9b) to [run a bunch of apps](https://code.dblock.org/2023/01/15/migrating-from-dokku-to-digital-ocean-apps.html). It's working out great.
 
 Yesterday, they sent me an email with a menacing _"Ubuntu 18 is no longer supported and so it's not receiving security updates."_ note. To be fair, Ubuntu 18 is very old.
 

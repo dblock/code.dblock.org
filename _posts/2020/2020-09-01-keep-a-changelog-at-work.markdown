@@ -21,7 +21,7 @@ So far, keeping a personal CHANGELOG has had several clear benefits.
 
 2. My CHANGELOG helped a lot of new Engineers joining the organization. Many have said that my early CHANGELOG entries were helpful to understand what one actually does during their first weeks at Amazon. For example, I spent a huge amount of hours in training, set up a laptop backup drive, and made my first non-trivial code change during week 2.
 
-3. My CHANGELOG serves as a personal wiki and reference. I often need to refer to an existing document, person or conversation. Remember reading a document last week? I know exactly where to find that link!  
+3. My CHANGELOG serves as a personal wiki and reference. I often need to refer to an existing document, person or conversation. Remember reading a document last week? I know exactly where to find that link!
 
 4. My CHANGELOG serves as an internal motivator. It helps me to be honest with myself, and gives me data that helps me reflect on how much busy work I do vs. "actual" work and teaches me where and how I can learn and improve.
 

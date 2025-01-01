@@ -1,11 +1,11 @@
 ---
 layout: post
-title: To Wrap or Not to Wrap in Markdown?   
+title: To Wrap or Not to Wrap in Markdown?
 date: 2021-06-07
 tags: [markdown, oss]
 comments: true
 ---
-I keep antagonizing OSS contributors trying to wrap text in Markdown files, e.g. [here](https://github.com/opensearch-project/OpenSearch/pull/689#issuecomment-839241016) and [here](https://github.com/opensearch-project/OpenSearch/pull/712#issuecomment-855271225). 
+I keep antagonizing OSS contributors trying to wrap text in Markdown files, e.g. [here](https://github.com/opensearch-project/OpenSearch/pull/689#issuecomment-839241016) and [here](https://github.com/opensearch-project/OpenSearch/pull/712#issuecomment-855271225).
 
 Should one wrap text in .markdown files at 80 columns or should one not?
 
@@ -18,14 +18,14 @@ Markdown doesn't use line the breaks: whether you include a line break in your m
 For example, consider the following text wrapped at 23 characters for illustration purposes.
 
 ```
-A quick brown fox jumps 
+A quick brown fox jumps
 over the lazy dog.
 ```
 
 We swap "a" and "the", producing the following new text.
 
 ```
-The quick brown fox 
+The quick brown fox
 jumps over a lazy dog.
 ````
 

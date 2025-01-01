@@ -36,7 +36,7 @@ v8.3.0
 
 ### Hello World
 
-Create a file called `hello.ts`. It's JavaScript disguised as TypeScript for now. 
+Create a file called `hello.ts`. It's JavaScript disguised as TypeScript for now.
 
 ```ts
 console.log('hello world');
@@ -45,7 +45,7 @@ console.log('hello world');
 Run it.
 
 ```bash
-$ ts-node hello.ts 
+$ ts-node hello.ts
 hello world
 ```
 
@@ -81,12 +81,12 @@ function f() {
   });
 }
 
-f().then(function(result) { 
-  console.log(result); 
+f().then(function(result) {
+  console.log(result);
 });
 ```
 
-Now we can rewrite this in TypeScript and use [ES6 fat arrows](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/). We add a _type_ to `f()`, expressing that the function must promise (return a `Promise`) to return a `string`. We mark everything asynchronous with `async`, and use `await` to wait for the asynchronous `f` to finish. 
+Now we can rewrite this in TypeScript and use [ES6 fat arrows](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/). We add a _type_ to `f()`, expressing that the function must promise (return a `Promise`) to return a `string`. We mark everything asynchronous with `async`, and use `await` to wait for the asynchronous `f` to finish.
 
 ```ts
 async function f(): Promise<string> {
@@ -118,7 +118,7 @@ These are fixed by calling the compiler with `--lib es6`.
 
 ```bash
 error TS2304: Cannot find name 'setTimeout'.
-error TS2584: Cannot find name 'console'. 
+error TS2584: Cannot find name 'console'.
 ```
 
 These are fixed by including a target library with `--lib dom`.
@@ -148,14 +148,14 @@ Having to specify `-O` with a JSON for every invocation of `ts-node` is annoying
 It gets loaded automatically.
 
 ```bash
-$ ts-node async-function.ts 
+$ ts-node async-function.ts
 returned from f after a second
 ```
 
 ### Adding Lodash
 
 ```bash
-$ npm install --save lodash @types/lodash 
+$ npm install --save lodash @types/lodash
 ```
 
 Better, create a `package.json` and run `npm install`.
@@ -216,7 +216,7 @@ And an updated `tsconfig.json`.
 Run it.
 
 ```bash
-$ ts-node src/index.ts 
+$ ts-node src/index.ts
 [
   'returned from f after a second',
   'returned from f after a second',

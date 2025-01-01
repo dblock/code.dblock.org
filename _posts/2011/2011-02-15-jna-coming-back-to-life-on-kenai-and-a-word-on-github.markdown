@@ -29,7 +29,7 @@ If you find issues with the JNA site, please create them in JIRA.
 
 #### Source Control
 
-Check out JNA source code from `svn.java.net/svn/jna~svn/trunk`. 
+Check out JNA source code from `svn.java.net/svn/jna~svn/trunk`.
 
 **Update**: JNA is now [on GitHub](https://github.com/java-native-access/jna/).
 
