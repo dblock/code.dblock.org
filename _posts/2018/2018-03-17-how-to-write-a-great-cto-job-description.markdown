@@ -9,10 +9,10 @@ I don't think I've ever read a CTO job description cover-to-cover. Or seen many 
 
 I get about 5 CTO job descriptions a week. Am I the exception or the norm? I've asked around.
 
-> - Did you take your CTO job after seeing a job description?
-> - <b>Yes</b>
-> - Did you care to read it?
-> - <b>No</b>
+> * Did you take your CTO job after seeing a job description?
+> * <b>Yes</b>
+> * Did you care to read it?
+> * <b>No</b>
 
 I'm probably the norm.
 

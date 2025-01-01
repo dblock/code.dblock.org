@@ -31,7 +31,7 @@ Artsy tech needed a full reboot. The existing website was built in PHP with a J2
 
 ### Collaborating
 
-After seeing how much startup leaders  were willing to help us, I made a point to help newcomers in the New York startup community. In 2011 I taught a Ruby on Rails class, gave startup talks at General Assembly, and met every entrepreneur and Engineer in the coworking space. I created time for anyone who asked, while simultaneously coding and managing a rapidly expanding team. That investment would pay off tenfold.
+After seeing how much startup leaders were willing to help us, I made a point to help newcomers in the New York startup community. In 2011 I taught a Ruby on Rails class, gave startup talks at General Assembly, and met every entrepreneur and Engineer in the coworking space. I created time for anyone who asked, while simultaneously coding and managing a rapidly expanding team. That investment would pay off tenfold.
 
 I immediately got addicted to [Hacker News](https://news.ycombinator.com/). Don't roll your eyes, because it became very important when it came to hiring and building an Engineering brand. The post [Dear California Engineer - Your Commute is Killing You? Move to New York!](/2011/05/29/dear-california-engineer-your-commute-is-killing-you-move-to-new-york.html) was the first one to go viral. This was quickly followed the very controversial [Github is your Resume](/2011/07/14/github-is-your-new-resume.html).
 
@@ -93,4 +93,3 @@ I cannot thank each and every Artsy team member enough for giving me the life ch
 
 ![]({{site.url}}/images/posts/2019/2019-05-01-reflecting-on-eight-years-building-artsy/2018-05-10-artsy-with-jerry-saltz.jpg)
 <br><small>Artsy leadership team at David Zwirner Gallery, May 2018, w/Jerry Saltz</small>
-

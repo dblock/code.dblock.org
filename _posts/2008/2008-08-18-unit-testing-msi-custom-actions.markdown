@@ -85,4 +85,3 @@ You can now integrate this method with [CppUnit](https://cppunit.sourceforge.net
 ### Source Code
 
 I wrote a complete demo: a custom action and a small test that calls it, which you can find on [Github](https://github.com/dblock/codeproject/tree/master/UnitTestingCustomActions/Source).
-

@@ -37,4 +37,3 @@ This made it into a full blown test framework. We now author tests in C# and Jav
 [Download RI Here](https://github.com/dblock/remoteinstall)
 
 I want to thank [Application Security Inc.](https://web.archive.org/web/20131111165225/https://www.appsecinc.com) for helping me in making this happen and all the anonymous developers who have contributed code to RI here on Madison Ave.
-

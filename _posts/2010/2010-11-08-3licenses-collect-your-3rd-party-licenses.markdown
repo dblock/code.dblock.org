@@ -32,4 +32,3 @@ Are you currently copying individual _license.txt_ files "by hand" or are you in
 Here's what 3Licenses can produce.
 
 ![demo2]({{ site.url }}/images/posts/2010/2010-11-08-3licenses-collect-your-3rd-party-licenses/demo2_4.jpg)
-

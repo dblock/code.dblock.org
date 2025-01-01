@@ -12,4 +12,3 @@ I also dug up a fun piece of Vestris history, [the original audio](/images/posts
 <audio controls>
 	<source src='/images/posts/2019/2019-05-11-rebooting-vestris-dot-com/answering-machine.mp3' type='audio/mpeg'>
 </audio>
-

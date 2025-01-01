@@ -123,4 +123,3 @@ To test this in a local environment run `rake jobs:work` in parallel to `rails s
 #### Viewing Workers
 
 System administrators will find it convenient to see delayed jobs in the UI. [Here's our view and controller](https://gist.github.com/1008298) that appear in the admin interface to get you started.
-

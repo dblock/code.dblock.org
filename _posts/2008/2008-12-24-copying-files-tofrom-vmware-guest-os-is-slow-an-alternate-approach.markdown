@@ -133,4 +133,3 @@ public void CopyFileFromGuestToHost(string guestPath, string hostPath)
 ```
 
 The last thing that remains to be done to make the new copy compatible is to also copy directories and subdirectories. That's left as an exercise to the reader.
-

@@ -121,4 +121,3 @@ In our case we override `read()` and set the type depending on the `ForestTrustT
 #### Notes
 
 Committed to JNA under `com.sun.jna.platform.win32`.
-

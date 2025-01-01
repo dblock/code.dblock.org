@@ -1,17 +1,21 @@
 - [Contributing to code.dblock.org](#contributing-to-codedblockorg)
-    - [Fork the Project](#fork-the-project)
-    - [Install Ruby](#install-ruby)
-  - [Contribute Content](#contribute-content)
-    - [Create a Topic Branch](#create-a-topic-branch)
-    - [Add or Edit a Post](#add-or-edit-a-post)
-    - [Commit Changes](#commit-changes)
-    - [Push](#push)
-    - [Make a Pull Request](#make-a-pull-request)
-    - [Make Changes](#make-changes)
-    - [Rebase](#rebase)
-    - [Check on Your Pull Request](#check-on-your-pull-request)
-    - [Be Patient](#be-patient)
-  - [Thank You](#thank-you)
+  - [Fork the Project](#fork-the-project)
+  - [Install Ruby](#install-ruby)
+- [Contribute Content](#contribute-content)
+  - [Create a Topic Branch](#create-a-topic-branch)
+  - [Add or Edit a Post](#add-or-edit-a-post)
+  - [Commit Changes](#commit-changes)
+  - [Push](#push)
+  - [Make a Pull Request](#make-a-pull-request)
+  - [Make Changes](#make-changes)
+  - [Rebase](#rebase)
+  - [Check on Your Pull Request](#check-on-your-pull-request)
+  - [Be Patient](#be-patient)
+- [Misc](#misc)
+  - [Markdown Linter](#markdown-linter)
+  - [Spell Checker](#spell-checker)
+  - [Style Checker](#style-checker)
+- [Thank You](#thank-you)
 
 ## Contributing to code.dblock.org
 
@@ -139,6 +143,18 @@ It's likely that your change will not be merged and that the nitpicky maintainer
 
 ```bash
 markdownlint-cli2 "**/*.{md,markdown}" --config .markdownlint.yaml
+```
+
+### Spell Checker
+
+```bash
+pyspelling --config .pyspelling.yml
+```
+
+### Style Checker
+
+```bash
+vale .
 ```
 
 ## Thank You

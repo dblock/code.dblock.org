@@ -50,4 +50,3 @@ end
 ```
 
 Of course you must be careful that the collection doesn't change during the iteration. If you add or remove an item before you, or will skip elements or process some elements twice.
-

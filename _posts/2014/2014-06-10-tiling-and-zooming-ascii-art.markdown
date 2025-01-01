@@ -10,4 +10,3 @@ dblog_post_id: 415
 My slides from last night's iOSoho talk on tiling and zooming ASCII art are here: [https://www.slideshare.net/dblockdotorg/tiling-and-zooming-ascii-art-i-os-soho](https://www.slideshare.net/dblockdotorg/tiling-and-zooming-ascii-art-i-os-soho).
 
 The demo project is on Github: [https://github.com/dblock/ARImageViewInsideScrollView](https://github.com/dblock/ARImageViewInsideScrollView).
-

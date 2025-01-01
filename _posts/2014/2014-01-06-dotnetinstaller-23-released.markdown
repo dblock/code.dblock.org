@@ -20,4 +20,3 @@ Thanks to all the contributors!
 - MSI: https://github.com/downloads/dblock/dotnetinstaller/dotNetInstaller.2.3.msi
 - ZIP: https://github.com/downloads/dblock/dotnetinstaller/dotNetInstaller.2.3.zip
 - CHANGELOG: [https://github.com/dblock/dotnetinstaller/blob/master/CHANGELOG.md](https://github.com/dblock/dotnetinstaller/blob/master/CHANGELOG.md "https://github.com/dblock/dotnetinstaller/blob/master/CHANGELOG.md")
-

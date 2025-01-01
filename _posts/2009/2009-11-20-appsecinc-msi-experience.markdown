@@ -23,4 +23,3 @@ I saw large teams deal with these problems before at Microsoft, quite successful
 - We invested into test automation with the [RemoteInstall Test Framework](https://github.com/dblock/remoteinstall) to cover the hundreds of install and upgrade scenarios.
 
 Today the problem is gone - we have virtually zero deployment failure - and we're open-sourcing the two key elements above since they are not in the line of our primary business (yes, we're your database security risk and compliance company): [RemoteInstall Test Framework](https://github.com/dblock/remoteinstall) and [AppSecInc. MSI Extensions](https://github.com/dblock/msiext). If you have similar problems with your installers, do what I say. With today's tools open-source it will take you half the time and you'll wonder why you haven't done it earlier.
-

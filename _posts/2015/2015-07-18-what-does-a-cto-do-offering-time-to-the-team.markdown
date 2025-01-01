@@ -57,4 +57,3 @@ Some were tougher.
 My biggest takeaway from all these is that team members cannot get enough time from executive management and that giving this time to them is essential. I am positive that I have helped preempt at least two major issues because of a 1:1 and I have done a full 180° on at least one bad plan within engineering that was born in a place that severely lacked business and customer context. I've also connected several individuals across organizational boundaries and was able to dry-run and help steer the upcoming product reorg with some individuals by describing to them the current thinking and gauging their initial reaction in a fail-safe environment of a casual coffee break. And a lot more.
 
 In sum, our job as leaders is to serve the entire organization. Regular 1:1s with a broad range of team members is one thing I now do.
-

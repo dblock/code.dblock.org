@@ -1138,8 +1138,6 @@ API_KEY=... ENDPOINT=https://my-cluster.weaviate.network poetry run src/weaviate
 < DELETE https://myindex.weaviate.network/v1/schema/Vectors - 200
 ```
 
-
-
 ### Others
 
 This blog post and [its code](https://github.com/dblock/vectordb-hello-world/) could use your help for more examples for [Milvus](https://github.com/milvus-io/milvus), [Vector.ai](https://github.com/vector-ai/vectorai),  [NucliaDB](https://github.com/nuclia/nucliadb), [Vald](https://vald.vdaas.org/), etc.

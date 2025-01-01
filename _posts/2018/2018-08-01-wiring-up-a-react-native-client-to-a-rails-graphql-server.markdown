@@ -27,7 +27,6 @@ config.middleware.use ActionDispatch::Cookies
 config.middleware.use ActionDispatch::Session::CookieStore, key: '_namespace_key'
 ```
 
-
 A GraphQL mutation creates a user.
 
 ```ruby
@@ -48,7 +47,6 @@ Mutations::CreateUserMutation = GraphQL::Relay::Mutation.define do
 }
 end
 ```
-
 
 Similar GraphQL mutations login and logout users.
 

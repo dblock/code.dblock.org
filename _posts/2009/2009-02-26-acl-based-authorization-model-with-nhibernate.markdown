@@ -14,4 +14,3 @@ I've posted a long overdue article describing an ACL-based authorization model w
 [**https://www.codeproject.com/KB/web-security/objectlevelsecurity.aspx**](https://www.codeproject.com/KB/web-security/objectlevelsecurity.aspx)
 
 ![](https://www.codeproject.com/KB/web-security/objectlevelsecurity/domainmodel.jpg)
-

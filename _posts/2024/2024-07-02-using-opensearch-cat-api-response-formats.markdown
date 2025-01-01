@@ -128,4 +128,3 @@ $ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?form
 ```json
 [{"health": "green", "status": "open", "index": ".plugins-ml-model-group", "uuid": "LDXIur-YTqim9fiEHLJZ1w", "pri": "1", "rep": "0", "docs.count": "0", "docs.deleted": "0", "store.size": "10.3kb", "pri.store.size": "10.3kb"}, {"health": "yellow", "status": "open", "index": "security-auditlog-2024.05.30", "uuid": "7yBZpI7HS22-6mZtPrVg2g", "pri": "1", "rep": "1", "docs.count": "62", "docs.deleted": "0", "store.size": "78.8kb", "pri.store.size": "78.8kb"}]
 ```
-

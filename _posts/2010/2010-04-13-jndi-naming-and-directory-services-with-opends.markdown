@@ -226,4 +226,3 @@ Alternatively, OpenDS provides an implementation of Directory Services Markup La
   - [Service.java](https://github.com/dblock/codeproject/blob/master/JndiDemo/src/com/example/jndi/Service.java)
   - [UnimplementedDirContext.java](https://github.com/dblock/codeproject/blob/master/JndiDemo/src/com/example/jndi/UnimplementedDirContext.java)
   - [ServiceFactory.java](https://github.com/dblock/codeproject/blob/master/JndiDemo/src/com/example/jndi/ServiceFactory.java)
-

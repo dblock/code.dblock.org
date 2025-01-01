@@ -21,4 +21,3 @@ dotNetInstaller 1.8 was released today, January 24th, 2010. Build 1.8.7120.0 has
 - CAB extraction uses the memory-mapped resource streams and no longer writes temporary files to extract embedded components. This significantly reduces disk space requirements and improves extraction speed.
 
 dotNetInstaller continues being the most widely used setup bootstrapper. Please reply to [this thread](https://web.archive.org/web/20160801173120/https://dotnetinstaller.codeplex.com/discussions/48275) if you're using it too.
-

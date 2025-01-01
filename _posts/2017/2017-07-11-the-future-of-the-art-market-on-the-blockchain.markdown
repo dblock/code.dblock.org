@@ -99,6 +99,3 @@ To summarize.
 * An opaque small market will grow exponentially.
 
 The future is exciting! For more, [check out my talk on the future of art](https://www.youtube.com/watch?v=CEkJLhA1R0w).
-
-
-

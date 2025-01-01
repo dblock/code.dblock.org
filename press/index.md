@@ -98,4 +98,3 @@ fjs.parentNode.insertBefore(js, fjs);
 ### [Observer.com: That $2,800 Ruby Class That Had NYC-rb in a Huff? It's Already Sold Out](https://observer.com/2011/12/that-2800-ruby-class-that-had-nyc-rb-in-a-huff-its-already-sold-out/)
 
 ### [Observer.com: Ruby Developers Offended by $2,800 Ruby Class](https://observer.com/2011/12/ruby-developers-offended-by-2800-ruby-class)
-

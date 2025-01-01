@@ -54,4 +54,3 @@ Sometimes you must do this twice. Sometimes you don't have a full side and must 
 ### Complete Instructions
 
 Print out [my 1-pager]({{ site.url }}/images/posts/2017/2017-07-03-solving-a-3x3-rubiks-cube/cheat-sheet.pdf) with the above instructions starting from the second row! Hand them out.
-

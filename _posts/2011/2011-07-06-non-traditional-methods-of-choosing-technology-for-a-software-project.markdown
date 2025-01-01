@@ -54,4 +54,3 @@ The pragmatic approach means making choices based on these criteria.
 - Provides Elegant Solutions to Messy Problems
 
 What do you think? How do you make your technology choices?
-

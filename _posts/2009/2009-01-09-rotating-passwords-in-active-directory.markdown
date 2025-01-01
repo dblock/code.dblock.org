@@ -13,4 +13,3 @@ I posted a CodeProject article entitled "Rotating Passwords in Active Directory"
 - [Browse Source Code](https://github.com/dblock/codeproject/tree/master/RotatePassword)
 
 ![](https://www.codeproject.com/KB/system/rotatepassword/RotatePassword.jpg)
-

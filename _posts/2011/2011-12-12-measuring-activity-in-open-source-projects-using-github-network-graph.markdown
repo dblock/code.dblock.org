@@ -30,4 +30,3 @@ When a small group of people truly collaborates, their feature branches make it 
 ![]({{ site.url }}/images/posts/2011/2011-12-12-measuring-activity-in-open-source-projects-using-github-network-graph/image_18.jpg)
 
 Maybe someone can use this idea to build a nice feature to measure a Github _project density_?
-

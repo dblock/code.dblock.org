@@ -30,7 +30,3 @@ I made a [final pull request](https://github.com/lycheeverse/lychee/pull/309) to
 To summarize, Lychee now has a `--exclude-file` feature, and a working CI, while I got to learn Rust pretty much by accident. This would have never happened had I not be working in open-source by default. Oh, and it helped to be a bit persistent and not giving up on each one of the problems encountered above.
 
 Similar accidents have generated defining moments in my career. Will I end up writing Rust full time one day? We shall see!
-
-
-
-

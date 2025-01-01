@@ -10,4 +10,3 @@ dblog_post_id: 226
 Slides from today's "Choosing Technology" that I gave at [@gnrlassembly](https://www.generalassemb.ly/) are [here](https://www.slideshare.net/dblockdotorg/choosing-technology). Thank you all for coming!
 
 ![]({{ site.url }}/images/posts/2011/2011-07-05-slides-from-choosing-technology/image_9.jpg)
-

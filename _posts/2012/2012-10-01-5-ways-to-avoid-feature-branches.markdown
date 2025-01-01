@@ -34,4 +34,3 @@ Think twice before pushing back on a pull request with code that's not quite bak
 #### Resist Date-Driven Development
 
 Dates have a tendency to move beyond your control, just as in my example. Ask yourself what meaningful increment you can deliver into production today and figure out how it can contribute to your deadlines. Everything will be different tomorrow!
-

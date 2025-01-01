@@ -30,4 +30,3 @@ On the wireless front, I got a Linksys WPS54G. None of the wizards worked, go fi
 8. Select the printer, install the driver.
 
 Easy? Ahem.
-

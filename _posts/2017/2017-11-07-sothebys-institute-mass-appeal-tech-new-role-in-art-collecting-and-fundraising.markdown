@@ -10,4 +10,3 @@ This was a great conversation with Kickstarter [Soraya Haas](https://twitter.com
 <a href='https://www.facebook.com/SothebysInstituteofArt/videos/10155213430804072/'>![]({{ site.url }}/images/posts/2017/2017-11-07-sothebys-institute-mass-appeal-tech-new-role-in-art-collecting-and-fundraising/screenshot.png)</a>
 
 _Art and tech thought leaders from Artsy, Kickstarter, and Sotheby's, discuss the future of the art market and the role digital technology now plays in engaging new art audiences via the Internet and TV, cultivating international collectors, and crowdsourcing funds for arts initiatives at institutions, galleries, art fairs, and commercial companies worldwide._
-

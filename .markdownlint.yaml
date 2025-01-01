@@ -13,21 +13,21 @@ MD003:
   style: "consistent"
 
 # MD004/ul-style : Unordered list style : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md004.md
-MD004: false
-  # # List style
-  # style: "consistent"
+MD004:
+  # List style
+  style: "consistent"
 
 # MD005/list-indent : Inconsistent indentation for list items at the same level : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md005.md
-MD005: false
+MD005: true
 
 # MD007/ul-indent : Unordered list indentation : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md007.md
-MD007: false
-  # # Spaces for indent
-  # indent: 2
-  # # Whether to indent the first level of the list
-  # start_indented: false
-  # # Spaces for first level indent (when start_indented is set)
-  # start_indent: 2
+MD007:
+  # Spaces for indent
+  indent: 2
+  # Whether to indent the first level of the list
+  start_indented: false
+  # Spaces for first level indent (when start_indented is set)
+  start_indent: 2
 
 # MD009/no-trailing-spaces : Trailing spaces : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md009.md
 MD009:
@@ -51,9 +51,9 @@ MD009:
 MD011: false
 
 # MD012/no-multiple-blanks : Multiple consecutive blank lines : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md012.md
-MD012: false
-  # # Consecutive blank lines
-  # maximum: 1
+MD012:
+  # Consecutive blank lines
+  maximum: 1
 
 # MD013/line-length : Line length : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md013.md
 MD013: false

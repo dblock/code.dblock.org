@@ -140,4 +140,3 @@ I spent a day incrementally rewriting snapshot queries inside the Core API proje
 ![]({{ site.url }}/images/posts/2015/2015-01-15-first-class-mongoid-queries-with-collection-snapshots/change1.png)
 
 ![]({{ site.url }}/images/posts/2015/2015-01-15-first-class-mongoid-queries-with-collection-snapshots/change2.png)
-

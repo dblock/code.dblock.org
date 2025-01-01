@@ -30,7 +30,6 @@ jobs:
 
 We'll definitely forget to update the matrix when a new file is created, so let's just list those files dynamically, and generate a matrix from the list.
 
-
 ```yaml
 {% raw %}
 name: manifests

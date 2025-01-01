@@ -106,4 +106,3 @@ I think the whole job-based API could use a nice .NET wrapper :)
 #### Update (2015)
 
 Check out [VMWareTasks](https://github.com/dblock/vmwaretasks).
-

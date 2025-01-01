@@ -52,8 +52,3 @@ I signed up and watched a webinar.
 Questions?
 
 [Sponsor me via GitHub](https://github.com/sponsors/dblock) and send me an e-mail!
-
-
-
-
-

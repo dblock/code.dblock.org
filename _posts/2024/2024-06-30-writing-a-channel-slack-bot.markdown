@@ -64,4 +64,3 @@ This is an interesting pattern that is not natively supported by Slack events. I
 ### Links
 
 Code for Slack Gamebot is [here](https://github.com/dblock/slack-gamebot2), and the code for S'Up is [here](https://github.com/dblock/slack-sup2). Try the bots out from [sup2.playplay.io](https://sup2.playplay.io/) and [gamebot2.playplay.io](https://gamebot2.playplay.io/).
-

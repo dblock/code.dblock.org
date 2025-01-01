@@ -28,4 +28,3 @@ Console.WriteLine("Hello World");
 ```js
 console.log("Hello World");
 ```
-
