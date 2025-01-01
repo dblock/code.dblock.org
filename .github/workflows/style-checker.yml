@@ -5,7 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: tj-actions/changed-files@v45
+        id: changed_files
+        with:
+          files: |
+            **/**.md
+            **/**.markdown
+            !_styles/**/*.md
       - uses: errata-ai/vale-action@v2.1.1
         with:
           version: 3.7.1
           reporter: github-check
+          files: ${{ steps.changed_files.outputs.all_changed_files }}

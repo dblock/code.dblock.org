@@ -57,7 +57,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
 ### [The Verge: The Swift effect: Apple's new programming language means way more iPhone developers and apps](https://www.theverge.com/apple/2014/6/2/5773928/apple-swift-programming-developers-objective-c)
 
-> Swift seems like it finally gives the developers in the iOS world the ability to do the things you have been able to do in the scripting world but without the penalties," says Daniel Doubrovkine, the head of engineering at Artsy. "That's if it delivers on its promises, and others have promised and failed. But the fact that Apple is behind it gives me a lot of hope its the real deal."techc
+> Swift seems like it finally gives the developers in the iOS world the ability to do the things you have been able to do in the scripting world but without the penalties," says Daniel Doubrovkine, the head of engineering at Artsy. "That's if it delivers on its promises, and others have promised and failed. But the fact that Apple is behind it gives me a lot of hope its the real deal."
 
 ## 2013
 
