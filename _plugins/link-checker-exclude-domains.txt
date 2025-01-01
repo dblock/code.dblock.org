@@ -17,3 +17,5 @@ www.skillshare.com
 bfy.tw
 www.reddit.com
 leetcode.com
+opensea.io
+news.ycombinator.com

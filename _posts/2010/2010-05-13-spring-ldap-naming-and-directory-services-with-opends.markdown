@@ -9,7 +9,7 @@ dblog_post_id: 102
 ---
 ![]({{ site.url }}/images/posts/2010/2010-05-13-spring-ldap-naming-and-directory-services-with-opends/image_4.jpg)
 
-In a [previous post](/jndi-naming-and-directory-services-with-opends) I've described an initial implementation of OpenDS as a naming and directory service, including extending the directory schema and reading and writing directory objects with JNDI. As actual (read: competent) Java developers took over my prototype, they switched from JNDI to [spring-ldap](https://www.springsource.org/ldap). The resulting code is much more pleasant, and I got to learn a bit more about Spring.
+In a [previous post](/jndi-naming-and-directory-services-with-opends) I've described an initial implementation of OpenDS as a naming and directory service, including extending the directory schema and reading and writing directory objects with JNDI. As actual (read: competent) Java developers took over my prototype, they switched from JNDI to [spring-ldap](https://web.archive.org/web/20100218130014/https://www.springsource.org/ldap). The resulting code is much more pleasant, and I got to learn a bit more about Spring.
 
 #### Service Object
 
@@ -180,4 +180,4 @@ You can run the source code from this article with OpenDS and Eclipse.
 - [Source Code for this Article](https://github.com/dblock/codeproject/tree/master/JndiDemo)
 - [OpenDS Directory Server](https://web.archive.org/web/20111001105032/https://www.opends.org/)
 - [Getting Started with JNDI and OpenDS](/jndi-naming-and-directory-services-with-opends)
-- [Spring-LDAP](https://www.springsource.org/ldap)
+- [Spring-LDAP](https://web.archive.org/web/20100218130014/https://www.springsource.org/ldap)

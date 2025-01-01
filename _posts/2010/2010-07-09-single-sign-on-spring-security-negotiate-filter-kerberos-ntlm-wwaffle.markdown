@@ -20,7 +20,7 @@ Download [Waffle](https://github.com/dblock/waffle). The zip contains _Waffle.ch
 
 _Configure Spring-Security_
 
-We'll assume that [Spring-Security](https://static.springsource.org/spring-security/site/) is configured via web.xml with a filter chain and a Spring _ContextLoaderListener_. The Waffle beans configuration will be added to _waffle-filter.xml_.
+We'll assume that [Spring-Security](https://web.archive.org/web/20100711232718/https://static.springsource.org/spring-security/site/) is configured via web.xml with a filter chain and a Spring _ContextLoaderListener_. The Waffle beans configuration will be added to _waffle-filter.xml_.
 
 ```xml
 <filter>
@@ -127,5 +127,5 @@ A demo application with the complete configuration file can be found in the Waff
 
 #### Links
 
-- [Spring-Security](https://static.springsource.org/spring-security/site/)
+- [Spring-Security](https://web.archive.org/web/20100711232718/https://static.springsource.org/spring-security/site/)
 - [Waffle](https://github.com/dblock/waffle)

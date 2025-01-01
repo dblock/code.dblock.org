@@ -15,7 +15,7 @@ Identify and tag issues that have an easy solution to attract first time contrib
 
 Good first issues, or issues that are part of programs such as [Summer of Code](https://summerofcode.withgoogle.com/), provide an entry point for new contributors who want to get involved with the project, but are intimidated or unsure where to start. These issues are typically well-defined, self-contained, and relatively straightforward, making them accessible to newcomers.
 
-I could use help with [58 issues](https://github.com/issues?q=is%3Aopen+is%3Aissue+author%3Adblock+archived%3Afalse+label%3A%22good+first+issue%22%2C%22help+wanted%22+) right now and there are [683](https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+org%3Aopensearch-project+label%3A%22good+first+issue%22+) issues labelled "good first issue" in the opensearch-project GitHub organization.
+I could use help with [58 issues](https://github.com/issues?q=is%3Aopen+is%3Aissue+author%3Adblock+archived%3Afalse+label%3A%22good+first+issue%22%2C%22help+wanted%22) right now and there are [683](https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+org%3Aopensearch-project+label%3A%22good+first+issue%22) issues labelled "good first issue" in the opensearch-project GitHub organization.
 
 #### READMEs and Documentation
 

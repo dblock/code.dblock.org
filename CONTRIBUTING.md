@@ -133,6 +133,14 @@ Go back to your pull request after a few minutes and see whether it passed muste
 
 It's likely that your change will not be merged and that the nitpicky maintainer will ask you to do more, or fix seemingly benign problems. Hang on there!
 
+## Misc
+
+### Markdown Linter
+
+```bash
+markdownlint-cli2 "**/*.{md,markdown}" --config .markdownlint.yaml
+```
+
 ## Thank You
 
 Please do know that we really appreciate and value your time and work. We love you, really.

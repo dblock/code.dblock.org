@@ -7,7 +7,7 @@ tags: [startups, new york, hiring, technology, jobs, people]
 comments: true
 dblog_post_id: 322
 ---
-I read Bertrand's [post on "Tales from the Evil Empire"](https://weblogs.asp.net/bleroy/archive/2012/02/29/leaving-the-evil-empire.aspx) about him leaving Microsoft this morning. Congratulations. We have never met, but your blog was in my RSS feed for a very long time. I would regularly learn valuable .NET-related lessons - my blog happened to be hand-written in .NET and I was still writing quite a bit of it myself with a few open-source projects like [dotNetInstaller](https://github.com/dblock/dotnetinstaller/) or [ResourceLib](https://github.com/dblock/resourcelib/).
+I read Bertrand's [post on "Tales from the Evil Empire"](https://web.archive.org/web/20120304043245/https://weblogs.asp.net/bleroy/archive/2012/02/29/leaving-the-evil-empire.aspx) about him leaving Microsoft this morning. Congratulations. We have never met, but your blog was in my RSS feed for a very long time. I would regularly learn valuable .NET-related lessons - my blog happened to be hand-written in .NET and I was still writing quite a bit of it myself with a few open-source projects like [dotNetInstaller](https://github.com/dblock/dotnetinstaller/) or [ResourceLib](https://github.com/dblock/resourcelib/).
 
 I left Microsoft in October 2004 to move to New York. If you have worked at Microsoft for over 5 years, and your management, peers and reports value and consider you above average, you should leave too. In fact, if you have worked in any large company, including Google or Goldman Sachs for as long, it may be that time.
 
