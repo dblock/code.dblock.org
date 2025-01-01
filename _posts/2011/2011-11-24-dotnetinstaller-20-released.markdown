@@ -11,6 +11,7 @@ I've released DNI 2.0 today. It's a major release with a new HTML bootstrapper, 
 
 Build 2.0.81.0
 
+```
 #7968: Support elevation as a subsequent command within the bootstrapper. First UI shows un-elevated, but clicking install elevates. (dotNetInstaller only)
 #8005: Added a new os_filter type 'greater than' (+) and 'less than' (-).
 #6289: Added a new setup bootstrapper, htmlInstaller, driven by an HTML-based UI engine.
@@ -32,6 +33,7 @@ Build 2.0.81.0
 #8277: Language selector dialog in dotNetInstaller will automatically select the operating system language if available.
 #8256: Added /noRunOnReboot to the bootstrapper to suppress actually writing the RunOnReboot registry key.
 #272583: Added support for Windows 8.
+```
 
 #### Update (2015)
 

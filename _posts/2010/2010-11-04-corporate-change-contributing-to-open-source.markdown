@@ -74,9 +74,9 @@ Then everything went wrong. Thousands of downloads, major contributors, dozens o
 
 With this success I finally had an opportunity to make contributing to open-source a company policy. I wrote two documents and had the executive management team approve them (with my boss's help). Use them as a template for your own. The first one outlines simple rules of releasing software as open-source.
 
-> #### Releasing Software as Open Source
+> ### Releasing Software as Open Source
 >
-> #### Overview
+> #### Releasing Overview
 >
 > The company is an active contributor to open-source and funds a number of open-sourced projects. Engineers are encouraged to create new open-source projects that are born from the company's business needs.
 >
@@ -99,9 +99,9 @@ With this success I finally had an opportunity to make contributing to open-sour
 
 The second clarifies the rules of engagement with existing open-source projects. We can finally commit changes to projects we use and put the company's name in them.
 
-> #### Contributing to Open Source
+> ### Contributing to Open Source
 >
-> #### Overview
+> #### Contributing Overview
 >
 > The Company is an active open-source contributor and funds several open-source projects. The Company encourages you to contribute to such open-source projects on company time provided that it's cleared with your manager.
 >

@@ -58,7 +58,7 @@ Once you've installed Hadoop, install Hive. On OSX run `brew install hive`, the 
 </configuration>
 ```
 
-Once installed you can run `hive` and get a `hive> ` prompt.
+Once installed you can run `hive` and get a `hive>` prompt.
 
 Before we do that, lets get some data into HDFS.
 
