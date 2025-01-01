@@ -200,4 +200,3 @@ UIAutomation.ClickThroughMenu(mainWindow.MenuBar.TopLevelMenu,
 ### Bug Solved and Unit-Tested
 
 My original problem was [a bug in dotNetInstaller](https://web.archive.org/web/20161107054658/https://dotnetinstaller.codeplex.com/workitem/4856) where adding an installed check through the UI would popup an error. I was now able to write a unit test for it.
-

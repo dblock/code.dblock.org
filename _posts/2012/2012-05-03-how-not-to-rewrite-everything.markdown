@@ -22,4 +22,3 @@ This decade's software is way too complicated to rewrite everything. When I choo
 Now that I can easily reuse third-party systems, I must try to remember that I should write less lines of code, introduce less operational overhead and create more positive product impact in a reasonable amount of time. It doesn't mean I just want to slap together someone else's components - things worth focusing on should be elements that serve my company's core competencies or be educational for me, useful to the open-source community at large or just plain fun. While this sounds obvious, sticking to the guidelines and keeping myself accountable is a daily effort.
 
 How do _you_ avoid rewriting everything?
-

@@ -245,4 +245,3 @@ Let's summarize what happens for us with every deployment.
 We wrap this up in a `heroku:predeploy` task and use Heroku-Bartender to deploy.
 
 Suggestions for improvements always welcome!
-

@@ -14,4 +14,3 @@ Over the past few weeks I've been helping out a bit with creating a home for the
 I encourage you to [move projects into the Mongoid org](https://mongoid.github.io/misc/adding) to reduce bus factor. This enables continuity when you decide that you no longer want to be involved in your project. It also allows project maintainers (you) to designate other project maintainers, something you cannot currently do on a personal project on Github, effectively requiring followers to fork the project in case you disappear.
 
 This effort is not sponsored or affiliated to the company, MongoDB, but both Emily and Durran who work for MongoDB are involved and I want to thank them for their support and for donating github.com/mongoid for this purpose.
-

@@ -12,4 +12,3 @@ Some of the big changes in 1.0 included [ripping out Hashie::Mash](https://githu
 Enjoy!
 
 ![](https://github.com/ruby-grape/grape/blob/master/grape.png?raw=true)
-

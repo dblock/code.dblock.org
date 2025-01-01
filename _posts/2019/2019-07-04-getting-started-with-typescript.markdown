@@ -227,4 +227,3 @@ $ ts-node src/index.ts
 ### Links
 
 The code for this post can be found [here](https://github.com/dblock/typescript-hello-world).
-

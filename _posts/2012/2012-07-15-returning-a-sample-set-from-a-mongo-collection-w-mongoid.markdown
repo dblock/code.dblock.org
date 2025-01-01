@@ -26,4 +26,3 @@ end
 > [https://gist.github.com/3113975](https://gist.github.com/3113975)
 
 Can we do better?
-

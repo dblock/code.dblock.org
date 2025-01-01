@@ -12,4 +12,3 @@ Something that has always frustrated me: _Why doesn't logging from an immediate 
 [https://learn.microsoft.com/en-us/windows/win32/msi/doaction-controlevent](https://learn.microsoft.com/en-us/windows/win32/msi/doaction-controlevent)
 
 _"Note that custom actions launched by a **DoAction** ControlEvent can send a message with the [Message](https://learn.microsoft.com/en-us/windows/win32/msi/session-message) method, but cannot send a message with [MsiProcessMessage](https://learn.microsoft.com/en-us/windows/win32/api/msiquery/nf-msiquery-msiprocessmessage). On systems prior to Windows Server 2003, custom actions launched by a DoAction ControlEvent cannot send messages with **MsiProcessMessage** or **Message**. For more information, see [Sending Messages to Windows Installer Using MsiProcessMessage](https://learn.microsoft.com/en-us/windows/win32/msi/sending-messages-to-windows-installer-using-msiprocessmessage)."_
-

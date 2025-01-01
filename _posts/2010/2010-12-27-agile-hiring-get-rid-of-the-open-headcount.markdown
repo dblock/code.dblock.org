@@ -60,4 +60,3 @@ If you're a gatekeeper (manager of managers) monitor the numbers as they evolve 
 If you're the hiring manager or team lead, then focus on the next one or two positions. Work the backlog. Don't worry, the gatekeeper will tell when interviewing your next candidate is unrealistic based on budget. Keep the interviewing process running at all times. The actual paper offer will be the final check with the VP, CFO or other person in charge of budget, which will make sure that the money is actually available to pay this person. Money truly matters only on the day you have a candidate that you're ready to hire.
 
 We'll call this _agile headcount_. Thoughts?
-

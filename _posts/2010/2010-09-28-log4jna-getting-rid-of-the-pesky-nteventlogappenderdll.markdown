@@ -14,4 +14,3 @@ Introducing [log4jna](https://github.com/dblock/log4jna/), a small project that 
 ![log4jna]({{ site.url }}/images/posts/2010/2010-09-28-log4jna-getting-rid-of-the-pesky-nteventlogappenderdll/log4jna_4.jpg)
 
 Download a build, compatible with log4j 1.2 and swap your appender for `org.apache.log4jna.nt.Win32EventLogAppender`. There are a few other small things to worry about described in the documentation.
-

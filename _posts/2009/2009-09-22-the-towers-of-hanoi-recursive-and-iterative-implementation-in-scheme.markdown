@@ -22,6 +22,3 @@ The iterative method is based on how disks move. There's a number of 2^n - 1 ste
 With an example of 3 disks containing the disk number you move and knowing the step "length", you can easilly see that all the information for the move is included in the move number itself! This is just the general idea.
 
 - [Source Code](https://github.com/dblock/hanoi)
-
-
-

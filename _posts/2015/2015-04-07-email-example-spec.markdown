@@ -37,4 +37,3 @@ describe WelcomeMailer do
   end
 end
 ```
-

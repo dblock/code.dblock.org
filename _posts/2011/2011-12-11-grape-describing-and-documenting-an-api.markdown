@@ -55,4 +55,3 @@ end
 ```
 
 Notice how we've used the required option for parameters – it's, once again, a convention. Grape doesn't care – it's pure metadata attached to a route. You can create similar conventions in your own API – we have some "partner" and "admin" APIs that we've marked in a similar manner.
-

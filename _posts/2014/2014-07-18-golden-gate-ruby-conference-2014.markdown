@@ -12,4 +12,3 @@ I'm very excited to be speaking at GoGaRuCo in San Francisco in September about 
 I want to hear about your experiences about taking over someone else's open-source work! Email me at dblock[at]dblock[dot]org.
 
 ![]({{ site.url }}/images/posts/2014/2014-07-18-golden-gate-ruby-conference-2014/image_6.jpg)
-

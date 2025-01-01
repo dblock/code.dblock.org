@@ -14,4 +14,3 @@ The VMWare SDK, specifically VixCOM, offers a rich set of programmable interface
 > [https://github.com/dblock/vmwaretasks/](https://github.com/dblock/vmwaretasks/)
 
 This release adds full support for VixCOM 1.11 and is the first release off Github.
-

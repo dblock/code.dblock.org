@@ -75,6 +75,3 @@ Both are doing `"created_at"=>{"$gte"=>2018-08-25 10:46:41 UTC}}`.
 You get the idea: it doesn't matter whether you call `.utc` or not, the server will store times in UTC. This also means that you don't know in which original timezone a timestamp was recorded from, but that the data is fully portable between timezones and that your application's timezone can change. Finally, MongoDB has interesting non-obvious features in its aggregation framework that let you extract and group times within a specific timezone (see [SO#18287493](https://stackoverflow.com/questions/18287493/how-to-deal-with-the-timezone-issue-when-storing-dates-in-utc-using-mongod)) for details.
 
 What if you care about the timezone at save time? It looks like that would require changing how MongoDB stores the timestamp or you would have to store a timezone separately. The [mongoid-metastamp gem](https://github.com/sporkd/mongoid-metastamp) claimed to do this, but it hasn't been updated in a long time and doesn't currently support any new versions of Mongoid.
-
-
-

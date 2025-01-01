@@ -40,4 +40,3 @@ For non-engineers:
 3. Be helpful, but don't try to suggest technical or external solutions to performance problems, such as experts or consultants.
 4. Give improvements time and assume that a good engineering team knows what they are doing.
 5. Be constructive when reporting slow parts of the system and avoid broad "it's too slow" statements.
-

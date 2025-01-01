@@ -47,4 +47,3 @@ Rails looks like a substantial improvement. The top of the default structure cre
 4. _Feel the need to create more folders_: when unrelated models start filling the models folder, consider adding subfolders.
 
 Happy folder refactoring!
-

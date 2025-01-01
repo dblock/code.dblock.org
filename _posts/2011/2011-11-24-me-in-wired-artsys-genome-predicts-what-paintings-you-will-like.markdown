@@ -14,4 +14,3 @@ Also, got to love the photo taken at Haunch of Venison!
 ![]({{ site.url }}/images/posts/2011/2011-11-24-me-in-wired-artsys-genome-predicts-what-paintings-you-will-like/image_4.jpg)
 
 We'll be at Miami Basel Nov 30th-Dec 3rd, don't forget to say hi!
-

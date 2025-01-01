@@ -89,4 +89,3 @@ $ MONGO_IMAGE_VERSION=3.4.9 dokku mongo:start database-name
 ### Backup MongoDB
 
 See [Backing up MongoDB Databases in Dokku Containers to Dropbox](/2016/02/15/backing-up-mongodb-databases-in-dokku-containers-to-dropbox.html).
-

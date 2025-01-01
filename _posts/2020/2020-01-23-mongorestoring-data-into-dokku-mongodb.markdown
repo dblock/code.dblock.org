@@ -77,6 +77,3 @@ mongoimport --host=... --port=13450 --username=username --password=password --db
 ```bash
 dokku mongo:unexpose app
 ```
-
-
-

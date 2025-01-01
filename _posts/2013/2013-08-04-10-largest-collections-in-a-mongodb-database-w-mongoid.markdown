@@ -24,4 +24,3 @@ squirrels: 5432044544
 monkeys: 949976816
 sleuths: 723951712
 ```
-

@@ -10,4 +10,3 @@ It's fairly rare to run into MRI vs. Rubinius or JRuby differences. Here's one f
 ![]({{ site.url }}/images/posts/2015/2015-08-31-lazy-each-in-ruby-mri-vs-rubinius/each.gif)
 
 The "each" iterator continues on MRI as you modify the collection, but not on Rubinius. Opened [rubinius#3494](https://github.com/rubinius/rubinius/issues/3494).
-

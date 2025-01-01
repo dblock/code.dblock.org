@@ -58,4 +58,3 @@ Most of us who left college many years ago will roll our eyes when you ask about
 I think your resume should demonstrate that you can make an effective transition from college to the workforce, which means leaving as much "college" behind as possible. Being a Teaching Assistant should go into your work experience, but your participation in chess club should be left out. I would also not include a mention of your GPA. And any work experience that you may have should be concise and explain what the project was and what you did within that project.
 
 If you like the advice above, and are in college or a recent grad, send me a copy of your resume to dblock[at]dblock[dot]org. I promise to give it 15 minutes and email you a few bullet points of feedback.
-

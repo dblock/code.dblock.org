@@ -61,4 +61,3 @@ public abstract class Advapi32 {
 ```
 
 Note how JNA implements those nice methods that convert `char[]` buffers to `String`. That's service!
-

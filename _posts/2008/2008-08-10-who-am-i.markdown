@@ -20,4 +20,3 @@ In this blog you're going to find interesting articles about technology that I a
 #### Update (2015-2017)
 
 A lot of things have changed since I wrote this. I sold FoodCandy years ago. I no longer work at AppSec, been CTO of [Artsy](https://www.artsy.net) for a few years. All my code is now on [Github](https://github.com/dblock). Check out the [updated about page](/about) for more recent details.
-

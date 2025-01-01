@@ -40,4 +40,3 @@ I would pick [Github](https://github.com/) over Kenai for any new project ten ti
 #### Update (2015)
 
 JNA can now be found [on Github](https://github.com/twall/jna).
-

@@ -58,4 +58,3 @@ Guaranteed to remove any kind of skin that one developed over their 20 year long
 About 10 years ago, one CTO candidate told me that he would walk out of the room if I was actually seriously about asking him to code a sort. He complied though, got sweaty and nervous and finally broke down with the next interrogator after me. His interview was cut short.
 
 In a future post I will talk about great ways to interview people. In the meantime, I would like to apologize to all my past interview detainees and ask you to post your torture stories in the comments!
-

@@ -108,8 +108,6 @@ The major and minor version (property version.majorminor) are stored in the vers
 
 The following code fragment gets the svn revision of the current directory.
 
-
-
 Finally, the auto-incremented build number is generated with the following tag (which should be run once per build, somewhere in initialization).
 
 This sets the build.number property. The build files may then use the version.full property, created in the following way.
@@ -140,4 +138,3 @@ Another great thing about this versioning scheme is that we can now build with C
 ### Questions?
 
 Always welcome, dblock at dblock dot org.
-

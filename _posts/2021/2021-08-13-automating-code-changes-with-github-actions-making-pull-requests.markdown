@@ -53,7 +53,6 @@ At first I was hard-coding PR titles and commit messages. That's not ideal. Comp
 
 This can be achieved by setting an environment variable during the workflow execution by piping it into `$GITHUB_ENV`, and reusing it in the PR.
 
-
 ```bash
 echo REPOS_ADDED=$(git diff --unified=0 .gitignore | grep '+/' | cut -f2 -d'/' | paste -sd ',' - | sed "s/,/, /g" | sed 's/\(.*\),/\1 and/') >> $GITHUB_ENV
 ```

@@ -10,4 +10,3 @@ dblog_post_id: 59
 I archived 15 years of e-mail and I ended up with a lot of empty folders. Thing is, I name each folder in a tree structure by the person's location, first letter of their name and finally the full name itself.
 
 Nothing that [10 lines of code](https://github.com/dblock/codeproject/tree/master/OutlookDeleteEmptyFolders/Source) can't solve. There are some quirks with MAPI and how it counts things, so it might need a few runs.
-

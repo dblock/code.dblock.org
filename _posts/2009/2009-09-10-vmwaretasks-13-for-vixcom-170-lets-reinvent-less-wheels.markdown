@@ -36,4 +36,3 @@ Build 1.3.27534.0.
 #### Update (2015)
 
 VMWareTasks now lives [on Github](https://github.com/dblock/vmwaretasks).
-

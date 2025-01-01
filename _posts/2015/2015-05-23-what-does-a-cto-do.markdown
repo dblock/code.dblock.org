@@ -59,10 +59,10 @@ My first actual work item was to reach out to team leads and ask: _What can I do
 >
 > I am a bit less needed around day-to-day code things, which probably means we're on the right track! And I have the luxury of having a bit more time to focus on new things, and am in a really privileged place where I know the company inside-out. I have a strong feeling that there are a lot of things I could be doing as CTO that I am not doing today that could make *your* job a lot easier. It could be meeting with customers, or something else, I want to find out! Two questions:
 >
->  - What are the outcomes you are looking to achieve in *your* position in 2015?
->  - For any such outcome, is there anything *I* can do to help you achieve it?
+> * What are the outcomes you are looking to achieve in *your* position in 2015?
+> * For any such outcome, is there anything *I* can do to help you achieve it?
 >
->  Thanks!
+> Thanks!
 
 I applied my test to _actively learning about other team's concrete goals and outcomes_ and it passed. It's medium to long term, strategic and aims at company-wide impact. It is also something very measurable: do I know, at all times, what each team's goals are? Am I following up on the asks from these teams with Engineering team leads? Are they acting on them?
 

@@ -17,4 +17,3 @@ In  [this very good presentation about domain driven design](https://www.infoq.c
 > Developer: Bug! It now popups a window.
 >  Customer: But I don't see customer records in this window!
 > Developer: Bug! ...
-

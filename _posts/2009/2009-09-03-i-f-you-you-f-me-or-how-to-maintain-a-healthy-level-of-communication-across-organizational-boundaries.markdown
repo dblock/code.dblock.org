@@ -22,4 +22,3 @@ The contract stipulates that you must forward me any party information and I mus
 I think this could work well in the work place where we can resolve issues, including sales people unwilling to use an RSS reader and feeling that Engineering withholds information or where you want to share gossip in a more structured way.
 
 With an IFYYFME contract, can we reach the right frequency of communication?
-

@@ -64,4 +64,3 @@ See [https://github.com/artsy/doppler/pull/24](https://github.com/artsy/doppler/
 And here's a screenshot of a rendered page.
 
 ![]({{ site.url }}/images/posts/2014/2014-08-31-syntax-highlighting-in-markdown-content-with-recarpet-coderay-and-rails/screenshot_5.jpg)
-

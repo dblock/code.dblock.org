@@ -134,4 +134,3 @@ Once installed, the shortcut can be used to uninstall the application. During un
 #### Links
 
 - [Source Code](https://github.com/dblock/codeproject/tree/master/DniUninstall), run `build all /p:Configuration=Release` to build
-

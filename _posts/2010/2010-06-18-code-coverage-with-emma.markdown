@@ -87,4 +87,3 @@ I see a lot of red. Emma doesn't think I am doing such a great job after-all.
 #### Links
 
 - [EMMA on SourceForge](https://emma.sourceforge.net/)
-

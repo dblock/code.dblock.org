@@ -8,4 +8,3 @@ comments: true
 dblog_post_id: 345
 ---
 I just published a new gem: [rspec-rerun](https://github.com/dblock/rspec-rerun). It's a packaged solution to rerunning failed RSpec tests. See README for details.
-

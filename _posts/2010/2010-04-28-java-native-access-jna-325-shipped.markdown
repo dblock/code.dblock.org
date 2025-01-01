@@ -18,4 +18,3 @@ Platform-specific structures are mapped by header. For example, *ShlObj.h* struc
 The following large areas have been covered to some extent in native interfaces and utility libraries: Registry, SSPI, Active Directory, DPAPI, Users and Groups and Shell.
 
 There will be more refactoring and coverage in the next release. It also seems to have picked up a little traction on the mailing list as people have been sending patches with more Win32 code. I'll do my best at committing that, so send more. The goal is to eventually cover all of win32 SDK and put the Java to Win32 interoperability problem to rest.
-

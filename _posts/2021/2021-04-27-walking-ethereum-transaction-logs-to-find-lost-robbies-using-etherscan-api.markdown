@@ -239,4 +239,3 @@ frame 269 sold for 125.000 ETH on Mon Apr 05 2021 16:36:12 GMT-0400 | https://su
 frame 275 was listed for sale for 885.000 ETH on Mon Apr 19 2021 22:25:38 GMT-0400 | https://superrare.com/artwork/ai-generated-nude-portrait-7-frame-275-465
   sold for 50.000 ETH on Wed Apr 07 2021 19:29:54 GMT-0400
 ```
-

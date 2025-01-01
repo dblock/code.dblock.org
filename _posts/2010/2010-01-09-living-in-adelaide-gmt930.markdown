@@ -34,4 +34,3 @@ In order to fix this I had to make a few changes.
 And finally, ask someone in Adelaide to test this for me.
 
 ![]({{ site.url }}/images/posts/2010/2010-01-09-living-in-adelaide-gmt930/image_20.jpg)
-

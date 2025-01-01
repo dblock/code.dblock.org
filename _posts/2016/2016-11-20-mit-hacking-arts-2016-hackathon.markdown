@@ -26,4 +26,3 @@ Here's [@ApeTerrorDactyl](https://twitter.com/ApeTerrorDactyl) testing the winni
 Big shoutout to Möbel, [last year's](/2015/09/25/mit-hacking-arts-2015.html) Artsy prize winners who brought, what I thought, was the most creative and unusual collaborative project, inspired by the difficulty and emotion of assembling IKEA furniture, for the greater good of humanity.
 
 [![Mobel]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-hackathon/mobel.jpg)](https://twitter.com/ArtsyOpenSource/status/800448570394636290)
-

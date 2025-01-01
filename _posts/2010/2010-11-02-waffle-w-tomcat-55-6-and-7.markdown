@@ -14,4 +14,3 @@ Frankly, I think valves are evil. Nevertheless it's often impractical to make a 
 We have the same problem with spring-security. Trunk supports 3.x. There's now also a fork for spring-security 2.x.
 
 If you're selecting amongst the filters to do Windows single sign-on on a new system, by all means please use a servlet filter.
-

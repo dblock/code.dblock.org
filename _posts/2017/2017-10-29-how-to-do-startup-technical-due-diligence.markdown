@@ -60,11 +60,11 @@ For remote due diligence I setup a video call, then add the following.
 >
 > Things I look forward to hearing about and discussing:
 >
-> - A very brief overview of the company, what you did prior and how you ended up here.
-> - The problem you're trying to solve, the solution and how that solution becomes a business.
-> - The very early history of your team, how you ended up having your CTO in their current role.
-> - Company culture and the role technology plays in it.
-> - Your view of your technical operation as a non-technical executive, strengths, weaknesses and risks.
+> * A very brief overview of the company, what you did prior and how you ended up here.
+> * The problem you're trying to solve, the solution and how that solution becomes a business.
+> * The very early history of your team, how you ended up having your CTO in their current role.
+> * Company culture and the role technology plays in it.
+> * Your view of your technical operation as a non-technical executive, strengths, weaknesses and risks.
 >
 > Please don't hesitate to send me any material upfront so we can make this efficient and a useful conversation for both of us!
 
@@ -80,17 +80,17 @@ A well prepared, transparent and open process says a lot about the maturity of t
 
 > Things I look forward to hearing about and discussing:
 >
-> - The company you joined, the challenge as you saw it then, how you feel about it now, and what has changed.
-> - Your understanding of the problem the company is trying to solve, the solution you're trying to implement and how that solution becomes a business.
-> - History of the company's software and systems and how that is evolving.
-> - Developer and other workflows and processes.
-> - Infrastructure and architecture of your systems, including network, data, software and hardware systems, platforms and tools.
-> - Operations, COGS, budgets.
-> - Technology roadmap, plans and major initiatives.
-> - Your own team, people you rely on, general technical staffing, hiring, training, organization and plans around people.
-> - The relationship between the Engineering team and other teams.
-> - Company culture and the role technology plays in it.
-> - A personal view of your technical operation, weaknesses, strengths and risks.
+> * The company you joined, the challenge as you saw it then, how you feel about it now, and what has changed.
+> * Your understanding of the problem the company is trying to solve, the solution you're trying to implement and how that solution becomes a business.
+> * History of the company's software and systems and how that is evolving.
+> * Developer and other workflows and processes.
+> * Infrastructure and architecture of your systems, including network, data, software and hardware systems, platforms and tools.
+> * Operations, COGS, budgets.
+> * Technology roadmap, plans and major initiatives.
+> * Your own team, people you rely on, general technical staffing, hiring, training, organization and plans around people.
+> * The relationship between the Engineering team and other teams.
+> * Company culture and the role technology plays in it.
+> * A personal view of your technical operation, weaknesses, strengths and risks.
 
 I like to see the CTO and the VP of Engineering have their acts together and to send me a lot of information upfront, including links to internal documents that weren't created yesterday for this specific due diligence process. And as with the CEO I take lots of notes during the conversation and gather highlights in an e-mail to the VC immediately after each interview.
 

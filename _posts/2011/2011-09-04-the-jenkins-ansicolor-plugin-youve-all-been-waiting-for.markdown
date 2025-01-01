@@ -28,4 +28,3 @@ How long have you been waiting? Years. This question seems to popup regularly on
 - Github: [https://github.com/dblock/jenkins-ansicolor-plugin](https://github.com/dblock/jenkins-ansicolor-plugin)
 - Plugin: [https://plugins.jenkins.io/ansicolor](https://plugins.jenkins.io/ansicolor)
 - This plugin was made possible by the JANSI parser: [https://github.com/fusesource/jansi/](https://github.com/fusesource/jansi/)
-

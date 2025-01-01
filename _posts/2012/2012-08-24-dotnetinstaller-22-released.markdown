@@ -14,4 +14,3 @@ dotNetInstaller 2.2 has been released today, August 24th , 2012
 > [https://github.com/dblock/dotnetinstaller](https://github.com/dblock/dotnetinstaller)
 
 Thanks to all the contributors to this release! See [CHANGELOG](https://github.com/dblock/dotnetinstaller/blob/master/CHANGELOG.md) for details.
-
