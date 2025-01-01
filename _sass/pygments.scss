@@ -5,6 +5,7 @@
 	color: #333332;
 	margin-bottom: 1.5em;
 	@include rounded(4px);
+	line-height: normal; 
 	pre {
 		position: relative;
 		margin: 0;

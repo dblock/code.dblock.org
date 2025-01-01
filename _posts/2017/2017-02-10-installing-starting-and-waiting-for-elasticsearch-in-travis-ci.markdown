@@ -7,17 +7,17 @@ comments: true
 ---
 If you're like me, a `sleep` inside a script for anything longer than a second is a crime. So lets install and start ElasticSearch on Travis-CI and curl it until it's up and running.
 
-{% highlight bash %}
+```bash
 before_install:
   - curl -O https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.5.2.deb
   - sudo dpkg -i --force-confnew elasticsearch-1.5.2.deb
   - sudo /etc/init.d/elasticsearch start
   - until curl --silent -XGET --fail https://localhost:9200; do printf '.'; sleep 1; done
-{% endhighlight %}
+```
 
 Which gives ...
 
-{% highlight bash %}
+```bash
 $ until curl --silent -XGET --fail https://localhost:9200; do printf '.'; sleep 1; done
 .......{
   "status" : 200,
@@ -32,7 +32,7 @@ $ until curl --silent -XGET --fail https://localhost:9200; do printf '.'; sleep 
   },
   "tagline" : "You Know, for Search"
 }
-{% endhighlight %}
+```
 
 Beautiful.
 

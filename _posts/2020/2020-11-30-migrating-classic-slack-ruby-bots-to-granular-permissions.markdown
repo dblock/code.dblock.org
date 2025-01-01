@@ -37,14 +37,14 @@ In order not to affect existing users, [create a new Slack app](https://api.slac
 
 A typical bot may want to respond to mentions, which is made very easy by the new [slack-ruby-bot-server-events-app-mentions](https://github.com/slack-ruby/slack-ruby-bot-server-events-app-mentions) gem.
 
-{% highlight ruby %}
+```ruby
 SlackRubyBotServer.configure do |config|
   config.oauth_version = :v2
   config.oauth_scope = ['app_mentions:read', 'im:history', 'chat:write']
 end
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 class Ping < SlackRubyBotServer::Events::AppMentions::Mention
   mention 'ping'
 
@@ -53,7 +53,7 @@ class Ping < SlackRubyBotServer::Events::AppMentions::Mention
     client.chat_postMessage(channel: data.channel, text: 'pong')
   end
 end
-{% endhighlight %}
+```
 
 See a [complete sample](https://github.com/slack-ruby/slack-ruby-bot-server-events-app-mentions-sample) for more details.
 
@@ -61,14 +61,14 @@ See a [complete sample](https://github.com/slack-ruby/slack-ruby-bot-server-even
 
 More advanced bots may want to handle all kinds of messages. For example, [slack-shellbot#22](https://github.com/slack-ruby/slack-shellbot/pull/22) configures scopes to receive the kitchen sink of events, then handles them carefully avoiding handling its own messages.
 
-{% highlight ruby %}
+```ruby
 SlackRubyBotServer.configure do |config|
   config.oauth_version = :v2
   config.oauth_scope = ['chat:write', 'im:history', 'mpim:history', 'channels:history', 'groups:history']
 end
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 SlackRubyBotServer::Events.configure do |config|
   config.on :event, 'event_callback', 'message' do |event|
     # SlackShellbot::Commands::Base.logger.info event
@@ -86,7 +86,7 @@ SlackRubyBotServer::Events.configure do |config|
     true
   end
 end
-{% endhighlight %}
+```
 
 ### Deploy
 

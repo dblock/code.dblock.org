@@ -11,7 +11,7 @@ Why would I need that? In [opensearch-project/opensearch-build](https://github.c
 
 These checks can be executed in parallel, so we can create a GitHub Actions matrix like so.
 
-{% highlight yaml %}
+```yaml
 name: manifests
 on: [push, pull_request]
 jobs:
@@ -26,12 +26,12 @@ jobs:
       - uses: actions/checkout@v2   
       - run: |
         ./check-manifest ${{ matrix.manifest }}
-{% endhighlight %}
+```
 
 We'll definitely forget to update the matrix when a new file is created, so let's just list those files dynamically, and generate a matrix from the list.
 
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 name: manifests
 on: [push, pull_request]
@@ -55,7 +55,7 @@ jobs:
       - run: |
         ./check-manifest ${{ matrix.manifest }}
 {% endraw %}
-{% endhighlight %}
+```
 
 Here's how this works.
 

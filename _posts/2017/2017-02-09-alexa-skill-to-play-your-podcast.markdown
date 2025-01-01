@@ -13,7 +13,7 @@ The Artsy editorial team uploads the podcast to SoundCloud, which exposes an [RS
 
 The intent retrieves the podcast, extracts the MP3 URL and calls `audioPlayerPlayStream`.
 
-{% highlight javascript %}
+```javascript
 app.intent('PodcastIntent', {},
     "utterances": [
       "to play the latest podcast"
@@ -35,11 +35,11 @@ app.intent('PodcastIntent', {},
     });
   }
 );
-{% endhighlight %}
+```
 
 Note that we set the value of `token` to the MP3 stream URL. This is supposed to be a unique opaque identifier, but the URL works well and allows to pause the playback with `audioPlayerStop` and resume the podcast with `audioPlayerPlayStream` without having to lookup the MP3 location.
 
-{% highlight javascript %}
+```javascript
 app.intent('AMAZON.PauseIntent', {},
   function(req, res) {
     console.log('app.AMAZON.PauseIntent');
@@ -63,6 +63,6 @@ app.intent('AMAZON.ResumeIntent', {},
     res.send();
   }
 );
-{% endhighlight %}
+```
 
 There's not much more to it.

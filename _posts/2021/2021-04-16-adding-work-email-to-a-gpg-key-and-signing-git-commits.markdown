@@ -15,14 +15,14 @@ If you don't already have a key, install [gpg2](https://gnupg.org/download/) (e.
 
 You can list keys with `gpg --list-secret-keys --keyid-format LONG` and note the key ID.
 
-{% highlight bash %}
+```bash
 gpg --list-secret-keys --keyid-format LONG
 /Users/dblock/.gnupg/pubring.kbx
 --------------------------------
 sec   rsa2048/75BF031B7C94E183 2013-12-24 [SC]
       4A720FE790B07A68744E371675BF031B7C94E183
 uid                 [ultimate] Daniel Doubrovkine <dblock[at]dblock.org>
-{% endhighlight %}
+```
 
 In my example the key ID is `75BF031B7C94E183`.
 
@@ -30,26 +30,26 @@ In my example the key ID is `75BF031B7C94E183`.
 
 I export and store a copy of my GPG keys in Dropbox and store the private key passphrase in 1Password. The latter is required to export or import a private key (gpg will prompt you). 
 
-{% highlight bash %}
+```bash
 gpg --export-secret-key 75BF031B7C94E183 > 75BF031B7C94E183.gpg
-{% endhighlight %}
+```
 
 ### Adding my Work E-Mail
 
 I only have one identity, but multiple e-mails. I decided to add my work e-mail to my GPG key (YMMV) as explained [here](https://docs.github.com/en/github/authenticating-to-github/associating-an-email-with-your-gpg-key).
 
-{% highlight bash %}
+```bash
 gpg --edit-key 75BF031B7C94E183
 
 $ gpg> adduid
 
 # follow prompts, finish with `save`
 
-{% endhighlight %}
+```
 
 My key now has both my personal and work e-mail addresses.
 
-{% highlight bash %}
+```bash
 $ gpg --list-secret-keys --keyid-format LONG
 /Users/dblock/.gnupg/pubring.kbx
 --------------------------------
@@ -59,7 +59,7 @@ uid                 [ultimate] Daniel Doubrovkine <dblock[at]amazon.com>
 uid                 [ultimate] Daniel Doubrovkine <dblock[at]dblock.org>
 ssb   rsa2048/960955779E55310A 2013-12-24 [E]
 
-{% endhighlight %}
+```
 
 I then exported the public key with `gpg -a --export 3AA5C34371567BD2` and [added it to my Github account](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account).
 
@@ -67,7 +67,7 @@ I then exported the public key with `gpg -a --export 3AA5C34371567BD2` and [adde
 
 I wanted to enable commit signing globally to avoid having to constantly appenad `-S` to `git commit`, and [added the following settings to my dotfiles](https://github.com/dblock/dotfiles/commit/073adde3335182ce33625951c84a8431adea8256).
 
-{% highlight bash %}
+```bash
 # make GPG work
 export GPG_TTY=$(tty)
 
@@ -75,13 +75,13 @@ export GPG_TTY=$(tty)
 git config --global user.signingkey 75BF031B7C94E183
 # automatically sign all commits
 git config --global commit.gpgsign true
-{% endhighlight %}
+```
 
 ### Checking it Out
 
 Commit signatures appear in `git log --show-signature`.
 
-{% highlight bash %}
+```bash
 ~/source/dotfiles (master)$ git log --show-signature -1
 commit 073adde3335182ce33625951c84a8431adea8256 (HEAD -> master, origin/master, origin/HEAD)
 gpg: Signature made Thu Apr 15 18:19:41 2021 EDT
@@ -92,7 +92,7 @@ Author: dblock <dblock[at]amazon.com>
 Date:   Thu Apr 15 18:19:41 2021 -0400
 
     Installing GPG keys.
-{% endhighlight %}
+```
 
 And you can see a nice icon next to verified commits on GitHub!
 
@@ -104,9 +104,9 @@ Now, how do I get verified [on Twitter](https://twitter.com/dblockdotorg)?!
 
 I find it annoying to have to re-enter the passphrase every few minutes. Put the following into `~/.gnupg/gpg-agent.conf` to set the timeout to a day's worth.
 
-{% highlight bash %}
+```bash
 default-cache-ttl 86400
-{% endhighlight %}
+```
 
 Restart `gpgagent` with `gpgconf --kill gpg-agent`.
 
@@ -114,12 +114,12 @@ Restart `gpgagent` with `gpgconf --kill gpg-agent`.
 
 Import the key on a new computer.
 
-{% highlight bash %}
+```bash
 gpg --import ~/Dropbox/Personal/7C94E183.gpg
 gpg --import-ownertrust < ~/Dropbox/Personal/7C94E183.trustlevel.txt
 git config --global user.signingkey 75BF031B7C94E183
 git config --global commit.gpgsign true
-{% endhighlight %}
+```
 
 If you get an error `gpg: no valid OpenPGP data found.` and `gpg: Total number processed: 0`, this is a very obtuse way for GPG to tell you the that contents of the file you're trying to import is invalid. In my case `gpg --import ~/Dropbox/Personal/7C94E183.gpg` was failing because the file was not synced to my local drive from Dropbox.
 

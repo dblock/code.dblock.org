@@ -21,7 +21,7 @@ I couldn't figure out how to make those relative to either HTTP or HTTPs.
 
 Add a JavaScript redirect to `_head.html` from HTTP to HTTPs.
 
-{% highlight js %}
+```js
 <script language="javascript">
   // Enforce SSL
   (function (root) {
@@ -34,7 +34,7 @@ Add a JavaScript redirect to `_head.html` from HTTP to HTTPs.
   }
   ("undefined" !== typeof window ? window : this));
 </script>
-{% endhighlight %}
+```
 
 I couldn't find a plugin that could make a 301 redirect before page load, something that Google recommends.
 
@@ -42,8 +42,8 @@ I couldn't find a plugin that could make a 301 redirect before page load, someth
 
 Include the JavaScript.
 
-{% highlight liquid %}
+```liquid
 {% raw  %}
 {% include _enforce_ssl.html %}
 {% endraw  %}
-{% endhighlight %}
+```

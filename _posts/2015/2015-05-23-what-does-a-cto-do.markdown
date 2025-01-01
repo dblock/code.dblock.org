@@ -17,7 +17,7 @@ So how do I find out what I should be doing every day? What is it that I _actual
 
 I decided to apply test-driven development to this problem.
 
-{% highlight ruby %}
+```ruby
 shared_examples "is worthy of dB's time" do
   it 'is aligned with core values'
   it 'gets the company closer to its vision'
@@ -31,7 +31,7 @@ shared_examples "is worthy of dB's time" do
   it 'has a measurable outcome'
   # what else?
 end
-{% endhighlight %}
+```
 
 How do I find something to apply these tests to?
 

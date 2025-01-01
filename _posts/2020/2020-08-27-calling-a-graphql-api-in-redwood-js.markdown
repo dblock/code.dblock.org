@@ -7,7 +7,7 @@ comments: true
 ---
 I recently needed to stand up a demo app that invoked an [AWS AppSync](https://aws.amazon.com/appsync/) GraphQL API. The existing endpoint (not available publicly) returned restaurant data for a given zip with the following schema.
 
-{% highlight javascript %}
+```javascript
 type ZipData {
   zip: String
   timezone: String
@@ -27,7 +27,7 @@ type Query {
 schema {
   query: Query
 }
-{% endhighlight %}
+```
 
 The app I wanted to build was throwaway, and my goal was to make it happen effortlessly, during a single lunch break. I was told to try [Redwood.js](https://redwoodjs.com/), [AWS Amplify](https://aws.amazon.com/amplify/), [Sanity.io](https://www.sanity.io/), [Next.js](https://nextjs.org/) via [prisma-examples](https://github.com/prisma/prisma-examples), and some zero-code tools, including [ReTool](https://retool.com/).
 
@@ -37,23 +37,23 @@ Let's start with Redwood.js ...
 
 ### Create an App
 
-{% highlight bash %}
+```bash
 nvm use 12
 yarn create redwood-app ./redwood-js-appsync-graphql-demo
 cd ./redwood-js-appsync-graphql-demo
-{% endhighlight %}
+```
 
 ### Add a Homepage
 
-{% highlight bash %}
+```bash
 yarn redwood generate page home /
-{% endhighlight %}
+```
 
 ### Add an Input Box for the Zip Code
 
 When the form is submitted, state (including zip code) will change.
 
-{% highlight react %}
+```react
 import { Link, routes } from '@redwoodjs/router'
 import { useState } from 'react'
 import { Form, TextField, Submit } from '@redwoodjs/forms'
@@ -76,17 +76,17 @@ const HomePage = () => {
 }
 
 export default HomePage
-{% endhighlight %}
+```
 
 ### Add graphql-request
 
-{% highlight bash %}
+```bash
 yarn add -W graphql-request
-{% endhighlight %}
+```
 
 ### Add the GraphQL Query
 
-{% highlight react %}
+```react
 import { GraphQLClient } from 'graphql-request'
 
 export const getRestaurantsByZip = async (zip) => {
@@ -110,11 +110,11 @@ export const getRestaurantsByZip = async (zip) => {
 
   return graphQLClient.request(query, { zip: zip })
 }
-{% endhighlight %}
+```
 
 ### Wire Up GraphQL Results
 
-{% highlight react %}
+```react
 const onSubmit = (data) => {
   getRestaurantsByZip(data.zip).then(rc => {
     setZip(rc.get_restaurants_by_zip.zip)
@@ -137,7 +137,7 @@ return (
     </div>
   </div>
 )
-{% endhighlight %}
+```
 
 ### Not Taking Advantage of Redwood.js
 
@@ -147,7 +147,7 @@ So far I used Redwood.js similarly to how one would use Rails without models, vi
 
 Add `api/src/graphql/restaurants.sdl.js` with the schema that our Redwood.js service will return.
 
-{% highlight javascript %}
+```javascript
 import gql from 'graphql-tag'
 
 export const schema = gql`
@@ -165,13 +165,13 @@ export const schema = gql`
     restaurants(zip: String!): Zip
   }
 ` 
-{% endhighlight %}
+```
 
 ### Fetch Data from the AppSync API
 
 Wire up calls to the AppSync endpoint in `api/src/lib/db.js`.
 
-{% highlight javascript %}
+```javascript
 import { GraphQLClient } from 'graphql-request'
 
 export const request = async (query, variables) => {
@@ -185,11 +185,11 @@ export const request = async (query, variables) => {
 
   return await graphQLClient.request(query, variables)
 } 
-{% endhighlight %}
+```
 
 Add `api/src/services/restaurants.js` that loads restaurant data using the above endpoint.
 
-{% highlight javascript %}
+```javascript
 import { request } from 'src/lib/db'
 import { gql } from 'graphql-request'
 
@@ -209,17 +209,17 @@ export const restaurants = async (args) => {
   var data = await request(query, args)
   return data.get_restaurants_by_zip
 } 
-{% endhighlight %}
+```
 
 ### Add a Restaurants Cell
 
-{% highlight bash %}
+```bash
 yarn redwood generate cell restaurants
-{% endhighlight %}
+```
 
 The cell makes a query to the Redwood.js service to fetch restaurants.
 
-{% highlight react %}
+```react
 export const QUERY = gql`query($zip: String!) {
   restaurants(zip: $zip) {
     zip
@@ -253,11 +253,11 @@ export const Success = ({ restaurants }) => {
     )}
   </div>
 }
-{% endhighlight %}
+```
 
 Wire up the cell in the homepage.
 
-{% highlight react %}
+```react
 const HomePage = () => {
   const [zip, setZip] = useState()
 
@@ -271,7 +271,7 @@ const HomePage = () => {
     </div>
   )
 }
-{% endhighlight %}
+```
 
 ### Put it All Together
 

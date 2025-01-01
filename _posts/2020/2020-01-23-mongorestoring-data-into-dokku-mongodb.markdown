@@ -14,31 +14,31 @@ I am dealing with [slack-gamebot](https://github.com/dblock/slack-gamebot) data,
 
 Construct a query string, eg. `{"team_id":"ID"}` and fetch the `_id` value for querying relationships.
 
-{% highlight bash %}
+```bash
 TEAM_QUERY='{"team_id":"'"$TEAM_ID"'"}'
 ID=`mongo $DB --quiet --eval "db.teams.findOne($TEAM_QUERY)._id.valueOf()"`
-{% endhighlight %}
+```
 
 Export team data.
 
-{% highlight bash %}
+```bash
 mongoexport --db $DB -c teams --out $OUT/teams.dump --query=$TEAM_QUERY
-{% endhighlight %}
+```
 
 Construct a query string with the MongoDB Object ID, an `$oid`.
 
-{% highlight bash %}
+```bash
 ID_QUERY='{"team_id":{"$oid":"'"$ID"'"}}'
-{% endhighlight %}
+```
 
 Export all related collections.
 
-{% highlight bash %}
+```bash
 for coll in challenges matches seasons users
 do
   mongoexport --db $DB -c $coll --out $OUT/$coll.dump --query=$ID_QUERY
 done
-{% endhighlight %}
+```
 
 We now have files such as `teams.dump`, `users.dump`, etc.
 
@@ -46,13 +46,13 @@ We now have files such as `teams.dump`, `users.dump`, etc.
 
 Expose the MongoDB in a container on the Dokku host so we can connect to it.
 
-{% highlight bash %}
+```bash
 dokku mongo:expose app
-{% endhighlight %}
+```
 
 This will randomly assign ports. You can run `dokku mongo:info app` to see the exposed ports.
 
-{% highlight bash %}
+```bash
 # dokku mongo:info app
 =====> Container Information
        ...
@@ -60,7 +60,7 @@ This will randomly assign ports. You can run `dokku mongo:info app` to see the e
        Dsn:                 mongodb://username:password@dokku-mongo-app:27017/app
        Status:              running
        Version:             mongo:3.2.1
-{% endhighlight %}
+```
 
 Note the mapping for `27017`, mine is `13450` and the username and password.
 
@@ -68,15 +68,15 @@ Try connecting to the database directly with `mongo`. Make sure the client versi
 
 ### Restore Data
 
-{% highlight bash %}
+```bash
 mongoimport --host=... --port=13450 --username=username --password=password --db app -c teams teams.dump
-{% endhighlight %}
+```
 
 ### Unexpose MongoDB
 
-{% highlight bash %}
+```bash
 dokku mongo:unexpose app
-{% endhighlight %}
+```
 
 
 

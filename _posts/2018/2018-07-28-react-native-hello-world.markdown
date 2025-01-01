@@ -12,9 +12,9 @@ My pet project is called *33 Minutes*, and it's a "Strava for meetings", startin
 
 I was told to use [Expo](https://expo.io) and to bootstrap the project with [create react native app](https://github.com/react-community/create-react-native-app). Expo is a _free and open source toolchain built around React Native to help you build native iOS and Android projects using JavaScript and React_.
 
-{% highlight shell %}
+```shell
 $ npm i -g create-react-native-app
-{% endhighlight %}
+```
 
 Running `create-react-native-app` results with a bunch of code in a new folder. You can `npm install -g yarn`, `yarn install` and `yarn start` from the generated folder. Launch an iOS simulator with `i` and voila, a "Hello World", 230MB, app.
 
@@ -26,7 +26,7 @@ If you've never used [Visual Studio Code](https://code.visualstudio.com), this i
 
 The interesting part is in `App.js`.
 
-{% highlight jsx %}
+```jsx
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 });
-{% endhighlight %}
+```
 
 This seems bizarre. It's neither JavaScript, nor HTML. It is called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it is a syntax extension to JavaScript where UI components live next to JavaScript code, next to the component style. The above _component_ has a `render` method that is called every time the component state changes and it returns a view with some text.
 

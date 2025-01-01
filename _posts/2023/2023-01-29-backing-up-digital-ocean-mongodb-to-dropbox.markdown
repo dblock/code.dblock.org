@@ -13,7 +13,7 @@ I tried [simplebackups](https://simplebackups.com/?via=dblock), and found the UX
 
 Finally, I settled on a cron and [a script](https://github.com/dblock/dotfiles/blob/master/bash/bin/mongodb-dump) to run on my mac. The script has some nice features, such as storing credentials in the keychain that I reuse in a lot of such scripts.
 
-{% highlight bash %}
+```bash
 AUTH=$(security find-generic-password -s $URI -w)
 
 if [ -z "$AUTH" ]; then
@@ -23,6 +23,6 @@ if [ -z "$AUTH" ]; then
     AUTH=$USERNAME:$PASSWORD
     security add-generic-password -a $USER -s $URI -w "$AUTH"
 fi
-{% endhighlight %}
+```
 
 Note that to access a DO MongoDB you need your [external IP](https://github.com/dblock/dotfiles/blob/master/bash/bin/ip) in trusted sources. It's annoying to add in case my IP changes, but because I already get automated backups elsewhere, I am OK with these limitations.

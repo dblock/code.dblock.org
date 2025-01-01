@@ -21,7 +21,7 @@ I downloaded Emma from [https://emma.sourceforge.net](https://emma.sourceforge.n
 
 _Define Emma JARs Location and ClassPath_
 
-{% highlight xml %}
+```xml
 <property name="emma.dir" value="${thirdparty.dir}/emma/lib" />
 <path id="emma.classpath" >
   <fileset dir="${thirdparty.dir}/emma/lib">
@@ -29,13 +29,13 @@ _Define Emma JARs Location and ClassPath_
     <include name="emma_ant.jar" />
   </fileset>
 </path>
-{% endhighlight %}
+```
 
 _Instrument Files_
 
 I went the route of not changing my build tasks and instrumenting the .class files already built. Then I swap in those files with the instrumented ones. Note that Emma only generates .class files for instrumentable classes – those not containing debugging information, interface definitions and such aren't included.
 
-{% highlight xml %}
+```xml
 <target name="instrument">
   <echo message="Instrumenting ${waffle.lib}" />
   <path id="build.classpath">
@@ -49,23 +49,23 @@ I went the route of not changing my build tasks and instrumenting the .class fil
     <fileset dir="${waffle.cover}/lib" includes="**/*" />
   </copy>
 </target>
-{% endhighlight %}
+```
 
 _Running Tests_
 
 The tests are run the same way as before, but we need to tell Emma where to write its output.
 
-{% highlight xml %}
+```xml
 <junit ...
   <jvmarg value="-Demma.coverage.out.file=${waffle.cover}/coverage.emma" />
 </junit>
-{% endhighlight %}
+```
 
 _Generating an EMMA Report_
 
 Finally, we want to get a nice HTML document that summarizes coverage.
 
-{% highlight xml %}
+```xml
 <target name="cover-report">
     <emma>
         <report sourcepath="${waffle.src}">
@@ -76,7 +76,7 @@ Finally, we want to get a nice HTML document that summarizes coverage.
         </report>
     </emma>
 </target>
-{% endhighlight %}
+```
 
 Here's an output.
 

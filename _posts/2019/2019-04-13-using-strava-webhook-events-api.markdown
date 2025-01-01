@@ -15,10 +15,10 @@ Here is how to run a full loop locally using `strava-webhooks` from [strava-ruby
 
 Install [any recent version of Ruby](https://www.ruby-lang.org) to get started, then install the gem.
 
-{% highlight sh %}
+```sh
 $ gem install strava-ruby-client
 Successfully installed strava-ruby-client-0.3.1
-{% endhighlight %}
+```
 
 #### Settings
 
@@ -28,30 +28,30 @@ Get a client ID and secret from [Strava Settings, My API Application](https://ww
 
 Try `strava-webhooks` without any arguments. It should show you existing subscriptions, aka none.
 
-{% highlight sh %}
+```sh
 $ STRAVA_CLIENT_ID=12345 STRAVA_CLIENT_SECRET=... strava-webhooks
 request: GET https://api.strava.com/api/v3/push_subscriptions?...
 response: Status 200
-{% endhighlight %}
+```
 
 #### Handler
 
 Run a local webhook handler that responds to Strava pushing events with `strava-webhooks handle`.
 
-{% highlight sh %}
+```sh
 $ STRAVA_CLIENT_ID=12345 STRAVA_CLIENT_SECRET=... strava-webhooks handle
   WEBrick 1.4.2
   ruby 2.5.1 (2018-03-29) [x86_64-darwin17]
   WEBrick::HTTPServer#start: pid=53701 port=4242
-{% endhighlight %}
+```
 
 Note that it starts on port 4242 by default.
 
 Since your local machine is not addressable from the Internet, use [ngrok](https://ngrok.com/), in another terminal.
 
-{% highlight sh %}
+```sh
 ngrok http 4242
-{% endhighlight %}
+```
 
 This creates an HTTPs forwarding URL, eg. `https://d3d0c6c4.ngrok.io`.
 
@@ -59,7 +59,7 @@ This creates an HTTPs forwarding URL, eg. `https://d3d0c6c4.ngrok.io`.
 
 Create a webhook subscription with `strava-webhooks create [url]`.
 
-{% highlight sh %}
+```sh
 $ STRAVA_CLIENT_ID=12345 STRAVA_CLIENT_SECRET=... strava-webhooks create https://d3d0c6c4.ngrok.io
   Subscribing to https://d3d0c6c4.ngrok.io ...
   request: POST https://api.strava.com/api/v3/push_subscriptions
@@ -73,21 +73,21 @@ $ STRAVA_CLIENT_ID=12345 STRAVA_CLIENT_SECRET=... strava-webhooks create https:/
   resource_state=2
   updated_at=2019-04-13 14:06:16 UTC
 >
-{% endhighlight %}
+```
 
 The response contains a subscription ID of `136021`.
 
 Notice that the handler had to respond to a hub challenge.
 
-{% highlight sh %}
+```sh
 GET /?hub.challenge=399037be828d8cd0&hub.mode=subscribe&hub.verify_token=token HTTP/1.1
-{% endhighlight %}
+```
 
 #### Handle Events
 
 Start by creating a manual activity for the same user. This will trigger an event that you can see in the handler window.
 
-{% highlight sh %}
+```sh
 #<Strava::Webhooks::Models::Event
   aspect_type="create"
   event_time=2019-04-13 10:08:33 -0400
@@ -97,11 +97,11 @@ Start by creating a manual activity for the same user. This will trigger an even
   subscription_id=136021
   updates={}
 >
-{% endhighlight %}
+```
 
 Delete the activity.
 
-{% highlight sh %}
+```sh
 #<Strava::Webhooks::Models::Event
   aspect_type="delete"
   event_time=2019-04-13 10:09:04 -0400
@@ -111,7 +111,7 @@ Delete the activity.
   subscription_id=136021
   updates={}
 >
-{% endhighlight %}
+```
 
 #### Authorized User Activities
 
@@ -121,11 +121,11 @@ To see other users' events these must authorize your application. See [Strava Au
 
 Delete the subscription with `strava-webhooks delete [id]`.
 
-{% highlight sh %}
+```sh
 $ STRAVA_CLIENT_ID=12345 STRAVA_CLIENT_SECRET=... strava-webhooks delete 136021
   request: DELETE https://api.strava.com/api/v3/push_subscriptions/136021?client_id=...&client_secret=...
   response: Status 204
-{% endhighlight %}
+```
 
 #### Code
 

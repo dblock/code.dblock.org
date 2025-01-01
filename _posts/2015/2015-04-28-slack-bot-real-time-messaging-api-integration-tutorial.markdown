@@ -21,9 +21,9 @@ I do want to thank [@aki017](https://github.com/aki017), the author of the forme
 
 The Real Time Messaging API is a WebSocket-based API that allows you to receive events from Slack in real time and send messages as user. The hard part has been done for you in the slack-ruby-client gem.
 
-{% highlight ruby %}
+```ruby
 gem 'slack-ruby-client', '~> 0.1.0'
-{% endhighlight %}
+```
 
 ### Create a New Bot Integration
 
@@ -35,7 +35,7 @@ This is something done in Slack, under [integrations](https://slack.com/services
 
 Use the token to verify auth via the Web API.
 
-{% highlight ruby %}
+```ruby
 Slack.configure do |config|
   config.token = ENV['SLACK_API_TOKEN']
 end
@@ -43,7 +43,7 @@ end
 client = Slack::Web::Client.new
 
 client.auth_test
-{% endhighlight %}
+```
 
 The above code returns a hash with the user information, including _url_, _team_ and _team id_, _user_ and _user_id_.
 
@@ -51,7 +51,7 @@ The above code returns a hash with the user information, including _url_, _team_
 
 The slack-api gem uses eventmachine to listen on events from Slack.
 
-{% highlight ruby %}
+```ruby
 client = Slack::RealTime::Client.new
 
 client.on :hello do
@@ -63,11 +63,11 @@ client.on :message do |data|
 end
 
 client.start!
-{% endhighlight %}
+```
 
 ### Respond to Messages
 
-{% highlight ruby %}
+```ruby
 client.on :message do |data|
   case data['text']
   when 'bot hi' then
@@ -76,7 +76,7 @@ client.on :message do |data|
     client.message channel: data['channel'], text: "Sorry <@#{data['user']}>, what?"
   end
 end
-{% endhighlight %}
+```
 
 Slack automatically parses and translates things like `<@userid>`. That's it.
 

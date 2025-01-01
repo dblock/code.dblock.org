@@ -31,24 +31,24 @@ In alphabetical order.
 
 [Chroma](https://www.trychroma.com/) is an AI-native open-source embedding database. You can clone Chroma from GitHub and run it locally.
 
-{% highlight bash %}
+```bash
 git clone https://github.com/chroma-core/chroma.git
 cd chroma
 docker-compose up -d --build
-{% endhighlight %}
+```
 
 Chroma comes with a Python and JavaScript client, but underneath it uses a fairly straightforward [http interface](https://github.com/chroma-core/chroma/blob/main/chromadb/api/fastapi.py#L46) that talks JSON. The following produces the server version number.
 
-{% highlight python %}
+```python
 endpoint = os.getenv("ENDPOINT", 'http://localhost:8000')
 api_url = urljoin(endpoint, '/api/v1/')
 client = Client()
 print(client.get(urljoin(api_url, 'version')).json())
-{% endhighlight %}
+```
 
 You can check whether a collection exists by querying `/api/v1/collections/name`, but Chroma returns 500s when it doesn't, so it gets messy. It also seems to allow you to refer to the collection by name and ID, but not in all APIs, so we need the ID anyway. Let's get it either from `collections` or from the return value of creating a collection.
 
-{% highlight python %}
+```python
 collection_name = "my-collection"
 collections = client.get(urljoin(api_url, "collections")).json()
 collection = next((x for x in collections if x["name"] == collection_name), None)
@@ -60,11 +60,11 @@ if not collection:
             "name": collection_name
         },
     ).json()
-{% endhighlight %}
+```
 
 Chroma is opinionated in how it likes to receive data with arrays of IDs, embeddings, metadata, etc.
 
-{% highlight python %}
+```python
 vectors = [
     {
         "id": "d8f940f1-d6c1-4d8e-82c1-488eb7801e57",
@@ -90,11 +90,11 @@ for vector in vectors:
     data["metadatas"].append(vector["metadata"])
 
 client.post(urljoin(api_url, f"collections/{collection['id']}/add"), json=data)
-{% endhighlight %}
+```
 
 Search is similar. Chroma handles tokenization, embedding, and indexing automatically, but also does support basic vector search with `query_embeddings`.
 
-{% highlight python %}
+```python
 query = {
     "query_embeddings": [[0.15, 0.12, 1.23]], 
     "n_results": 1,
@@ -106,11 +106,11 @@ results = client.post(
 ).json()
 
 print(results)
-{% endhighlight %}
+```
 
 A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/chroma/hello.py).
 
-{% highlight bash %}
+```bash
 ENDPOINT=http://localhost:8000 poetry run ./hello.py
 
 $ ENDPOINT=http://localhost:8000 poetry run ./hello.py
@@ -128,27 +128,27 @@ Chroma 0.4.3
 {'ids': [['c47eade8-59b9-4c49-9172-a0ce3d9dd0af']], 'distances': None, 'metadatas': [[{'genre': 'action'}]], 'embeddings': [[[0.2, 0.3, 0.4]]], 'documents': None}
 > DELETE http://localhost:8000/api/v1/collections/my-collection
 < DELETE http://localhost:8000/api/v1/collections/my-collection - 200
-{% endhighlight %}
+```
 
 ### ClickHouse
 
 [ClickHouse](https://clickhouse.com/) is a fast and resource efficient open-source database for real-time apps and analytics. You can [download a free version](https://clickhouse.com/#getting_started) or use [ClickHouse Cloud](https://clickhouse.com/).
 
-{% highlight bash %}
+```bash
 docker run -p 9000:9000 -p 9009:9009 -p 8123:8123 --platform linux/amd64 --ulimit nofile=262144:262144 clickhouse/clickhouse-server
-{% endhighlight %}
+```
 
 ClickHouse offers an HTTP interface.
 
-{% highlight python %}
+```python
 endpoint = os.getenv("ENDPOINT", "http://localhost:8123")
 client = Client()
 print(client.get(endpoint).text)
-{% endhighlight %}
+```
 
 Create a table with a k-nn index. Note `allow_experimental_annoy_index=1` in the query string that turns on the [approximate nearest neighbor](https://clickhouse.com/docs/en/engines/table-engines/mergetree-family/annindexes) index feature.
 
-{% highlight python %}
+```python
 client.post(endpoint, params="allow_experimental_annoy_index=1", data=
     "CREATE TABLE IF NOT EXISTS default.vectors (" \
         "id String," \
@@ -160,11 +160,11 @@ client.post(endpoint, params="allow_experimental_annoy_index=1", data=
     "ENGINE = MergeTree " \
     "ORDER BY id"
 )
-{% endhighlight %}
+```
 
 Insert some vectors.
 
-{% highlight python %}
+```python
 vectors = [
     {
         "id": "vec1",
@@ -183,11 +183,11 @@ for vector in vectors:
         f"INSERT INTO default.vectors (id, values, metadata) " \
         f"VALUES (\'{vector['id']}\', {vector['values']}, {vector['metadata']})"
     )
-{% endhighlight %}
+```
 
 Search.
 
-{% highlight python %}
+```python
 results = client.post(endpoint, data=
     "SELECT * " \
     "FROM default.vectors " \
@@ -196,11 +196,11 @@ results = client.post(endpoint, data=
 )
 
 print(results.text)  
-{% endhighlight %}
+```
 
 A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/click_house/hello.py).
 
-{% highlight bash %}
+```bash
 poetry run ./hello.py
 
 > POST http://localhost:8123?allow_experimental_annoy_index=1
@@ -220,7 +220,7 @@ vec2	[0.2,0.3,0.4]	{'genre':'action'}
 > POST http://localhost:8123
   DROP TABLE default.vectors
 < POST http://localhost:8123 - 200
-{% endhighlight %}
+```
 
 ### MongoDB
 
@@ -228,7 +228,7 @@ vec2	[0.2,0.3,0.4]	{'genre':'action'}
 
 Connecting to MongoDB Atlas using [pymongo](https://pymongo.readthedocs.io/en/stable/) is similar to any MongoDB.
 
-{% highlight python %}
+```python
 client = MongoClient(
     os.environ["ENDPOINT"],
     username=os.environ["USERNAME"],
@@ -236,17 +236,17 @@ client = MongoClient(
 )
 
 print(f"Connected to MongoDB Atlas {client.server_info()['version']}.")
-{% endhighlight %}
+```
 
 Create a collection.
 
-{% highlight python %}
+```python
 coll = db.create_collection("vectors")
-{% endhighlight %}
+```
 
 A separate search index is needed for vector search. While indexes are attached to a collection, they also have a lifecycle of their own and take several seconds to come online.
 
-{% highlight python %}
+```python
 model = SearchIndexModel(
     definition={
         "dynamic": True,
@@ -264,11 +264,11 @@ model = SearchIndexModel(
 )
 
 coll.create_search_index(model)
-{% endhighlight %}
+```
 
 Insert vectors. Note that indexing isn't immediate, so search results will not be available until the search index catches up.
 
-{% highlight python %}
+```python
 vectors = [
     {
         "id": "vec1",
@@ -284,11 +284,11 @@ vectors = [
 
 for vector in vectors:
     coll.insert_one(vector)
-{% endhighlight %}
+```
 
 Use an aggregation to search for vectors.
 
-{% highlight python %}
+```python
 results = coll.aggregate(
     [
         {
@@ -305,11 +305,11 @@ results = coll.aggregate(
 
 for result in results:
     print(result)
-{% endhighlight %}
+```
 
 A working sample that waits for the index to come online is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/mongodb/hello.py).
 
-{% highlight bash %}
+```bash
 poetry install
 USERNAME=... PASSWORD... ENDPOINT=mongodb+srv://vector-cluster.xyz.mongodb.net poetry run ./hello.py
 
@@ -324,7 +324,7 @@ Searching ........ 2 result(s)
 {'_id': ObjectId('671394d5e17d031610d84b2e'), 'id': 'vec2', 'values': [0.2, 0.3, 0.4], 'metadata': {'genre': 'action'}}
 {'_id': ObjectId('671394d5e17d031610d84b2d'), 'id': 'vec1', 'values': [0.1, 0.2, 0.3], 'metadata': {'genre': 'drama'}}
 Cleaning up ... DONE.
-{% endhighlight %}
+```
 
 ### MyScale
 
@@ -332,7 +332,7 @@ Cleaning up ... DONE.
 
 Sign up [on their website](https://myscale.com) for a test cluster, note the username and password. A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/my_scale/hello.py).
 
-{% highlight bash %}
+```bash
 USERNAME=... PASSWORD=... ENDPOINT=https://...aws.myscale.com:443 poetry run ./hello.py
 
 > POST https://...aws.myscale.com
@@ -352,20 +352,20 @@ vec2	[0.2,0.3,0.4]	{'genre':'action'}
 > POST https://...aws.myscale.com
   DROP TABLE default.vectors
 < POST https://...aws.myscale.com - 200
-{% endhighlight %}
+```
 
 ### OpenSearch
 
 [OpenSearch](https://opensearch.org/) is a scalable, flexible, and extensible open-source software suite for search, analytics, and observability applications licensed under Apache 2.0. You can use a managed service, such as [Amazon OpenSearch](https://aws.amazon.com/opensearch-service/), or download and install it locally. I usually do the latter, mostly because it's trivial, and I can work offline.
 
-{% highlight bash %}
+```bash
 docker pull opensearchproject/opensearch:latest
 docker run -d -p 9200:9200 -p 9600:9600 -e "discovery.type=single-node" opensearchproject/opensearch:latest
-{% endhighlight %}
+```
 
 Whichever option you choose you get a single endpoint (e.g. "https://localhost:9200"). Locally it uses basic auth and has self-signed SSL certificates, therefore needs `verify=False`.
 
-{% highlight python %}
+```python
 endpoint = "https://localhost:9200"
 username = "admin"
 password = "admin"
@@ -375,22 +375,22 @@ headers = {
     "Accept": "application/json; charset=utf-8",
     "Content-Type": "application/json; charset=utf-8",
 }
-{% endhighlight %}
+```
 
 We can get a list of existing indexes. This is a data structure with a ton of useful information, but we'll make a dictionary out of it, and use it to check whether an index exists.
 
-{% highlight python %}
+```python
 indices = { x["index"]: x for x in
     client.get(
         urljoin(endpoint, "/_cat/indices"), 
         headers=headers
     ).json()
 }
-{% endhighlight %}
+```
 
 If an index doesn't exist, we can create one. The syntax enables k-nn vector search, and include so-called property mappings. It will also need to have a fixed number of dimensions for our vectors.
 
-{% highlight python %}
+```python
 client.put(
     urljoin(endpoint, f"/{index_name}"),
     headers=headers,
@@ -406,11 +406,11 @@ client.put(
         }
     }
 )
-{% endhighlight %}
+```
 
 Indexing data can be done document-by-document or via the bulk API, which requires newline-delimited JSON. We start with some data.
 
-{% highlight python %}
+```python
 vectors = [
     {
         "id": "vec1",
@@ -423,33 +423,33 @@ vectors = [
         "metadata": {"genre": "action"},
     },
 ]
-{% endhighlight %}
+```
 
 You can insert document-by-document.
 
-{% highlight python %}
+```python
 for vector in vectors:
     client.post(
         urljoin(endpoint, f"/{index_name}/_doc/{vector['id']}"),
                 headers=headers,
                 json=vector
     )
-{% endhighlight %}
+```
 
 Or bulk insert, which asks to separate document IDs from document data, so I purposely wrote it in a way that starts with combined vector documents that include IDs, and generates JSON that the bulk API accepts as a transform.
 
-{% highlight python %}
+```python
 data = ""
 for vector in vectors:
     data += json.dumps({ "index": {"_index": index_name, "_id": vector["id"]} }) + "\n"
     data += json.dumps({i: vector[i] for i in vector if i != "id"}) + "\n"
 
 client.post(urljoin(endpoint, "/_bulk"), headers=headers, data=data)
-{% endhighlight %}
+```
 
 Search for data.
 
-{% highlight python %}
+```python
 query = {
     "query": {
         "knn": {
@@ -466,11 +466,11 @@ results = client.post(
         headers=headers,
         json=query
 ).json()
-{% endhighlight %}
+```
 
 A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/open_search/hello.py).
 
-{% highlight bash %}
+```bash
 USERNAME=admin PASSWORD=admin ENDPOINT=https://localhost:9200 poetry run src/open_search/hello.py
 
 > GET https://localhost:9200/_cat/indices
@@ -482,43 +482,43 @@ USERNAME=admin PASSWORD=admin ENDPOINT=https://localhost:9200 poetry run src/ope
 > POST https://localhost:9200/my-index/_search
 < POST https://localhost:9200/my-index/_search - 200
 {'total': {'value': 1, 'relation': 'eq'}, 'max_score': 0.97087383, 'hits': [{'_index': 'my-index', '_id': 'vec1', '_score': 0.97087383, '_source': {'index': {'_index': 'my-index', '_id': 'vec2'}, 'values': [0.2, 0.3, 0.4], 'metadata': {'genre': 'action'}}}]}
-{% endhighlight %}
+```
 
 ### pgVector
 
 [pgVector](https://github.com/pgvector/pgvector) adds vector similarity search to open-source Postgres. You can use a local docker installation from [ankane/pgvector](https://hub.docker.com/r/ankane/pgvector), or a [managed service](https://github.com/pgvector/pgvector#hosted-postgres).
 
-{% highlight bash %}
+```bash
 docker pull ankane/pgvector or https://github.com/pgvector/pgvector/issues/54 for cloud providers
 docker run -e POSTGRES_PASSWORD=password -p 5433:5432 ankane/pgvector
-{% endhighlight %}
+```
 
 PostgreSQL speaks its own message-based protocol, and queries are made in SQL, which is not HTTP, hence we're going to use [asyncpg](https://github.com/MagicStack/asyncpg).
 
-{% highlight python %}
+```python
 database = "vectors"
 conn = await asyncpg.connect(database="template1")
 onn.execute(f"CREATE DATABASE \"{database}\"")
-{% endhighlight %}
+```
 
 Enable vector extensions on the index.
 
-{% highlight python %}
+```python
 await conn.execute(f"CREATE EXTENSION vector")
 await pgvector.asyncpg.register_vector(conn)
-{% endhighlight %}
+```
 
 Create a schema with a custom primary key, a 3-dimensional vector, and some JSON metadata.
 
-{% highlight python %}
+```python
 await conn.execute(
     f"CREATE TABLE vectors (id text PRIMARY KEY, values vector(3), metadata JSONB)"
 )
-{% endhighlight %}
+```
 
 Insert vectors.
 
-{% highlight python %}
+```python
 vectors = [
     {
         "id": "vec1",
@@ -539,30 +539,30 @@ for vector in vectors:
         vector['values'],
         json.dumps(vector['metadata'])
     )
-{% endhighlight %}
+```
 
 Search. In the example below we filter by `genre`.
 
-{% highlight python %}
+```python
 q = "SELECT * FROM vectors WHERE metadata->>'genre'='action' ORDER BY values <-> '[0.2,0.1,0.5]'"
 results = await conn.fetch(q)
 for result in results:
     print(f"{result} ({json.loads(result['metadata'])['genre']})")
-{% endhighlight %}
+```
 
 Finally, drop this database.
 
-{% highlight python %}
+```python
 await conn.execute(f"DROP DATABASE \"{database}\"")
-{% endhighlight %}
+```
 
 A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/pg_vector/hello.py).
 
-{% highlight bash %}
+```bash
 PGPORT=5433 PGUSER=postgres PGPASSWORD=password poetry run ./hello.py
 
 <Record id='vec2' values=array([0.2, 0.3, 0.4], dtype=float32) metadata='{"genre": "action"}'> (action)
-{% endhighlight %}
+```
 
 ### Pinecone
 
@@ -570,7 +570,7 @@ The [Pinecone vector database](https://www.pinecone.io/) is easy to build high-p
 
 Conceptually it has indexes (which are really databases, and were probably originally called as such as the API has `/databases` in it). After signing up to Pinecone you get a regional endpoint and a project ID. These form a controller URI (e.g. `https://controller.us-west4-gcp-free.pinecone.io/`) for database operations. After you create an index, that gets its own URI that combines the index name (e.g. "my-index") and a project ID (e.g. `https://my-index-c7556fa.svc.us-west4-gcp-free.pinecone.io`). It's not quite serverless, as you do have to reason about [pods](https://docs.pinecone.io/docs/indexes).
 
-{% highlight python %}
+```python
 from urllib.parse import urljoin, urlparse
 
 endpoint = urlparse("https://us-west4-gcp-free.pinecone.io")
@@ -579,11 +579,11 @@ project_id = os.environ["PROJECT_ID"]
 controller_endpoint = endpoint._replace(netloc=f"controller.{endpoint.netloc}").geturl()
 
 service_endpoint = endpoint._replace(netloc=f'my-index-{project_id}.svc.{endpoint.netloc}').geturl()
-{% endhighlight %}
+```
 
 Authentication is performed using a required API key.
 
-{% highlight python %}
+```python
 from httpx import Client
 
 api_key = os.environ["API_KEY"]
@@ -595,30 +595,30 @@ headers = {
     "Content-Type": "application/json; charset=utf-8",
     "Api-Key": api_key,
 }
-{% endhighlight %}
+```
 
 We can get a list of existing indexes. This is just a list of names, useful to check whether an index exists.
 
-{% highlight python %}
+```python
 indices = client.get(
     urljoin(controller_endpoint, "/databases"),
         headers=headers
 ).json()
-{% endhighlight %}
+```
 
 If an index doesn't exist, we can create one. It will need to have a fixed number of dimensions for our vectors.
 
-{% highlight python %}
+```python
 client.post(
     urljoin(controller_endpoint, "/databases"),
     headers=headers,
     json={"name": index_name, "dimension": 3},
 )
-{% endhighlight %}
+```
 
 Index data.
 
-{% highlight python %}
+```python
 vectors = [
     {
         "id": "vec1",
@@ -637,11 +637,11 @@ client.post(
     headers=headers,
     json={"vectors": vectors, "namespace": "namespace"},
 )
-{% endhighlight %}
+```
 
 Search for this vector data.
 
-{% highlight python %}
+```python
 results = client.post(
     urljoin(service_endpoint, "/query"),
     headers=headers,
@@ -652,11 +652,11 @@ results = client.post(
         "includeMetadata": True,
     },
 ).json()
-{% endhighlight %}
+```
 
 A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/pinecone/hello.py).
 
-{% highlight bash %}
+```bash
 API_KEY=... PROJECT_ID=... ENDPOINT=https://us-west4-gcp-free.pinecone.io poetry run src/pinecone/hello.py
 
 > GET https://controller.us-west4-gcp-free.pinecone.io/databases
@@ -666,7 +666,7 @@ API_KEY=... PROJECT_ID=... ENDPOINT=https://us-west4-gcp-free.pinecone.io poetry
 > POST https://my-index-c7556fa.svc.us-west4-gcp-free.pinecone.io/query
 < POST https://my-index-c7556fa.svc.us-west4-gcp-free.pinecone.io/query - 200
 {'results': [], 'matches': [{'id': 'vec1', 'score': 0.999999881, 'values': [], 'metadata': {'genre': 'drama'}}], 'namespace': 'namespace'}
-{% endhighlight %}
+```
 
 ### Qdrant
 
@@ -676,7 +676,7 @@ Qdrant is built upon a concept of indexes, where vectors are organized and store
 
 After you sign up at Qdrant Cloud Services, create a new free tier Qdrant Cluster with authentication. Note your cluster URL and API key. The endpoint will have the following format `https://my-cluster.cloud.qdrant.io:6333/`.
 
-{% highlight python %}
+```python
 client = Client()
 
 endpoint = os.environ["ENDPOINT"]
@@ -687,11 +687,11 @@ headers = {
     "Content-Type": "application/json; charset=utf-8",
     "api-key": api_key
 }
-{% endhighlight %}
+```
 
 We can create an index in collections.
 
-{% highlight python %}
+```python
 index_name = "my-index"
 
 index = {
@@ -727,38 +727,38 @@ client.put(
         json=index,
         headers=headers
 )
-{% endhighlight %}
+```
 
 Upload some vectors.
 
-{% highlight python %}
+```python
 client.put(
     urljoin(endpoint, f"/collections/{index_name}/points?wait=true"),
     data=dumps(payload), headers=headers)
-{% endhighlight %}
+```
 
 Search.
 
-{% highlight python %}
+```python
 query = '{"vector": [0.1,0.2,0.3], "limit": 1}'
 response = client.post(
     urljoin(endpoint, f"/collections/{index_name}/points/search"),
     data=query, headers=headers)
 print(response.json())
-{% endhighlight %}
+```
 
 It is easy to delete all vectors in an index.
 
-{% highlight python %}
+```python
 client.delete(
     urljoin(endpoint, f"/collections/{index_name}"),
         headers=headers
 )
-{% endhighlight %}
+```
 
 A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/qdrant/hello.py).
 
-{% highlight bash %}
+```bash
 API_KEY=... ENDPOINT=https://my-cluster.cloud.qdrant.io:6333 poetry run src/qdrant/hello.py
 
 > GET https://my-cluster.cloud.qdrant.io:6333/collections
@@ -772,7 +772,7 @@ API_KEY=... ENDPOINT=https://my-cluster.cloud.qdrant.io:6333 poetry run src/qdra
 {'result': [{'id': 1, 'version': 0, 'score': 0.9999998, 'payload': None, 'vector': None}], 'status': 'ok', 'time': 0.000117235}
 > DELETE https://my-cluster.cloud.qdrant.io:6333/collections/my-index
 < DELETE https://my-cluster.cloud.qdrant.io:6333/collections/my-index - 200
-{% endhighlight %}
+```
 
 ### Redis
 
@@ -782,13 +782,13 @@ I prefer to run Redis locally in Docker with `docker run -p 6379:6379 redislabs/
 
 Redis speaks [RESP](https://redis.io/docs/reference/protocol-spec/), which is not HTTP, hence we're going to use [redis-py](https://github.com/redis/redis-py).
 
-{% highlight python %}
+```python
 r = Redis(host='localhost', port=6379, decode_responses=True)
-{% endhighlight %}
+```
 
 We create an `HNSW` index called `vectors` of documents with a given `doc:` prefix. This is unlike other databases where you write docs into an index.
 
-{% highlight python %}
+```python
 index_name = "vectors"
 doc_prefix = "doc:"
 
@@ -809,11 +809,11 @@ definition = IndexDefinition(
 )
 
 r.ft(index_name).create_index(fields=schema, definition=definition)
-{% endhighlight %}
+```
 
 Insert some vectors. Note that redis doesn't support a deep dictionary for metadata, so we will index and filter by `genre` in search.
 
-{% highlight python %}
+```python
 pipe = r.ft(index_name).pipeline()
 
 vectors = [
@@ -838,11 +838,11 @@ for vector in vectors:
     pipe.hset(key, mapping=value)
 
 pipe.execute()
-{% endhighlight %}
+```
 
 Search. We filter by `genre` with `@genre:{ action })`. Use `**` instead if you don't want filtering.
 
-{% highlight python %}
+```python
 query = (
     Query("(@genre:{ action })=>[KNN 2 @values $vector as score]")
     .sort_by("score")
@@ -857,21 +857,21 @@ query_params = {
 results = r.ft(index_name).search(query, query_params).docs
 for result in results:
     print(result)
-{% endhighlight %}
+```
 
 Finally, delete the index with its vectors.
 
-{% highlight python %}
+```python
 r.ft(index_name).dropindex(True)
-{% endhighlight %}
+```
 
 A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/redis/hello.py).
 
-{% highlight bash %}
+```bash
 poetry run ./hello.py
 
 Document {'id': 'doc:2', 'payload': None, 'score': '0.00741678476334', 'genre': 'action'}
-{% endhighlight %}
+```
 
 ### Vespa
 
@@ -879,12 +879,12 @@ Document {'id': 'doc:2', 'payload': None, 'score': '0.00741678476334', 'genre': 
 
 Let's use their Docker container for this example. Make sure you [configure Docker with at least 4GB RAM](https://docs.docker.com/desktop/settings/mac/#resources) (check with `docker info | grep "Total Memory"`).
 
-{% highlight bash %}
+```bash
 docker pull vespaengine/vespa
 docker run --detach --name vespa --hostname vespa-container \
   --publish 8080:8080 --publish 19071:19071 \
   vespaengine/vespa
-{% endhighlight %}
+```
 
 This container listens on port `8080` for search and ingestion APIs, and on `19071` for configuration APIs.
 
@@ -892,15 +892,15 @@ Vespa encapsulates the concept of a schema/index in an application that needs to
 
 To create a new application with a sample vector schema we need to create a `settings.xml` file with the overall application properties, and a `schema.md` file with the definition of our schema. For this example, let's create the following directory structure.
 
-{% highlight shell %}
+```shell
 vector-app/
 ├── schemas/
 │   └── vector.sd
 └── services.xml
-{% endhighlight %}
+```
 
 `services.xml`:
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <services version="1.0" xmlns:deploy="vespa" xmlns:preprocess="properties">
     <container id="default" version="1.0">
@@ -920,10 +920,10 @@ vector-app/
         </nodes>
     </content>
 </services>
-{% endhighlight %}
+```
 
 `vector.sd`:
-{% highlight xml %}
+```xml
 schema vector {
     document vector {
         field id type string {
@@ -950,11 +950,11 @@ schema vector {
             expression: closeness(field, values)
         }
     }
-{% endhighlight %}
+```
 
 Deploy using the configuration API.
 
-{% highlight bash %}
+```bash
 (cd vector-app && zip -r - .) | \
   curl --header Content-Type:application/zip --data-binary @- \
   localhost:19071/application/v2/tenant/default/prepareandactivate
@@ -962,22 +962,22 @@ Deploy using the configuration API.
 curl \
     --header Content-Type:application/zip \
     -XPOST localhost:19071/application/v2/tenant/default/session
-{% endhighlight %}
+```
 
 Setup the client.
 
-{% highlight python %}
+```python
 endpoint = "https://localhost:8080"
 client = Client(verify=False)
 headers = {
     "Accept": "application/json; charset=utf-8",
     "Content-Type": "application/json; charset=utf-8",
 }
-{% endhighlight %}
+```
 
 Ingest some vectors.
 
-{% highlight python %}
+```python
 vectors = [
     {
         "id": "vec1",
@@ -998,11 +998,11 @@ for vector in vectors:
         headers=headers,
         data=data
     )
-{% endhighlight %}
+```
 
 Search.
 
-{% highlight python %}
+```python
 query = "yql=select * from sources * where {targetHits: 1} nearestNeighbor(values,vector_query_embedding)" \
     "&ranking.profile=vector_similarity" \
     "&hits=1" \
@@ -1015,11 +1015,11 @@ results = client.get(
 ).json()
 
 print(results["root"]["children"][0]["fields"])
-{% endhighlight %}
+```
 
 A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/vespa/hello.py).
 
-{% highlight bash %}
+```bash
 ENDPOINT=https://localhost:8080 CONFIG_ENDPOINT=https://localhost:19071 poetry run src/vespa/hello.py
 
 > POST https://localhost:8080/document/v1/vector/vector/docid/vec1
@@ -1031,7 +1031,7 @@ ENDPOINT=https://localhost:8080 CONFIG_ENDPOINT=https://localhost:19071 poetry r
 {'sddocname': 'vector', 'documentid': 'id:vector:vector::vec1', 'id': 'vec1', 'values': {'type': 'tensor<float>(x[3])', 'values': [0.10000000149011612, 0.20000000298023224, 0.30000001192092896]}, 'metadata': {'genre': 'drama'}}
 > DELETE https://localhost:19071/application/v2/tenant/default/application/default
 < DELETE https://localhost:19071/application/v2/tenant/default/application/default - 200
-{% endhighlight %}
+```
 
 ### Weaviate
 
@@ -1039,7 +1039,7 @@ ENDPOINT=https://localhost:8080 CONFIG_ENDPOINT=https://localhost:19071 poetry r
 
 After you sign up at Weaviate Cloud Services WCS, create a new free tier Weaviate Cluster with authentication. Note your cluster URL and API key (optional). The endpoint will have the following format https://myindex.weaviate.network.
 
-{% highlight python %}
+```python
 client = Client()
 
 endpoint = os.environ["ENDPOINT"]
@@ -1052,11 +1052,11 @@ headers = {
 
 if not api_key is None:
     headers["Authorization"] = f"Bearer {api_key}"
-{% endhighlight %}
+```
 
 It is easy to create some objects with vectors.
 
-{% highlight python %}
+```python
 vectors = [
     {
         "id": "vec1",
@@ -1089,11 +1089,11 @@ client.post(
         json={"objects": objects},
         headers=headers
 )
-{% endhighlight %}
+```
 
 The search is pretty straightforward. Weaviate also has a GraphQL interface.
 
-{% highlight python %}
+```python
 query = {
     "fields": "vector",
     "nearVector": {
@@ -1110,20 +1110,20 @@ response = client.get(
 
 for obj in response["objects"]:
     print(obj)
-{% endhighlight %}
+```
 
 Deleting objects of the same class is straightforward.
 
-{% highlight python %}
+```python
 client.delete(
     urljoin(endpoint, f"/v1/schema/Vectors"),
         headers=headers
 )
-{% endhighlight %}
+```
 
 A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/weaviate/hello.py).
 
-{% highlight bash %}
+```bash
 API_KEY=... ENDPOINT=https://my-cluster.weaviate.network poetry run src/weaviate/hello.py
 
 > POST https://myindex.weaviate.network/v1/batch/objects
@@ -1134,7 +1134,7 @@ API_KEY=... ENDPOINT=https://my-cluster.weaviate.network poetry run src/weaviate
 {'class': 'Vectors', 'creationTimeUnix': 1688914857307, 'id': 'c14bd5b1-8b81-44a4-8051-3b9b8c52cde4', 'lastUpdateTimeUnix': 1688914857307, 'properties': {'vector': [0.2, 0.3, 0.4]}, 'vectorWeights': None}
 > DELETE https://myindex.weaviate.network/v1/schema/Vectors
 < DELETE https://myindex.weaviate.network/v1/schema/Vectors - 200
-{% endhighlight %}
+```
 
 
 

@@ -23,15 +23,15 @@ I had to write [a migration](https://github.com/dblock/dblog-to-jekyll) from the
 
 ActiveRecord does a good job talking to a SQL server.
 
-{% highlight ruby %}
+```ruby
 gem 'activerecord'
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter', '~> 4.0.0'
-{% endhighlight %}
+```
 
 I had to fight `tiny_tds` a bit, needing to reinstall `iconv` and `brew install freetds`.
 
-{% highlight ruby %}
+```ruby
 require 'rubygems'
 require 'bundler'
 
@@ -39,60 +39,60 @@ Bundler.setup :default, :development
 
 require 'yaml'
 require 'active_record'
-{% endhighlight %}
+```
 
 Create a _database.yml_ configuration file.
 
-{% highlight yaml %}
+```yaml
 development:
   adapter: sqlserver
   host: sql.winhost.com
   database: DB_26545
   username: ...
   password: ...
-{% endhighlight %}
+```
 
 Connect to the database.
 
-{% highlight ruby %}
+```ruby
 dbconfig = YAML::load(File.open('database.yml'))
 ActiveRecord::Base.establish_connection(dbconfig)
-{% endhighlight %}
+```
 
 Define models, such as `Post`.
 
-{% highlight ruby %}
+```ruby
 class Post < ActiveRecord::Base
   self.table_name = 'Post'
 end
-{% endhighlight %}
+```
 
 Require the models explicitly.
 
-{% highlight ruby %}
+```ruby
 Dir['models/**/*.rb'].each do |f|
   require File.expand_path(f)
 end
-{% endhighlight %}
+```
 
 Iterate over posts.
 
-{% highlight ruby %}
+```ruby
 puts "Reading #{Post.count} post(s) ..."
 Post.order('created ASC').each do |post|
   puts "#{post.Slug}: #{post.Title}"
 end
-{% endhighlight %}
+```
 
 The posts were stored in HTML, I convert them to Markdown with [reverse_markdown](https://github.com/xijo/reverse_markdown).
 
-{% highlight ruby %}
+```ruby
 content = ReverseMarkdown.convert(post.Body, github_flavored: true)
-{% endhighlight %}
+```
 
 Figure out where to write the post on disk and write the markdown post.
 
-{% highlight ruby %}
+```ruby
   File.open "#{post.Slug}.markdown", "w" do |file|
     file.write <<-EOS
 ---
@@ -104,7 +104,7 @@ comments: true
 ---
 #{content}
     EOS
-{% endhighlight %}
+```
 
 The full script is [here](https://github.com/dblock/dblog-to-jekyll/blob/master/doit.rb).
 
@@ -122,11 +122,11 @@ I picked [Minimal Mistakes](https://mademistakes.com/articles/minimal-mistakes-j
 
 If you're like me and don't want to generate the Jekyll site yourself, be aware that Github pages doesn't support many plugins. This means you can't make features like, for example, tags, to work at the moment. Create a _Gemfile_ that references [github-pages](https://github.com/github/pages-gem) to see an identical output as what Github would show.
 
-{% highlight ruby %}
+```ruby
 source 'https://rubygems.org'
 
 gem 'github-pages'
-{% endhighlight %}
+```
 
 Serve Jekyll locally via `bundle exec jekyll serve`.
 
@@ -136,11 +136,11 @@ Github pages don't support syntax highlighting the same way all markdown content
 
 ```
 {% raw %}
-{% highlight ruby %}
+```ruby
 
 # Ruby code goes here
 
-{% endhighlight %}
+```
 {% endraw %}
 ```
 

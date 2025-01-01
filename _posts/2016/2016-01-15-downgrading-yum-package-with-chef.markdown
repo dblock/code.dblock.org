@@ -9,7 +9,7 @@ I was upgrading a system to MongoDB 3.2.0 and found a bug, [TOOLS-1039: mongoexp
 
 We ended up downgrading `mongodb-org-tools` instead of rolling back the entire database upgrade, here's the recipe.
 
-{% highlight ruby %}
+```ruby
 # install and configure mongodb, https://supermarket.chef.io/cookbooks/mongodb3
 include_recipe 'mongodb3::default'
 
@@ -26,13 +26,13 @@ yum_package 'mongodb-org-tools' do
   action :install
   version '2.6.11-1'
 end
-{% endhighlight %}
+```
 
 Which gives.
 
-{% highlight bash %}
+```bash
 [db@rails-app1 ~]$ mongo --version
 MongoDB shell version: 3.2.0
 [db@rails-app1 ~]$ mongoexport --version
 version 2.6.11
-{% endhighlight %}
+```

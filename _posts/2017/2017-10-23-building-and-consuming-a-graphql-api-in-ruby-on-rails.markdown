@@ -23,29 +23,29 @@ This project will implement a dummy invoice API where clients can get invoices a
 
 The invoice type has an ID and some fees in cents and goes into [app/graphql/types/invoice.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/app/graphql/types/invoice_type.rb).
 
-{% highlight ruby %}
+```ruby
 InvoiceType = GraphQL::ObjectType.define do
   name 'Invoice'
   description 'An Invoice'
   field :id, !types.Int
   field :fee_in_cents, types.Int
 end
-{% endhighlight %}
+```
 
 The GraphQL ID type is a string, so we use `Int`.
 
 GraphQL defines a schema with queries (eg. get invoices) and mutations (eg. create an invoice), which typically goes into [app/graphql/schema.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/app/graphql/schema.rb).
 
-{% highlight ruby %}
+```ruby
 Schema = GraphQL::Schema.define do
   query Query
   mutation Mutation
 end
-{% endhighlight %}
+```
 
 The query root returns an invoice by ID, implemented in [app/graphql/queries.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/app/graphql/queries.rb). Notice that this takes an `Int` (ID) and returns our `InvoiceType`.
 
-{% highlight ruby %}
+```ruby
 Query = GraphQL::ObjectType.define do
   name 'Query'
 
@@ -60,11 +60,11 @@ Query = GraphQL::ObjectType.define do
     }
   end
 end
-{% endhighlight %}
+```
 
 A mutation creates invoices in [app/graphql/mutations/create_invoice_mutation.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/app/graphql/mutations/create_invoice_mutation.rb). Use Relay, a data fetching framework, that makes it easy.
 
-{% highlight ruby %}
+```ruby
 CreateInvoiceMutation = GraphQL::Relay::Mutation.define do
   name 'createInvoice'
 
@@ -78,23 +78,23 @@ CreateInvoiceMutation = GraphQL::Relay::Mutation.define do
     )
   }
 end
-{% endhighlight %}
+```
 
 This mutation was referenced from the root schema above and is linked from [app/graphql/mutations.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/app/graphql/mutations.rb).
 
-{% highlight ruby %}
+```ruby
 Mutation = GraphQL::ObjectType.define do
   name 'Mutation'
 
   field :createInvoice, field: CreateInvoiceMutation.field
 end
-{% endhighlight %}
+```
 
 ### GraphQL Controller
 
 GraphQL accepts a single JSON payload via `POST` in a typical Rails controller in [app/controllers/graphql_controller.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/app/controllers/graphql_controller.rb).
 
-{% highlight ruby %}
+```ruby
 class GraphqlController < ApplicationController
   def execute
     result = Schema.execute(
@@ -124,15 +124,15 @@ class GraphqlController < ApplicationController
     params[:variables] || {}
   end
 end
-{% endhighlight %}
+```
 
 The controlled needs to be routed to in [config/routes.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/config/routes.rb).
 
-{% highlight ruby %}
+```ruby
 Rails.application.routes.draw do
   post '/graphql', to: 'graphql#execute'
 end
-{% endhighlight %}
+```
 
 ### GraphQL IDEs
 
@@ -148,7 +148,7 @@ Add [graphlient](https://github.com/ashkan18/graphlient), which is a small libra
 
 Define a shared client context in [spec/support/graphql/client.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/spec/support/graphql/client.rb).
 
-{% highlight ruby %}
+```ruby
 require 'graphlient'
 
 RSpec.shared_context "GraphQL Client", shared_context: :metadata do
@@ -162,11 +162,11 @@ RSpec.shared_context "GraphQL Client", shared_context: :metadata do
     end
   end
 end
-{% endhighlight %}
+```
 
 The client can fetch the schema in [spec/graphql/schema_spec.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/spec/graphql/schema_spec.rb).
 
-{% highlight ruby %}
+```ruby
 require 'rails_helper'
 
 describe 'GraphQL Schema', type: 'request' do
@@ -176,11 +176,11 @@ describe 'GraphQL Schema', type: 'request' do
     expect(client.schema).to be_a GraphQL::Schema
   end
 end
-{% endhighlight%}
+```
 
 Fetch an invoice in [spec/graphql/queries/invoice_query_spec.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/spec/graphql/queries/invoice_query_spec.rb).
 
-{% highlight ruby %}
+```ruby
 require 'rails_helper'
 
 describe 'Invoice Query', type: :request do
@@ -204,11 +204,11 @@ describe 'Invoice Query', type: :request do
     expect(invoice.fee_in_cents).to eq 20_000
   end
 end
-{% endhighlight %}
+```
 
 Create an invoice in [spec/graphql/mutations/create_invoice_mutation_spec.rb](https://github.com/dblock/graphql-invoices/blob/7649ba2bc46ce2003f2cab19826a5d032dd8a00c/spec/graphql/mutations/create_invoice_mutation_spec.rb).
 
-{% highlight ruby %}
+```ruby
 require 'rails_helper'
 
 describe 'Create Invoice Mutation', type: :request do
@@ -232,7 +232,7 @@ describe 'Create Invoice Mutation', type: :request do
     expect(invoice.fee_in_cents).to eq 42_000
   end
 end
-{% endhighlight %}
+```
 
 ### Tooling
 
@@ -240,7 +240,7 @@ GraphQL comes with some impressive tooling and IDE integration, such as with [Vi
 
 Add a Rake task to dump the project's schema to [lib/tasks/graphql/schema.rake](https://github.com/dblock/graphql-invoices/blob/33545540b13188532aac67424c7723340ccb681b/lib/tasks/graphql/schema.rake).
 
-{% highlight ruby %}
+```ruby
 namespace :graphql do
   namespace :schema do
     directory 'data'
@@ -253,11 +253,11 @@ namespace :graphql do
     end
   end
 end
-{% endhighlight %}
+```
 
 Add a configuration file, [.gqlconfig](https://github.com/dblock/graphql-invoices/blob/33545540b13188532aac67424c7723340ccb681b/.gqlconfig)
 
-{% highlight json %}
+```json
 {
   "schema": {
     "files": "data/schema.graphql"
@@ -271,15 +271,15 @@ Add a configuration file, [.gqlconfig](https://github.com/dblock/graphql-invoice
     ]
   }
 }
-{% endhighlight %}
+```
 
 Install prerequisites for graphql-for-vscode.
 
-{% highlight bash %}
+```bash
 brew update
 brew install watchman
 npm install @playlyfe/gql
-{% endhighlight %}
+```
 
 Install graphql-for-vscode from the Visual Studio Code Marketplace, [here](https://marketplace.visualstudio.com/items?itemName=kumar-harsh.graphql-for-vscode).
 

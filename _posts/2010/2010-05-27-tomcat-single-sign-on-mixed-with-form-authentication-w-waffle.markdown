@@ -27,27 +27,27 @@ _Configure Mixed Authenticator Valve_
 
 Add a valve and a realm to the application context. For an application, modify _META-INF\context.xml_.
 
-{% highlight xml %}
+```xml
 <?xml version='1.0' encoding='utf-8'?>
 <Context>
   <Valve className="waffle.apache.MixedAuthenticator" principalFormat="fqn" roleFormat="both" />
   <Realm className="waffle.apache.WindowsRealm" />
 </Context>
-{% endhighlight %}
+```
 
 _Security Roles and Constraints_
 
 Configure security roles in _WEB-INF\web.xml_. The Waffle Mixed Authenticator adds all user's security groups (including nested and domain groups) as roles during authentication.
 
-{% highlight xml %}
+```xml
 <security-role>
   <role-name>Everyone</role-name>
 </security-role>
-{% endhighlight %}
+```
 
 Restrict access to website resources.
 
-{% highlight xml %}
+```xml
 <security-constraint>
   <display-name>Waffle Security Constraint</display-name>
   <web-resource-collection>
@@ -58,11 +58,11 @@ Restrict access to website resources.
     <role-name>Everyone</role-name>
   </auth-constraint>
 </security-constraint>
-{% endhighlight %}
+```
 
 Add a second security constraint that leaves the login page unprotected.
 
-{% highlight xml %}
+```xml
 <security-constraint>
   <display-name>Login Page</display-name>
   <web-resource-collection>
@@ -70,20 +70,20 @@ Add a second security constraint that leaves the login page unprotected.
     <url-pattern>/login.jsp</url-pattern>
   </web-resource-collection>
 </security-constraint>
-{% endhighlight %}
+```
 
 _Configure Form Login_
 
 Configure Form Login parameters with the location of the login page (repeated from the security constraint above) and an error page for failed logins. Modify _WEB-INF\web.xml_.
 
-{% highlight xml %}
+```xml
 <login-config>
    <form-login-config>
       <form-login-page>/login.jsp</form-login-page>
       <form-error-page>/error.html</form-error-page>
    </form-login-config>
 </login-config>
-{% endhighlight %}
+```
 
 _Login Page_
 
@@ -91,7 +91,7 @@ Create a login page based on the following code. There are two requirements for 
 
 Here's a rudimentary example that lands an authenticated user on _index.jsp_.
 
-{% highlight html %}
+```html
 <form method="POST" name="loginform" action="index.jsp?j_security_check">
     <table style="vertical-align: middle;">
         <tr>
@@ -111,7 +111,7 @@ Here's a rudimentary example that lands an authenticated user on _index.jsp_.
     <form method="POST" name="loginform" action="index.jsp?j_negotiate_check">
     <input type="submit" value="Login w/ Current Windows Credentials" />
 </form>
-{% endhighlight %}
+```
 
 #### Demo
 
@@ -123,7 +123,7 @@ Implementation details follow. Read at your own risk.
 
 From the unauthenticated login page we are making two possible requests: one will trigger Single Sign-On and another will trigger form-based authentication. To do single sign-on we will need access to the request/response objects and to do forms authentication we will need access to the realms interface. The place where we have both is in `org.apache.catalina.Authenticator`.
 
-{% highlight java %}
+```java
 @Override
 protected boolean authenticate(Request request, Response response, LoginConfig loginConfig) {
 
@@ -158,11 +158,11 @@ protected boolean authenticate(Request request, Response response, LoginConfig l
         return false;
     }
 }
-{% endhighlight %}
+```
 
 Negotiate mimics the behavior of `NegotiateAuthenticator`, while form post follows the standard Authenticator registration process.
 
-{% highlight java %}
+```java
 private boolean post(Request request, Response response, LoginConfig loginConfig) {
     String username = request.getParameter("j_username");
     String password = request.getParameter("j_password");
@@ -177,4 +177,4 @@ private boolean post(Request request, Response response, LoginConfig loginConfig
     register(request, response, windowsPrincipal, "FORM", windowsPrincipal.getName(), null);
     return true;
 }
-{% endhighlight %}
+```

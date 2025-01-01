@@ -11,7 +11,7 @@ While XML is a first-class citizen in Scala, there's no "default" way to parse J
 
 [This SO answer describes the easiest solution](https://stackoverflow.com/questions/20029412/scala-play-parse-json-into-map-instead-of-jsobject/20034844#20034844), which gives you a `Map[String, Object]`, use [jackson-module-scala](https://github.com/FasterXML/jackson-module-scala).
 
-{% highlight scala %}
+```scala
 import scala.io._
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
@@ -30,20 +30,20 @@ object Main {
     println(parsedJson)
   }
 }
-{% endhighlight %}
+```
 
 Here's the output from a [sample JSON](https://github.com/dblock/scala-parse-json/blob/master/example.json).
 
-{% highlight shell %}
+```shell
 Reading example.json ...
 Map(glossary -> Map(title -> example glossary, GlossDiv -> ..., GlossTerm -> Standard Generalized Markup Language)))))
-{% endhighlight %}
+```
 
 ### Liftweb JSON
 
 The `lift-json` JSON parser in [Liftweb](https://github.com/lift/framework) does a good job, too, but returns `JObject`-like types instead of raw `String` or `Map[String, Object]`.
 
-{% highlight scala %}
+```scala
 import scala.io._
 import net.liftweb.json._
 
@@ -58,13 +58,13 @@ object Main {
     println(parsedJson)
   }
 }
-{% endhighlight %}
+```
 
 Here's the output from a [sample JSON](https://github.com/dblock/scala-parse-json/blob/master/example.json).
 
-{% highlight shell %}
+```shell
 JObject(List(JField(glossary, ...)))
-{% endhighlight %}
+```
 
 ### Source
 

@@ -12,7 +12,7 @@ When creating a second item I would encounter the following error: _Encountered 
 
 You can work around this by supplying a unique ID into each GraphQL mutation, which is an optional field [in the Relay spec](https://relay.dev/docs/guided-tour/updating-data/graphql-mutations/).
 
-{% highlight js %}
+```js
 import { graphql } from 'react-relay'
 import commitMutation from 'relay-commit-mutation-promise'
 import uuid from 'uuid/v4';
@@ -45,6 +45,6 @@ function commit({ environment, input }) {
 export default {
   commit
 }
-{% endhighlight %}
+```
 
 In my app this change is [33-minutes-app@bf4a89](https://github.com/33-minutes/33-minutes-app/commit/bf4a89d2a53d2404a7a341bd8660f7873e8a2029).

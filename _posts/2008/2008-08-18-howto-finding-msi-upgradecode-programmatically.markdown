@@ -9,7 +9,7 @@ dblog_post_id: 8
 ---
 It's not hard, but rather frustrating to find.
 
-{% highlight autoit %}
+```autoit
 Set installer = CreateObject("WindowsInstaller.Installer")
 On Error Resume Next
 For Each prod In installer.ProductsEx("", "", 7)
@@ -24,4 +24,4 @@ For Each prod In installer.ProductsEx("", "", 7)
     WScript.Echo sUpgradeCode & ": " & prod.InstallProperty("ProductName") & " - " & prod.ProductCode
    End If
 Next
-{% endhighlight %}
+```

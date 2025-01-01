@@ -5,7 +5,7 @@ default: false
 extends: null
 
 # MD001/heading-increment : Heading levels should only increment by one level at a time : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md001.md
-MD001: false
+MD001: true
 
 # MD003/heading-style : Heading style : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md003.md
 MD003: false

@@ -20,19 +20,19 @@ The [Github V4 GraphQL API](https://docs.github.com/en/graphql) lets you make on
 
 A first query gets us the user ID.
 
-{% highlight js %}
+```js
 query($login: String!) {
   user(login: $login) {
     id
   }
 }
-{% endhighlight %}
+```
 
 ### Enumerating Root Repositories
 
 The second query gets us all root repositories with their commit histories for the user ID obtained above.
 
-{% highlight js %}
+```js
 query($login: String!, $author_id: ID!, $depth: Int!) {
   user(login: $login) {
     repositories(last: $depth, isFork:false, privacy: PUBLIC) {
@@ -57,7 +57,7 @@ query($login: String!, $author_id: ID!, $depth: Int!) {
     }
   }
 }
-{% endhighlight %}
+```
 
 There's no API to retrieve a user by ID or to retrieve commits for a login, so this may seem a bit cumbersome.
 

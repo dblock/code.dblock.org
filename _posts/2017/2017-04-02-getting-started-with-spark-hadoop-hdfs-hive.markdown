@@ -33,7 +33,7 @@ A good place to start is to run a few things locally.
 
 On OSX run `brew install hadoop`, then configure it ([This post](https://web.archive.org/web/20171228072050/https://amodernstory.com/2014/09/23/installing-hadoop-on-mac-osx-yosemite/) was helpful.) I turned the configuration into a script in my [dotfiles](https://github.com/dblock/dotfiles/tree/master/hadoop). Once installed you can run `hstart`. Once working, you can navigate to a local resource manager on `https://localhost:50070` or the job tracker on `https://localhost:8088` and run a small test.
 
-{% highlight shell %}
+```shell
 $> wget https://www.dropbox.com/s/cyuah7lc31g0x3h/hadoop-mapreduce-examples-2.6.0.jar?dl=1 -O hadoop-mapreduce-examples-2.6.0.jar
 $> hadoop jar hadoop-mapreduce-examples-2.6.0.jar  pi 10 100
 
@@ -42,13 +42,13 @@ Samples per Map = 100
 ...
 Job Finished in 3.203 seconds
 Estimated value of Pi is 3.14800000000000000000
-{% endhighlight %}
+```
 
 ## Hive
 
 Once you've installed Hadoop, install Hive. On OSX run `brew install hive`, the configure it. I turned the configuration into a script in my [dofiles](https://github.com/dblock/dotfiles/tree/master/hive) as well. The biggest difficulty is that you need to initialize a metastore where Hive stores its configuration information with `schematool -initSchema -dbType derby` (or another `dbType`, such as `mysql` or `postgres`). In the case of Derby, the `metastore_db` is created in the same directory as from where you run the command, so it needs to be tied down to a location via `hive-site.xml`.
 
-{% highlight xml %}
+```xml
 <configuration>
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
@@ -56,13 +56,13 @@ Once you've installed Hadoop, install Hive. On OSX run `brew install hive`, the 
     <description>JDBC connect string for a JDBC metastore</description>
   </property>
 </configuration>
-{% endhighlight %}
+```
 
 Once installed you can run `hive` and get a `hive> ` prompt.
 
 Before we do that, lets get some data into HDFS.
 
-{% highlight shell %}
+```shell
 $> cat /tmp/physicists.csv
 Albert,Einstein
 Marie,Curie
@@ -73,11 +73,11 @@ $> hadoop fs -put /tmp/physicists.csv /user/data
 
 $> hadoop fs -ls /user/data
 -rw-r--r--   1 dblock supergroup         39 2017-04-03 12:51 /user/data/physicists.csv
-{% endhighlight %}
+```
 
 Load data into Hive. If you have existing data files you can just use those and add a schema on top of them with `CREATE EXTERNAL TABLE`.
 
-{% highlight shell %}
+```shell
 $> hive
 
 hive> CREATE EXTERNAL TABLE physicists(first string, last string)
@@ -100,7 +100,7 @@ Albert  Einstein
 Marie Curie
 
 Time taken: 1.732 seconds, Fetched: 3 row(s)
-{% endhighlight %}
+```
 
 ## Spark
 
@@ -108,7 +108,7 @@ Neither Hadoop or Hive are prerequisites to run Spark on OSX, install it with `b
 
 You can run a Spark shell with `spark-shell`. Lets play with a sample dataset of country GDPs (Update: unfortunately lost forever) curated for us by [@ByzantineFault](https://twitter.com/ByzantineFault) during a recent [@ArtsyOpenSource](https://twitter.com/artsyopensource) Spark workshop.
 
-{% highlight shell %}
+```shell
 $> wget https://gist.githubusercontent.com/izakp/2244e9b256fab99cf8bbf6215d9c02c6/raw/a92422f29412fcac34e4847cf0d5409e1d057e29/gdp.json
 
 $> spark-shell
@@ -129,11 +129,11 @@ root
  |-- Country Name: string (nullable = true)
  |-- Value: double (nullable = true)
  |-- Year: long (nullable = true)
-{% endhighlight %}
+```
 
 We can turn this data into a proper _resilient distributed dataset_ (RDD).
 
-{% highlight shell %}
+```shell
 scala> val gdpRDD = gdpDF.rdd
 gdpRDD: org.apache.spark.rdd.RDD[org.apache.spark.sql.Row] = MapPartitionsRDD[12] at rdd at <console>:27
 
@@ -158,23 +158,23 @@ scala> pairRDD.foreach(println)
 scala> pairRDD.groupByKey().foreach(println)
 (Australia,CompactBuffer(1.85743084331952E10, 1.96516967185575E10, 1.98868854294994E10, 2.15007279650577E10, 2.37585395900997E10, 2.5930115354463E10, 2.72550117594355E10, 3.03830216149625E10, 3.264755291746E10, 3.66121626161944E10, 4.12520998992048E10, 4.51271138985329E10, 5.19369158878505E10, 6.37001921844971E10, 8.87899778924097E10, 9.70981838044517E10, 1.0483297617547E11, 1.10115852259693E11, 1.18238213399504E11, 1.34607520163581E11, 1.49679108635098E11, 1.7655752931615E11, 1.93684210526316E11, 1.76929340196537E11, 1.93232204310813E11, 1.80215540385058E11, 1.82032736429771E11, 1.89113287453679E11, 2.35787252619325E11, 2.9947479846918E11, 3.10944978838015E11, 3.25641629385449E11, 3.25313389217873E11, 3.12028527262507E11, 3.22874437910758E11, 3.68022720522721E11, 4.0140971168437E11, 4.35636249804351E11, 3.9932510343892E11, 3.8869219200401E11, 4.14987125541669E11, 3.784882472899E11, 3.94250732524069E11, 4.66451368666278E11, 6.12871674491393E11, 6.93338595699895E11, 7.47205750224618E11, 8.53441155688153E11, 1.05503165229816E12, 9.26283274398423E11, 1.14126776018815E12, 1.38806635609196E12, 1.53442590576266E12, 1.56037247312521E12, 1.45377021067204E12))
 ...
-{% endhighlight %}
+```
 
 Lets calculate the total GDP for each country during the years surveyed.
 
-{% highlight shell %}
+```shell
 scala> pairRDD.reduceByKey((a,b) => a + b).foreach(println)
 (Australia,2.0298746299037598E13)
 (Small states,2.778625996176125E12)
 (Brazil,3.212770450746525E13)
 ...
-{% endhighlight %}
+```
 
 For more advanced examples check out the [Spark programming guide](https://spark.apache.org/docs/latest/programming-guide.html).
 
 We can also get our data from our previous Hive installation (Spark comes with its own "standalone" hive, too) by linking `hive-site.xml` into Spark's `libexec/conf/hive-site.xml` as in [my dotfiles](https://github.com/dblock/dotfiles/tree/master/spark).
 
-{% highlight shell %}
+```shell
 $> ln -s /usr/local/Cellar/hive/2.1.0/libexec/conf/hive-site.xmlhive/conf/hive-site.xml /usr/local/Cellar/spark/2.1.0/libexec/conf/hive-site.xmlhive/conf/hive-site.xml
 
 $> spark-shell
@@ -187,7 +187,7 @@ scala> val rdd = hc.sql("SELECT * FROM physicists")
 scala> rdd.foreach(row => println(row))
 [Albert,Einstein]
 [Marie,Curie]
-{% endhighlight %}
+```
 
 ## Next Steps
 

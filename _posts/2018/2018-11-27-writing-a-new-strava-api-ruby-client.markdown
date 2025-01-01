@@ -25,21 +25,21 @@ I always start with a [README.md](https://github.com/dblock/strava-ruby-client/b
 
 This is very straightforward, but many API clients don't even include a version, much less announce themselves to servers properly.
 
-{% highlight ruby %}
+```ruby
 module Api
   VERSION = '0.1.0'.freeze
 end
-{% endhighlight %}
+```
 
 We are going to use this in the API's user agent.
 
-{% highlight ruby %}
+```ruby
 self.user_agent = "Client/#{Api::VERSION}"
-{% endhighlight %}
+```
 
 And make sure we have a test.
 
-{% highlight ruby %}
+```ruby
 require 'spec_helper'
 
 RSpec.describe Client do
@@ -54,13 +54,13 @@ RSpec.describe Client do
     end
   end
 end
-{% endhighlight %}
+```
 
 ### Configuration
 
 API clients tend to want to be configurable globally or directly in a client instance. This is a pretty interesting pattern with the following configuration class.
 
-{% highlight ruby %}
+```ruby
 module Api
   module Config
     extend self
@@ -96,13 +96,13 @@ module Api
 end
 
 Api::Config.reset
-{% endhighlight %}
+```
 
 Note that this pattern can be extended deeper, and the configuration can be further nested, as in [iex-ruby-client#88](https://github.com/dblock/iex-ruby-client/pull/88).
 
 The client itself.
 
-{% highlight ruby %}
+```ruby
 module Api
   class Client < Strava::Web::Client
     attr_accessor(*Config::ATTRIBUTES)
@@ -124,22 +124,22 @@ module Api
     end
   end
 end
-{% endhighlight %}
+```
 
 What does this do? It allows global configuration.
 
-{% highlight ruby %}
+```ruby
 Api::Client.configure do |config|
   config.access_token = 'token'
   config.logger = ::Logger.new(STDOUT)
 end
-{% endhighlight %}
+```
 
 And allows local configuration that overrides global configuration.
 
-{% highlight ruby %}
+```ruby
 client = Api::Client.new(access_token: 'token')
-{% endhighlight %}
+```
 
 ### HTTP
 
@@ -149,20 +149,20 @@ I breakup the code into [`Web::Connection`](https://github.com/dblock/strava-rub
 
 These are mixed into the client class and reuse options from `Config::ATTRIBUTES`.
 
-{% highlight ruby %}
+```ruby
 class Api
   class Client
     include Web::Connection
     include Web::Request
   end
 end
-{% endhighlight %}
+```
 
 ### Models
 
 JSON API responses are parsed by Faraday into a `Hash`, but I prefer first-class objects that can be extended. I like [`Hashie::Trash`](https://github.com/intridea/hashie#trash), despite being [demoniacally possessed](/2017/02/24/the-demonic-possession-of-hashie-mash.html).
 
-{% highlight ruby %}
+```ruby
 class Model < Hashie::Trash
   include Hashie::Extensions::IgnoreUndeclared
 
@@ -171,13 +171,13 @@ class Model < Hashie::Trash
   property 'widget', transform_with: ->(v) { Models::Widget.new(v) }
   property 'gadgets', transform_with: ->(v) { v.map { |r| Models::Gadget.new(r) } }
 end
-{% endhighlight %}
+```
 
 This allows for first class, strongly typed instance properties and for future extensibility if the API adds fields or a stronger contract with `Hashie::Extensions::IgnoreUndeclared` deleted.
 
 You can also easily extend the class with additional methods.
 
-{% highlight ruby %}
+```ruby
 class Activity < Hashie::Trash
   property 'type'
 
@@ -187,24 +187,24 @@ class Activity < Hashie::Trash
     when 'Ride' then '🚴'
   end
 end
-{% endhighlight %}
+```
 
 ### API Calls
 
 A basic API `GET` call.
 
-{% highlight ruby %}
+```ruby
 #
 # Get current user.
 #
 def current_user(options = {})
   Models::User.new(get('current_user', options))
 end
-{% endhighlight %}
+```
 
 Something with parameters. I choose to use an extensible `Hash` of `options`, but YMMV.
 
-{% highlight ruby %}
+```ruby
 #
 # Get user by id.
 #
@@ -215,11 +215,11 @@ def user(options = {})
   throw ArgumentError.new('Required argument :id missing') if options[:id].nil?
   Models::User.new(get("users/#{options[:id]}", options.except(:id)))
 end
-{% endhighlight %}
+```
 
 A collection of objects.
 
-{% highlight ruby %}
+```ruby
 #
 # Get users.
 #
@@ -228,7 +228,7 @@ def users(options = {})
     Models::User.new(row)
   end
 end
-{% endhighlight %}
+```
 
 ### Pagination
 

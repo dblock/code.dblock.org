@@ -7,7 +7,7 @@ comments: true
 ---
 I recently encountered a unit test that looked like this.
 
-{% highlight typescript %}
+```typescript
 describe("Spline", () => {
   const spline = new Spline();
 
@@ -19,7 +19,7 @@ describe("Spline", () => {
     expect(reticulatedSpline.reticulatedCount).to.eq(1);
   });
 });
-{% endhighlight %}
+```
 
 The use of branching and conditionals in tests is an anti-pattern since we want tests to be predictable, each test to focus on a single code execution path and generally keep things simple.
 
@@ -27,13 +27,13 @@ The obvious solution is to replace the conditional with `.to.not.be.null` or `.t
 
 The answer is that asserting existence of the object here causes TypeScript `error TS2532: Object is possibly 'undefined'.`.
 
-{% highlight typescript %}
+```typescript
 it("can be reticulated", () => {
   const reticulatedSpline = spline.reticulate();
   expect(reticulatedSpline).to.exist;
   expect(reticulatedSpline.reticulatedCount).to.eq(1); // causes TS2532
 });
-{% endhighlight %}
+```
 
 This is because [the implementation in chai](https://github.com/chaijs/chai/blob/master/lib/chai/assertion.js#L133) creates an assertion object and evaluates it, then an error is thrown if the assertion fails. TypeScript can't infer that the `.to.exist` check will throw if the object is null. 
 
@@ -43,7 +43,7 @@ This is not a new problem and a proposal for asserting control flow has been dis
 
 The first solution is a more elegant variation if the original `if` and `throw`.
 
-{% highlight typescript %}
+```typescript
 describe("with extracting assertNotNull", () => {
   function assertNotNull<T>(v: T | null): T {
     if (!v) throw new Error();
@@ -57,11 +57,11 @@ describe("with extracting assertNotNull", () => {
     expect(reticulatedSpline!.reticulatedCount).to.eq(1);
   });
 });
-{% endhighlight %}
+```
 
 Unfortunately, TypeScript as of now doesn't infer the conditional inside a function, either, so, you need to wrap the call and ensure it returns an object to make this option work.
 
-{% highlight typescript %}
+```typescript
 describe("with extracting assertNotNull", () => {
   function assertNotNull<T>(v: T | null): T {
     if (!v) throw new Error();
@@ -74,11 +74,11 @@ describe("with extracting assertNotNull", () => {
     expect(reticulatedSpline!.reticulatedCount).to.eq(1);
   });
 });
-{% endhighlight %}
+```
 
 We get an error instead of an assertion.
 
-{% highlight bash %}
+```bash
   1) Spline
      with extracting assertNotNull
      can be reticulated:
@@ -87,13 +87,13 @@ We get an error instead of an assertion.
     at assertNotNull (test/spline.spec.ts:17:21)
     at Context.it (test/spline.spec.ts:23:33)
 
-{% endhighlight %}
+```
 
 ### Improving Errors
 
 We can augment `assertNotNull` with an `expect` to get a proper assertion failure instead of an error.
 
-{% highlight typescript %}
+```typescript
 describe("with expect inside the assert", () => {
   function assertNotNull<T>(v: T | null): T {
     expect(v).to.exist;
@@ -107,24 +107,24 @@ describe("with expect inside the assert", () => {
     expect(reticulatedSpline!.reticulatedCount).to.eq(1);
   });
 });
-{% endhighlight %}
+```
 
 The result is better.
 
-{% highlight bash %}
+```bash
   2) Spline
      with expect inside the assert
      can be reticulated:
    AssertionError: expected null to exist
     at assertNotNull (test/spline.spec.ts:30:19)
     at Context.it (test/spline.spec.ts:37:33)
-{% endhighlight %}
+```
 
 ### Casting a Type
 
 We can cast the result of `reticulate()` and TypeScript will happily let us by.
 
-{% highlight typescript %}
+```typescript
 describe("using a cast", () => {
   it("can be reticulated", () => {
     const reticulatedSpline = spline.reticulate() as Spline;
@@ -132,7 +132,7 @@ describe("using a cast", () => {
     expect(reticulatedSpline.reticulatedCount).to.eq(1);
   });
 });
-{% endhighlight %}
+```
 
 This is problematic. If the signature of `reticulate()` were to change, we would just be forcing the response to pretend to be a `Spline`, getting no new compile-time errors and leaving nonsensical tests.
 
@@ -140,7 +140,7 @@ This is problematic. If the signature of `reticulate()` were to change, we would
 
 Finally, we can use TypeScript `!` and explicitly check `.to.exist`.
 
-{% highlight typescript %}
+```typescript
 describe("allowing null", () => {
   it("can be reticulated", () => {
     const reticulatedSpline = spline.reticulate();
@@ -148,19 +148,19 @@ describe("allowing null", () => {
     expect(reticulatedSpline!.reticulatedCount).to.eq(1);
   });
 });
-{% endhighlight %}
+```
 
 This is my preferred method, but requires disabling `strictNullChecks` in tests (read more about this [here](https://web.archive.org/web/20191120101312/https://basarat.gitbooks.io/typescript/docs/options/strictNullChecks.html)).
 
 The result, in my opinion, is the cleanest.
 
-{% highlight bash %}
+```bash
   3) Spline
      allowing null
      can be reticulated:
    AssertionError: expected null to exist
     at Context.it (test/spline.spec.ts:45:35)
-{% endhighlight %}
+```
 
 ### Links
 

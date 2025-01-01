@@ -10,7 +10,7 @@ Given a collection of events, aggregate their duration weekly. Fill gaps to cont
 
 Users have meetings.
 
-{% highlight ruby %}
+```ruby
 class Meeting
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -21,13 +21,13 @@ class Meeting
 
   belongs_to :user
 end
-{% endhighlight %}
+```
 
 ### Duration Aggregated Weekly
 
 The following aggregation matches any documents that belong to a user, groups and sorts them by year and week number, then counts and sums their durations.
 
-{% highlight ruby %}
+```ruby
 user.meetings.collection.aggregate([
   { '$match' => { user_id: user.id } },
   {
@@ -42,13 +42,13 @@ user.meetings.collection.aggregate([
   },
   { '$sort' => { _id: -1 } }
 ])
-{% endhighlight %}
+```
 
 ### Filling Gaps
 
 The code above will miss any week without data. It's easier to fill those in Ruby by iterating over weeks, starting with the current week and finishing with the week of the oldest available data.
 
-{% highlight ruby %}
+```ruby
 # current week start
 week_start = Time.now.utc.beginning_of_week.to_date
 
@@ -59,7 +59,7 @@ while week_start >= last_week_start
   results << ... # either from data or a blank entry
   week_start -= 1.week
 end
-{% endhighlight %}
+```
 
 ### Complete Code
 

@@ -13,16 +13,16 @@ One of the most interesting design choices is to send a ton of data to a RealTim
 
 In slack-ruby-client 0.6.0 (and in the node client), this data is being saved in a local store.
 
-{% highlight ruby %}
+```ruby
 data = web_client.rtm_start(start_options)
 @store = Slack::RealTime::Store.new(data)
-{% endhighlight %}
+```
 
 The store exposes `users`, `channels`, `teams`, etc.
 
 Every time data changes in Slack, [an event](https://api.slack.com/events) is delivered to every connected client. For example, when a channel is renamed a [channel_rename](https://api.slack.com/events/channel_rename) event is sent.
 
-{% highlight json %}
+```json
 {
     "type": "channel_rename",
     "channel": {
@@ -31,14 +31,14 @@ Every time data changes in Slack, [an event](https://api.slack.com/events) is de
         "created":1360782804
     }
 }
-{% endhighlight %}
+```
 
 This is handled by a `channel_rename` handler.
 
-{% highlight ruby %}
+```ruby
 channel = client.channels[data.channel.id]
 channel.name = data.channel.name
-{% endhighlight %}
+```
 
 What's in this for you? With the 0.6.0 release of slack-ruby-client you can access an up-to-date local store with all the information otherwise available via slow Web API calls. Instead of calling `client.web_client.user_info(user: 'U1234567')` to get user information, do `client.users['U1234567']`. It's a table lookup, so this is obviously a lot faster. A store can also be disabled with specifying `store_class: nil` to the `Slack::RealTime::Client` initializer, as the amount of data stored in memory can become fairly onerous and isn't always necessary.
 

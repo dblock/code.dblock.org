@@ -9,21 +9,21 @@ I've [recently moved](/2016/02/08/running-slack-bots-on-digital-ocean-with-dokku
 
 ### Install
 
-{% highlight bash %}
+```bash
 dokku plugin:install https://github.com/dokku/dokku-mongo.git mongo
-{% endhighlight %}
+```
 
 ### Create a Database
 
 This starts a MongoDB instance which is not accessible from the outside world.
 
-{% highlight bash %}
+```bash
 root@dblock-plum:/# dokku mongo:create market-bot
 -----> Starting container
        Waiting for container to be ready
 =====> MongoDB container created: market-bot
        DSN: mongodb://market-bot:******@dokku-mongo-market-bot:27017/market-bot
-{% endhighlight %}
+```
 
 ### Backup with Dropbox
 
@@ -31,9 +31,9 @@ You can certainly rely on DigitalOcean's weekly system backup or any other backu
 
 #### Install Dropbox
 
-{% highlight bash %}
+```bash
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-{% endhighlight %}
+```
 
 This creates `~/.dropbox-dist`, and you can manually start Dropbox via `~/.dropbox-dist/dropboxd`.
 
@@ -41,9 +41,9 @@ This creates `~/.dropbox-dist`, and you can manually start Dropbox via `~/.dropb
 
 Run Dropbox for the first time.
 
-{% highlight bash %}
+```bash
 ~/.dropbox-dist/dropboxd
-{% endhighlight %}
+```
 
 Dropboxd will tell you _"This client is not linked to any account ..."_ and give you a link copy that and paste it in your local web browser, authenticate and validate the new connection. You can stop the daemon with Ctrl+C.
 
@@ -51,33 +51,33 @@ Dropboxd will tell you _"This client is not linked to any account ..."_ and give
 
 Create `/etc/init.d/dropbox` from [this gist](https://gist.github.com/dblock/9559719f89ba1e0e4630), eg. `sudo vi /etc/init.d/dropbox`. Edit `DROPBOX_USERS` below (eg. `user1 user2`). I just use `root`.
 
-{% highlight bash %}
+```bash
 DROPBOX_USERS="root"
 
 DAEMON=.dropbox-dist/dropboxd
 
 ...
-{% endhighlight %}
+```
 
 Set it to automatically start on boot.
 
-{% highlight bash %}
+```bash
 sudo chmod +x /etc/init.d/dropbox
 sudo update-rc.d dropbox defaults
-{% endhighlight %}
+```
 
 Start the service.
 
-{% highlight bash %}
+```bash
 service dropbox start
-{% endhighlight %}
+```
 
 Check that it's running.
 
-{% highlight bash %}
+```bash
 service dropbox status
 dropboxd for USER root: running (pid 993)
-{% endhighlight %}
+```
 
 #### Selective Sync
 
@@ -91,7 +91,7 @@ Create `Dropbox/bin/dokku-mongo-export.sh`. It enumerates Dokku MongoDB database
 
 Notice I just put the script in my Dropbox ;)
 
-{% highlight bash %}
+```bash
 #!/bin/bash
 
 echo "Backing up MongoDB databases to Dropbox ..."
@@ -112,16 +112,16 @@ do
   f=$BACKUP_PATH/$db/$dt-$db.dump.gz
   dokku mongo:export $db > $f
 done
-{% endhighlight %}
+```
 
 The latest version of this script is [here as a gist](https://gist.github.com/dblock/acd70c84af3a3531a510). Make sure to `chmod 700 dokku-mongo-export.sh` and run it manually to test.
 
 #### Run the Script Daily
 
-{% highlight bash %}
+```bash
 cd /etc/cron.daily/
 ln -s /root/Dropbox/bin/dokku-mongo-export.sh dokku-mongo-export
-{% endhighlight %}
+```
 
 Note that only executables without an extension run from `/etc.cron.*/`, hence the name of the symbolic link is different from the script.
 

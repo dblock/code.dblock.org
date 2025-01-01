@@ -27,11 +27,11 @@ For server-side implementations the [graphql-ruby doc on errors](https://github.
 
 You can return a `GraphQL::ExecutionError` inside a `resolve` function, see [@027d75cf](https://github.com/dblock/graphql-invoices/commit/027d75cf5ca5bebc2fdb1b1dcb329430e417049e) for an example.
 
-{% highlight ruby %}
+```ruby
 resolve ->(_object, _inputs, _ctx) {
   GraphQL::ExecutionError.new('This has not been implemented yet.')
 }
-{% endhighlight %}
+```
 
 The response contains both a `nil` value in `data` and an `errors` field with an error at the `executionError` path with a message.
 
@@ -41,7 +41,7 @@ The response contains both a `nil` value in `data` and an `errors` field with an
 
 You can turn typical errors, such as `ActiveRecord::RecordNotFound`, `ActiveRecord::RecordInvalid` or catch-all `StandardError` into a `GraphQL::ExecutionError` using a generic rescue object, see [@a0b8f58b](https://github.com/dblock/graphql-invoices/commit/a0b8f58b3f1ebed993a303bf379def1d8a83a25b) for an example.
 
-{% highlight ruby %}
+```ruby
 class Rescuable
   attr_reader :resolve_func
 
@@ -60,22 +60,22 @@ class Rescuable
     GraphQL::ExecutionError.new e.message
   end
 end
-{% endhighlight %}
+```
 
 This is used with `resolve` as follows.
 
-{% highlight ruby %}
+```ruby
 field :findInvoiceById, InvoiceType do
   argument :id, !types.Int
   resolve Rescuable.new ->(_object, args, _ctx) {
     Invoice.where(id: args[:id]).first
   }
 end
-{% endhighlight %}
+```
 
 But for most APIs a catch-all at schema level is much easier than having to wrap each `resolve` call into `resolve Rescuable.new`, which can be done with the [graphql-errors](https://github.com/exAspArk/graphql-errors) gem. See [@9e65eb47](https://github.com/dblock/graphql-invoices/commit/9e65eb479c1cbdd3e62865e13e7b43ea57c61d0d).
 
-{% highlight ruby %}
+```ruby
 GraphQL::Errors.configure(Schema) do
   rescue_from ActiveRecord::RecordNotFound do
     nil
@@ -90,7 +90,7 @@ GraphQL::Errors.configure(Schema) do
     GraphQL::ExecutionError.new e.message
   end
 end
-{% endhighlight %}
+```
 
 ### Transport Errors
 

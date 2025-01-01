@@ -11,16 +11,16 @@ One of the things you have to be aware when writing a bot is disabled integratio
 
 Using [slack-ruby-client](https://github.com/slack-ruby/slack-ruby-client), you would want to handle `:close`.
 
-{% highlight ruby %}
+```ruby
 client.on :close do |_data|
   puts 'Connection closed, exiting.'
   EM.stop
 end
-{% endhighlight %}
+```
 
 The next time you invoke [rtm.start](https://api.slack.com/methods/rtm.start), Slack will return `account_inactive`. Other possible errors include `invalid_auth`, which is when someone removes an integration instead of disabling it.
 
-{% highlight bash %}
+```bash
 ~/examples/hi_real_time (master)$ ruby hi.rb
 slack-ruby-client-0.5.2/lib/slack/web/faraday/response/raise_error.rb:9:
   in `on_complete': account_inactive (Slack::Web::Api::Error)
@@ -37,7 +37,7 @@ slack-ruby-client-0.5.2/lib/slack/web/faraday/response/raise_error.rb:9:
     from slack-ruby-client-0.5.2/lib/slack/web/api/endpoints/rtm.rb:21:in `rtm_start'
     from slack-ruby-client-0.5.2/lib/slack/real_time/client.rb:74:in `build_socket'
     from slack-ruby-client-0.5.2/lib/slack/real_time/client.rb:38:in `start!'
-{% endhighlight %}
+```
 
 The same thing happens when you _remove_ an application (the _Remove App_ button below) that was setup via [Slack Button Integration](https://api.slack.com/docs/slack-button).
 

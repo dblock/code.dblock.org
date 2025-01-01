@@ -29,28 +29,28 @@ _Authenticator Valve_
 
 Add a valve and a realm to the application context in your context.xml (for an application) or in server.xml (for the entire Tomcat installation).
 
-{% highlight xml %}
+```xml
 <Context>
   <Valve className="waffle.apache.NegotiateAuthenticator" principalFormat="fqn" roleFormat="both" />
   <Realm className="waffle.apache.WindowsRealm" />
 </Context>
-{% endhighlight %}
+```
 
 _Security Roles_
 
 Configure security roles in your application's _web.xml_. The Waffle authenticator adds all user's security groups (including nested and domain groups) as roles during authentication.
 
-{% highlight xml %}
+```xml
 <security-role>
   <role-name>Everyone</role-name>
 </security-role>
-{% endhighlight %}
+```
 
 _Restrict Access_
 
 Restrict access to website resources. For example, to restrict the entire website to locally authenticated users add the following in _web.xml_.
 
-{% highlight xml %}
+```xml
 <security-constraint>
   <display-name>Waffle Security Constraint</display-name>
   <web-resource-collection>
@@ -61,7 +61,7 @@ Restrict access to website resources. For example, to restrict the entire websit
     <role-name>Everyone</role-name>
   </auth-constraint>
 </security-constraint>
-{% endhighlight %}
+```
 
 #### Test
 

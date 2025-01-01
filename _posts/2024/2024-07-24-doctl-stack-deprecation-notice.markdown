@@ -11,7 +11,7 @@ Yesterday, they sent me an email with a menacing _"Ubuntu 18 is no longer suppor
 
 Their email included instructions to go to settings to find out what stack you're using. Let's find out what apps use what stack on the command line to save time using [doctl](https://docs.digitalocean.com/reference/doctl/) and [yq](https://github.com/mikefarah/yq).
 
-{% highlight bash %}
+```bash
 $ for app_id in $(doctl apps list --no-header | cut -d' ' -f1); do \
     doctl apps spec get $app_id | yq ".name,.features"; \
     done
@@ -20,7 +20,7 @@ app-1
 - buildpack-stack=ubuntu-22
 app-2
 - buildpack-stack=ubuntu-18
-{% endhighlight %}
+```
 
 Should I upgrade now, or wait till the second and third notice?
 

@@ -12,7 +12,7 @@ What all of this means is that you don't have to worry about timezones unless yo
 
 Lets experiment a bit.
 
-{% highlight ruby %}
+```ruby
 require 'mongoid'
 
 Mongoid.connect_to 'test'
@@ -23,13 +23,13 @@ class Foo
 end
 
 Foo.create!
-{% endhighlight %}
+```
 
 The MongoDB log shows that the time is inserted in UTC, `"updated_at"=>2018-08-25 10:12:58 UTC`.
 
 According to [the documentation](https://www.mongodb.com/developer/products/mongodb/bson-data-types-date/), internally, Date objects are stored as a signed 64-bit integer representing the number of milliseconds since the Unix epoch (Jan 1, 1970). The shell returns an ISO date.
 
-{% highlight bash %}
+```bash
 $ mongo
 MongoDB server version: 4.0.1
 > use test
@@ -40,35 +40,35 @@ switched to db test
   "updated_at" : ISODate("2018-08-25T10:12:58.514Z"),
   "created_at" : ISODate("2018-08-25T10:12:58.514Z")
 }
-{% endhighlight %}
+```
 
 Lets try with a well known time.
 
-{% highlight ruby %}
+```ruby
 Foo.create!(created_at: Time.at(0).utc)
 Foo.create!(created_at: Time.at(0))
-{% endhighlight %}
+```
 
 Both are inserting `1970-01-01 00:00:00 UTC`.
 
 How about a local time?
 
-{% highlight ruby %}
+```ruby
 now = Time.now
 puts now
 
 Foo.create!(created_at: now.utc)
 Foo.create!(created_at: now)
-{% endhighlight %}
+```
 
 My local time is `2018-08-25 12:44:37 +0200` and both insert `2018-08-25 10:44:37 UTC`.
 
 Lets query some times.
 
-{% highlight ruby %}
+```ruby
 Foo.where(:created_at.gte => now)
 Foo.where(:created_at.gte => now.utc)
-{% endhighlight %}
+```
 
 Both are doing `"created_at"=>{"$gte"=>2018-08-25 10:46:41 UTC}}`.
 

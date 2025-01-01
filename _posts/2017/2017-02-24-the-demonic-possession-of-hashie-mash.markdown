@@ -15,7 +15,7 @@ The invariant key access was borrowed from [Merb's Mash](https://github.com/wyca
 
 This warning was ignored, and became the first thing to be removed from `Hashie::Mash`. A lot of new features, such as method access, were added instead.
 
-{% highlight ruby %}
+```ruby
 def method_missing(method_name, *args)
   if (match = method_name.to_s.match(/(.*)=$/)) && args.size == 1
     self[match[1]] = args.first
@@ -39,7 +39,7 @@ def default(key = nil)
     key ? super : super()
   end
 end
-{% endhighlight %}
+```
 
 The new `Hashie::Mash` was born as a pure example of Ruby metaprogramming. Some really smart people pitched in on `Mash`, including [@mbleigh](https://github.com/mbleigh) and [@hassox](https://github.com/hassox), authors of [Grape](https://github.com/ruby-grape/grape) and [Warden](https://github.com/wardencommunity/warden) respectively. We were winning!
 
@@ -51,7 +51,7 @@ But what could go wrong when you suddenly overrode `id`? Ruby 1.8 had an `Object
 
 We weren't having a Bad Time™ at all. Everyone had their favorite way of fetching values. Some wanted to write `hash[:key]`, others `hash.key` or even `hash.fetch(:key, 123)`. Unfortunately, it didn't always work as one might have expected.
 
-{% highlight ruby %}
+```ruby
 1.9.3p392 :001 > require 'hashie'
 true
 1.9.3p392 :002 > h = Hashie::Mash.new
@@ -60,29 +60,29 @@ true
 nil
 1.9.3p392 :004 > h.fetch(:key, 123)
 123
-{% endhighlight %}
+```
 
 Whoops. Fixed in [#93](https://github.com/intridea/hashie/issues/93).
 
 Have we dealt with `respond_to?`? Probably not. You were in for a treat.
 
-{% highlight ruby %}
+```ruby
 def respond_to?(method_name, include_private=false)
   return true if key?(method_name) || method_name.to_s.slice(/[=?!_]\Z/)
   super
 end
-{% endhighlight %}
+```
 
 Unfortunately this broke [Rails 4 strong_parameters](https://edgeguides.rubyonrails.org/action_controller_overview.html#strong-parameters). Can you see why? This code always responded `true` to `permit?`. Take a look at the following example.
 
-{% highlight ruby %}
+```ruby
 settings = { foo: "1", attributes: { title: "Value" } }
 record.attributes = settings.attributes # raises ActiveModel::ForbiddenAttributes
-{% endhighlight %}
+```
 
 Whoops. When a key was a `Hash`, it was automatically converted into a `Mash`. The `Mash` instance responded to `:permit?`, thus it triggered the `ActiveModel` forbidden attribute check.
 
-{% highlight ruby %}
+```ruby
 module ForbiddenAttributesProtection
   def sanitize_for_mass_assignment(*options)
     new_attributes = options.first
@@ -93,7 +93,7 @@ module ForbiddenAttributesProtection
     end
   end
 end
-{% endhighlight %}
+```
 
 Well, you couldn't have `permit?` work both ways. A workaround that broke everything was carelessly applied in [#104](https://github.com/intridea/hashie/pull/104), reverted, and an extension added in [#147](https://github.com/intridea/hashie/pull/147) by creating `Hashie::Extensions::Mash::ActiveModel`. For Rails users, [@MaximFilimonov](https://github.com/Maxim-Filimonov) even made [hashie_rails](https://rubygems.org/gems/hashie_rails) to inject the extension for scenarios in which Rails could not be auto-detected. We also had to worry about nested hashes, and made sure those worked in [#219](https://github.com/intridea/hashie/pull/219).
 
@@ -103,7 +103,7 @@ One day someone had a great idea to profile an application that relied on `Hashi
 
 At the same time Hashie was being refactored into separate extensions. Unfortunately they didn't play well with a backwards compatible `Mash` at all.
 
-{% highlight ruby %}
+```ruby
 require 'hashie'
 
 class TestHash < Hashie::Trash
@@ -123,7 +123,7 @@ end
 
 test = Foo.new Hashie::Mash.new(bar: Hashie::Mash.new(a: 42))
 p test
-{% endhighlight %}
+```
 
 Yes, this is actual, broken code. It uses `Hashie::Mash`, three extensions and `Hashie::Trash` (at least that name accurately represented what the class was trying to be). Obviously, this caused a stack overflow. Fixed in [#164](https://github.com/intridea/hashie/issues/164).
 
@@ -131,27 +131,27 @@ Furthermore, when using an `ActiveRecord::HashWithIndifferentAccess` that was ne
 
 I once was using Hashie for a throwaway project, and noticed this incredibly unexpected and annoying behavior. With a normal Hash, you can specify a default value for newly-accessed keys.
 
-{% highlight ruby %}
+```ruby
 hsh = Hash.new{|h, k| h[k] = [] }
 hsh[:hello] << 100
 # => { :hello => [100] }
-{% endhighlight %}
+```
 
 This was very useful for quick inject operations.
 
-{% highlight ruby %}
+```ruby
 collection.inject(Hash.new{|h,k| h[k] = [] }) do |h, x|
   h[x] << somefoo(x) if x > foo(x)
 end
-{% endhighlight %}
+```
 
 I wanted to do this with `Hashie::Mash`. It wasn't possible, sorry.
 
-{% highlight ruby %}
+```ruby
 hsh = Hashie::Mash.new{|h, k| h[k] = [] }
 hsh[:hello] << 100
 # => {"hello"=>[]}
-{% endhighlight %}
+```
 
 Fixed in [#259](https://github.com/intridea/hashie/pull/259).
 
@@ -203,12 +203,12 @@ But wait. Omniauth has not finished suffering. In [#410](https://github.com/intr
 
 What could possibly go wrong? In [#413](https://github.com/intridea/hashie/issues/413) we discovered that we could no longer assign a value to a key more than once.
 
-{% highlight ruby %}
+```ruby
 foo = Hashie::Mash.new
 
 foo['foobar'] = Array.new
 foo['foobar'] = Array.new
-{% endhighlight %}
+```
 
 This was pretty trivial stuff, right? Well, that broke.
 

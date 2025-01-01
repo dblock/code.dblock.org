@@ -7,14 +7,14 @@ comments: true
 ---
 OpenSearch ships with a [pretty comprehensive doc](https://opensearch.org/docs/latest/) on getting started, along with a comprehensive reference to its vast [security configuration](https://opensearch.org/docs/latest/security/configuration/index/). This can be a bit overwhelming. Here's how one can change the default "admin" password. In my case I'll do it inside my demo docker instance, but you can skip the Docker parts if you're just downloading and installing OpenSearch directly.
 
-{% highlight bash %}
+```bash
 docker pull opensearchproject/opensearch:latest
 docker run -d -p 9200:9200 -p 9600:9600 -e "discovery.type=single-node" opensearchproject/opensearch:latest
-{% endhighlight %}
+```
 
 Ensure that the default username and password works.
 
-{% highlight bash %}
+```bash
 {% raw %}
 $ curl --insecure -u admin:invalid https://localhost:9200
 Unauthorized
@@ -39,13 +39,13 @@ curl --insecure -u admin:admin https://localhost:9200
   "tagline" : "The OpenSearch Project: https://opensearch.org/"
 }
 {% endraw %}
-{% endhighlight %}
+```
 
 ### The Easy Way
 
 Users can change passwords using the [security plugin REST API](https://opensearch.org/docs/latest/security/access-control/api/). We can examine the `admin` user.
 
-{% highlight bash %}
+```bash
 curl --insecure -u admin:password -X GET "https://localhost:9200/_plugins/_security/api/account"
 
 {
@@ -68,11 +68,11 @@ curl --insecure -u admin:password -X GET "https://localhost:9200/_plugins/_secur
     "all_access"
   ]
 }
-{% endhighlight %}
+```
 
 However, updating the admin password doesn't work because the default security policy locks it down.
 
-{% highlight bash %}
+```bash
 curl --insecure -u admin:password -XPUT "https://localhost:9200/_plugins/_security/api/account" -H 'Content-Type: application/json' -d' 
 {
     "current_password": "password",
@@ -80,7 +80,7 @@ curl --insecure -u admin:password -XPUT "https://localhost:9200/_plugins/_securi
 }'
 
 {"status":"FORBIDDEN","message":"Resource 'admin' is read-only."}
-{% endhighlight %}
+```
 
 I found [security#1576](https://github.com/opensearch-project/security/issues/1576) that aims to fix this, but in the meantime, we'll have to do it the hard way.
 
@@ -90,23 +90,23 @@ The source for the docker-compose file used for the distribution is [here](https
 
 Find the docker container ID. In my case it's `b09419b98216`.
 
-{% highlight bash %}
+```bash
 $ docker ps
 CONTAINER ID   IMAGE                                 
 b09419b98216   opensearchproject/opensearch:latest   ...
-{% endhighlight %}
+```
 
 Run a shell in the instance.
 
-{% highlight bash %}
+```bash
 $ docker exec -it b09419b98216 sh
 
 sh-4.2$
-{% endhighlight %}
+```
 
 Run the security plugin configuration tool to output the current configuration.
 
-{% highlight bash %}
+```bash
 $ mkdir current-config
 
 $ /usr/share/opensearch/plugins/opensearch-security/tools/securityadmin.sh \
@@ -116,22 +116,22 @@ $ /usr/share/opensearch/plugins/opensearch-security/tools/securityadmin.sh \
   -key /usr/share/opensearch/config/kirk-key.pem \
   -r  \
   -cd current-config
-{% endhighlight %}
+```
 
 Examine the `internal_users.yml` file that was written to `current-config` with `cat current-config/internal_users_*.yml` (mine was called `internal_users_2023-Aug-08_15-52-25.yml`). The interesting part is the admin user.
 
-{% highlight yaml %}
+```yaml
 admin:
   hash: "$2a$12$VcCDgh2NDk07JGN0rjGbM.Ad41qVR/YFJcgHp0UGns5JDymv..TOG"
   reserved: true
   backend_roles:
   - "admin"
   description: "Demo admin user"
-{% endhighlight %}
+```
 
 Let's generate a new password hash for our new password, `password`.
 
-{% highlight bash %}
+```bash
 sh-4.2$ ./plugins/opensearch-security/tools/hash.sh
 **************************************************************************
 ** This tool will be deprecated in the next major release of OpenSearch **
@@ -139,22 +139,22 @@ sh-4.2$ ./plugins/opensearch-security/tools/hash.sh
 **************************************************************************
 [Password:] password
 $2y$12$jeBybG79iCu0y.A1NMqdI.8gA/d0Mrg6VRI3BrGD4VvTfeA1Z4tXu
-{% endhighlight %}
+```
 
 Edit the `current-config/internal_users_*.yml` file, and replace the password hash with the one above.
 
-{% highlight yaml %}
+```yaml
 admin:
   hash: "$2y$12$jeBybG79iCu0y.A1NMqdI.8gA/d0Mrg6VRI3BrGD4VvTfeA1Z4tXu"
   reserved: true
   backend_roles:
   - "admin"
   description: "Demo admin user"
-{% endhighlight %}
+```
 
 Upload the configuration.
 
-{% highlight bash %}
+```bash
 $ /usr/share/opensearch/plugins/opensearch-security/tools/securityadmin.sh \
   -icl \
   -t internalusers \
@@ -177,16 +177,16 @@ Populate config from /usr/share/opensearch
 Force type: internalusers
 Will update '/internalusers' with current-config/internal_users_....yml 
    SUCC: Configuration for 'internalusers' created or updated
-{% endhighlight %}
+```
 
 Test the new password.
 
-{% highlight bash %}
+```bash
 $ curl --insecure -u admin:admin https://localhost:9200
 Unauthorized
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```bash
 $ curl --insecure -u admin:password https://localhost:9200
 {
   "name" : "b09419b98216",
@@ -205,6 +205,6 @@ $ curl --insecure -u admin:password https://localhost:9200
   },
   "tagline" : "The OpenSearch Project: https://opensearch.org/"
 }
-{% endhighlight %}
+```
 
 Note that restarting the Docker container will override your changes with a clean image.

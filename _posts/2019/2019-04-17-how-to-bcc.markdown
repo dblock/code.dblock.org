@@ -21,7 +21,7 @@ Only put individual e-mail addresses on the _to:_ or _cc:_ lines and _bcc:_ mail
 
 Furthermore, a recipient doesn't know who is being bcc-ed or whether they were e-mailed directly or were part of a list, therefore the polite thing to do is to tell them.
 
-{% highlight txt %}
+```txt
 From: me
 To: me
 Bcc: team, hr
@@ -32,7 +32,7 @@ Team (team@ and hr@ on the bcc),
 Today I am happy to announce that Alice was promoted.
 
 -Me
-{% endhighlight %}
+```
 
 ### Forward Instead of Bcc
 
@@ -40,7 +40,7 @@ If you are trying to bcc someone as an FYI, don't. Forward that e-mail with a pe
 
 A bcc is not an FYI, and you are hiding the fact that another person is being bcc-ed, creating an opportunity for an unpleasant surprise when that person hits _Reply All_ to visible recipients.
 
-{% highlight txt %}
+```txt
 From: me
 To: Bob
 --------
@@ -59,13 +59,13 @@ Team (team@ and hr@ on the bcc),
 Today I am happy to announce that Alice was promoted.
 
 -Me
-{% endhighlight %}
+```
 
 ### Move People to Bcc
 
 If someone made an introduction, thank them and move them to the bcc. Spare their inbox from conversations they dont't care about.
 
-{% highlight txt %}
+```txt
 From: me
 To: Bob
 Bcc: Alice
@@ -82,7 +82,7 @@ To: me, Bob
 Daniel meet Bob!
 
 -Alice
-{% endhighlight %}
+```
 
 Did someone not follow the rules above? Move everyone to bcc when replying all. You might save someone's professional relationship.
 
@@ -90,7 +90,7 @@ Did someone not follow the rules above? Move everyone to bcc when replying all. 
 
 When replying to a piece of good news, don't _Reply All_. Make it count by sending them something personal and sparing everyone else.
 
-{% highlight txt %}
+```txt
 From: me
 To: Alice
 ---------
@@ -110,4 +110,4 @@ Team (on the bcc),
 Today I am happy to announce that Alice was promoted.
 
 -Bob
-{% endhighlight %}
+```

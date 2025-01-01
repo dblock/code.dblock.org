@@ -13,7 +13,7 @@ I opened [SERVER-24384](https://jira.mongodb.org/browse/SERVER-24384), which was
 
 The workaround is to use the `mmapv1` storage engine in development. Here's my `/usr/local/etc/mongod.conf`.
 
-{% highlight conf %}
+```conf
 systemLog:
   destination: file
   path: /usr/local/var/log/mongodb/mongo.log
@@ -25,11 +25,11 @@ storage:
      enabled: false
 net:
   bindIp: 127.0.0.1
-{% endhighlight %}
+```
 
 You'll have to stop MongoDB, then clear all your data in `/usr/local/var/mongodb/` before restarting it.
 
-{% highlight bash %}
+```bash
 $ brew services stop mongodb
 Stopping `mongodb`... (might take a while)
 ==> Successfully stopped `mongodb` (label: homebrew.mxcl.mongodb)
@@ -38,4 +38,4 @@ $ rm -rf /usr/local/var/mongodb/*
 
 $ brew services start mongodb
 ==> Successfully started `mongodb` (label: homebrew.mxcl.mongodb)
-{% endhighlight %}
+```

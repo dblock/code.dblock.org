@@ -12,26 +12,26 @@ And so, having found a spare half hour, I decided to build a "hello world" [C++ 
 
 I began with [Getting Started Using the AWS SDK for C++](https://docs.aws.amazon.com/sdk-for-cpp/v1/developer-guide/getting-started.html) which links to [Setting Up the AWS SDK for C++](https://docs.aws.amazon.com/sdk-for-cpp/v1/developer-guide/setup.html). Since I'm using a Mac, I had to build the SDK from source.
 
-{% highlight bash %}
+```bash
 > git clone git@github.com:aws/aws-sdk-cpp.git
 > cd aws-sdk-cpp
 aws-sdk-cpp>
-{% endhighlight %}
+```
 
 I generally recommend using a released version of the SDK to ensure that you've checked out something stable.
 
-{% highlight bash %}
+```bash
 aws-sdk-cpp> git checkout 1.7.278
-{% endhighlight %}
+```
 
 The immediately confusing part of building the SDK was the idea that the `build` directory, i.e. the directory from which one runs `make`, is separate from the source. All my past projects required checking out the source, and typing `make`, or something similar. The sharp scissors, aka `cmake` generates a `Makefile` and is something you run from an empty `build` (sub)directory that you create.
 
-{% highlight bash %}
+```bash
 aws-sdk-cpp> mkdir build
 aws-sdk-cpp> cd build
 aws-sdk-cpp/build> cmake .. -DCMAKE_BUILD_TYPE=Debug 
 aws-sdk-cpp/build> make
-{% endhighlight %}
+```
 
 You don't have to create a `build` directory inside the source directory, but it is even more confusing if you have to keep the source and the build in separate hierarchies.
 
@@ -41,10 +41,10 @@ You must install the SDK with `make install`. I used the defaults, which is to c
 
 This destination is configured with `DCMAKE_INSTALL_PREFIX`. For example, the following builds the `Release` flavor and installs the SDK into `$HOME/bin/aws-sdk`.
 
-{% highlight bash %}
+```bash
 cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$HOME/bin/aws-sdk
 make install
-{% endhighlight %}
+```
 
 If you made a mistake, and want to change the destination, you can also uninstall the SDK with `make uninstall`, but it will leave a bunch of folders and some files behind, which is now [aws-sdk-cpp#1335](https://github.com/aws/aws-sdk-cpp/issues/1335).
 
@@ -58,7 +58,7 @@ I then tried to build a very simple "hello world" sample using the C++ SDK. This
 
 A minimum example that uses the AWS SDK for C++ creates `Aws::SDKOptions`, calls `Aws::InitAPI`, does a bunch of work against one the many AWS services and calls `Aws::ShutdownAPI` to cleanup.
 
-{% highlight c++ %}
+```cpp
 #include <iostream>
 #include <aws/core/Aws.h>
 #include <aws/s3/S3Client.h>
@@ -75,13 +75,13 @@ int main(int argc, char** argv)
 
     Aws::ShutdownAPI(options);
 }
-{% endhighlight %}
+```
 
 #### CMakeLists.txt
 
 A working `CMakeLists.txt` for version 1.7.278 of the SDK looks like this.
 
-{% highlight cmake %}
+```cmake
 cmake_minimum_required(VERSION 3.2)
 project(project-name)
 
@@ -92,7 +92,7 @@ add_executable(project-name main.cpp)
 
 target_compile_features(project-name PUBLIC cxx_std_11)
 target_link_libraries(project-name ${AWSSDK_LINK_LIBRARIES})
-{% endhighlight %}
+```
 
 I had started from an example in [this blog post](https://aws.amazon.com/blogs/developer/using-cmake-exports-with-the-aws-sdk-for-c/) from 2016 and from [the docs](https://docs.aws.amazon.com/sdk-for-cpp/v1/developer-guide/build-cmake.html), both of which were obsolete. I ran into a number of issues and have opened [aws-sdk-cpp#1334](https://github.com/aws/aws-sdk-cpp/issues/1334) to get help. This is the complete list of changes I had to make.
 
@@ -108,7 +108,7 @@ The minimal `CMakeLists.txt` example has been corrected in [aws-doc-sdk-examples
 
 Now that I was able to build C++ code against the AWS SDK for C++, I wrote a demo that lists S3 buckets.
 
-{% highlight cpp %}
+```cpp
 #include <iostream>
 #include <aws/core/Aws.h>
 #include <aws/s3/S3Client.h>
@@ -139,7 +139,7 @@ int main(int argc, char** argv)
     }
     Aws::ShutdownAPI(options);
 }
-{% endhighlight %}
+```
 
 The complete project can be found in [aws-samples/aws-sdk-cpp-list-s3-buckets](https://github.com/aws-samples/aws-sdk-cpp-list-s3-buckets).
 
@@ -147,7 +147,7 @@ The complete project can be found in [aws-samples/aws-sdk-cpp-list-s3-buckets](h
 
 Finally, I wrote a sample for [AWS Data Exchange](https://aws.amazon.com/data-exchange). In the following example we list all the data sets that our current account is entitled to.
 
-{% highlight cpp %}
+```cpp
 Aws::DataExchange::DataExchangeClient client;
 
 Aws::DataExchange::Model::ListDataSetsRequest list_data_sets_options;
@@ -165,6 +165,6 @@ for (auto const &data_set: data_sets_list) {
         << "  " << data_set.GetDescription() 
         << std::endl;
 }
-{% endhighlight %}
+```
 
 See [aws-dataexchange-api-samples/subscribers/cpp/all-entitled-datasets](https://github.com/aws-samples/aws-dataexchange-api-samples/tree/master/subscribers/cpp/all-entitled-datasets), via [aws-dataexchange-api-samples#33](https://github.com/aws-samples/aws-dataexchange-api-samples/pull/33) for complete working code and a working `CMakeFile.txt`.
