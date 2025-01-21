@@ -27,10 +27,10 @@ asp.net:
   count: 6
 aws:
   name: aws
-  count: 8
+  count: 9
 blog:
   name: blog
-  count: 8
+  count: 9
 build:
   name: build
   count: 5
@@ -82,6 +82,9 @@ java:
 javascript:
   name: javascript
   count: 13
+jekyll:
+  name: jekyll
+  count: 5
 jenkins:
   name: jenkins
   count: 7
@@ -111,7 +114,7 @@ msi:
   count: 19
 open source:
   name: open source
-  count: 57
+  count: 61
 opensearch:
   name: opensearch
   count: 12
@@ -120,7 +123,7 @@ organizations:
   count: 22
 people:
   name: people
-  count: 71
+  count: 72
 performance:
   name: performance
   count: 9
