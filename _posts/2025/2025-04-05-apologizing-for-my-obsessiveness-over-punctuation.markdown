@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Apologizing for My Punctuation OCD
+title: Apologizing for My Obsessiveness Over Punctuation
 date: 2025-04-05 01:00:00
 tags: [me me, open source, people]
+redirect_from: "/2025/04/05/my-punctuation-ocd.html"
 comments: true
 ---
-You may have landed here because I had just apologized for my obsessive-compulsive disorder (OCD) over punctuation in a GitHub comment and requested changes to your pull request, or you noticed me adding periods to a sentence in the otherwise excellent document you have authored. This is not the first time, and my condition manifests itself in some interesting ways.
+You may have landed here because I had just apologized for my obsessiveness over punctuation in a GitHub comment and requested changes to your pull request, or you noticed me adding periods to a sentence in the otherwise excellent document you have authored. This is not the first time, and my condition manifests itself in some interesting ways.
 
 <img src="{{ site.url }}/images/posts/2025/2025-04-05-my-punctuation-ocd/shoes.gif" />
 
@@ -45,7 +46,7 @@ After a very deep breath I may be able to tolerate a period at the end of a list
 3. Three quick brown foxes jump over the lazy dog.
 ```
 
-There's "attention to detail" and there's "OCD". I am sorry for my OCD, but I do appreciate your attention to detail.
+There's "attention to detail" and there's "obsessing over periods". I am sorry for my obsession, but I do appreciate your attention to detail.
 
 While you are here, you should also know that I am a compulsive sorter. For example, I organize my personal documents and photos by year, going back to 1990. Each year has a subfolder for each of the months.
 
