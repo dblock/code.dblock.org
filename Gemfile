@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'csv'
 gem 'rake'
 gem 'github-pages'
 gem 'html-proofer'
