@@ -27,7 +27,7 @@ asp.net:
   count: 6
 aws:
   name: aws
-  count: 9
+  count: 10
 blog:
   name: blog
   count: 9
@@ -99,7 +99,7 @@ learning:
   count: 11
 me me:
   name: me me
-  count: 8
+  count: 9
 mongodb:
   name: mongodb
   count: 44
@@ -114,7 +114,7 @@ msi:
   count: 19
 open source:
   name: open source
-  count: 61
+  count: 62
 opensearch:
   name: opensearch
   count: 12
@@ -123,7 +123,7 @@ organizations:
   count: 22
 people:
   name: people
-  count: 72
+  count: 74
 performance:
   name: performance
   count: 9
