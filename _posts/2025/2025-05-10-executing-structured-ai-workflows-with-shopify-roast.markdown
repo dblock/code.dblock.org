@@ -11,7 +11,7 @@ As we embarked on this journey, we quickly learned that, like many junior Engine
 
 In the following example I will grade a Ruby unit test.
 
-If you don't have one already, get an OpenAPI key from [here](https://platform.openai.com/settings/organization/api-keys). You will need an account with a credit card, make sure that a basic completion works.
+If you don't have one already, get an OpenAI key from [here](https://platform.openai.com/settings/organization/api-keys). You will need an account with a credit card, make sure that a basic completion works.
 
 ```bash
 export OPENAI_API_KEY=sk-proj-....
