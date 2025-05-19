@@ -15,7 +15,14 @@ kramdown:
 owner:
   name: Daniel Doubrovkine
   avatar: blog.gif
-  bio: "aka dB., <a href='https://aws.amazon.com' target='_blank'>@awscloud</a>, former CTO <a href='https://www.artsy.net' target='_blank'>@artsy</a>, +<a href='https://www.vestris.com' target='_blank'>@vestris</a>, NYC"
+  bio: |
+    aka dB.,
+    <a href='https://shopify.engineering/' target='_blank'>@ShopifyEng</a>,
+    <a href='https://opensearch.org' target='_blank'>@OpenSearchProj</a>,
+    ex-<a href='https://aws.amazon.com' target='_blank'>@awscloud</a>,
+    former CTO <a href='https://www.artsy.net' target='_blank'>@artsy</a>,
+    +<a href='https://www.vestris.com' target='_blank'>@vestris</a>,
+    NYC
   email: dblock@dblock.org
   twitter: dblockdotorg
   facebook:
