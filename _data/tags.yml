@@ -42,7 +42,7 @@ conferences:
   count: 5
 cto:
   name: cto
-  count: 13
+  count: 14
 databases:
   name: databases
   count: 9
@@ -66,7 +66,7 @@ graphql:
   count: 5
 head of engineering:
   name: head of engineering
-  count: 5
+  count: 6
 heroku:
   name: heroku
   count: 13
@@ -186,7 +186,7 @@ vmware:
   count: 18
 vp of engineering:
   name: vp of engineering
-  count: 5
+  count: 6
 waffle:
   name: waffle
   count: 26
