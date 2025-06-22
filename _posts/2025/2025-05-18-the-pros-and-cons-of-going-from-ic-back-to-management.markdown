@@ -6,7 +6,7 @@ date: 2025-05-18
 ---
 There's much written about becoming a first time Engineering Manager (I recommend [Camille's book](https://www.oreilly.com/library/view/the-managers-path/9781491973882/)), but little about the second time.
 
-To my own surprise, I am back to being a manager after almost 6 years of writing code as an individual contributor (IC). Two months ago I [joined](https://www.linkedin.com/feed/update/urn:li:activity:7326960989734584320/) the Developer Productivity organization at Shopify to create a new team called "Augmented Engineering". We've been busy building, and have recently [released an open-source tool to execute structured A.I. workflows, called Roast](/2025/05/10/executing-structured-ai-workflows-with-shopify-roast.html). This post is not about A.I., so let's get back to talking about my motivations, and the pros and cons of going back from IC to Manager. 
+To my own surprise, I am back to being a manager after almost 6 years of writing code as an individual contributor (IC). Two months ago I [joined](https://www.linkedin.com/feed/update/urn:li:activity:7326960989734584320/) the Developer Productivity organization at Shopify to create a new team called "Augmented Engineering". We've been busy building, and have recently [released an open-source tool to execute structured A.I. workflows, called Roast](/2025/05/10/executing-structured-ai-workflows-with-shopify-roast.html). This post is not about A.I., so let's get back to talking about my motivations, and the pros and cons of going back from IC to Manager.
 
 ### The Manager Path
 
@@ -32,11 +32,11 @@ To conclude, I had finally realized that my people skills were desperately neede
 
 ### Pros and Cons of Being a Manager (Again)
 
-The cons of being a manager are obvious. It's a lot more stressful. My team does all the work and I am not in full control of my outcomes, yet responsible for all the failures. The pros sum up to feeling more like a real human, seeing people grow, enjoying working on technology I care about, and witnessing success when enabling a team that does their best work. 
+The cons of being a manager are obvious. It's a lot more stressful. My team does all the work and I am not in full control of my outcomes, yet responsible for all the failures. The pros sum up to feeling more like a real human, seeing people grow, enjoying working on technology I care about, and witnessing success when enabling a team that does their best work.
 
 #### Increased Multitasking and Stress
 
-This is one of the biggest cons. I do feel more stress as a manager because of the constant context switching, direct reports that routinely vent their personal life and frustrations with me, and exposure to more gossip and politics. Today I have 3 teams doing very different things at different stages of assembly, and have to stash and restore context in and out of my frontal lobe multiple times a day all while facing demanding senior leadership, and a lot of incoming pressures from multiple directions. 
+This is one of the biggest cons. I do feel more stress as a manager because of the constant context switching, direct reports that routinely vent their personal life and frustrations with me, and exposure to more gossip and politics. Today I have 3 teams doing very different things at different stages of assembly, and have to stash and restore context in and out of my frontal lobe multiple times a day all while facing demanding senior leadership, and a lot of incoming pressures from multiple directions.
 
 To mitigate this I try not to be anyone's psychiatrist, and spend more time being the face of the organization. I force myself to work normal hours, protect time to focus on tasks that require flow, and force myself to write some code, and do other "real" work with my own hands. I also take ownership of problems visibly, and accept that being responsible for my team's failures is simply my job.
 

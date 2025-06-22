@@ -5,7 +5,7 @@ date: 2025-06-21 01:00:00
 tags: [ai, tools, shopify, claude]
 comments: true
 ---
-[One of my colleagues](https://x.com/parrudanet) wrote a pretty awesome tool called [claude-swarm](http://github.com/parruda/claude-swarm) that orchestrates multiple Claude Code instances as a collaborative AI development team. At Shopify, we are attempting to use it to generate Ruby unit tests at some scale with an army of AI test agents (think a "Ruby Expert" paired with a "TDD Practitioner" and a "Code Review Nitpicker"). But for the purposes of this post, let's just upgrade Ruby in a few projects. 
+[One of my colleagues](https://x.com/parrudanet) wrote a pretty awesome tool called [claude-swarm](http://github.com/parruda/claude-swarm) that orchestrates multiple Claude Code instances as a collaborative AI development team. At Shopify, we are attempting to use it to generate Ruby unit tests at some scale with an army of AI test agents (think a "Ruby Expert" paired with a "TDD Practitioner" and a "Code Review Nitpicker"). But for the purposes of this post, let's just upgrade Ruby in a few projects.
 
 First, ensure that you have a [working version of command-line Claude code](https://docs.anthropic.com/en/docs/claude-code/overview) with a monthly subscription, since you will be having a lot of tokens for breakfast.
 
@@ -72,7 +72,7 @@ swarm:
         3. Print the current project directory name and a confirmation that you upgraded the version.
 ```
 
-My prompts are very sloppy, but YOLO. 
+My prompts are very sloppy, but YOLO.
 
 Run it.
 
@@ -251,6 +251,6 @@ Starting Claude Swarm from claude-swarm.yml...
 
 ```
 
-You get the idea. Who is building a registry for reusable AI specialists? 
+You get the idea. Who is building a registry for reusable AI specialists?
 
 Honestly, wow.
