@@ -87,4 +87,4 @@ if (! colorizedData.contentEquals(this.data)) {
 
 #### Source Code
 
-Full plugin source code is [here on Github](https://github.com/dblock/jenkins-ansicolor-plugin).
+Full plugin source code is [here on Github](https://github.com/jenkinsci/ansicolor-plugin).

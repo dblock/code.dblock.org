@@ -160,7 +160,7 @@ end
 
 ### Models
 
-JSON API responses are parsed by Faraday into a `Hash`, but I prefer first-class objects that can be extended. I like [`Hashie::Trash`](https://github.com/intridea/hashie#trash), despite being [demoniacally possessed](/2017/02/24/the-demonic-possession-of-hashie-mash.html).
+JSON API responses are parsed by Faraday into a `Hash`, but I prefer first-class objects that can be extended. I like [`Hashie::Trash`](https://github.com/hashie/hashie#trash), despite being [demoniacally possessed](/2017/02/24/the-demonic-possession-of-hashie-mash.html).
 
 ```ruby
 class Model < Hashie::Trash

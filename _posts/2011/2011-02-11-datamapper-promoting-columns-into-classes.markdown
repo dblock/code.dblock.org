@@ -7,7 +7,7 @@ tags: [mysql, datamapper, mongodb, ruby, databases]
 comments: true
 dblog_post_id: 170
 ---
-I recently had to deal with reading a schema in a MySQL database in Ruby and migrating data to MongoDB. It has been made real easy with [DataMapper](http://datamapper.org), an awesome library that doesn't force me into creating a complete and rigid model  for the MySQL database.
+I recently had to deal with reading a schema in a MySQL database in Ruby and migrating data to MongoDB. It has been made real easy with DataMapper _(note: datamapper.org is no longer available)_, an awesome library that doesn't force me into creating a complete and rigid model  for the MySQL database.
 
 Today's problem looks as follows. I have a table called _fruits_. Each _fruit _has a field called _color _amongst two dozen other fields. Colors are referred by name, for example  _yellow_ or _green_. What I would like to do is to promote the colors into a first class object, therefore creating a collection of colors based on the data in the _fruits_ table. Effectively I'd like to `SELECT DISTINCT color from fruits`, but I'd like the results to be of type `Color`.
 

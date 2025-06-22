@@ -14,7 +14,7 @@ The **VMWare Tasks Library** is a managed C# wrapper with an improved object mod
 Due to growing demand this project is now located on CodePlex at www.codeplex.com/vmwaretasks (Update: moved to [GitHub](https://github.com/dblock/vmwaretasks)). Please update your bookmarks.
 
 - CodePlex ... Update: now on [GitHub](https://github.com/dblock/vmwaretasks)
-- [CodeProject Article](https://www.codeproject.com/KB/library/VMWareTasks.aspx)
+- [CodeProject Article](https://www.codeproject.com/articles/31961/automating-vmware-tasks-in-c-with-the-vix-api)
 
 Features:
 

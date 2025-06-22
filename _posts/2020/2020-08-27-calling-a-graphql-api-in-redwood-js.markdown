@@ -29,7 +29,7 @@ schema {
 }
 ```
 
-The app I wanted to build was throwaway, and my goal was to make it happen effortlessly, during a single lunch break. I was told to try [Redwood.js](https://redwoodjs.com/), [AWS Amplify](https://aws.amazon.com/amplify/), [Sanity.io](https://www.sanity.io/), [Next.js](https://nextjs.org/) via [prisma-examples](https://github.com/prisma/prisma-examples), and some zero-code tools, including [ReTool](https://retool.com/).
+The app I wanted to build was throwaway, and my goal was to make it happen effortlessly, during a single lunch break. I was told to try [Redwood.js](https://github.com/redwoodjs/redwood), [AWS Amplify](https://aws.amazon.com/amplify/), [Sanity.io](https://www.sanity.io/), [Next.js](https://nextjs.org/) via [prisma-examples](https://github.com/prisma/prisma-examples), and some zero-code tools, including [ReTool](https://retool.com/).
 
 ## Redwood.js
 

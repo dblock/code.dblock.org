@@ -11,7 +11,7 @@ dblog_post_id: 25
 
 Now that I wrote various tools that interop with VMWare, I started working on a VMWare Tasks Library, a managed C# wrapper on top of VMWare COM ViX API that makes it really easy to use.
 
-- [CodeProject Article](https://www.codeproject.com/KB/library/VMWareTasks.aspx)
+- [CodeProject Article](https://www.codeproject.com/articles/31961/automating-vmware-tasks-in-c-with-the-vix-api)
 
 I checked in basic functionality of connecting to a virtual machine host, restoring snapshots, powering them up, executing commands, getting lists of files in a directory and subdirectories, etc.
 

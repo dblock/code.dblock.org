@@ -15,4 +15,4 @@ When I started reading about sitemaps for dynamic sites, I found a common approa
 
 This doesn't work for my site at all. I need to provide a site map for a large number of pages, potentially hundreds of thousands. The site is deep and dynamic, and only a small unpredictable set of pages is accessed frequently. There are also two hundred different object types in the back-end database which is not coupled with the user-interface at all. Querying everything once is not trivial. Generating an accurate site map for the whole site would take too long, would be a lot of code, and would definitely take too much memory to cache.
 
-[My CodeProject Article](https://www.codeproject.com/KB/aspnet/dynamicsitemap.aspx) demonstrates a simpler and practical solution chosen.
+[My CodeProject Article](https://www.codeproject.com/articles/16860/building-a-dynamic-sitemap-in-asp-net-2-0-for-a-la) demonstrates a simpler and practical solution chosen.

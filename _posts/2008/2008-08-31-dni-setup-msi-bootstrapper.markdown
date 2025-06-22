@@ -19,5 +19,5 @@ There are two dozen other features contributed by developers around the world, n
 
 DNI's design is not the best and a lot of things could be done better. But it's a project born of rather practical needs and works well. If you're looking for a bootstrapper right now, check it out.
 
-- [Original CodeProject Article](https://www.codeproject.com/KB/install/dotNetInstaller.aspx)
+- [Original CodeProject Article](https://www.codeproject.com/Articles/5116/dotNetInstaller-Setup-Bootstrapper-for-NET-Applica)
 - [dotNetInstaller on Github](https://github.com/dblock/dotnetinstaller)

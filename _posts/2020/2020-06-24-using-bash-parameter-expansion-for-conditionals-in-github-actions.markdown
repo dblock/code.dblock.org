@@ -86,7 +86,7 @@ This [worked](https://github.com/dblock/distance_of_time_in_words/pull/1/checks?
 
 ### Use Bash Parameter Expansion
 
-My final and favorite solution is to use [bash parameter expansion](https://wiki.bash-hackers.org/syntax/pe). In Bash you can write `${BUNDLER:-2.1.4}` which uses the value of `$BUNDLER` when available, and `2.1.4` otherwise.
+My final and favorite solution is to use [bash parameter expansion](https://bash-hackers.gabe565.com/syntax/pe/). In Bash you can write `${BUNDLER:-2.1.4}` which uses the value of `$BUNDLER` when available, and `2.1.4` otherwise.
 
 ```yaml
 {% raw %}

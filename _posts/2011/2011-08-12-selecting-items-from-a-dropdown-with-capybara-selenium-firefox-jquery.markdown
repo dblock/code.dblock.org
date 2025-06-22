@@ -46,6 +46,6 @@ If you post this form, the value that you get in the controller is still "3", so
 page.execute_script("$('#widget_size').val('5')")
 ```
 
-Let's file a bug in Capybara to start, [https://github.com/jnicklas/capybara/issues/448](https://github.com/jnicklas/capybara/issues/448).
+Let's file a bug in Capybara to start, https://github.com/jnicklas/capybara/issues/448 (now archived).
 
 Ideas?

@@ -11,7 +11,7 @@ I've been either working on [ResourceLib](https://github.com/resourcelib/resourc
 
 ResourceLib is written in C#, enumerates resources and implements both read and write of the file version `VS_VERSIONINFO`, string resources such as company, copyright and product information, `RT_GROUP_ICON` and `RT_ICON`, `RT_CURSOR`, `RT_BITMAP`, `RT_MENU`, `RT_DIALOG`, `RT_STRING`, `RT_ACCELERATOR`, `RT_FONT` and `RT_FONTDIR` and `RT_MANIFEST` resources. It is unit-tested and documented.
 
-I've updated the [CodeProject article](https://www.codeproject.com/KB/library/ResourceLib.aspx) with a lot of implementation details that can't be found elsewhere on the net and published a beta of version 1.2 on CodePlex.
+I've updated the [CodeProject article](https://www.codeproject.com/Articles/27373/File-Resource-Management-Library-NET-) with a lot of implementation details that can't be found elsewhere on the net and published a beta of version 1.2 on CodePlex.
 
 #### Update (2015)
 

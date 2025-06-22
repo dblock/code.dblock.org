@@ -74,6 +74,6 @@ You can change this in [Manage Schemes](https://developer.apple.com/library/ios/
 
 ![]({{ site.url }}/images/posts/2014/2014-01-15-debugging-xctools-nsinternalinconsistencyexception-failed-while-trying-to-gather-build-settings-for-your-scheme/screenshot_2.jpg)
 
-Opened [https://github.com/facebook/xctool/issues/295](https://github.com/facebook/xctool/issues/295) to improve the error messaging in XCTool.
+Opened [xctool#295](https://github.com/facebookarchive/xctool/issues/295) to improve the error messaging in XCTool.
 
 And [here's a successful build of the ios-snapshot-test-case-expecta project on Travis](https://travis-ci.org/dblock/ios-snapshot-test-case-expecta).

@@ -9,7 +9,7 @@ dblog_post_id: 288
 ---
 _"Little children, don't go play in Africa ... giant crocodiles are waiting to eat you!"_ – a popular Russian song.
 
-> [https://pastebin.com/raw.php?i=FD3xe6Jt](https://pastebin.com/raw.php?i=FD3xe6Jt)
+> _(Note: The original pastebin link is no longer available)_
 
 Me? I am camping in the jungle, betting my lunch on MongoDB!
 
