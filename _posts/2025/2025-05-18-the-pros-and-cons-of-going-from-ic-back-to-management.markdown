@@ -28,7 +28,7 @@ The second issue was the Return to Office (RTO) mandate. I have not had a 1:1 wi
 
 ### My Decision to Return
 
-To conclude, I had finally realized that my people skills were desperately needed while everyone was coming down from the post-pandemic rollercoaster. And so, I became a manager again. I think I am capable of building great teams, as opposed to watching existing good ones burn out.
+To conclude, I had finally realized that my people skills were desperately needed while everyone was coming down from the post-pandemic roller coaster. And so, I became a manager again. I think I am capable of building great teams, as opposed to watching existing good ones burn out.
 
 ### Pros and Cons of Being a Manager (Again)
 

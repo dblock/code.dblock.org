@@ -97,9 +97,9 @@ end
 
 Well, you couldn't have `permit?` work both ways. A workaround that broke everything was carelessly applied in [#104](https://github.com/hashie/hashie/pull/104), reverted, and an extension added in [#147](https://github.com/hashie/hashie/pull/147) by creating `Hashie::Extensions::Mash::ActiveModel`. For Rails users, [@MaximFilimonov](https://github.com/Maxim-Filimonov) even made [hashie_rails](https://rubygems.org/gems/hashie_rails) to inject the extension for scenarios in which Rails could not be auto-detected. We also had to worry about nested hashes, and made sure those worked in [#219](https://github.com/hashie/hashie/pull/219).
 
-As another proof that you just cannot have nice things was `Mash#deep_merge`. It was being really slow, unnecessarily converting values. With a fix in [#107](https://github.com/hashie/hashie/pull/107), a `Hashie::Mash.new` on a big hash went from 1200 seconds to to less than 2 seconds. This wasn't the last time we faced serious performance problems. We were just warming up.
+As another proof that you just cannot have nice things was `Mash#deep_merge`. It was being really slow, unnecessarily converting values. With a fix in [#107](https://github.com/hashie/hashie/pull/107?timeline_per_page=0), a `Hashie::Mash.new` on a big hash went from 1200 seconds to to less than 2 seconds. This wasn't the last time we faced serious performance problems. We were just warming up.
 
-One day someone had a great idea to profile an application that relied on `Hashie::Mash` and discovered that we allocated a String, `(.*?)([?!=_]?)$`, 50,000 times. Was that string familiar? Fixed in [#221](https://github.com/hashie/hashie/pull/221).
+One day someone had a great idea to profile an application that relied on `Hashie::Mash` and discovered that we allocated a String, `(.*?)([?!=_]?)$`, 50,000 times. Was that string familiar? Fixed in [#221](https://github.com/hashie/hashie/pull/221?timeline_per_page=0).
 
 At the same time Hashie was being refactored into separate extensions. Unfortunately they didn't play well with a backwards compatible `Mash` at all.
 
