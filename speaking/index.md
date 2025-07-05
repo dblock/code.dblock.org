@@ -11,6 +11,8 @@ I speak frequently on topics ranging from the intersection of technology and art
 
 ## Recorded Talks
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WMjt0U7b1gI?si=m6kxSy4YzITJv_u4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=WMjt0U7b1gI">Developer Productivity: Fireside with Michael Bachman, Google, Toronto Tech Week</a>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jinLuHur9ws?si=zJBiWjox8IoGRFwB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=jinLuHur9ws">Linux Foundation Open Source Summit EU 2024: Innovating in Open Source in Your Enterprise</a>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UsN7YkCCw-c?si=7yEUnbxGIch1ZFfZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=UsN7YkCCw-c&list=PLzgr9zSpws14zCETcKtCBwcOuTGMccpV9&index=20">OpenSearchCon EU 2024: How to become an OpenSearch Project Repo Maintainer</a>
