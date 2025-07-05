@@ -15,6 +15,7 @@
   - [Markdown Linter](#markdown-linter)
   - [Spell Checker](#spell-checker)
   - [Style Checker](#style-checker)
+  - [Pre-Commit Hooks](#pre-commit-hooks)
 - [Thank You](#thank-you)
 
 ## Contributing to code.dblock.org
@@ -39,29 +40,29 @@ git remote add upstream https://github.com/dblock/code.dblock.org.git
 
 Install Ruby. We recommend [rvm](https://rvm.io/). Use Ruby 2.7+.
 
-```
+```bash
 rvm use 2.7.7
 ```
 
 Install bundler.
 
-```
+```bash
 gem install bundler
 ```
 
 Install dependencies.
 
-```
+```bash
 bundle install
 ```
 
 Start a local Jekyll server.
 
-```
+```bash
 bundle exec jekyll serve
 ```
 
-Navigate to https://localhost:4000 to see the blog.
+Navigate to http://localhost:4000 to see the blog.
 
 ## Contribute Content
 
@@ -69,7 +70,7 @@ Navigate to https://localhost:4000 to see the blog.
 
 Make sure your fork is up-to-date and create a topic branch for your feature or bug fix.
 
-```
+```bash
 git checkout gh-pages
 git pull upstream gh-pages
 git checkout -b my-feature-branch
@@ -79,27 +80,27 @@ git checkout -b my-feature-branch
 
 Add or edit a post.
 
-Make sure that it displays correctly locally at https://localhost:4000.
+Make sure that it displays correctly locally at http://localhost:4000.
 
 ### Commit Changes
 
 Make sure git knows your name and email address:
 
-```
+```bash
 git config --global user.name "Your Name"
 git config --global user.email "contributor@example.com"
 ```
 
 Writing good commit logs is important. A commit log should describe what changed and why.
 
-```
+```bash
 git add ...
 git commit
 ```
 
 ### Push
 
-```
+```bash
 git push origin my-feature-branch
 ```
 
@@ -113,7 +114,7 @@ Make changes as/if requested.
 
 You can amend your previous commit and force push the changes or commit a new change.
 
-```
+```bash
 git add .
 git commit --amend
 git push origin my-feature-branch -f
@@ -123,7 +124,7 @@ git push origin my-feature-branch -f
 
 If you've been working on a change for a while, rebase with upstream/gh-pages.
 
-```
+```bash
 git fetch upstream
 git rebase upstream/gh-pages
 git push origin my-feature-branch -f
@@ -147,14 +148,53 @@ markdownlint-cli2 "**/*.{md,markdown}" --config .markdownlint.yaml
 
 ### Spell Checker
 
+Install [pyspelling](https://facelessuser.github.io/pyspelling/).
+
 ```bash
 pyspelling --config .pyspelling.yml
 ```
+
+Modify [pyspelling.words](.pyspelling.words) as needed.
 
 ### Style Checker
 
 ```bash
 vale .
+```
+
+### Pre-Commit Hooks
+
+Add a pre-commit hook, `.git/hooks/pre-commit`.
+
+```bash
+#!/bin/bash
+
+# Pre-commit hook to run pyspelling
+echo "Running pyspelling..."
+
+# Run pyspelling
+pyspelling
+
+# Check if pyspelling succeeded
+if [ $? -ne 0 ]; then
+    echo "pyspelling failed. Please fix spelling errors before committing."
+    exit 1
+fi
+
+echo "pyspelling passed."
+
+echo "Running markdownlint-cli2..."
+
+# Run markdownlint-cli2
+markdownlint-cli2 "**/*.{md,markdown}" --config .markdownlint.yaml
+
+# Check if markdownlint-cli2 succeeded
+if [ $? -ne 0 ]; then
+    echo "markdownlint-cli2 failed. Please fix markdown linting errors before committing."
+    exit 1
+fi
+
+echo "markdownlint-cli2 passed."
 ```
 
 ## Thank You
