@@ -164,6 +164,13 @@ vale .
 
 ### Pre-Commit Hooks
 
+Install tools.
+
+```bash
+python3 -m pip install pyspelling
+npm install markdownlint-cli2 --global
+```
+
 Add a pre-commit hook, `.git/hooks/pre-commit`.
 
 ```bash
