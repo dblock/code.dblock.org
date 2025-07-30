@@ -5,7 +5,7 @@ date: 2025-07-30 01:00:00
 tags: [ai, tools, claude]
 comments: true
 ---
-Let's get Claude Code to connect to Google Sheets. We'll use [this Google Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit?gid=0#gid=0).
+Let's get [Claude Code](https://www.anthropic.com/claude-code) to connect to Google Sheets. We'll use [this Google Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit?gid=0#gid=0).
 
 Go to the [Google Cloud Console](https://console.cloud.google.com/), create a new project, and enable the Google Sheets API on it.
 
@@ -58,8 +58,14 @@ curl -H "Authorization: Bearer $(gcloud auth print-access-token)" \
 
 Let's ask Claude to do something useful.
 
-```bash
+Let's ask Claude to do something useful.
+
+```
 ~$ claude
+
+╭───────────────────────────────────────────────────╮
+│ ✻ Welcome to Claude Code!                         │
+╰───────────────────────────────────────────────────╯
 
 > analyze the distribution of extracurricular activities in https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit?gid=0#gid=0
 
