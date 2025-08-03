@@ -25,4 +25,4 @@ class App.Models.Spline extends Backbone.Model
   modelName: "Spline"
 ```
 
-If you're minifying JavaScript, make sure to turn this on in tests and catch similar bugs early. We use [Jammit](https://web.archive.org/web/20110122180115/https://documentcloud.github.com/jammit/), so this is done by setting _package_assets_ to _always_ in _assets.yml_ (setting it to _on_ in tests has no effect).
+If you're minifying JavaScript, make sure to turn this on in tests and catch similar bugs early. We use [Jammit](http://web.archive.org/web/20121010074021/http://documentcloud.github.com/jammit/), so this is done by setting _package_assets_ to _always_ in _assets.yml_ (setting it to _on_ in tests has no effect).

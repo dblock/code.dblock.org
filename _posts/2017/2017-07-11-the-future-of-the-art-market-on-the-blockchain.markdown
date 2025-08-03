@@ -21,7 +21,7 @@ If that video got you interested and you're curious about some computer science 
 
 ### Who is Working with Blockchain in the Art World?
 
-There's a nice starter list of companies active in the art world and Blockchain compiled by Jess Houlgrave as part of her work for an M.A. at the Sotheby's Institute of Art on [The Arts Slack #blockchain channel](https://thearts.slack.com/archives/C5YN7BY6R/p1498230417603305) (you can join [here](https://web.archive.org/web/20160731120137/https://thearts.herokuapp.com/)). I've selected a few and categorized them by the type of problem they attempt to solve.
+There's a nice starter list of companies active in the art world and Blockchain compiled by Jess Houlgrave as part of her work for an M.A. at the Sotheby's Institute of Art on [The Arts Slack #blockchain channel](https://thearts.slack.com/archives/C5YN7BY6R/p1498230417603305) (you can join [here](https://web.archive.org/web/20171023151221/http://thearts.herokuapp.com/)). I've selected a few and categorized them by the type of problem they attempt to solve.
 
 #### How do I buy digital art?
 
@@ -33,7 +33,7 @@ Distribution and content monetization, supporting multiple actors ranging from b
 
 #### Where does this work come from?
 
-Provenance can significantly increase (eg. a work was bought my a major collector) or undermine (eg. the work was stolen) the price of a work. A fairly well established player in this field is [Ascribe](https://www.ascribe.io) and even [Deloitte developed proofs of concept to solve traceability issues](https://web.archive.org/web/20161025133624/https://www2.deloitte.com/lu/en/pages/technology/articles/Blockchain-proof-concept-solve-traceability-issues-art.html).
+Provenance can significantly increase (eg. a work was bought my a major collector) or undermine (eg. the work was stolen) the price of a work. A fairly well established player in this field is [Ascribe](https://www.ascribe.io) and even [Deloitte developed proofs of concept to solve traceability issues](https://web.archive.org/web/20170905130921/https://www2.deloitte.com/lu/en/pages/technology/articles/blockchain-proof-concept-solve-traceability-issues-art.html).
 
 #### Is this work authentic?
 

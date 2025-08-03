@@ -9,7 +9,7 @@ dblog_post_id: 96
 ---
 I often hear from .NET programmers "I'd like to get into Java, not the language, but all that J2EE stuff ...". I am one of those people so I try to use any opportunity to try something I've never touched before.
 
-We're moving to a SOA model with the product at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com). One of the fundamental questions is: _"How does a service find another service?"._ The standard answer is to use a naming and directory service and in Java you talk to one of these things with [JNDI](https://java.sun.com/products/jndi/).
+We're moving to a SOA model with the product at my [day job](http://web.archive.org/web/20100411061005/http://www.appsecinc.com/). One of the fundamental questions is: _"How does a service find another service?"._ The standard answer is to use a naming and directory service and in Java you talk to one of these things with [JNDI](https://java.sun.com/products/jndi/).
 
 First, a few basics.
 
@@ -20,7 +20,7 @@ By using a directory service, you can simplify applications and their administra
 
 #### Client & Server
 
-I picked up [OpenDS](https://web.archive.org/web/20111001105032/https://www.opends.org/), on open-source server from Sun. After a straightforward installation (set _OPENDS_JAVA_HOME_ to a JRE location and run _setup.bat_) I had an LDAP server running as a Windows Service (OpenDS) on port 389. There's a handy _bat\control-panel.bat_ that launches a schema and object browser.
+I picked up [OpenDS](http://web.archive.org/web/20100413222900/http://www.opends.org/), on open-source server from Sun. After a straightforward installation (set _OPENDS_JAVA_HOME_ to a JRE location and run _setup.bat_) I had an LDAP server running as a Windows Service (OpenDS) on port 389. There's a handy _bat\control-panel.bat_ that launches a schema and object browser.
 
 We can now access this server with JNDI, which comes standard with Java Platform 1.1.2 or later.
 
@@ -221,7 +221,7 @@ Alternatively, OpenDS provides an implementation of Directory Services Markup La
 #### Links
 
 - [Naming and Directory Services Tutorial](https://java.sun.com/products/jndi/tutorial/TOC.html)
-- [OpenDS Directory Server](https://web.archive.org/web/20111001105032/https://www.opends.org/)
+- [OpenDS Directory Server](http://web.archive.org/web/20100413222900/http://www.opends.org/)
 - [Source Code for this Article](https://github.com/dblock/codeproject/tree/master/JndiDemo)
   - [Service.java](https://github.com/dblock/codeproject/blob/master/JndiDemo/src/com/example/jndi/Service.java)
   - [UnimplementedDirContext.java](https://github.com/dblock/codeproject/blob/master/JndiDemo/src/com/example/jndi/UnimplementedDirContext.java)

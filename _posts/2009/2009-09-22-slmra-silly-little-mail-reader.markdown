@@ -7,9 +7,9 @@ tags: [vestris]
 comments: true
 dblog_post_id: 55
 ---
-There was a time when having multiple e-mail accounts was some kind of a pipe dream. Since I had more than one, I had to deal with [Eudora](https://en.wikipedia.org/wiki/Eudora_(e-mail_client)) that wouldn't allow me to have more than one on my Windows 3.11. So I wrote [SLMRA](https://web.archive.org/web/20040222161209/https://www.vestris.com/software/slmra.html).
+There was a time when having multiple e-mail accounts was some kind of a pipe dream. Since I had more than one, I had to deal with [Eudora](https://en.wikipedia.org/wiki/Eudora_(e-mail_client)) that wouldn't allow me to have more than one on my Windows 3.11. So I wrote [SLMRA](http://web.archive.org/web/20040222161209/http://www.vestris.com/software/slmra.html).
 
-[![](https://web.archive.org/web/20040222161209/https://www.vestris.com/software/images/slmra.gif)](https://web.archive.org/web/20040222161209/https://www.vestris.com/software/slmra.html)
+[![](http://web.archive.org/web/20040223222231/http://www.vestris.com/software/images/slmra.gif)](http://web.archive.org/web/20040222161209/http://www.vestris.com/software/slmra.html)
 
 #### Update (2015)
 

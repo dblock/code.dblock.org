@@ -9,7 +9,7 @@ dblog_post_id: 7
 ---
 ### Prologue
 
-I've been doing a lot of [Wix](https://wixtoolset.org/) lately. Actually for the past six years or so: I was a believer since my last couple of years at [The Evil Empire](https://www.microsoft.com). [Wix](https://wixtoolset.org/) is easy, but custom actions aren't so much. Unit testing custom actions is the topic of this post.
+I've been doing a lot of [Wix](https://web.archive.org/web/20080818000000/https://wixtoolset.org/) lately. Actually for the past six years or so: I was a believer since my last couple of years at [The Evil Empire](https://www.microsoft.com). [Wix](https://web.archive.org/web/20080818000000/https://wixtoolset.org/) is easy, but custom actions aren't so much. Unit testing custom actions is the topic of this post.
 
 My team at my real job has been rebuilding deployment and installation for a rather large application and had to write three large installers and many custom actions that don't exist in the wix toolset. We started a long time ago, all the work is in C++. And since many prior fiascos have left me a believer in agile practices, I wanted to figure out how to unit test these many custom actions.
 

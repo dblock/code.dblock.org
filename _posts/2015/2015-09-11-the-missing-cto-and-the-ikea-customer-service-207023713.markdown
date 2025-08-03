@@ -9,7 +9,7 @@ The story of tiny startups upsetting entire industries is old. Here goes David a
 
 Today, technology in general and software, specifically, is the main driver for big transformations in all big industries. If you miss the turn, you're out of business. In hindsight, the cases of the cable or taxi industries is completely obvious. Turning hindsight into foresight in the area of technology is the job of a CTO.
 
-I've ordered items from IKEA.com before and it went well. The shopping cart works. But after experiencing a total fail with a single $20 broken mirror replacement within a $2,000 purchase I would invest in every startup in that space, starting with the minuscule [Casper](https://web.archive.org/web/20150601013253/https://casper.com/). IKEA is clearly _still_ at the "shopping cart" stage and has never heard of e-mail. I couldn't find any evidence of a CTO, or any real tech leadership at IKEA. The issues are so apparent, I can't wait for them to become textbook examples of being disrupted out of existence.
+I've ordered items from IKEA.com before and it went well. The shopping cart works. But after experiencing a total fail with a single $20 broken mirror replacement within a $2,000 purchase I would invest in every startup in that space, starting with the minuscule [Casper](http://web.archive.org/web/20150905114635/https://casper.com/). IKEA is clearly _still_ at the "shopping cart" stage and has never heard of e-mail. I couldn't find any evidence of a CTO, or any real tech leadership at IKEA. The issues are so apparent, I can't wait for them to become textbook examples of being disrupted out of existence.
 
 Isn't this just bad customer support? I don't think so.
 

@@ -129,7 +129,7 @@ To toggle between the states, navigate to either `SignedIn` or `SignedOut` (see 
 
 ### Relay Boilerplate
 
-The [Relay Quick Start Guide](https://web.archive.org/web/20210514161819/https://relay.dev/docs/v10.1.0/quick-start-guide/) is pretty good. We throw in `react-relay` with `yarn add react-relay` and `relay-compiler` with `yarn add -dev relay-compiler`. Add a `relay` script into `package.json`.
+The [Relay Quick Start Guide](http://web.archive.org/web/20210514161819/https://relay.dev/docs/v10.1.0/quick-start-guide/) is pretty good. We throw in `react-relay` with `yarn add react-relay` and `relay-compiler` with `yarn add -dev relay-compiler`. Add a `relay` script into `package.json`.
 
 ```json
 "scripts": {
@@ -223,7 +223,7 @@ Login is very similar. For now we're using cookies to store a session and don't 
 
 ### Show Some Data
 
-To show data wrap up a GraphQL query into a [QueryRenderer](https://web.archive.org/web/20240530124102/https://relay.dev/docs/v9.1.0/query-renderer/). You'll always need one.
+To show data wrap up a GraphQL query into a [QueryRenderer](http://web.archive.org/web/20210514172044/https://relay.dev/docs/v9.1.0/query-renderer/). You'll always need one.
 
 ```js
 render() {

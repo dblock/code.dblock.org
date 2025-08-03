@@ -7,7 +7,7 @@ tags: [teams, learning, speaking, people, agile]
 comments: true
 dblog_post_id: 335
 ---
-Last night I gave a talk on pressing the big scary red reset button at the [NY CTO School](http://web.archive.org/web/20170709150952/http://www.ctoschool.org/). The first talk before me was by [@malcolmcasey](https://twitter.com/#!/malcolmcasey), CTO of [Skillshare](https://www.skillshare.com/), another awesome NYC startup. It's a great meet-up for early team leads that want to learn from other technologists that have been doing this for a while.
+Last night I gave a talk on pressing the big scary red reset button at the [NY CTO School](http://web.archive.org/web/20120518130623/http://www.ctoschool.org/). The first talk before me was by [@malcolmcasey](https://twitter.com/#!/malcolmcasey), CTO of [Skillshare](https://www.skillshare.com/), another awesome NYC startup. It's a great meet-up for early team leads that want to learn from other technologists that have been doing this for a while.
 
 ![]({{ site.url }}/images/posts/2012/2012-05-15-pressing-the-big-scary-red-reset-button/image_24.jpg)
 

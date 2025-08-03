@@ -31,6 +31,6 @@ My recommendation is to use something like [CanCan](https://github.com/ryanb/can
 
 #### Dear Github
 
-I still love you. This happens to the best people out there. Shameless plug for my former [Team SHATTER](https://web.archive.org/web/20101125033914/https://www.teamshatter.com/), if you want a list. Move on and learn from it.
+I still love you. This happens to the best people out there. Shameless plug for my former [Team SHATTER](http://web.archive.org/web/20120119034543/http://www.teamshatter.com/), if you want a list. Move on and learn from it.
 
 ![]({{ site.url }}/images/posts/2012/2012-03-05-github-hacked-things-to-do-on-monday/image_3.jpg)

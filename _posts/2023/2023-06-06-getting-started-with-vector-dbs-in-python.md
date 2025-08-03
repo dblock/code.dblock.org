@@ -328,7 +328,7 @@ Cleaning up ... DONE.
 
 ### MyScale
 
-[MyScale](https://myscale.com) performs vector search in SQL, and [claims](https://web.archive.org/web/20230517145148/https://blog.myscale.com/2023/05/17/myscale-outperform-special-vectordb/) to outperform other solutions by using a proprietary algorithm called `MSTG`. MyScale is built on the open-source ClickHouse, so the code is almost identical, except that one uses `VECTOR INDEX values_index values TYPE MSTG`.
+[MyScale](https://myscale.com) performs vector search in SQL, and [claims](http://web.archive.org/web/20230602212859/https://blog.myscale.com/2023/05/17/myscale-outperform-special-vectordb/) to outperform other solutions by using a proprietary algorithm called `MSTG`. MyScale is built on the open-source ClickHouse, so the code is almost identical, except that one uses `VECTOR INDEX values_index values TYPE MSTG`.
 
 Sign up [on their website](https://myscale.com) for a test cluster, note the username and password. A working sample is available [here](https://github.com/dblock/vectordb-hello-world/blob/main/src/my_scale/hello.py).
 
@@ -776,7 +776,7 @@ API_KEY=... ENDPOINT=https://my-cluster.cloud.qdrant.io:6333 poetry run src/qdra
 
 ### Redis
 
-[Redis](https://redis.io/) is a fast, opinionated, open-source database. Its [similarity vector search](https://redis.io/docs/interact/search-and-query/search/vectors/) comes with `FLAT` and `HNSW` indexing methods (field types). Redis is licensed under BSD.
+[Redis](https://redis.io/) is a fast, opinionated, open-source database. Its [similarity vector search](http://web.archive.org/web/20230810233142/https://redis.io/docs/interact/search-and-query/search/vectors/) comes with `FLAT` and `HNSW` indexing methods (field types). Redis is licensed under BSD.
 
 I prefer to run Redis locally in Docker with `docker run -p 6379:6379 redislabs/redisearch:latest`, but managed service options with free tiers also [exist](https://redis.com/).
 

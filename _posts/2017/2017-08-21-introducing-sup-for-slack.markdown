@@ -9,7 +9,7 @@ comments: true
 
 > The most valuable relationships are not made of two people, they're made of three.  A third person will always stabilize and grow the relationship between the other two. It's called a triad, and the more you create, the stronger your network.
 >
-> - via [CultureSync, Tribal Leadership](https://web.archive.org/web/20170914154315/https://www.culturesync.net/toolbox/intro-to-triads)
+> - via [CultureSync, Tribal Leadership](http://web.archive.org/web/20170914154315/http://www.culturesync.net/toolbox/intro-to-triads/)
 
 I was introduced to S'Up, short for "standup", between three randomly selected people at [Artsy](https://www.artsy.net). Every time I met 3 of my colleagues, especially those who didn't work on my team, I came out with incredible insights. We organized those meetings manually, then [Ilya Kavalerov](https://github.com/ilyakava) automated the process by creating [a web app](https://github.com/artsy/sup). Today I am launching [S'Up for Slack Teams](https://sup.playplay.io).
 

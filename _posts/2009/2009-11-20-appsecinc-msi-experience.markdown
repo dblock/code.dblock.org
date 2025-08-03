@@ -7,7 +7,7 @@ tags: [msi]
 comments: true
 dblog_post_id: 64
 ---
-A couple of years ago [we](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/) used to have a really big problem with Windows installers. We had one guy writing InstallShield installers and a bunch of components thrown at him with the usual "just install these, please". As a result, almost every single deployment ran into some kind of hard-to-diagnose failure, force the entire thing to rollback and require creative solutions to get the customer running. More InstallScript was written at best.
+A couple of years ago [we](http://web.archive.org/web/20091124224338/http://www.appsecinc.com/) used to have a really big problem with Windows installers. We had one guy writing InstallShield installers and a bunch of components thrown at him with the usual "just install these, please". As a result, almost every single deployment ran into some kind of hard-to-diagnose failure, force the entire thing to rollback and require creative solutions to get the customer running. More InstallScript was written at best.
 
 > "What's up with those customers?", - we would say, "Why do they want to install our software?!".
 
@@ -16,7 +16,7 @@ Then the customer would try to upgrade ...
 I saw large teams deal with these problems before at Microsoft, quite successfully, so I had my team turn around 180 degrees and set course on changing deployment technology to something enterprise-ready and robust.
 
 - We made every single developer care about installation and everyone learned through brown bags how to write an installer or what Windows installer is about and why it's harder than it seems.
-- We changed technology to [Wix](https://wixtoolset.org/) so that we can share the work load across the organization and so that every developer adding a file makes sure to take care of the installer at the same time. We made installer code just like C++, C# or Java code.
+- We changed technology to [Wix](http://web.archive.org/web/20090923201531/http://wixtoolset.org/) so that we can share the work load across the organization and so that every developer adding a file makes sure to take care of the installer at the same time. We made installer code just like C++, C# or Java code.
 - We re-thought individual installable components from scratch and how they assemble into a working product. We wrote brand new merge modules and MSI installers.
 - We developed C++ custom actions (DTF didn't exist in the public then to write managed ones) and Wix extensions that not available in wix and that are now open-sourced as [AppSecInc. MSI Extensions](https://github.com/dblock/msiext). We evolved a unit-test system from an MSI shim to using the MSI engine for every single CA to make sure they are robust.
 - We re-thought suite deployment and settled on [dotNetInstaller](https://github.com/dblock/dotnetinstaller) bootstrapper to chain the whole thing together, contributing some features as well.

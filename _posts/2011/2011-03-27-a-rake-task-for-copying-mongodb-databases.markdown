@@ -23,7 +23,7 @@ Let's write a task that will copy one MongoDB database to another using somethin
 
 #### Reading Heroku-San Configuration
 
-We're using [Heroku-san](https://web.archive.org/web/20110704143857/https://jqr.github.com/2010/08/27/easy-heroku-deploys-with-heroku-san.html), so we've got a _heroku.yml_ sitting in the config folder with two values for MONGOHQ_URL under _staging_ and _production_. We'll load the file with YAML, fetch _MONGOHQ_URL_ and parse it into parts. For those using regular expressions to parse MongoHQ urls, pay attention: everything except the database name is just a regular piece of a URL.
+We're using [Heroku-san](http://web.archive.org/web/20110704143857/http://jqr.github.com/2010/08/27/easy-heroku-deploys-with-heroku-san.html), so we've got a _heroku.yml_ sitting in the config folder with two values for MONGOHQ_URL under _staging_ and _production_. We'll load the file with YAML, fetch _MONGOHQ_URL_ and parse it into parts. For those using regular expressions to parse MongoHQ urls, pay attention: everything except the database name is just a regular piece of a URL.
 
 ```ruby
 def db_copy_load_config
@@ -82,7 +82,7 @@ end
 
 #### No Admin for you on MongoHQ
 
-If your destination database is on [MongoHQ](https://web.archive.org/web/20110202114207/https://mongohq.com/home) you will get the following error.
+If your destination database is on [MongoHQ](http://web.archive.org/web/20110225143156/https://mongohq.com/home) you will get the following error.
 
 ```
 Database command 'copydbgetnonce' failed: {"assertion"=>"unauthorized db:admin lock type:1 client:ip",

@@ -86,7 +86,7 @@ f().then(function(result) {
 });
 ```
 
-Now we can rewrite this in TypeScript and use [ES6 fat arrows](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/). We add a _type_ to `f()`, expressing that the function must promise (return a `Promise`) to return a `string`. We mark everything asynchronous with `async`, and use `await` to wait for the asynchronous `f` to finish.
+Now we can rewrite this in TypeScript and use [ES6 fat arrows](https://web.archive.org/web/20190704000000/https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/). We add a _type_ to `f()`, expressing that the function must promise (return a `Promise`) to return a `string`. We mark everything asynchronous with `async`, and use `await` to wait for the asynchronous `f` to finish.
 
 ```ts
 async function f(): Promise<string> {

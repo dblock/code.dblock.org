@@ -9,7 +9,7 @@ dblog_post_id: 9
 ---
 I've been heavily contributing to a project called DNI or dotNetInstaller in the past several months. DNI is a setup bootstrapper that basically chains multiple MSIs together and allows to conditionally install pre-requisites.
 
-The [Wix](https://wixtoolset.org/) mailing list is full of conversations about a bootstrapper and it looks like someone at Microsoft is dedicating himself full time to making this happen. The timeframe is 2009 though and we must ship software in the meantime. We have decided to find a bootstrapper technology that is "good enough" and settled on DNI. My team has contributed several major features to the upcoming version 1.4.
+The [Wix](http://web.archive.org/web/20090122021357/http://wixtoolset.org/) mailing list is full of conversations about a bootstrapper and it looks like someone at Microsoft is dedicating himself full time to making this happen. The timeframe is 2009 though and we must ship software in the meantime. We have decided to find a bootstrapper technology that is "good enough" and settled on DNI. My team has contributed several major features to the upcoming version 1.4.
 
 - Support for deployment on 64-bit platforms
 - Embedding all dependencies into a single Setup.exe
