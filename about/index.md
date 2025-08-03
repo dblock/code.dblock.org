@@ -9,13 +9,14 @@ permalink: '/about/'
 
 Hi! This is my tech blog.
 
-<a href='/images/about/headshot.jpg'>
-  <img src="/images/about/daniel-doubrovkine.jpg" style="max-height: 200px">
-</a><a href='/images/about/headshot-landscape.jpg'>
-  <img src="/images/about/daniel-doubrovkine-landscape.jpg" style="max-height: 200px">
-</a>
-
-<small>(click images for hi-res headshots)</small>
+<div style="padding-bottom: 5px">
+  <a href='/images/about/headshots/daniel-doubrovkine-steve.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-steve.jpeg" style="max-height: 200px; padding-right: 2px;"></a>
+  <a href='/images/about/headshots/daniel-doubrovkine-home.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-home.jpeg" style="max-height: 200px"></a>
+</div>
+<div style="padding-bottom: 20px">
+  <a href='/images/about/headshots/daniel-doubrovkine-office.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-office.jpeg" style="max-height: 200px; padding-right: 2px;"></a>
+  <a href='/images/about/headshots/daniel-doubrovkine-boat.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-boat.jpeg" style="max-height: 200px"></a>
+</div>
 
 I manage the **Augmented Engineering** team at [Shopify](https://shopify.engineering/). Opinions on this blog are my own.
 
