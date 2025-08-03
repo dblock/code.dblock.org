@@ -2,7 +2,7 @@
 layout: post
 title: "How to Divide CTO and VP of Engineering Responsibilities"
 date: 2019-03-08
-tags: [cto, head of engineering, vp of engineering]
+tags: [cto, head of engineering, vp of engineering, management]
 comments: true
 ---
 Three years ago I wrote about [the difference between a CTO and a VP of Engineering](/2015/05/07/what-is-the-difference-between-cto-and-vp-or-head-of-engineering.html) at a startup, but only hired a VP in 2018. In this post I will explain why I decided to do it, and discuss one possible separation of responsibilities between a CTO and a VP of Engineering.

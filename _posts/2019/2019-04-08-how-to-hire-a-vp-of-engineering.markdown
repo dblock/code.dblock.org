@@ -2,7 +2,7 @@
 layout: post
 title: "How to Hire a VP of Engineering"
 date: 2019-04-08
-tags: [cto, head of engineering, vp of engineering, hiring]
+tags: [cto, head of engineering, vp of engineering, hiring, management]
 comments: true
 ---
 I recently wrote about [dividing CTO and VP of Engineering responsibilities](/2019/03/08/how-to-divide-cto-and-vp-of-engineering-responsibilities.html). That post is only useful if you actually have a VP of Engineering. So how does one hire such an animal? Is the process different from hiring any other team member?

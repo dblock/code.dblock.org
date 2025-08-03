@@ -2,7 +2,7 @@
 layout: post
 title: "What is the difference between a CTO and a VP or Head of Engineering?"
 date: 2015-05-07
-tags: [job titles, cto, head of engineering, vp of engineering]
+tags: [job titles, cto, head of engineering, vp of engineering, management]
 comments: true
 pinned: true
 ---

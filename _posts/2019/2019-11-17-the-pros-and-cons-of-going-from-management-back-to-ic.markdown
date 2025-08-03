@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pros and Cons of Going from Management Back to Individual Contributor"
-tags: [job titles, cto, head of engineering, vp of engineering, principal engineer, individual contributor]
+tags: [job titles, cto, head of engineering, vp of engineering, principal engineer, individual contributor, management]
 date: 2019-11-17
 comments: true
 pinned: true

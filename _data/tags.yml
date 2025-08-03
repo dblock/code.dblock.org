@@ -97,6 +97,9 @@ jobs:
 learning:
   name: learning
   count: 11
+management:
+  name: management
+  count: 8
 me me:
   name: me me
   count: 9
@@ -123,7 +126,7 @@ organizations:
   count: 22
 people:
   name: people
-  count: 74
+  count: 76
 performance:
   name: performance
   count: 9

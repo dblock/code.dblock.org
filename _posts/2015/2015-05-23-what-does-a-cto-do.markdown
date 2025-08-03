@@ -2,7 +2,7 @@
 layout: post
 title: "What does a CTO do?"
 date: 2015-05-23
-tags: [cto, head of engineering, vp of engineering]
+tags: [cto, head of engineering, vp of engineering, management]
 comments: true
 ---
 I now have an executive coach. I wish he just told me what to do, but we pay him a lot of money not to, which means I have to figure it out by myself. So I turned to my personal network and asked the following question.
