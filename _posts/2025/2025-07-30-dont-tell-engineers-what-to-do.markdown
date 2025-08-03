@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Don't Tell Engineers What to Do
-date: 2025-07-30 02:00:00
+date: 2025-07-30 08:00:00
 tags: [people, management]
 comments: true
 ---
