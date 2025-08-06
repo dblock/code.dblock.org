@@ -6,17 +6,16 @@ comments: false
 redirect_from: '/About.aspx/'
 permalink: '/about/'
 ---
+<div style="padding-bottom: 5px; display: flex; justify-content: flex-start; gap: 5px;">
+  <a href='/images/about/headshots/daniel-doubrovkine-steve.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-steve.jpeg" style="max-height: 200px;"></a>
+  <a href='/images/about/headshots/daniel-doubrovkine-home.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-home.jpeg" style="max-height: 200px;"></a>
+</div>
+<div style="padding-bottom: 10px; display: flex; justify-content: flex-start; gap: 5px;">
+  <a href='/images/about/headshots/daniel-doubrovkine-office.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-office.jpeg" style="max-height: 200px;"></a>
+  <a href='/images/about/headshots/daniel-doubrovkine-boat.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-boat.jpeg" style="max-height: 200px;"></a>
+</div>
 
 Hi! This is my tech blog.
-
-<div style="padding-bottom: 5px">
-  <a href='/images/about/headshots/daniel-doubrovkine-steve.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-steve.jpeg" style="max-height: 200px; padding-right: 2px;"></a>
-  <a href='/images/about/headshots/daniel-doubrovkine-home.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-home.jpeg" style="max-height: 200px"></a>
-</div>
-<div style="padding-bottom: 20px">
-  <a href='/images/about/headshots/daniel-doubrovkine-office.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-office.jpeg" style="max-height: 200px; padding-right: 2px;"></a>
-  <a href='/images/about/headshots/daniel-doubrovkine-boat.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-boat.jpeg" style="max-height: 200px"></a>
-</div>
 
 I manage the **Augmented Engineering** team at [Shopify](https://shopify.engineering/). Opinions on this blog are my own.
 
