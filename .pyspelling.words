@@ -439,6 +439,7 @@ Dimitri
 DirtyPanel
 DisableNTLMPreAuth
 disambiguates
+discoverability
 disqus
 Disqus
 Disruptor
@@ -742,6 +743,7 @@ Hashie
 hashmap
 hashtable
 hassox
+HATEOAS
 hbr
 HDFS
 headshots
@@ -1051,6 +1053,8 @@ mbleigh
 McCaffrey
 MCH
 McManus
+mcp
+MCPs
 Mea
 Mediachain
 MedText
@@ -1753,6 +1757,7 @@ TechRepublic
 Tejas
 telecom
 tempelmeyer
+templated
 templating
 testcase
 Tetris
