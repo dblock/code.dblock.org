@@ -15,13 +15,11 @@ permalink: '/about/'
   <a href='/images/about/headshots/daniel-doubrovkine-boat.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-boat.jpeg" style="max-height: 200px;"></a>
 </div>
 
-Hi! This is my tech blog.
-
-I manage the **Augmented Engineering** team at [Shopify](https://shopify.engineering/). Opinions on this blog are my own.
+Hi! This is my tech blog. Opinions on this blog are my own.
 
 Here's an official bio.
 
-> Daniel Doubrovkine (aka dB.) currently runs the Augmented Engineering team at <a href="https://shopify.engineering/" target="_blank">Shopify</a>. Prior to this, he served as Principal Engineer at <a href="https://aws.amazon.com/" target="_blank">AWS</a> in New York, working on <a href="https://opensearch.org/">OpenSearch</a>. He is a seasoned entrepreneur, technologist and former CTO at <a href='https://artsy.net' target='_blank'>Artsy.net</a>. Daniel graduated from University of Geneva in late 90s with a degree in Computer Science. Daniel is the creator and maintainer of many popular <a href="https://github.com/dblock">open-source projects</a> and a <a href="https://art.dblock.org">lifetime artist</a>.
+> Daniel Doubrovkine (aka dB.) is an entrepreneur, technologist, and open-source enthusiast. He earned a degree in Computer Science from the University of Geneva in the late 1990s, founded two tech startups, and moved to the U.S. to join Microsoft. Daniel later became the first CTO at <a href='https://artsy.net' target='_blank'>Artsy.net</a>, a founding Principal Engineer of <a href="https://opensearch.org/">OpenSearch</a> (a fork of Elasticsearch) at <a href="https://aws.amazon.com/" target="_blank">AWS</a>, and the creator of the Augmented Engineering team at <a href="https://shopify.engineering/" target="_blank">Shopify</a>. He lives in New York City, maintains several popular <a href="https://github.com/dblock">open-source projects</a>, and is a <a href="https://art.dblock.org">lifelong artist</a>.
 
 <a href="https://twitter.com/dblockdotorg" class="twitter-follow-button" data-show-count="false">Follow me @dblockdotorg</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
