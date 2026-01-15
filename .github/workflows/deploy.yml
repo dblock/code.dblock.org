@@ -48,6 +48,14 @@ jobs:
             fi
           done
 
+          # Copy page markdown files (about/index.md -> about.md, etc.)
+          for dir in about press speaking; do
+            if [[ -f "${dir}/index.md" ]]; then
+              cp "${dir}/index.md" "_site/${dir}.md"
+              echo "Copied ${dir}/index.md -> _site/${dir}.md"
+            fi
+          done
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
