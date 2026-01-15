@@ -46,4 +46,4 @@ This entire feature was implemented by [Claude](https://claude.ai), and this pos
 - [Added link rel alternate for markdown discovery.](https://github.com/dblock/code.dblock.org/commit/fcff077)
 - [Moved markdown link to post layout.](https://github.com/dblock/code.dblock.org/commit/e5eede2)
 - [Fixed markdown alternate URL to remove .html.](https://github.com/dblock/code.dblock.org/commit/f6ae02a)
-- [Serving Markdown for AI Agents.](https://github.com/dblock/code.dblock.org/commit/8ab3d48)
+- [Serving Markdown for AI Agents.](https://github.com/dblock/code.dblock.org/commit/5ef474c)
