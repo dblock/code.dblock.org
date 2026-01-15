@@ -11,12 +11,12 @@ AI agents prefer clean, structured content over HTML. Markdown is ideal - it's r
 
 ### How It Works
 
-For every post like [/2025/01/15/serving-markdown-for-ai-agents/](/2025/01/15/serving-markdown-for-ai-agents/), you can now fetch the source at [/2025/01/15/serving-markdown-for-ai-agents.md](/2025/01/15/serving-markdown-for-ai-agents.md).
+For every post like [/2026/01/15/serving-markdown-for-ai-agents.html](/2026/01/15/serving-markdown-for-ai-agents.html), you can now fetch the source at [/2026/01/15/serving-markdown-for-ai-agents.md](/2026/01/15/serving-markdown-for-ai-agents.md).
 
 AI agents can discover this via a `<link>` tag in the HTML head:
 
 ```html
-<link href="/.../serving-markdown-for-ai-agents.md"
+<link href="serving-markdown-for-ai-agents.md"
       type="text/markdown"
       rel="alternate"
       title="Markdown">
