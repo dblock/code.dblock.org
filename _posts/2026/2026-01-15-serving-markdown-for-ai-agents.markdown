@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Serving Markdown for AI Agents
+title: Serving Markdown for AI Agents in Jekyll
 date: 2026-01-15
 tags: [ai, jekyll]
 comments: true
