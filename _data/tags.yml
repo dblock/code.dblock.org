@@ -7,9 +7,12 @@ active directory:
 agile:
   name: agile
   count: 20
+ai:
+  name: ai
+  count: 8
 api:
   name: api
-  count: 9
+  count: 10
 appsecinc:
   name: appsecinc
   count: 8
@@ -84,7 +87,7 @@ javascript:
   count: 13
 jekyll:
   name: jekyll
-  count: 5
+  count: 6
 jenkins:
   name: jenkins
   count: 7
@@ -99,7 +102,7 @@ learning:
   count: 11
 management:
   name: management
-  count: 8
+  count: 9
 me me:
   name: me me
   count: 9
@@ -126,7 +129,7 @@ organizations:
   count: 22
 people:
   name: people
-  count: 76
+  count: 79
 performance:
   name: performance
   count: 9
@@ -156,7 +159,7 @@ security:
   count: 29
 slack:
   name: slack
-  count: 17
+  count: 18
 speaking:
   name: speaking
   count: 31
@@ -168,7 +171,7 @@ teaching:
   count: 13
 teams:
   name: teams
-  count: 32
+  count: 34
 technology:
   name: technology
   count: 30
