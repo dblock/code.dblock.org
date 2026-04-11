@@ -6,7 +6,7 @@ tags: [dokku, mongodb]
 ---
 This was expanded from [Running Slack Bots on DigitalOcean with Dokku](/2016/02/08/running-slack-bots-on-digital-ocean-with-dokku.html).
 
-Let's run MongoDB inside Dokku on DigitalOcean.
+Let's run MongoDB inside Dokku on [DigitalOcean](https://m.do.co/c/5b26011f9a9b).
 
 ### Install the Plugin
 

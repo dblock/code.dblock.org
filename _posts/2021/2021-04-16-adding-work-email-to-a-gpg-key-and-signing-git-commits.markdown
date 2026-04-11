@@ -28,7 +28,7 @@ In my example the key ID is `75BF031B7C94E183`.
 
 ### Backing up Keys
 
-I export and store a copy of my GPG keys in Dropbox and store the private key passphrase in 1Password. The latter is required to export or import a private key (gpg will prompt you).
+I export and store a copy of my GPG keys in [Dropbox](https://www.dropbox.com/referrals/AACarx63QE2ZOe75ToRTd63tzYnQKRya3Ms?src=global9) and store the private key passphrase in 1Password. The latter is required to export or import a private key (gpg will prompt you).
 
 ```bash
 gpg --export-secret-key 75BF031B7C94E183 > 75BF031B7C94E183.gpg

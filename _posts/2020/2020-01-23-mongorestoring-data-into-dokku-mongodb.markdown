@@ -4,7 +4,7 @@ title: "Restoring Data into a MongoDB Dokku Container"
 date: "2020-01-20"
 tags: [dokku, mongodb]
 ---
-I've been running a pet project using Dokku on DigitalOcean for a number of years with MongoDB, backing up data into Dropbox. See [Running Slack Bots on DigitalOcean with Dokku](/2016/02/08/running-slack-bots-on-digital-ocean-with-dokku.html) and [Backing up MongoDB Databases in Dokku Containers to Dropbox](/2016/02/15/backing-up-mongodb-databases-in-dokku-containers-to-dropbox.html).
+I've been running a pet project using Dokku on [DigitalOcean](https://m.do.co/c/5b26011f9a9b) for a number of years with MongoDB, backing up data into [Dropbox](https://www.dropbox.com/referrals/AACarx63QE2ZOe75ToRTd63tzYnQKRya3Ms?src=global9). See [Running Slack Bots on DigitalOcean with Dokku](/2016/02/08/running-slack-bots-on-digital-ocean-with-dokku.html) and [Backing up MongoDB Databases in Dokku Containers to Dropbox](/2016/02/15/backing-up-mongodb-databases-in-dokku-containers-to-dropbox.html).
 
 Today I had to selectively export data from a backup, and restore this data into a MongoDB running inside a Dokku container. This was a bit tedious.
 

@@ -90,7 +90,7 @@ end
 
 ### Deploy
 
-Create a new app deployment, use the same database as your production bot. I operate my bots on Digital Ocean and follow [this post](/2016/02/08/running-slack-bots-on-digital-ocean-with-dokku.html). The new bot needs a configuration with the `SLACK_CLIENT_ID`, `SLACK_CLIENT_SECRET` and `SLACK_SIGNING_SECRET` from the new app with granular permissions. I use the same database as my old RTM bot. Deploy the new app.
+Create a new app deployment, use the same database as your production bot. I operate my bots on [Digital Ocean](https://m.do.co/c/5b26011f9a9b) and follow [this post](/2016/02/08/running-slack-bots-on-digital-ocean-with-dokku.html). The new bot needs a configuration with the `SLACK_CLIENT_ID`, `SLACK_CLIENT_SECRET` and `SLACK_SIGNING_SECRET` from the new app with granular permissions. I use the same database as my old RTM bot. Deploy the new app.
 
 Now there are two versions of the app running on top of the same database: one is the legacy one, and the other is the granular scopes app. The old app will ignore new bot installations that use granular permissions. The new app should ignore any old bot installations. Thus both apps should work.
 

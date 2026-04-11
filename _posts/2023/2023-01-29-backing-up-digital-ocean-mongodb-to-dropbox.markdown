@@ -5,7 +5,7 @@ date: 2023-01-29
 tags: [mongodb, devops]
 comments: true
 ---
-After [migrating my apps to DigitalOcean apps](/2023/01/15/migrating-from-dokku-to-digital-ocean-apps.html) I started looking for a MongoDB automated offsite backup solution. DO backs up all MongoDB daily automatically, but I am paranoid, and like to store an offsite copy of the data in Dropbox in monthly increments.
+After [migrating my apps to DigitalOcean apps](/2023/01/15/migrating-from-dokku-to-digital-ocean-apps.html) I started looking for a MongoDB automated offsite backup solution. [DO](https://m.do.co/c/5b26011f9a9b) backs up all MongoDB daily automatically, but I am paranoid, and like to store an offsite copy of the data in [Dropbox](https://www.dropbox.com/referrals/AACarx63QE2ZOe75ToRTd63tzYnQKRya3Ms?src=global9) in monthly increments.
 
 I first [tried to build a DigitalOcean app function](https://github.com/dblock/do-mongodb-backup) that could run on a schedule and connect to my database, but ran into two missing features: [lack of non-web app functions](https://ideas.digitalocean.com/app-framework-services/p/non-web-app-functions-that-cannot-be-invoked-externally-without-auth), and [adding functions to trusted sources](https://ideas.digitalocean.com/app-framework-services/p/add-functions-to-trusted-sources). In short you can either make an app with a function that connects to a database, but then it's always a web function with no cron support, or you can make a function that can be invoked on a cron, but cannot connect to your database.
 

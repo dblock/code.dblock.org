@@ -13,7 +13,7 @@ The newly remodeled [code.dblock.org](https://code.dblock.org) is powered by [Je
 
 My [homegrown system](https://github.com/dblock/dblog) was built in 2008. The tech stack was Microsoft ASP.net with a SQL Server back-end. I did most publishing with [Windows LiveWriter](https://en.wikipedia.org/wiki/Windows_Live_Writer) that used [AtomPub](https://code.dblock.org/2009/12/07/implementing-atompub-in-net.html).
 
-Needless to say that was starting to really annoy me, having to boot a VirtualBox VM with Windows on my Mac just to publish an article. Worse, copy paste between the host and the guest OS was not working for images, so I used Dropbox for screenshots. The system was originally designed to save me time, only to ultimately become a time suck. Finally, [WinHost](https://www.winhost.com), where the blog was hosted, while providing excellent service, actually costs quite a bit of money.
+Needless to say that was starting to really annoy me, having to boot a VirtualBox VM with Windows on my Mac just to publish an article. Worse, copy paste between the host and the guest OS was not working for images, so I used [Dropbox](https://www.dropbox.com/referrals/AACarx63QE2ZOe75ToRTd63tzYnQKRya3Ms?src=global9) for screenshots. The system was originally designed to save me time, only to ultimately become a time suck. Finally, [WinHost](https://www.winhost.com), where the blog was hosted, while providing excellent service, actually costs quite a bit of money.
 
 ### Migration
 

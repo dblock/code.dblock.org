@@ -5,7 +5,7 @@ date: 2016-02-15
 tags: [dokku, digitalocean, mongodb]
 comments: true
 ---
-I've [recently moved](/2016/02/08/running-slack-bots-on-digital-ocean-with-dokku.html) my Slack bots to Dokku running on DigitalOcean. The bots use local MongoDB database containers provided by the [dokku-mongo](https://github.com/dokku/dokku-mongo) plugin. Here's the entire setup, from installation to backup to Dropbox.
+I've [recently moved](/2016/02/08/running-slack-bots-on-digital-ocean-with-dokku.html) my Slack bots to Dokku running on [DigitalOcean](https://m.do.co/c/5b26011f9a9b). The bots use local MongoDB database containers provided by the [dokku-mongo](https://github.com/dokku/dokku-mongo) plugin. Here's the entire setup, from installation to backup to [Dropbox](https://www.dropbox.com/referrals/AACarx63QE2ZOe75ToRTd63tzYnQKRya3Ms?src=global9).
 
 ### Install
 
