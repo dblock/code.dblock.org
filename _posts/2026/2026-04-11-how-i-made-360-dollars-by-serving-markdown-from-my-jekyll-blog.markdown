@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How I Made $360 by Serving Markdown from My Jekyll Blog"
+title: "How I Made $360 by Serving Markdown to A.I. agents from My Jekyll Blog"
 date: 2026-04-11
 tags: [ai, jekyll, blogging]
 comments: true
