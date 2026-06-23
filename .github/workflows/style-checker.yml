@@ -13,6 +13,7 @@ jobs:
             **/**.markdown
             !_styles/**/*.md
       - uses: errata-ai/vale-action@v2.1.1
+        if: steps.changed_files.outputs.all_changed_files != ''
         with:
           version: 3.7.1
           reporter: github-check
