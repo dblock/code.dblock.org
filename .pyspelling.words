@@ -31,6 +31,7 @@ Adruino
 Advapi
 ae
 Agapakis
+agentic
 agileanimal
 AgileDC
 Aiven
@@ -369,6 +370,7 @@ CustomAction
 customizable
 custommers
 CVE
+CVEs
 Cwilich
 CXF
 cxx
@@ -1120,6 +1122,7 @@ mongorestore
 Moya
 mpr
 MSAccess
+MSTest
 msbuild
 MSBuild
 MSBuildTasks
@@ -1547,6 +1550,7 @@ Savon
 scalable
 Scharf's
 SCM
+SCSS
 Scorable
 screencast
 screenProps
@@ -1898,6 +1902,7 @@ videodrome's
 ville
 vimeo
 Vimeo
+Vite
 Vinoodh
 Vinoodh's
 virtualbox
@@ -1943,6 +1948,7 @@ WCS
 weaviate
 Weaviate
 webapps
+Webpack
 Webdav
 webdriver
 webhook
