@@ -26,3 +26,5 @@ Speaking of AI, we have one chance to get rid of these stupid interviews now. It
 ![]({{ site.url }}/images/posts/2025/2025-07-05-i-failed-to-implement-the-diameter-of-a-binary-tree-in-a-coding-interview/diameter-of-a-tree.gif)
 
 Good luck with your interviews!
+
+Update: I gave a talk at [QCon AI 2025](https://www.infoq.com/presentations/ai-lead-interview/) on this.
