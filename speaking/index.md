@@ -11,6 +11,7 @@ I speak frequently on topics ranging from the intersection of technology and art
 
 ## Recorded Talks
 
+<a href="https://www.infoq.com/presentations/ai-lead-interview/">![]({{ site.url }}/images/posts/2025/2025-07-05-i-failed-to-implement-the-diameter-of-a-binary-tree-in-a-coding-interview/qcon-ai-2025.png)</a><br>
 [Getting Rid of LeetCode Interviews in the World of AI](https://www.infoq.com/presentations/ai-lead-interview/), QCon AI 2025
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9GVVY0a0CO8?si=TC82V0sdjFLuIqcX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=9GVVY0a0CO8">Augmenting Engineers With AI at Shopify, HangerDX Podcast</a>
