@@ -100,7 +100,7 @@ end.join("\n")
 
 ### You Can't Use GitHub Models
 
-If you're setting this up today, skip GitHub Models as the backend, it was [retired on July 30, 2026](https://github.blog/changelog/) and `actions/ai-inference` no longer talks to it at any version. The `v1` tag, in particular, doesn't float to the rewrite, it's stuck resolving to the old GitHub-Models-only code, so don't expect a version bump to fix things automatically. The current major version, `v3`, speaks exclusively to [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli) instead, which changes a few things about the setup:
+If you're setting this up today, skip GitHub Models as the backend, it was [retired on July 30, 2026](https://github.blog/changelog/2026-07-30-github-models-is-now-retired/) and `actions/ai-inference` no longer talks to it at any version. The `v1` tag, in particular, doesn't float to the rewrite, it's stuck resolving to the old GitHub-Models-only code, so don't expect a version bump to fix things automatically. The current major version, `v3`, speaks exclusively to [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli) instead, which changes a few things about the setup:
 
 ```yaml
 - name: Set up Node
