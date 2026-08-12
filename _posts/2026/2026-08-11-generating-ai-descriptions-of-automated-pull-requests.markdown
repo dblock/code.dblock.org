@@ -88,7 +88,7 @@ Asking for a single line per group of changes, rather than per file, matters, a 
     fi
 ```
 
-Two defensive touches worth calling out. First, the `grep -v '^```'` strips markdown code fences the model sometimes adds despite being told not to, before `jq` tries to parse the JSON. Second, if parsing fails or produces nothing, the workflow falls back to the original generic message rather than failing the whole run.
+Two defensive touches worth calling out. First, the workflow strips markdown code fences the model sometimes adds despite being told not to, before `jq` tries to parse the JSON. Second, if parsing fails or produces nothing, the workflow falls back to the original generic message rather than failing the whole run.
 
 Once we have the entries, we use them both as the commit message/PR body and to insert one CHANGELOG line per group, all referencing the same (predictable, since GitHub allocates them sequentially) PR number:
 
