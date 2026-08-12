@@ -3,13 +3,25 @@
 {% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | strip_html }}">{% endif %}
 {% if site.owner.twitter %}<meta name="twitter:site" content="@{{ site.owner.twitter }}">{% endif %}
 {% if author.twitter %}<meta name="twitter:creator" content="@{{ author.twitter }}">{% endif %}
+{% assign post_image = "" %}
 {% if page.image.feature %}
+  {% assign post_image = site.url | append: "/images/" | append: page.image.feature %}
+{% elsif page.content contains "<img src=" %}
+  {% assign post_image = page.content | split: '<img src="' | last | split: '"' | first %}
+  {% unless post_image contains "http" %}
+    {% assign post_image = post_image | prepend: site.url %}
+  {% endunless %}
+{% elsif page.image.thumb %}
+  {% assign post_image = site.url | append: "/images/" | append: page.image.thumb %}
+{% else %}
+  {% assign post_image = site.url | append: "/images/default-thumb.jpg" %}
+{% endif %}
+{% if page.image.feature or page.content contains "<img src=" %}
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{{ site.url }}/images/{{ page.image.feature }}">
 {% else %}
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
 {% endif %}
+<meta name="twitter:image" content="{{ post_image }}">
 <!-- Open Graph -->
 <meta property="og:locale" content="{{ site.locale }}">
 <meta property="og:type" content="article">
@@ -17,3 +29,4 @@
 {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip_html }}">{% endif %}
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 <meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:image" content="{{ post_image }}">
