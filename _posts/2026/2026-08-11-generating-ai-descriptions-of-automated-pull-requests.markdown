@@ -8,6 +8,8 @@ comments: true
 
 The [slack-ruby-client](https://github.com/slack-ruby/slack-ruby-client) library, an open source Ruby gem I maintain, runs a [scheduled GitHub Actions workflow](https://github.com/slack-ruby/slack-ruby-client/blob/master/.github/workflows/update_api.yml) that regenerates code from [Slack's API definitions](https://github.com/slack-ruby/slack-api-ref) and opens a pull request with the diff. The commit message and CHANGELOG entry used to be a generic "Update API (2026-08-11)", which told a reviewer nothing about what actually changed. Here's how we taught the workflow to describe its own diffs, using GitHub Copilot CLI, which [open source maintainers can get for free](https://docs.github.com/en/copilot/how-to/copilot-on-github/set-up-copilot/access-copilot-pro-for-free-as-a-teacher-or-open-source-maintainer).
 
+![Generated CHANGELOG entries grouped by PR](/images/posts/2026/2026-08-11-generating-ai-descriptions-of-automated-pull-requests/changelog.png)
+
 ### The Idea
 
 The workflow already computes a diff before opening the pull request. Instead of a boilerplate commit message, we pipe that diff through an LLM and ask it to summarize what changed, then use the response as the commit message and PR body.
@@ -140,4 +142,5 @@ This is how I caught both the missing-token and the unavailable-model issues abo
 * [#591: Generate AI CHANGELOG entries for automated API update PRs](https://github.com/slack-ruby/slack-ruby-client/pull/591)
 * [#592: Fix YAML indentation bug in AI prompt template substitution](https://github.com/slack-ruby/slack-ruby-client/pull/592)
 * [#593: Migrate AI CHANGELOG entry generation to Copilot CLI](https://github.com/slack-ruby/slack-ruby-client/pull/593)
+* [#594: Include AI-generated changelog entries in the commit message](https://github.com/slack-ruby/slack-ruby-client/pull/594)
 * [First successful run on master](https://github.com/slack-ruby/slack-ruby-client/actions/runs/31555479354/job/93986905749)
