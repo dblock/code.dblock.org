@@ -666,6 +666,7 @@ GetNumProperties
 GetProperties
 GetTokenInformation
 GetUserNameW
+getter
 GetVersionInfo
 getWeek
 gh
@@ -1048,6 +1049,7 @@ MapReduce
 Maslow
 masse
 matchers
+matcher's
 mathbot
 Matheus
 Matus
@@ -1068,6 +1070,7 @@ Meltem
 même
 memoizes
 memoized
+memoize
 MemProfiler
 mentee
 mentee's
@@ -1731,6 +1734,7 @@ Sugarskull
 Sulaymaniya
 summarization
 superagent
+superclass
 superrare
 SuperRare
 supervisord
