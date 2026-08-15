@@ -9,7 +9,7 @@ agile:
   count: 20
 ai:
   name: ai
-  count: 10
+  count: 11
 api:
   name: api
   count: 10
@@ -121,6 +121,9 @@ msi:
 open source:
   name: open source
   count: 62
+open-source:
+  name: open-source
+  count: 5
 opensearch:
   name: opensearch
   count: 12
@@ -150,7 +153,7 @@ rspec:
   count: 10
 ruby:
   name: ruby
-  count: 116
+  count: 118
 s3:
   name: s3
   count: 9
