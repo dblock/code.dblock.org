@@ -81,14 +81,22 @@ Asking for a single line per group of changes, rather than per file, matters, a 
   run: |
     entries=""
     if [ "${{ steps.changes.outputs.changed }}" = "true" ]; then
-      entries="$(grep -v '^```' "${{ steps.ai.outputs.response-file }}" 2>/dev/null | jq -r '.entries[]? // empty' 2>/dev/null)"
+      response_file="${{ steps.ai.outputs.response-file }}"
+      echo "AI changelog response:"
+      cat "$response_file" || true
+      json_line="$(grep -E '^\{.*\}$' "$response_file" 2>/dev/null | tail -n 1)"
+      if [ -z "$json_line" ]; then
+        echo "::error::AI changelog response did not contain a JSON object, see response above."
+        exit 1
+      fi
+      entries="$(printf '%s' "$json_line" | jq -r '.entries[]? // empty')"
     fi
     if [ -z "$entries" ]; then
       entries="Update API (${{ steps.date.outputs.date }})"
     fi
 ```
 
-Two defensive touches worth calling out. First, the workflow strips markdown code fences the model sometimes adds despite being told not to, before `jq` tries to parse the JSON. Second, if parsing fails or produces nothing, the workflow falls back to the original generic message rather than failing the whole run.
+A few defensive touches worth calling out. The step always logs the raw AI response, so a bad run leaves a paper trail in the logs. Rather than trying to parse the whole response file as JSON, it greps for the *last* line that looks like a JSON object (`^\{.*\}$`) and parses just that: Copilot CLI sometimes narrates its reasoning ("Let me check the diff...", "Now I have enough info...") before printing its final answer, and naively parsing the entire file as JSON would either crash on that narration or, worse, silently discard a perfectly good response. Finally, if no such JSON line is found at all, the workflow fails loudly with `::error::` instead of quietly falling back to a generic changelog entry, an earlier version of this step swallowed genuine parsing failures and it took a couple of confusing scheduled runs to notice.
 
 Once we have the entries, we use them both as the commit message/PR body and to insert one CHANGELOG line per group, all referencing the same (predictable, since GitHub allocates them sequentially) PR number:
 
@@ -143,4 +151,6 @@ This is how I caught both the missing-token and the unavailable-model issues abo
 * [#592: Fix YAML indentation bug in AI prompt template substitution](https://github.com/slack-ruby/slack-ruby-client/pull/592)
 * [#593: Migrate AI CHANGELOG entry generation to Copilot CLI](https://github.com/slack-ruby/slack-ruby-client/pull/593)
 * [#594: Include AI-generated changelog entries in the commit message](https://github.com/slack-ruby/slack-ruby-client/pull/594)
+* [#596: Fix update_api workflow failing on non-JSON AI changelog response](https://github.com/slack-ruby/slack-ruby-client/pull/596)
+* [#598: Extract JSON from Copilot CLI response despite narration, fail visibly when missing](https://github.com/slack-ruby/slack-ruby-client/pull/598)
 * [First successful run on master](https://github.com/slack-ruby/slack-ruby-client/actions/runs/31555479354/job/93986905749)
