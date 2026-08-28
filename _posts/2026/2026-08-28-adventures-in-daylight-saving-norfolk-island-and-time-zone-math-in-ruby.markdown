@@ -79,6 +79,68 @@ The bug was in the *next* step, where that distance gets split into `years`/`mon
 
 This is a strictly more general version of Bug 1's fix — the "DST transition" case just falls out as `offset_delta` happening to equal ±3600 seconds. Once we stopped assuming *what kind* of offset change was possible, both the recurring and the one-off cases worked with the same code path. The lesson: don't encode a specific real-world cause (DST, 1 hour) into your math when what you actually care about is a more general effect (offset changed, by however much).
 
+## Do Other Languages Have This Problem?
+
+Curious whether this is a `dotiw`-specific mistake or a trap every "humanize a time difference" library falls into, I reproduced both scenarios — the Norfolk Island offset change and the Dublin DST-adjacent case — against similar libraries in JavaScript, Python, Go, Rust, and PHP: `date-fns`, `dayjs`, `moment.js`, `humanize`, `arrow`, `go-humanize`, `chrono-humanize`, native `DateTime::diff`, and `Carbon`.
+
+None of them reproduced either bug. Here's the Norfolk Island case in JavaScript (`date-fns`) and Python (`humanize`):
+
+```javascript
+process.env.TZ = 'Pacific/Norfolk';
+const start = new Date(2015, 0, 15);
+const finish = new Date(2016, 2, 15);
+
+// => "about 1 year"
+formatDistance(start, finish, { includeSeconds: true });
+```
+
+```python
+os.environ['TZ'] = 'Pacific/Norfolk'
+start = datetime(2015, 1, 15, tzinfo=ZoneInfo('Pacific/Norfolk'))
+finish = datetime(2016, 3, 15, tzinfo=ZoneInfo('Pacific/Norfolk'))
+
+# => "1 year, 2 months"
+humanize.naturaldelta(finish - start)
+```
+
+And the Dublin case in Rust (`chrono-humanize`) and PHP (`Carbon`, the closest analog to `dotiw` since it also supports a compound breakdown):
+
+```rust
+let dstart = Dublin.with_ymd_and_hms(2024, 10, 27, 1, 59, 30).earliest().unwrap();
+let dfinish = dstart + Duration::minutes(1);
+
+// => "in a minute"
+HumanTime::from(dfinish.signed_duration_since(dstart))
+```
+
+```php
+$dstart = Carbon::create(2024, 10, 27, 1, 59, 30, 'Europe/Dublin');
+$dfinish = $dstart->copy()->addMinute();
+
+// => "1 minute before"
+$dstart->diffForHumans($dfinish);
+
+// => "1 year 2 months" (Norfolk case, compound breakdown, still clean)
+Carbon::create(2015, 1, 15, 0, 0, 0, 'Pacific/Norfolk')
+    ->diff(Carbon::create(2016, 3, 15, 0, 0, 0, 'Pacific/Norfolk'))
+    ->forHumans();
+```
+
+The main reason none of these reproduce the bug is structural: most round to a single largest unit ("about 1 year", "a minute ago") instead of building a compound breakdown across years, months, weeks, days, hours, *and* minutes the way `dotiw` does. With nowhere calendar-shaped for a stray 30 minutes or 23 hours to end up, there's no remainder left to misattribute. `Carbon` is the exception that proves the rule: it does support a compound breakdown similar to `dotiw`'s output, and still gets it right, because the offset math happens correctly underneath, at the `DateInterval` level, before any splitting into units occurs.
+
+One other thing stood out while testing the Dublin case in Rust. `chrono-tz` won't even let you construct a local time that falls in an ambiguous window (the "fall back" hour that occurs twice) without handling it explicitly:
+
+```rust
+match Dublin.with_ymd_and_hms(2024, 10, 27, 1, 59, 30) {
+    chrono::LocalResult::Single(dt) => println!("Single: {}", dt),
+    chrono::LocalResult::Ambiguous(a, b) => println!("Ambiguous: {} OR {}", a, b),
+    chrono::LocalResult::None => println!("None (doesn't exist, e.g. spring-forward gap)"),
+}
+# => Ambiguous: 2024-10-27 01:59:30 IST OR 2024-10-27 01:59:30 GMT
+```
+
+Ruby (and most of the other languages tested) will silently pick one interpretation of an ambiguous wall-clock time and move on. Forcing the caller to disambiguate explicitly is exactly the kind of design that would have made a bug like #63 harder to write in the first place.
+
 ## The Common Thread
 
 Both bugs share a shape: a plausible-looking shortcut (`dst?` instead of `utc_offset`, "correct by exactly 1 hour") that works for the overwhelmingly common case and quietly breaks for a specific, real-world edge case that a bug reporter with an unusual time zone eventually ran into. Neither was caught by the existing test suite, because the test suite ran in one time zone, on inputs that never crossed the affected boundaries.
