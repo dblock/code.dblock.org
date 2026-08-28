@@ -669,6 +669,8 @@ GetNthProperty
 GetNumProperties
 GetProperties
 getter
+Gettext
+Gettext's
 GetTokenInformation
 GetUserNameW
 GetVersionInfo
