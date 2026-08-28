@@ -81,9 +81,9 @@ This is a strictly more general version of Bug 1's fix — the "DST transition" 
 
 ## Do Other Languages Have This Problem?
 
-Curious whether this is a `dotiw`-specific mistake or a trap every "humanize a time difference" library falls into, I reproduced both scenarios — the Norfolk Island offset change and the Dublin DST-adjacent case — against similar libraries in JavaScript, Python, Go, Rust, and PHP: `date-fns`, `dayjs`, `moment.js`, `humanize`, `arrow`, `go-humanize`, `chrono-humanize`, native `DateTime::diff`, and `Carbon`.
+Curious whether this is a `dotiw`-specific mistake or a trap every "humanize a time difference" library falls into, I reproduced both scenarios — the Norfolk Island offset change and the Dublin DST-adjacent case — against similar libraries in JavaScript, Python, Go, Rust, PHP, C#, Java, and Elixir: `date-fns`, `dayjs`, `moment.js`, `humanize`, `arrow`, `go-humanize`, `chrono-humanize`, native `DateTime::diff`, `Carbon`, `Humanizer`, `PrettyTime`, and `Timex`. All the [test code is on GitHub](https://github.com/dblock/tz_test) if you want to run it yourself.
 
-None of them reproduced either bug. Here's the Norfolk Island case in JavaScript (`date-fns`) and Python (`humanize`):
+Every one of them was clean on the Dublin case, and every one but one was clean on Norfolk too. Here's the Norfolk Island case in JavaScript (`date-fns`) and Python (`humanize`):
 
 ```javascript
 process.env.TZ = 'Pacific/Norfolk';
@@ -126,9 +126,51 @@ Carbon::create(2015, 1, 15, 0, 0, 0, 'Pacific/Norfolk')
     ->forHumans();
 ```
 
-The main reason none of these reproduce the bug is structural: most round to a single largest unit ("about 1 year", "a minute ago") instead of building a compound breakdown across years, months, weeks, days, hours, *and* minutes the way `dotiw` does. With nowhere calendar-shaped for a stray 30 minutes or 23 hours to end up, there's no remainder left to misattribute. `Carbon` is the exception that proves the rule: it does support a compound breakdown similar to `dotiw`'s output, and still gets it right, because the offset math happens correctly underneath, at the `DateInterval` level, before any splitting into units occurs.
+C#'s `Humanizer` doesn't attempt a calendar year/month breakdown at all, only weeks/days/hours/minutes, so the Norfolk case has no calendar-shaped bucket to leak into:
 
-One other thing stood out while testing the Dublin case in Rust. `chrono-tz` won't even let you construct a local time that falls in an ambiguous window (the "fall back" hour that occurs twice) without handling it explicitly:
+```csharp
+var norfolk = TimeZoneInfo.FindSystemTimeZoneById("Pacific/Norfolk");
+var start = new DateTimeOffset(2015, 1, 15, 0, 0, 0, norfolk.GetUtcOffset(new DateTime(2015, 1, 15)));
+var finish = new DateTimeOffset(2016, 3, 15, 0, 0, 0, norfolk.GetUtcOffset(new DateTime(2016, 3, 15)));
+
+// => "60 weeks, 5 days, 30 minutes"
+(finish - start).Humanize(precision: 5);
+```
+
+Java's `PrettyTime` only ever formats a single instant relative to another ("1 year from now"), so there's no compound breakdown at all to leak into:
+
+```java
+ZonedDateTime start = ZonedDateTime.of(2015, 1, 15, 0, 0, 0, 0, ZoneId.of("Pacific/Norfolk"));
+ZonedDateTime finish = ZonedDateTime.of(2016, 3, 15, 0, 0, 0, 0, ZoneId.of("Pacific/Norfolk"));
+
+// => "1 year from now"
+new PrettyTime(Date.from(start.toInstant())).format(Date.from(finish.toInstant()));
+```
+
+Elixir's `Timex`, however, *does* reproduce the bug — same shape as `dotiw`'s original Norfolk failure, just a smaller leftover because it computes the real offset delta instead of hardcoding an hour:
+
+```elixir
+{:ok, start} = DateTime.new(~D[2015-01-15], ~T[00:00:00], "Pacific/Norfolk", Tzdata.TimeZoneDatabase)
+{:ok, finish} = DateTime.new(~D[2016-03-15], ~T[00:00:00], "Pacific/Norfolk", Tzdata.TimeZoneDatabase)
+
+# => "1 year, 2 months, 30 minutes"
+Timex.Format.Duration.Formatters.Humanized.format(
+  Timex.Duration.from_seconds(DateTime.diff(finish, start))
+)
+```
+
+That trailing "30 minutes" is exactly the Norfolk offset delta leaking out, the same artifact `dotiw` used to produce as "23 hours and 30 minutes" before PR #154. It's a good confirmation that the bug isn't a Ruby-specific mistake so much as a natural consequence of building a compound years/months/.../minutes breakdown from a raw second count without accounting for the offset change along the way — most libraries just happen to avoid the compound breakdown (or, in `Carbon`'s case, avoid the bug despite it) rather than being immune to the underlying trap.
+
+I opened [`bitwalker/timex` PR #793](https://github.com/bitwalker/timex/pull/793) with a fix, following the same strategy as `dotiw`'s: instead of formatting an opaque `Duration` (which has already lost all calendar context by the time it reaches the formatter), the fix adds a `format/2` that takes both datetimes directly, computes years/months via real calendar arithmetic, and only converts the true leftover to a duration:
+
+```elixir
+Timex.Format.Duration.Formatters.Humanized.format(start, finish)
+# => "1 year, 2 months"
+```
+
+The main reason none of the others reproduce the bug is structural: most round to a single largest unit ("about 1 year", "a minute ago") instead of building a compound breakdown across years, months, weeks, days, hours, *and* minutes the way `dotiw` does. With nowhere calendar-shaped for a stray 30 minutes or 23 hours to end up, there's no remainder left to misattribute. `Carbon` is the exception that proves the rule: it does support a compound breakdown similar to `dotiw`'s output, and still gets it right, because the offset math happens correctly underneath, at the `DateInterval` level, before any splitting into units occurs.
+
+One other thing stood out while testing the Dublin case in Rust and C#. Both refuse to let you construct a local time that falls in an ambiguous window (the "fall back" hour that occurs twice) without handling it explicitly. Rust's `chrono-tz`:
 
 ```rust
 match Dublin.with_ymd_and_hms(2024, 10, 27, 1, 59, 30) {
@@ -137,6 +179,16 @@ match Dublin.with_ymd_and_hms(2024, 10, 27, 1, 59, 30) {
     chrono::LocalResult::None => println!("None (doesn't exist, e.g. spring-forward gap)"),
 }
 # => Ambiguous: 2024-10-27 01:59:30 IST OR 2024-10-27 01:59:30 GMT
+```
+
+And .NET's `TimeZoneInfo`, which surfaces the same fact via an explicit query instead of an enum:
+
+```csharp
+var dublin = TimeZoneInfo.FindSystemTimeZoneById("Europe/Dublin");
+var local = new DateTime(2024, 10, 27, 1, 59, 30, DateTimeKind.Unspecified);
+
+dublin.IsAmbiguousTime(local); // => true
+dublin.GetAmbiguousTimeOffsets(local); // => [00:00:00, 01:00:00]
 ```
 
 Ruby (and most of the other languages tested) will silently pick one interpretation of an ambiguous wall-clock time and move on. Forcing the caller to disambiguate explicitly is exactly the kind of design that would have made a bug like #63 harder to write in the first place.

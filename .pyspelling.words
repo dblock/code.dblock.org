@@ -142,8 +142,8 @@ autofix
 autofixer
 autoinc
 Autoinc
-automagically
 autoloader
+automagically
 avant
 avec
 awscurl
@@ -158,7 +158,6 @@ backticks
 bakeoff
 Balsamiq
 Bandaids
-benchmarked
 Barani
 Barrat
 Barros
@@ -170,6 +169,7 @@ bd
 bda
 BDD
 BeginRequest
+benchmarked
 Berkun's
 BetaBeat
 Beyeler
@@ -392,6 +392,7 @@ DataLayer
 datamapper
 DataMapper
 DataSource
+datetimes
 Datomic
 Davide
 Daytonian
@@ -441,10 +442,12 @@ DigitalOcean
 DigitalOcean's
 Dilbertesque
 Dimitri
+directionally
 DirtyPanel
 DisableNTLMPreAuth
 disambiguates
 discoverability
+discoverable
 disqus
 Disqus
 Disruptor
@@ -455,6 +458,7 @@ dll
 DLL
 dll's
 DLLs
+DM
 DMO
 DMs
 dni
@@ -664,9 +668,9 @@ getgo
 GetNthProperty
 GetNumProperties
 GetProperties
+getter
 GetTokenInformation
 GetUserNameW
-getter
 GetVersionInfo
 getWeek
 gh
@@ -815,6 +819,7 @@ Ilya
 iMac
 ImageMagick
 IMG
+impactful
 IMZ
 IndifferentAccess
 indows
@@ -844,6 +849,7 @@ Intraday
 Intridea
 INVALIDARG
 InvalidKeyName
+invariants
 ioquatix
 iOSoho
 IPAddress
@@ -1049,8 +1055,8 @@ MAPI
 MapReduce
 Maslow
 masse
-matchers
 matcher's
+matchers
 mathbot
 Matheus
 Matus
@@ -1069,9 +1075,9 @@ MedText
 Mehri
 Meltem
 même
-memoizes
-memoized
 memoize
+memoized
+memoizes
 MemProfiler
 mentee
 mentee's
@@ -1131,7 +1137,6 @@ mongorestore
 Moya
 mpr
 MSAccess
-MSTest
 msbuild
 MSBuild
 MSBuildTasks
@@ -1151,6 +1156,7 @@ MSLU
 MSN
 MSSQL
 MSSQLDatabase
+MSTest
 msvcrt
 MUI
 MuiSystem
@@ -1179,9 +1185,9 @@ namespaced
 namespaces
 Nano
 Napoleone
+natively
 Nazar
 Nazar's
-natively
 NDA
 NDAs
 Nele
@@ -1561,12 +1567,12 @@ Savon
 scalable
 Scharf's
 SCM
-SCSS
 Scorable
 screencast
 screenProps
 scriptable
 scrollable
+SCSS
 SDE
 SDET
 sdk
@@ -1584,6 +1590,7 @@ segfaulted
 segfaulting
 Selipsky
 semver
+SEO
 septillion
 Serde
 serializers
@@ -1619,9 +1626,8 @@ sigar
 SIGAR
 signon
 signup
-signups
 Signup
-SEO
+signups
 sigv
 Sigv
 SigV
@@ -1651,6 +1657,7 @@ SnipImage
 soa
 SOA
 Sobek
+socketry
 Solaris
 somemagicnumber
 Soraya
@@ -1717,10 +1724,10 @@ Stuxnet
 stylesheet
 stylesheets
 Stylesheets
+subclass's
 subclassed
 subclasses
 subclassing
-subclass's
 subdirectories
 subfolder
 subfolders
@@ -1849,6 +1856,7 @@ ultrasaurus
 UML
 unbootable
 unchallenging
+unclosed
 unctional
 undecorated
 underserved
@@ -1862,6 +1870,7 @@ unjar
 unmerged
 unobvious
 unpartitioned
+unreviewed
 UnsatisfiedLinkError
 unturned
 unusuable
@@ -1915,7 +1924,6 @@ videodrome's
 ville
 vimeo
 Vimeo
-Vite
 Vinoodh
 Vinoodh's
 virtualbox
@@ -1925,6 +1933,7 @@ virtualized
 virtualmachine
 VisitorTimeZoneOffset
 VisualBasic
+Vite
 ViX
 VIX
 VixCOM
@@ -1961,7 +1970,6 @@ WCS
 weaviate
 Weaviate
 webapps
-Webpack
 Webdav
 webdriver
 webhook
@@ -1970,6 +1978,7 @@ webhooks
 Webhooks
 webmachine
 Webmachine
+Webpack
 WebRTC
 websocket
 Websocket
@@ -2052,11 +2061,3 @@ YOLO
 yourname
 yq
 Zwirner
-directionally
-DM
-discoverable
-impactful
-invariants
-socketry
-unclosed
-unreviewed
