@@ -81,7 +81,7 @@ This is a strictly more general version of Bug 1's fix — the "DST transition" 
 
 ## Do Other Languages Have This Problem?
 
-Curious whether this is a `dotiw`-specific mistake or a trap every "humanize a time difference" library falls into, I reproduced both scenarios — the Norfolk Island offset change and the Dublin DST-adjacent case — against similar libraries in JavaScript, Python, Go, Rust, PHP, C#, Java, and Elixir: `date-fns`, `dayjs`, `moment.js`, `humanize`, `arrow`, `go-humanize`, `chrono-humanize`, native `DateTime::diff`, `Carbon`, `Humanizer`, `PrettyTime`, and `Timex`. All the [test code is on GitHub](https://github.com/dblock/tz_test) if you want to run it yourself.
+Curious whether this is a `dotiw`-specific mistake or a trap every "humanize a time difference" library falls into, I reproduced both scenarios — the Norfolk Island offset change and the Dublin DST-adjacent case — against similar libraries in JavaScript, Python, Go, Rust, PHP, C#, Java, Elixir, Swift, Objective-C, and Dart: `date-fns`, `dayjs`, `moment.js`, `humanize`, `arrow`, `go-humanize`, `chrono-humanize`, native `DateTime::diff`, `Carbon`, `Humanizer`, `PrettyTime`, `Timex`, `humanizer`, `RelativeDateTimeFormatter`/`DateComponentsFormatter`, and `timeago`. All the [test code is on GitHub](https://github.com/dblock/tz_test) if you want to run it yourself.
 
 Every one of them was clean on the Dublin case, and every one but one was clean on Norfolk too. Here's the Norfolk Island case in JavaScript (`date-fns`) and Python (`humanize`):
 
@@ -171,6 +171,22 @@ Timex.Format.Duration.Formatters.Humanized.format(start, finish)
 While testing this fix, I also found that `format/2` crashes if `finish` comes before `start` — negative years/months get passed straight into Gettext's plural translation, which requires a non-negative count. `format/1` has always been sign-independent (`Duration.from_erl({0, -65, 0})` and `Duration.from_erl({0, 65, 0})` both format the same way), so `format/2` should be too. Filed as a follow-up, [`bitwalker/timex` PR #794](https://github.com/bitwalker/timex/pull/794).
 
 `Timex` itself is largely unmaintained at this point — the last push to `main` was mid-2025, and it has more than 70 open issues — so while I was at it, I checked whether a maintained alternative avoids this whole class of bug. [`humanizer`](https://github.com/ivan-podgurskiy/humanizer) is a small, actively developed, English-only library with a `relative_time/2,3` function. It's clean on both the Norfolk and Dublin cases, and it also handles reversed argument order correctly without crashing — it diffs absolute instants and branches on sign rather than doing calendar-aware year/month shifting, which sidesteps the bug class structurally at the cost of using fixed-width buckets (7/30/365 days) for weeks/months/years instead of exact calendar arithmetic. The reproduction is in the same [test repo](https://github.com/dblock/tz_test), under `elixir/humanizer_test/`.
+
+I later extended the reproduction to Swift, Objective-C, and Dart. Swift and Objective-C share the same underlying Foundation implementation: `RelativeDateTimeFormatter`/`NSRelativeDateTimeFormatter` (single-largest-unit "time ago" style) and `DateComponentsFormatter`/`NSDateComponentsFormatter` (a compound breakdown, directly analogous to `dotiw`'s output). All clean — Norfolk, Dublin, reversed order, and zero distance. Dart's `timeago` package is clean too.
+
+One thing initially looked like a fourth bug during that pass, worth mentioning because I got it wrong at first. Given a reversed `(fromDate, toDate)` pair, `NSDateComponentsFormatter` renders:
+
+```objc
+NSDateComponentsFormatter *f = [[NSDateComponentsFormatter alloc] init];
+f.unitsStyle = NSDateComponentsFormatterUnitsStyleFull;
+f.allowedUnits = NSCalendarUnitYear | NSCalendarUnitMonth;
+f.calendar = cal; // Pacific/Norfolk
+
+[f stringFromDate:start toDate:finish]  // => "1 year, 2 months"
+[f stringFromDate:finish toDate:start]  // => "-1 year, 2 months"
+```
+
+That looks inconsistent — surely it should read `"-1 year, -2 months"` if the underlying delta is negative in both fields? But this is actually standard mixed-radix negative notation, the same convention used for negative durations (`-1:30:00` means minus one-and-a-half hours, not "minus one hour plus thirty minutes") or negative degrees/minutes/seconds coordinates: only the leading unit carries the sign, and the rest are magnitudes of that same negative quantity. `NSCalendar` confirms this is intentional: the raw components really are `year=-1, month=-2` underneath, and the formatter correctly collapses that into a single leading sign for display, exactly as it should. Not a bug — see the [test repo](https://github.com/dblock/tz_test) under `objc/` and `swift/` for the full reproduction and reasoning.
 
 The main reason none of the others reproduce the bug is structural: most round to a single largest unit ("about 1 year", "a minute ago") instead of building a compound breakdown across years, months, weeks, days, hours, *and* minutes the way `dotiw` does. With nowhere calendar-shaped for a stray 30 minutes or 23 hours to end up, there's no remainder left to misattribute. `Carbon` is the exception that proves the rule: it does support a compound breakdown similar to `dotiw`'s output, and still gets it right, because the offset math happens correctly underneath, at the `DateInterval` level, before any splitting into units occurs.
 
