@@ -123,7 +123,7 @@ open source:
   count: 62
 open-source:
   name: open-source
-  count: 6
+  count: 7
 opensearch:
   name: opensearch
   count: 12
@@ -153,7 +153,7 @@ rspec:
   count: 10
 ruby:
   name: ruby
-  count: 119
+  count: 120
 s3:
   name: s3
   count: 9
