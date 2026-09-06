@@ -63,7 +63,7 @@ github:
   count: 18
 grape:
   name: grape
-  count: 26
+  count: 27
 graphql:
   name: graphql
   count: 5
@@ -123,7 +123,7 @@ open source:
   count: 62
 open-source:
   name: open-source
-  count: 7
+  count: 8
 opensearch:
   name: opensearch
   count: 12
@@ -153,7 +153,7 @@ rspec:
   count: 10
 ruby:
   name: ruby
-  count: 120
+  count: 121
 s3:
   name: s3
   count: 9

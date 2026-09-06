@@ -138,6 +138,7 @@ AuthProvider
 Autmatically
 autoconf
 Autoconf
+autocorrects
 autofix
 autofixer
 autoinc
@@ -561,6 +562,7 @@ etherscan
 Etherscan
 Eudora
 Euuuuh
+ericproulx
 eventlog
 EventLogAppender
 eventmachine
@@ -1873,6 +1875,7 @@ unjar
 unmerged
 unobvious
 unpartitioned
+unpunctuated
 unreviewed
 UnsatisfiedLinkError
 unturned
