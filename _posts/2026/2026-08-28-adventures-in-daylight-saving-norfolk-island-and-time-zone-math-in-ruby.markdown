@@ -5,7 +5,7 @@ date: 2026-08-28
 tags: [ruby, open-source]
 comments: true
 ---
-[distance_of_time_in_words](https://github.com/radar/distance_of_time_in_words) is a small Ruby gem that turns two `Time` objects into a human-readable string like "3 days and 4 hours". Two separate bug reports against it this year turned out to be variations on the same theme: computing a duration between two timestamps is not the trivial subtraction it looks like, the moment time zones are involved. Both fixes shipped in [`dotiw` 5.6.0](https://github.com/radar/distance_of_time_in_words/blob/master/CHANGELOG.md#560-20260828).
+[distance_of_time_in_words](https://github.com/radar/distance_of_time_in_words) is a small Ruby gem that turns two `Time` objects into a human-readable string like "3 days and 4 hours". Several separate bug reports against it turned out to be variations on the same theme: computing a duration between two timestamps is not the trivial subtraction it looks like, the moment time zones are involved. The first two fixes shipped in [`dotiw` 5.6.0](https://github.com/radar/distance_of_time_in_words/blob/master/CHANGELOG.md#560-20260828); four more followed shortly after in [`dotiw` 5.6.1](https://github.com/radar/distance_of_time_in_words/blob/master/CHANGELOG.md#561-20260909).
 
 ## Bug 1: `dst?` Lies When You Least Expect It
 
@@ -213,8 +213,92 @@ dublin.GetAmbiguousTimeOffsets(local); // => [00:00:00, 01:00:00]
 
 Ruby (and most of the other languages tested) will silently pick one interpretation of an ambiguous wall-clock time and move on. Forcing the caller to disambiguate explicitly is exactly the kind of design that would have made a bug like #63 harder to write in the first place.
 
+## Bug 3: Two Unrelated Offsets Aren't a Transition
+
+`offset_delta` from Bug 2 fixed the "real transition" case, but it introduced a subtler mistake: it assumed *any* two `Time` values with different `utc_offset`s must represent the same clock crossing a real transition, and folded the difference in unconditionally. [#160](https://github.com/radar/distance_of_time_in_words/issues/160) showed that's not true. Comparing a `Time` pinned to UTC against a `Time` pinned to a fixed `-08:00` offset — two clocks that have nothing to do with each other, no shared tzdata history, no transition between them — still triggered the same folding logic:
+
+```ruby
+start = Time.utc(2026, 1, 15, 12, 0, 0)
+finish = Time.new(2026, 1, 15, 12, 0, 30, '-08:00')
+
+# => "less than 1 second" (8 hours silently subtracted)
+# expected: "8 hours"
+distance_of_time_in_words(start, finish)
+```
+
+The fix ([PR #161](https://github.com/radar/distance_of_time_in_words/pull/161)) added a `same_clock?` guard before applying `offset_delta` at all — only fold the offset when both `Time`s plausibly represent observations of the *same* underlying clock (same system zone abbreviation, both non-UTC, etc.), not merely because they happen to disagree on offset:
+
+```ruby
+def offset_delta(smallest, largest)
+  return 0 unless same_clock?(smallest, largest)
+
+  largest.utc_offset - smallest.utc_offset
+end
+```
+
+## Bug 4: `to_time` Doesn't Always Mean the Same Thing
+
+Shipping `same_clock?` immediately raised the next question: what actually counts as "the same clock"? [#162](https://github.com/radar/distance_of_time_in_words/issues/162) is a case where two `ActiveSupport::TimeWithZone` values, in two different named zones (`Asia/Tokyo` and `America/Los_Angeles`), get converted to plain `Time` via `#to_time` before reaching `dotiw`. The `Time#zone` accessor is normally a `String` (a zone abbreviation like `"JST"`) or `nil` for a fixed offset — `same_clock?` treated any two non-nil `#zone`s as good enough. That was true until Rails 8.0, where `to_time_preserves_timezone = :zone` became the default (permanent as of 8.2): `TimeWithZone#to_time` now returns a plain `Time` whose `#zone` is the actual `ActiveSupport::TimeZone` *object*, not a string. Two different zone objects both being "not nil" made `same_clock?` say yes to two completely unrelated zones, and the real 1-hour difference between Tokyo and Los Angeles got folded away into "less than 1 second" again — but only on Rails >= 8.0. Reproducing it needed the Rails 8 code path specifically:
+
+```ruby
+tokyo_time = ActiveSupport::TimeZone['Asia/Tokyo'].local(2026, 1, 16, 4, 0, 0).to_time
+la_time = ActiveSupport::TimeZone['America/Los_Angeles'].local(2026, 1, 15, 12, 0, 0).to_time
+
+# On Rails >= 8.0: tokyo_time.zone and la_time.zone are both TimeZone objects (not strings),
+# so the old same_clock? treated them as "the same clock" and folded the 1-hour gap away.
+# => "less than 1 second" on Rails >= 8.0, "1 hour" on Rails <= 7.2
+distance_of_time_in_words(tokyo_time, la_time)
+```
+
+The fix ([PR #163](https://github.com/radar/distance_of_time_in_words/pull/163)) taught `same_clock?` to actually compare the zone objects for equality instead of just checking they're both present:
+
+```ruby
+def same_clock?(smallest, largest)
+  if smallest.respond_to?(:time_zone) || largest.respond_to?(:time_zone)
+    smallest.respond_to?(:time_zone) && largest.respond_to?(:time_zone) &&
+      smallest.time_zone == largest.time_zone
+  elsif !smallest.zone.is_a?(String) || !largest.zone.is_a?(String)
+    !smallest.zone.nil? && smallest.zone == largest.zone
+  else
+    !smallest.zone.nil? && !smallest.utc? && !largest.zone.nil? && !largest.utc?
+  end
+end
+```
+
+This one is a good reminder that a library's own dependencies can quietly change the shape of the objects you're handed. `dotiw` never called `to_time` itself — a Rails minor version bump changed what `Time#zone` returns for values constructed elsewhere entirely, and the bug only showed up for people on the new default.
+
+## Bringing In More Test Cases
+
+Since both of these bugs turned out to have prior art elsewhere, I went back through the test suites of the libraries surveyed for Bug 2/3 — `Luxon`'s diff tests, `Timex`'s humanized-duration tests, and the `tz_test` reproductions — and pulled in the ones that translate directly into `dotiw` regression examples: a UTC-vs-CEST offset comparison from Luxon ([PR #166](https://github.com/radar/distance_of_time_in_words/pull/166)) and the historical Norfolk Island offset change ([PR #167](https://github.com/radar/distance_of_time_in_words/pull/167)), both passing cleanly against the fixed `same_clock?`/`offset_delta`. (These started life bundled together in a single PR #164, later split apart once it became clear the third example below needed materially different treatment.)
+
+The Timex-derived case — a `Europe/Dublin` DST fall-back, one real minute elapsing across the clocks-back transition — turned up a fifth wrinkle while adapting it: `same_clock?` correctly recognizes both timestamps as the *same* clock (they really are the same `TimeZone` object), so `offset_delta` still folds in the full 1-hour offset change. But here the *actual* elapsed time is only 60 seconds — smaller than the offset delta being folded in — so the correction overshoots and produces a negative corrected distance, again collapsing to "less than 1 second" instead of "1 minute". Unlike Bugs 3 and 4, this isn't about misidentifying *whether* two `Time`s are the same clock; it's that the folding math assumes the real elapsed time is always large relative to the offset shift, which breaks down right at the boundary of a transition. Filed as [#165](https://github.com/radar/distance_of_time_in_words/issues/165) and fixed in [PR #169](https://github.com/radar/distance_of_time_in_words/pull/169): the offset correction now only ever applies to the sub-day leftover, once the distance has already been split into calendar fields, rather than to the top-level distance used to decide which calendar branch (`build_years`, `build_days`, etc.) to take in the first place — so a genuinely tiny elapsed time can no longer be pushed past zero by a much larger offset shift.
+
+## Bug 5: An Unforced Conversion, Not a Rails Version Limitation
+
+Verifying the #165 fix across every supported Rails version turned up one more thing. The regression spec for #165's sibling case — the Norfolk historical offset change, this time expressed as `ActiveSupport::TimeWithZone` values rather than plain `Time` — only passed on Rails >= 8.0. On Rails < 8.0, it failed with a spurious "1 year, 2 months, and 30 minutes" instead of "1 year and 2 months", suspiciously similar to the very bug #154 had already fixed. I was pairing with an AI coding assistant on this fix, and its first instinct was to shrug this off as an inherent Rails < 8.0 limitation (the same `to_time_preserves_timezone` distinction from Bug 4) and skip the spec on older Rails.
+
+That instinct was wrong, and it took me pushing back — "the following code should always give the correct answer, no?" — before it looked closer instead of accepting its own shortcut. The real cause: `distance_of_time_in_words` unconditionally called `#to_time` on any `TimeWithZone` argument before doing anything else with it:
+
+```ruby
+from_time = from_time.to_time if !from_time.is_a?(Time) && from_time.respond_to?(:to_time)
+```
+
+On Rails < 8.0, `TimeWithZone#to_time` (without `to_time_preserves_timezone` set) returns a plain `Time` in the *process's local system zone*, discarding the actual zone entirely — which is exactly the information `same_clock?` needs to recognize two readings as the same clock across a transition. But nothing about `TimeHash` actually needs a plain `Time` in the first place: `TimeWithZone` already supports every operation it performs — subtraction, `#advance`, `#year`/`#month`/`#day`/`#hour`, `#utc_offset` — without ever being converted. The `#to_time` call wasn't a Rails-version workaround at all, just an unforced, avoidable conversion that happened to only cause visible damage before Rails 8.0's default changed what it produced.
+
+Filed as [#170](https://github.com/radar/distance_of_time_in_words/issues/170) and fixed in [PR #167](https://github.com/radar/distance_of_time_in_words/pull/167) with a `coerce_to_time` helper that leaves `Time` and `TimeWithZone` arguments untouched, only calling `#to_time` on genuinely non-`Time`-like values (`Date`, `DateTime`):
+
+```ruby
+def coerce_to_time(value)
+  return value if value.is_a?(Time) || value.respond_to?(:time_zone)
+
+  value.respond_to?(:to_time) ? value.to_time : value
+end
+```
+
+With that in place, the Norfolk `TimeWithZone` example (and the #165 Dublin fall-back example) both pass on every supported Rails version, 7.0 through 8.1, with no skip required — a stronger fix than the version-gated one I'd initially assumed was necessary.
+
 ## The Common Thread
 
-Both bugs share a shape: a plausible-looking shortcut (`dst?` instead of `utc_offset`, "correct by exactly 1 hour") that works for the overwhelmingly common case and quietly breaks for a specific, real-world edge case that a bug reporter with an unusual time zone eventually ran into. Neither was caught by the existing test suite, because the test suite ran in one time zone, on inputs that never crossed the affected boundaries.
+All three failure modes share a shape: a plausible-looking shortcut (`dst?` instead of `utc_offset`, "correct by exactly 1 hour", "convert to a plain `Time` up front") that works for the overwhelmingly common case and quietly breaks for a specific, real-world edge case that a bug reporter with an unusual time zone eventually ran into. None were caught by the existing test suite, because the test suite ran in one time zone, on inputs that never crossed the affected boundaries — and, in Bug 5's case, on only one version of Rails.
 
-The actual fix was the same in spirit each time: replace the specific assumption with the general, verifiable fact it was standing in for — actual offsets instead of a DST flag, an arbitrary delta instead of a fixed hour. If you maintain a library that touches wall-clock time, it's worth asking, for every "obvious" shortcut in the code, what real-world weirdness it's quietly assuming doesn't exist. `Europe/Dublin` and `Pacific/Norfolk` are more common exceptions to your assumptions than you'd think.
+The actual fix was the same in spirit each time: replace the specific assumption with the general, verifiable fact it was standing in for — actual offsets instead of a DST flag, an arbitrary delta instead of a fixed hour, and no conversion at all where none was ever needed. If you maintain a library that touches wall-clock time, it's worth asking, for every "obvious" shortcut in the code, what real-world weirdness it's quietly assuming doesn't exist — and, per Bug 5, whether "this only works on newer Rails" is really a platform limitation or just an unforced move your own code is making. `Europe/Dublin` and `Pacific/Norfolk` are more common exceptions to your assumptions than you'd think.
