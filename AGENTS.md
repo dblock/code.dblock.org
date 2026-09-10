@@ -2,6 +2,10 @@
 
 This is a Jekyll blog deployed via GitHub Pages with a custom GitHub Actions workflow.
 
+## Branches
+
+The live site is built from the `gh-pages` branch, not `master`. Commit and push changes to `gh-pages`.
+
 ## Before Committing
 
 ### Generate Tag Pages
