@@ -9,7 +9,7 @@ agile:
   count: 20
 ai:
   name: ai
-  count: 12
+  count: 13
 api:
   name: api
   count: 10
@@ -153,7 +153,7 @@ rspec:
   count: 10
 ruby:
   name: ruby
-  count: 121
+  count: 122
 s3:
   name: s3
   count: 9
@@ -168,7 +168,7 @@ speaking:
   count: 31
 strava:
   name: strava
-  count: 5
+  count: 6
 teaching:
   name: teaching
   count: 13
