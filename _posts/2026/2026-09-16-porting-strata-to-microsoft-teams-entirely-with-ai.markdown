@@ -6,7 +6,7 @@ tags: [ai, ruby, strava, microsoft-teams]
 comments: true
 ---
 
-In 2023 I ported [slack-strava](https://github.com/dblock/slack-strava) to Discord by hand, evening by evening over about three weeks, and it took most of that stretch to get a working bot. This week I ported the same app to Microsoft Teams as [teams-strava](https://github.com/dblock/teams-strava) ("Strata"), and this time I wrote almost none of the code myself. [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli) did.
+[Slava](https://slava.playplay.io) ([slack-strava](https://github.com/dblock/slack-strava)) connects a Strava account to a chat and posts a card for every activity, complete with map, pace, and elevation, plus commands like connect, disconnect, stats, and leaderboard. In 2023 I ported Slava to Discord by hand, evening by evening over about three weeks, and it took most of that stretch to get a working bot called [Strada](https://strada.playplay.io) ([discord-strava](https://github.com/dblock/discord-strava)). This week I ported the same app to Microsoft Teams as [Strata](https://strata.playplay.io) ([teams-strava](https://github.com/dblock/teams-strava)) in 3 days instead of the 3 weeks the Discord port took, using time carved out during the [Microsoft Global Hackathon](https://www.microsoft.com/en-us/garage/hackathon/). By "I", I mean [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli) and I.
 
 ![Strata posting a Strava activity to a Teams channel](/images/posts/2026/2026-09-16-porting-strata-to-microsoft-teams-entirely-with-ai/activity-card.png)
 
@@ -51,15 +51,19 @@ teams-strava's git history is a single continuous [Copilot CLI](https://docs.git
 2026-09-16 09:26  Fix 'Activity resulted into multiple skype activities' error on update
 ```
 
-A working bot (connect, disconnect, post activities, help) existed by the end of the first afternoon, roughly five and a half hours, most of which was me reading diffs and answering clarifying questions, not typing Ruby. The next two sessions, under an hour each, hardened it: a real Azure production deployment in a separate subscription, Teams Store submission prep, self-service sideloading, and a beta pricing pivot.
+A working bot (connect, disconnect, post activities, help) existed by the end of the first day: five and a half hours elapsed between the first and last commit, but roughly three of those were actually spent hands-on-keyboard, in bursts, with breaks for a normal workday in between.
+
+The next two sessions were where I was genuinely out of my depth: registering an Entra app, wiring up Bot Framework client-credentials auth, building and validating a Teams app manifest, getting the bot into a tenant's app catalog, and eventually standing up a separate production Azure subscription. I'd never touched any of it before this week. Copilot CLI ran the `az` and `m365` CLI commands, read the error messages back to me, and looked things up (multi-tenant bot registration being deprecated, a missing service principal, a renamed `--endpoint` flag) faster than I could have found them myself reading Microsoft Learn cold. That's arguably the bigger win over the 2023 Discord port: not "wrote the Ruby faster" but "got me through an unfamiliar cloud platform's auth and app-distribution model without me having to become an expert in it first." Either way, GitHub Copilot CLI got the whole port done in 3 days instead of the 3 weeks the Discord one took, roughly 7x faster.
 
 Copilot CLI's own [usage tracking](https://docs.github.com/en/copilot/how-tos/copilot-cli) gives a sense of scale for just that first session: 659 API calls, about 272,000 output tokens generated, and roughly 72.8 million input tokens processed, of which about 71 million were cache reads rather than fresh tokens (the CLI re-sends accumulated context on every turn, and prompt caching is what keeps that affordable). That's the token cost of a chatty pair-programming session where the "pair" reads the whole codebase back to itself before every reply. The session started on GPT-5.4 for the first 108 calls, then switched to Claude Sonnet 5 for the remaining 551, model choice is a CLI setting, not something baked into the port.
 
-### This Isn't a Fair Fight, and That's the Point
+Copilot CLI usage isn't metered per token, it's included in a Copilot subscription, so there's no invoice to point at. But pricing it out at today's public list prices for comparable models (roughly $3/$15 per million input/output tokens, with cache reads discounted to a fraction of that, cache writes at a slight premium) puts that first session at somewhere around $25-30 of raw model spend, almost all of it cache reads.
 
-I want to be upfront that this comparison isn't apples-to-apples. Discord's bot API is comparatively simple: a webhook, embeds, slash commands. Microsoft Teams brought its own pile of accidental complexity that the AI had to work through, not around: Bot Framework client-credentials auth against Entra ID, Adaptive Cards instead of embeds, a manifest/app-catalog model for distribution, and Teams Store submission requirements that don't exist for Discord at all. The scope of this port is arguably larger than the 2023 one, and it still took a fraction of the time.
+### This Isn't a Fair Fight
 
-Nor was the AI infallible. Two bugs from this week are worth calling out because they're exactly the kind of thing you'd expect a human to miss under similar time pressure, not because the AI was careless:
+There's zero reason to still do this kind of work by hand in 2026. Discord's bot API is comparatively simple: a webhook, embeds, slash commands. Microsoft Teams brought its own pile of accidental complexity that the AI had to work through, not around: Bot Framework client-credentials auth against Entra ID, Adaptive Cards instead of embeds, a manifest/app-catalog model for distribution, and Teams Store submission requirements that don't exist for Discord at all. The scope of this port is arguably larger than the 2023 one, and it still took a fraction of the time.
+
+AI of course still makes mistakes:
 
 ```ruby
 # TeamsStrava::CardRenderer used to render one Adaptive Card per embed
@@ -81,11 +85,14 @@ activity.add_card(::Teams::Cards::AdaptiveCard.new(*body)) unless body.empty?
 gem 'rubyzip', require: 'zip'
 ```
 
-Both bugs shipped, passed a full green test suite, and only surfaced against the real Teams API and the real production environment. A 574-example spec suite and a clean rubocop run kept the AI honest about regressions, but they're not a substitute for hitting `send` against Microsoft's actual servers. It's not that AI writes bad code, it's the same lesson as every other engineering team learns eventually: tests validate what you thought to test, and there's no substitute for a production smoke test before you tell people the thing works.
+Both bugs shipped, passed a full green test suite, and only surfaced against the real Teams API and the real production environment. That's not an argument against AI-driven development, it's an argument for test coverage: when you're merging on green because you trust the AI wrote the code, and largely didn't review every line yourself, your test suite is the only thing standing between a passing build and a broken production. A 574-example spec suite at 87.95% line coverage and a clean rubocop run caught plenty, but no test suite covers what it doesn't know to test, and there's still no substitute for a production smoke test before you tell people the thing works.
+
+### Try It Out
+
+Strata is in beta and not yet listed in the Teams Store, but it's real and running in production. Head to [strata.playplay.io](https://strata.playplay.io) to download the app manifest and sideload it into your own tenant. This is temporary while I go through Teams Store submission; once that's done, installing will be a one-click affair.
 
 ### Links
 
-* [teams-strava](https://github.com/dblock/teams-strava) — the new Microsoft Teams bot
-* [discord-strava](https://github.com/dblock/discord-strava) — the 2023 manual port this is compared against
-* [slack-strava](https://github.com/dblock/slack-strava) — the original
-* [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
+* [teams-strava](https://github.com/dblock/teams-strava) — the new Microsoft Teams bot, install from [strata.playplay.io](https://strata.playplay.io)
+* [discord-strava](https://github.com/dblock/discord-strava) — the 2023 manual port this is compared against, install from [strada.playplay.io](https://strada.playplay.io)
+* [slack-strava](https://github.com/dblock/slack-strava) — the original, install from [slava.playplay.io](https://slava.playplay.io)
