@@ -56,6 +56,15 @@ jobs:
             fi
           done
 
+      - name: Resolve leftover Liquid tags in copied markdown
+        env:
+          SITE_URL: https://code.dblock.org
+        run: |
+          find _site -name "*.md" -print0 | xargs -0 ruby -i -pe '
+            gsub(/\{\{\s*site\.url\s*\}\}/, ENV["SITE_URL"])
+            gsub(/\{%\s*(end)?raw\s*%\}/, "")
+          '
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
