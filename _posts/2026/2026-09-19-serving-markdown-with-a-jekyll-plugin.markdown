@@ -29,9 +29,16 @@ plugins:
 
 If you don't configure anything else, `jekyll-md` looks for `<main>` or `[role="main"]` before falling back to the whole `<body>`, since that's the closest thing HTML has to a content/chrome convention. You can also configure a CSS selector to convert from, e.g. `md: selector: "#markdown-content"`, and other options - see the [README](https://github.com/dblock/jekyll-md#readme) for the full list.
 
+### What About llms.txt?
+
+There's a related convention, [llms.txt](https://llmstxt.org), a single root-level file that's supposed to give an AI agent a curated map of a site. I considered adding `llms.txt` generation to `jekyll-md`, then didn't. The spec is explicit that the file should "stay small enough to fit in context" and contrasts itself with `sitemap.xml`, which it calls out for being too large and unfiltered to be useful. A plugin walking every page and dumping it into `llms.txt` - which is what some similar plugins do by default - just recreates the sitemap problem in Markdown instead of solving it. This blog alone has almost 600 posts; nobody wants all of them in one file.
+
+Instead, I wrote `llms.txt` by hand as a plain Jekyll page with Liquid front matter, listing a handful of pinned posts, the 10 most recent ones, and a few key pages, reusing this blog's existing `pinned: true` front matter flag rather than inventing a new mechanism. You can see the result at [code.dblock.org/llms.txt](https://code.dblock.org/llms.txt) and the [template that generates it](https://github.com/dblock/code.dblock.org/blob/gh-pages/llms.txt).
+
 ### Meta
 
 - [jekyll-md](https://github.com/dblock/jekyll-md).
 - [Serving Markdown for AI Agents](/2026/01/15/serving-markdown-for-ai-agents.html), the original post.
 - [Added GitHub Actions workflow to deploy and serve markdown.](https://github.com/dblock/code.dblock.org/commit/6fab9f3)
 - [Use jekyll-md gem to serve Markdown for AI agents.](https://github.com/dblock/code.dblock.org/commit/92bdb7c)
+- [Add curated llms.txt.](https://github.com/dblock/code.dblock.org/commit/1a40e12)
