@@ -29,9 +29,6 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
-      - name: Render markdown for posts and pages
-        run: bundle exec ruby _scripts/render_markdown.rb
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

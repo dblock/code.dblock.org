@@ -20,7 +20,6 @@ task :tags do
 layout: tag
 tag: #{tag}
 permalink: /tags/#{tag}/
-markdown_url: /tags/#{tag}.md
 ---
     EOS
   end

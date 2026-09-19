@@ -9,6 +9,9 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-md
+md:
+  selector: "#markdown-content"
 highlighter: rouge
 kramdown:
   input: GFM
