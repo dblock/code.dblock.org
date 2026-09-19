@@ -30,7 +30,7 @@ asp.net:
   count: 6
 aws:
   name: aws
-  count: 10
+  count: 11
 blog:
   name: blog
   count: 9
@@ -102,7 +102,7 @@ learning:
   count: 11
 management:
   name: management
-  count: 9
+  count: 10
 me me:
   name: me me
   count: 9
@@ -132,7 +132,7 @@ organizations:
   count: 22
 people:
   name: people
-  count: 79
+  count: 80
 performance:
   name: performance
   count: 9
