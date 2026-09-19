@@ -29,41 +29,8 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
-      - name: Copy markdown source files
-        run: |
-          # Copy post markdown files to _site
-          find _posts -name "*.md" -o -name "*.markdown" | while read file; do
-            # Extract date and slug from filename
-            filename=$(basename "$file")
-            # Match pattern: YYYY-MM-DD-slug.md or .markdown
-            if [[ $filename =~ ^([0-9]{4})-([0-9]{2})-([0-9]{2})-(.+)\.(md|markdown)$ ]]; then
-              year="${BASH_REMATCH[1]}"
-              month="${BASH_REMATCH[2]}"
-              day="${BASH_REMATCH[3]}"
-              slug="${BASH_REMATCH[4]}"
-              dest="_site/${year}/${month}/${day}/${slug}.md"
-              mkdir -p "$(dirname "$dest")"
-              cp "$file" "$dest"
-              echo "Copied $file -> $dest"
-            fi
-          done
-
-          # Copy page markdown files (about/index.md -> about.md, etc.)
-          for dir in about press speaking; do
-            if [[ -f "${dir}/index.md" ]]; then
-              cp "${dir}/index.md" "_site/${dir}.md"
-              echo "Copied ${dir}/index.md -> _site/${dir}.md"
-            fi
-          done
-
-      - name: Resolve leftover Liquid tags in copied markdown
-        env:
-          SITE_URL: https://code.dblock.org
-        run: |
-          find _site -name "*.md" -print0 | xargs -0 ruby -i -pe '
-            gsub(/\{\{\s*site\.url\s*\}\}/, ENV["SITE_URL"])
-            gsub(/\{%\s*(end)?raw\s*%\}/, "")
-          '
+      - name: Render markdown for posts and pages
+        run: bundle exec ruby _scripts/render_markdown.rb
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
