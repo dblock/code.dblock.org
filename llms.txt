@@ -1,0 +1,23 @@
+---
+---
+# code.dblock.org
+
+> Tech blog of Daniel Doubrovkine (dB.). Highlights and recent posts below; every page also has a Markdown version (see the `<link rel="alternate" type="text/markdown">` tag, or append `.md`).
+
+## Pages
+
+- [About]({{ site.url }}/about/)
+- [Speaking]({{ site.url }}/speaking/)
+- [Press]({{ site.url }}/press/)
+
+## Highlights
+
+{% for post in site.posts %}{% if post.pinned %}- [{{ post.title }}]({{ site.url }}{{ post.url }})
+{% endif %}{% endfor %}
+## Recent Posts
+
+{% assign recent = site.posts | slice: 0, 10 %}{% for post in recent %}{% unless post.pinned %}- [{{ post.title }}]({{ site.url }}{{ post.url }})
+{% endunless %}{% endfor %}
+## Optional
+
+- [All posts]({{ site.url }}/posts/)
