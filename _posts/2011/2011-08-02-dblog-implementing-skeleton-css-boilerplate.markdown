@@ -4,7 +4,6 @@ title: "DBlog: Implementing Skeleton CSS Boilerplate"
 redirect_from: "/dblog-implementing-skeleton-css-boilerplate/"
 date: 2011-08-02 16:33:14
 tags: [skeleton, css, dotnet, blog]
-comments: true
 dblog_post_id: 240
 ---
 You may have noticed a layout change on this blog. I finally implemented a more modern CSS using [Skeleton](http://getskeleton.com/). Here's what Skeleton has to say about itself.

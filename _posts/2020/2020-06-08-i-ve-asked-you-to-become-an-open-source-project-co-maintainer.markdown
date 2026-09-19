@@ -3,7 +3,6 @@ layout: post
 title: "I've Asked You to Become an Open-Source Project's Co-Maintainer"
 date: 2020-06-08
 tags: [open source]
-comments: true
 ---
 If you made any significant, high quality, contribution to one of my open-source projects, and have a decent contribution history on Github, I will ask you to join as a co-maintainer. In some ways, this ask is a non-automated, higher touch, softer implementation of the [Moya Contributing Guidelines](https://github.com/Moya/contributors).
 

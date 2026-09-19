@@ -3,7 +3,6 @@ layout: post
 title: "Zooming Out to Give Away Your Legos"
 date: 2015-11-25
 tags: [cto, patterns, people]
-comments: true
 ---
 Update: a recoreded talk based on this post at the CTO Summit @ Nasdaq.
 

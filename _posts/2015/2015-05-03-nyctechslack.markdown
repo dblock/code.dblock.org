@@ -3,7 +3,6 @@ layout: post
 title: "Join Us at NYC Tech Slack"
 date: 2015-05-03
 tags: [slack, nyc, tech]
-comments: true
 ---
 New York is a special place for tech. Join us on Slack at [nyctechslack.com](https://www.nyctechslack.com)!
 

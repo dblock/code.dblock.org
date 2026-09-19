@@ -3,7 +3,6 @@ layout: post
 title: "Grape Framework 1.0 Released"
 date: 2017-07-03
 tags: [ruby, grape]
-comments: true
 ---
 I took a deep breath, and released [Grape Framework 1.0](https://github.com/ruby-grape/grape). We're at 8,066 Github stars and 965 forks. I still think Grape is the best way to build Ruby RESTful APIs. I've [written many blog posts](/tags/grape/) on the subject.
 

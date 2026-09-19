@@ -4,7 +4,6 @@ title: "VMWareTasks Moved to Github"
 redirect_from: "/vmwaretasks-moved-to-github/"
 date: 2012-03-20 13:14:16
 tags: [github, vmware]
-comments: true
 dblog_post_id: 328
 ---
 I moved the popular VMWareTasks C# library from CodePlex to Github.

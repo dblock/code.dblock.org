@@ -3,7 +3,6 @@ layout: post
 title: "Should a CTO be technical?"
 date: 2016-05-16
 tags: [cto]
-comments: true
 ---
 _Should a CTO be technical?_ What an odd question! Would it be OK for a CFO not to understand [GAAP](https://en.wikipedia.org/wiki/Generally_accepted_accounting_principles)? The answer may be more complicated than you'd think.
 

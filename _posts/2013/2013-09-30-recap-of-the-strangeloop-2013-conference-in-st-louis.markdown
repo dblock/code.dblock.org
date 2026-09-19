@@ -4,7 +4,6 @@ title: "Recap of the StrangeLoop 2013 Conference in St. Louis"
 redirect_from: "/recap-of-the-strangeloop-2013-conference-in-st-louis/"
 date: 2013-09-30 13:27:30
 tags: [learning, conferences]
-comments: true
 dblog_post_id: 395
 ---
 [StrangeLoop](https://thestrangeloop.com), takes place in St. Louis, MO. I would describe it as a conference of emerging languages, attracting engineers from all over the world. The breadth of thought process, technologies and creativity is probably only second to arts and tech conferences (I'm particularly excited about the upcoming [LISA](https://softwareandart.com/?page_id=1161) conference in NYC). People that go to StrangeLoop seem like a diverse set, although I ran into far too many Enterprise-y developers and even a banker (to be fair, he was attending a vampire symposium in the same hotel).

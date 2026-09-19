@@ -4,7 +4,6 @@ title: "Compass: Invalid US-ASCII character 'xE2'"
 redirect_from: "/compass-invalid-us-ascii-character-xe2/"
 date: 2011-06-09 21:13:48
 tags: [rails, ruby]
-comments: true
 dblog_post_id: 216
 ---
 This one drove me crazy for a while. Compass would fail with “Syntax error: Invalid US-ASCII character "\xE2". So I checked the files, found nothing changed since last time and spent a while googling. Finally found the culprit, explained [here](https://github.com/haml/haml/issues/269).

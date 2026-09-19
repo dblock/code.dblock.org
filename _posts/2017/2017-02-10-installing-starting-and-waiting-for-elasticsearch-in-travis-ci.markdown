@@ -3,7 +3,6 @@ layout: post
 title: "Installing, Starting and Waiting for ElasticSearch in Travis-CI"
 date: 2017-02-10
 tags: [elasticsearch, travis-ci]
-comments: true
 ---
 If you're like me, a `sleep` inside a script for anything longer than a second is a crime. So lets install and start ElasticSearch on Travis-CI and curl it until it's up and running.
 

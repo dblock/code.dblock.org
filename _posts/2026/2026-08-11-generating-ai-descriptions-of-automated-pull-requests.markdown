@@ -3,7 +3,6 @@ layout: post
 title: "Generating AI Descriptions of Automated Pull Requests"
 date: 2026-08-11
 tags: [ai, github-actions, ruby, ci]
-comments: true
 ---
 
 The [slack-ruby-client](https://github.com/slack-ruby/slack-ruby-client) library, an open source Ruby gem I maintain, runs a [scheduled GitHub Actions workflow](https://github.com/slack-ruby/slack-ruby-client/blob/master/.github/workflows/update_api.yml) that regenerates code from [Slack's API definitions](https://github.com/slack-ruby/slack-api-ref) and opens a pull request with the diff. The commit message and CHANGELOG entry used to be a generic "Update API (2026-08-11)", which told a reviewer nothing about what actually changed. Here's how we taught the workflow to describe its own diffs, using GitHub Copilot CLI, which [open source maintainers can get for free](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers).

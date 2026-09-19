@@ -3,7 +3,6 @@ layout: post
 title: Commenting on Pull Requests in GitHub Actions
 date: 2024-04-19
 tags: [opensearch, gha]
-comments: true
 ---
 The [OpenSearch API specification](https://github.com/opensearch-project/opensearch-api-specification) is authored in OpenAPI and used to auto-generate OpenSearch language clients. I wanted to know how much of the API was described in it vs. the actual API implemented in the [default distribution of OpenSearch](https://opensearch.org/downloads.html) that includes all plugins. To do so, I have [exposed an iterator over REST handlers in OpenSearch core](https://github.com/opensearch-project/OpenSearch/pull/11876), and [wrote a plugin](https://github.com/dblock/opensearch-api) that rendered a very minimal OpenAPI spec at runtime. All that was left was to compare the manually authored OpenAPI spec in opensearch-api-specification to the runtime one, added in [opensearch-api-specification#179](https://github.com/opensearch-project/opensearch-api-specification/pull/179). The comparison workflow output a total and relative number of APIs described.
 

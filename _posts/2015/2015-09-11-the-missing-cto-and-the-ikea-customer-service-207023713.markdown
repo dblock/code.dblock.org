@@ -3,7 +3,6 @@ layout: post
 title: "The Missing CTO and the IKEA Customer Service"
 date: 2015-09-11
 tags: [cto, people, technology, ikea]
-comments: true
 ---
 The story of tiny startups upsetting entire industries is old. Here goes David and, once again, conquers Goliath. How did cable companies fail at the internet and are being shredded by Netflix and Amazon? How did the taxi industry not become Uber? These industries should have given birth to these companies and should have innovated themselves out of their own business, transformed their workforce and collected all the profits. Instead, they die and are replaced.
 

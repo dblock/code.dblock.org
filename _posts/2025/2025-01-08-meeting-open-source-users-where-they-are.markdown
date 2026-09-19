@@ -3,7 +3,6 @@ layout: post
 title: Meeting Open Source Users Where They Are
 date: 2025-01-08 01:00:00
 tags: [open source]
-comments: true
 ---
 Most paying customers expect a certain level of (paid) support. One opens a ticket, gets a response, and any issue can be resolved.
 

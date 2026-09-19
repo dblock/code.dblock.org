@@ -4,7 +4,6 @@ title: "Fs2svn: synchronizing a non-SVN folder to an SVN working copy"
 redirect_from: "/fs2svn-synchronizing-a-non-svn-folder-to-an-svn-working-copy/"
 date: 2010-11-02 11:43:14
 tags: [subversion]
-comments: true
 dblog_post_id: 135
 ---
 

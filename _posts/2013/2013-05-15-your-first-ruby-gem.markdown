@@ -4,7 +4,6 @@ title: "Your First Ruby Gem"
 redirect_from: "/your-first-ruby-gem/"
 date: 2013-05-15 01:53:08
 tags: [ruby, open source]
-comments: true
 dblog_post_id: 382
 ---
 *UPDATE*: I did another iteration of live-coding a Ruby gem at Flatiron School in January 2018. The code, a very similar but more complete and up-to-date checklist is [here](https://github.com/dblock/frgom).

@@ -3,7 +3,6 @@ layout: post
 title: A Year Working on OpenSearch (2.0)
 date: 2022-06-05
 tags: [opensearch, aws]
-comments: true
 ---
 I've now been at Amazon for 3 years, and it has been a year since I joined [OpenSearch](https://opensearch.org/), [a community-driven, open source fork of Elasticsearch and Kibana](https://aws.amazon.com/blogs/opensource/introducing-opensearch/). Last week we [released OpenSearch 2.0](https://opensearch.org/blog/releases/2022/05/opensearch-2-0-is-now-available/). Given that it's already end of May, it's time for my first blog post of 2022.
 

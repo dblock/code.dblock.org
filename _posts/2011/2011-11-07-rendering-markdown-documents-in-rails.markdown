@@ -4,7 +4,6 @@ title: "Rendering Markdown Documents in Rails"
 redirect_from: "/rendering-markdown-documents-in-rails/"
 date: 2011-11-07 15:01:55
 tags: [grape, rails, ruby]
-comments: true
 dblog_post_id: 289
 ---
 There's got to be a prettier way of implementing this.

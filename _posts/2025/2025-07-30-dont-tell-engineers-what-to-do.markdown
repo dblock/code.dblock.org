@@ -3,7 +3,6 @@ layout: post
 title: Don't Tell Engineers What to Do
 date: 2025-07-30 08:00:00
 tags: [people, management]
-comments: true
 ---
 A famous example where telling Engineers what to do backfired was the Space Shuttle Challenger disaster in 1986. Engineers at Morton Thiokol, the contractor responsible for the shuttle’s solid rocket boosters, warned NASA management that the O-rings in the boosters could fail in cold weather. The night before launch, engineers strongly recommended delaying the launch due to unusually low temperatures. Management, under pressure to proceed, overruled the engineers’ concerns and told them to "make a recommendation based on data, not emotion." Eventually, management told the engineers to sign off on the launch, despite their objections. The shuttle launched in cold weather, the O-rings failed, and the Challenger exploded, killing all seven astronauts on board.
 

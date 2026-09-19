@@ -3,7 +3,6 @@ layout: post
 title: "AI Slop: A Slack API Rate Limiting Disaster"
 date: 2026-03-12
 tags: [ai, api, rate-limiting, slack]
-comments: true
 ---
 
 Yesterday I [described]({{ site.url }}/2026/03/11/right-sizing-engineering-teams-for-ai.html) AI-generated code as "plausible-looking, locally coherent, globally wrong." Here's a concrete example from my own codebase.

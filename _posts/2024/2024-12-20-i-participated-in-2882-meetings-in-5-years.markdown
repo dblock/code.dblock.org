@@ -3,7 +3,6 @@ layout: post
 title: I Participated in 2882 Meetings in 5 Years
 date: 2024-12-20 01:00:00
 tags: [aws]
-comments: true
 ---
 Since my first day in AWS 5 1/2 years ago, I've been experimenting with keeping a CHANGELOG of everything I do, available for everyone at the company to see. I wrote about it [here](/2020/09/01/keep-a-changelog-at-work.html). If you work at AWS, use the URL in the screenshot below to find it.
 

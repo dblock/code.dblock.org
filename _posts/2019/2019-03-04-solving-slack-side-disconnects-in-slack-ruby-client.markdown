@@ -3,7 +3,6 @@ layout: post
 title: "Solving Slack-Side Disconnects in slack-ruby-client"
 date: 2019-03-04
 tags: [slack, ruby]
-comments: true
 ---
 In June 2018 users started reporting slack-side disconnects in their Ruby bots, reported via [slack-ruby-client#208](https://github.com/slack-ruby/slack-ruby-client/issues/208), regardless of the concurrency library (Eventmachine or Celluloid) used. I was already observing this behavior in my larger production bots, especially [playplay.io](https://www.playplay.io) with hundreds of teams.
 

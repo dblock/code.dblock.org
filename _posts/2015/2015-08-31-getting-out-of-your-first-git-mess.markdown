@@ -3,7 +3,6 @@ layout: post
 title: "Getting Out of Your First Git Mess"
 date: 2015-08-31
 tags: [git]
-comments: true
 ---
 I'm teaching a [Startup Systems Design and Engineering class](https://github.com/Cornell-CS5356-Fall2015/cs5356) at Cornell Tech this year. As a first homework assignment we've asked students to fork our github repository and add a page with their own info and maybe a photo, linked from the [README](https://github.com/Cornell-CS5356-Fall2015/cs5356/blob/master/README.md#students). A good pull request is done off a feature branch and includes 3 files: the README change, a personal page and a picture named the same way as the personal page file. [Here's a good one](https://github.com/Cornell-CS5356-Fall2015/cs5356/pull/6) from one of our TAs, minus the feature branch.
 

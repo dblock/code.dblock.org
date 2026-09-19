@@ -3,7 +3,6 @@ layout: post
 title: "How to BCC"
 date: 2019-04-13
 tags: [email, teams]
-comments: true
 ---
 In his 2001 memoir "How to Lose Friends & Alienate People" Toby Young proposed a universal theorem.
 

@@ -3,7 +3,6 @@ layout: post
 title: "MIT Hacking Arts 2015"
 date: 2015-09-25
 tags: [hackathons, mit, artsy]
-comments: true
 ---
 I had the privilege and the pleasure to represent [Artsy](https://www.artsy.net) as judge for the [MIT Hacking Arts](https://www.hackingarts.com) hackathon. MIT is most definitely at the forefront of disciplines in the intersection of art and technology, and this event was a brilliant demonstration.
 

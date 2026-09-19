@@ -4,7 +4,6 @@ title: Apologizing for My Obsessiveness Over Punctuation
 date: 2025-04-05 01:00:00
 tags: [me me, open source, people]
 redirect_from: "/2025/04/05/my-punctuation-ocd.html"
-comments: true
 ---
 You may have landed here because I had just apologized for my obsessiveness over punctuation in a GitHub comment and requested changes to your pull request, or you noticed me adding periods to a sentence in the otherwise excellent document you have authored. This is not the first time, and my condition manifests itself in some interesting ways.
 

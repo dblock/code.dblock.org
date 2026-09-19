@@ -3,7 +3,6 @@ layout: post
 title: "Getting Started with Spark, Hadoop, HDFS and Hive"
 date: 2017-04-02
 tags: [scala, spark, hive]
-comments: true
 ---
 Two weeks ago I had zero experience with Spark, Hive, or Hadoop. Two weeks later I [was able to reimplement Artsy sitemaps using Spark](https://artsy.github.io/blog/2017/04/02/generating-sitemaps-with-apache-spark) and even gave a "Getting Started" workshop to my team (with some help from [@izakp](https://github.com/izakp)). I've also made some [pull requests into Hive-JSON-Serde](https://github.com/rcongiu/Hive-JSON-Serde/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Adblock%20) and am starting to really understand what's what in this fairly complex, yet amazing ecosystem.
 

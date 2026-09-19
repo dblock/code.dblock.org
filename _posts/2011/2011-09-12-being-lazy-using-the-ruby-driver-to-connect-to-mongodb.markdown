@@ -4,7 +4,6 @@ title: "Being Lazy: Using the Ruby driver to connect to MongoDB"
 redirect_from: "/being-lazy-using-the-ruby-driver-to-connect-to-mongodb/"
 date: 2011-09-12 17:57:45
 tags: [rake, mongodb, ruby]
-comments: true
 dblog_post_id: 265
 ---
 One of my rake tasks failed with an interesting error this morning.

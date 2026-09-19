@@ -3,7 +3,6 @@ layout: post
 title: "Calculating the Gifted and Talented Percentile Rank"
 date: 2013-04-13
 tags: [nyc, education]
-comments: true
 disqus_shortname: dblockdotorg
 ---
 My son did very well on the NYC DOE Gifted and Talented test, especially considering that we did no prep other than exercising with the DOE samples from the handbook, maybe a couple of times to teach him how to point the answer out. He scored 97th percentile, not enough to be likely to go to our school of choice, but well enough to qualify for the lotteries and maybe even an actual spot. The numbers confused me, though.

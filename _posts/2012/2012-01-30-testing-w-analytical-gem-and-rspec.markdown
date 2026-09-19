@@ -4,7 +4,6 @@ title: "Testing w/ Analytical Gem and RSpec"
 redirect_from: "/testing-w-analytical-gem-and-rspec/"
 date: 2012-01-30 21:07:14
 tags: [rails, ruby, testing]
-comments: true
 dblog_post_id: 312
 ---
 We use the [Analytical](https://github.com/jkrall/analytical) gem to include various thirdparty Javascript in our Rails application. Our test environment was configured with dummy values in _config/analytical.yml_.

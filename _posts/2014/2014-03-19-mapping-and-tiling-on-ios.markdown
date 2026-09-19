@@ -4,7 +4,6 @@ title: "Mapping and Tiling on iOS"
 redirect_from: "/mapping-and-tiling-on-ios/"
 date: 2014-03-19 14:44:16
 tags: [ios, artsy, open source]
-comments: true
 dblog_post_id: 409
 ---
 I've learned a great deal about iOS UI in the past couple of months, mostly working on the [Artsy Mobile app](https://iphone.artsy.net/) and the in-Fair experience for the [New York Armory Show](https://iphone.artsy.net/). I feel incredibly lucky to have [Orta](https://orta.github.io/) from CocoaPods fame sitting a few feet away and being a patient mentor. We've built a map that, unlike many similar indoor maps, actually doesn't suck. Huge kudos to [KatarinaBatina](https://www.katarinabatina.com/), who did a ton of design work and everybody else at Artsy who has contributed boatloads of client and server-side code to make this happen.

@@ -4,7 +4,6 @@ title: "Capitalizing on the LinkedIn IPO: Avoiding Short Term Personal Stock Los
 redirect_from: "/capitalizing-on-the-linkedin-ipo-avoiding-short-term-personal-stock-loss/"
 date: 2011-05-24 14:46:07
 tags: [jobs, organizations, people]
-comments: true
 dblog_post_id: 208
 ---
 I just mentioned someone's promotion to one of the person's colleagues after seeing it on their updated LinkedIn profile. The reaction was not quite what I expected.

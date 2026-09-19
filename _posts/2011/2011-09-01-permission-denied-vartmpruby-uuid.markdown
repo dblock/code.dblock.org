@@ -4,7 +4,6 @@ title: "Permission denied - /var/tmp/ruby-uuid"
 redirect_from: "/permission-denied-vartmpruby-uuid/"
 date: 2011-09-01 11:17:32
 tags: [rails, ruby, testing]
-comments: true
 dblog_post_id: 252
 ---
 I've been fighting a trivial RoR controller test failure on a new build machine. The spec is rather trivial.

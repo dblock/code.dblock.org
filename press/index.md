@@ -2,7 +2,6 @@
 layout: page
 title: Press
 tags: [press]
-comments: false
 permalink: '/press/'
 markdown_url: /press.md
 ---

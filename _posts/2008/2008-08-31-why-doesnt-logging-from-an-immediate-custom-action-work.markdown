@@ -4,7 +4,6 @@ title: "Why doesn't logging from an immediate custom action work?"
 redirect_from: "/why-doesnt-logging-from-an-immediate-custom-action-work/"
 date: 2008-08-31 23:30:00
 tags: [msi]
-comments: true
 dblog_post_id: 10
 ---
 Something that has always frustrated me: _Why doesn't logging from an immediate custom action work?_. Christopher Painter pointed out a documented (!) answer.

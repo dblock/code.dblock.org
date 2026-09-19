@@ -4,7 +4,6 @@ title: "Seeding, exporting and importing MongoDB data with Rake"
 redirect_from: "/seeding-exporting-and-importing-mongodb-data-with-rake/"
 date: 2011-02-14 16:55:45
 tags: [rake, mongodb, rails, ruby]
-comments: true
 dblog_post_id: 172
 ---
 ![]({{ site.url }}/images/posts/2011/2011-02-14-seeding-exporting-and-importing-mongodb-data-with-rake/image_2.jpg)

@@ -4,7 +4,6 @@ title: "Mongoid 2.0.2 Dropped Pagination => Kaminari"
 redirect_from: "/mongoid-202-dropped-pagination-kaminari/"
 date: 2011-07-07 09:44:13
 tags: [mongodb, rails, ruby]
-comments: true
 dblog_post_id: 228
 ---
 I was a bit surprised to see mongoid drop pagination support in 2.0.2 ([here](https://github.com/mongoid/mongoid/commit/087c95aa706e4df50a6db0f302c42dd815df8b34) and [here](https://github.com/mongoid/mongoid/commit/f7f66f2345336ecc361ca27bbfa8f8a25443587f)). It got some people confused (see mongoid#983). In a project that uses [will_paginate](https://github.com/mislav/will_paginate), this results in very slow large queries, but no other breakage. It looks like Mongoid did the right thing though – their implementation was messy and other extensions do a much cleaner job.

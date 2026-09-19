@@ -3,7 +3,6 @@ layout: post
 title: "How to tell an Engineer to avoid the weasel word \"like\""
 date: 2020-12-28
 tags: [writing, speaking]
-comments: true
 ---
 I had a telecom professor in college that said "Euuuuh" every other word during lectures. It was impossible not to notice, and I couldn't focus on the content anymore. So I counted the "Euuuuh"'s to pass time. The record sat around 150 "Euuuuh" per hour.
 

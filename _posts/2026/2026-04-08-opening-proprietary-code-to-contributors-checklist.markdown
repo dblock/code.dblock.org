@@ -3,7 +3,6 @@ layout: post
 title: "Opening Proprietary Code to Contributors Checklist"
 date: 2026-04-08
 tags: [engineering, open-source, contributions, ai]
-comments: true
 ---
 
 Before AI coding assistants, a typical engineering team built expertise with the years: new team members joined, contributed small bug fixes, then were given more ambitious tasks over time as they became more comfortable in a codebase, to ultimately become experts. This process took years.

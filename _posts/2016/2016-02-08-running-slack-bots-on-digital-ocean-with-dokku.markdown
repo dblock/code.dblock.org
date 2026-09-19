@@ -3,7 +3,6 @@ layout: post
 title: "Running Slack Bots on DigitalOcean with Dokku"
 date: 2016-02-08
 tags: [slack, api, digitalocean]
-comments: true
 ---
 Slack bot experimentation, especially for not-too-serious purposes, has become a little too expensive on Heroku. There's no free tier for maintaining apps running 24/7, so the dollars add up quickly at 7x12=84$ a year per application. I am currently running [playplay.io](https://www.playplay.io), [shell](https://shell.playplay.io), [api-explorer](https://api-explorer.playplay.io) and [market](https://market.playplay.io). Add another $18x12 = $216 for a non-free-tier MongoDB for one of the apps and it's no longer a coffee-money bill.
 

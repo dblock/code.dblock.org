@@ -3,7 +3,6 @@ layout: post
 title: Backing up DigitalOcean MongoDB to Dropbox
 date: 2023-01-29
 tags: [mongodb, devops]
-comments: true
 ---
 After [migrating my apps to DigitalOcean apps](/2023/01/15/migrating-from-dokku-to-digital-ocean-apps.html) I started looking for a MongoDB automated offsite backup solution. [DO](https://m.do.co/c/5b26011f9a9b) backs up all MongoDB daily automatically, but I am paranoid, and like to store an offsite copy of the data in [Dropbox](https://www.dropbox.com/referrals/AACarx63QE2ZOe75ToRTd63tzYnQKRya3Ms?src=global9) in monthly increments.
 

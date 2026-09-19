@@ -3,7 +3,6 @@ layout: post
 title: "Keeping a CHANGELOG at Work"
 date: 2020-09-01
 tags: [people, agile]
-comments: true
 ---
 What did you do at work today? How about last week? I spent a couple of days in quarterly business reviews, and wrapped up yearly planning activities for AWS Data Exchange and AWS Marketplace. I also added some unit tests to a project that I am onboarding into.
 

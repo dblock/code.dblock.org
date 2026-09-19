@@ -4,7 +4,6 @@ title: "Storing Server-Side JavaScript Functions w/ Mongoid + Weekly Rollup"
 redirect_from: "/storing-server-side-javascript-functions-w-mongoid-weekly-rollup/"
 date: 2011-07-14 00:42:44
 tags: [mongodb]
-comments: true
 dblog_post_id: 231
 ---
 I was working on some map/reduce that rolled up daily, weekly and yearly statistics in MongoDB and discovered, to my surprise, that JavaScript Date doesn't have a _getWeek_ method. Worse, the [piece of code](https://javascript.about.com/library/blweekyear.htm) on About.com turned out to be buggy (it has issues with week 1 and 52). Total Internet #fail. In this post I'll show you how to add `getWeek(date)` to MongoDB/Mongoid and how to use it from a map/reduce.

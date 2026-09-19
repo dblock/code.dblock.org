@@ -3,7 +3,6 @@ layout: post
 title: Adding eslint and Auto-Fixing an Existing TypeScript Project
 date: 2024-04-23
 tags: [opensearch, javascript, typescript]
-comments: true
 ---
 In [opensearch-api-specification#260](https://github.com/opensearch-project/opensearch-api-specification/pull/260) I added [eslint](https://eslint.org/), but had a hard time finding a cookbook for auto-fixing specific violations. Here it is.
 

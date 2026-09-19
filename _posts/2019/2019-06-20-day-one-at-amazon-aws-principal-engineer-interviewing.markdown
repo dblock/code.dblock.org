@@ -3,7 +3,6 @@ layout: post
 title: "Day 1 at Amazon Web Services & Principal Engineer Interviewing Tips"
 tags: [aws, amazon, pe]
 date: 2019-05-20
-comments: true
 ---
 <a href="https://aws.amazon.com/" target="_blank"><img src="{{site.url}}/images/posts/2019/2019-06-20-day-one-at-amazon-aws-principal-engineer-interviewing/aws.png" width="100px"></a>
 

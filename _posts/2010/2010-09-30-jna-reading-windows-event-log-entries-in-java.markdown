@@ -4,7 +4,6 @@ title: "JNA: Reading Windows Event Log entries in Java"
 redirect_from: "/jna-reading-windows-event-log-entries-in-java/"
 date: 2010-09-30 15:19:37
 tags: [jna, win32]
-comments: true
 dblog_post_id: 125
 ---
 

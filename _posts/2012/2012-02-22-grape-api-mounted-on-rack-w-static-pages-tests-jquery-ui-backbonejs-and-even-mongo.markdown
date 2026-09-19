@@ -4,7 +4,6 @@ title: "Grape API Mounted on RACK w/ Static Pages, Tests, JQuery UI, Backbone.js
 redirect_from: "/grape-api-mounted-on-rack-w-static-pages-tests-jquery-ui-backbonejs-and-even-mongo/"
 date: 2012-02-22 14:19:57
 tags: [rack, mongoid, jquery, javascript, grape]
-comments: true
 dblog_post_id: 318
 ---
 Expanding from my [previous post](https://code.dblock.org/grape-api-mounted-on-rack-w-static-pages) on a Grape API mounted on RACK.

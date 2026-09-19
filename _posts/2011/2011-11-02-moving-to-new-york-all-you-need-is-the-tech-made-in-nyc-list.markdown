@@ -4,7 +4,6 @@ title: "Moving to New York? All You Need is the Tech Made in NYC List"
 redirect_from: "/moving-to-new-york-all-you-need-is-the-tech-made-in-nyc-list/"
 date: 2011-11-02 12:33:55
 tags: [technology, artsy, jobs, people]
-comments: true
 dblog_post_id: 283
 ---
 ![made_newyork_bk]({{ site.url }}/images/posts/2011/2011-11-02-moving-to-new-york-all-you-need-is-the-tech-made-in-nyc-list/made_newyork_bk_6.jpg)

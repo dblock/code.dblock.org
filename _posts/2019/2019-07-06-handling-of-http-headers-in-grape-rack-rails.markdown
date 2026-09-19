@@ -3,7 +3,6 @@ layout: post
 title: "Handling of HTTP Headers in Grape with Rack and Rails"
 tags: [grape, ruby]
 date: 2019-07-06
-comments: true
 ---
 I recently helped debug [Grape#1880](https://github.com/ruby-grape/grape/issues/1880), an issue a developer had with HTTP headers in Grape and Rack. It wasn't immediately obvious.
 

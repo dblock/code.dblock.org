@@ -3,7 +3,6 @@ layout: post
 title: "Dealing with Strava API OAuth Token Migration"
 date: 2018-11-17
 tags: [strava, oauth, api]
-comments: true
 ---
 Strava has recently [announced](https://developers.strava.com/docs/oauth-updates/) changes to the Strava OAuth flow. On October 15, 2019 all applications using the old flow will stop working.
 

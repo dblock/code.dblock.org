@@ -3,7 +3,6 @@ layout: post
 title: "Connecting People to Enable Magic"
 date: 2015-08-17
 tags: [cto, people]
-comments: true
 ---
 A few months ago I asked myself: [What does a CTO do?](/2015/05/23/what-does-a-cto-do.html). I divided my attention across three priorities: _people_, _technology_ and _business_, [spent a lot of time with the entire team, beyond Engineering](/2015/07/18/what-does-a-cto-do-offering-time-to-the-team.html) and [created time to think](/2015/08/03/what-does-a-cto-do-creating-thinking-time-while-walking-to-work.html), asking myself hard questions.
 

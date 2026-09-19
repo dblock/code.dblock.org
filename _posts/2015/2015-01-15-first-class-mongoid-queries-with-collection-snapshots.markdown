@@ -3,7 +3,6 @@ layout: post
 title: "First Class Mongoid Queries with Collection Snapshots"
 date: 2015-01-15
 tags: [mongoid, mongodb]
-comments: true
 ---
 Consider two domain models, a _Widget_ and a _Gadget_.
 

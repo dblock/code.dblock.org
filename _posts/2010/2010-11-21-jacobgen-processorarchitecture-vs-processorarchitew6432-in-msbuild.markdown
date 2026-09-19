@@ -4,7 +4,6 @@ title: "JacobGen: PROCESSOR_ARCHITECTURE vs. PROCESSOR_ARCHITEW6432 in MSBuild"
 redirect_from: "/jacobgen-processorarchitecture-vs-processorarchitew6432-in-msbuild/"
 date: 2010-11-21 15:02:29
 tags: [waffle, java, msbuild]
-comments: true
 dblog_post_id: 145
 ---
 I recently moved to a 64-bit Windows 7 and one of my project's build broke.

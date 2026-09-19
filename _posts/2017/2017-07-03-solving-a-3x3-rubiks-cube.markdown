@@ -3,7 +3,6 @@ layout: post
 title: "A Curriculum for Teaching how to Solve a 3x3 Rubik's Cube"
 date: 2017-07-03
 tags: [cube]
-comments: true
 ---
 I've taught many people, including my 8yo and a whole bunch of co-workers, how to solve a Rubik's Cube. Since then, he has claimed @rubikscubegod on [Instagram](https://www.instagram.com/rubikscubegod/) and [Youtube](https://www.youtube.com/channel/UCBVi4JjxGD3dbYlM168ew1g), and him and I recorded a tutorial video. In the video we use [this 1-pager]({{ site.url }}/images/posts/2017/2017-07-03-solving-a-3x3-rubiks-cube/cheat-sheet.pdf). Print yourself a copy.
 

@@ -3,7 +3,6 @@ layout: post
 title: "When Robots Die - Slack account_inactive and Closed Connections"
 date: 2016-01-12
 tags: [slack, bot]
-comments: true
 ---
 One of the things you have to be aware when writing a bot is disabled integrations and closed connections. The first case is simple - when someone disables a bot integration, Slack closes a Real Time connection's WebSocket without an explanation.
 

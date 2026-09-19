@@ -3,7 +3,6 @@ layout: post
 title: "Writing a New OpenWeatherMap.org API Ruby Client"
 date: 2020-05-17
 tags: [openweather, api, ruby]
-comments: true
 ---
 I have been writing Ruby clients for various services for a few years now using the same pattern described in [Writing a New Strava API Ruby Client](/2018/11/27/writing-a-new-strava-api-ruby-client.html). That itself was built on the experience of [slack-ruby-client](https://github.com/slack-ruby/slack-ruby-client) and [iex-ruby-client](https://github.com/dblock/iex-ruby-client).
 

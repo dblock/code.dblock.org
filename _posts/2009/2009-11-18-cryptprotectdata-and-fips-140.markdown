@@ -4,7 +4,6 @@ title: "CryptProtectData and FIPS 140"
 redirect_from: "/cryptprotectdata-and-fips-140/"
 date: 2009-11-18 12:45:00
 tags: [security]
-comments: true
 dblog_post_id: 63
 ---
 In the past years at [Application Security Inc.](http://web.archive.org/web/20091124224338/http://www.appsecinc.com/) I've learned a lot about selling software to the US governement, including very secretive organizations such as the CIA, DOJ, IRS, branches of the miltary, etc. (I am just providing this list as an example - I am not saying we actually sell anything to these specific organizations - that information is classified). Selling to the governement is a whole different beast and requires significant attention from engineering towards certifications like [EAL](https://en.wikipedia.org/wiki/Evaluation_Assurance_Level) or [FIPS](https://web.archive.org/web/20090329033405/https://www.itl.nist.gov/fipspubs/).

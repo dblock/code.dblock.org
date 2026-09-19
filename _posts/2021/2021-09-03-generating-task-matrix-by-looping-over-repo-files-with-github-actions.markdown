@@ -3,7 +3,6 @@ layout: post
 title: Generating a Task Matrix by Looping over Repo Files with GitHub Actions
 date: 2021-09-03
 tags: [github, github actions]
-comments: true
 ---
 I've been having more fun with GitHub actions after [Automating Code Changes via GitHub Actions Making Pull Requests](/2021/08/13/automating-code-changes-with-github-actions-making-pull-requests.html). Let's generate a job matrix from a list of files.
 

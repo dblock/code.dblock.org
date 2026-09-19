@@ -4,7 +4,6 @@ title: "The Jenkins AnsiColor Plugin You've All Been Waiting For"
 redirect_from: "/the-jenkins-ansicolor-plugin-youve-all-been-waiting-for/"
 date: 2011-09-04 12:28:27
 tags: [jenkins, ruby, open source, build]
-comments: true
 dblog_post_id: 257
 ---
 I've released [AnsiColor](https://plugins.jenkins.io/ansicolor), a Jenkins plugin you've all been waiting for.

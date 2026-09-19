@@ -4,7 +4,6 @@ title: "JNA: Working with Unions"
 redirect_from: "/jna-working-with-unions/"
 date: 2010-04-02 17:23:29
 tags: [jna, java, active directory, win32]
-comments: true
 dblog_post_id: 93
 ---
 

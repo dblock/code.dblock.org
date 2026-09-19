@@ -4,7 +4,6 @@ title: "Serkan Piantino on Scaling Facebook News Feed and Ken Little on Scaling 
 redirect_from: "/serkan-piantino-on-scaling-facebook-news-feed-and-ken-little-on-scaling-tumblr/"
 date: 2012-10-02 21:09:23
 tags: [scale, interviews, conferences, performance, technology, speaking]
-comments: true
 dblog_post_id: 350
 ---
 I had the pleasure of interviewing two New York techies, Serkan Piantino of Facebook and Ken Little of Tumblr, at QConNY a couple of months ago. We mostly discussed large scale infrastructure. There are a lot of common themes here, with the emphasis on keeping things simple.

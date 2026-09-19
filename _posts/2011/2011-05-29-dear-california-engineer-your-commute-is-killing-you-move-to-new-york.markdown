@@ -4,7 +4,6 @@ title: "Dear California Engineer - Your Commute is Killing You? Move to New York
 redirect_from: "/dear-california-engineer-your-commute-is-killing-you-move-to-new-york/"
 date: 2011-05-29 23:50:53
 tags: [artsy, jobs, people]
-comments: true
 dblog_post_id: 1588
 pinned: true
 disqus_shortname: dblockdotorg

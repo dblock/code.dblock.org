@@ -3,7 +3,6 @@ layout: post
 title: Should You Work on Weekends?
 date: 2025-01-20 01:00:00
 tags: [open source, people, work]
-comments: true
 ---
 Should you work on week-ends?
 

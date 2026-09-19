@@ -4,7 +4,6 @@ title: "Mongoid 2.0.2, Mongo + bson + bson_ext 1.4.0 and 1.4.1"
 redirect_from: "/mongoid-202-mongo-bson-bsonext-140-and-141/"
 date: 2011-10-22 07:19:42
 tags: [mongoid, performance, artsy, mongodb]
-comments: true
 dblog_post_id: 280
 ---
 In the past two days we've had hell with our production environment. It started with a general feel of slowness followed by all kinds of alarms going off in the monitoring system. Our database performance tanked. The light blue is the time to serve a request (increasing) and the reds are the monitoring system panicking.

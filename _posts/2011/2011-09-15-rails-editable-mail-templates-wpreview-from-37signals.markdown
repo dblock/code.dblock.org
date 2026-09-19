@@ -4,7 +4,6 @@ title: "Rails Editable Mail Templates w/Preview from 37Signals"
 redirect_from: "/rails-editable-mail-templates-wpreview-from-37signals/"
 date: 2011-09-15 06:41:26
 tags: [rails, ruby]
-comments: true
 dblog_post_id: 267
 ---
 Last time we added custom editable mail templates to our mailers and made them Markdown format [[read first](/rails-custom-and-editable-mailer-templates-in-markdown)]. Awesome. Let's add a preview to the templates with [37-signals mail_view](https://github.com/37signals/mail_view). I don't know how we lived without this before!

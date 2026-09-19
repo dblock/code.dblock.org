@@ -3,7 +3,6 @@ layout: post
 title: "Why does Slack API rtm.start send you all this data?"
 date: 2016-02-03
 tags: [slack, api]
-comments: true
 ---
 Like many, I found it easy to immediately criticize the [Slack Web and RealTime API](https://api.slack.com) design. I would have wanted a RESTful implementation and not an RPC one. I would have liked for it to use HTTP and fail with an HTTP error code instead of sending clients JSON with an `ok` field to yield errors. I would have liked to use HTTP verbs for CRUD and not make everything `GET` or `POST`. I would be excited for calling the Web API a lot less and seeing a lot more functionality available via the RealTime API.
 

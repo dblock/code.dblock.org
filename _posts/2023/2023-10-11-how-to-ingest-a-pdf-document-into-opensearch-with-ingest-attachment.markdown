@@ -3,7 +3,6 @@ layout: post
 title: "How to ingest a PDF document into OpenSearch with the ingest-attachment plugin"
 date: 2023-09-29
 tags: [opensearch]
-comments: true
 ---
 This is a neat feature available in OpenSearch via an optional `ingest-attachment` plugin. It's installed on AWS domains by default.
 

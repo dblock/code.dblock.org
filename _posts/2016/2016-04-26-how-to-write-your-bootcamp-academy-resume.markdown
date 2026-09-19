@@ -3,7 +3,6 @@ layout: post
 title: "How To Write Your Code Bootcamp Academy Resume"
 date: 2016-04-26
 tags: [developer, resume, jobs]
-comments: true
 ---
 Hiring Engineers? You probably see a lot of Code/App/Bootcamp Academy resumes. This year alone [Artsy](https://www.artsy.net) has received over 160 resumes from graduates of various code schools. It's a lot fewer than, say, resumes of Art Historians, so I read every single one of them. We're aren't even hiring juniors at the moment, but these things change fast, so I do occasionally invite a particularly interesting junior candidate for a chat, setting expectations accordingly.
 

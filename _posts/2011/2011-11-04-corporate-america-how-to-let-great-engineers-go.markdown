@@ -4,7 +4,6 @@ title: "Corporate America: How to Let Great Engineers Go"
 redirect_from: "/corporate-america-how-to-let-great-engineers-go/"
 date: 2011-11-04 14:35:06
 tags: [hiring, organizations, people]
-comments: true
 dblog_post_id: 287
 ---
 _This was in my drafts for years, a story from a past life ..._

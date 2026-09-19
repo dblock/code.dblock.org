@@ -4,7 +4,6 @@ title: "The Duct Tape Programmer by Joel Spolsky"
 redirect_from: "/the-duct-tape-programmer-by-joel-spolsky/"
 date: 2009-09-24 22:15:00
 tags: [people]
-comments: true
 dblog_post_id: 56
 ---
 Someone forwarded me Joel Spolsky's article, [The Duct Tape Programmer](https://www.joelonsoftware.com/items/2009/09/23.html). I think Joel must have been a manager for far too long.

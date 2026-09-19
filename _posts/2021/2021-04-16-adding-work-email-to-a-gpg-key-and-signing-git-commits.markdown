@@ -3,7 +3,6 @@ layout: post
 title: Adding Work E-Mail to a GPG Key and Signing Git Commits
 date: 2021-04-16
 tags: [git, gpg, security, privacy]
-comments: true
 ---
 Last week I joined the [OpenSearch Team](https://opensearch.org/) at AWS, a community-driven, open source fork of Elasticsearch and Kibana (read more about it [here](https://aws.amazon.com/blogs/opensource/introducing-opensearch/)).
 

@@ -4,7 +4,6 @@ title: "Blast from the past: working versions of XReplace-32 and Expression Calc
 redirect_from: "/blast-from-the-past-working-versions-of-xreplace-32-and-expression-calculator/"
 date: 2011-04-23 20:15:00
 tags: [open source, vestris]
-comments: true
 dblog_post_id: 201
 ---
 In 2009 I gave away the remainder of my old company's, Vestris Inc., software. The source code for all of it is also available [here](https://github.com/dblock).

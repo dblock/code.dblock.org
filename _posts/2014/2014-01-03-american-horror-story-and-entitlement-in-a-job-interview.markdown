@@ -4,7 +4,6 @@ title: "American Horror Story and Entitlement in a Job Interview"
 redirect_from: "/american-horror-story-and-entitlement-in-a-job-interview/"
 date: 2014-01-03 23:11:13
 tags: [interviewing, education, teams, teaching, hiring, people]
-comments: true
 dblog_post_id: 403
 ---
 "Wednesday night's American Horror Story: Coven delivered an interesting theory on youth culture: Millennials are actually dead inside." I'm quoting [Bustle's article](https://www.bustle.com/articles/9317-american-horror-story-coven-paints-millennials-as-numb-narcissists-who-are-dead-inside), which quotes the show itself. "I am a millennial. Generation Y, born between the birth of aids and 9/11 give or take. They call us the Global Generation. We are known for our entitlement and narcissism. Some say it's because we're the first generation where every kid gets a trophy just for showing up."

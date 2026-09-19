@@ -4,7 +4,6 @@ title: "DBlog: Implementing Blog Post Slugs in .NET"
 redirect_from: "/dblog-implementing-blog-post-slugs-in-net/"
 date: 2011-07-22 00:52:32
 tags: [dotnet, asp.net]
-comments: true
 dblog_post_id: 235
 ---
 I was showing some [CoffeeScript](https://coffeescript.org/) to a candidate today. It happened to be a [Backbone.js](https://backbonejs.org/) model with a field called _slug_. "What's a slug?" – he asked.

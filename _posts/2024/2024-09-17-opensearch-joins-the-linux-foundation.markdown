@@ -3,7 +3,6 @@ layout: post
 title: OpenSearch Project Joins the Linux Foundation
 date: 2024-09-17 01:00:00
 tags: [open source, opensearch]
-comments: true
 ---
 Yesterday, the Linux Foundation (LF) [announced the new OpenSearch Software Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-opensearch-software-foundation-to-foster-open-collaboration-in-search-and-analytics), with Amazon transferring the 3½ year old open-source project to LF ([RT](https://twitter.com/dblockdotorg/status/1835584208091172937)). This outcome ensures the long term viability of this technology in a vendor-neutral way, under the most enterprise-friendly open-source Apache License v2. It is the result of the work of hundreds of people, but is also something I am personally very proud of, because I worked on the 6-page proposal to move OpenSearch to a neutral foundation at Amazon, and then my team and I sat at a table across from Adam Selipsky, then AWS CEO who took time to carefully read the doc, opened the floor for some tough questions from the AWS executive leadership team, then gave it a clear _yes_.
 

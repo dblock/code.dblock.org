@@ -3,7 +3,6 @@ layout: post
 title: "How I Made $360 by Serving Markdown to A.I. agents from My Jekyll Blog"
 date: 2026-04-11
 tags: [ai, jekyll, blogging]
-comments: true
 ---
 In April 2025 I wrote [Apologizing for My Obsessiveness Over Punctuation](/2025/04/05/apologizing-for-my-obsessiveness-over-punctuation.html), a post about my various organizational compulsions. Near the end, almost as an aside, I mentioned that I obsessively categorize expenses in [Monarch](https://www.monarchmoney.com/referral?code=8k3crzojhz), a personal finance app, linking it with my referral code. That post earned me exactly one referral in the nine months that followed.
 

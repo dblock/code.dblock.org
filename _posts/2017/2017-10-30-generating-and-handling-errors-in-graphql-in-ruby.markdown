@@ -3,7 +3,6 @@ layout: post
 title: "Generating and Handling Errors in GraphQL in Ruby"
 date: 2017-10-30
 tags: [graphql, ruby]
-comments: true
 ---
 In a [previous post](/2017/10/23/building-and-consuming-a-graphql-api-in-ruby-on-rails.html) I walked you through building and consuming a GraphQL API in Ruby. That was the happy path. In this post we'll generate and handle some errors.
 

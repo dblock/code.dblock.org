@@ -4,7 +4,6 @@ title: "New Relic: Performance Instrumentation with Grape API"
 redirect_from: "/new-relic-performance-instrumentation-with-grape-api/"
 date: 2011-09-21 22:05:40
 tags: [performance, grape, rails, ruby]
-comments: true
 dblog_post_id: 270
 ---
 We're using [Grape](https://github.com/ruby-grape/grape) in our Rails app on Heroku, which comes with New Relic instrumentation out-of-the-box. Let's get the Grape API route details to show in New Relic as well.

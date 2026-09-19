@@ -4,7 +4,6 @@ title: "Wrapping Responses with Grape and Rack"
 redirect_from: "/wrapping-responses-with-grape-and-rack/"
 date: 2012-07-05 13:51:35
 tags: [rack, grape, ruby]
-comments: true
 dblog_post_id: 343
 ---
 [Grape](https://github.com/ruby-grape/grape)'s after blocks don't allow you to modify response text or status code [[#200](https://github.com/ruby-grape/grape/issues/200)]. So how can you wrap an API response?

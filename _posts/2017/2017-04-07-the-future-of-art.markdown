@@ -3,7 +3,6 @@ layout: post
 title: "The Future of Art"
 date: 2017-04-07
 tags: [art, artsy, future]
-comments: true
 ---
 In late January I had the privilege of speaking about the "Future of Art" at [Worlds Fair Nano](https://www.worldsfairusa.com/nano/sf) in San Francisco in front of a huge audience of technologists, futurists and hopefuls. Working on this talk with some help from my Artsy colleagues got me very inspired. It was also a fairly new experience for me: in my CTO role I tend to spend most of my time _building_ the future and not _predicting_ it.
 

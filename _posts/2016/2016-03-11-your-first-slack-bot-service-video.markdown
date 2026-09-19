@@ -3,7 +3,6 @@ layout: post
 title: "Your First Slack Bot Service (Video)"
 date: 2016-03-11
 tags: [slack, bots]
-comments: true
 ---
 I gave a talk entitled "Your First Slack Bot Service" at the inaugural New York City Slack Meetup.
 

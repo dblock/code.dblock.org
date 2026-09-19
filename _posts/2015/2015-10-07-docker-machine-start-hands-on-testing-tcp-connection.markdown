@@ -3,7 +3,6 @@ layout: post
 title: "Docker-machine Hangs on Start: Testing TCP Connection"
 date: 2015-10-07
 tags: [docker, dusty]
-comments: true
 ---
 This was a stubborn one.
 

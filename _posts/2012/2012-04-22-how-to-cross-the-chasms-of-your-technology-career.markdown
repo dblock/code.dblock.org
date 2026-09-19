@@ -4,7 +4,6 @@ title: "How to Cross the Chasms of Your Technology Career"
 redirect_from: "/how-to-cross-the-chasms-of-your-technology-career/"
 date: 2012-04-22 23:00:48
 tags: [teams, teaching, learning, hiring, technology, jobs, organizations, people, me me]
-comments: true
 dblog_post_id: 333
 ---
 I want to talk about your scope of influence as a Software Engineer and how to expand it.

@@ -3,7 +3,6 @@ layout: post
 title: "Fixing Bugs in the OpenSearch API Documentation using API Spec Tests"
 date: 2024-07-12
 tags: [opensearch]
-comments: true
 ---
 I've previously [written](/2024/07/02/using-opensearch-cat-api-response-formats.html) about the [OpenSearch OpenAPI Specification](https://github.com/opensearch-project/opensearch-api-specification).
 

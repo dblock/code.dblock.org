@@ -3,7 +3,6 @@ layout: post
 title: "Verifying a Jekyll Site With Keybase.io"
 date: 2015-01-12
 tags: [jekyll, keybase.io]
-comments: true
 ---
 The future of communication is signed and sources are trusted. You can find me at [keybase.io/dblock](https://keybase.io/dblock).
 

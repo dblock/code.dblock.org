@@ -3,7 +3,6 @@ layout: post
 title: "Getting Started with Typescript"
 tags: [typescript, javascript]
 date: 2019-07-04
-comments: true
 ---
 I've [done](https://code.dblock.org/tags/javascript/) a fair amount of JavaScript, here and there, and have written some TypeScript, too. But I've never actually _started_ anything in TypeScript. Attempting a basic "hello world" in TypeScript turned out to be completely non-trivial, so this should help you.
 

@@ -3,7 +3,6 @@ layout: post
 title: "Auto-Publishing Strava Runs to Github Pages"
 date: 2018-02-17
 tags: [running, ruby, blog, strava]
-comments: true
 ---
 I always hated running. And now I have a [open-source running blog](https://run.dblock.org). Most entries are automatically generated from runs recorded in [Strava](https://www.strava.com/athletes/dblockdotorg) - I'm just too lazy to do it by hand :)
 

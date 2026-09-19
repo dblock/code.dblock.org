@@ -3,7 +3,6 @@ layout: post
 title: "How to Move Jekyll Posts Across Sites: Handling Redirects"
 date: 2015-01-15
 tags: [jekyll]
-comments: true
 ---
 I've recently [moved this blog to Jekyll](/2015/01/07/the-new-code-dblock-dot-org.html), moved all my art-related posts to a new [art.dblock.org](https://art.dblock.org) Jekyll blog and replaced [www.dblock.org](https://www.dblock.org) with a landing page. The last bit is to redirect any old popular content from the old www.dblock.org, such as [Your Commute is Killing You: Move to New York](/2011/05/29/dear-california-engineer-your-commute-is-killing-you-move-to-new-york.html) or [How To Frame and Hang Very Big Drawings](https://art.dblock.org/2007/12/18/big-frame-hanging.html) to one or the other site.
 

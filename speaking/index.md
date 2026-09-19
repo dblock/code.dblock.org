@@ -2,7 +2,6 @@
 layout: page
 title: Speaking
 tags: [speaking]
-comments: false
 redirect_from: '/@speaking/'
 permalink: '/speaking/'
 markdown_url: /speaking.md

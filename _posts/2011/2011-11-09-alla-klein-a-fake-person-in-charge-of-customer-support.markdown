@@ -4,7 +4,6 @@ title: "Alla Klein: A Fake Person In Charge of Customer Support"
 redirect_from: "/alla-klein-a-fake-person-in-charge-of-customer-support/"
 date: 2011-11-09 14:39:16
 tags: [vestris]
-comments: true
 dblog_post_id: 291
 ---
 Mea Culpa. Alla Klein was a fake.

@@ -4,7 +4,6 @@ title: "Corporate Change: Contributing to Open Source"
 redirect_from: "/corporate-change-contributing-to-open-source/"
 date: 2010-11-04 11:30:00
 tags: [appsecinc, open source, organizations, people]
-comments: true
 dblog_post_id: 140
 ---
 

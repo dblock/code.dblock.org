@@ -3,7 +3,6 @@ layout: post
 title: How to Grow Open-Source Contributors and Maintainers
 date: 2024-12-14 01:00:00
 tags: [open source]
-comments: true
 ---
 I've been very active in open source since around 2008 and have become very passionate about growing contributors and maintainers in the projects I am involved in. The health of an open-source project can easily be measured by the number of actively engaged participants in its code, which cannot happen without maintainers. Maintainers are leaders driving open-source projects. The best maintainers contribute significant code, have the responsibility to review other people's contributions, and perform the release process. In my experience, the best ones are experts in the system they are developing. They are prolific coders, and are able to collaborate with contributors that don't work for the same business, maintain a high quality bar, sweat the small stuff, and recognize behaviors that earn trust in others. The goal of a project maintainer is to always improve the project, ensure it stays the course of its core mission, and to work themselves out of the job by promoting contributors to maintainer positions. This is often referred to as _meritocracy_.
 

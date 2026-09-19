@@ -3,7 +3,6 @@ layout: post
 title: "Google Finance Web API Ruby Client"
 date: 2017-12-30
 tags: [technology, finance, ruby]
-comments: true
 ---
 There's a bunch of financial market APIs out there, and after having tried a few for [slack-market](https://market.playplay.io) I still ended up using Yahoo Finance, undocumented, but wildly popular, "API". What I really wanted was to find a plain simple HAL or GraphQL API or a Ruby client that could give me basic interday and intraday data for a given ticker, aggregated from multiple exchanges. But most options were just far too complex, extremely comprehensive to a point of being unusable for basic scenarios, not developer-friendly, or too expensive. Yahoo then suddenly and permanently discontinued their API in May 2017, in a beautiful example of how a big company fails to nurture and build upon developer relations.
 

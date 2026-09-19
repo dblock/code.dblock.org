@@ -3,7 +3,6 @@ layout: post
 title: "Writing DotNet Code on a Mac, No Administrator Privileges Required"
 tags: [dotnet]
 date: 2019-12-17
-comments: true
 ---
 I've been wanting to [write a sample for AWS Data Exchange](https://github.com/aws-samples/aws-dataexchange-api-samples/pull/27) in .NET. Been a while since I've written any C# code. Last time I used VirtualBox to run Windows. This time, I went the route of [Amazon Workspaces](https://aws.amazon.com/workspaces), which quickly gave me a Windows desktop, and as I was in the middle of figuring out how to get Administrator privileges on it to install the .NET SDK, and while I was downloading Visual Studio, one of my colleagues asked "Why Windows?". I couldn't come up with a good answer, so I re-did this on my Mac in about ten minutes, no special privileges required. This should work on any *nix, too.
 

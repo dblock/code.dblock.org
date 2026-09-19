@@ -4,7 +4,6 @@ title: "Svn2: deleting not-versioned files in SVN (at your own risk)"
 redirect_from: "/svn2-deleting-not-versioned-files-in-svn-at-your-own-risk/"
 date: 2010-11-02 15:26:34
 tags: [subversion]
-comments: true
 dblog_post_id: 133
 ---
 

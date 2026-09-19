@@ -3,7 +3,6 @@ layout: post
 title: "How To Test Delayed Jobs"
 date: 2015-11-02
 tags: [testing, delayed job, ruby, rspec]
-comments: true
 ---
 There are two ways to test [delayed jobs](https://github.com/collectiveidea/delayed_job) under RSpec.
 

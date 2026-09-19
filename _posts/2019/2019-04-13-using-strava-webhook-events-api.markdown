@@ -3,7 +3,6 @@ layout: post
 title: "Using Strava Webhook Events API"
 date: 2019-04-13
 tags: [strava, api]
-comments: true
 ---
 [Strava Webhook Events API](https://developers.strava.com/docs/webhooks) seems to give developers trouble. Last year I wrote a [new Strava Ruby client](/2018/11/27/writing-a-new-strava-api-ruby-client.html) that made things significantly easier and came with some handy tools.
 

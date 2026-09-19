@@ -3,7 +3,6 @@ layout: post
 title: Triggering CI from Pull Requests and Force Pushes in GitHub Actions
 date: 2023-04-29
 tags: [github, gha]
-comments: true
 ---
 The [slack-ruby-client](https://github.com/slack-ruby/slack-ruby-client/) generates code from an [API reference](https://github.com/slack-ruby/slack-api-ref) scraped from the Slack documentation website. Until now, the update process was a manual operation involving checking out the code, running a `rake` task, updating a `CHANGELOG.md`, and making a pull request, e.g. [slack-ruby-client#455](https://github.com/slack-ruby/slack-ruby-client/pull/455).
 

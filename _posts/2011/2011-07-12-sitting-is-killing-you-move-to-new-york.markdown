@@ -4,7 +4,6 @@ title: "Sitting is Killing You? Move to New York"
 redirect_from: "/sitting-is-killing-you-move-to-new-york/"
 date: 2011-07-12 00:21:53
 tags: [technology, artsy, people]
-comments: true
 dblog_post_id: 230
 ---
 This is somewhat of a continuation of the unexpectedly popular [story of my commute](/dear-california-engineer-your-commute-is-killing-you-move-to-new-york) and the unofficial [guide of moving to New York for software engineers](/moving-to-new-york-a-guide-for-software-engineers).

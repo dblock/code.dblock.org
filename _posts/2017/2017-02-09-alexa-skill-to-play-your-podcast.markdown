@@ -3,7 +3,6 @@ layout: post
 title: "Building an Alexa Skill to Play Your Podcast"
 date: 2017-02-09
 tags: [alexa, amazon, echo]
-comments: true
 ---
 If you've never listened to the Artsy podcast, I highly recommend it. Available on [iTunes](https://itunes.apple.com/us/podcast/artsy/id1096194516) and [SoundCloud](https://soundcloud.com/artsypodcast) and now on your Amazon Echo.
 

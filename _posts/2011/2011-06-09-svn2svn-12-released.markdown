@@ -4,7 +4,6 @@ title: "Svn2Svn 1.2 Released"
 redirect_from: "/svn2svn-12-released/"
 date: 2011-06-09 12:17:09
 tags: [open source, subversion]
-comments: true
 dblog_post_id: 215
 ---
 I just released a new version of [svn2svn 1.2](https://github.com/dblock/svn2svn), a tool for replaying changes in SVN repositories.

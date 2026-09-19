@@ -4,7 +4,6 @@ title: "Win32: When things get seriously obscure in Windows XP/2003 UpdateResour
 redirect_from: "/win32-when-things-get-seriously-obscure-in-windows-xp2003-updateresource/"
 date: 2011-01-25 03:18:02
 tags: [resourcelib, dotnetinstaller, win32]
-comments: true
 dblog_post_id: 160
 ---
 I just fixed dotnetinstaller#8157. It was a humbling and head-scratching two hours.

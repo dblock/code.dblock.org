@@ -4,7 +4,6 @@ title: Walking Ethereum Transaction Logs to Find Lost Robbies w/Etherscan API
 date: 2021-04-27
 tags: [ethereum, etherscan, crypto, robbies]
 redirect_from: "/2021/04/27/walking-etherium-transaction-logs-to-find-lost-robbies-using-etherscan-api.html"
-comments: true
 ---
 On July 17, 2018, I [spoke](https://www.youtube.com/watch?v=KT-gPtK5uHY&t=4h13m20s) at the Christies first ever annual Tech Summit entitled "Exploring Blockchain", in London. I even got a freebie NFT!
 

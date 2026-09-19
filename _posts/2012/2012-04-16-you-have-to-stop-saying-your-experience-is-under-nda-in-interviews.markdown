@@ -4,7 +4,6 @@ title: "You Have to Stop Saying Your Experience is Under NDA in Interviews"
 redirect_from: "/you-have-to-stop-saying-your-experience-is-under-nda-in-interviews/"
 date: 2012-04-16 14:19:10
 tags: [hiring, people]
-comments: true
 dblog_post_id: 332
 ---
 I talked to a developer recently. He said:

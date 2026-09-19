@@ -4,7 +4,6 @@ title: "Grape: trapping all exceptions within the API"
 redirect_from: "/grape-trapping-all-exceptions-within-the-api/"
 date: 2011-05-04 03:33:39
 tags: [rails, ruby]
-comments: true
 dblog_post_id: 203
 ---
 We've been using [Grape](https://github.com/ruby-grape/grape) to provide a RESTful API. Grape is a micro-framework for Ruby that makes it really easy.

@@ -3,7 +3,6 @@ layout: post
 title: "Calling a GraphQL API in Redwood.js"
 date: 2020-08-27
 tags: [graphql, javascript]
-comments: true
 ---
 I recently needed to stand up a demo app that invoked an [AWS AppSync](https://aws.amazon.com/appsync/) GraphQL API. The existing endpoint (not available publicly) returned restaurant data for a given zip with the following schema.
 

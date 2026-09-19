@@ -3,7 +3,6 @@ layout: post
 title: "Downgrading a Yum Package with Chef"
 date: 2016-01-15
 tags: [chef, devops]
-comments: true
 ---
 I was upgrading a system to MongoDB 3.2.0 and found a bug, [TOOLS-1039: mongoexport chokes on data with quotes](https://jira.mongodb.org/browse/TOOLS-1039). Yikes.
 

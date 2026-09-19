@@ -4,7 +4,6 @@ title: "Git: Deleting Merged Branches"
 redirect_from: "/git-deleting-merged-branches/"
 date: 2011-06-09 21:16:25
 tags: [git]
-comments: true
 dblog_post_id: 217
 ---
 

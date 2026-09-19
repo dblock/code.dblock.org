@@ -3,7 +3,6 @@ layout: post
 title: "Coding with AI Agents is Now a Baseline Expectation for Managers"
 date: 2026-05-05
 tags: [ai, management, people]
-comments: true
 ---
 AI-first Engineering is now the operating default in many organizations, including mine. Developers have kept up. Vibe coding became agentic engineering, and the race towards truly autonomous engineering isn't slowing.
 

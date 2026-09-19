@@ -3,7 +3,6 @@ layout: post
 title: "Lazy Each in Ruby MRI vs. Rubinius"
 date: 2015-08-31
 tags: [ruby, mri, rubinius]
-comments: true
 ---
 It's fairly rare to run into MRI vs. Rubinius or JRuby differences. Here's one from [spidey#5](https://github.com/joeyAghion/spidey/pull/5).
 

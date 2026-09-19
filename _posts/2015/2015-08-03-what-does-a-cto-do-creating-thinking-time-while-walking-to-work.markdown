@@ -3,7 +3,6 @@ layout: post
 title: "Creating Thinking Time while Walking to Work"
 date: 2015-08-03
 tags: [cto, time, thinking]
-comments: true
 ---
 A few months ago I asked myself: [What does a CTO do?](/2015/05/23/what-does-a-cto-do.html). The first step towards answering this question was to [offer my time to the team](/2015/07/18/what-does-a-cto-do-offering-time-to-the-team.html). Today I want to talk about dividing my attention into three priorities: _people_, _technology_ and _business_ and about _creating time to think_.
 

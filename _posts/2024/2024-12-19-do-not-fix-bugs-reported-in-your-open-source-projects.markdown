@@ -3,7 +3,6 @@ layout: post
 title: Do Not Fix Bugs Reported in Your Open Source Projects
 date: 2024-12-19 01:00:00
 tags: [open source]
-comments: true
 ---
 Have you watched [The IT Crowd](https://en.wikipedia.org/wiki/The_IT_Crowd)? It's a hilarious British television sitcom from around 2006 that cast a bunch of IT geniuses at the Reynholm Industries tech support department in London. One of the signature laughs is that every time the phone rang, Roy would pick it up and without waiting say "Have you turned it off and on again?", then hang up. I often feel like Roy when engaging with users reporting bugs in open-source projects I maintain.
 

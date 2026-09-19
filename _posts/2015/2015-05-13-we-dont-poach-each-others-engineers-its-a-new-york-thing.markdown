@@ -3,7 +3,6 @@ layout: post
 title: "We don't poach each-other's engineers. It's a New York thing."
 date: 2015-05-13
 tags: [jobs, hiring]
-comments: true
 ---
 I've always disliked the aggressive "dog eats dog" dynamic of Silicon Valley, especially related to hiring and I am feeling it every day in New York with many companies opening large engineering satellites and aggressively trying to approach my team members and myself. Instead, I try to behave in a more civil manner and not to poach Engineers from other New York City, non-competing start-ups. There are obviously no non-poaching agreements - those would be illegal - and I do realize that we _are_ fighting for talented engineers or designers. That said, I believe that people are more important than companies and we can all benefit from collaborating with the aim of improving both outcomes in hiring and retaining employees.
 

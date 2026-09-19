@@ -4,7 +4,6 @@ title: "My Pathological Fear of Deadlines"
 redirect_from: "/my-pathological-fear-of-deadlines/"
 date: 2013-06-29 19:01:05
 tags: [agile, me me]
-comments: true
 dblog_post_id: 387
 ---
 ![](https://lifeingroup5.com/wp-content/uploads/2010/08/p84_on_time.jpg)

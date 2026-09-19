@@ -3,7 +3,6 @@ layout: post
 title: "Interview at NASDAQ"
 date: 2016-10-31
 tags: [open-source, people, speaking, teams]
-comments: true
 ---
 <p markdown="0">
 <div id="fb-root"></div>

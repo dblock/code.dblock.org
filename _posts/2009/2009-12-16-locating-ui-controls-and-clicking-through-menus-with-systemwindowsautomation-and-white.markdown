@@ -4,7 +4,6 @@ title: "Locating UI controls and clicking through menus with System.Windows.Auto
 redirect_from: "/locating-ui-controls-and-clicking-through-menus-with-systemwindowsautomation-and-white/"
 date: 2009-12-16 14:21:00
 tags: [testing, ui, dotnet, win32]
-comments: true
 dblog_post_id: 75
 ---
 In a previous post I had implemented clicking through menus with White. Someone pointed out that this was a solved problem and I didn't need to write any code.

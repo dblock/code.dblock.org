@@ -3,7 +3,6 @@ layout: post
 title: "Pros and Cons of Going from Management Back to Individual Contributor"
 tags: [job titles, cto, head of engineering, vp of engineering, principal engineer, individual contributor, management]
 date: 2019-11-17
-comments: true
 pinned: true
 ---
 There's much written about becoming an Engineering Manager, but little about going back to being an Individual Contributor. This is not surprising because it often feels like a demotion or giving up. This is my story and thoughts on leaving a CTO role and [going back to being an individual contributor](/2019/05/20/day-one-at-amazon-aws-principal-engineer-interviewing.html). I am six months into a [Principal Engineer](https://www.amazon.jobs/en/landing_pages/principal-engineer-hiring) role.

@@ -3,7 +3,6 @@ layout: post
 title: "Using Bash Parameter Expansion for Conditionals in GitHub Actions"
 date: 2020-06-24
 tags: [github]
-comments: true
 ---
 I am late to using GitHub Actions for CI, and immediately ran into an issue trying to figure out how to conditionally install a different version of Bundler for a certain version of Rails in [radar/distance_of_time_in_words#104](https://github.com/radar/distance_of_time_in_words/pull/104). Bundler 2.x doesn't work with Rails 4, and needs to be downgraded.
 

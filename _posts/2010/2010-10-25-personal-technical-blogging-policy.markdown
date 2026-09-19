@@ -4,7 +4,6 @@ title: "Personal Technical Blogging Policy"
 redirect_from: "/personal-technical-blogging-policy/"
 date: 2010-10-25 15:53:26
 tags: [appsecinc, organizations, agile]
-comments: true
 dblog_post_id: 131
 ---
 A couple of weeks ago I asked a question on stackexchange: [_Does your company have a written policy about personal (technical) blogging?_](https://softwareengineering.stackexchange.com/questions/12229/does-your-company-have-a-written-policy-about-personal-technical-blogging) I got the answers I expected which is _"no such policy here",_ _"my company is oblivious to this"_ and everything in between. I think the answers represent our IT industry quite well – we express policies for things that are forbidden or we naturally evolve into the "don't ask, don't tell" grey area. I wanted to go further at [AppSecInc.](http://web.archive.org/web/20101030062505/http://www.appsecinc.com/), I wanted to encourage my developers to publish themselves, much like I do.

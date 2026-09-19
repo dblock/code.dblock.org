@@ -4,7 +4,6 @@ title: "2011 – The Year of NoSQL Data Breaches?"
 redirect_from: "/2011-the-year-of-nosql-data-breaches/"
 date: 2011-01-27 14:27:27
 tags: [mongodb, security, databases]
-comments: true
 dblog_post_id: 162
 ---
 ![]({{ site.url }}/images/posts/2011/2011-01-27-2011-the-year-of-nosql-data-breaches/image_3.jpg)

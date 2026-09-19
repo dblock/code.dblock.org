@@ -4,7 +4,6 @@ title: "ResourceLib 1.3 Released"
 redirect_from: "/resourcelib-13-released/"
 date: 2012-05-28 13:45:00
 tags: [resourcelib, win32]
-comments: true
 dblog_post_id: 336
 ---
 

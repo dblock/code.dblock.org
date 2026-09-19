@@ -4,7 +4,6 @@ title: "Deploying Latest to Heroku with Jenkins CI"
 redirect_from: "/deploying-latest-to-heroku-with-jenkins-ci/"
 date: 2011-09-02 03:16:25
 tags: [jenkins, heroku]
-comments: true
 dblog_post_id: 255
 ---
 You can use [Jenkins Batch Task Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Batch+Task+Plugin) if you want to deploy the latest revision to Heroku. Our deployment has two steps: a rake task that pushes assets to S3/CloudFront and a git push. So the batch task attached to our repo looks like this.

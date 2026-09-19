@@ -4,7 +4,6 @@ title: "FoodCandy.com: Implementing Facebook Connect and Signup w/ Graph API"
 redirect_from: "/foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/"
 date: 2010-05-07 14:44:54
 tags: [sncore, facebook, foodcandy, dotnet, asp.net]
-comments: true
 dblog_post_id: 99
 ---
 

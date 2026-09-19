@@ -4,7 +4,6 @@ title: "Nesting multiple ConfigurationElement types in a ConfigurationElementCol
 redirect_from: "/nesting-multiple-configurationelement-types-in-a-configurationelementcollection/"
 date: 2009-02-18 23:15:00
 tags: [dotnet]
-comments: true
 dblog_post_id: 34
 ---
 Today I stumbled upon an unpleasant problem with .NET configuration. I'd like to have a configuration file that looks like this.

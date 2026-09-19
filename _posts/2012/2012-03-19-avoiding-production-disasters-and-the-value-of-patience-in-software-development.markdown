@@ -4,7 +4,6 @@ title: "Avoiding Production Disasters and The Value of Patience in Software Deve
 redirect_from: "/avoiding-production-disasters-and-the-value-of-patience-in-software-development/"
 date: 2012-03-19 12:28:43
 tags: [teams, testing, people]
-comments: true
 dblog_post_id: 327
 ---
 I am not a patient person. But years of software practice have taught me how to take my time while coding or how to, otherwise, remove time from the equation.

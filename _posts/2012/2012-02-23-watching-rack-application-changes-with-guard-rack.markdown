@@ -4,7 +4,6 @@ title: "Watching Rack Application Changes with Guard-Rack"
 redirect_from: "/watching-rack-application-changes-with-guard-rack/"
 date: 2012-02-23 16:29:49
 tags: [rack, grape, rails, ruby, open source]
-comments: true
 dblog_post_id: 319
 ---
 One of the frequently requested features in Grape to to automatically reload code changes, much like Rails does ([#131](https://github.com/ruby-grape/grape/issues/131)). This is actually pretty difficult to implement and requires Grape support where an _API::reload!_ method would blow away all of the mounted features, procs, settings, etc.

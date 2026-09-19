@@ -4,7 +4,6 @@ title: "How to become an amazing contributor to an open-source project"
 redirect_from: "/how-to-become-an-amazing-contributor-to-an-open-source-project/"
 date: 2011-03-09 13:34:54
 tags: [open source, people]
-comments: true
 dblog_post_id: 182
 ---
 This morning OpenSource.com published my new article: [How to become and amazing contributor to an open-source project](https://opensource.com/life/11/3/how-become-amazing-contributor-open-source-project).

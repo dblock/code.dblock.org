@@ -4,7 +4,6 @@ title: "JNA: AcquireCredentialsHandle, InitializeSecurityContext and AcceptSecur
 redirect_from: "/jna-acquirecredentialshandle-initializesecuritycontext-and-acceptsecuritycontext-establishing-an-authenticated-connection/"
 date: 2010-03-26 15:05:31
 tags: [waffle, jna, security, win32]
-comments: true
 dblog_post_id: 91
 ---
 I've been working on porting [WAFFLE](https://github.com/dblock/waffle) to Java/ [JNA](https://github.com/twall/jna/). As usual I have modest and practical goals with that project: to provide a working example for everything InitializeSecurityContext and AcceptSecurityContext and to replace the .NET -> COM -> Java bridge for [our application](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/products/dbprotect/). So lets get started.

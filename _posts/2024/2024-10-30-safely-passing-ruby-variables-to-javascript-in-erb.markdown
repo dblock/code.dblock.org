@@ -3,7 +3,6 @@ layout: post
 title: Safely Passing Ruby Variables to JavaScript in ERB
 date: 2024-10-30 01:00:00
 tags: [ruby, security]
-comments: true
 ---
 A user [reported a bug](https://github.com/dblock/slack-strava/issues/171) in [Slava](https://slava.playplay.io), a bot that syncs Strava activities to Slack, where they couldn't subscribe to the paid version because their Slack team name contained a quote. That was a rookie mistake on my part in HTML escaping that almost cost me $9.99. Interestingly, it required a rather [non-trivial fix](https://github.com/dblock/slack-strava/commit/3a70e5f70b778a79b79a1406ee629e379b07094e).
 

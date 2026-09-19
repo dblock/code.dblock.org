@@ -3,7 +3,6 @@ layout: post
 title: "Changing the default admin password in OpenSearch"
 date: 2023-08-08
 tags: [opensearch]
-comments: true
 ---
 OpenSearch ships with a [pretty comprehensive doc](https://opensearch.org/docs/latest/) on getting started, along with a comprehensive reference to its vast [security configuration](https://opensearch.org/docs/latest/security/configuration/index/). This can be a bit overwhelming. Here's how one can change the default "admin" password. In my case I'll do it inside my demo docker instance, but you can skip the Docker parts if you're just downloading and installing OpenSearch directly.
 

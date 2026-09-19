@@ -3,7 +3,6 @@ layout: post
 title: "Dup, Don't Modify Input Hash Parameters in Ruby"
 date: 2020-11-11
 tags: [ruby]
-comments: true
 ---
 We often write Ruby functions that take an `options` Hash, remove some of its values, then pass the hash further down. Unfortunately we also often [introduce a very difficult to catch bug](https://github.com/dblock/iex-ruby-client/pull/94#discussion_r520637150). Here's why you always want to `dup` input options in Ruby that come in as a Hash.
 

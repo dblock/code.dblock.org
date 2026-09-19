@@ -3,7 +3,6 @@ layout: post
 title: Making Raw JSON REST Requests to OpenSearch
 date: 2023-10-16
 tags: [opensearch]
-comments: true
 ---
 OpenSearch clients implement various high-level REST DSLs to invoke OpenSearch APIs. Efforts such as [opensearch-clients#19](https://github.com/opensearch-project/opensearch-clients/issues/19) aim at generating these from spec in order to always be up-to-date with the default distribution, including plugins. However this is a game that cannot be won. Clients will always lag behind, and users often find themselves in a situation that requires them to invoke an API that is not supported by the client. Thus, in [opensearch-clients#62](https://github.com/opensearch-project/opensearch-clients/issues/62) I proposed we level up all OpenSearch language clients in their capability to make raw JSON REST requests. I am happy to report that six months later we have support for sending raw JSON to OpenSearch in all language clients!
 

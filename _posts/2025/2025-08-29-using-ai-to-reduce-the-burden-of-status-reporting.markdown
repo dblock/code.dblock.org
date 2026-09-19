@@ -3,7 +3,6 @@ layout: post
 title: Using AI to Reduce the Burden of Status Reporting
 date: 2025-08-29 09:00:00
 tags: [people, management]
-comments: true
 ---
 One of the negative side effects of having any top-down command structure is that every additional layer risks introducing a new level of bureaucracy, which then actively subtracts value. Consider the Politburo of the USSR with dozens of offices of skilled bureaucrats. Because most produced no actual value, the best apparatchiks spent their entire time managing up to remain in control. Individuals who tried to upend the system either became exhausted and gave up, or were deported to Siberia.
 

@@ -4,7 +4,6 @@ title: "Breaking the Software Death Cycle with DDD"
 redirect_from: "/breaking-the-software-death-cycle-with-ddd/"
 date: 2011-01-06 15:10:20
 tags: [domain driven design, architecture, organizations, people, agile]
-comments: true
 dblog_post_id: 155
 ---
 Thanks to everyone for attending my "Breaking the Software Death Cycle with DDD" presentation last night at the DDD meet-up at Microsoft. It looks like the topic turned out to be interesting – it was followed by some great questions, a few tweets and I got a pile of e-mails to respond to.

@@ -4,7 +4,6 @@ title: "Your Startup's Technology: The First 60 Days in Examples / Class at Gene
 redirect_from: "/your-startups-technology-the-first-60-days-in-examples-class-at-general-assembly/"
 date: 2011-04-12 22:22:40
 tags: [artsy, architecture, agile]
-comments: true
 dblog_post_id: 197
 ---
 I'm teaching [a class at General Assembly on April 20th](https://yourtechnology.eventbrite.com).

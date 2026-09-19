@@ -3,7 +3,6 @@ layout: post
 title: "The Easiest Way to Write a Slack Bot in Ruby"
 date: 2015-07-18
 tags: [slack, api]
-comments: true
 ---
 I've extracted and improved upon common code from [slack-gamebot](https://github.com/dblock/slack-gamebot) and [slack-mathbot](https://github.com/dblock/slack-mathbot) and made [slack-ruby-bot](https://github.com/dblock/slack-ruby-bot). It's probably the easiest way to make a Slack bot in Ruby today.
 

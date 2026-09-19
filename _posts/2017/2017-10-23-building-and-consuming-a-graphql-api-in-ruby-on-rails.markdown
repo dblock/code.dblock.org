@@ -3,7 +3,6 @@ layout: post
 title: "Building and Consuming a GraphQL API with Ruby on Rails"
 date: 2017-10-23
 tags: [graphql, ruby]
-comments: true
 ---
 In the past few weeks I've convinced myself that GraphQL can work well for any micro-service. This post is a full walk-through of getting a working GraphQL API on Ruby on Rails. This should help you get started, especially if you've never written a line of GraphQL in your life. The code for this post is [dblock/graphql-invoices](https://github.com/dblock/graphql-invoices).
 

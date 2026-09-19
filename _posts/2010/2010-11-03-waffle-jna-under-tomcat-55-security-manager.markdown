@@ -4,7 +4,6 @@ title: "Waffle + JNA under Tomcat 5.5 Security Manager"
 redirect_from: "/waffle-jna-under-tomcat-55-security-manager/"
 date: 2010-11-03 14:50:39
 tags: [tomcat, waffle, jna, security, java]
-comments: true
 dblog_post_id: 139
 ---
 

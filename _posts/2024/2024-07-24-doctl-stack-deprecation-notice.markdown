@@ -3,7 +3,6 @@ layout: post
 title: "Enumerating DigitalOcean Apps with a Deprecated Ubuntu 18 Stack"
 date: 2024-07-24
 tags: [digitalocean]
-comments: true
 ---
 I use [DigitalOcean](https://m.do.co/c/5b26011f9a9b) to [run a bunch of apps](https://code.dblock.org/2023/01/15/migrating-from-dokku-to-digital-ocean-apps.html). It's working out great.
 

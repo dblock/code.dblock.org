@@ -3,7 +3,6 @@ layout: post
 title: How I Learned Rust by Accident
 date: 2021-09-03
 tags: [learning, rust]
-comments: true
 ---
 I had to quickly ramp up my Python over [the past few weeks](https://github.com/opensearch-project/opensearch-build/pulls?q=is%3Apr+is%3Aclosed+author%3Adblock). Mind, because Ruby is obviously better, I've never really written any Python in 20 years of programming. At least not production-grade Python with unit tests. Working on a real active codebase was the easiest and fastest way for me to learn, but I'm not telling you anything you didn't already know.
 

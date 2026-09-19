@@ -4,7 +4,6 @@ title: "Installing a Specific Version of NodeJS, NPM and CoffeeScript"
 redirect_from: "/installing-a-specific-version-of-nodejs-npm-and-coffeescript/"
 date: 2011-08-31 18:41:32
 tags: [npm, nodejs, coffeescript, linux]
-comments: true
 dblog_post_id: 250
 ---
 The latest version of Node was segfaulting on my Linode. Here's how to install a specific version.

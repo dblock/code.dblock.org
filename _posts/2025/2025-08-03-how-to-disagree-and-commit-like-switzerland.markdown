@@ -3,7 +3,6 @@ layout: post
 title: How to Disagree and Commit like Switzerland
 date: 2025-08-03 09:00:00
 tags: [people, management]
-comments: true
 ---
 The most abused principle in dysfunctional organizations is "Disagree and Commit". In [Don't Tell Engineers What to Do](/2025/07/30/dont-tell-engineers-what-to-do.html) I said that _"telling people what to do, especially if they are in your direct reporting chain, must not be mistaken for "Disagree and Commit"_.
 

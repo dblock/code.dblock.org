@@ -4,7 +4,6 @@ title: "How to do a Debug, Release or both builds with MSBuild"
 redirect_from: "/how-to-do-a-debug-release-or-both-builds-with-msbuild/"
 date: 2009-02-13 18:15:00
 tags: [msbuild]
-comments: true
 dblog_post_id: 33
 ---
 In a previous post I've described how to do [product/build versioning with MSBuild](/2008/10/26/productbuild-versioning-with-msbuild-ant-and-cruisecontrol.html). Another common build aspect is building different flavors of code: Debug vs. Release.

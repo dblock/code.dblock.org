@@ -3,7 +3,6 @@ layout: post
 title: "A Directory Structure for OSS and Work Github Clones"
 date: 2016-03-25
 tags: [git, github, open-source, shell]
-comments: true
 ---
 I have thousands of Github clones on my computer. You might also know that I have a massive OCD for organizing things. I organize my personal documents by year, going back to 1994 and photos by date. I freak out if there are too many top level folders.
 

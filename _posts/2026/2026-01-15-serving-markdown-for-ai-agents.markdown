@@ -3,7 +3,6 @@ layout: post
 title: Serving Markdown for AI Agents in Jekyll
 date: 2026-01-15
 tags: [ai, jekyll]
-comments: true
 ---
 Dries Buytaert recently wrote about [The Third Audience](https://dri.es/the-third-audience). For decades, websites have targeted two audiences: humans and search engines. AI agents are now the third audience, and most websites aren't optimized for them yet.
 

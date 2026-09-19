@@ -3,7 +3,6 @@ layout: post
 title: "Building a Simple Alexa Skill in Node.js (Live Code)"
 date: 2017-02-16
 tags: [alexa, amazon, echo]
-comments: true
 ---
 [Watch me live-code](https://www.youtube.com/watch?v=pzM4jv7k7Rg) an Alexa skill in Node.js during an [ArtsyOpenSource](https://twitter.com/ArtsyOpenSource) Lunch & Learn.
 

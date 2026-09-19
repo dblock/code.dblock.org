@@ -4,7 +4,6 @@ title: "Folder-Driven Development: when to create a folder?"
 redirect_from: "/folder-driven-development-when-to-create-a-folder/"
 date: 2011-02-26 20:20:36
 tags: [rails, ruby, architecture, testing]
-comments: true
 dblog_post_id: 177
 ---
 ![](https://www.clker.com/cliparts/f/a/b/8/11949856441703715891another_folder_icon_01.svg.thumb.png)

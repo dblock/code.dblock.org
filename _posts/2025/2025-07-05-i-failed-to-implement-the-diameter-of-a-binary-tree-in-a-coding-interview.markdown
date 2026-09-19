@@ -3,7 +3,6 @@ layout: post
 title: I Failed to Implement the Diameter of a Binary Tree in a Coding Interview
 date: 2025-06-21 01:00:00
 tags: [ai, interviewing]
-comments: true
 ---
 Six months ago I failed a basic coding interview at a FAANG. Yes, I was a Principal Engineer, and yes, I was paid absurd amounts of money, yet I couldn't implement a [diameter of a binary tree](https://leetcode.com/problems/diameter-of-binary-tree/description/) as a "warm up" exercise, 10 lines of code.
 

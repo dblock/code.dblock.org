@@ -3,7 +3,6 @@ layout: post
 title: Benchmarks Are Free Now
 date: 2026-08-15
 tags: [ruby, open-source, ai]
-comments: true
 ---
 My [previous post](/2026/08/14/ruby-instance-variables-are-not-inherited-and-why-that-breaks-your-dsl) walked through four bugs in [ruby-enum](https://github.com/dblock/ruby-enum), a gem I maintain, all stemming from the fact that class-level instance variables aren't inherited by subclasses. The third fix, [#59](https://github.com/dblock/ruby-enum/pull/59), made `keys`, `key?`, `value?`, `key`, `value`, `to_h`, `parse` and `each` walk up `superclass` and merge in a parent's enums, so a subclass would see everything its ancestors defined. It was correct, fully tested, and shipped. It also made every one of those methods roughly 5x slower on any subclass.
 

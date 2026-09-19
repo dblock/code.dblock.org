@@ -3,7 +3,6 @@ layout: post
 title: "How To Do Startup Technical Due Diligence"
 date: 2017-10-29
 tags: [technology, vcs]
-comments: true
 ---
 As CTO I've gone through many rounds of technical due diligence with venture capital firms, and have done a few of these from the other side as a consultant. There's a lot of information online, including [this excellent blog post](https://web.archive.org/web/20160331155537/https://blog.pasker.net/2007/08/28/a-high-tech-entrepreneurs-guide-to-surviving-technical-due-diligence) by Bob Pasker on the former, but not much on the latter other than [this old checklist](https://glemak.pbworks.com/w/page/5500952/techdd) by Mike Dunn, both industry veteran CTOs.
 

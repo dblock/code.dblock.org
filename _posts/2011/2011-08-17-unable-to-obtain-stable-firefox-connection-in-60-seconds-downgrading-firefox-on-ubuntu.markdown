@@ -4,7 +4,6 @@ title: "Unable to Obtain Stable Firefox Connection in 60 seconds: Downgrading Fi
 redirect_from: "/unable-to-obtain-stable-firefox-connection-in-60-seconds-downgrading-firefox-on-ubuntu/"
 date: 2011-08-17 16:43:33
 tags: [testing]
-comments: true
 dblog_post_id: 246
 ---
 ![]({{ site.url }}/images/posts/2011/2011-08-17-unable-to-obtain-stable-firefox-connection-in-60-seconds-downgrading-firefox-on-ubuntu/image_5.jpg)

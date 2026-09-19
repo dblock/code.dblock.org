@@ -4,7 +4,6 @@ title: "Unit Testing MSI Custom Actions"
 redirect_from: "/unit-testing-msi-custom-actions/"
 date: 2008-08-18 03:00:00
 tags: [wix]
-comments: true
 dblog_post_id: 7
 ---
 ### Prologue

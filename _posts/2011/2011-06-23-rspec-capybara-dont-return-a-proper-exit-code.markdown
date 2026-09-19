@@ -4,7 +4,6 @@ title: "RSpec + Capybara Don't Return a Proper Exit Code"
 redirect_from: "/rspec-capybara-dont-return-a-proper-exit-code/"
 date: 2011-06-23 16:19:53
 tags: [rails, ruby, open source, testing, people]
-comments: true
 dblog_post_id: 221
 ---
 We've been trying to fix an issue with our continuous integration where Capybara tests were failing, but the CI process reported success. Rather annoying for CI!

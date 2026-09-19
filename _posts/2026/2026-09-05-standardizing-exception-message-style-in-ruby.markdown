@@ -3,7 +3,6 @@ layout: post
 title: "Standardizing Exception Message Style in Ruby"
 date: 2026-09-05
 tags: [ruby, grape, open-source]
-comments: true
 ---
 While reviewing [dozens of PRs from ericproulx](https://github.com/ruby-grape/grape/pulls?q=is%3Apr+author%3Aericproulx) optimizing [Grape](https://github.com/ruby-grape/grape)'s internals recently, I noticed that the bare `raise ArgumentError, "..."` calls scattered across the codebase were inconsistent: some messages were capitalized, some ended in a period, most were not. Longtime readers know [where this is going](/2025/04/04/apologizing-for-my-obsessiveness-over-punctuation.html).
 

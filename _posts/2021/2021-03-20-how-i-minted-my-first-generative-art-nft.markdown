@@ -3,7 +3,6 @@ layout: post
 title: "How I Minted My First Generative Art NFT"
 date: 2021-03-20
 tags: [nft, art, drawing, generative art]
-comments: true
 ---
 I've long watched my inspiring friends make generative art and mint NFTs. I own a handful of works on paper by [Dmitri Cherniak](https://linktr.ee/dmitricherniak), and we've [briefly collaborated in 2019](https://www.instagram.com/p/BtuX53IHMBx/) - Dmitri made digital works, and I drew a smaller set inspired by his output. I really enjoyed observing his process, and thought about trying making digital drawings myself, but then I stubbornly stuck to making my own works on paper. Dmitri's recent success with [Ringers](https://opensea.io/collection/ringers-by-dmitri-cherniak) selling at crazy prices was not overnight. He has long made, and believed in generative art, he's a true artist that doesn't care much about commercial success. Nevertheless, the $ outcomes are worthy of a mention, his art is now being recognized by collectors outside of the traditional gallery system.
 

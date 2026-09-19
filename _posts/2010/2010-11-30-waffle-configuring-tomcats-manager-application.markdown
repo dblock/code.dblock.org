@@ -4,7 +4,6 @@ title: "Waffle: configuring Tomcat's manager application"
 redirect_from: "/waffle-configuring-tomcats-manager-application/"
 date: 2010-11-30 16:27:45
 tags: [tomcat, waffle, security, active directory]
-comments: true
 dblog_post_id: 147
 ---
 A user has recently tried to integrate Tomcat's manager application with [Waffle](https://github.com/dblock/waffle/) and got puzzling results. It took me a while to figure it out, revealing some creative thinking in Tomcat's demo apps.

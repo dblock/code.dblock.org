@@ -3,7 +3,6 @@ layout: post
 title: "Take an Incremental, Agile Approach to Scheduling Your 1:1s"
 tags: [people, teams]
 date: 2019-08-07
-comments: true
 ---
 In my past CTO life I directly managed a VP of Engineering, who managed 2 directors, who managed 6 managers, who managed 30 or so engineers, had peer VP of Product, Head of Design, Head of Marketing, COO, CFO, 2 Heads of Business, a Head of People and a CEO. Each had at least 2-3 very important direct reports. This quickly added up to 60 people that I would have wanted to have a 1:1 with, at least once a year, 20-30 people that I needed to be talking to at least quarterly, and a dozen people that I had to talk to at least monthly. I would also get weekly pings from new hires for a 1:1 and maybe a weekly urgent, everything's on fire, 1:1 from someone wanting to vent or to quit.
 

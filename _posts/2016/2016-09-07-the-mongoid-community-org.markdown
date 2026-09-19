@@ -3,7 +3,6 @@ layout: post
 title: "The Mongoid Community Organization"
 date: 2016-09-07
 tags: [mongoid, mongodb]
-comments: true
 ---
 ![mongoid]({{ site.url }}/images/posts/2015/2015-07-24-getting-things-done-with-mongoid-5/mongoid.jpg)
 

@@ -4,7 +4,6 @@ title: "VMWare ESXi 4.1.0 Automation: Insufficient permissions in host operating
 redirect_from: "/vmware-esxi-410-automation-insufficient-permissions-in-host-operating-system/"
 date: 2010-09-24 21:40:19
 tags: [remoteinstall, testing, vmware]
-comments: true
 dblog_post_id: 123
 ---
 One of our servers was upgraded to VMWare ESXi 4.1.0 and automation that uses [RemoteInstall](https://github.com/dblock/remoteinstall/) (and [VMWareTasks](https://github.com/dblock/vmwaretasks/)) broke. The first part was easy, we needed to download and install the [latest version of VixCOM (1.10)](https://web.archive.org/web/20230116061251/https://www.vmware.com/products/beta/ws/vix_api/ReferenceGuide/). Then commands would fail with the _"Insufficient permissions in host operating system"_.

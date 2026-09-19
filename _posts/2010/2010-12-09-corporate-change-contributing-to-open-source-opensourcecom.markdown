@@ -4,7 +4,6 @@ title: "Corporate Change: Contributing to open source @ OpenSource.com"
 redirect_from: "/corporate-change-contributing-to-open-source-opensourcecom/"
 date: 2010-12-09 14:17:51
 tags: []
-comments: true
 dblog_post_id: 151
 ---
 My first article on opensource.com > [read](https://opensource.com/life/10/12/corporate-change-contributing-open-source).

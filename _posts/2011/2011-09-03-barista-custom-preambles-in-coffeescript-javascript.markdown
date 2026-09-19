@@ -4,7 +4,6 @@ title: "Barista: Custom Preambles in CoffeeScript => JavaScript"
 redirect_from: "/barista-custom-preambles-in-coffeescript-javascript/"
 date: 2011-09-03 11:44:13
 tags: [barista, coffeescript, open source]
-comments: true
 dblog_post_id: 256
 ---
 ![]({{ site.url }}/images/posts/2011/2011-09-03-barista-custom-preambles-in-coffeescript-javascript/image_4.jpg)

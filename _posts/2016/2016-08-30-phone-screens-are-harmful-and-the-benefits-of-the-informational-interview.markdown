@@ -3,7 +3,6 @@ layout: post
 title: "Phone Screens are Harmful and The Benefits of the Informational Interview"
 date: 2016-08-30
 tags: [artsy, interviewing, people]
-comments: true
 ---
 I learned about _informationals_ at Microsoft. For any decent developer Engineering managers setup an in-person informational before sending you into a full job interview loop. There were two reasons for this. First, imagine how awkward it would have been to do a phone screen with someone working in the same building as you. Then, you had to notify HR and your current manager that you were interviewing with another team, so this was a way to evaluate fit before actually going into the official process.
 

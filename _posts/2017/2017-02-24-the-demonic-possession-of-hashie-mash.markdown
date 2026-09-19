@@ -3,7 +3,6 @@ layout: post
 title: "The Demonic Possession of Hashie::Mash"
 date: 2017-02-24
 tags: [hashie, ruby]
-comments: true
 ---
 > I've been co-maintaining the Ruby library [hashie](https://github.com/hashie/hashie) for a few years now. It's a wonderful set of extensions written by some of the best Ruby developers. But sometimes, a piece of code turns rogue and starts hurting people. It becomes evil. In this post I will tell a story about how `Hashie::Mash` became the garbage can of recurrent problems that ranged from educational to psychotic.
 

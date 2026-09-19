@@ -3,7 +3,6 @@ layout: post
 title: "Adventures in Daylight Saving, Norfolk Island, and Time Zone Math (in Ruby)"
 date: 2026-08-28
 tags: [ruby, open-source]
-comments: true
 ---
 [distance_of_time_in_words](https://github.com/radar/distance_of_time_in_words) is a small Ruby gem that turns two `Time` objects into a human-readable string like "3 days and 4 hours". Several separate bug reports against it turned out to be variations on the same theme: computing a duration between two timestamps is not the trivial subtraction it looks like, the moment time zones are involved. The first two fixes shipped in [`dotiw` 5.6.0](https://github.com/radar/distance_of_time_in_words/blob/master/CHANGELOG.md#560-20260828); four more followed shortly after in [`dotiw` 5.6.1](https://github.com/radar/distance_of_time_in_words/blob/master/CHANGELOG.md#561-20260909).
 

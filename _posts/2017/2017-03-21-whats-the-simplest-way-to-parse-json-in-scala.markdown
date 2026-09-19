@@ -3,7 +3,6 @@ layout: post
 title: "What's the simplest way to parse JSON in Scala?"
 date: 2017-03-21
 tags: [scala, json]
-comments: true
 ---
 While XML is a first-class citizen in Scala, there's no "default" way to parse JSON. So searching StackOverflow and Google yields all kinds of responses that seem unnecessarily complicated.
 

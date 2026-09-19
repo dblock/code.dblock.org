@@ -3,7 +3,6 @@ layout: post
 title: "Remote Engineering, Cultural and Technical Diversity"
 date: 2015-01-20
 tags: [teams, people, engineering]
-comments: true
 ---
 I find myself on all sides of the remote engineering debate. I have managed large remote teams from China to Argentina. I have a handful of remote engineers today at [Artsy](https://artsy.github.io) in places like Boston, Salt Lake City, and Amsterdam. Some were hired remotely, others have moved from or are moving to New York. I have recently had a remote developer in London quit after having been refused an H1B twice because of quota. And I have moved to the U.S. on an H1B visa myself in 1999. Finally, I often collaborate on open-source projects, where I am remote and have never met and will likely never meet the other collaborators.
 

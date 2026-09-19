@@ -4,7 +4,6 @@ title: "Grape vs. Webmachine"
 redirect_from: "/grape-vs-webmachine/"
 date: 2011-12-14 03:13:28
 tags: [webmachine, grape, rails, ruby]
-comments: true
 dblog_post_id: 303
 ---
 One of my favorite talks at QCon 2011 was [about Webmachine](https://www.infoq.com/presentations/Webmachine-A-Practical-Executable-Model-for-HTTP). I was very curious to see what those well-disciplined Erlang people had come up with. At the end of the talk I had learned that Webmachine used a resource-based model that enabled well-behaved HTTP applications, which is RESTful by definition. So I went to [NYC.rb](https://www.meetup.com/NYC-rb/events/28968101/?value=Resources%2C+For+Real+This+Time+(with+Webmachine)) today to hear about the Ruby version of Webmachine and to write a post about how these two frameworks compare.

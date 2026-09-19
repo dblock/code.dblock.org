@@ -3,7 +3,6 @@ layout: post
 title: "Use Open-Source to Pivot Around Your Hiring Problem"
 date: 2016-10-31
 tags: [open-source, hiring, people, teams]
-comments: true
 ---
 It's no secret that hiring and retaining engineering talent is going to be only more challenging in the years to come. The world's largest companies across all industries are now made of software and the demand for programmers outweighs the supply several times over. Engineers feel this leverage. They believe that they could go work anywhere, so finding really good new engineers is both difficult and costly.
 

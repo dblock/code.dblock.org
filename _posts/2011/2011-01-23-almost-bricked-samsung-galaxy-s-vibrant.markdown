@@ -4,7 +4,6 @@ title: "Almost Bricked Samsung Galaxy S Vibrant"
 redirect_from: "/almost-bricked-samsung-galaxy-s-vibrant/"
 date: 2011-01-23 06:57:54
 tags: [android, google]
-comments: true
 dblog_post_id: 159
 ---
 Today I almost bricked my Android. Rest assured, it all ends well.

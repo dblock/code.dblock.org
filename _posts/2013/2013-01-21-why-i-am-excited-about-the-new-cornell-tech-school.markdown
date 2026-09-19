@@ -4,7 +4,6 @@ title: "Why I am Excited About the new Cornell Tech School"
 redirect_from: "/why-i-am-excited-about-the-new-cornell-tech-school/"
 date: 2013-01-21 20:39:07
 tags: [education, teaching, technology]
-comments: true
 dblog_post_id: 370
 ---
 ![]({{ site.url }}/images/posts/2013/2013-01-21-why-i-am-excited-about-the-new-cornell-tech-school/image_3.jpg)

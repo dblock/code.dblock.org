@@ -3,7 +3,6 @@ layout: post
 title: Programming Languages in 2022
 date: 2022-12-27
 tags: [learning, programming]
-comments: true
 ---
 I got stuck somewhere in British Columbia during the US "bomb" cyclone, with hours to spare. So I decided to finish [implementing samples that call OpenSearch with Sigv4 signing](/2022/07/11/making-sigv4-authenticated-requests-to-managed-opensearch.html) in each of the 8 existing language clients.
 

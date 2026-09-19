@@ -3,7 +3,6 @@ layout: post
 title: Right-Sizing Engineering Teams for AI
 date: 2026-03-11
 tags: [ai, people, teams]
-comments: true
 ---
 Before AI coding assistants, a typical engineering team of 8-10 people might have been lucky to have one or two "10x engineers", or "workhorses", the kind of engineer that both keeps project quality and feature velocity high.
 

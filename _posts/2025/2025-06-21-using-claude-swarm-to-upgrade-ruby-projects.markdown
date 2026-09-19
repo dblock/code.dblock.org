@@ -3,7 +3,6 @@ layout: post
 title: Using Claude-Swarm to Upgrade Ruby Projects
 date: 2025-06-21 01:00:00
 tags: [ai, tools, shopify, claude]
-comments: true
 ---
 [One of my colleagues](https://x.com/parrudanet) wrote a pretty awesome tool called [claude-swarm](http://github.com/parruda/claude-swarm) that orchestrates multiple Claude Code instances as a collaborative AI development team. At Shopify, we are attempting to use it to generate Ruby unit tests at some scale with an army of AI test agents (think a "Ruby Expert" paired with a "TDD Practitioner" and a "Code Review Nitpicker"). But for the purposes of this post, let's just upgrade Ruby in a few projects.
 

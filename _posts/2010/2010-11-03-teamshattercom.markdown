@@ -4,7 +4,6 @@ title: "TeamSHATTER.com"
 redirect_from: "/teamshattercom/"
 date: 2010-11-03 12:22:58
 tags: [shatter, appsecinc, security, databases, people]
-comments: true
 dblog_post_id: 138
 ---
 [TeamSHATTER.com](http://web.archive.org/web/20101119092727/http://www.teamshatter.com/) went live yesterday. SHATTER is the [AppSecInc](http://web.archive.org/web/20101105220437/http://www.appsecinc.com/?) team that researches database security vulnerabilities and publishes advisories that have been trusted by the industry for many years. For example, Oracle April CPU had CVE-2010-0870 and the July CPU had CVE-2010-0903 and CVE-2010-2373 that were found by Esteban, a team SHATTER member. You can read about some of the team's most public figures, including (shameless plug), [on the new website](http://web.archive.org/web/20101121095527/http://www.teamshatter.com/about/).

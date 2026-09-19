@@ -3,7 +3,6 @@ layout: post
 title: "Writing a Slack Bot running on Rails (with React)"
 date: 2015-11-28
 tags: [slack, bot, rails, react]
-comments: true
 ---
 I cooked up a little demo of a Slack bot running on Rails with React, that displays messages that you send to Slack, on a web page.
 

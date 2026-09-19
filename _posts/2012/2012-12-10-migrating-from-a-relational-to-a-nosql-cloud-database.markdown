@@ -4,7 +4,6 @@ title: "Migrating from a relational to a NoSQL cloud database?"
 redirect_from: "/migrating-from-a-relational-to-a-nosql-cloud-database/"
 date: 2012-12-10 02:35:04
 tags: [scale, performance, technology, artsy, mysql, mongodb, databases]
-comments: true
 dblog_post_id: 364
 ---
 ![]({{ site.url }}/images/posts/2012/2012-12-10-migrating-from-a-relational-to-a-nosql-cloud-database/image_10.jpg)

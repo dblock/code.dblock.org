@@ -3,7 +3,6 @@ layout: post
 title: Using Claude Code with Google Sheets
 date: 2025-07-30 01:00:00
 tags: [ai, tools, claude]
-comments: true
 ---
 Let's get [Claude Code](https://www.anthropic.com/claude-code) to connect to Google Sheets. We'll use [this Google Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit?gid=0#gid=0).
 

@@ -4,7 +4,6 @@ title: "Pure Java Waffle"
 redirect_from: "/pure-java-waffle/"
 date: 2010-04-08 12:53:46
 tags: [waffle, jna, security, java, active directory, win32]
-comments: true
 dblog_post_id: 95
 ---
 

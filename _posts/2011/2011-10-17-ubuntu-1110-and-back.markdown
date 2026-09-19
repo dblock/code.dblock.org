@@ -4,7 +4,6 @@ title: "Ubuntu 11.10 and Back"
 redirect_from: "/ubuntu-1110-and-back/"
 date: 2011-10-17 12:46:40
 tags: [linux, virtualbox]
-comments: true
 dblog_post_id: 279
 ---
 I upgraded my Ubuntu from 11.4 to [11.10 Oneric Oncelot](https://releases.ubuntu.com/oneiric/) ... and back. I'll try to keep it short.

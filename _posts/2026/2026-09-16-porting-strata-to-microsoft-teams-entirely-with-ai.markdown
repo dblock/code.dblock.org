@@ -3,7 +3,6 @@ layout: post
 title: "Porting a Discord Bot to Microsoft Teams, Entirely With AI"
 date: 2026-09-16
 tags: [ai, ruby, strava, microsoft-teams]
-comments: true
 ---
 
 [Slava](https://slava.playplay.io) ([slack-strava](https://github.com/dblock/slack-strava)) connects a Strava account to a chat and posts a card for every activity, complete with map, pace, and elevation, plus commands like connect, disconnect, stats, and leaderboard. In 2023 I ported Slava to Discord by hand, evening by evening over about three weeks, and it took most of that stretch to get a working bot called [Strada](https://strada.playplay.io) ([discord-strava](https://github.com/dblock/discord-strava)). This week I ported the same app to Microsoft Teams as [Strata](https://strata.playplay.io) ([teams-strava](https://github.com/dblock/teams-strava)) in 3 days instead of the 3 weeks the Discord port took, using time carved out during the [Microsoft Global Hackathon](https://www.microsoft.com/en-us/garage/hackathon/). By "I", I mean [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli) and I.

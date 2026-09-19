@@ -3,7 +3,6 @@ layout: post
 title: "Getting Things Done with Mongoid 5"
 date: 2015-07-24
 tags: [mongodb, mongoid, ruby]
-comments: true
 ---
 ![mongoid]({{ site.url }}/images/posts/2015/2015-07-24-getting-things-done-with-mongoid-5/mongoid.jpg)
 

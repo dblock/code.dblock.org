@@ -3,7 +3,6 @@ layout: post
 title: Executing Structured A.I. Workflows with Shopify Roast
 date: 2025-05-10 01:00:00
 tags: [ai, tools, shopify]
-comments: true
 ---
 Last week, my team at Shopify released a new tool called [Roast](https://github.com/Shopify/roast/), a convention-oriented framework for creating structured AI workflows. Our vision is to enable A.I. agents to solve developer productivity problems at scale. Imagine continuously improving unit tests, or optimizing test performance across hundreds of thousands of tests with minimal human intervention!
 

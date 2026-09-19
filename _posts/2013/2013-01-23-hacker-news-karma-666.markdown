@@ -4,7 +4,6 @@ title: "Hacker News Karma: 666"
 redirect_from: "/hacker-news-karma-666/"
 date: 2013-01-23 03:01:28
 tags: [me me]
-comments: true
 dblog_post_id: 371
 ---
 Pure. Evil.

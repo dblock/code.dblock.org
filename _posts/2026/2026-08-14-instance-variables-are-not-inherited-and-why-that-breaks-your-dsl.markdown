@@ -3,7 +3,6 @@ layout: post
 title: "Ruby Instance Variables Are Not Inherited (and Why That Breaks Your DSL)"
 date: 2026-08-14
 tags: [ruby, open-source]
-comments: true
 ---
 The [ruby-enum](https://github.com/dblock/ruby-enum) gem is a small library I maintain that adds enum-like behavior to a class via `include Ruby::Enum` and `define :KEY, value`. Four pull requests landed against it recently, each fixing a different symptom, and all four turned out to be the same underlying bug: class-level instance variables set in a module's `included` hook are not inherited by subclasses the way you might expect. All of these fixes shipped in [ruby-enum 1.2.0](https://github.com/dblock/ruby-enum/blob/master/CHANGELOG.md).
 

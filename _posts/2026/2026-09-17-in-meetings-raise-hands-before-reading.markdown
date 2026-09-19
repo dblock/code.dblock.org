@@ -3,7 +3,6 @@ layout: post
 title: In Meetings, Raise Hands Before Reading
 date: 2026-09-17
 tags: [aws, management, people]
-comments: true
 ---
 
 I spent five and a half years at AWS before moving (back) to Microsoft, where I work today. At Amazon, many meetings began with silent reading. Instead of presenting a document, the author gave everyone time to read it before the discussion started.

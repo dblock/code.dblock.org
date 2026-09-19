@@ -3,7 +3,6 @@ layout: post
 title: "The New code.dblock.org Powered by Jekyll"
 date: 2015-01-07 16:07:00
 tags: [blog, jekyll]
-comments: true
 ---
 The newly remodeled [code.dblock.org](https://code.dblock.org) is powered by [Jekyll](https://jekyllrb.com) and [Github pages](https://pages.github.com). The source code can be found [here](https://github.com/dblock/code.dblock.org).
 
@@ -100,7 +99,6 @@ layout: post
 title: "#{post.Title}"
 redirect_from: "/#{post.Slug}"
 date: #{post.Created.strftime('%F %T')}
-comments: true
 ---
 #{content}
     EOS

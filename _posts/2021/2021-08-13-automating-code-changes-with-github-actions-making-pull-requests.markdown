@@ -3,7 +3,6 @@ layout: post
 title: Automating Code Changes via GitHub Actions Making Pull Requests
 date: 2021-08-13
 tags: [github, github actions]
-comments: true
 ---
 You've probably been depending on automated pull requests from [Dependabot](https://dependabot.com/), but how about making your own pull requests from GitHub actions? This capability can be used for automation that looks for changes, then updates files in your own repository with little to no additional setup needed.
 

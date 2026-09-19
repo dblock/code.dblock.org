@@ -3,7 +3,6 @@ layout: post
 title: "Using OpenSearch Cat API Response Formats"
 date: 2024-07-02
 tags: [opensearch]
-comments: true
 ---
 I've been working on the new [OpenSearch OpenAPI Specification](https://github.com/opensearch-project/opensearch-api-specification) that aims to properly document OpenSearch RESTful APIs. The spec is to be used to [auto-generate OpenSearch clients](https://github.com/opensearch-project/opensearch-clients/issues/19) in Python, Java, .NET, etc. One of the neat features of the API specification repo is [a set of declarative YAML integration tests](https://github.com/opensearch-project/opensearch-api-specification/tree/main/tests) that ensure that the spec has the correct request parameters, and that it matches the actual responses from the server. This is particularly useful when documenting a large existing API such as OpenSearch with its 1021 known APIs.
 

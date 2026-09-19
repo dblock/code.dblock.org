@@ -4,7 +4,6 @@ title: "Graduating to Jenkins CI for Ruby-on-Rails Teams - Jenkins User Group in
 redirect_from: "/graduating-to-jenkins-ci-for-ruby-on-rails-teams-jenkins-user-group-in-nyc-video/"
 date: 2013-03-02 13:56:49
 tags: [speaking, open source]
-comments: true
 dblog_post_id: 376
 ---
 <a href='https://www.youtube.com/watch?v=LkrI3D8gxw0'>

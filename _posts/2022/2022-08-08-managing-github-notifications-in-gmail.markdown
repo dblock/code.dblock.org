@@ -3,7 +3,6 @@ layout: post
 title: Managing GitHub Notifications in GMail
 date: 2022-08-08
 tags: [github, gmail]
-comments: true
 ---
 My e-mail inbox is flooded with GitHub notifications, just like yours.
 

@@ -3,7 +3,6 @@ layout: post
 title: Migrating from Dokku to DigitalOcean Apps
 date: 2023-01-15
 tags: [mongodb, slack, devops]
-comments: true
 ---
 In 2016 I [moved](/2016/02/08/running-slack-bots-on-digital-ocean-with-dokku.html) half a dozen apps from Heroku to a DigitalOcean droplet to save money. I found [dokku](https://github.com/dokku/dokku), a docker-powered PaaS. It was already quite mature, and worked flawlessly. In 2023 I am moving back from the single droplet to apps, but staying on DigitalOcean. It was a good 7-year-long run for my droplet!
 

@@ -4,7 +4,6 @@ title: "VMWareTasks 1.3 for VixCOM 1.7.0 (let's reinvent less wheels)"
 redirect_from: "/vmwaretasks-13-for-vixcom-170-lets-reinvent-less-wheels/"
 date: 2009-09-10 13:15:50
 tags: [vmware]
-comments: true
 dblog_post_id: 48
 ---
 I've released **VMWareTasks 1.3** for VixCOM 1.6.3 and 1.7.0.

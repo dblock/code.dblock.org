@@ -4,7 +4,6 @@ title: "RemoteInstall Test Framework 1.2 Released"
 redirect_from: "/remoteinstall-test-framework-12-released/"
 date: 2010-07-17 16:15:00
 tags: [remoteinstall, testing, vmware]
-comments: true
 dblog_post_id: 115
 ---
 

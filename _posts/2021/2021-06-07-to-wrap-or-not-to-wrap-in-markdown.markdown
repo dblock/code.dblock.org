@@ -3,7 +3,6 @@ layout: post
 title: To Wrap or Not to Wrap in Markdown?
 date: 2021-06-07
 tags: [markdown, oss]
-comments: true
 ---
 I keep antagonizing OSS contributors trying to wrap text in Markdown files, e.g. [here](https://github.com/opensearch-project/OpenSearch/pull/689#issuecomment-839241016) and [here](https://github.com/opensearch-project/OpenSearch/pull/712#issuecomment-855271225).
 

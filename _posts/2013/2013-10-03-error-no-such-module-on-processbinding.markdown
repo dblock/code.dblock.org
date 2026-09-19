@@ -4,7 +4,6 @@ title: "Error: No such module on process.binding"
 redirect_from: "/error-no-such-module-on-processbinding/"
 date: 2013-10-03 21:52:01
 tags: [nodejs, javascript]
-comments: true
 dblog_post_id: 397
 ---
 

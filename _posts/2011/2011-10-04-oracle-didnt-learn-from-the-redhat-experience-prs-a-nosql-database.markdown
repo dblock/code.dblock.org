@@ -4,7 +4,6 @@ title: "Oracle Didn't Learn From the Redhat Experience, PRs a NoSQL Database"
 redirect_from: "/oracle-didnt-learn-from-the-redhat-experience-prs-a-nosql-database/"
 date: 2011-10-04 03:51:33
 tags: [oracle, mongodb, security, databases]
-comments: true
 dblog_post_id: 275
 ---
 I just came back from Mongo Boston and I am really excited for [10gen](https://www.mongodb.com/). Once again I met actual human beings that were really happy about using a database and wanted to share that experience with others. Ask yourself: when was the last time you were happy about a piece of Oracle software? Have you too choked or [spilled your tea](https://news.ycombinator.com/item?id=3067609) reading "Easy Administration" in Oracle's press release?

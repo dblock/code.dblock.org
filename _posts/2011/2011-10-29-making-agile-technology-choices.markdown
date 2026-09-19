@@ -4,7 +4,6 @@ title: "Making Agile Technology Choices"
 redirect_from: "/making-agile-technology-choices/"
 date: 2011-10-29 05:59:01
 tags: [technology, architecture, organizations, people]
-comments: true
 dblog_post_id: 282
 ---
 I really enjoy the conversation with software architects on how to make technology choices. I polled the members of the New York CTO club on the topic and got amazing war stories – I'll keep those for later. I gave a talk on this yesterday @ [GeneralAssemb.ly](https://generalassemb.ly/). In this iteration I focused on what can go wrong in a traditional vendor evaluation approach taken by many corporations.

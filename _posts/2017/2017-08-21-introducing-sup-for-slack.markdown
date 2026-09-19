@@ -3,7 +3,6 @@ layout: post
 title: "Introducing S'Up for Slack Teams"
 date: 2017-08-21
 tags: [teams, agile, slack]
-comments: true
 ---
 **Update**: I wrote a longer article, ["What “S'Up”? Using Triads to Develop Tribal Leadership"](https://medium.com/artsy-blog/what-sup-using-triads-to-develop-tribal-leadership-a01d4f207bf8) on the Artsy Medium blog about this.
 

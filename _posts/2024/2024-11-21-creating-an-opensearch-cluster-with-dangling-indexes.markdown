@@ -3,7 +3,6 @@ layout: post
 title: Creating an OpenSearch Cluster with Dangling Indexes
 date: 2024-11-21 01:00:00
 tags: [opensearch]
-comments: true
 ---
 I've previously [written](/2024/07/02/using-opensearch-cat-api-response-formats.html) about the [OpenSearch OpenAPI Specification](https://github.com/opensearch-project/opensearch-api-specification) and how [it can be used to fix bugs in the OpenSearch documentation](/2024/07/12/fixing-bugs-in-opensearch-api-documentation-using-api-spec-tests.html).
 
