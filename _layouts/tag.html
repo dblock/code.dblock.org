@@ -24,6 +24,7 @@
   <article class="page">
     <h1>Tagged "{{ page.tag }}"</h1>
     <div class="article-wrap">
+      <div id="markdown-content">
       {% if site.tags[page.tag] %}
         <ul>
           {% for post in site.tags[page.tag] %}
@@ -33,6 +34,7 @@
       {% else %}
           <p>There are no posts for this tag.</p>
       {% endif %}
+      </div><!-- /#markdown-content -->
 
     </div><!-- /.article-wrap -->
   </article>

@@ -1,14 +1,26 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# Renders clean Markdown versions of posts and pages for AI agents by
+# Renders clean Markdown versions of every page for AI agents by
 # converting the final, fully-rendered Jekyll HTML output (all Liquid
 # tags resolved, all URLs absolute) back to Markdown, instead of copying
 # raw source files (which may still contain unresolved Liquid tags and
 # inline HTML).
+#
+# Any HTML page whose layout wraps its content in a #markdown-content
+# element gets a sibling .md file, e.g.:
+#   _site/2026/01/15/some-post.html -> _site/2026/01/15/some-post.md
+#   _site/about/index.html          -> _site/about.md
+#   _site/tags/ruby/index.html      -> _site/tags/ruby.md
+#   _site/index.html                -> _site/index.md
+#
+# Pages that already have their own hand-authored .md (e.g. tags.md,
+# posts.md, generated directly by Jekyll from a dedicated Liquid
+# template) are left untouched.
 
 require 'nokogiri'
 require 'reverse_markdown'
+require 'fileutils'
 
 ReverseMarkdown.config do |config|
   config.unknown_tags = :bypass
@@ -26,35 +38,25 @@ def html_to_markdown(html_path)
   ReverseMarkdown.convert(content.inner_html, unknown_tags: :bypass, github_flavored: true).strip + "\n"
 end
 
-def write_markdown(html_path, md_path)
+def markdown_path_for(html_path)
+  rel = html_path.delete_prefix("#{SITE_DIR}/")
+  if File.basename(rel) == 'index.html'
+    dir = File.dirname(rel)
+    md_rel = dir == '.' ? 'index.md' : "#{dir}.md"
+  else
+    md_rel = rel.sub(/\.html\z/, '.md')
+  end
+  File.join(SITE_DIR, md_rel)
+end
+
+Dir.glob(File.join(SITE_DIR, '**', '*.html')).each do |html_path|
+  md_path = markdown_path_for(html_path)
+  next if File.exist?(md_path) # don't clobber hand-authored .md pages (tags.md, posts.md, etc.)
+
   markdown = html_to_markdown(html_path)
-  return unless markdown
+  next unless markdown
 
   FileUtils.mkdir_p(File.dirname(md_path))
   File.write(md_path, markdown)
   puts "Rendered #{html_path} -> #{md_path}"
-end
-
-require 'fileutils'
-
-# Posts: _posts/YYYY/YYYY-MM-DD-slug.md -> _site/YYYY/MM/DD/slug.html -> _site/YYYY/MM/DD/slug.md
-Dir.glob('_posts/**/*.{md,markdown}').each do |file|
-  filename = File.basename(file)
-  next unless filename =~ /^(\d{4})-(\d{2})-(\d{2})-(.+)\.(md|markdown)$/
-
-  year, month, day, slug = Regexp.last_match(1), Regexp.last_match(2), Regexp.last_match(3), Regexp.last_match(4)
-  html_path = File.join(SITE_DIR, year, month, day, "#{slug}.html")
-  md_path = File.join(SITE_DIR, year, month, day, "#{slug}.md")
-  next unless File.exist?(html_path)
-
-  write_markdown(html_path, md_path)
-end
-
-# Pages: about/index.md -> _site/about/index.html -> _site/about.md
-%w[about press speaking].each do |dir|
-  html_path = File.join(SITE_DIR, dir, 'index.html')
-  md_path = File.join(SITE_DIR, "#{dir}.md")
-  next unless File.exist?(html_path)
-
-  write_markdown(html_path, md_path)
 end
