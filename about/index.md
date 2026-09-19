@@ -5,6 +5,7 @@ tags: [about, me me]
 comments: false
 redirect_from: '/About.aspx/'
 permalink: '/about/'
+markdown_url: /about.md
 ---
 <div style="padding-bottom: 5px; display: flex; justify-content: flex-start; gap: 5px;">
   <a href='/images/about/headshots/daniel-doubrovkine-steve.jpeg'><img src="/images/about/headshots/daniel-doubrovkine-steve.jpeg" style="max-height: 200px;"></a>

@@ -5,6 +5,7 @@ tags: [speaking]
 comments: false
 redirect_from: '/@speaking/'
 permalink: '/speaking/'
+markdown_url: /speaking.md
 ---
 
 I speak frequently on topics ranging from the intersection of technology and art to people and teams. Feel free to [e-mail me](mailto:dblock@dblock.org) with speaking opportunities.

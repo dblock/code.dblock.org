@@ -4,6 +4,7 @@ title: Press
 tags: [press]
 comments: false
 permalink: '/press/'
+markdown_url: /press.md
 ---
 ![techcrunch](/images/press/techcrunch.png) ![the verge](/images/press/verge.png) ![wired](/images/press/wired.jpg) ![nyt](/images/press/nyt.png) ![hbr](/images/press/hbr.jpg) ![hbr](/images/press/hebdo.jpg) ![w](/images/press/w.png) ![nasdaq](/images/press/nasdaq.png)
 

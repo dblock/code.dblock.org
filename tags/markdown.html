@@ -1,0 +1,9 @@
+---
+permalink: /tags.md
+---
+# Tags
+{% for tag_hash in site.data.tags %}
+{%- assign key = tag_hash[0] -%}
+{%- assign tag = tag_hash[1] -%}
+- [{{ tag.name }}]({{ site.url }}/tags/{{ key | uri_escape }}) ({{ tag.count }})
+{% endfor %}
