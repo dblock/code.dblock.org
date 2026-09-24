@@ -182,6 +182,7 @@ biome
 biowork
 Bitfloor
 BitKinex
+bitwise
 biulds
 Biznik
 bla
@@ -441,12 +442,14 @@ DevOps
 devs
 df
 DFS
+DHH
 dialogs
 Digimark's
 digitalocean
 DigitalOcean
 DigitalOcean's
 Dilbertesque
+dilogarithm
 Dimitri
 directionally
 DirtyPanel
@@ -578,6 +581,7 @@ EventMachine
 EventMessageFile
 Everledger
 evolutions
+excalc
 exctracted
 exe
 executables
@@ -659,6 +663,7 @@ Gamebot
 garde
 gaynor
 GC
+GCD
 GDPs
 geddes
 GEdit
@@ -672,6 +677,7 @@ Geolocation
 GeoRuby
 geospatial
 Geospatial
+Gerhard
 getAllServices
 getgo
 GetNthProperty
@@ -753,6 +759,7 @@ Hackathon
 hackathons
 Hackathons
 hacky
+Hairer
 haml
 HAML
 Hamptons
@@ -786,6 +793,7 @@ Hoerle
 holoart
 HoloArt
 Homakov's
+Homebrew
 HostName
 hotfixes
 hotspot
@@ -866,6 +874,7 @@ ioquatix
 iOSoho
 IPAddress
 IPs
+IRR
 ISA
 Isadora
 IScorable
@@ -1100,6 +1109,7 @@ Mentees
 MenuBar
 Merb's
 MERCHANTABILITY
+Mersenne
 metaprogramming
 metastamp
 metastore
@@ -1246,6 +1256,7 @@ Novy
 npm
 NPM
 NPS
+NPV
 NSInternalInconsistencyException
 nsleightholm
 NTEventLogAppender
@@ -1289,6 +1300,8 @@ ODM
 OID
 OIDs
 OLAP
+Omacalc
+Omarchy
 OMG
 omniauth
 Omniauth
@@ -1410,6 +1423,7 @@ PRed
 Predeploy
 preprocessor
 pricess
+primality
 priori
 prisma
 Proc
@@ -1621,6 +1635,7 @@ serviceUri
 servlet
 Servlet
 sextillion
+SgmlTools
 Shai
 ShallowMongoid
 Shannan
@@ -1842,6 +1857,7 @@ topbar
 toplevel
 Toplevel
 toString
+totient
 trackable
 Trackable
 tradeoff
