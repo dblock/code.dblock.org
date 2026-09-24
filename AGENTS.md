@@ -2,6 +2,8 @@
 
 This is a Jekyll blog deployed via GitHub Pages with a custom GitHub Actions workflow.
 
+When drafting or editing blog posts, follow [VOICE.md](VOICE.md) so new posts match the author's style.
+
 ## Branches
 
 The live site is built from the `gh-pages` branch, not `master`. Commit and push changes to `gh-pages`.

@@ -9,7 +9,7 @@ agile:
   count: 20
 ai:
   name: ai
-  count: 13
+  count: 15
 api:
   name: api
   count: 10
@@ -33,7 +33,7 @@ aws:
   count: 11
 blog:
   name: blog
-  count: 9
+  count: 10
 build:
   name: build
   count: 5
@@ -87,7 +87,7 @@ javascript:
   count: 13
 jekyll:
   name: jekyll
-  count: 7
+  count: 8
 jenkins:
   name: jenkins
   count: 7
