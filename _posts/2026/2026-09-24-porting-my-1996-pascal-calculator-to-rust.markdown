@@ -34,7 +34,25 @@ Check out the [docs/](https://github.com/dblock/excalc-rs/blob/master/docs/READM
 
 ![Expression Calculator 2.43 for Windows](/images/posts/2026/2026-09-24-porting-my-1996-pascal-calculator-to-rust/calc.jpg)
 
+![Expression Calculator banner advertising 2D plots, financial functions, trigonometric functions, and more](/images/posts/2026/2026-09-24-porting-my-1996-pascal-calculator-to-rust/expression-calculator-banner.png)
+
+It wasn't just a four-function calculator. You could work in hexadecimal, and long-running calculations ran as separate tasks. Here it is evaluating a hex expression and searching for a prime, with two tasks showing in the UI:
+
+![Expression Calculator evaluating a hexadecimal expression](/images/posts/2026/2026-09-24-porting-my-1996-pascal-calculator-to-rust/calculator-hex-mode.png)
+
+![Expression Calculator showing a prime search running with two tasks](/images/posts/2026/2026-09-24-porting-my-1996-pascal-calculator-to-rust/calculator-prime-task.png)
+
 The original was *years* of work. The Pascal source code is [on GitHub](https://github.com/dblock/excalc), open-sourced in 2009 once Vestris wound down in its original British Virgin Islands offshore incarnation. The core `common/MCalc.pas` is a 4,036 lines long evaluator. The full Windows app, UI included, is 10,339 lines of Pascal across the repo, backed by a 189-page [user's guide](https://web.archive.org/web/20040129021441/http://excalc.vestris.com/docs/pdf/excalc.pdf) I apparently wrote it in XEmacs and typeset with SgmlTools. I have no memory of most of this code or the math behind it. It's 30 years old. I was 20.
+
+In 1997, [MediaGlobe GmbH sold 3,000 CD-ROM copies](https://github.com/dblock/excalc-rs/blob/master/HISTORY.md) in Germany as Global Calculator, in English, German, and French. Here's the front and back of the box:
+
+[![Global Calculator CD-ROM front cover](/images/posts/2026/2026-09-24-porting-my-1996-pascal-calculator-to-rust/global-calculator-front-thumb.jpeg)](/images/posts/2026/2026-09-24-porting-my-1996-pascal-calculator-to-rust/global-calculator-front.jpeg)
+
+[![Global Calculator CD-ROM back cover](/images/posts/2026/2026-09-24-porting-my-1996-pascal-calculator-to-rust/global-calculator-back-thumb.jpeg)](/images/posts/2026/2026-09-24-porting-my-1996-pascal-calculator-to-rust/global-calculator-back.jpeg)
+
+I still have two unopened copies.
+
+A user was asking for a Linux port as early as 1999. [Christian Rose wrote](https://web.archive.org/web/20010422210554/http://agnes.vestris.com/db-cgi/intensive/guest?ExcalcGuest+ExcalcGuestHTML), "I've never used any better calculator software. But as I'm now moving to Linux, I wonder if the Expression Calculator will ever be ported to Linux?" It took me 27 years, but here we are.
 
 ### The 2026 Port
 
