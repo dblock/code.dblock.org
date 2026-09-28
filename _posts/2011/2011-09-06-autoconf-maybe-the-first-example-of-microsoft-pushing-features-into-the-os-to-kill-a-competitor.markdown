@@ -6,7 +6,9 @@ date: 2011-09-06 03:24:54
 tags: [vestris]
 dblog_post_id: 260
 ---
-17 ears ago I wrote autoconf that enabled DOS users to boot multiple configurations without any menus or pause. I admit, I copied the original source from SVM, but ended up working on it for a very long time and extending the features for at least two or three years. The name was unfortunate since GNU already had an autoconf, but I was completely unfamiliar with the *nix side of the world since all I had was a 386 PC. Autoconf went on to be widely used, especially in Europe until DOS 6.2 which introduced multiple configurations that were "good enough". I spent a month writing a converter from DOS configurations into Autoconf configurations, but it was too late, Microsoft pushed me out of the multi-boot market by embedding a crappier default implementation into the operating system. Anyway, I forgive you, Bill.
+**Update, September 2026:** I found the original 1991 SVM article, identified and contacted its author, rebuilt both the original and later versions, and reconstructed Autoconf's history. Read [The Second Life of Autoconf for MS-DOS](/2026/09/27/the-second-life-of-autoconf-for-ms-dos.html).
+
+17 years ago I wrote autoconf that enabled DOS users to boot multiple configurations without any menus or pause. I admit, I copied the original source from SVM, but ended up working on it for a very long time and extending the features for at least two or three years. The name was unfortunate since GNU already had an autoconf, but I was completely unfamiliar with the *nix side of the world since all I had was a 386 PC. Autoconf went on to be widely used, especially in Europe until DOS 6.2 which introduced multiple configurations that were "good enough". I spent a month writing a converter from DOS configurations into Autoconf configurations, but it was too late, Microsoft pushed me out of the multi-boot market by embedding a crappier default implementation into the operating system. Anyway, I forgive you, Bill.
 
 Here's the code that let you declare `DEVICE=something.sys` in your config.sys file. I included the juiciest commented parts below. The preamble is already priceless.
 
