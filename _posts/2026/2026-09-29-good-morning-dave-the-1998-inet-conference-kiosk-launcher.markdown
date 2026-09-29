@@ -7,6 +7,8 @@ tags: [ai, open-source]
 
 In July 1998, the Internet Society held INET '98, "The Internet Summit", at Palexpo in Geneva. The University of Geneva provided about 250 computers for the conference, and I was a student there. I wrote much of the conference network's website, [www.inet98.ch](https://dblock.github.io/inet98/), and the [launcher](https://github.com/dblock/inet98/tree/master/app) that ran on the public Windows 95 PCs instead of Explorer.
 
+[![The INET '98 network website](/images/posts/2026/2026-09-29-good-morning-dave-the-1998-inet-conference-kiosk-launcher/inet98-website.png)](https://dblock.github.io/inet98/)
+
 ![The Inet 98 Launcher running under Wine on macOS](/images/posts/2026/2026-09-29-good-morning-dave-the-1998-inet-conference-kiosk-launcher/inet98-launcher.gif)
 
 The Inet 98 Launcher was a full-height bar on the left of the screen with a button for each installed application: Internet Explorer, Netscape, PC Pine, Telnet, WS-FTP and Office 95 and 97. I wrote it in Delphi 3. It showed a screen saver when a machine sat idle, reset itself, and could reboot the PC to return it to a clean state.
@@ -18,8 +20,6 @@ This is the launcher running again today, under Wine on macOS. The buttons chang
 The conference was also the first time I had access to a T1 line to the US. Once the machines were up and running, there wasn't much left for me to do, so I spent hours on IRC.
 
 I found the source of both recently. They're now at [dblock/inet98](https://github.com/dblock/inet98).
-
-[![The INET '98 network website](/images/posts/2026/2026-09-29-good-morning-dave-the-1998-inet-conference-kiosk-launcher/inet98-website.png)](https://dblock.github.io/inet98/)
 
 ### Building It Again
 
