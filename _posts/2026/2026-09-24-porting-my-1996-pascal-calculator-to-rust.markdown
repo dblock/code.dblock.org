@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Porting My 1996 Pascal/Delphi Calculator to Rust (CLI + MCP)"
+title: "Porting a 1996 Pascal/Delphi Calculator to Rust (CLI + MCP)"
 date: 2026-09-24
 tags: [ai, rust, open-source]
 ---
