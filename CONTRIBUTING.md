@@ -143,7 +143,7 @@ It's likely that your change will not be merged and that the nitpicky maintainer
 ### Markdown Linter
 
 ```bash
-markdownlint-cli2 "**/*.{md,markdown}" --config .markdownlint.yaml
+markdownlint-cli2 "**/*.{md,markdown}" "#_site" "#node_modules" "#vendor" --config .markdownlint.yaml
 ```
 
 ### Spell Checker
@@ -193,7 +193,7 @@ echo "pyspelling passed."
 echo "Running markdownlint-cli2..."
 
 # Run markdownlint-cli2
-markdownlint-cli2 "**/*.{md,markdown}" --config .markdownlint.yaml
+markdownlint-cli2 "**/*.{md,markdown}" "#_site" "#node_modules" "#vendor" --config .markdownlint.yaml
 
 # Check if markdownlint-cli2 succeeded
 if [ $? -ne 0 ]; then

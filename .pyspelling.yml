@@ -34,7 +34,5 @@ matrix:
             - "code"
             - "pre"
     sources:
-      - "!_styles/**/*.md"
-      - "**/*.md"
-      - "**/*.markdown"
+      - "**/*.{md,markdown}|!_site/**|!_styles/**|!node_modules/**|!vendor/**"
     default_encoding: utf-8
