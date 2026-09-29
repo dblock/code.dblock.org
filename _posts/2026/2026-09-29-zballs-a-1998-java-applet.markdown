@@ -17,4 +17,4 @@ The intro music is the theme song from Capitaine Flam, the French version of the
 
 Applets were removed in [JDK 26](https://openjdk.org/jeps/504), which is a shame, because a gray box that froze your browser for ten seconds and then asked you to trust a stranger's code was clearly the future of the web.
 
-You can find the source and play zBalls [on GitHub](https://github.com/dblock/zballs).
+You can find the source [on GitHub](https://github.com/dblock/zballs) and play the game [here](https://dblock.github.io/zballs/).
