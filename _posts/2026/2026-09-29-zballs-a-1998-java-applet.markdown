@@ -2,7 +2,7 @@
 layout: post
 title: "zBalls: a 1998 Java Applet"
 date: 2026-09-29
-tags: [ai, java, open-source]
+tags: [ai, java, open-source, nostalgia]
 ---
 
 In January 1998, a classmate and I wrote a game. It was called "Bolongas zBalls", and it was a Java applet.

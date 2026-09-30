@@ -2,7 +2,7 @@
 layout: post
 title: "Porting a 1996 Pascal/Delphi Calculator to Rust (CLI + MCP)"
 date: 2026-09-24
-tags: [ai, rust, open-source]
+tags: [ai, rust, open-source, nostalgia]
 ---
 
 In his [Rails World 2026 keynote](https://www.youtube.com/watch?v=vDjW_dRyKXY) DHH talks about one-shot apps built almost instantly with an agent as part of [Omarchy](https://omarchy.org/). His canonical example is [Omacalc](https://github.com/omacom/omacalc), a dead simple calculator. It's a good demo and not a hard problem. Let's take it further and rewrite a more advanced calculator in Rust that we can also run as an MCP server, so an AI coding agent can outsource arithmetic to it instead of hallucinating a square root.

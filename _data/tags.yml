@@ -9,7 +9,7 @@ agile:
   count: 20
 ai:
   name: ai
-  count: 15
+  count: 19
 api:
   name: api
   count: 10
@@ -81,7 +81,7 @@ ios:
   count: 10
 java:
   name: java
-  count: 34
+  count: 35
 javascript:
   name: javascript
   count: 13
@@ -118,12 +118,15 @@ msbuild:
 msi:
   name: msi
   count: 19
+nostalgia:
+  name: nostalgia
+  count: 12
 open source:
   name: open source
   count: 62
 open-source:
   name: open-source
-  count: 8
+  count: 12
 opensearch:
   name: opensearch
   count: 12
@@ -189,7 +192,7 @@ ui:
   count: 6
 vestris:
   name: vestris
-  count: 9
+  count: 10
 vmware:
   name: vmware
   count: 18

@@ -2,7 +2,7 @@
 layout: post
 title: "File & Folder 98: a 1998 Word Document Manager"
 date: 2026-09-29
-tags: [ai, open-source]
+tags: [ai, open-source, nostalgia]
 ---
 
 In the 1990s I wrote a document manager for a small business in Geneva with about 20 workstations. Most of its staff were new to computers, and folders were a challenging idea to grasp. They saved Word documents wherever Word happened to put them, and the network supervisor spent his days looking for lost files by panicked coworkers. File & Folder solved that problem. My 1999 product page said it was for "a small business which is sick and tired of seeing it's workers putting documents a bit everywhere in the system."

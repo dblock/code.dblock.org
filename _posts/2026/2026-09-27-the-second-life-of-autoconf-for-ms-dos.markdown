@@ -2,7 +2,7 @@
 layout: post
 title: "The Second Life of Autoconf for MS-DOS"
 date: 2026-09-27
-tags: [vestris]
+tags: [vestris, nostalgia]
 ---
 
 Before GNU Autoconf generated `configure` scripts, there was a DOS program called Autoconf. It let you keep one `CONFIG.SYS` and one `AUTOEXEC.BAT`, then choose among boot configurations by pressing a key.
