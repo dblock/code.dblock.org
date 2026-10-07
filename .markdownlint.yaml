@@ -1,6 +1,10 @@
 # Default state for all rules
 default: false
 
+# single-line-paragraphs : Paragraphs should use one source line
+single-line-paragraphs:
+  enabled: true
+
 # Path to configuration file to extend
 extends: null
 
