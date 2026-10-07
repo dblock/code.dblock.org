@@ -32,6 +32,8 @@ A pre-commit hook runs `pyspelling` to check spelling in all `.md` and `.markdow
 
 A pre-commit hook also runs `markdownlint-cli2` using `.markdownlint.yaml`. Fix any reported issues before committing.
 
+Pushes and pull requests run the full Markdown checker, including `markdownlint-rule-single-line-paragraphs`, across all Markdown files. Keep each prose paragraph on one source line; intentional Markdown hard breaks and `<br>` boundaries remain supported. A separate workflow checks spelling.
+
 ### Images and Screenshots
 
 Optimize all images and screenshots with `pngquant` before adding them to the repo. macOS screenshot filenames contain a narrow no-break space (U+202F) before AM/PM, so use Python to handle them:

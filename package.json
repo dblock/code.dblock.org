@@ -1,0 +1,11 @@
+{
+  "name": "code.dblock.org",
+  "private": true,
+  "scripts": {
+    "lint:markdown": "markdownlint-cli2 \"**/*.md\" \"**/*.markdown\" \"#_site\" \"#_styles\" \"#node_modules\" \"#vendor\""
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "0.23.3",
+    "markdownlint-rule-single-line-paragraphs": "0.2.0"
+  }
+}
