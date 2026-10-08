@@ -6,7 +6,7 @@ date: 2019-07-06
 ---
 I recently helped debug [Grape#1880](https://github.com/ruby-grape/grape/issues/1880), an issue a developer had with HTTP headers in Grape and Rack. It wasn't immediately obvious.
 
-### Test API
+## Test API
 
 Let's write a simple Grape API that returns a value for a header.
 

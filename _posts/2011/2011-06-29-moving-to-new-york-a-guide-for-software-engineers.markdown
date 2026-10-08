@@ -10,7 +10,7 @@ This is somewhat a continuation of the unexpectedly popular [story of my commute
 
 A couple of my friends have been interviewing in New York for the last ten years. They are solid engineers from Seattle or the Silicon Valley. They often get offers, but never take them. Hiring managers would say that they are using the interviews as a way to come to New York for free. But the real problem is the combination of unreasonable expectations around compensation mixed with preconceived notions about cost of living in New York. This post should help you get rid of those.
 
-#### Dear Princess
+## Dear Princess
 
 As a software engineer you're very privileged. You will always have a job in any city, state or country. Even if you suck, there will always be someone to hire you because the market of software engineers is hot and the numbers play in your favor. So there, unless you're nearing retirement, you have job security – take some risks.
 
@@ -18,7 +18,7 @@ As a software engineer you're very privileged. You will always have a job in any
 
 New York is an incredible place to grow up, live and retire. It's a dense city of millions of people with the best theatres and museums. You'll hear ten different languages spoken at any playground. Beautiful people, physically and intellectually, surround you. One can easily choose to be anonymous here or compete for a place amongst those that aspire for greatness. I've lived in Russia, Europe, the Pacific Northwest and New York is the place where I feel truly at home. If your goal is to move to New York, you should find the best offer for you and just move.
 
-#### Case ... When ... Switch
+### Case ... When ... Switch
 
 I made a decision to move from Seattle to New York, picked a date to move and resigned from Microsoft in 2004. I made sure to have a month or two to look for work remotely and was introduced to two recruiters. I got several offers that were quite representative of New York's software scene, ranging from 125K$ to 180K$ in base salary with titles like "Director of Engineering", "Senior Software Engineer", "Trader's Bitch" and "Fortran Slave". There were very few software options and a lot of offers in the financial sector.
 

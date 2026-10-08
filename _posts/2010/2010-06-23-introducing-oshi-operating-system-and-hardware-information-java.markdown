@@ -18,7 +18,7 @@ Sounds like we could live with the first problem, but we can't live with the sec
 
 While we're at it, we should be able to leverage [JNA](https://github.com/twall/jna/) and fix the first problem too. In the end we could end up with a very nice library that lots of people use.
 
-#### The Oshi Project
+## The Oshi Project
 
 Introducing the [Oshi Project](https://github.com/dblock/oshi). I've put a day of work into it and a bit of design thought in terms of operating system and hardware interfaces. I've implemented those for Windows, so it can generate this kind of output.
 
@@ -46,6 +46,6 @@ System.out.println("Memory: " +
     FormatUtil.formatBytes(hal.getMemory().getTotal()));
 ```
 
-#### What's Next?
+### What's Next?
 
 [Oshi](https://github.com/dblock/oshi) needs your help to implement \*nix ports and create interfaces for other types of software and hardware information, such as disks, processes, printers, etc. Some of the functionality may be generic and should be pushed into JNA.

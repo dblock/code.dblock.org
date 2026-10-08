@@ -10,7 +10,7 @@ I've always liked and thought highly of DigitalOcean, but loved the convenience 
 
 tl;dr A 20$ droplet can easily run half a dozen Ruby bots. I won't miss Heroku much.
 
-### Getting a Droplet with Dokku
+## Getting a Droplet with Dokku
 
 Sign up for a DigitalOcean account. If you haven't, use [my referral link](https://m.do.co/c/5b26011f9a9b), and thank you. Enable two-factor auth and create a Dokku droplet from within _One-click Apps_. I use a 20$ one, but smaller works too.
 

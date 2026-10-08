@@ -12,7 +12,7 @@ I would write integration tests with real data that attempt to exploit the issue
 
 I see two major attack vectors.
 
-#### Mass Assignment
+## Mass Assignment
 
 Read [Homakov's post](https://homakov.blogspot.com/2012/03/how-to.html). If it's not clear, read it again until it's clear.
 
@@ -22,7 +22,7 @@ A variation of this problem is _garbage in, garbage out_. This affects systems b
 
 We use a home grown hash map to whitelist attributes for historical reasons, but _attr_accessible_ does the job just fine.
 
-#### Identity Confusion
+### Identity Confusion
 
 Whitelisting attributes only works when you actually don't need to assign relationships. Do you pass an identity for a Widget as a parameter, maybe in a URL? Do widgets belong to different users? If so, write a test that ensures that a user that doesn't have access to this Widget cannot modify it.
 

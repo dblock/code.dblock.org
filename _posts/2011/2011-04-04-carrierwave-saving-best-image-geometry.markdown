@@ -8,7 +8,7 @@ dblog_post_id: 194
 ---
 I recently needed to find out the geometry of the image being uploaded via CarrierWave. Images come in many different sizes and shapes. What I want is to have a "best" image and store its actual size along with my image model.
 
-#### Define a Best Image
+## Define a Best Image
 
 First, lets define a "best" version of the image. That's one that's not being resized, only converted into JPG.
 
@@ -20,7 +20,7 @@ class ArtworkUploader < CarrierWave::Uploader::Base
 end
 ```
 
-#### Fetch Geometry on Upload
+### Fetch Geometry on Upload
 
 Notice the process declarations above: both _resize_to_limit_ and _convert_ are methods of the uploader class. We can therefore add a new _get_geometry_ function and store the geometry of the uploaded image with this version.
 

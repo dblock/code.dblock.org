@@ -9,7 +9,7 @@ dblog_post_id: 99
 
 ![facebook]({{ site.url }}/images/posts/2010/2010-05-07-foodcandycom-implementing-facebook-connect-and-signup-w-graph-api/facebook_35.jpg)
 
-#### Overview
+## Overview
 
 I finally found some time to implement Facebook Connect for foodCandy.com. You can now do the following.
 
@@ -17,7 +17,7 @@ I finally found some time to implement Facebook Connect for foodCandy.com. You c
 - Associate an existing Facebook account with a previously created FoodCandy.com account.
 - Login to FoodCandy with a previously associated Facebook account.
 
-#### Is it hard?
+### Is it hard?
 
 It's not. There's about a day of work for all the items above, including this post.
 

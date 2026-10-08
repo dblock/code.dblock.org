@@ -16,7 +16,7 @@ My new commute takes me downtown 1.8 miles via multiple routes. It usually takes
 
 Following the recommendation from my executive coach I began structuring my walking time.
 
-### Preparing the Walk
+## Preparing the Walk
 
 I tend to be barely awake and rather mechanical about my morning. It usually begins at 6:30am, involves some combination of showering, making the bed, feeding the little people and house animals, starting a dishwasher and making myself a hot or an iced espresso depending on the weather. I try not to check e-mail and concentrate on planning my walk to work.
 

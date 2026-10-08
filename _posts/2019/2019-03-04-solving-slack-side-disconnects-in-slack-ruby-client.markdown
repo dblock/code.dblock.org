@@ -20,7 +20,7 @@ The `Faye::WebSocket::Client` implementation has not seen a similar problem as i
 
 The server-side disconnects had started happening without any code changes, so naturally I assumed this was new behavior at Slack and opened a ticket on June 13. Slack quickly looped in [@aoberoi](https://github.com/aoberoi) from the SDKs team to help, but he found nothing wrong on the Slack side.
 
-### Bandaids
+## Bandaids
 
 To relieve the immediate problem I stuck a restart into my bots (eg. [slack-strava@bc29324](https://github.com/dblock/slack-strava/commit/bc293248bae678dd9299b1d2888443adedae4da8)) and began seeing about a dozen of these server-side disconnects every hour.
 

@@ -14,7 +14,7 @@ Recruiting is broken and a plethora of startups are attempting to fix it with be
 
 To fix the problem we must replace the recruiters that suck by recruiters that don't, with only the candidate's best interest in mind. This is not a problem of tools. We must replace recruiters with _ourselves_.
 
-#### Building Industry Relationships
+## Building Industry Relationships
 
 Engineering doesn't happen in a vacuum behind closed doors anymore. Deliberately maintaining long lasting relationships with other technologists is part of your job.
 
@@ -24,7 +24,7 @@ For me, being deliberate about building industry relationships means that in eve
 
 I don't want anything from these connections except an opportunity to learn from them and to refer engineers to them.
 
-#### Opening Your Doors
+### Opening Your Doors
 
 When I worked at Microsoft my manager used to talk about an "open door policy". Everyone literally had a small personal office and keeping the door open meant allowing anyone to walk in and talk to you. Today I still keep a wide open virtual door.
 

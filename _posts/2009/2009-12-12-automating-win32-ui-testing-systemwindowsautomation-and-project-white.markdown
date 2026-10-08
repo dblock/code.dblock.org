@@ -10,7 +10,7 @@ Just when I thought things were well under control in [dotNetInstaller](https://
 
 It's a great example of total failure. Something has to be done.
 
-### Executing the Application
+## Executing the Application
 
 The first part of testing a UI is being able to execute and shutdown the application. Fortunately .NET has a very usable model for this.
 

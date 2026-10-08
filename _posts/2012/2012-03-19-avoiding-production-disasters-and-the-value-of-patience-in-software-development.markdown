@@ -8,7 +8,7 @@ dblog_post_id: 327
 ---
 I am not a patient person. But years of software practice have taught me how to take my time while coding or how to, otherwise, remove time from the equation.
 
-#### Manual Tasks Become Features
+## Manual Tasks Become Features
 
 Otherwise known as _process becomes automation_.
 
@@ -22,7 +22,7 @@ Instead, transform any manual task into a feature. In the Ruby world we write Ra
 
 The cost of transforming a task into a feature is about half a day of work. But it's still less than one production disaster for every 100 such instances.
 
-#### Automated Tasks Become Business Logic with Tests
+### Automated Tasks Become Business Logic with Tests
 
 Automation is good, but testing is better. Consider the following task that sends some kind of reminder e-mail.
 

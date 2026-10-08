@@ -13,7 +13,7 @@ I've recently had to deal with writing Windows event log entries in Java, part o
 
 Let's read the Windows event log in Java with [JNA](https://github.com/twall/jna).
 
-#### I Want Candy
+## I Want Candy
 
 I certainly don't want to deal with the actual event log in my code - I'd like to be able to write something like this.
 
@@ -30,7 +30,7 @@ while(iter.hasNext()) {
 
 If you don't care about how it's implemented, get the latest JNA build (this code will ship in JNA 3.2.8) and just use it. Otherwise keep reading.
 
-#### Reading Events
+### Reading Events
 
 Let's step back and examine the Win32 API for events. The first call opens and closes an event log. An event log lives on a certain machine (null for current) and has a name (eg. _Application_ or _System_).
 

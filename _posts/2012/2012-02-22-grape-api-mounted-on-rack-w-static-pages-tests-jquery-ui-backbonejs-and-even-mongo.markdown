@@ -8,7 +8,7 @@ dblog_post_id: 318
 ---
 Expanding from my [previous post](https://code.dblock.org/grape-api-mounted-on-rack-w-static-pages) on a Grape API mounted on RACK.
 
-#### Refactoring the Application Instance
+## Refactoring the Application Instance
 
 Instead of sticking all of the Rack application code into _config.ru_, lets build a cleaner _Acme::App _(in [app/acme_app.rb](https://github.com/dblock/grape-on-rack/blob/master/app/acme_app.rb)). We're going to drop _Rack::TryStatic_ and build this logic ourselves, since we might need to deal with other error codes than 404 (depending on your URL strategy you may be tripping over a 405). The logic remains the same: we try a bunch of static files and delegate to the API otherwise. You can also build primitive routing instead, so that everything requesting _/api_ goes to the API and everything else goes to _Rack::Static_. Your mileage will vary.
 
@@ -38,7 +38,7 @@ module Acme
 end
 ```
 
-#### RSpec API Tests
+### RSpec API Tests
 
 Now that we have an application class, we can add API and Capybara integration tests. We start with RSpec and Rack test gems in _Gemfile_.
 

@@ -8,7 +8,7 @@ Dries Buytaert recently wrote about [The Third Audience](https://dri.es/the-thir
 
 AI agents prefer clean, structured content over HTML. Markdown is ideal - it's readable, semantic, and free of navigation chrome. So I made this blog serve its source markdown files alongside the HTML.
 
-### How It Works
+## How It Works
 
 For every post like [/2026/01/15/serving-markdown-for-ai-agents.html](/2026/01/15/serving-markdown-for-ai-agents.html), you can now fetch the source at [/2026/01/15/serving-markdown-for-ai-agents.md](/2026/01/15/serving-markdown-for-ai-agents.md).
 

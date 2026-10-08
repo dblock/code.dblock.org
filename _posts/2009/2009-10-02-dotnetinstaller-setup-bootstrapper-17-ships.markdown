@@ -16,6 +16,6 @@ Then I worked on unit testing end-to-end execution scenarios. That was done in .
 
 All-in-all I think more contributors can now jump in and make code changes easily without being scared of breaking everything. Send me some useful patches on CodePlex. Party on.
 
-#### Update (2015)
+## Update (2015)
 
 dotNetInstaller now lives [on Github](https://github.com/dblock/dotnetinstaller).

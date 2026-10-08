@@ -10,7 +10,7 @@ In a previous post I've described how to do [product/build versioning with MSBui
 
 All the projects I work on now have a very simple MSBuild script that allows you to build either Debug or Release, defaulting to Debug for developers. Our CruiseControl configurations build Release. Comes a shared libraries project, which needs to do Debug, Release or both. How can I accomplish this with MSBuild?
 
-### Default Configuration
+## Default Configuration
 
 Let's define a property for the default configuration, ie. when no Configuration is specified on the command line.
 

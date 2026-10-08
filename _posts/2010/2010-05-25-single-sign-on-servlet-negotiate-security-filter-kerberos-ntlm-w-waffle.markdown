@@ -11,11 +11,11 @@ _Jamais deux sans trois._
 
 ![waffle]({{ site.url }}/images/posts/2010/2010-05-25-single-sign-on-servlet-negotiate-security-filter-kerberos-ntlm-w-waffle/waffle_3.jpg)
 
-#### Download
+## Download
 
 Download [Waffle 1.3](https://github.com/dblock/waffle).
 
-#### Configure Tomcat
+### Configure Tomcat
 
 _Copy Files_
 

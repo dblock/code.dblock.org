@@ -10,7 +10,7 @@ I've been wanting to implement a POST protocol for my blog for a while. The urge
 
 The [Atom Publishing Protocol](https://bitworking.org/projects/atom/rfc5023.html) is an application-level protocol for publishing and editing web resources. The protocol is based on HTTP transfer of Atom-formatted representations. The Atom format is documented in the Atom Syndication Format, [RFC-4287](https://tools.ietf.org/html/rfc4287).
 
-### Generating Atom Feeds
+## Generating Atom Feeds
 
 My current blog implementation supports ATOM. This is done by using an asp:Repeater to which I bind a data set.
 

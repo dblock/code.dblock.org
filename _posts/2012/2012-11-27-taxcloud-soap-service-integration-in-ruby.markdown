@@ -12,7 +12,7 @@ I've been working on the the [tax_cloud](https://github.com/txcrb/tax_cloud) gem
 
 This library is also a nice example of a generic SOAP client wrapper in Ruby. I wanted to point out several successful patterns for this integration, which I cannot take credit for, for the most part.
 
-#### Error Handling
+## Error Handling
 
 I borrowed error handling from [@modetojoy](https://twitter.com/modetojoy)'s Mongoid. Today someone said: "I had a bug in a spec and Durran told me how to fix it in an error message." True story. To accomplish this we define a base error that holds the problem, summary and resolution. In tax_cloud's case this is  [TaxCloud::Errors::TaxCloudError](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud/errors/tax_cloud_error.rb) paired with [config/locales/en.yml](https://github.com/txcrb/tax_cloud/blob/master/lib/config/locales/en.yml), a locale file that does the error formatting. There are two things to do in order for the error code to find the message: add the locale file to the load path, in [tax_cloud.rb](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud.rb), and do a bit of formatting with I18n.
 
@@ -46,7 +46,7 @@ Resolution:
 
 Pretty awesome.
 
-#### Safe SOAP Requests
+### Safe SOAP Requests
 
 The tax_cloud gem uses [Savon](https://github.com/savonrb/savon) to make SOAP requests. "Savon" is French for "Soap", which confuses the French speakers like myself trying to explain that SOAP is Savon. Anyway, a client is initialized with its WSDL.
 

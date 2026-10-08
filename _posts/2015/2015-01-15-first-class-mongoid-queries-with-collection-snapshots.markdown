@@ -100,7 +100,7 @@ WidgetsAndGadgets.latest.documents.each do |pair|
 end
 ```
 
-#### Implementation Details
+## Implementation Details
 
 This was a bit tricky to implement. For each collection snapshot we emit a class with a different collection name passed into _store_in_.
 
@@ -132,7 +132,7 @@ The actual implementation memoizes emitted classes and supports other advanced f
 
 Full code for this article can be found [here](https://gist.github.com/dblock/ded50b61db49baf32a8d).
 
-#### Real World Impact
+### Real World Impact
 
 I spent a day incrementally rewriting snapshot queries inside the Core API project at [Artsy](https://www.artsy.net). We have about two dozen snapshot classes. This resulted in about half the code to accomplish the same thing, virtually no spec changes. A very clear win.
 

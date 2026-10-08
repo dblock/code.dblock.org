@@ -6,7 +6,7 @@ tags: [github]
 ---
 Last week I [wrote a tool](/2018/08/15/finding-a-github-users-email-address.html) to find a Github user's e-mail address from their commits. One of the annoyances of the original implementation was the need to manually generate a personal Github access token and store it. However, I've seen other tools (eg. [ghi](https://github.com/stephencelis/ghi)) ask for credentials and store the token in the OSX keychain. How does one accomplish that? We're going to improve a bit upon ghi's code.
 
-### Prompt for a Username and Password
+## Prompt for a Username and Password
 
 Reading a username is fairly straightforward with `$stdin.gets.chomp`. We can improve a bit upon it and fetch it from `git config` instead.
 

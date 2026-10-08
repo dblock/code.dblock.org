@@ -11,7 +11,7 @@ About 15 years ago I began to see how every technical problem was a people probl
 
 In Summer 2019 I left that behind to join AWS in a Principal Engineer, IC role.
 
-### A Career Limiting Move
+## A Career Limiting Move
 
 There are two kinds of comments that I encounter regularly coming from others. The first is that _I stepped down from a very visible and important CTO role into irrelevance, therefore making a career limiting move_ and that _I did an admirable thing by choosing to do what I love, despite making a career limiting move_.
 

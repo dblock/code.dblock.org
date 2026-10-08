@@ -6,7 +6,7 @@ tags: [graphql, ruby]
 ---
 In a [previous post](/2017/10/23/building-and-consuming-a-graphql-api-in-ruby-on-rails.html) I walked you through building and consuming a GraphQL API in Ruby. That was the happy path. In this post we'll generate and handle some errors.
 
-### Errors in a GraphQL API
+## Errors in a GraphQL API
 
 GraphQL APIs can fail in three ways.
 

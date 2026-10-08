@@ -8,11 +8,11 @@ dblog_post_id: 48
 ---
 I've released **VMWareTasks 1.3** for VixCOM 1.6.3 and 1.7.0.
 
-#### Release Notes
+## Release Notes
 
 Build 1.3.27534.0.
 
-#### Features
+### Features
 
 - Added a VMWareComLib and VMWareComTools that expose a full scriptable COM interface.
 - Added a vestris-vmwarecomlib.jar and vestris-vmwarecomtools.jar that exposes a Com4J JNI wrapper for VMWareComLib and VMWareComTools to Java clients.

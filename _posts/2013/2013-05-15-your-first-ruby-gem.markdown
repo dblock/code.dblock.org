@@ -14,11 +14,11 @@ I live-coded a new gem called [Ruby::Enum](https://github.com/dblock/ruby-enum) 
 
 Here's my checklist for creating a new gem.
 
-#### Check the Name
+## Check the Name
 
 Ruby gems are registered with [Rubygems](https://rubygems.org/) and managed in your projects using [Bundler](https://gembundler.com/). Search for the new gem name on Rubygems to make sure it's not taken.
 
-#### Create a Folder
+### Create a Folder
 
 I organize all my code in _source_ and since I often fork code from others to contribute, create a subfolder with the Github username, including mine.
 

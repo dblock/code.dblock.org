@@ -17,7 +17,7 @@ First, a few basics.
 
 By using a directory service, you can simplify applications and their administration by centralizing the storage of shared information. For our purposes such information includes SOAP service URIs. For example, you can find demoService (a previously agreed-upon name of the demo service) at *https://localhost:20080/demo*.
 
-#### Client & Server
+## Client & Server
 
 I picked up [OpenDS](http://web.archive.org/web/20100413222900/http://www.opends.org/), on open-source server from Sun. After a straightforward installation (set _OPENDS_JAVA_HOME_ to a JRE location and run _setup.bat_) I had an LDAP server running as a Windows Service (OpenDS) on port 389. There's a handy _bat\control-panel.bat_ that launches a schema and object browser.
 
@@ -46,7 +46,7 @@ dc: appsecinc
 objectClass: domain, top
 ```
 
-#### The Goal
+### The Goal
 
 Let's create a directory for our SOAP services. The goal is to be able to store a collection of service objects, each containing a well-defined URL and retrieve service URLs using the service names.
 

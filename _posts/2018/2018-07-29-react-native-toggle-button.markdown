@@ -40,6 +40,6 @@ toggleMeeting() {
 <Button onPress={() => this.toggleMeeting()} ... />
 ```
 
-### Code, Tests and Travis CI
+## Code, Tests and Travis CI
 
 The above code is [33-minutes-app@599fd1](https://github.com/33-minutes/33-minutes-app/commit/599fd191ff4e2fef4a9aa5e728d172dcd5290420). I've also setup Travis-CI in [33-minutes-app@7445d1](https://github.com/33-minutes/33-minutes-app/commit/7445d1fa2f1dff57543b9d099ff484d10941f7f8) and have written some tests with [Jest](https://jestjs.io) in [33-minutes-app@b05d45](https://github.com/33-minutes/33-minutes-app/commit/b05d45de4f6d42f8b89148649c81bb6af37d7e9b). Tests work by taking a snapshot of the DOM and comparing the results before and after the button is pressed. In the [next post I will add and remove list items](/2018/07/30/add-remove-list-items-react-native.html).

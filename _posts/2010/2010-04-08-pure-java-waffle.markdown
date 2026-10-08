@@ -13,7 +13,7 @@ I finally got to porting [Waffle](https://github.com/dblock/waffle/) to pure jav
 
 Waffle is a thin interface that simplifies Windows authentication and authorization, therefore providing a practical and workable back-end for NTLM, Negotiate, Kerberos and other [SPNEGOs](https://en.wikipedia.org/wiki/SPNEGO). Here are some scenarios that you can now do without any headache directly in Java.
 
-#### Logon a user: get his local and domain groups
+## Logon a user: get his local and domain groups
 
 This calls Win32 `LogonUser`, examines the user token and extracts all local and domain group memberships from it. This obviously includes nested groups.
 
@@ -38,7 +38,7 @@ BUILTIN\Users (S-1-5-32-545)
 NT AUTHORITY\NETWORK (S-1-5-2)
 ```
 
-#### Active directory: get the list of trusted domains
+### Active directory: get the list of trusted domains
 
 ```java
 IWindowsAuthProvider prov = new WindowsAuthProviderImpl();

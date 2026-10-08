@@ -14,7 +14,7 @@ Incidentally, this concept has additional magical powers that we developed in on
 
 Asking the security context about group memberships is hence is the "correct" way of retrieving this information. I've seen many painfully complicated code that attempt to lookup user group memberships by enumerating groups, first local, then domain and even tries to get nested ones. This is a difficult process that almost never leads to correct results, especially in scenarios with Active Directory trusts.
 
-#### Currently Logged-On User: security token
+## Currently Logged-On User: security token
 
 What we want is a security token for the current thread or, if that doesn't exist, of the current process. This is the token that gives you access to the information such as which user created the thread or process (self) and hence which security groups are attached to it.
 
@@ -46,7 +46,7 @@ public interface Advapi32 extends W32API {
 }
 ```
 
-#### Currently Logged-On User: security groups
+### Currently Logged-On User: security groups
 
 Now that we're holding a security token, we can get the security groups. This is done with Advapi32.dll's GetTokenInformation. The latter is a little tricky because the Win32 API is capable of retrieving all kinds of token information and takes a pointer to a buffer in memory. But in Java we want to get strongly typed Structure objects back. JNA simplifies this and makes pointer and structure virtually interchangeable by doing all the marshalling logic under the hood.
 

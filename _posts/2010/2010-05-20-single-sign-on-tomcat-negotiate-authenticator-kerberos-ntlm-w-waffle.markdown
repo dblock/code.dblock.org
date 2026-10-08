@@ -10,11 +10,11 @@ dblog_post_id: 103
 
 I've added a Tomcat Negotiate (Kerberos + NTLM) authenticator to [Waffle](https://github.com/dblock/waffle) 1.3 for Tomcat 6. Here's how to use it.
 
-#### Download
+## Download
 
 Download [Waffle 1.3](https://github.com/dblock/waffle/). The zip contains _Waffle.chm_ that has the latest version of this tutorial.
 
-#### Configure Tomcat
+### Configure Tomcat
 
 _Copy Files_
 

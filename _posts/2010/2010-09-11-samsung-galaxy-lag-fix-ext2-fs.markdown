@@ -11,11 +11,11 @@ dblog_post_id: 122
 
 I recently got rid of my Windows mobile phone and upgraded to an Android Samsung Galaxy S (I have T-Mobile). After a few days of installing all my new favorite apps, including _Daily Dilbert_, it was time to do pass onto more interesting things.
 
-#### As usual, all these things will potentially brick your phone. Don't do it.
+## As usual, all these things will potentially brick your phone. Don't do it.
 
 Okay, now that decided to do it anyway ...
 
-#### Rooting the Phone
+### Rooting the Phone
 
 I did this manually, but I realize now that there are some nice utilities to help you. Notably see the one-click lag fix further. This gives you super-user access for those applications that require it. It also just feels plain good to play G.
 

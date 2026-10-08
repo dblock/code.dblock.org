@@ -14,11 +14,11 @@ I feel the same thing about feature branches as [Martin Fowler](https://www.thou
 
 Long running feature branches are a result of human, cultural and organizational behaviors. While I sometimes fail to, here are a few ways to avoid them.
 
-#### Make Everything an Experiment
+## Make Everything an Experiment
 
 From the tech point of view, experiments require a bit of mechanics with site-wide feature toggles and per-user labs. Features debut being turned off for all users. But the harder part to achieve is where developers feel very comfortable pushing a half-baked feature, experiment or idea into production, whether it's very mature or a half-baked prototype. Remove friction with tools, then make sure everyone on your team deploys to production in such a way that it's a low stress operation.
 
-#### Rely 100% on Automation
+### Rely 100% on Automation
 
 In order for everyone not to feel anxious pushing that deploy button three times a day with half baked experiments, the production parts of the software must be fully tested. Can my users login to the site? I am 100% sure that the answer is yes. Write tests for your Easter eggs, too. Systematic automation of regression tests for any bugs found in production is good way to ensure you don't mess up twice.
 

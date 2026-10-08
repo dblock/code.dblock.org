@@ -8,7 +8,7 @@ Last week I joined the [OpenSearch Team](https://opensearch.org/) at AWS, a comm
 
 Security is always our top priority at AWS, so I had to learn some new development best practices in this area. One of my colleagues, and Apache contributor [@nknize](https://github.com/nknize) has been signing his commits with GPG. I decided to add my work e-mail address to my existing GPG key, and setup git signing as well.
 
-### Generating Keys
+## Generating Keys
 
 If you don't already have a key, install [gpg2](https://gnupg.org/download/) (e.g. `brew install gpg`), and follow the instructions in [this doc](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-gpg-key). It will tell you to run `gpg --full-generate-key`.
 

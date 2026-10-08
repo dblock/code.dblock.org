@@ -34,6 +34,6 @@ Build 2.0.81.0
 #272583: Added support for Windows 8.
 ```
 
-#### Update (2015)
+## Update (2015)
 
 Find dotNetInstaller [on Github](https://github.com/dblock/dotnetinstaller).

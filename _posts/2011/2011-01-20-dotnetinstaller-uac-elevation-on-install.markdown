@@ -10,7 +10,7 @@ Following a much pleasing trend of developers contributing major functionality t
 
 Until now you had to mark your Setup.exe to elevate in the manifest and the user was prompted to elevate upfront. This is not the default behavior of MSI installers and is not an ideal user experience. It also creates a major problem for installers that need to reboot in the middle, as Windows Defender will block any process that tries to elevate while auto-starting. Both of these issues are resolved.
 
-#### How does it look?
+## How does it look?
 
 Check out the GUI from the sample packaged setup.
 
@@ -18,7 +18,7 @@ Check out the GUI from the sample packaged setup.
 
 Note the elevation icon next to the install button!
 
-#### How does it work?
+### How does it work?
 
 dotNetInstaller will check whether you're running a compatible operating system. If you're on Windows XP, it will require the user to have administrative rights and fail with a message if those aren't present. On Vista and Windows 7, it will re-launch an elevated version of itself. Although many samples are available on the internet, the code was quite involved – thanks Neil!
 

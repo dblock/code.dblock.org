@@ -12,12 +12,12 @@ I've often faced puzzling integrated authentication failures on Windows with [WA
 
 Fortunately this is open-source software and where I fail others can pickup the ball. A thread had a Negotiate problem that smelled pretty bad, so I basically told @dorlov that he's on his own and "good luck with that". Russians don't seem to give up, so he solved his problem and assembled a few nice links that will help you troubleshoot issues with Kerberos and NTLM.
 
-#### Troubleshooting Kerberos
+## Troubleshooting Kerberos
 
 - [Enabling Kerberos Logging](https://support.microsoft.com/?id=262177)
 - [Troubleshooting Kerberos Delegation](https://support.microsoft.com/en-us/help/907272/kerberos-authentication-and-troubleshooting-delegation-issues)
 
-#### Troubleshooting NTLM
+### Troubleshooting NTLM
 
 - [Enabling NTLM Logging](https://blogs.technet.com/b/askds/archive/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7.aspx)
 

@@ -6,7 +6,7 @@ tags: [graphql, ruby]
 ---
 In the past few weeks I've convinced myself that GraphQL can work well for any micro-service. This post is a full walk-through of getting a working GraphQL API on Ruby on Rails. This should help you get started, especially if you've never written a line of GraphQL in your life. The code for this post is [dblock/graphql-invoices](https://github.com/dblock/graphql-invoices).
 
-### Prerequisites
+## Prerequisites
 
 Make a bare Rails API app with `rails new --api`, get RSpec and RuboCop. See [@c26b0e18](https://github.com/dblock/graphql-invoices/commit/c26b0e18ca1daea4d4754a520c0b2053f5f8dc10).
 

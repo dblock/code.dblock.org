@@ -9,7 +9,7 @@ tags: [ai, ruby, strava, microsoft-teams]
 
 ![Strata posting a Strava activity to a Teams channel](/images/posts/2026/2026-09-16-porting-strata-to-microsoft-teams-entirely-with-ai/activity-card.png)
 
-### The 2023 Baseline
+## The 2023 Baseline
 
 [discord-strava](https://github.com/dblock/discord-strava)'s git history is a fair record of how long a manual port takes. The first commit, "Initial fork from slack-strava," landed July 30, 2023. "Most interactions working" was three days later. Getting install/help/error-handling polish took through August 20:
 

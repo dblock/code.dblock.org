@@ -14,13 +14,13 @@ Your scope of influence in your first piece of software is a function. You are p
 
 I am somewhere in a shade of green in the graphic above. Crossing the lines between these circles is a difficult affair. If that is part of your goals, I want to suggest a few practical ways of expanding your scope of influence. Circles, that I feel I have crossed.
 
-#### From Component to Project
+## From Component to Project
 
 Your component can be thrown away and replaced by another in no time. So can you. In order to cross this chasm, your commits must have global project impact.
 
 Start with trivial tasks of standardizing the number of white spaces or tabs or by removing trailing spaces after meaningful code. Touch as many files as you can. I used to make commits of thousands of files because I was irritated by the lack of periods in code comments. Am I crazy? The truth is that I was terrified about modifying so many files at once and that prevented me from refactoring large chunks of architecture that was very broken. So changing whitespaces or adding periods was a useless exercise that helped me. When you're comfortable with modifying code left and right, find a major piece of infrastructure to rip out and replace by something better. I remember swapping a C++ core library from underneath a huge system, a seminal moment.
 
-#### From Project to Company
+### From Project to Company
 
 Nobody knows who you are until you've built something that many people want. In order to cross this chasm, seek a need that goes beyond your team.
 

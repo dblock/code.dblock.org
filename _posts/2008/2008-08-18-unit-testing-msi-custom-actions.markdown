@@ -6,7 +6,7 @@ date: 2008-08-18 03:00:00
 tags: [wix]
 dblog_post_id: 7
 ---
-### Prologue
+## Prologue
 
 I've been doing a lot of [Wix](https://web.archive.org/web/20080818000000/https://wixtoolset.org/) lately. Actually for the past six years or so: I was a believer since my last couple of years at [The Evil Empire](https://www.microsoft.com). [Wix](https://web.archive.org/web/20080818000000/https://wixtoolset.org/) is easy, but custom actions aren't so much. Unit testing custom actions is the topic of this post.
 

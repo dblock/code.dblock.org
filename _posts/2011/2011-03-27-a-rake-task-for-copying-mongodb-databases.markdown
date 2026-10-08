@@ -14,13 +14,13 @@ The entire continuous integration and continuous deployment process looks like t
 
 The interesting part is that we copy the production database to staging before code is deployed so that we can see the results of automated migrations in staging. If things go south, we can make code changes and try again with a clean copy of production data.
 
-#### Push and Pull
+## Push and Pull
 
 One existing solution is data push and pull implemented [here](https://www.theirishpenguin.com/2011/01/20/push-and-pull-data-between-your-local-mongodb-and-heroku-or-mongohq.html). But looking at the source code, it's a row-by-row copy! Ouch.
 
 Let's write a task that will copy one MongoDB database to another using something more efficient.
 
-#### Reading Heroku-San Configuration
+### Reading Heroku-San Configuration
 
 We're using [Heroku-san](http://web.archive.org/web/20110704143857/http://jqr.github.com/2010/08/27/easy-heroku-deploys-with-heroku-san.html), so we've got a _heroku.yml_ sitting in the config folder with two values for MONGOHQ_URL under _staging_ and _production_. We'll load the file with YAML, fetch _MONGOHQ_URL_ and parse it into parts. For those using regular expressions to parse MongoHQ urls, pay attention: everything except the database name is just a regular piece of a URL.
 

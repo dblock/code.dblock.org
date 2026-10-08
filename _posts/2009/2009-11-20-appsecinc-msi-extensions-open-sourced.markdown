@@ -10,7 +10,7 @@ I am pleased to announce the open-sourcing of [AppSecInc. MSI Extensions](https:
 
 AppSecInc. MSI Extensions is a collection of MSI custom actions and WIX extensions that extend Windows installer, originally developed by [Application Security Inc.](http://web.archive.org/web/20091124224338/http://www.appsecinc.com/). for a large enterprise product, and now open-sourced under the Eclipse Public License. The project grew incrementally implementing everything that wix didn't have out of the box. Code is fully unit-tested.
 
-#### Wix Extensions
+## Wix Extensions
 
 - System Tools: deals with copying, moving, deleting files out of sequence, compare versions, execute commands, process template files, copy registry keys, etc.
 - Java Tools: deals with jar and unjar.
@@ -18,7 +18,7 @@ AppSecInc. MSI Extensions is a collection of MSI custom actions and WIX extensio
 - User Privileges: deals with local users and groups.
 - Common UI: dialogs for installing Windows services and databases with credentials.
 
-#### Immediate Custom Actions
+### Immediate Custom Actions
 
 - Manipulating files, folders, registry, services.
 - String template and regex processing.

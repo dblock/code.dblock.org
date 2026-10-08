@@ -8,7 +8,7 @@ I always hated running. And now I have a [open-source running blog](https://run.
 
 These are the implementation details.
 
-### Jekyll and Github Pages
+## Jekyll and Github Pages
 
 I started with a basic Jekyll + Github Pages blog like the one you're looking at now. You can read about the basic setup in [this post](/2015/01/07/the-new-code-dblock-dot-org.html). I copied everything from this blog to the new one, deleted all content and customized some logos and colors, mostly in `_config.yml`.
 

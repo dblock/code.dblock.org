@@ -9,11 +9,11 @@ dblog_post_id: 119
 
 Since the day I mentioned that I was working on an HTML-based bootstrapper, I began getting a regular stream of e-mails asking about my progress. I even get phone calls. It's a very similar experience on the WIX mailing list where a question pops up about Burn, the WIX bootstrapper, now years in the making. So here it is, you can stop leaving me voicemails now and start playing with the first well-featured builds.
 
-#### Motivation
+## Motivation
 
 We want a bootstrapper with as much control of the UI as humanly possible.
 
-#### Get It
+### Get It
 
 Download the [latest dotNetInstaller](https://github.com/dblock/dotnetinstaller). You'll find _htmlInstaller.exe_ in the distribution. This is a UI driver based on [HTMLayout](https://www.terrainformatica.com/) and behaves very much like the existing dotNetInstaller.exe. These two now share the same execution engine and differ mostly in UI. Both support chained configurations, downloads, etc.
 

@@ -14,7 +14,7 @@ Here's our new home. And, naturally, it's on Github. Scroll down on that page a 
 
 [https://github.com/twall/jna](https://github.com/twall/jna)
 
-#### The long story ...
+## The long story ...
 
 We were not unhappy with the old Java.net site, it worked fine and while it didn't offer amazing collaboration features, it looked pretty good and lots of problems were ironed out over the hundreds of years of development on the site. People submitted patches and all went well. Then someone decided that it wasn't good enough and created project Kenai. But it seems that the Kenai people worked in some kind of bubble and produced what Java.net is today, a crappy CMS. We [really tried to make it work for us](/jna-coming-back-to-life-on-kenai-and-a-word-on-github), but it's just not worth our time.
 

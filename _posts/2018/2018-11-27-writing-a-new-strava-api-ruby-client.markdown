@@ -16,7 +16,7 @@ The rest of this post is about implementation details.
 
 This is not my first API client rodeo, following the very popular [slack-ruby-client](https://github.com/slack-ruby/slack-ruby-client) and a newer [iex-ruby-client](https://github.com/dblock/iex-ruby-client), so you can be sure I integrated many of the lessons learned into this work. If you're building a Ruby client for an API, I strongly encourage you to reuse this as a boilerplate.
 
-### Basics
+## Basics
 
 I always start with a [README.md](https://github.com/dblock/strava-ruby-client/blob/master/README.md), [LICENSE.md](https://github.com/dblock/strava-ruby-client/blob/master/LICENSE.md), [CONTRIBUTING.md](https://github.com/dblock/strava-ruby-client/blob/master/CONTRIBUTING.md), [CHANGELOG.md](https://github.com/dblock/strava-ruby-client/blob/master/CHANGELOG.md) and [RELEASING.md](https://github.com/dblock/strava-ruby-client/blob/master/RELEASING.md). Future updates will include [UPGRADING.md](https://github.com/slack-ruby/slack-ruby-client/blob/master/UPGRADING.md).
 

@@ -40,7 +40,7 @@ curl --insecure -u admin:admin https://localhost:9200
 {% endraw %}
 ```
 
-### The Easy Way
+## The Easy Way
 
 Users can change passwords using the [security plugin REST API](https://opensearch.org/docs/latest/security/access-control/api/). We can examine the `admin` user.
 

@@ -26,7 +26,7 @@ In alphabetical order.
 - [Weaviate](#weaviate)
 - [Others](#others)
 
-### Chroma
+## Chroma
 
 [Chroma](https://www.trychroma.com/) is an AI-native open-source embedding database. You can clone Chroma from GitHub and run it locally.
 

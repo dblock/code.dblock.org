@@ -8,7 +8,7 @@ I recently gave a talk at the "ETH Meets New York" Blockchain Symposium with a c
 
 <iframe width="416" height="234" src="https://www.video.ethz.ch/etc/designs/mmp/paella/video.html?id=26c6cde8-7239-439b-bfc3-9a96f84e49ca" frameborder="0" allowfullscreen></iframe>
 
-### What is Bitcoin and Blockchain?
+## What is Bitcoin and Blockchain?
 
 Bitcoin is a coin, aka "money". Blockchain is a technology that enables moving coins around.
 

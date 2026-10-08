@@ -10,7 +10,7 @@ A resume is what you did, it's not who you are.
 
 In the past few years I've collected dozens of resumes from junior Engineering candidates and have provided written feedback to those who wanted to improve. I found that the vast majority of resumes have similar anti-patterns, repeating mistakes that are a quick turn off for any hiring manager. If you are in school or a soon to be graduating computer science major and don't want your resume to go to the garbage, read the following 5 anti-patterns.
 
-#### Objectives Are Too Broad
+## Objectives Are Too Broad
 
 ![]({{ site.url }}/images/posts/2013/2013-03-25-5-anti-patterns-in-a-college-or-junior-engineers-resume/image_14.jpg)
 
@@ -18,7 +18,7 @@ _"To obtain a full time position that matches my enthusiasm, constant effort and
 
 An objectives paragraph creates unnecessary barriers in hiring you, at best. The above example limits you to full time offers, then just moves some air around. Don't limit your search to full time positions, especially if you're trying to relocate. Most companies I know will extend a full time offer if you do an amazing job as an intern. Remove this text and repeat after me: _"Seeking a paid internship or full time programming position with an experienced Engineering team."_
 
-#### Github is Your New Resume
+### Github is Your New Resume
 
 _"I am an open-source contributor __..."_
 

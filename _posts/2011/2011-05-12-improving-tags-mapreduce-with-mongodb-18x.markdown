@@ -74,6 +74,6 @@ end
 
 Full implementation [here](https://gist.github.com/968519). Copy/paste and rename _TaggedModel_ to your model that contains tags. Maybe time to make a library out of this?
 
-#### Update (2015)
+## Update (2015)
 
 Check out the [mongoid-tag-collectible](https://github.com/dblock/mongoid-tag-collectible) gem.

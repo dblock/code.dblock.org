@@ -25,7 +25,7 @@ This is how I organize my source code.
 |           `-- dblock
 ```
 
-### A Source Directory
+## A Source Directory
 
 All my source code lives in `~/source`. It's lowercase and sometimes I want to make it `~/Source` like `~/Movies`, but I dislike capitalizing words that are not complete sentences.
 

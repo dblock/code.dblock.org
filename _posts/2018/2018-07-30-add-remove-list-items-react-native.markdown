@@ -60,7 +60,7 @@ export default class Main extends React.Component {
 }
 ```
 
-### Adding Meetings
+## Adding Meetings
 
 A meeting has a start and an end date, so we will also need to remember when a meeting started.
 

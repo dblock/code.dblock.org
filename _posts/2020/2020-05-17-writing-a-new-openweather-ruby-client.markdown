@@ -49,6 +49,6 @@ data.current # => OpenWeather::Models::OneCall::CurrentWeather
 data.hourly # => Array[OpenWeather::Models::OneCall::HourlyWeather]
 ```
 
-### Links
+## Links
 
 * [open-weather-ruby-client](https://github.com/dblock/open-weather-ruby-client)

@@ -8,7 +8,7 @@ I've recently [moved this blog to Jekyll](/2015/01/07/the-new-code-dblock-dot-or
 
 The landing [www.dblock.org](https://www.dblock.org) site is also a Jekyll site.
 
-#### Include the Redirect Gem
+## Include the Redirect Gem
 
 Include the _jekyll-redirect-from_ gem in __config.yml_.
 
@@ -18,7 +18,7 @@ gems:
 
 ```
 
-#### Create Redirect Pages
+### Create Redirect Pages
 
 The _jekyll-redirect-from_ library supports _redirect_from_ and _redirect_to_. It creates a file for the source path and a page with a redirect to the destination. Since anything that is not prefixed by an underscore is copied as is to the Jekyll __site_ folder, we can just create a file for each URL in a new _redirect_ directory. For example, here's my _redirect/your-commute-is-killing-you-move-to-new-york.markdown_ file.
 

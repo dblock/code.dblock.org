@@ -11,11 +11,11 @@ dblog_post_id: 105
 
 We used to have code that checked whether a username/password was valid, then tried to enumerate user groups in Active Directory. That didn't work for nested groups, domains with trusts and many other scenarios in-between. Then we wrote what eventually became Waffle. This week-end I added a JAAS LoginModule to Waffle 1.3. You can use this with anything that supports JAAS, such as Tomcat for BASIC, DIGEST or FORMS authentication. This is actually a simple demonstration (as opposed to the Single Sign-On Negotiate/NTLM/Kerberos valve) of Waffle and is how we originally used it. Here's how.
 
-#### Download
+## Download
 
 Download [Waffle 1.3](https://github.com/dblock/waffle). The zip contains _Waffle.chm_ that has the latest version of this tutorial.
 
-#### Configure Tomcat
+### Configure Tomcat
 
 _Copy Files_
 

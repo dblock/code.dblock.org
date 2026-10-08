@@ -8,7 +8,7 @@ I haven't written any C++ since 2009, or [cross-platform C++ since the 90s](http
 
 And so, having found a spare half hour, I decided to build a "hello world" [C++ sample for AWS Data Exchange](https://github.com/aws-samples/aws-dataexchange-api-samples/pull/33). It was more challenging than I would have liked.
 
-### Building the AWS SDK for C++
+## Building the AWS SDK for C++
 
 I began with [Getting Started Using the AWS SDK for C++](https://docs.aws.amazon.com/sdk-for-cpp/v1/developer-guide/getting-started.html) which links to [Setting Up the AWS SDK for C++](https://docs.aws.amazon.com/sdk-for-cpp/v1/developer-guide/setup.html). Since I'm using a Mac, I had to build the SDK from source.
 

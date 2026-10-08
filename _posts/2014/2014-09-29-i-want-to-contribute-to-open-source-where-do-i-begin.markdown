@@ -8,11 +8,11 @@ dblog_post_id: 423
 ---
 I get this question a lot. I turned to my friends, [HN](https://news.ycombinator.com/item?id=8361790) and [Twitter](https://twitter.com/dblockdotorg/status/514789874155945986) for some advice.
 
-#### Step 1: Start by using open-source.
+## Step 1: Start by using open-source.
 
 This is great advice. Before writing anything in your application, see if there's an open-source implementation for it out there. This will make your code simpler, cleaner and more maintainable, or at least will expose you to the incredible amount of software written by very smart people out there.
 
-#### Step 2: Start by fixing typos in someone else's README.
+### Step 2: Start by fixing typos in someone else's README.
 
 The hardest part in contributing to open-source is making the initial effort. See a typo? Fork the repo, fix it, make a [pull request](https://help.github.com/articles/using-pull-requests). This exercises the contributing workflow and creates muscle memory.
 

@@ -30,7 +30,7 @@ calc 'gamma(10) - 9!'
 
 Check out the [docs/](https://github.com/dblock/excalc-rs/blob/master/docs/README.md).
 
-### The 1996 Original
+## The 1996 Original
 
 ![Expression Calculator 2.43 for Windows](/images/posts/2026/2026-09-24-porting-my-1996-pascal-calculator-to-rust/calc.jpg)
 

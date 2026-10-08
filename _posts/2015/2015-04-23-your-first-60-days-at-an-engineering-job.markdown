@@ -6,7 +6,7 @@ tags: [people, teams, learning]
 ---
 You have recently graduated and looked for work. You put together a good resume and e-mailed it around. You got some interest from a few tech companies and maybe programming homework, followed by a technical phone screen. You did well and got invited to an interview! After several hours of <strike><a href='/2012/12/08/five-ways-to-torture-candidates-in-a-technical-interview.html'>whiteboard torture</a></strike> inspired conversations, lunch and references you were offered your first Engineering job and you have accepted. You're starting in two weeks. Congratulations!
 
-### Now what?
+## Now what?
 
 First, _do nothing_. Take those two weeks to relax and catch up on your non-technical reading. Lie on the beach. Have a drink. Some managers will offer you a few possible things to do (usually reading or to brush up on some particular language), accept these suggestions eagerly, but don't ask for them. Don't feel obligated to do anything. Personally, I expect my new hires to arrive rested and refreshed on their first day of work - if I wanted them to start earlier, I would have asked.
 

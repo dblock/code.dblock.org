@@ -8,7 +8,7 @@ I've made [too many Slack bots](/tags/slack/) since 2015, so I decided to try so
 
 My pet project is called *33 Minutes*, and it's a "Strava for meetings", starting with a basic weekly meeting budget tracker.
 
-### Getting Started with React Native?
+## Getting Started with React Native?
 
 I was told to use [Expo](https://expo.io) and to bootstrap the project with [create react native app](https://github.com/react-community/create-react-native-app). Expo is a _free and open source toolchain built around React Native to help you build native iOS and Android projects using JavaScript and React_.
 

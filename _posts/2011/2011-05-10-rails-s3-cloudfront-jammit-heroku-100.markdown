@@ -10,11 +10,11 @@ When someone says that you need a "100 grams" to figure something out, it means 
 
 First some background.
 
-#### Syntactically Awesome Stylesheets (SASS) to CSS
+## Syntactically Awesome Stylesheets (SASS) to CSS
 
 [SASS](https://sass-lang.com/) is a way to author CSS. We write all stylesheets using SASS and place them into _app/stylesheets_. These are compiled with [compass](https://web.archive.org/web/20180315223143/http://compass-style.org/) and placed into _public/stylesheets_. Note that stylesheets often reference images in various tags, such as _background_. Those images in our system are added to _public/assets/images_. There are a few good articles that dwell into SASS itself, including [this one](https://net.tutsplus.com/tutorials/html-css-techniques/using-compass-and-sass-for-css-in-your-next-project/).
 
-#### CoffeeScript to JavaScript
+### CoffeeScript to JavaScript
 
 [CoffeeScript](https://coffeescript.org/) is a language that compiles into JavaScript. We use [Backbone.js](https://backbonejs.org/) heavily and write all javascript in coffee. Our files live in `app/coffeescripts`. CoffeeScript is compiled with [barista](https://github.com/Sutto/barista) and the output is placed into `public/javascripts`.
 

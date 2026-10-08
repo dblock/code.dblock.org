@@ -10,7 +10,7 @@ I announced in a previous post that AppSecInc. has open-sourced its Wix extensio
 
 In this post I'll show you how to get started with installing an MSSQL database in just a few lines of code.
 
-#### Adding References
+## Adding References
 
 First, you must add a reference to the WixDataSource extension to your Wix project and include the DataSource extension's namespace into the Wix XML declaration.
 
@@ -19,7 +19,7 @@ First, you must add a reference to the WixDataSource extension to your Wix proje
  xmlns:DataSource="https://schemas.appsecinc.com/wix/DataSourceExtension">
 ```
 
-#### ODBC Connection
+### ODBC Connection
 
 To connect to a database you need an ODBC connection. For now, we don't have `ODBC_CONNECTION_STRING` defined, so each implementation that uses this connection will need (and does) supply its own default. For example, SQL server extensions assume that the default connection string refers to a local database with Windows authentication.
 

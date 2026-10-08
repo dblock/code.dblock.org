@@ -13,6 +13,6 @@ The  **File Resource Management Library** is a managed C# framework that enumera
 - CodePlex ... Update: [GitHub](https://github.com/resourcelib/resourcelib)
 - [CodeProject Article](https://www.codeproject.com/Articles/27373/File-Resource-Management-Library-NET-)
 
-#### Update (2015)
+## Update (2015)
 
 ResourceLib now lives <a href='https://github.com/dblock/resourcelib' target='_blank'>on Github</a>.

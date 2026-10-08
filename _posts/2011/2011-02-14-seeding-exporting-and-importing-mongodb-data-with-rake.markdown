@@ -14,7 +14,7 @@ I tried _mongodump_ and _mongorestore_. Those are straightforward tools that let
 
 I want to do this the "Rails Way" by invoking a single _rake_ command that imports and exports Mongo data in any of my environments. The following is based on [this post](https://joshowens.dev/grow-your-app-from-seeds), but we're doing this with MongoDB and will take it a little further. We'll put our tasks in _lib/tasks/db_import_export.rake_.
 
-#### Exporting Data
+## Exporting Data
 
 Given a set of objects, we can serialize them to a file using JSON. We'll give the model name and a file as a parameter, fetch all objects and write them to a file in JSON format.
 
@@ -32,7 +32,7 @@ task :export, [:model, :filename] => :environment do |t, args|
 end
 ```
 
-#### Importing Data
+### Importing Data
 
 Importing data is the inverse operation. We have to clear the model data – I couldn't figure out how to instantiate an object that exists and resave it with changes [[thread](https://groups.google.com/group/mongoid/browse_thread/thread/0c28c14d0c1c48cd#)].
 

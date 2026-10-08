@@ -10,7 +10,7 @@ You love markdown? We do too.
 
 I'm going to show you how to enable dynamic authoring of mail templates in your Rails app in [Markdown](https://daringfireball.net/projects/markdown/). This includes [Devise](https://github.com/plataformatec/devise) mailers. You can already customize templates with files in _app/views_, but we'll take an extra step and expose an editable model in the database and allow our application administrators to author and edit templates in Markdown.
 
-#### Template Model
+## Template Model
 
 Let's add a _MailTemplate_ that can render itself to HTML using [Sanitize](https://github.com/rgrove/sanitize/) and [RDiscount](https://github.com/rtomayko/rdiscount). The class name will be the mailer and the method name, the mail action.
 
@@ -116,7 +116,7 @@ If you didn't request a password reset, please ignore this email.
 Your password won't change until you access the link above and create a new one.
 ```
 
-#### Overriding Devise
+### Overriding Devise
 
 We want to override the Devise mailer and fetch the mail template, if available. Add _app/mailers/devise_mailer.rb_. The mailer will fetch a template from _Mailers_ and render it.
 

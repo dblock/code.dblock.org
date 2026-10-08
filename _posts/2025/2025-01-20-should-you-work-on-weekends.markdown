@@ -8,7 +8,7 @@ Should you work on week-ends?
 
 _tl;dr Only 2% of my paid work was accomplished on weekends, which matches my opinion that you should not._
 
-### Collecting Data
+## Collecting Data
 
 First, let's try to use data and find out whether I actually work on week-ends. I've contributed to the open-source OpenSearch since 2021 as part of my day job, so I tried looking through my GitHub commits, but had hard time excluding forks. I settled on fetching pull requests. The following query collects my PRs for the first two weeks of 2025.
 

@@ -24,7 +24,7 @@ Bundler could not find compatible versions for gem "bundler":
 
 I decided to use default Bundler as much as possible, and run `gem install bundler -v 1.17.3` for a certain version of Rails.
 
-### Use `if:`
+## Use `if:`
 
 My first solution was to use an `if:` step.
 

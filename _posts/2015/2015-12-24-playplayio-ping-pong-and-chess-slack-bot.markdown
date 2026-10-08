@@ -12,7 +12,7 @@ I've launched [playplay.io](https://www.playplay.io), based on my open-source [s
 * Follow [@playplayio](https://twitter.com/playplayio) on Twitter for updates.
 * Sign up your team for free [on playplay.io](https://www.playplay.io).
 
-### Implementation Details
+## Implementation Details
 
 * [PlayPlay.io on Github](https://github.com/playplayio), [you can help](https://github.com/playplayio/playplay.io/labels/you%20can%20help).
 * [Slack Bot Real Time Messaging API Integration in Ruby Tutorial](/2015/04/28/slack-bot-real-time-messaging-api-integration-tutorial.html)

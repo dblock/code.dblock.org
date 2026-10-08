@@ -9,7 +9,7 @@ The [slack-ruby-client](https://github.com/slack-ruby/slack-ruby-client) library
 
 ![Generated CHANGELOG entries grouped by PR](/images/posts/2026/2026-08-11-generating-ai-descriptions-of-automated-pull-requests/changelog.png)
 
-### The Idea
+## The Idea
 
 The workflow already computes a diff before opening the pull request. Instead of a boilerplate commit message, we pipe that diff through an LLM and ask it to summarize what changed, then use the response as the commit message and PR body.
 

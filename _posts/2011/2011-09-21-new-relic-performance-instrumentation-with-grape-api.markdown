@@ -8,7 +8,7 @@ dblog_post_id: 270
 ---
 We're using [Grape](https://github.com/ruby-grape/grape) in our Rails app on Heroku, which comes with New Relic instrumentation out-of-the-box. Let's get the Grape API route details to show in New Relic as well.
 
-#### Gemfile
+## Gemfile
 
 Add the [newrelic_rpm](https://github.com/newrelic/rpm) gem to Gemfile. It will give us a start with Grape Middleware.
 
@@ -18,7 +18,7 @@ group :production do
 end
 ```
 
-#### Rack Up
+### Rack Up
 
 Grape is a Rack-based system. If we wanted to display a bulk metric for Rack middleware, we could simply extend our API model as follows.
 

@@ -12,6 +12,6 @@ This implementation is a framework that enumerates resources and implements both
 
 <a href='https://www.codeproject.com/Articles/27373/File-Resource-Management-Library-NET' target='_blank'>CodeProject Article</a>
 
-#### Update (2015)
+## Update (2015)
 
 ResourceLib which started as the above-mentioned article can be found on <a href='https://github.com/dblock/resourcelib' target='_blank'>Github</a>.

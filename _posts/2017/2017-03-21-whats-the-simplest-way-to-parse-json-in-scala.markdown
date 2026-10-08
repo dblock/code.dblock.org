@@ -6,7 +6,7 @@ tags: [scala, json]
 ---
 While XML is a first-class citizen in Scala, there's no "default" way to parse JSON. So searching StackOverflow and Google yields all kinds of responses that seem unnecessarily complicated.
 
-### Jackson
+## Jackson
 
 [This SO answer describes the easiest solution](https://stackoverflow.com/questions/20029412/scala-play-parse-json-into-map-instead-of-jsobject/20034844#20034844), which gives you a `Map[String, Object]`, use [jackson-module-scala](https://github.com/FasterXML/jackson-module-scala).
 

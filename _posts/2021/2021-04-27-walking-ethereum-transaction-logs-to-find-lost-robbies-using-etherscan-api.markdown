@@ -17,7 +17,7 @@ Please do note that I am no expert, and that I would greatly appreciate suggesti
 
 An freebie OBJKT NFT was also minted, inspired by this project. Available at [hicetnunc.xyz/objkt/53103](https://objkt.com/asset/hicetnunc/53103).
 
-### Getting Started
+## Getting Started
 
 First, get an `ETHERSCAN_API_KEY` from [Etherscan](https://etherscan.io/myapikey) and save it to a file called `.env`. We'll use [dotenv](https://www.npmjs.com/package/dotenv) to automatically load it, and initialize `EtherscanApi` with this key.
 

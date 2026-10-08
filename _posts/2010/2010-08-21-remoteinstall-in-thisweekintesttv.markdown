@@ -10,6 +10,6 @@ One of my projects, [RemoteInstall](https://github.com/dblock/remoteinstall), wa
 
 ![]({{ site.url }}/images/posts/2010/2010-08-21-remoteinstall-in-thisweekintesttv/image_12.jpg)
 
-#### Update (2015)
+## Update (2015)
 
 Seems like ThisWeekInTest.tv is no more.

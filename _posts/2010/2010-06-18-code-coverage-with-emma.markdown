@@ -12,7 +12,7 @@ I've written an unusually high number of unit tests for the Java portion of [Waf
 
 If you asked me yesterday, I would have said that Waffle unit tests cover 99% of the code. But Emma says otherwise, and it's probably right.
 
-#### Running Emma with JUnit
+## Running Emma with JUnit
 
 It took me half an hour to integrate Emma. Pretty easy. You should do it too.
 
@@ -83,6 +83,6 @@ Here's an output.
 
 I see a lot of red. Emma doesn't think I am doing such a great job after-all.
 
-#### Links
+### Links
 
 - [EMMA on SourceForge](https://emma.sourceforge.net/)

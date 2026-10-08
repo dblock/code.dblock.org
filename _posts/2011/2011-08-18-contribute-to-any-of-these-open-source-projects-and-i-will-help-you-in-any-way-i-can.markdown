@@ -12,11 +12,11 @@ We all have wish lists. Here's the deal. Contribute to any of these open-source 
 - [Heroku-bartender](https://github.com/sarcilav/heroku-bartender): a deployment tool for Heroku. Pickup [any feature request](https://github.com/sarcilav/heroku-bartender/issues?sort=created&direction=desc&state=open).
 - [Gem-licenses](https://github.com/dblock/gem-licenses): an open-source license generator. I'd like to see [licenses matched by a real algorithm](https://github.com/dblock/gem-licenses/issues/1).
 
-#### But, I have no experience!
+## But, I have no experience!
 
 This is how you get some.
 
-#### This is Ruby. I've never done that!
+### This is Ruby. I've never done that!
 
 Even better. A lot of very strong developers that I know write Java, C++ or C# by day and would like to try Ruby for the first time. Bored with the tutorial? Don't know where to start? Here you go. This is a chance to experience the elegance of Ruby, building something people actually want. Procrastinating at your corporate job? This is your chance.
 

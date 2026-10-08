@@ -11,7 +11,7 @@ Today I bid farewell to [Artsy](https://www.artsy.net). This post is my personal
 
 > We have brought the art world online, built the [Art Market 1.0](/2019/03/07/art-market-one-point-o.html) and created the most read online art publication in the world.
 
-### Getting Started
+## Getting Started
 
 I was introduced to the Artsy founders Carter and Sebastian in late 2010. I remember getting a CD-ROM with artwork images from a Russian museum in the 90's and finding it immediately valuable, so I easily connected with the mission of bringing the Art World online. At the time Artsy had already won a TechCrunch Rookie Disruptor award and were in their beginning stages of raising capital. The TechCrunch demo had visible technical difficulties, but despite these, the 23 y/o Artsy CEO, Carter Cleveland, pushed through that presentation with great success. I was impressed.
 

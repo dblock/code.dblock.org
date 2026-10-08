@@ -6,7 +6,7 @@ tags: [react native, 33 minutes, mongodb, mongoid]
 ---
 Given a collection of events, aggregate their duration weekly. Fill gaps to contain every week since the earliest event.
 
-### Data Model
+## Data Model
 
 Users have meetings.
 

@@ -10,7 +10,7 @@ dblog_post_id: 177
 
 I am a huge fan of the comical version of ["bug-driven development"](https://web.archive.org/web/20100212134923/https://blogs.sun.com/toddfast/entry/bug_driven_development), which I earlier called "bug driven design". Today, I want to propose a new methodology: _folder-driven development_. I cannot take credit for inventing it, a colleague of mine suggested it earlier this week. I found the idea a useful subset of the _"divide to conquer"_ rule, and felt the need to put a bit of structure around it.
 
-#### Guiding Principles
+## Guiding Principles
 
 The basic idea behind folders is to reduce complexity. Before creating a folder, consider the following rules of thumb.
 
@@ -21,7 +21,7 @@ The basic idea behind folders is to reduce complexity. Before creating a folder,
 
 Let's examine one good and one bad example.
 
-#### Java: Four Wrongs
+### Java: Four Wrongs
 
 The worst offender of the principles of folder-driven development is Java. By default, it forces you to organize classes in namespaces and namespaces into folders. This is the simple folder structure of the JNA project:
 

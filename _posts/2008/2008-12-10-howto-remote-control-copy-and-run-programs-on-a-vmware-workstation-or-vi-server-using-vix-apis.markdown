@@ -8,11 +8,11 @@ dblog_post_id: 24
 ---
 I've been playing with [VMware](https://www.vmware.com/) lately, both Workstation and VMware Infrastructure (VI). The company has really stepped up with the new SDKs and the level of programmable interfaces, making some excellent implementation decisions that enable us to drive virtual machines for primarily unit-testing purposes. The doc is a little light today, so this should help.
 
-#### What do we use this for?
+## What do we use this for?
 
 We (at my [day job](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/aboutus/index.shtml)) developed a tool (in C#) that runs MSI installers to make sure the product installs on various knownly good or bad environments, sort of unit testing installers. We also have an ESX environment that we share.
 
-#### VMWare Programming APIs
+### VMWare Programming APIs
 
 There are two types of APIs.
 

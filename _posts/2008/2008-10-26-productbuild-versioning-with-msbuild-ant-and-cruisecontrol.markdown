@@ -10,7 +10,7 @@ dblog_post_id: 19
 
 _Versioning_ is probably the hottest area of reinventing a better wheel.
 
-### Single Versioning Scheme
+## Single Versioning Scheme
 
 Do we really need a single versioning scheme? My answer is simple. Every company should strive towards unified processes. It makes people more interchangeable, avoids duplicate work and creates systems. Ultimately systems win, not individuals. A system can be derived from healthy competition of ideas and implementations, but once things are stable and everybody is entrenched in their ways, it is good to stir the pot, get people talking and standardize on one single method.
 

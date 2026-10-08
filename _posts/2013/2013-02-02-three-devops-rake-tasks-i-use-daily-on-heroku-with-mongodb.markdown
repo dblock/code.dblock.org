@@ -20,7 +20,7 @@ We'll accomplish the above with help from two new gems: [mongoid-shell](https://
 
 And, please remember, that with great power (and the word "production" in much of what follows) comes a lot of responsibility.
 
-#### Execute a Rake task with local code modifications and the configuration of a production environment.
+## Execute a Rake task with local code modifications and the configuration of a production environment.
 
 This is made possible by [heroku-commander](https://github.com/dblock/heroku-commander). The library wraps the Heroku CLI (intro [here](https://artsy.github.io/blog/2013/01/31/create-mongodb-command-lines-with-mongo/)) and will run _heroku config –s_. It's now easy to reach out to a Heroku application and retrieve its configuration programmatically without worrying about API keys (by default it will use the Heroku app defined via the "heroku" GIT remote). We will also need a bit of code to apply our application's naming convention. This lets me change the execution environment to the one of a remote Heroku application, in Ruby.
 
@@ -57,7 +57,7 @@ end
 
 Run `RAILS_ENV=production rake heroku:config_from_env my:task`.
 
-#### Open a shell to the primary node of the MongoDB on my development Heroku environment.
+### Open a shell to the primary node of the MongoDB on my development Heroku environment.
 
 First, figure out the remote MongoDB configuration, then execute the _mongo_ shell command. It's important to know that the built-in system command doesn't raise an error when the process returns a non-zero status code. Let's add a _system!_ function that fixes that.
 

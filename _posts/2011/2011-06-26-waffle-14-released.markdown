@@ -12,7 +12,7 @@ WAFFLE exposes native Windows authentication facilities to C# and Java clients u
 
 Build is 1.4.8182.0.
 
-#### Features
+## Features
 
 - #8559: Added impersonation support on the Servlet security filter.
 - #9353: Allow customization of GrantedAuthority string in Spring Security filter and authentication manager.
@@ -22,6 +22,6 @@ Build is 1.4.8182.0.
 
 There are Waffle forks for Tomcat 5, 7 and Spring-Security 2.
 
-#### Update (2015)
+### Update (2015)
 
 Please find Waffle [on Github](https://github.com/dblock/waffle).

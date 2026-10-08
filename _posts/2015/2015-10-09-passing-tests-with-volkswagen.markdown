@@ -8,7 +8,7 @@ Volkswagen did a good job pioneering TDD. There's now broad language and framewo
 
 ![volkswagen status]({{ site.url }}/images/posts/2015/2015-10-09-passing-tests-with-volkswagen/ci.svg)
 
-### Ruby
+## Ruby
 
 * [rspec-volkswagen](https://github.com/jurre/rspec-volkswagen)
 * [minitest-volkswagen](https://github.com/paulodiniz/minitest-volkswagen)
