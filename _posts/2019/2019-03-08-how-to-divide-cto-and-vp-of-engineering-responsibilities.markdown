@@ -59,8 +59,8 @@ Let's call him [Samuel](https://www.linkedin.com/in/rozenberg) ;)
 
 Two months into Sam's tenure we've made the following announcement.
 
-> - Title: Dividing CTO/VP Responsibilities
-> - To: team@
+> * Title: Dividing CTO/VP Responsibilities
+> * To: team@
 >
 > Team,
 >
