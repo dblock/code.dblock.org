@@ -12,7 +12,7 @@ First, let me say that I don't care. Except that I do. Wrapped text in markdown 
 
 Here's a logical argument for _not wrapping_ text in markdown.
 
-Markdown doesn't use line the breaks: whether you include a line break in your markdown or not the rendered result is the same, unless you use 2 line breaks.
+Markdown doesn't use line breaks: whether you include a line break in your markdown or not the rendered result is the same, unless you use 2 line breaks.
 
 For example, consider the following text wrapped at 23 characters for illustration purposes.
 
@@ -26,7 +26,7 @@ We swap "a" and "the", producing the following new text.
 ```
 The quick brown fox
 jumps over a lazy dog.
-````
+```
 
 Because of a line wrap, this 2-word change is now a 2-line change. It hurts.
 
@@ -44,3 +44,26 @@ Furthermore, GitHub [does an even better job at the 1-line diff](https://github.
 Notice how the word "jumps" was highlighted, even though it wasn't actually changed.
 
 For an argument _for_ wrapping text, see [this comment](https://github.com/opensearch-project/OpenSearch/pull/712#issuecomment-855271225).
+
+## Update: Enforce It
+
+You can now enforce one source line per paragraph with [markdownlint-rule-single-line-paragraphs](https://github.com/dblock/markdownlint-rule-single-line-paragraphs), a custom `markdownlint` rule. See [code.dblock.org#173](https://github.com/dblock/code.dblock.org/pull/173) for a working example.
+
+Here's how to load the custom rule and enable it.
+
+```javascript
+const rule = require("markdownlint-rule-single-line-paragraphs");
+
+const options = {
+  customRules: [rule],
+  config: {
+    "single-line-paragraphs": {
+      enabled: true
+    }
+  }
+};
+```
+
+The rule checks prose at the document root and inside lists and blockquotes. It preserves intentional Markdown hard breaks and `<br>` boundaries. It can also fix violations by joining continuation text onto the first line and deleting the old continuation lines.
+
+I would have preferred this to be built as a new `style: single` in `MD013` as discussed in [markdownlint#298](https://github.com/DavidAnson/markdownlint/issues/298), but the repository doesn't accept AI-generated code and I don't remember how to write code anymore.
