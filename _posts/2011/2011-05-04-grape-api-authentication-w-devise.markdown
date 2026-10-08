@@ -17,7 +17,7 @@ There are several scenarios and issues to consider.
 
 Here's what we did. It's far from ideal, please comment and suggest ways to move forward, especially if you think something belongs in Grape or Devise proper.
 
-#### No Authentication
+## No Authentication
 
 No authentication is easy. We don't do anything.
 
@@ -27,7 +27,7 @@ get "ping" do
 end
 ```
 
-#### A User Logged in with a Form
+### A User Logged in with a Form
 
 A previously logged in user is authenticated with Devise (based on Warden). There's nothing special to do for the API except to insert an _authenticated_user_ method in those APIs that require it.
 

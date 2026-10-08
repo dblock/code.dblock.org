@@ -21,6 +21,6 @@ So [get the warez](http://web.archive.org/web/20090926053211/http://www.vestris.
 
 ![powered by vestris]({{ site.url }}/images/posts/2009/2009-09-22-vestris-inc-software-for-free/vpowered.jpg)
 
-#### Update (2015)
+## Update (2015)
 
 I took the software down and replaced links above with archive.org's. It has been another six years, time to retire these things. You can find the source code for all of this [on Github](https://github.com/dblock).

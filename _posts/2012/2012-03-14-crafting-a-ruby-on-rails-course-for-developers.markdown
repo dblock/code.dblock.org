@@ -14,7 +14,7 @@ The Open-Source Curriculum @ [https://github.com/dblock/ga-ruby-on-rails-for-dev
 
 [Slides from the Presentation on SlideShare](https://www.slideshare.net/dblockdotorg/crafting-a-rubyonrails-course-for-developers)
 
-#### Demo Stashboards, Students' Projects
+## Demo Stashboards, Students' Projects
 
 - [https://github.com/jameslin101/stashboard](https://github.com/jameslin101/stashboard): a clean Stashboard clone
 - https://github.com/MedText/stashfu: Stashboard as a service

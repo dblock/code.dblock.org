@@ -10,7 +10,7 @@ Since most students use git for the very first time they often make some kind of
 
 After helping a handful of students I decided to write this up. Here's a quick tutorial on getting out of a git mess.
 
-### Make a Clean-ish Slate
+## Make a Clean-ish Slate
 
 The first goal is to make both the local computer's and our Github fork's _master_ branches look like the _upstream_, the repository that was forked, _master_ branch, without losing changes already made.
 

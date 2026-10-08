@@ -8,7 +8,7 @@ dblog_post_id: 129
 ---
 This is a pretty common problem with NTEventLogAppender (both log4j and [log4jna](https://github.com/dblock/log4jna/) versions) on Windows Vista, 7 or 2008.
 
-#### Repro
+## Repro
 
 I'll use the demo project in log4jna to demonstrate what's going on.
 
@@ -46,7 +46,7 @@ Run the demo as a non-admin user (if you have log4jna source you can do _ant run
 [java]     at org.apache.log4jna.nt.demo.Demo.main(Unknown Source)
 ```
 
-#### Fix
+### Fix
 
 Windows Event Log requires a registered event source to fire events to. The NTEventLogAppender attempts to create one automatically, but doesn't have enough registry permissions to do so. In order to run software as a non-admin, we must create the registry key at software installation time when we do have those registry permissions. In our case, we need to create a _demo_ key under _HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\eventlog\Application_.
 

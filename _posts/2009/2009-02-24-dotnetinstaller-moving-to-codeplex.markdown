@@ -10,6 +10,6 @@ dotNetInstaller, aka DNI has moved to CodePlex (Update: now on [GitHub](https://
 
 I also posted a 1.6 beta.
 
-#### Update (2015)
+## Update (2015)
 
 dotNetInstaller now lives [on Github](https://github.com/dblock/dotnetinstaller).

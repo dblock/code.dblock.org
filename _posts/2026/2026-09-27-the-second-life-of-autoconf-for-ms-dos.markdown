@@ -13,7 +13,7 @@ I did not write the original. I copied its x86 assembly source by hand from a Fr
 
 For a long time I could not remember who had written that first version. I had thrown away the magazine, forgotten the issue, and lost the trail before old print archives became easy to search. Only now, with AI helping sift through a large collection of scanned SVM issues downloaded from [Abandonware Magazines](https://www.abandonware-magazines.org/) and the [Internet Archive](https://archive.org/), was I able to find the seven pages I had copied.
 
-### The Magazine
+## The Magazine
 
 [![Cover of Science & Vie Micro issue 88, November 1991](/images/posts/2026/2026-09-27-the-second-life-of-autoconf-for-ms-dos/svm-88-cover-small.png)](/images/posts/2026/2026-09-27-the-second-life-of-autoconf-for-ms-dos/svm-88-autoconf-pages-227-233.pdf)
 

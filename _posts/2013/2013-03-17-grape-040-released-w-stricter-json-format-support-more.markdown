@@ -12,7 +12,7 @@ Is this a solid release? You bet. I've upgraded our largest API project at [arts
 
 The complete [CHANGELOG is here](https://github.com/ruby-grape/grape/blob/master/CHANGELOG.md). There are a few backwards incompatible changes that you might want to check out while you're upgrading.
 
-#### JSON and XML Formatter Changes
+## JSON and XML Formatter Changes
 
 Until the 0.4.0 release Grape took a pragmatic approach to JSON response and request data. It was also incorrect.
 
@@ -68,7 +68,7 @@ end
 
 Similar changes apply to the XML formatter.
 
-#### Reading Input
+### Reading Input
 
 With the above changes its now possible to read JSON input that's not a hash. This was reported as a bug in [#347](https://github.com/ruby-grape/grape/issues/347). Hash parameters continue to be merged into _params_, while everything else is now available in _env[‘api.request.body']_, you don't have to parse _env[‘rack.input']_ again, a notable performance optimization.
 

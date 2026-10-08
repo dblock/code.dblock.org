@@ -38,7 +38,7 @@ This is because [the implementation in chai](https://github.com/chaijs/chai/blob
 
 This is not a new problem and a proposal for asserting control flow has been discussed in [TypeScript#8655](https://github.com/microsoft/TypeScript/issues/8655) and an implementation proposed in [TypeScript#32695](https://github.com/microsoft/TypeScript/pull/32695).
 
-### Assert Not Null
+## Assert Not Null
 
 The first solution is a more elegant variation if the original `if` and `throw`.
 

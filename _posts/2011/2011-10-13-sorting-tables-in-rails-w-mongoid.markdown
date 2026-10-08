@@ -74,7 +74,7 @@ class TagsController < ApplicationController
 end
 ```
 
-#### Screenshots
+## Screenshots
 
 ![]({{ site.url }}/images/posts/2011/2011-10-13-sorting-tables-in-rails-w-mongoid/image_32.jpg)
 
@@ -82,6 +82,6 @@ I love the attention to detail with the little arrow next to the sorted column a
 
 ![]({{ site.url }}/images/posts/2011/2011-10-13-sorting-tables-in-rails-w-mongoid/image_31.jpg)
 
-#### Gem
+### Gem
 
 - [https://github.com/dadooda/handles_sortable_columns](https://github.com/dadooda/handles_sortable_columns)

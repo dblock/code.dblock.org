@@ -6,7 +6,7 @@ tags: [react native, 33 minutes, relay]
 ---
 In the [previous post](/2018/08/01/wiring-up-a-react-native-client-to-a-rails-graphql-server.html) I wired up a React Native client to a Rails API GraphQL server. In this post I'll enable adding, removing and retrieving paginated data.
 
-### Data Models
+## Data Models
 
 The root of all my GraphQL queries are now a `user` and a user has a number of `meetings`. A user can sign-up, then meetings can be created or destroyed via mutations. See [33-minutes-server@838200](https://github.com/33-minutes/33-minutes-server/commit/8382006996c82eb267f25854739487f2e26bedc3) for implementation details.
 

@@ -10,7 +10,7 @@ In short, long lived tokens are no longer supported and you must obtain a _refre
 
 On the plus side, short lived tokens are good for security, since a leaked access token expires quickly. Refresh tokens are good for security because they never have to leave your app. Finally, tokens get more granular permission scopes, reducing data exposure. The downside is additional burden on the developer and additional security risk for non-interactive applications (see below).
 
-### Migrating my Strava Slack Bot
+## Migrating my Strava Slack Bot
 
 My [Strava Slack Bot](https://slava.playplay.io) is a classic OAuth application in which users connect their account to Strava in Slack. The migration involved the following.
 

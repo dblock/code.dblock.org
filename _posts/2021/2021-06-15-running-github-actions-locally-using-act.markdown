@@ -8,7 +8,7 @@ I'm a big fan of [GitHub Actions](https://github.com/features/actions) to automa
 
 Let's build OpenSearch [job-scheduler](https://github.com/opensearch-project/job-scheduler) on a local Linux.
 
-### Download Act
+## Download Act
 
 Download and install act from [here](https://github.com/nektos/act#installation). I just run the `install.sh` because YOLO.
 

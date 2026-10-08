@@ -14,7 +14,7 @@ tl;dr Check out [github.com/dblock/slack-bot-server](https://github.com/slack-ru
 
 ![demo]({{ site.url }}/images/posts/2015/2015-11-14-writing-a-slack-bot-service-for-multiple-teams/demo.gif)
 
-### Concurrency in Slack-Ruby-Client
+## Concurrency in Slack-Ruby-Client
 
 The initial implementation of Slack Real Time API support in [slack-ruby-client](https://github.com/dblock/slack-ruby-client) used [EventMachine](https://github.com/eventmachine/eventmachine) and embedded the run loop deeply inside the client itself. That helped users not worry about simple integration scenarios, but prevented you from instantiating multiple instances of `Slack::RealTime::Client`, which would require one global run loop. With the 0.5.0 release slack-ruby-client support for different concurrency models was added, including [Celluloid](https://github.com/celluloid/celluloid) or no concurrency at all. The latter effectively defers the implementation to the caller, which is what you want for a bot service, we initialize an EventMachine loop in `config.ru`.
 

@@ -26,6 +26,6 @@ Features:
 - manage shared folders
 - read and write guest and environment variables
 
-#### Update (2015)
+## Update (2015)
 
 VMWareTasks now lives <a href='https://github.com/dblock/vmwaretasks' target='_blank'>on Github</a>.

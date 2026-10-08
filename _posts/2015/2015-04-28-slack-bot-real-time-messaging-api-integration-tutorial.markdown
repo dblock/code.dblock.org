@@ -10,7 +10,7 @@ I've been recently contributing to [slack-pongbot](https://github.com/andrewvy/s
 
 The endless levels of callback hell and promises have driven me sufficiently crazy to try and rewrite this in Ruby. Let's get a basic Ruby Slack integration going, using the [Slack Real Time Messaging API](https://api.slack.com/rtm) this time.
 
-### Slack-Ruby-Client
+## Slack-Ruby-Client
 
 A quick note to readers. If you come here from [slack-ruby-gem](https://github.com/aki017/slack-ruby-gem) this tutorial no longer uses it. That library was slow to evolve and wasn't clearly separating the Slack Web API with the Slack RealTime Messaging API. I've rewritten much of the implementation in a new gem [slack-ruby-client](https://github.com/dblock/slack-ruby-client), please use that for all your Slack Ruby needs!
 

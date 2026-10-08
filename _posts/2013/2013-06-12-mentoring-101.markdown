@@ -10,7 +10,7 @@ This year my colleagues at [Artsy](https://artsy.net) created a formal fellowshi
 
 ![]({{ site.url }}/images/posts/2013/2013-06-12-mentoring-101/image_7.jpg)
 
-#### What is Mentoring?
+## What is Mentoring?
 
 Good companies value people over product. It's not a coincidence that most successful CEOs prioritize hiring the best people over making the best product or money. Getting the strongest people at any level and keeping them is probably the single hardest thing in any organization.
 
@@ -18,7 +18,7 @@ And so, to help build the best company, _mentoring_ is putting people's goals fi
 
 Mentoring is a huge responsibility and the mentor is directly responsible for the mentee's success or failure.
 
-#### What does a Mentor Do?
+### What does a Mentor Do?
 
 Most interns and apprentices come prepared with some domain knowledge. Our Art fellows know a thousand times more than me about art. Our Engineering fellows know more about technology than many of our art team members. Yet, none of them have any idea about how our company operates and, therefore, don't know how to behave. Mentees will try to constantly adjust and to fit expectations. A mentor's job is to provide an environment in which the mentee can succeed, including telling them what's expected, what can, should or should not be done.
 

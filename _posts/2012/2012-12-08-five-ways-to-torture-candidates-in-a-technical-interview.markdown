@@ -12,7 +12,7 @@ As the interviewee I've been given all these problems myself. I hated the puzzle
 
 Below are some well-researched and widely practiced techniques of breaking even the best interview candidate.
 
-#### 1. Whiteboarding
+## 1. Whiteboarding
 
 Ask an expert C++ level candidate to reverse a string in C.
 
@@ -20,7 +20,7 @@ Ask an expert C++ level candidate to reverse a string in C.
 
 This is guaranteed to be insulting to someone who has demonstrable success developing software in any relevant technology. It's the first thing taught in any C class and should take you about 45 seconds. The fact that many just cannot do it is irrelevant, those should never make it past a phone screen. By giving this problem to someone you're telling them that you don't trust their resume and that their demonstrable experience is completely irrelevant. It's a single, efficient blow to their ego.
 
-#### 2. Dehydration, Starvation and Solitary Confinement
+### 2. Dehydration, Starvation and Solitary Confinement
 
 Create a system in which the candidate does not have access to food, water or bathroom for extended hours and spends significant lone time in a small, preferably windowless space.
 

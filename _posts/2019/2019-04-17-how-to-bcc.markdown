@@ -14,7 +14,7 @@ The corollary of Toby Young's theorem is that _you should never write anything y
 
 That said, such incidents can be avoided with a bit of discipline from the e-mail senders, described below.
 
-### Always Bcc and Announce Lists
+## Always Bcc and Announce Lists
 
 Only put individual e-mail addresses on the _to:_ or _cc:_ lines and _bcc:_ mailing lists. Maybe even address the e-mail to yourself to keep a copy. This prevents the knee jerk _Reply All_ reaction to a wide distribution list when one only meant to reply to the sender.
 

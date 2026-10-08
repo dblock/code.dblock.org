@@ -10,6 +10,6 @@ There was a time when having multiple e-mail accounts was some kind of a pipe dr
 
 [![](http://web.archive.org/web/20040223222231/http://www.vestris.com/software/images/slmra.gif)](http://web.archive.org/web/20040222161209/http://www.vestris.com/software/slmra.html)
 
-#### Update (2015)
+## Update (2015)
 
 I took the software down and replaced links above with archive.org's. It has been another six years, time to retire these things.

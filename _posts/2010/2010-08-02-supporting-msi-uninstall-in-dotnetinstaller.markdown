@@ -11,7 +11,7 @@ Someone recently [asked](https://web.archive.org/web/20130830060043/http://dotne
 
 While the documentation explains the basics, it's a bit thick. This is a step-by-step tutorial.
 
-#### The Basics
+## The Basics
 
 _Create an Installer_
 
@@ -67,7 +67,7 @@ You can run the bootstrapper and MySetup.msi will be installed. Run the bootstra
 
 ![]({{ site.url }}/images/posts/2010/2010-08-02-supporting-msi-uninstall-in-dotnetinstaller/image_23.jpg)
 
-#### Great! I have an uninstaller, right?
+### Great! I have an uninstaller, right?
 
 Not really. The problem with what we have created is that the bootstrapper needs to be left on the machine after installation. With my 1.2GB bootstrapper that's really not an option. That's also a chicken-and-egg problem, because the bootstrapper needs to contain itself to be included in an installer to be used for uninstall if we wanted to create, for example a shortcut.
 

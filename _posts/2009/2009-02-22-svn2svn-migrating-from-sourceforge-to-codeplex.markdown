@@ -24,6 +24,6 @@ Someone has to do the work, so please welcome my new svn2svn project, [https://w
 
 Alpha build on its way.
 
-#### Update (2015)
+## Update (2015)
 
 Svn2svn now lives [on Github](https://github.com/dblock/svn2svn).

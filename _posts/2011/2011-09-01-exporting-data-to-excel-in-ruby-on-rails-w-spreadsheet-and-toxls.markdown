@@ -12,7 +12,7 @@ We're going to export data to Excel from our RoR application, in about five line
 
 Here's how we do it, and so should you.
 
-#### Just Do It!
+## Just Do It!
 
 Use [spreadsheet 0.6.5.8](https://rubygems.org/gems/spreadsheet) with [this monkey-patch](https://gist.github.com/1187549) added as _initializers/spreadsheet_encodings.rb_ and [to_xls 1.0](https://rubygems.org/gems/to_xls) from my [to-xls-on-models branch](https://github.com/dblock/to_xls/tree/to-xls-on-models).
 
@@ -88,7 +88,7 @@ describe "GET index.xls" do
 end
 ```
 
-#### Links
+### Links
 
 - [spreadsheet gem home](https://spreadsheet.ch/), [rubygems](https://rubygems.org/gems/spreadsheet) and [patch for frozen hash in encoding](https://groups.google.com/group/rubyspreadsheet/browse_frm/thread/29debd680f45fd6)
 - [to_xls home](https://github.com/splendeo/to_xls) and [rubygems](https://rubygems.org/gems/to_xls) and [my pull request to to_xls with as_xls support](https://github.com/splendeo/to_xls/pull/2)

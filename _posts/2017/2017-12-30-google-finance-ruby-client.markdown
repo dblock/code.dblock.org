@@ -10,7 +10,7 @@ There's a bunch of financial market APIs out there, and after having tried a few
 
 To abstract away the hodgepodge of undocumented and unsupported URLs and to make simple tasks easy, I wrote [google-finance-ruby-client](https://github.com/dblock/google-finance-ruby-client). The library supports retrieving stock quotes and historical prices in a structured form and returns object oriented results with properly coerced and documented properties. It also handles errors sanely.
 
-### Get a Quote
+## Get a Quote
 
 ```ruby
 quote = GoogleFinance::Quote.get('MSFT')

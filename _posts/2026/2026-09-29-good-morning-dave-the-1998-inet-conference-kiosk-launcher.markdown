@@ -21,7 +21,7 @@ The conference was also the first time I had access to a T1 line to the US. Once
 
 I found the source of both recently. They're now at [dblock/inet98](https://github.com/dblock/inet98).
 
-### Building It Again
+## Building It Again
 
 I don't have Delphi 3, so with Copilot I ported the launcher to Free Pascal and Lazarus. It builds with the Windows version of the compiler and runs under Wine on macOS.
 

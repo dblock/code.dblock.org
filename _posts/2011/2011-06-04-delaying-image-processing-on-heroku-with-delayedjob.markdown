@@ -15,7 +15,7 @@ gem "delayed_job", "2.1.4"
 gem "delayed_job_mongoid", "1.0.2"
 ```
 
-#### Extracting Image Geometry
+## Extracting Image Geometry
 
 We'll use a simple example as our geometry processor. It reads the image and extracts it's width and height.
 
@@ -115,7 +115,7 @@ class ImageGeometryProcessor
 end
 ```
 
-#### Workers
+### Workers
 
 To test this in a local environment run `rake jobs:work` in parallel to `rails server`. On Heroku you will have to add a worker dyno by running `heroku workers 1` as described in [https://web.archive.org/web/20110529042920/http://devcenter.heroku.com/articles/delayed-job](https://web.archive.org/web/20110529042920/http://devcenter.heroku.com/articles/delayed-job).
 

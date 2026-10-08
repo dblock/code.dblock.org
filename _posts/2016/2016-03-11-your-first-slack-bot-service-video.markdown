@@ -11,9 +11,9 @@ It contains an overview of Slack APIs and various integration options, including
 <iframe src="https://player.vimeo.com/video/158686783" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <p><a href="https://vimeo.com/158686783">Your First Slack Bot Service @ NYC Slack Meetup</a> from <a href="https://vimeo.com/user280176">dB.</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
-### Links
+## Links
 
-#### Talk
+### Talk
 
 * [Video (52 minutes)](https://vimeo.com/158686783)
 * [Slides Only (PDF)](https://www.slideshare.net/dblockdotorg/your-first-slack-bot-service-nyc-slack-meetup)

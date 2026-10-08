@@ -10,7 +10,7 @@ I have the honor of serving as judge for another year at [MIT Hacking Arts 2016 
 
 More quotes below.
 
-### Dance & New Media
+## Dance & New Media
 
 [![Renegade PG]({{ site.url }}/images/posts/2016/2016-11-20-mit-hacking-arts-2016-conference/renegadepg.jpg)](https://www.renegadepg.com)
 

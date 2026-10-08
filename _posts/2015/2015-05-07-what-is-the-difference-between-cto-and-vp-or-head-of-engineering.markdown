@@ -13,7 +13,7 @@ What do I mean by *all possible outcomes*? A brilliant example of business trans
 
 These two jobs are different *responsibilities*, but involve a lot of doing the same kinds of things. A CTO carries a unique responsibility of placing technology within the non-engineering organizations and to represent the technology point-of-view with investors or the board. They help everyone take a step back and look at the big picture with tech in mind, while a VP or Head of Engineering helps individual contributors and leads focus on the tasks at hand and drums up the beat of continuous delivery. When done right this yields a healthy tension that strikes the balance between short, medium and long-term thinking.
 
-### An Internal or an External Facing Job
+## An Internal or an External Facing Job
 
 Sometimes this difference is referred to as an *external* vs. *internal facing* job, which is also true but doesn't tell the whole story. A big part of remaining competitive with technology is understanding the business, competition and the entire technical landscape, which means looking *out* vs. focusing on product delivery, which is looking *in*. Practically being a CTO means being less focused on the day-to-day in order to avoid getting caught up in your own bubble and missing the next big turn, sinking a company into years of painful un-digging from their own systems. Microsoft is a prime example of a very profitable corporation that completely missed the open-source bandwagon and is now trying to catch up at a massive cost, vs. Facebook. Similarly, media companies are generally failing at digital streaming, unlike MLB, which has invested in streaming tech ten years ago and is now riding its huge competitive advantage.
 

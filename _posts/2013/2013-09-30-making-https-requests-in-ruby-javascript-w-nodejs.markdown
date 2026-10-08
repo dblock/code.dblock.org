@@ -8,7 +8,7 @@ dblog_post_id: 394
 ---
 Making HTTPs requests seems oddly difficult. Why can't an HTTP library just figure things out for me like curl does? It mostly can.
 
-#### Ruby
+## Ruby
 
 You have to breakup the URL into a host, port and path, then make a request with _use_ssl_.
 
@@ -25,7 +25,7 @@ Net::HTTP.start uri.host, uri.port, use_ssl: (uri.scheme == "https") do |http|
 end
 ```
 
-#### Node.js
+### Node.js
 
 A little simpler, [superagent](https://github.com/ladjs/superagent), also known as "ajax with less suck", can take care of everything.
 

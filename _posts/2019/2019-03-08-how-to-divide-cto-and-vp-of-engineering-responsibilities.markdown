@@ -6,7 +6,7 @@ tags: [cto, head of engineering, vp of engineering, management]
 ---
 Three years ago I wrote about [the difference between a CTO and a VP of Engineering](/2015/05/07/what-is-the-difference-between-cto-and-vp-or-head-of-engineering.html) at a startup, but only hired a VP in 2018. In this post I will explain why I decided to do it, and discuss one possible separation of responsibilities between a CTO and a VP of Engineering.
 
-### The List of CTO Responsibilities
+## The List of CTO Responsibilities
 
 My CTO role over the years included pretty much everything related to building software, ranging from coding to architecture, company strategy and Engineering budget. I also once served a coffee to an investor. With years I felt like the list of things I was doing became infinite, yet a lot of new hires had no idea about what I did anymore. Did I?
 

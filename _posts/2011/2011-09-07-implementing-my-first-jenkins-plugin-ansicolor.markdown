@@ -12,7 +12,7 @@ I installed Jenkins last week for the very first time. A couple of days later I 
 
 The [Jenkins plugin tutorial](https://wiki.jenkins-ci.org/display/JENKINS/Plugin+tutorial) is quite good, I recommend you just follow it. It has a maven-based cookbook to generate a new project. But if you're like me, you'll reconstruct a plugin from scratch (and possibly trade time for a better understanding). I'll just mention a few things that could have been helpful to me.
 
-#### Basics
+## Basics
 
 A plugin extends _hudson.Plugin_. This class isn't even necessary, but it's a good opportunity to setup a logger that's going to tell us that the plugin is actually being loaded. Whether you're testing the plugin locally or running a production instance of Jenkins, this will come handy.
 
@@ -26,7 +26,7 @@ public class PluginImpl extends Plugin {
 }
 ```
 
-#### Processing Build Output
+### Processing Build Output
 
 Our goal is to process build output and insert HTML color markup. So the first task is to find a Jenkins extension point from [here](https://www.jenkins.io/doc/developer/extensions) that exposes build log data. I found the very promising [ConsoleLogFilter](https://www.jenkins.io/doc/developer/extensions#Extensionpoints-hudson.console.ConsoleLogFilter). A simple extension is marked with _@Extension _and I thought I was done.
 

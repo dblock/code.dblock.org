@@ -8,7 +8,7 @@ Introducing [email-example-spec](https://github.com/dblock/email-example-spec), 
 
 Testing e-mail body, subject, to and from addresses with expectations works, but somehow pesky e-mail template bugs constantly make it into production. Sometimes it's broken HTML and sometimes it's different content between the text and the HTML part because of a `@variable` typo. An integration test lets you visualize the generated e-mail, and I frequently share the output inside our Github repo with the business team for review.
 
-### Install
+## Install
 
 ```ruby
 gem 'email-example-spec'

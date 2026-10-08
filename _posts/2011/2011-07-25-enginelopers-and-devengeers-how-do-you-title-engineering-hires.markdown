@@ -18,13 +18,13 @@ I used to care about titles a whole lot more when working for a big company. _"H
 
 In a startup we'd like not to think about titles too much. So my creative colleagues are going wild offering new names.
 
-#### Enginelopers and Devengeers
+## Enginelopers and Devengeers
 
 I watched [this excellent presentation](https://www.infoq.com/presentations/Craft-and-Software-Engineering) that compared Software Engineering with other Engineering disciplines. I don't like to think about anyone on my team as "a pair of hands" or "a brain on a stick". Software is a creative business that translates into both an artistic and a disciplined process. The word "Engineer" carries too much context around planning, architecting and thinking, while the word "Developer", not enough. Are we a new breed of "Enginelopers"?
 
 There's something romantic-sounding in the reverse combination of the two words. It evokes a bit of "Adventurer" and "Evangelist".
 
-#### Seriously ...
+### Seriously ...
 
 I think Rick's advice is pretty good.
 

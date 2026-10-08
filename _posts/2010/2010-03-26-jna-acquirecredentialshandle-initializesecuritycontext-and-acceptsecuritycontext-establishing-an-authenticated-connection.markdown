@@ -8,11 +8,11 @@ dblog_post_id: 91
 ---
 I've been working on porting [WAFFLE](https://github.com/dblock/waffle) to Java/ [JNA](https://github.com/twall/jna/). As usual I have modest and practical goals with that project: to provide a working example for everything InitializeSecurityContext and AcceptSecurityContext and to replace the .NET -> COM -> Java bridge for [our application](https://web.archive.org/web/20131111165225/https://www.appsecinc.com/products/dbprotect/). So lets get started.
 
-#### The Problem
+## The Problem
 
 You've got a client and a server. For example, a browser and a web server. Both are joined to the same Active Directory domain. When you navigate to the website on your web server you don't get prompted for credentials. How can this happen?
 
-#### SSPI
+### SSPI
 
 On Windows, this works because of the [Security Support Provider Interface, aka SSPI](https://technet.microsoft.com/en-us/library/bb742535.aspx). SSPI is a well-defined API for obtaining integrated security services for, among other things, authentication for any distributed application protocol. A client-server conversation is an example of such an application. SSPI is a Microsoft proprietary implementation of [GSSAPI](https://en.wikipedia.org/wiki/Generic_Security_Services_Application_Program_Interface), an IETF standard. Who cares about standards, we just want it to work, right?
 

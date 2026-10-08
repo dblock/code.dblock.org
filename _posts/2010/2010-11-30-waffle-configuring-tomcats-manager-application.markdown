@@ -8,7 +8,7 @@ dblog_post_id: 147
 ---
 A user has recently tried to integrate Tomcat's manager application with [Waffle](https://github.com/dblock/waffle/) and got puzzling results. It took me a while to figure it out, revealing some creative thinking in Tomcat's demo apps.
 
-#### Configure Tomcat SSO
+## Configure Tomcat SSO
 
 Let's configure Tomcat to use waffle for SSO. First, copy _waffle-jna.jar_, _jna.jar_, _platform.jar_, _commons-logging-1.1.1.jar_ and _guava-r07.jar_ (we're using Waffle 1.4 beta) to tomcat's lib folder.
 
@@ -66,7 +66,7 @@ Nov 30, 2010 10:17:02 AM waffle.apache.NegotiateAuthenticator authenticate
 INFO: successfully logged in user: server\username
 ```
 
-#### Configure Tomcat Manager
+### Configure Tomcat Manager
 
 _webapps/manager/WEB-INF/web.xml_
 

@@ -10,7 +10,7 @@ In the past six months I've done dozens of engineering interviews for our many j
 
 Most resumes follow a pattern. I will only talk about the strange, funny and sad ones, and very little about good resumes. Before I begin, I must add that I did hire two people via Craigslist and I am extremely happy with their work. Obviously any resemblance with your resume is pure coincidence and any personal data has been removed.
 
-#### The Pie
+## The Pie
 
 This is the general distribution of about 150 resumes I have received via Craigslist for a senior individual contributor position. The job description is no longer available on Craigslist, but it's very much in-line with a typical job description for a C# developer with some C++ experience. We have a [similar position available today](http://web.archive.org/web/20110417064625/http://www.appsecinc.com/aboutus/careers/Software-Engineer-Scanner-Services.shtml).
 
@@ -20,7 +20,7 @@ The detached pie slice represents about 4% of actual good resumes, worth my time
 
 Enjoy.
 
-#### Off Topic: The Clinical Trainer
+### Off Topic: The Clinical Trainer
 
 > _Dear Human Resources Department:_
 >

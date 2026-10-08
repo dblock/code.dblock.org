@@ -16,7 +16,7 @@ _How do we give users a way to logon either way?_
 
 You can accomplish this with the Waffle _MixedAuthenticator_.
 
-#### Configure Tomcat
+## Configure Tomcat
 
 _Download and Copy Files_
 
@@ -112,7 +112,7 @@ Here's a rudimentary example that lands an authenticated user on _index.jsp_.
 </form>
 ```
 
-#### Demo
+### Demo
 
 A demo application can be found in the Waffle distribution in the _Samples\Tomcat\waffle-mixed_ directory. Copy the entire directory into Tomcat's _webapps_ directory and navigate to https://localhost:8080/waffle-mixed. Pick your method of login.
 

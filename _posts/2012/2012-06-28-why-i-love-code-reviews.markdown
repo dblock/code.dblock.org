@@ -10,7 +10,7 @@ I had a short, but lively debate over code reviews with [@skamille](https://twit
 
 I feel very strongly about the positive effect of code reviews. I would get rid of as much "process" as possible, but not code reviews.
 
-#### Mechanics First
+## Mechanics First
 
 Mechanics are important, because not all code review systems are created equal.
 
@@ -22,7 +22,7 @@ The code reviewer will look at the diff line-by-line, ask questions and comment 
 
 You can see that we try to follow a similar process to Github's style of collaborative development (read [this blog post](https://github.com/blog/1124-how-we-use-pull-requests-to-build-github)), except that we don't design much within the pull request – we do this with humans on paper. Unlike the Github team, we tend to prefer smaller pull requests that are well rounded increments of features. This is what the open-source community has been doing for years, so we work like any open-source project in our closed-source environment.
 
-#### Having Trust
+### Having Trust
 
 Experienced developers do code reviews because they trust each-other.
 

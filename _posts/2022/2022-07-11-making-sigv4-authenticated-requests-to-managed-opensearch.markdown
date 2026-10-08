@@ -6,9 +6,9 @@ tags: [opensearch, aws]
 ---
 [Amazon OpenSearch](https://aws.amazon.com/opensearch-service/) and [Amazon OpenSearch Serverless](https://aws.amazon.com/opensearch-service/features/serverless/) use AWS SigV4 for authentication. We've made it dead easy to make authenticated requests across all OpenSearch clients in [opensearch-clients#22](https://github.com/opensearch-project/opensearch-clients/issues/22).
 
-### Command Line
+## Command Line
 
-#### [curl](https://curl.se/)
+### [curl](https://curl.se/)
 
 ```bash
 export AWS_ACCESS_KEY_ID=...

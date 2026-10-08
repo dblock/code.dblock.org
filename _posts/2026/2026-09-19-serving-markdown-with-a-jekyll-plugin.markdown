@@ -12,7 +12,7 @@ That worked, but it lived in this repo as a one-off script, `_scripts/render_mar
 
 I've since extracted all of it into [jekyll-md](https://github.com/dblock/jekyll-md), a proper Jekyll plugin. It does the same thing - converts each page's fully rendered HTML output to Markdown and injects the discovery `<link>` tag - but as a `Jekyll::Generator` and `Jekyll::Hooks`, with no external script or per-page front matter required.
 
-### What Changed
+## What Changed
 
 Add the gem and enable the plugin:
 

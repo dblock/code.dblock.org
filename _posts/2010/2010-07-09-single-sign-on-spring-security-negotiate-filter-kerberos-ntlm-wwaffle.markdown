@@ -11,11 +11,11 @@ dblog_post_id: 114
 
 In this post I'll explain how to configure the Waffle Spring-Security Negotiate filter to do single-sign-on on Windows and touch on how much more elegant the spring-based filter configuration is versus, for example, a generic servlet filter.
 
-#### Download
+## Download
 
 Download [Waffle](https://github.com/dblock/waffle). The zip contains _Waffle.chm_ with the latest version of this tutorial.
 
-#### Configure Your Application
+### Configure Your Application
 
 _Configure Spring-Security_
 

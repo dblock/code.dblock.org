@@ -10,11 +10,11 @@ Here's a rundown of the [code of Slack Gamebot](https://github.com/dblock/slack-
 
 ![]({{ site.url }}/images/posts/2024/2024-06-30-writing-a-channel-slack-bot/everything.gif)
 
-### Components
+## Components
 
 The bot consists of several major components.
 
-#### Models
+### Models
 
 The [database models](https://github.com/dblock/slack-gamebot2/tree/main/lib/models) include `Admin` (a Slack user outside of a channel), `Channel`, and `User` (a user that belongs to a Slack channel). While users in Slack are global, my bots store different information for each user in every channel. Other models are specific to the business logic of the bots.
 

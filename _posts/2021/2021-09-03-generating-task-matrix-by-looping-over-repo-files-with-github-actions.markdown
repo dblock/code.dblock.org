@@ -66,6 +66,6 @@ This is so awesome that it generates the matrix during the build!
 
 ![](https://user-images.githubusercontent.com/542335/132070992-4e9ba64f-a8f4-4459-9102-95684de2cda7.png)
 
-### Profit
+## Profit
 
 See [opensearch-project/opensearch-build#386](https://github.com/opensearch-project/opensearch-build/pull/386) for a working example.

@@ -11,7 +11,7 @@ I often need to delete not-versioned files in SVN. Although I am supposed to cre
 
 We can do better. I added a new tool, _svn2_ to the [Svn2Svn project](https://github.com/dblock/svn2svn/). Svn2 has a _sync_ command that sends all non-versioned files to the recycle bin. Use at your own risk – this _will_ delete files that haven't been svn-added.
 
-#### Implementation
+## Implementation
 
 Svn2 uses [SharpSVN](https://github.com/AmpScm/SharpSvn) which can run a _status_ command. For each file that is not-versioned, we call a _Microsoft.VisualBasic.FileIO_ function to recycle it.
 

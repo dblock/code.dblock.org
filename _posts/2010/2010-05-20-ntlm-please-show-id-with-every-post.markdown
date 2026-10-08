@@ -7,7 +7,7 @@ tags: [gwt, waffle, security, java]
 dblog_post_id: 104
 ---
 
-#### Prologue
+## Prologue
 
 I was debugging a GWT application that worked well with FORM authentication and refused to work with integrated Windows auth (NTLM/Kerberos) on some machines. It all started with a benign error message.
 
@@ -41,7 +41,7 @@ Cache-Control: no-cache
 Authorization: Negotiate TlRMTVNTUAABAAAAB7IIogkACQAxAAAACQAJACgAAAAFAs4OAAAAD0RET1VCLVJFRFdPUktHUk9VUA==
 ```
 
-#### The Issue
+### The Issue
 
 I mentioned that I had two environments: one that worked and one that didn't. The defining moment came when someone pointed out that the working environment was choosing _Kerberos_, while the non-working environment was choosing _NTLM_ when performing _Negotiate_ authentication. It was clear that after a Kerberos auth the POST no longer carried an Authorization header and had a body.
 

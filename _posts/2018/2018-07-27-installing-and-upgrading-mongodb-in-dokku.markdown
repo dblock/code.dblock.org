@@ -8,7 +8,7 @@ This was expanded from [Running Slack Bots on DigitalOcean with Dokku](/2016/02/
 
 Let's run MongoDB inside Dokku on [DigitalOcean](https://m.do.co/c/5b26011f9a9b).
 
-### Install the Plugin
+## Install the Plugin
 
 ```bash
 $ dokku plugin:install https://github.com/dokku/dokku-mongo.git mongo

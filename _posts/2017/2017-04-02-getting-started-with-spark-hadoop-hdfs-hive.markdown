@@ -8,7 +8,7 @@ Two weeks ago I had zero experience with Spark, Hive, or Hadoop. Two weeks later
 
 This post will get you started with Hadoop, HDFS, Hive and Spark, fast.
 
-### What is Spark?
+## What is Spark?
 
 Apache Spark is a _fast and general purpose engine for large-scale data processing_. You can write code in Scala or Python and it will automagically parallelize itself on top of Hadoop. It basically runs map/reduce.
 

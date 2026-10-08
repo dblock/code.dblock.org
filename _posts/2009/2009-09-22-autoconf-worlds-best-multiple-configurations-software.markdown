@@ -10,6 +10,6 @@ This was my first commercial product. It has been available for a while with [fu
 
 [https://www.vestris.com/software/autoconf.html](http://web.archive.org/web/20040222160628/http://www.vestris.com/software/autoconf.html)
 
-#### Update (2015)
+## Update (2015)
 
 I took the software down and replaced links above with archive.org's. It has been another six years, time to retire these things. You can find the source code for all of this [on Github](https://github.com/dblock/autoconf).

@@ -14,7 +14,7 @@ So far I have added Mongoid 5 support to two, and it was fairly easy - [mongoid-
 
 Since writing this I have also published a [mongoid-compatibility gem](https://github.com/dblock/mongoid-compatibility) that avoids redundant version checking code and introduces a thin compatibility layer for things like `Moped::BSON::ObjectId.legal?(value)` (Mongoid 3) vs. `BSON::ObjectId.legal?(value)` (Mongoid 4 and 5).
 
-### Supports Mongoid 5
+## Supports Mongoid 5
 
 - [CarrierWave::Mongoid](https://github.com/carrierwaveuploader/carrierwave-mongoid): Mongoid and MongoDB's GridFS support in CarrierWave.
 - [Delayed::Backend::Mongoid](https://github.com/collectiveidea/delayed_job_mongoid): Mongoid backend for DelayedJob.

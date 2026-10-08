@@ -8,7 +8,7 @@ I made a website in PHP around 1996, right after the birth of the thing itself, 
 
 And so, [having recently struggled with using the AWS C++ SDK](/2020/03/06/working-with-aws-cpp-sdk-and-data-exchange.html), I decided to waste more time, and build a "hello world" [PHP sample for AWS Data Exchange](https://github.com/aws-samples/aws-dataexchange-api-samples/pull/34) using the [AWS SDK for PHP](https://aws.amazon.com/sdk-for-php/). It was almost too easy.
 
-### Installing PHP
+## Installing PHP
 
 The [Getting Started documentation](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/getting-started_index.html) was straightforward. On my Mac I ran `brew install php` and called it a day.
 

@@ -12,7 +12,7 @@ I am pleased to announce the open-sourcing of WAFFLE.
 
 > [https://github.com/dblock/waffle](https://github.com/dblock/waffle)
 
-#### WAFFLE** stands for **W** indows **A** uthentication **F** unctional **F** ramework ( **L** ight **E** dition). WAFFLE is a .NET library with a COM interface and a Java bridge that provides a working implementation of server-side Windows authentication, including Forms, Negotiate, NTLM and other SPNEGOs.
+## WAFFLE** stands for **W** indows **A** uthentication **F** unctional **F** ramework ( **L** ight **E** dition). WAFFLE is a .NET library with a COM interface and a Java bridge that provides a working implementation of server-side Windows authentication, including Forms, Negotiate, NTLM and other SPNEGOs.
 
 _The long story:_
 

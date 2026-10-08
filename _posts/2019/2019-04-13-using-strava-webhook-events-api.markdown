@@ -10,7 +10,7 @@ I've also used Strava Webhooks in [Slava](https://slava.playplay.io), my Strava 
 
 Here is how to run a full loop locally using `strava-webhooks` from [strava-ruby-client](https://github.com/dblock/strava-ruby-client#webhooks). This is essential for local development and testing. I recommend doing this before writing any code for your own app.
 
-#### Install
+## Install
 
 Install [any recent version of Ruby](https://www.ruby-lang.org) to get started, then install the gem.
 
@@ -19,7 +19,7 @@ $ gem install strava-ruby-client
 Successfully installed strava-ruby-client-0.3.1
 ```
 
-#### Settings
+### Settings
 
 Get a client ID and secret from [Strava Settings, My API Application](https://www.strava.com/settings/api) and set these as environment variables. You can also create a `.env` file in the current directory with these settings and the strava-webhooks tool will pick that up, `export` or specify these on the command line. YMMV.
 

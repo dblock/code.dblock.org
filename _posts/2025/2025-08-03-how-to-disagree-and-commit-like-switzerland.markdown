@@ -16,7 +16,7 @@ In this post I will teach you how to be Switzerland.
 
 The keys to a healthy disagree and commit are to 1) identify the individual competent to make a decision, 2) lay out the arguments for one decision vs. the other, 3) let the decision maker decide, 4) collectively commit to the outcome sought by the decision.
 
-### Identify the individual competent to make a decision
+## Identify the individual competent to make a decision
 
 A decision requires clarity about who has the authority and expertise to make the final decision. It's best to identify this person upfront, not after disagreements arise, usually through a strong sense of ownership in the organization.
 

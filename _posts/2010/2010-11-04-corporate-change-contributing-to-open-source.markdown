@@ -9,7 +9,7 @@ dblog_post_id: 140
 
 This is a story of corporate change. It's a tale about how an unlikely organization embraced open-source. It starts with pain and suffering and may even read like an "I hate my boss" diatribe. I don't. On the contrary, this story ends better than I would have ever hoped. It will give you hope too.
 
-#### In the Beginning
+## In the Beginning
 
 When I left Microsoft eight years ago I wished I could take https://toolbox with me. Toolbox was an internal Microsoft website dedicated to shared utilities. I found myself needing the same applications, again and again, "out there here in the real world".
 
@@ -17,7 +17,7 @@ Fast forward a couple of years. I was a manager in another software firm in New 
 
 With this in mind I went to executive management to propose to open-source this piece of software. The code had nothing to do with our primary business and should have been a no-brainer. Yet, it took two years. I have succeeded beyond my own expectations, and in this process I learned a few valuable lessons.
 
-#### The Mission
+### The Mission
 
 I had a chat with my VP-level boss about open-sourcing a project. This was the tenth item among the other twenty more important things that were going on. We were running a business, software sold for millions of dollars. It took me three months to realize that all we were doing is chatting and I was desperately trying to convince him about the worth of my initiative. It wasn't going anywhere. Here's why.
 

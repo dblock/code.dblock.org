@@ -10,7 +10,7 @@ Yesterday I gave a [talk on choosing technology for a software project](/slides-
 
 Finally, the part that had my classroom most engaged was about non-traditional methods.
 
-#### Flipping a Coin
+## Flipping a Coin
 
 ![]({{ site.url }}/images/posts/2011/2011-07-06-non-traditional-methods-of-choosing-technology-for-a-software-project/image_2.jpg)
 
@@ -18,7 +18,7 @@ Most experienced engineers that I get a chance to talk to believe that tradition
 
 Flip a coin. See which way the wind blows.
 
-#### Developer Happiness
+### Developer Happiness
 
 ![]({{ site.url }}/images/posts/2011/2011-07-06-non-traditional-methods-of-choosing-technology-for-a-software-project/image_5.jpg)
 

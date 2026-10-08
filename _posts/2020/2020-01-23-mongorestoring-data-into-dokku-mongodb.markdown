@@ -8,7 +8,7 @@ I've been running a pet project using Dokku on [DigitalOcean](https://m.do.co/c/
 
 Today I had to selectively export data from a backup, and restore this data into a MongoDB running inside a Dokku container. This was a bit tedious.
 
-### Exporting a Subset of Data
+## Exporting a Subset of Data
 
 I am dealing with [slack-gamebot](https://github.com/dblock/slack-gamebot) data, which contains a `teams` collection with a row per team and related data in other collections, including `users` and `matches`. I wrote a [bash script](https://github.com/dblock/slack-gamebot/blob/de126127f65fb5d8a2f3f5fc9a510f4460e67517/script/export-team) to export this data.
 

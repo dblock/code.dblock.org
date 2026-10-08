@@ -14,7 +14,7 @@ My first CocoaPod described in [this post](/your-first-cocoapod) sparked [a disc
 
 All these issues can be addressed. I've reorganized two of my pods, [ARASCIIImageSwizzle](https://github.com/dblock/ARASCIISwizzle) and [ARTiledImageView](https://github.com/dblock/ARTiledImageView) and fixed all the issues above.
 
-#### Folder Structure
+## Folder Structure
 
 Fixing the folder structure and naming is fairly straightforward. You can move the contents of the Demo folder one level up. This brings the Podfile to the root. The Podfile can also explicitly name the workspace.
 
@@ -48,7 +48,7 @@ xcode_sdk: iphonesimulator
 
 You can [see this commit in ARTiledImageView](https://github.com/dblock/ARTiledImageView/commit/9620887d879c3a7251829c6a0027271473ab7069) that accomplishes the same.
 
-#### Integration Tests
+### Integration Tests
 
 The tests that are part of the Demo project are really integration tests. I've renamed those consequently with a bulk replace of file names and within the source code. You can see it in [this commit](https://github.com/dblock/ARTiledImageView/commit/5e4fbf975af6b291e3650c85fa00f8b3e89c5735) in ARTiledImageView.
 

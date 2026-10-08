@@ -22,6 +22,6 @@ I am selling the site for scraps on FlippA. Click [here](https://flippa.com/2619
 
 You can have the software, the data and even the server if you would like. I think it's a great opportunity for someone who wants to create an online media presence for a business of food.
 
-#### Update (2015)
+## Update (2015)
 
 I ended up selling FoodCandy to a British company. I am no longer affiliated with it.

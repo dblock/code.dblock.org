@@ -8,7 +8,7 @@ date: 2019-05-20
 
 June 3rd was my Day 1 at [AWS Marketplace](https://aws.amazon.com/marketplace) in New York. After [8 years of people management and startup building](/2019/05/01/reflecting-on-eight-years-building-artsy.html) I decided to join Amazon's fastest growing and most technically challenging business in an individual contributor, [Principal Engineer](https://www.amazon.jobs/en/landing_pages/principal-engineer-hiring) role. In this post I will answer the obvious question - _Why did I choose AWS?_ - and give some personal interviewing tips.
 
-### Why did I choose AWS?
+## Why did I choose AWS?
 
 I had multiple job offers, including some fairly challenging CTO jobs at growth companies, but AWS was the one that spoke to me the most and felt _right_ for two reasons.
 

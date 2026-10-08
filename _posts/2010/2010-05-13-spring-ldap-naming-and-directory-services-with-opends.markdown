@@ -10,7 +10,7 @@ dblog_post_id: 102
 
 In a [previous post](/jndi-naming-and-directory-services-with-opends) I've described an initial implementation of OpenDS as a naming and directory service, including extending the directory schema and reading and writing directory objects with JNDI. As actual (read: competent) Java developers took over my prototype, they switched from JNDI to [spring-ldap](http://web.archive.org/web/20100519030334/http://www.springsource.org/ldap). The resulting code is much more pleasant, and I got to learn a bit more about Spring.
 
-#### Service Object
+## Service Object
 
 Let's get something useful in and out of the directory: a _Service_ object. Naturally it doesn't matter where it came from, so the Service class is a simple container.
 
@@ -48,7 +48,7 @@ public class Service {
 
 You'll immediately notice that in contrast with the previous implementation, this object knows nothing about being stored in a directory. I was lazy then, but this time Spring helps (forces) me to write better code.
 
-#### Service DAO
+### Service DAO
 
 At the core of spring-ldap lies _LdapTemplate_ that executes core LDAP functionality and encapsulates all the plumbing. We're going to implement a simple DAO for our Service objects that can, for example, retrieve all services.
 

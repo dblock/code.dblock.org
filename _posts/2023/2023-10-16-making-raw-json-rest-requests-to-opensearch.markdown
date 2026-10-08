@@ -16,11 +16,11 @@ docker run \
   opensearchproject/opensearch:latest
 ```
 
-### Command Line
+## Command Line
 
 We'll be looking for the equivalent of the four `GET`, `POST`, `PUT` and `DELETE` operations.
 
-#### [curl](https://curl.se/)
+### [curl](https://curl.se/)
 
 ```bash
 curl -k -u admin:admin https://localhost:9200

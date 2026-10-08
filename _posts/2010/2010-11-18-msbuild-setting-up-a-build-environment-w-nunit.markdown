@@ -12,7 +12,7 @@ Here are a few helpful tricks for setting up a build environment, finding the mo
 
 We wrap build into a _build.cmd_ that sets up a basic build environment. This avoids users the headache of launching anything except a command prompt upfront. We want a certain version of Visual Studio, targeting  a certain version of .NET Framework and NUnit. This is a typical project setup.
 
-#### Finding Program Files
+## Finding Program Files
 
 The first difficulty is to figure out where 32-bit Program Files is. On 32-bit machines this is typically `C:\Program Files` and on 64-bit machines, `C:\Program Files (x86)`. The `ProgramFiles` environment variable points to the native Program Files, but we want the 32-bit one.
 
@@ -21,7 +21,7 @@ set ProgramFilesDir=%ProgramFiles%
 if NOT "%ProgramFiles(x86)%"=="" set ProgramFilesDir=%ProgramFiles(x86)%
 ```
 
-#### Visual Studio
+### Visual Studio
 
 This one is simple. We want to call _vcvarsall.bat_ for a given version of Visual Studio. This sets up the Visual Studio build environment.
 

@@ -67,6 +67,6 @@ I use my Android Tether and have the internet most of the way since the subway r
 
 Even if I don't get a seat, I love people-watching. All those people of the many origins and ethnic groups are endless source of amusement, fun and learning. I love my commute even if I am squeezed between a fat dude and a whiny kid. If you hate your commute, start by packing your stuff, getting a job at a startup and moving to New York where there's an incredible diversity.
 
-#### Update (2015)
+## Update (2015)
 
 I no longer commute from Brighton, having moved back to Manhattan. That was mostly motivated by the need to be in a better school district.

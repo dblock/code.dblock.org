@@ -90,7 +90,7 @@ Let's ask Claude to do something useful.
 
 Whoa.
 
-### Troubleshooting
+## Troubleshooting
 
 You need to `gcloud auth login`, otherwise you get a "Method doesn't allow unregistered callers" error.
 

@@ -14,7 +14,7 @@ To support migrations I've recently extracted [slack-ruby-bot-server-rtm](https:
 
 > The migration effectively involves replacing `slack-ruby-bot-server-rtm` with `slack-ruby-bot-server-events`.
 
-### Upgrade to Slack-Ruby-Bot-Server 1.2.0 and Slack-Ruby-Bot-Server-Rtm
+## Upgrade to Slack-Ruby-Bot-Server 1.2.0 and Slack-Ruby-Bot-Server-Rtm
 
 Upgrade to the latest version of `slack-ruby-bot-server-rtm` , which extracts real-time components. Practically, replace `SlackRubyBotServer::Server` by `SlackRubyBotServer::RealTime::Server`.
 

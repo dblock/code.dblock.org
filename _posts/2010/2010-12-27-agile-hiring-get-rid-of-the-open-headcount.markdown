@@ -8,11 +8,11 @@ dblog_post_id: 154
 ---
 Here's a disruptive idea for the corporate world: let's get rid of the traditional "open headcount".
 
-#### Corporate Culture of Open Headcount
+## Corporate Culture of Open Headcount
 
 One thing struck me while watching the [Netflix culture slides](https://www.slideshare.net/reed2001/culture-1798664): the company doesn't have a vacation policy. They don't count how many vacation days employees take. I thought, what else could we stop counting? For a relatively small company (~100 people max), I am convinced that we can stop counting open headcount. We just need to know whether this particular candidate can or cannot be hired and paid, _right now_. I am claiming that in a culture of trust the rest of checks and balances don't add anything to the process, except time.
 
-#### Creatures of Habit
+### Creatures of Habit
 
 Consider the following situation. My team has four team leads and a total of about 35 developers. We have a structure built to create small teams of 3 to 5 people that are focused on a component or a service. These are usually relatively independent and work in an agile manner with, hopefully, not too many dependencies. I have about a dozen total open headcount and spend a significant amount of time allocating various heads into the organization chart.
 

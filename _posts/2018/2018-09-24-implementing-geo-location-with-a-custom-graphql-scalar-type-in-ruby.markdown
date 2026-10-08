@@ -6,7 +6,7 @@ tags: [graphql, ruby, 33 minutes, mongoid]
 ---
 How does one return and accept a geolocation type in GraphQL? Something that has a `latitude` and `longitude`?
 
-### Naive Implementation
+## Naive Implementation
 
 The naive approach is to create a location type with a latitude and longitude.
 

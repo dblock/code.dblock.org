@@ -12,6 +12,6 @@ ResourceLib is written in C#, enumerates resources and implements both read and 
 
 I've updated the [CodeProject article](https://www.codeproject.com/Articles/27373/File-Resource-Management-Library-NET-) with a lot of implementation details that can't be found elsewhere on the net and published a beta of version 1.2 on CodePlex.
 
-#### Update (2015)
+## Update (2015)
 
 ResourceLib now lives [on Github](https://github.com/dblock/resourcelib).

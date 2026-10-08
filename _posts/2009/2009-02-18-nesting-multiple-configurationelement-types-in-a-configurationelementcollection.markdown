@@ -32,7 +32,7 @@ The trick is to use a proxy class and to manufacture the right type during deser
 
 <!-- more -->
 
-#### NestedConfiguration.cs
+## NestedConfiguration.cs
 
 ```csharp
 using System;
@@ -212,7 +212,7 @@ namespace NestedConfiguration
 }
 ```
 
-#### App.config
+### App.config
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

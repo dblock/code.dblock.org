@@ -8,7 +8,7 @@ Every active open-source project grows a lot of low hanging fruit. Encouraging p
 
 ***
 
-#### Help Wanted, Good First Issue and Summer of Code
+## Help Wanted, Good First Issue and Summer of Code
 
 Identify and tag issues that have an easy solution to attract first time contributors.
 
@@ -16,7 +16,7 @@ Good first issues, or issues that are part of programs such as [Summer of Code](
 
 I could use help with [58 issues](https://github.com/issues?q=is%3Aopen+is%3Aissue+author%3Adblock+archived%3Afalse+label%3A%22good+first+issue%22%2C%22help+wanted%22) right now and there are [683](https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+org%3Aopensearch-project+label%3A%22good+first+issue%22) issues labelled "good first issue" in the opensearch-project GitHub organization.
 
-#### READMEs and Documentation
+### READMEs and Documentation
 
 README.md, documentation and "Getting Started" for developers are often outdated or overlooked in open-source projects. Contributors can begin by fixing typos, improving clarity, or adding examples to existing documentation. This is a great way for new contributors to get familiar with the project's codebase and contribute without making significant code changes.
 

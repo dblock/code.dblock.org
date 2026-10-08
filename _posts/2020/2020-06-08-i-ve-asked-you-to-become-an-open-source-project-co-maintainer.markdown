@@ -14,7 +14,7 @@ For Ruby projects I may add a note along the lines of _drop me an email with you
 
 Some examples of this in [grape#1803](https://github.com/ruby-grape/grape/pull/1803#issuecomment-433619949), [open-weather-ruby-client#20](https://github.com/dblock/open-weather-ruby-client/pull/20#issuecomment-638265068), [iex-ruby-client#63](https://github.com/dblock/iex-ruby-client/pull/63#issuecomment-593147832), [slack-ruby-bot-server#95](https://github.com/slack-ruby/slack-ruby-bot-server/pull/95#issuecomment-472461133), [mongoid-history#202](https://github.com/mongoid/mongoid-history/pull/202#issuecomment-344092634), [strava-ruby-cli#5](https://github.com/dblock/strava-ruby-cli/pull/5#issuecomment-639440785), and [mongoid-scroll#20](https://github.com/mongoid/mongoid-scroll/pull/20#issuecomment-373012494).
 
-### Why do I ask?
+## Why do I ask?
 
 My goal is to reduce bus factor, and completely work myself out of the maintainer job, especially if I am the only one on record. Adding maintainers distributes workload, and gives opportunity of ownership to a new person that is likely more motivated than me - after all, you've just made a significant contribution! In the best case scenario I'll be able to step back from being the point-person on a project. The worst case is that you will make a release, saving me a little bit of time.
 

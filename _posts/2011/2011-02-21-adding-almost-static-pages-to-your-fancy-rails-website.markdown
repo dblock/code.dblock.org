@@ -12,7 +12,7 @@ A terrified look takes over your face. You realize that you must now explain to 
 
 Let's turn our Rails site into a wiki in a few simple steps.
 
-#### Create a Page Model
+## Create a Page Model
 
 A simple page has a name and some content.
 
@@ -28,7 +28,7 @@ end
 
 Create basic controllers and UI to edit and view the pages – boring Rails stuff.
 
-#### Enable Markdown
+### Enable Markdown
 
 Assume _:content_ is in a wiki (markdown) format. No need to stand on your head if you're using HAML. The HAML _:markdown_ filter will just render your content field in HTML. You have to use the Ruby #{} syntax to evaluate the actual expression. Here's the entire _views/pages/show.html.haml_.
 

@@ -15,13 +15,13 @@ Github enables individuals and organizations to create projects, fork them and t
 
 Github is your new resume. Here's how to make the best of it.
 
-#### College and Personal Projects
+## College and Personal Projects
 
 If you don't have a website, tech blog or any kind of useful online presence, Github lets you create _yourname.github.com_. Create an account and hit that address. Add a simple page that lists your projects. If you're in college, those can be your current school assignments that currently live on your hard drive: move everything to Github, learn to use version control, push changes and collaborate with your classmates. These are essential skills in the industry and by the time you earn a degree, potential employers will not only hear about your school work during interviews, but will be able to see the code and dig though your commit history. [Here's mmcnierney14's Github](https://github.com/mmcnierney14), he's studying CS at Dartmouth.
 
 If you have been coding for a long time, you might want to do the same with your old source and for all personal projects. I used to run my own Subversion server and was really happy to get rid of it, moving years worth of commit history to Github in a few clicks. Admittedly it's a bit nostalgic to see my [15 y/o implementation of yet another C++ String on Github](https://github.com/dblock/baseclasses/blob/master/String/String.cpp), accompanied by many face-to-palm moments.
 
-#### Your First Job
+### Your First Job
 
 Your first job should be at an organization that embraces open-source and lets you contribute to existing projects. Other companies simply don't deserve you.
 

@@ -11,7 +11,7 @@ You've probably been depending on automated pull requests from [Dependabot](http
 
 Below are some implementation details from [opensearch-project/project-meta](https://github.com/opensearch-project/project-meta/blob/main/.github/workflows/check-repos.yml).
 
-### GitHub Action Setup
+## GitHub Action Setup
 
 The job is executed on all changes to `main` and daily at midnight.
 

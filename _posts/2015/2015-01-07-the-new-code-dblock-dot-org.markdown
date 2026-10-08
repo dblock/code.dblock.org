@@ -8,7 +8,7 @@ The newly remodeled [code.dblock.org](https://code.dblock.org) is powered by [Je
 
 ![]({{ site.url }}/images/posts/2015/2015-01-07-the-new-code-dblock-dot-org/meta.png)
 
-### The Old
+## The Old
 
 My [homegrown system](https://github.com/dblock/dblog) was built in 2008. The tech stack was Microsoft ASP.net with a SQL Server back-end. I did most publishing with [Windows LiveWriter](https://en.wikipedia.org/wiki/Windows_Live_Writer) that used [AtomPub](https://code.dblock.org/2009/12/07/implementing-atompub-in-net.html).
 

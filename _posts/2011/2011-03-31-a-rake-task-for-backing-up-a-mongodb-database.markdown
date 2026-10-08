@@ -14,7 +14,7 @@ It's time to connect MongoDB with S3 and write a task that backs up a MongoDB da
 
 We're now reusing two pieces of code in all these tasks (I put them into _s3.rake_ and _mongohq.rake _with some bug fixes).
 
-#### mongohq.rake
+## mongohq.rake
 
 Given an environment, retrieve its MongoHQ url of a database and parse it from _config/heroku.yml_. This returns an URL and a database name.
 
@@ -33,7 +33,7 @@ namespace :mongohq do
 end
 ```
 
-#### s3.rake
+### s3.rake
 
 We only have one set of S3 keys (we call this a production set). Retrieve those keys from _config/heroku.yml_ and open an _S3Interface_ connection to Amazon S3.
 

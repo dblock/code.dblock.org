@@ -10,13 +10,13 @@ Github has been [petitioned, begged and implored](https://gist.github.com/coolaj
 
 This is what I had to do for my Github pages Jekyll site at [https://www.dblock.org](https://www.dblock.org). You can see the changes in [www.dblock.org@5f6f047d](https://github.com/dblock/www.dblock.org/commit/5f6f047df4d8a48111365bbb1e3528b4152c4d5c).
 
-#### _config.yml
+## _config.yml
 
 Change `url` in `_config.yml` to `https://www.dblock.org` to fix asset and other internal links.
 
 I couldn't figure out how to make those relative to either HTTP or HTTPs.
 
-#### _includes/_enforce_ssl.html
+### _includes/_enforce_ssl.html
 
 Add a JavaScript redirect to `_head.html` from HTTP to HTTPs.
 

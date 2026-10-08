@@ -32,7 +32,7 @@ Odin then worked like a charm.
 
 The phone rebooted with Android 2.1. Success!
 
-#### Upgrading to Froyo
+## Upgrading to Froyo
 
 I have my phone back. So what can I do to make things worse? Android 2.2 is really here for the Galaxy! T-Mobile told me the update would be available "shortly" in September, but I am familiar with software schedules slipping. I knew they meant January. Did I really care? I was perfectly happy with 2.1. But 2.2 > 2.1, so I had to try it. I followed the instructions [here](https://web.archive.org/web/20110123172338/http://forums.t-mobile.com/t5/Samsung-Vibrant/Samsung-Vibrant-software-upgrade-to-Android-2-2-Froyo-now/td-p/678871). It didn't quite work and produced download errors at first. Then, after restarting Kies as Administrator (I am on Windows 7) it decided to update itself.
 
