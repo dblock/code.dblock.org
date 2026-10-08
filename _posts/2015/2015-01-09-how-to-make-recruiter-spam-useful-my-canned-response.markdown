@@ -28,7 +28,7 @@ Here's the text. I adjust it slightly depending on the request.
 >
 > Also, Artsy is very fortunate to have a large pool of Engineering candidates coming via our personal networks and [extensive open-source work](https://artsy.github.io/open-source). We therefore don't work with recruiters or agencies.
 >
-> cheers
-> dB.
+> cheers\
+> -dB.
 
 9 out of 10 times I get a response back that includes the comp target and a bunch of information. And I always get a thank you. I think this works for everyone.

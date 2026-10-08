@@ -77,16 +77,13 @@ fjs.parentNode.insertBefore(js, fjs);
 [DataLayer - Storage Wars: The Art Genome Project](https://www.youtube.com/watch?v=F-uGrsPGKIs), 2016
 
 <a href="https://www.youtube.com/watch?v=8ijzefV-B7U"><img alt="Taking Over Open Source Projects at GoGaRuCo" src="/images/about/taking-over-someone-elses-open-source-project.png"></a><br>
-[Taking over Someone Else's Open-Source Projects](https://www.youtube.com/watch?v=8ijzefV-B7U)
-Golden Gate Ruby Conference, San Francisco, 2014
+[Taking over Someone Else's Open-Source Projects](https://www.youtube.com/watch?v=8ijzefV-B7U) Golden Gate Ruby Conference, San Francisco, 2014
 
 <a href="https://www.infoq.com/presentations/mentoring-cto-club-ny"><img alt="Mentoring Humans and Engineers at QCon" src="/images/about/mentoring-humans-and-engineers.png"></a><br>
-[Mentoring Humans and Engineers](https://www.infoq.com/presentations/mentoring-cto-club-ny)
-QCon, New York, 2014
+[Mentoring Humans and Engineers](https://www.infoq.com/presentations/mentoring-cto-club-ny) QCon, New York, 2014
 
 <a href="https://www.youtube.com/watch?v=QvHf94hxzRc"><img alt="Building and Scaling a Test Driven Culture at AppNexus" src="/images/about/building-and-scaling-a-test-driven-culture.png"></a><br>
-[Building and Scaling a Test Driven Culture](https://www.youtube.com/watch?v=QvHf94hxzRc)
-AppNexus Engineering at Scale, New York, 2013
+[Building and Scaling a Test Driven Culture](https://www.youtube.com/watch?v=QvHf94hxzRc) AppNexus Engineering at Scale, New York, 2013
 
 <a href="https://vimeo.com/158686783"><img alt="Your First Slack Bot Service at NYC Slack Meetup" src="/images/about/your-first-slack-bot-service.png"></a><br>
 [Your First Slack Bot Service](https://vimeo.com/158686783): Recorded at the first inaugural New York City Slack Meetup in March 2016.

@@ -29,11 +29,11 @@ I didn't need to shift opinions. I needed my pet project open-sourced.
 
 I put the project terms clearly in an e-mail and clearly stated my question.
 
-> Project: Remote Installer, a tool that enables integration and system automation testing for installers.
-> Internal website: ...
-> Contributors: ... (3 people)
-> Lines of code: 2,829
-> What's the next step?
+- Project: Remote Installer, a tool that enables integration and system automation testing for installers.
+- Internal website: ...
+- Contributors: ... (3 people)
+- Lines of code: 2,829
+- What's the next step?
 
 I've now thrown the ball in my boss's hands. I also made it clear, in writing, that I don't plan to back off.
 

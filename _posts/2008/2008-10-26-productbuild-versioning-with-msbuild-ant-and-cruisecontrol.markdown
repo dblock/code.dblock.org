@@ -124,10 +124,12 @@ Each build's artifacts (the entire C:\source\myproject\target\Release directory)
 
 We also unit test versions. We want to make sure that all our binaries are properly versioned. The following NUnit test works for both .NET assemblies and Windows native binaries.
 
+```csharp
 }
 
-  FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(filename);
-   versionInfo.FilePrivatePart);
+FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(filename);
+versionInfo.FilePrivatePart);
+```
 
 ### Notes
 
