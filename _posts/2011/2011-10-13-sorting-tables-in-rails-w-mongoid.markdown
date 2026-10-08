@@ -41,8 +41,7 @@ end
 
 There are several issues with this.
 
-We've just enabled parameter injection where one can send all kinds of wonderful queries into the Mongoid model by editing the URL.
-There's no clear default sorting, for tags we'd like to sort by count in descending order.
+We've just enabled parameter injection where one can send all kinds of wonderful queries into the Mongoid model by editing the URL. There's no clear default sorting, for tags we'd like to sort by count in descending order.
 
 The first issue can be solved by checking whether the direction is one of _:asc_ or _:desc_ and whether a column is a field in the model (added to _config/initializers/mongoid_document.rb_).
 
