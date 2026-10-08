@@ -8,7 +8,7 @@ dblog_post_id: 107
 ---
 ![waffle]({{ site.url }}/images/posts/2010/2010-05-27-tomcat-single-sign-on-mixed-with-form-authentication-w-waffle/waffle_3.jpg)
 
-Most Tomcat users begin by implement Form-based authentication. Those deploying applications into enterprises soon discover that those enterprises use an Active Directory and have single sign-on on all intranet sites. They eventually find [Waffle](https://github.com/dblock/waffle/), but don't want to take the ability to do form-based logon away.
+Most Tomcat users begin by implementing Form-based authentication. Those deploying applications into enterprises soon discover that those enterprises use an Active Directory and have single sign-on on all intranet sites. They eventually find [Waffle](https://github.com/dblock/waffle/), but don't want to take the ability to do form-based logon away.
 
 _How do we give users a way to logon either way?_
 

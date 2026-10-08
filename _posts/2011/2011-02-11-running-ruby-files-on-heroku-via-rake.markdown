@@ -16,7 +16,7 @@ namespace :stuff do
   desc 'Run stuff/things.rb'
   task :things => :environment do
     file = File.join(Rails.root, 'stuff', 'things.rb')
-    puts "Runnng #{file}"
+    puts "Running #{file}"
     load(file) if File.exist?(file)
   end
 

@@ -19,7 +19,7 @@ It's all because the very few kids who did better in either verbal or non-verbal
 
 Let's ask a resident mathematician for an example.
 
-> Assume you had 100 kids taking the test. In verbal, kid A and kid B were the only ones who did better, but they both got 150 (much better) and 135 non-verbal (only a little worse). Their combined scores are 150 + 2*135 = 420. Kid C was the only one who did better in non-verbal, they got a 160 and a 131 verbal (only a little worse) for a combined score of 160 + 2*131 = 422. Your combined score was 132 + 2*136 = 404, which was beaten by three kids (A, B, and C), which puts him in in the 97% total.
+> Assume you had 100 kids taking the test. In verbal, kid A and kid B were the only ones who did better, but they both got 150 (much better) and 135 non-verbal (only a little worse). Their combined scores are 150 + 2*135 = 420. Kid C was the only one who did better in non-verbal, they got a 160 and a 131 verbal (only a little worse) for a combined score of 160 + 2*131 = 422. Your combined score was 132 + 2*136 = 404, which was beaten by three kids (A, B, and C), which puts him in the 97% total.
 >
 > So, if you combine then normalize the scores the combined score makes more sense. When you normalize then add, it's much easier for kids to jump ahead by doing well on one test. This is OK with me, because a child that does exceptionally well in one area is more likely to be talented somewhere, as long as they do above average everywhere else.
 >

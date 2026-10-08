@@ -29,8 +29,8 @@ data.main.temp # => 283.15, degrees Kelvin
 Has built-in temperature conversion.
 
 ```ruby
-data.main.temp_c # => 10, degrees Celcius
-data.main.temp_f # => 50.0, degrees Farenheit
+data.main.temp_c # => 10, degrees Celsius
+data.main.temp_f # => 50.0, degrees Fahrenheit
 ```
 
 And can return some weather history via the [OneCall API](https://openweathermap.org/api/one-call-api).

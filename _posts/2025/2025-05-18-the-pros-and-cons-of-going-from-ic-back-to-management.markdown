@@ -42,7 +42,7 @@ To mitigate this I try not to be anyone's psychiatrist, and spend more time bein
 
 #### Feeling Good About People Work
 
-Whereas I had lots of 1:1s with my fellow Engineers, I was mostly tasked with producing software as an IC. As a manager, I am back to having to listen to people as part of my role. This forces me to take my 1:1s a lot more methodically, to followup on people problems, resolve conflicts, inspire each individual to be their best at work, and enable them in any way I can. As a consequence, it feels great to see everyone on a a team I built work well together and be inspired.
+Whereas I had lots of 1:1s with my fellow Engineers, I was mostly tasked with producing software as an IC. As a manager, I am back to having to listen to people as part of my role. This forces me to take my 1:1s a lot more methodically, to follow up on people problems, resolve conflicts, inspire each individual to be their best at work, and enable them in any way I can. As a consequence, it feels great to see everyone on a team I built work well together and be inspired.
 
 #### Working with People Rather than Computers
 

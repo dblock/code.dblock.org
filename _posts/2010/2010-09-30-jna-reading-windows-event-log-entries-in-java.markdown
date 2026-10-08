@@ -135,7 +135,7 @@ public void testReadEventLogEntries() {
 
 Let's go back to our goal to write an iterator and break the above test apart.
 
-First, we'll declare an `EventLogRecord` class that encapsulates the the auto-incremented record ID, the event source and the record data itself.
+First, we'll declare an `EventLogRecord` class that encapsulates the auto-incremented record ID, the event source and the record data itself.
 
 ```java
 public static class EventLogRecord {

@@ -31,7 +31,7 @@ Job descriptions poorly convey critical aspects of a company's leadership and of
 
 Target compensation is unclear or varies with the experience of the candidate. One can't stop but wonder whether it also varies with the candidate's gender or origin.
 
-Would would a more thoughtful CTO job description that addresses some of these issues entail?
+What would a more thoughtful CTO job description that addresses some of these issues entail?
 
 Multiple colleagues suggested that a CTO job description becomes a pitch deck, similar to the one used for raising funds. It would be thoughtful and include an overview of the company, a proposal tailored to a potential CTO on the opportunity, an overview of the team, current organization and CTO's ownership, honest and clear set of expectations for the role, objectives to achieve over the next few years and a broad definition of success. The next level of detail would have a perspective on the role from the hiring manager, usually the CEO. Finally, the job would clearly set target compensation and provide a high level breakdown of salary vs. equity.
 

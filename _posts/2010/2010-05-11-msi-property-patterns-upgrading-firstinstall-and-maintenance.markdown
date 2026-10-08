@@ -24,7 +24,7 @@ Runtime.wxi follows.
    FirstInstall: when product is installed for the first time
    Upgrading: when we run upgrade for the installed product
    RemovingForUpgrade: when upgrade removes previous installation
-   Uninstalling: when product is being completely unistalled
+   Uninstalling: when product is being completely uninstalled
    Maintenance: configuration maintenance
   -->
 

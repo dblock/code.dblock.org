@@ -75,7 +75,7 @@ Every project needs a license. I use [the MIT license](https://github.com/dblock
 
 ```
 Copyright (c) 2013, Daniel Doubrovkine and Contributors. All Rights Reserved.
-This project is licenced under the [MIT License](LICENSE.md).
+This project is licensed under the [MIT License](LICENSE.md).
 ```
 
 #### Gemfile

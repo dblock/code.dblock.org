@@ -155,7 +155,7 @@ A walk-through of the organizational chart. The important takeaway for this sect
 
 ### Technology Collaboration
 
-A deep dive into how the CEO and other teams collaborate with the technology organization, company culture around technology, where ideas are born, how they are turned into code and how they make it into the production production used by customers. The important takeaway from this section is whether _the team is standing in its own way to enable success_.
+A deep dive into how the CEO and other teams collaborate with the technology organization, company culture around technology, where ideas are born, how they are turned into code and how they make it into the production product used by customers. The important takeaway from this section is whether _the team is standing in its own way to enable success_.
 
 ### Risks
 

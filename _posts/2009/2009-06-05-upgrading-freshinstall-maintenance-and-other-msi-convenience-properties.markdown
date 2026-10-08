@@ -13,7 +13,7 @@ In writing new MSI installers, we always have to deal with legacy InstallShield 
   FirstInstall: when product is installed for the first time
   Upgrading: when we run upgrade for the installed product
   RemovingForUpgrade: when upgrade removes previous installation
-  Uninstalling: when product is being completely unistalled
+  Uninstalling: when product is being completely uninstalled
   FreshInstall: not upgrading legacy version
   UpgradingFromLegacy: upgrading from a legacy version
   UpgradingAny: Upgrading OR UpgradingFromLegacy
@@ -41,7 +41,7 @@ The properties.
 <Property Id="LEGACYPRODUCT_INSTALLLOCATION">
   <RegistrySearch Id="GetInstalledLegacyProductInstallLocation" Type="raw" Root="HKLM" Key="$(var.WindowsUninstallKey)\$(var.LegacyProductProductCode)" Name="InstallLocation" />
 </Property>
-<!-- legacy product product guid -->
+<!-- legacy product guid -->
 <Property Id="LEGACYPRODUCT_BEINGUPGRADED">
   <RegistrySearch Id="GetInstalledLegacyProductProductGuid" Type="raw" Root="HKLM" Key="$(var.WindowsUninstallKey)\$(var.LegacyProductProductCode)" Name="ProductGuid" />
 </Property>

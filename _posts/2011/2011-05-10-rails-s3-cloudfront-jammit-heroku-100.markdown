@@ -52,7 +52,7 @@ stylesheets:
 We use a simple Rake task to generate assets heavily inspired by [this gist](https://gist.github.com/613114/ce0b64979eb020b33c6668e61ddacad8bba0a377) (bonus clean task included). I can run rake assets and get output in public/assets that is a mix of checked in (eg. _public/assets/images_) and generated (eg. _public/assets/common.js_ and _common.js.gz_) files.
 
 ```ruby
-desc "Compiles CoffeeScript using Barrista (but only if they changed)"
+desc "Compiles CoffeeScript using Barista (but only if they changed)"
 task 'coffee:compile' => :environment do
   abort "'#{Barista::Compiler.bin_path}' is unavailable." unless Barista::Compiler.available?
   Barista.compile_all! false, false

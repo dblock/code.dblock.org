@@ -154,7 +154,7 @@ We found that the XApp authentication model is ideal for client apps that don't 
 
 OAuth2 is the preferred mechanism for authenticating users. It takes the login out of the hands of the client application – login happens in an external browser, therefore offering the best protection to the user.
 
-Let's start from the the tail-end. Assume the client application has gotten some kind of _access_token _and can pass it to each API. This should allow us to lookup an access grant and eventually a user. Let's add this to the User model.
+Let's start from the tail-end. Assume the client application has gotten some kind of _access_token_ and can pass it to each API. This should allow us to look up an access grant and eventually a user. Let's add this to the User model.
 
 ```ruby
 def self.find_for_token_authentication(params = {})

@@ -15,7 +15,7 @@ On the plus side, short lived tokens are good for security, since a leaked acces
 My [Strava Slack Bot](https://slava.playplay.io) is a classic OAuth application in which users connect their account to Strava in Slack. The migration involved the following.
 
 1. Before we stored a user's `access_token` and `token_type`, now we store a `refresh_token`, `access_token`, `token_type` and `token_expires_at`.
-2. Before we made Strava API calls using `acess_token`, now we have to check the token expiration time and potentially refresh `access_token`.
+2. Before we made Strava API calls using `access_token`, now we have to check the token expiration time and potentially refresh `access_token`.
 3. Refreshing the token involves a `POST` to `https://www.strava.com/oauth/token` with a `refresh_token` and storing the updated `access_token` with a new `token_expires_at` as well as a potentially changed `refresh_token`. An old `access_token` can be used here during the migration period instead of a `refresh_token`.
 
 Works as intended. See [slack-strava@96b934](https://github.com/dblock/slack-strava/commit/96b93410a8a2c1ff0f58ab79248070a5fe4b10cb) for complete implementation details.

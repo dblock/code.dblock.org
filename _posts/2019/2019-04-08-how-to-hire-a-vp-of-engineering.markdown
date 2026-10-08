@@ -127,7 +127,7 @@ Speaking of red flags, I had rejected more than one VP candidate during the info
 
 Follow-up to an informational with an e-mail, thanking the candidate and outlining next steps.
 
-Make it extra personal by highlighting what _they_ said about the opportunity, attempting to underscore why this this job could be the absolute best choice for them.
+Make it extra personal by highlighting what _they_ said about the opportunity, attempting to underscore why this job could be the absolute best choice for them.
 
 I also like to include a handy, up-to-date GMail canned response that includes links to various topics I talk about during any informational. It's a rabbit hole that will start you in the [Artsy README](https://github.com/artsy/README) and take you through some exciting company milestones to my personal blog.
 

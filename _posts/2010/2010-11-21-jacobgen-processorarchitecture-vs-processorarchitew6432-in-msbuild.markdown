@@ -23,7 +23,7 @@ Exception in thread "main" java.lang.UnsatisfiedLinkError:
 
 We use [JacobGen](https://sourceforge.net/projects/jacob-project) to generate a Java-COM bridge. It's a convoluted setup: a C# library is exported to COM, then a bridge is generated to use it from Java. Some legacy applications still use this and while it works, I find it a bit too thick. I recommend implementing whatever you have in C# in Java and using [JNA](https://github.com/twall/jna) if you need to invoke native functions. While that's nice in theory, we still need to fix the build.
 
-I found the error strange, since JacobGen carries a 32-bit and a 64-bit native DLL and one would think that that intended to "just work" on a 64-bit system. This is how we call JacobGen:
+I found the error strange, since JacobGen carries a 32-bit and a 64-bit native DLL and one would think that was intended to "just work" on a 64-bit system. This is how we call JacobGen:
 
 ```bat
 @echo off

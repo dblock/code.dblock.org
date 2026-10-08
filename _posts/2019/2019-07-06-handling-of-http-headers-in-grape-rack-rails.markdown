@@ -80,7 +80,7 @@ curl -H reticulated-spline:42 https://localhost:9292/api/headers/Reticulated-Spl
 
 ### Rack
 
-Rack stores HTTP headers in `ENV` as all uppercase with an `HTTP_` prefix. You can pass the Rack env as the the second parameter in your specs. In the example below `HTTP_RETICULATED_SPLINE` becomes `Reticulated-Spline` and `SOMETHING_ELSE` is only available in `ENV['SOMETHING_ELSE']` and is not a header.
+Rack stores HTTP headers in `ENV` as all uppercase with an `HTTP_` prefix. You can pass the Rack env as the second parameter in your specs. In the example below `HTTP_RETICULATED_SPLINE` becomes `Reticulated-Spline` and `SOMETHING_ELSE` is only available in `ENV['SOMETHING_ELSE']` and is not a header.
 
 ```ruby
 get '/api/headers', nil, { 

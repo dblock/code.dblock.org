@@ -11,7 +11,7 @@ We've been using [Grape](https://github.com/ruby-grape/grape) to provide a RESTf
 I've recently had to deal with code that raises exceptions in a bunch of unpredictable places. This causes Rails to produce an HTML error page, including when making JSON API calls. We want to have some control of this and wrap all calls to return an error message or maybe even a JSON error message. To do so we'll write the following exception handler. It traps all exceptions in a _rescue_ block and re-throws a specific _:error_ that Grape expects.
 
 ```ruby
-# trap all exceptions and fail gracefuly with a 500 and a proper message
+# trap all exceptions and fail gracefully with a 500 and a proper message
 class ApiErrorHandler < Grape::Middleware::Base
   def call!(env)
     @env = env

@@ -73,7 +73,7 @@ This works, but does not trigger CI. This is by design, because `GITHUB_TOKEN` i
 
 To trigger CI we need a different token. You can create a personal access token (PAT), but that would run CI under your account, which may exclude you from approving PRs because of branch protection rules. A better solution is to use a token from [an org-owned GitHub app](https://docs.github.com/en/apps/creating-github-apps). I created one called "Slack Ruby CI Bot", and gave it r/w permissions for "Contents" and "Pull Requests", then installed it in the [slack-ruby GitHub org](https://github.com/slack-ruby) and noted the installation ID. I also generated a new private key from the bottom of the [app settings page](https://github.com/organizations/slack-ruby/settings/apps/slack-ruby-ci-bot) and set two repo secrets: `CI_APP_ID` to the value of the app ID, and `CI_APP_PRIVATE_KEY` for the contents of the private key from the `.pem` file downloaded from GitHub.
 
-Get the the app token in GHA.
+Get the app token in GHA.
 
 ```yaml
 {% raw %}

@@ -62,7 +62,7 @@ Today I am happy to announce that Alice was promoted.
 
 ### Move People to Bcc
 
-If someone made an introduction, thank them and move them to the bcc. Spare their inbox from conversations they dont't care about.
+If someone made an introduction, thank them and move them to the bcc. Spare their inbox from conversations they don't care about.
 
 ```txt
 From: me
