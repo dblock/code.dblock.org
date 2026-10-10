@@ -7,16 +7,78 @@ github-actions:
   aliases: [github actions, gha]
 api:
   title: api
-  aliases: [apis]
+  aliases: [apis, soap, syndication]
 blog:
   title: blog
-  aliases: [blogging]
+  aliases: [blogging, octopress]
 domain-driven-design:
   title: domain-driven design
   aliases: [ddd, domain driven design]
 podcasts:
   title: podcasts
-  aliases: [podcast]
+  aliases: [podcast, ctocast, pod5]
 ping-pong:
   title: ping pong
   aliases: [ping pong]
+management:
+  title: management
+  aliases: [director of engineering, vp of engineering]
+databases:
+  title: databases
+  aliases: [vectordb, datamapper, hibernate]
+testing:
+  aliases: [emma, nunit, mocha, chai]
+ci:
+  aliases: [cijoe]
+ldap:
+  aliases: [opends, jndi]
+reporting:
+  aliases: [cognos]
+email:
+  aliases: [outlook, actionmailer, gmail]
+speaking:
+  aliases: [panels]
+jobs:
+  aliases: [developer]
+nyc:
+  aliases: [new york]
+bots:
+  aliases: [bot, tic-tac-toe, chess, pool]
+licensing:
+  aliases: [3licenses]
+alexa:
+  aliases: [amazon echo, echo]
+art market:
+  aliases: [art basel, art fairs]
+docker:
+  aliases: [dusty]
+ruby:
+  aliases: [mri, rubinius, hashie]
+css:
+  aliases: [skeleton]
+foodcandy:
+  aliases: [sncore]
+principal engineer:
+  aliases: [pe]
+blockchain:
+  aliases: [crypto, ethereum, etherscan]
+nft:
+  aliases: [robbies]
+interviews:
+  aliases: [interview]
+osx:
+  aliases: [mac osx]
+work:
+  aliases: [remote-work, remote work, onboarding]
+ai:
+  aliases: [claude]
+ux ui:
+  aliases: [ux, ui]
+nodejs:
+  aliases: [npm]
+logging:
+  aliases: [log4j]
+time:
+  aliases: [thinking]
+xml:
+  aliases: [xslt]

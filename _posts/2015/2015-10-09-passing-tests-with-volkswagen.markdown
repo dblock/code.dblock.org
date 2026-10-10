@@ -2,7 +2,7 @@
 layout: post
 title: "Passing Tests with Volkswagen"
 date: 2015-10-09
-tags: [testing, cheating]
+tags: [testing]
 ---
 Volkswagen did a good job pioneering TDD. There's now broad language and framework support.
 

@@ -3,7 +3,7 @@ layout: post
 title: "DataMapper: promoting columns into classes"
 redirect_from: "/datamapper-promoting-columns-into-classes/"
 date: 2011-02-11 06:45:11
-tags: [mysql, datamapper, mongodb, ruby, databases]
+tags: [mysql, mongodb, ruby, databases]
 dblog_post_id: 170
 ---
 I recently had to deal with reading a schema in a MySQL database in Ruby and migrating data to MongoDB. It has been made real easy with DataMapper _(note: datamapper.org is no longer available)_, an awesome library that doesn't force me into creating a complete and rigid model  for the MySQL database.

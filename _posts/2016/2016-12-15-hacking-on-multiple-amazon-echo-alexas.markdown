@@ -2,7 +2,7 @@
 layout: post
 title: "Hacking on Multiple Amazon Echos (Alexa)"
 date: 2016-12-15
-tags: [amazon echo, alexa]
+tags: [alexa]
 ---
 I recently [worked on bringing Artsy to Amazon Echo, Alexa](https://artsy.github.io/blog/2016/11/30/bringing-artsy-to-amazon-echo-alexa) and decided to hack something less serious.
 

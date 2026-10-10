@@ -2,7 +2,7 @@
 layout: post
 title: "Past, Present and Future of Art & Technology Panel at HG Contemporary"
 date: 2017-10-29
-tags: [technology, art, future, panels]
+tags: [technology, art, future, speaking]
 ---
 This was an incredibly inspiring conversation and a great turnout ([youtube](https://www.youtube.com/watch?feature=youtu.be&v=lS9KehRHrho)).
 

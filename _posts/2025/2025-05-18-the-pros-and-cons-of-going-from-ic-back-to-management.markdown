@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pros and Cons of Going from Individual Contributor Back to Manager"
-tags: [job titles, cto, head of engineering, vp of engineering, principal engineer, director of engineering, individual contributor, management]
+tags: [job titles, cto, head of engineering, principal engineer, individual contributor, management]
 date: 2025-05-18
 ---
 There's much written about becoming a first time Engineering Manager (I recommend [Camille's book](https://www.oreilly.com/library/view/the-managers-path/9781491973882/)), but little about the second time.
