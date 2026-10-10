@@ -210,6 +210,7 @@ cablib
 cabs
 cachedjson
 café
+calc
 cancan
 capitaine
 capybara
@@ -240,6 +241,7 @@ changelog
 changelogs
 chartbeat
 checkboxes
+checksums
 chelimsky
 chelimsky's
 cherniak
@@ -524,6 +526,7 @@ eventmessagefile
 everledger
 evolutions
 excalc
+excalc's
 exe
 executables
 expandcollapsepattern
@@ -887,6 +890,7 @@ kissmetrics
 knewter
 knowledgebase
 komando
+komac
 konami
 konamicode
 kondo
@@ -1081,6 +1085,7 @@ mullenweg
 mullenweg's
 multijson
 multiparameter
+musl
 mv
 mvc
 mvcs
@@ -1171,6 +1176,7 @@ odbcexecute
 odfe
 odm
 oid
+oidc
 oids
 olap
 omacalc
@@ -1257,6 +1263,7 @@ playplay
 playplayio
 pluggable
 png
+pkgs
 poachable
 podfile
 podspec
@@ -1274,6 +1281,7 @@ postel
 postgres
 postling
 posts
+powershell
 pragma
 pre
 prebuilt
@@ -1474,6 +1482,7 @@ servlet
 sextillion
 sgi
 sgmltools
+sha
 shai
 shallowmongoid
 shannan
@@ -1561,6 +1570,7 @@ stashboard
 stashboards
 statusphere
 stderr
+stdin
 stdout
 steven
 stevevinoski's
@@ -1837,6 +1847,8 @@ widdis
 widgetandgadget
 wifi
 willpaginatemongoid
+winget
+wingetcreate
 winhost
 winimage
 winterkorn
