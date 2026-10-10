@@ -3,7 +3,7 @@ layout: post
 title: "dotNetInstaller 2.3 Released"
 redirect_from: "/dotnetinstaller-23-released/"
 date: 2014-01-06 20:53:27
-tags: [open source, dotnetinstaller]
+tags: [open-source, dotnetinstaller]
 dblog_post_id: 404
 ---
 dotNetINstaller 2.3 has been released.

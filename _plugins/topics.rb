@@ -42,6 +42,7 @@ module Jekyll
         site.pages << page
         topic
       end
+      labels.merge(aliases.keys.select { |label| posts.key?(aliases.fetch(label)) })
       labels.each do |label|
         canonical = aliases.fetch(label, label)
         next if canonical == label

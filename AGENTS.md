@@ -14,6 +14,8 @@ The live site is built from the `gh-pages` branch, not `master`. Commit and push
 
 Topic pages, counts, post tag links, and `/tags.md` are generated during every Jekyll build by `_plugins/topics.rb`. Do not check in generated tag pages or counts. `bundle exec rake tags` remains a compatibility alias for building the site. Keep editorial tags in post front matter; `_data/topics.yml` optionally defines canonical titles, descriptions and aliases. Alias pages redirect to canonical topics, and alias membership is deduplicated without rewriting posts. Build-time membership follows Jekyll's published/future/draft settings.
 
+Use canonical names from `_data/topics.yml` when editing post tags. Keep previous names as aliases when renaming topics; redirects are generated for every configured alias of a populated topic, even after posts stop using the old name.
+
 ### Spelling
 
 A pre-commit hook runs `pyspelling` to check spelling in all `.md` and `.markdown` files. If it fails:

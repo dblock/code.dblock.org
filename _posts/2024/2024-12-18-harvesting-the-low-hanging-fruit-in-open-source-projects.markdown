@@ -2,7 +2,7 @@
 layout: post
 title: Harvesting the Low Hanging Fruit in Open Source Projects
 date: 2024-12-18 01:00:00
-tags: [open source]
+tags: [open-source]
 ---
 Every active open-source project grows a lot of low hanging fruit. Encouraging project users to harvest some of the yield can be a great way to engage and retain new contributors. Here are some ideas, mostly borrowed from [Barani](https://github.com/bbarani), for low-hanging work items that you can propose to anyone engaging in your project.
 

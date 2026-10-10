@@ -1,4 +1,22 @@
 open-source:
   title: Open Source
-  aliases: [open source]
+  aliases: [open source, oss]
   description: Building, maintaining, and contributing to open-source projects.
+github-actions:
+  title: GitHub Actions
+  aliases: [github actions, gha]
+api:
+  title: API
+  aliases: [apis]
+blog:
+  title: Blog
+  aliases: [blogging]
+domain-driven-design:
+  title: Domain-Driven Design
+  aliases: [ddd, domain driven design]
+podcasts:
+  title: Podcasts
+  aliases: [podcast]
+ping-pong:
+  title: Ping Pong
+  aliases: [ping pong]

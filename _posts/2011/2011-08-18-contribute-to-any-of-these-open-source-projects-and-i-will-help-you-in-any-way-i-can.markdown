@@ -3,7 +3,7 @@ layout: post
 title: "Contribute to any of these open-source projects and I will help you in any way I can"
 redirect_from: "/contribute-to-any-of-these-open-source-projects-and-i-will-help-you-in-any-way-i-can/"
 date: 2011-08-18 13:42:16
-tags: [artsy, open source]
+tags: [artsy, open-source]
 dblog_post_id: 247
 ---
 We all have wish lists. Here's the deal. Contribute to any of these open-source projects and I will help you in any way I can.

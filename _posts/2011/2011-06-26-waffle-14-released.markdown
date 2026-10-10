@@ -3,7 +3,7 @@ layout: post
 title: "Waffle 1.4 Released"
 redirect_from: "/waffle-14-released/"
 date: 2011-06-26 22:39:58
-tags: [open source, waffle, jna, active directory, win32]
+tags: [open-source, waffle, jna, active directory, win32]
 dblog_post_id: 222
 ---
 ![waffle]({{ site.url }}/images/posts/2011/2011-06-26-waffle-14-released/waffle_4.jpg)

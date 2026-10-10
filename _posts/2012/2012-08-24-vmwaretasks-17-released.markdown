@@ -3,7 +3,7 @@ layout: post
 title: "VMWareTasks 1.7 Released"
 redirect_from: "/vmwaretasks-17-released/"
 date: 2012-08-24 15:35:45
-tags: [open source, vmware]
+tags: [open-source, vmware]
 dblog_post_id: 346
 ---
 ![]({{ site.url }}/images/posts/2012/2012-08-24-vmwaretasks-17-released/image_4.jpg)
