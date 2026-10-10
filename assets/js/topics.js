@@ -5,6 +5,28 @@
   var sort = document.getElementById('topic-sort');
   var status = document.getElementById('topic-status');
   var items = Array.prototype.slice.call(list.children);
+  var now = new Date();
+  var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  var relativeTime = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
+
+  items.forEach(function (item) {
+    var days = Math.round((Date.parse(item.dataset.latest + 'T00:00:00Z') - today) / 86400000);
+    var magnitude = Math.abs(days);
+    var unit = 'day';
+    var divisor = 1;
+    if (magnitude >= 365) {
+      unit = 'year';
+      divisor = 365;
+    } else if (magnitude >= 30) {
+      unit = 'month';
+      divisor = 30;
+    } else if (magnitude >= 7) {
+      unit = 'week';
+      divisor = 7;
+    }
+    var age = relativeTime.format(Math.trunc(days / divisor), unit);
+    item.querySelector('a').title = (item.dataset.description ? item.dataset.description + ' — ' : '') + 'latest ' + age;
+  });
 
   function update() {
     var query = search.value.trim().toLowerCase();

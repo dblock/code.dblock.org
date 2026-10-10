@@ -11,16 +11,16 @@ title: Tagged
 <div>
 <label for="topic-sort">Sort</label>
 <select id="topic-sort">
-  <option value="name">Alphabetical</option>
-  <option value="count">Most posts</option>
-  <option value="latest">Recently updated</option>
+  <option value="name">alphabetical</option>
+  <option value="count">most posts</option>
+  <option value="latest">recently updated</option>
 </select>
 </div>
 </div>
 <p id="topic-status" aria-live="polite"></p>
 <ul id="topic-list">
   {% for topic in site.data.topic_index %}
-    <li data-name="{{ topic.name | escape }}" data-description="{{ topic.description | escape }}" data-count="{{ topic.count }}" data-latest="{{ topic.latest }}"><a href="{{ topic.url | relative_url }}">{{ topic.name }}</a> ({{ topic.count }}) — latest {{ topic.latest }}{% if topic.description != "" %}<p>{{ topic.description }}</p>{% endif %}</li>
+    <li data-name="{{ topic.name | escape }}" data-description="{{ topic.description | escape }}" data-count="{{ topic.count }}" data-latest="{{ topic.latest }}"><a href="{{ topic.url | relative_url }}" title="{% if topic.description != "" %}{{ topic.description | escape }} — {% endif %}latest {{ topic.latest }}">{{ topic.name }}</a> ({{ topic.count }})</li>
   {% endfor %}
 </ul>
 <script src="{{ '/assets/js/topics.js' | relative_url }}" defer></script>
@@ -30,5 +30,4 @@ title: Tagged
 .topic-controls input, .topic-controls select { margin: 0; max-width: 100%; font-size: .875rem; }
 #topic-status { margin: 1rem 0; }
 #topic-list { padding-left: 1.5rem; }
-#topic-list > li p { margin: 0; }
 </style>
