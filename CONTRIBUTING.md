@@ -157,6 +157,8 @@ pyspelling --config .pyspelling.yml
 
 Modify [pyspelling.words](.pyspelling.words) as needed.
 
+For an incremental check, run `bundle exec rake spell:staged`. It checks the staged versions of added or modified Markdown files, not edits outside the index. Changing the spelling configuration or dictionary triggers a full check of tracked Markdown files. Generated files and third-party directories remain excluded; CI continues to check the full archive.
+
 ### Style Checker
 
 ```bash
@@ -177,33 +179,10 @@ Add a pre-commit hook, `.git/hooks/pre-commit`.
 ```bash
 #!/bin/bash
 
-# Pre-commit hook to run pyspelling
-echo "Running pyspelling..."
-
-# Run pyspelling
-pyspelling
-
-# Check if pyspelling succeeded
-if [ $? -ne 0 ]; then
-    echo "pyspelling failed. Please fix spelling errors before committing."
-    exit 1
-fi
-
-echo "pyspelling passed."
-
-echo "Running markdownlint-cli2..."
-
-# Run markdownlint-cli2
-npm run lint:markdown
-
-# Check if markdownlint-cli2 succeeded
-if [ $? -ne 0 ]; then
-    echo "markdownlint-cli2 failed. Please fix markdown linting errors before committing."
-    exit 1
-fi
-
-echo "markdownlint-cli2 passed."
+exec bundle exec rake precommit
 ```
+
+`bundle exec rake lint` runs the Markdown linter independently. The existing `bundle exec rake check` remains the full site build and link check. Ruby orchestrates these commands; Node and Python are still required by the Markdown linter and PySpelling respectively.
 
 ## Thank You
 

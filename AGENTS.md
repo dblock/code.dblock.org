@@ -18,7 +18,7 @@ Use canonical names from `_data/topics.yml` when editing post tags. Keep previou
 
 ### Spelling
 
-A pre-commit hook runs `pyspelling` to check spelling in all `.md` and `.markdown` files. If it fails:
+A pre-commit hook runs `bundle exec rake precommit`, including `spell:staged` to check staged `.md` and `.markdown` files. Configuration or dictionary changes trigger a full check; CI always checks the full archive. If it fails:
 
 - **Fix a typo**: correct the word in the post.
 - **Add a legitimate word** (acronym, proper noun, technical term): add it to `.pyspelling.words`, one word per line, in alphabetical order. For example, `SEO` and `signups` were added this way.
