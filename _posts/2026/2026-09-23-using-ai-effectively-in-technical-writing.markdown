@@ -2,7 +2,7 @@
 layout: post
 title: Using AI Effectively in Technical Writing
 date: 2026-09-23
-tags: [ai, blog]
+tags: [ai, blog, writing]
 ---
 I write a lot, and I use AI a lot. But AI does not write my blog posts. Mostly.
 

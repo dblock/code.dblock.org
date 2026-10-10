@@ -3,7 +3,7 @@ layout: post
 title: "Spring-LDAP: Naming and Directory Services with OpenDS"
 redirect_from: "/spring-ldap-naming-and-directory-services-with-opends/"
 date: 2010-05-13 09:45:02
-tags: [opends, spring, jndi, java]
+tags: [opends, spring, jndi, java, ldap]
 dblog_post_id: 102
 ---
 ![]({{ site.url }}/images/posts/2010/2010-05-13-spring-ldap-naming-and-directory-services-with-opends/image_4.jpg)

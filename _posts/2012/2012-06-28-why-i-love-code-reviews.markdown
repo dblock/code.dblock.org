@@ -3,7 +3,7 @@ layout: post
 title: "Why I Love Code Reviews"
 redirect_from: "/why-i-love-code-reviews/"
 date: 2012-06-28 13:12:41
-tags: [teams, teaching, technology, artsy, open-source, people, agile]
+tags: [teams, teaching, artsy, open-source, people, agile, code-review, github, learning]
 dblog_post_id: 340
 ---
 I had a short, but lively debate over code reviews with [@skamille](https://twitter.com/skamille) at New York's QCon 2012. That same day she wrote an [interesting blog post on code reviews](https://whilefalse.blogspot.com/2012/06/code-reviews-code-stories.html). She argues that "code reviews are just as likely to used to bully, score points, or waste time on pedantic style notes as they are to produce great software". Certainly, not the kind of team I'd ever want to work with!

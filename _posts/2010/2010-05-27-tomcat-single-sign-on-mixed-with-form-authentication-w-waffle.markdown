@@ -3,7 +3,7 @@ layout: post
 title: "Tomcat Single Sign-On mixed with Form Authentication w/ Waffle"
 redirect_from: "/tomcat-single-sign-on-mixed-with-form-authentication-w-waffle/"
 date: 2010-05-27 13:01:40
-tags: [waffle, jna, security, java, active directory]
+tags: [waffle, jna, security, java, active directory, tomcat, authentication]
 dblog_post_id: 107
 ---
 ![waffle]({{ site.url }}/images/posts/2010/2010-05-27-tomcat-single-sign-on-mixed-with-form-authentication-w-waffle/waffle_3.jpg)

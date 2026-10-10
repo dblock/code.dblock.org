@@ -3,7 +3,7 @@ layout: post
 title: "Github is Your New Resume"
 redirect_from: "/github-is-your-new-resume/"
 date: 2011-07-14 14:30:13
-tags: [github, git, organizations, people]
+tags: [github, git, organizations, people, resume, hiring, open-source]
 dblog_post_id: 232
 pinned: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Asserting Existence with Mocha, Chai and TypeScript Strict Null Checks"
-tags: [typescript, javascript, mocha, chai]
+tags: [typescript, javascript, mocha, chai, testing]
 date: 2019-07-18
 ---
 I recently encountered a unit test that looked like this.

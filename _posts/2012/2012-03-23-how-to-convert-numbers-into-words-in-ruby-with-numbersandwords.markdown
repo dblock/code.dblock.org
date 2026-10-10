@@ -3,7 +3,7 @@ layout: post
 title: "How To Convert Numbers Into Words in Ruby (with numbers_and_words)"
 redirect_from: "/how-to-convert-numbers-into-words-in-ruby-with-numbersandwords/"
 date: 2012-03-23 21:37:49
-tags: [ruby]
+tags: [ruby, localization, open-source]
 dblog_post_id: 329
 ---
 You'd think someone has implemented simple conversion of numbers into English by now? For example 42 becomes "forty-two".

@@ -3,7 +3,7 @@ layout: post
 title: "Slow Migration to Mongoid::Slug 2.x"
 redirect_from: "/slow-migration-to-mongoidslug-2x/"
 date: 2012-11-22 16:55:14
-tags: [mongoid, ruby, open-source]
+tags: [mongoid, ruby, open-source, artsy, deployment]
 dblog_post_id: 359
 ---
 ![]({{ site.url }}/images/posts/2012/2012-11-22-slow-migration-to-mongoidslug-2x/image_3.jpg)

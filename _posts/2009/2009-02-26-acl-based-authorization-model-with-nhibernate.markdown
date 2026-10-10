@@ -3,7 +3,7 @@ layout: post
 title: "ACL-based authorization model with NHibernate"
 redirect_from: "/acl-based-authorization-model-with-nhibernate/"
 date: 2009-02-26 01:45:00
-tags: [hibernate]
+tags: [hibernate, security, databases, dotnet]
 dblog_post_id: 39
 ---
 I've posted a long overdue article describing an ACL-based authorization model with NHibernate 2.0. This is the next level of evolution from ACL-based implementations that I've used on FoodCandy or in the software that runs this blog.

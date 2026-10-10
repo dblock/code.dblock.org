@@ -3,7 +3,7 @@ layout: post
 title: "Setting up Cron to run Rake Tasks"
 redirect_from: "/setting-up-cron-to-run-rake-tasks/"
 date: 2011-03-31 14:40:43
-tags: [rake, mongodb]
+tags: [rake, mongodb, backups, devops]
 dblog_post_id: 193
 ---
 ![]({{ site.url }}/images/posts/2011/2011-03-31-setting-up-cron-to-run-rake-tasks/image_6.jpg)

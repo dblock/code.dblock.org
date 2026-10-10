@@ -3,7 +3,7 @@ layout: post
 title: "Rendering Markdown Documents in Rails"
 redirect_from: "/rendering-markdown-documents-in-rails/"
 date: 2011-11-07 15:01:55
-tags: [grape, rails, ruby]
+tags: [grape, rails, ruby, markdown, api]
 dblog_post_id: 289
 ---
 There's got to be a prettier way of implementing this.

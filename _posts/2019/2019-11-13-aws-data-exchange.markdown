@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building AWS Data Exchange and the Value of Simple Ideas at Scale"
-tags: [aws, aws data exchange]
+tags: [aws, aws data exchange, data]
 date: 2019-11-13
 ---
 Six months ago [I joined AWS](/2019/05/20/day-one-at-amazon-aws-principal-engineer-interviewing.html) to work on a new service, [AWS Data Exchange](https://aws.amazon.com/data-exchange/), launched today. AWS Data Exchange makes it easy to find, subscribe to, and use third-party data in the cloud.

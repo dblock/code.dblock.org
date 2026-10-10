@@ -3,7 +3,7 @@ layout: post
 title: "VMWareTasks 1.5 Released"
 redirect_from: "/vmwaretasks-15-released/"
 date: 2010-11-03 11:54:09
-tags: [vmware]
+tags: [vmware, dotnet, msbuild]
 dblog_post_id: 137
 ---
 ![VMWareLogo]({{ site.url }}/images/posts/2010/2010-11-03-vmwaretasks-15-released/vmwarelogo_4.jpg)

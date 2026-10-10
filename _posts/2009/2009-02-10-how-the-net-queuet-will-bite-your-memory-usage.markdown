@@ -3,7 +3,7 @@ layout: post
 title: "How the .NET Queue<T> will bite your memory usage"
 redirect_from: "/how-the-net-queuet-will-bite-your-memory-usage/"
 date: 2009-02-10 13:45:00
-tags: [dotnet]
+tags: [dotnet, performance]
 dblog_post_id: 32
 ---
 I was profiling an application at my real job with [MemProfiler](https://memprofiler.com/). It yielded a very high number of instances in a .NET `Queue<T>`. What was abnormal is a constant growth of the numbers over time.

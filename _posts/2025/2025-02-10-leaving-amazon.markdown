@@ -2,7 +2,7 @@
 layout: post
 title: Leaving Amazon
 date: 2025-02-10 01:00:00
-tags: [people, work, aws]
+tags: [people, work, aws, amazon]
 ---
 Friday, February 14th is my last day at Amazon.
 

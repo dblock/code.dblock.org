@@ -3,7 +3,7 @@ layout: post
 title: "DNI: setup (msi) bootstrapper"
 redirect_from: "/dni-setup-msi-bootstrapper/"
 date: 2008-08-31 22:45:00
-tags: [msi]
+tags: [msi, dotnetinstaller, open-source]
 dblog_post_id: 9
 ---
 I've been heavily contributing to a project called DNI or dotNetInstaller in the past several months. DNI is a setup bootstrapper that basically chains multiple MSIs together and allows to conditionally install pre-requisites.

@@ -2,7 +2,7 @@
 layout: post
 title: "State of the Art Podcast: How Art Will Make Us Human"
 date: 2018-02-17
-tags: [speaking, podcasts, artsy]
+tags: [speaking, podcasts, artsy, art]
 ---
 I recently had the pleasure of [speaking on the State of the Art podcast](https://art19.com/shows/state-of-the-art/episodes/92a50b6a-c227-48a7-863a-56f754078146).
 

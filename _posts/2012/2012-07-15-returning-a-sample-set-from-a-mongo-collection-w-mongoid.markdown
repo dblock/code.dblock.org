@@ -3,7 +3,7 @@ layout: post
 title: "Returning a Sample Set from a Mongo Collection w/ Mongoid"
 redirect_from: "/returning-a-sample-set-from-a-mongo-collection-w-mongoid/"
 date: 2012-07-15 00:11:51
-tags: [mongoid, mongodb]
+tags: [mongoid, mongodb, ruby]
 dblog_post_id: 344
 ---
 

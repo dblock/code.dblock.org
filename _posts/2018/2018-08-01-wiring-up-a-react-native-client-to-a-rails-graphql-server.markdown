@@ -2,7 +2,7 @@
 layout: post
 title: "Wiring Up a React Native Client to a Rails GraphQL Server"
 date: "2018-08-01"
-tags: [react native, 33 minutes]
+tags: [react native, 33 minutes, graphql, rails, relay]
 ---
 In the [previous post](/2018/07/31/react-native-clock-timer.html) I added a React Native ticking timer. I now have enough client-side parts and it's time to wire up the client app to a server. This cookbook should be helpful to anyone doing it for the first time.
 

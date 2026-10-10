@@ -3,7 +3,7 @@ layout: post
 title: "log4jna: log4j:ERROR Could not register event source (Access is denied.)"
 redirect_from: "/log4jna-log4jerror-could-not-register-event-source-access-is-denied/"
 date: 2010-10-14 12:06:29
-tags: [log4j, jna, security, win32]
+tags: [log4j, jna, security, win32, logging]
 dblog_post_id: 129
 ---
 This is a pretty common problem with NTEventLogAppender (both log4j and [log4jna](https://github.com/dblock/log4jna/) versions) on Windows Vista, 7 or 2008.

@@ -3,7 +3,7 @@ layout: post
 title: "Introducing Oshi: Operating System and Hardware Information (Java)"
 redirect_from: "/introducing-oshi-operating-system-and-hardware-information-java/"
 date: 2010-06-23 01:10:34
-tags: [oshi, jna, java, hardware, win32]
+tags: [oshi, jna, java, hardware, win32, licensing, open-source]
 dblog_post_id: 112
 ---
 

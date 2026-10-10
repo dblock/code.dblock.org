@@ -3,7 +3,7 @@ layout: post
 title: "Code Coverage with EMMA"
 redirect_from: "/code-coverage-with-emma/"
 date: 2010-06-18 12:24:02
-tags: [emma, waffle, testing, java]
+tags: [emma, waffle, testing, java, ant, build]
 dblog_post_id: 111
 ---
 ![]({{ site.url }}/images/posts/2010/2010-06-18-code-coverage-with-emma/image_9.jpg)

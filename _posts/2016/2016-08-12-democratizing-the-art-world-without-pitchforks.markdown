@@ -2,7 +2,7 @@
 layout: post
 title: "Democratizing the Art World Without Pitchforks"
 date: 2016-08-12
-tags: [artsy, data, art]
+tags: [artsy, data, art, art market]
 ---
 On his [Facebook page](https://www.facebook.com/mresch) Magnus Resch writes: _"We are disrupting the art world by making it more transparent."_ and _"You cannot stop our movement."_
 

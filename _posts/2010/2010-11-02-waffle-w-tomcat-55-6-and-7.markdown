@@ -3,7 +3,7 @@ layout: post
 title: "Waffle w/ Tomcat 5.5, 6 and 7"
 redirect_from: "/waffle-w-tomcat-55-6-and-7/"
 date: 2010-11-02 23:19:31
-tags: [tomcat, spring, waffle]
+tags: [tomcat, spring, waffle, authentication]
 dblog_post_id: 136
 ---
 I recently went through an exercise of trying to run Waffle Tomcat valves with various versions of Tomcat. Valves are those annoying types of filters that depend directly on the web server implementation, so a substantial amount of code changes were needed each time. I couldn't get a single package that would work for all versions in a clean maintainable way.

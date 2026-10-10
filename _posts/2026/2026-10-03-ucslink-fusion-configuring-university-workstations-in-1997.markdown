@@ -2,7 +2,7 @@
 layout: post
 title: "Universal Copy System Link for 97 Windows PCs"
 date: 2026-10-03
-tags: [ai, nostalgia]
+tags: [nostalgia, open-source, win32]
 ---
 
 In 1997 I wrote [UcsLink.Fusion](https://github.com/dblock/ucsLink.Fusion) for the [University of Geneva](https://www.unige.ch/). We had hundreds of PCs across the city, Sun and Windows NT servers, and Windows 95 and Linux workstations. Getting a user's software and settings onto whichever PC they sat down at was a job for login scripts. I wrote a Delphi 2.0 application to do it instead.

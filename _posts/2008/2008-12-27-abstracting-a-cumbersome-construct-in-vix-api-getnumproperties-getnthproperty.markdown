@@ -3,7 +3,7 @@ layout: post
 title: "Abstracting a cumbersome construct in VIX API: GetNumProperties + GetNthProperty"
 redirect_from: "/abstracting-a-cumbersome-construct-in-vix-api-getnumproperties-getnthproperty/"
 date: 2008-12-27 22:15:00
-tags: [vmware]
+tags: [vmware, dotnet]
 dblog_post_id: 28
 ---
 Did I tell you how much I love **[yield return](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/yield)**?

@@ -3,7 +3,7 @@ layout: post
 title: "Community MSI Extensions 1.3 Released"
 redirect_from: "/community-msi-extensions-13-released/"
 date: 2012-05-29 07:48:45
-tags: [msi, wix, win32]
+tags: [msi, wix, win32, open-source, testing]
 dblog_post_id: 337
 ---
 [https://dblock.github.io/msiext/](https://dblock.github.io/msiext/)

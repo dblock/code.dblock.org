@@ -3,7 +3,7 @@ layout: post
 title: "Tales from the interview: the drool and the handshake test"
 redirect_from: "/tales-from-the-interview-the-drool-and-the-handshake-test/"
 date: 2008-09-07 15:15:00
-tags: [people]
+tags: [people, hiring, interviews]
 dblog_post_id: 16
 ---
 I feel very inspired by [Raymond Chen](https://blogs.msdn.com/oldnewthing/)'s [The Old New Thing: Tales from the Interview](https://web.archive.org/web/20080914015852/https://blogs.msdn.com/oldnewthing/archive/2008/09/05/8925556.aspx) posts, so here's one from my own.

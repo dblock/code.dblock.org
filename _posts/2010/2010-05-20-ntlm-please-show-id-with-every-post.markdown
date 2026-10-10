@@ -3,7 +3,7 @@ layout: post
 title: "NTLM: Please show ID with every POST"
 redirect_from: "/ntlm-please-show-id-with-every-post/"
 date: 2010-05-20 22:16:08
-tags: [gwt, waffle, security, java]
+tags: [gwt, waffle, security, java, authentication]
 dblog_post_id: 104
 ---
 

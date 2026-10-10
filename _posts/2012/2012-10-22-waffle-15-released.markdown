@@ -3,7 +3,7 @@ layout: post
 title: "WAFFLE 1.5 Released"
 redirect_from: "/waffle-15-released/"
 date: 2012-10-22 13:10:17
-tags: [open-source, waffle, jna, java]
+tags: [open-source, waffle, jna, java, security, win32]
 dblog_post_id: 354
 ---
 ![]({{ site.url }}/images/posts/2012/2012-10-22-waffle-15-released/image_3.jpg)

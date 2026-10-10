@@ -2,7 +2,7 @@
 layout: post
 title: "Storing Timestamps in MongoDB with Mongoid"
 date: "2018-08-25"
-tags: [mongodb, mongoid]
+tags: [mongodb, mongoid, time-zones]
 ---
 Coming from [mongoid-locker#57](https://github.com/mongoid/mongoid-locker/pull/57), in which I, too, wasn't sure whether calling `.utc` on a timestamp was necessary with Mongoid.
 

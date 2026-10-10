@@ -3,7 +3,7 @@ layout: post
 title: "Living in Adelaide, GMT+9:30"
 redirect_from: "/living-in-adelaide-gmt930/"
 date: 2010-01-09 13:40:25
-tags: [dotnet, asp.net]
+tags: [dotnet, asp.net, time-zones, foodcandy, sncore]
 dblog_post_id: 76
 ---
 Someone kindly reported a bug entitled "Times Rounding Off" on FoodCandy.

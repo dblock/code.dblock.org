@@ -3,7 +3,7 @@ layout: post
 title: "Autoconf: Maybe the First Example of Microsoft Pushing Features into the OS to Kill a Competitor"
 redirect_from: "/autoconf-maybe-the-first-example-of-microsoft-pushing-features-into-the-os-to-kill-a-competitor/"
 date: 2011-09-06 03:24:54
-tags: [vestris, nostalgia]
+tags: [vestris, nostalgia, dos, microsoft]
 dblog_post_id: 260
 ---
 **Update, September 2026:** I found the original 1991 SVM article, identified and contacted its author, rebuilt both the original and later versions, and reconstructed Autoconf's history. Read [The Second Life of Autoconf for MS-DOS](/2026/09/27/the-second-life-of-autoconf-for-ms-dos.html).

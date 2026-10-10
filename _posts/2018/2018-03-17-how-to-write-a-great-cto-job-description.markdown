@@ -2,7 +2,7 @@
 layout: post
 title: "How to Write a Great CTO Job Description"
 date: 2018-03-17
-tags: [jobs, cto]
+tags: [jobs, cto, hiring]
 ---
 I don't think I've ever read a CTO job description cover-to-cover. Or seen many good ones. I skimmed over the text, at best.
 

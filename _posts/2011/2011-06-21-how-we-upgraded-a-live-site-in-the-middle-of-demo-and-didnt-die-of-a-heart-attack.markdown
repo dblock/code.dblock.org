@@ -3,7 +3,7 @@ layout: post
 title: "How we Upgraded a Live Site in the Middle of Demo (and Didn't Die of a Heart Attack)"
 redirect_from: "/how-we-upgraded-a-live-site-in-the-middle-of-demo-and-didnt-die-of-a-heart-attack/"
 date: 2011-06-21 14:24:53
-tags: [artsy, testing, agile]
+tags: [artsy, testing, agile, deployment, ci, heroku]
 dblog_post_id: 220
 ---
 ![]({{ site.url }}/images/posts/2011/2011-06-21-how-we-upgraded-a-live-site-in-the-middle-of-demo-and-didnt-die-of-a-heart-attack/image_9.jpg)

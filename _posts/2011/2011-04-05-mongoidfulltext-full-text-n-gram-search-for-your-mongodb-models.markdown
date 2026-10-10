@@ -3,7 +3,7 @@ layout: post
 title: "Mongoid_fulltext: full-text n-gram search for your MongoDB models"
 redirect_from: "/mongoidfulltext-full-text-n-gram-search-for-your-mongodb-models/"
 date: 2011-04-05 19:27:06
-tags: [artsy, mongodb, rails, ruby, open-source]
+tags: [artsy, mongodb, rails, ruby, open-source, mongoid, search]
 dblog_post_id: 195
 ---
 ![ngrams]({{ site.url }}/images/posts/2011/2011-04-05-mongoidfulltext-full-text-n-gram-search-for-your-mongodb-models/ngrams_4.jpg)

@@ -3,7 +3,7 @@ layout: post
 title: "Delaying Image Processing on Heroku with delayed_job"
 redirect_from: "/delaying-image-processing-on-heroku-with-delayedjob/"
 date: 2011-06-04 20:11:20
-tags: [heroku, mongodb, rails, ruby]
+tags: [heroku, mongodb, rails, ruby, delayed job, carrierwave, mongoid]
 dblog_post_id: 213
 ---
 **There's a Gem for That Too**

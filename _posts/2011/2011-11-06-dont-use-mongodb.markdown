@@ -3,7 +3,7 @@ layout: post
 title: "Don't Use MongoDB?"
 redirect_from: "/dont-use-mongodb/"
 date: 2011-11-06 17:51:22
-tags: [oracle, mongodb]
+tags: [oracle, mongodb, databases]
 dblog_post_id: 288
 ---
 _"Little children, don't go play in Africa ... giant crocodiles are waiting to eat you!"_ – a popular Russian song.

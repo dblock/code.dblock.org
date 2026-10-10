@@ -2,7 +2,7 @@
 layout: post
 title: "Prompting for Github Credentials in Ruby"
 date: "2018-08-23"
-tags: [github]
+tags: [github, ruby, security]
 ---
 Last week I [wrote a tool](/2018/08/15/finding-a-github-users-email-address.html) to find a Github user's e-mail address from their commits. One of the annoyances of the original implementation was the need to manually generate a personal Github access token and store it. However, I've seen other tools (eg. [ghi](https://github.com/stephencelis/ghi)) ask for credentials and store the token in the OSX keychain. How does one accomplish that? We're going to improve a bit upon ghi's code.
 

@@ -3,7 +3,7 @@ layout: post
 title: "Summer Math and Engineering Internships @ Art.sy"
 redirect_from: "/summer-math-and-engineering-internships-artsy/"
 date: 2011-04-19 20:14:52
-tags: [artsy]
+tags: [artsy, hiring, jobs]
 dblog_post_id: 199
 ---
 ![artsy]({{ site.url }}/images/posts/2011/2011-04-19-summer-math-and-engineering-internships-artsy/artsy_3.jpg)

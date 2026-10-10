@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rebooting Vestris.com"
-tags: [vestris]
+tags: [vestris, open-source, nostalgia]
 date: 2019-05-11
 ---
 I've rebooted [vestris.com](https://www.vestris.com) and have incorporated it in New York State to serve as a legal entity for my open-source projects, including the many slack bots.

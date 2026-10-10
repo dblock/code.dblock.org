@@ -2,7 +2,7 @@
 layout: post
 title: "Migrating Classic Slack Ruby Bots to Granular Permissions"
 date: 2020-11-30
-tags: [ruby, slack]
+tags: [ruby, slack, api, bots]
 ---
 Slack recently [introduced granular permissions](https://medium.com/slack-developer-blog/more-precision-less-restrictions-a3550006f9c3) and is now requiring all new apps to use those. The old apps are called _classic_ apps, and new apps are called ... apps. Slack also provided a [migration guide](https://api.slack.com/authentication/migration).
 

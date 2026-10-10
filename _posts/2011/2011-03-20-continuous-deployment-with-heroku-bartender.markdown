@@ -3,7 +3,7 @@ layout: post
 title: "Continuous Deployment with Heroku-Bartender"
 redirect_from: "/continuous-deployment-with-heroku-bartender/"
 date: 2011-03-20 19:13:22
-tags: [artsy, heroku, rails, ruby]
+tags: [artsy, heroku, rails, ruby, deployment, ci, open-source]
 dblog_post_id: 186
 ---
 You've heard about continuous deployment. But did you actually try to do it?

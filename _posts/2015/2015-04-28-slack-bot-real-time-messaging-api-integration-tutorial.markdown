@@ -2,7 +2,7 @@
 layout: post
 title: "Slack Bot Real Time Messaging API Integration in Ruby Tutorial"
 date: 2015-04-28
-tags: [slack, api, ping-pong]
+tags: [slack, api, ping-pong, ruby, bots]
 ---
 I've been recently contributing to [slack-pongbot](https://github.com/andrewvy/slack-pongbot), a node.js Slack bot for setting up ping-pong matches at Artsy.
 

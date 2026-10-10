@@ -2,7 +2,7 @@
 layout: post
 title: "The New Ruby Grape"
 date: 2015-08-04
-tags: [ruby, grape]
+tags: [ruby, grape, open-source]
 ---
 ![grape]({{ site.url }}/images/posts/2015/2015-08-04-ruby-grape/grape.png)
 

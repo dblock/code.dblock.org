@@ -2,7 +2,7 @@
 layout: post
 title: "The AlexaJS Community Organization"
 date: 2017-01-16
-tags: [alexa, amazon, echo]
+tags: [alexa, amazon, echo, javascript, open-source]
 ---
 ![alexa-js]({{ site.url }}/images/posts/2017/2017-01-16-the-alexa-js-community-organization/echo-dot.png)
 

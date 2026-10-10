@@ -3,7 +3,7 @@ layout: post
 title: "Pod5 Podcast"
 redirect_from: "/pod5-podcast/"
 date: 2014-04-15 12:25:25
-tags: [pod5, cocoapods, objective-c, ios]
+tags: [pod5, cocoapods, objective-c, ios, podcasts]
 dblog_post_id: 411
 ---
 *Update*: this podcast is no more ;(

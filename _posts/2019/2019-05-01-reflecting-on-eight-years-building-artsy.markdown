@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reflecting on 8 Years Building Artsy"
-tags: [artsy, me me, jobs, organizations, people]
+tags: [artsy, me me, jobs, organizations, people, open-source]
 date: 2019-05-01
 ---
 Today I bid farewell to [Artsy](https://www.artsy.net). This post is my personal journey and my last post as CTO.

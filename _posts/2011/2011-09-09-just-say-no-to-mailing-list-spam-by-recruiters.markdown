@@ -3,7 +3,7 @@ layout: post
 title: "Just Say 'No' To Mailing List Spam by Recruiters"
 redirect_from: "/just-say-no-to-mailing-list-spam-by-recruiters/"
 date: 2011-09-09 05:06:55
-tags: [recruiters, hiring, organizations, people]
+tags: [recruiters, hiring, organizations, people, spam]
 dblog_post_id: 264
 ---
 This thread just popped up on the MongoDB users list: [[JOB]Full time Developer w/ MongoDB experience for a Fortune 1000 client in NYC!](https://www.meetup.com/New-York-MongoDB-User-Group/messages/22530452/).

@@ -2,7 +2,7 @@
 layout: post
 title: "Writing OpenSearch Plugins and Extensions (in Python)"
 date: 2023-09-29
-tags: [opensearch, speaking]
+tags: [opensearch, speaking, architecture, python]
 ---
 Check out [this talk recorded at OpenSearchCon 2023](https://www.youtube.com/watch?v=TZy7ViZbbHc), or continue reading.
 

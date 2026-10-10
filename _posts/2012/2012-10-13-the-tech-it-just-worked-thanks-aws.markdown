@@ -3,7 +3,7 @@ layout: post
 title: "The tech? It just worked. Thanks AWS!"
 redirect_from: "/the-tech-it-just-worked-thanks-aws/"
 date: 2012-10-13 22:35:11
-tags: [aws, artsy, heroku, architecture]
+tags: [aws, artsy, heroku, architecture, scale]
 dblog_post_id: 352
 ---
 ![]({{ site.url }}/images/posts/2012/2012-10-13-the-tech-it-just-worked-thanks-aws/image3.jpg)

@@ -3,7 +3,7 @@ layout: post
 title: "Agile in Practice: What Is Actually Going On Out There?"
 redirect_from: "/agile-in-practice-what-is-actually-going-on-out-there/"
 date: 2008-09-07 03:45:00
-tags: [agile]
+tags: [agile, organizations]
 dblog_post_id: 15
 ---
 

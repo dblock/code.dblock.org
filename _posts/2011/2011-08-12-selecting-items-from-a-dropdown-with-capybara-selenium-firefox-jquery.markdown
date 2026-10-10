@@ -3,7 +3,7 @@ layout: post
 title: "Selecting items from a dropdown with Capybara, Selenium (Firefox) & JQuery"
 redirect_from: "/selecting-items-from-a-dropdown-with-capybara-selenium-firefox-jquery/"
 date: 2011-08-12 00:15:35
-tags: [selenium, capybara, firefox, rails, ruby, testing]
+tags: [selenium, capybara, firefox, rails, ruby, testing, jquery]
 dblog_post_id: 243
 ---
 I am having a weird problem with Capybara and Selenium (Firefox) selecting items in a dropdown.

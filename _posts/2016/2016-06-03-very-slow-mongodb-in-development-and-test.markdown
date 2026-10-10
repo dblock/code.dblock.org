@@ -2,7 +2,7 @@
 layout: post
 title: "Very Slow MongoDB in Development and Test"
 date: 2016-06-03
-tags: [mongodb]
+tags: [mongodb, performance, testing]
 ---
 MongoDB [SERVER-24384](https://jira.mongodb.org/browse/SERVER-24384) bit me.
 

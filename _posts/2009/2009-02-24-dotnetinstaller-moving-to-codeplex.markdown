@@ -3,7 +3,7 @@ layout: post
 title: "dotNetInstaller moving to CodePlex"
 redirect_from: "/dotnetinstaller-moving-to-codeplex/"
 date: 2009-02-24 14:38:03
-tags: [msi]
+tags: [msi, dotnetinstaller, codeplex]
 dblog_post_id: 38
 ---
 dotNetInstaller, aka DNI has moved to CodePlex (Update: now on [GitHub](https://github.com/dotnetinstaller/dotnetinstaller)). I'm going to help Davide, the original author, with some coordination around the project. If you need a working setup bootstrapper for Windows now, this is it.

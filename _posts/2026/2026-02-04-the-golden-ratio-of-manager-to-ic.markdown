@@ -2,7 +2,7 @@
 layout: post
 title: The Golden Ratio of Manager to IC
 date: 2026-02-04
-tags: [people, teams]
+tags: [people, teams, management]
 ---
 In [today's shocker](https://www.wsj.com/tech/ai/meta-to-create-new-applied-ai-engineering-organization-in-reality-labs-division-d41c4a69), Meta is to "create a new applied AI engineering organization aiming for an ultra-flat structure of up to 50 employees to one manager".
 

@@ -2,7 +2,7 @@
 layout: post
 title: "ActionMailer Integration Testing with Email-Example-Spec"
 date: 2015-04-07
-tags: [ruby, rails, actionmailer, testing]
+tags: [ruby, rails, actionmailer, testing, email]
 ---
 Introducing [email-example-spec](https://github.com/dblock/email-example-spec), integration testing for your ActionMailer e-mails.
 

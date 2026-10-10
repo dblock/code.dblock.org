@@ -3,7 +3,7 @@ layout: post
 title: "Agile Estimating: Don't Ask How Long it Takes, Sell It!"
 redirect_from: "/agile-estimating-dont-ask-how-long-it-takes-sell-it/"
 date: 2011-03-17 14:21:58
-tags: []
+tags: [agile, product-management]
 dblog_post_id: 185
 ---
 ![]({{ site.url }}/images/posts/2011/2011-03-17-agile-estimating-dont-ask-how-long-it-takes-sell-it/image_7.jpg)

@@ -3,7 +3,7 @@ layout: post
 title: "Single Sign-On: Tomcat Negotiate Authenticator (Kerberos + NTLM) w/ Waffle"
 redirect_from: "/single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle/"
 date: 2010-05-20 00:32:22
-tags: [tomcat, waffle, java, active directory]
+tags: [tomcat, waffle, java, active directory, authentication, security]
 dblog_post_id: 103
 ---
 ![]({{ site.url }}/images/posts/2010/2010-05-20-single-sign-on-tomcat-negotiate-authenticator-kerberos-ntlm-w-waffle/image_12.jpg)

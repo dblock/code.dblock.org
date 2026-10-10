@@ -3,7 +3,7 @@ layout: post
 title: "AppSecInc. MSI Extensions Open Sourced"
 redirect_from: "/appsecinc-msi-extensions-open-sourced/"
 date: 2009-11-20 18:15:00
-tags: [codeproject, msi, wix]
+tags: [codeproject, msi, wix, appsecinc, open-source]
 dblog_post_id: 65
 ---
 I am pleased to announce the open-sourcing of [AppSecInc. MSI Extensions](https://github.com/dblock/msiext).

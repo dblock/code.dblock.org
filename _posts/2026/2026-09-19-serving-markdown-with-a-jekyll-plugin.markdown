@@ -2,7 +2,7 @@
 layout: post
 title: Serving Markdown for AI Agents, Now as a Jekyll Plugin
 date: 2026-09-19
-tags: [ai, jekyll]
+tags: [ai, jekyll, markdown, blog]
 ---
 Back in January I wrote [Serving Markdown for AI Agents](/2026/01/15/serving-markdown-for-ai-agents.html): for every page on this blog, there's also a `.md` version at the same URL, discoverable via a `<link rel="alternate" type="text/markdown">` tag, so AI agents can fetch clean Markdown instead of parsing HTML. It also [made me $360](/2026/04/11/how-i-made-360-dollars-by-serving-markdown-from-my-jekyll-blog.html), via referral conversions an AI agent apparently generated after reading the clean Markdown version of a post.
 

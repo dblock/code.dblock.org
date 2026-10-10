@@ -3,7 +3,7 @@ layout: post
 title: "JNDI: Naming and Directory Services with OpenDS"
 redirect_from: "/jndi-naming-and-directory-services-with-opends/"
 date: 2010-04-13 15:07:34
-tags: [soa, jndi, java, active directory]
+tags: [soa, jndi, java, opends, ldap]
 dblog_post_id: 96
 ---
 I often hear from .NET programmers "I'd like to get into Java, not the language, but all that J2EE stuff ...". I am one of those people so I try to use any opportunity to try something I've never touched before.

@@ -3,7 +3,7 @@ layout: post
 title: "Supporting MSI Uninstall in dotNetInstaller"
 redirect_from: "/supporting-msi-uninstall-in-dotnetinstaller/"
 date: 2010-08-02 21:16:55
-tags: [dotnetinstaller, msi]
+tags: [dotnetinstaller, msi, wix]
 dblog_post_id: 118
 ---
 

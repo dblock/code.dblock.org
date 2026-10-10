@@ -2,7 +2,7 @@
 layout: post
 title: "Writing a Slack Bot Service for Multiple Teams"
 date: 2015-11-14
-tags: [slack, api]
+tags: [slack, api, ruby, bots]
 ---
 ![slack platform]({{ site.url }}/images/posts/2015/2015-11-14-writing-a-slack-bot-service-for-multiple-teams/platform.png)
 

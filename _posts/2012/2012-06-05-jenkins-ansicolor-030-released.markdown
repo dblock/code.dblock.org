@@ -3,7 +3,7 @@ layout: post
 title: "Jenkins AnsiColor 0.3.0 Released"
 redirect_from: "/jenkins-ansicolor-030-released/"
 date: 2012-06-05 11:50:03
-tags: [jenkins]
+tags: [jenkins, build, open-source]
 dblog_post_id: 339
 ---
 Jenkins AnsiColor, the essential Jenkins plugin version 0.3.0 has been released.

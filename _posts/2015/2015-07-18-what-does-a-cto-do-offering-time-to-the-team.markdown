@@ -2,7 +2,7 @@
 layout: post
 title: "Offering Time to The Team"
 date: 2015-07-18
-tags: [cto, time]
+tags: [cto, time, leadership]
 ---
 A few months ago I asked myself: [What does a CTO do?](/2015/05/23/what-does-a-cto-do.html).
 

@@ -2,7 +2,7 @@
 layout: post
 title: Adding a Spell Checker to a Jekyll Blog
 date: 2024-12-30 01:00:00
-tags: [blog, jekyll]
+tags: [blog, jekyll, github-actions]
 ---
 I found it annoyingly non-trivial to add a spell checker to this blog.
 

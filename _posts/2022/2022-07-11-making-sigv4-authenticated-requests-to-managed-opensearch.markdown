@@ -2,7 +2,7 @@
 layout: post
 title: Making AWS SigV4 Authenticated Requests to Amazon OpenSearch
 date: 2022-07-11
-tags: [opensearch, aws]
+tags: [opensearch, aws, security, api]
 ---
 [Amazon OpenSearch](https://aws.amazon.com/opensearch-service/) and [Amazon OpenSearch Serverless](https://aws.amazon.com/opensearch-service/features/serverless/) use AWS SigV4 for authentication. We've made it dead easy to make authenticated requests across all OpenSearch clients in [opensearch-clients#22](https://github.com/opensearch-project/opensearch-clients/issues/22).
 

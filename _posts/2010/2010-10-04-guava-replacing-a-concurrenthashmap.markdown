@@ -3,7 +3,7 @@ layout: post
 title: "Guava: replacing a ConcurrentHashMap"
 redirect_from: "/guava-replacing-a-concurrenthashmap/"
 date: 2010-10-04 18:18:52
-tags: [java]
+tags: [java, waffle]
 dblog_post_id: 127
 ---
 I found half an hour this morning to look at [Waffle](https://github.com/dblock/waffle) issue #8493.

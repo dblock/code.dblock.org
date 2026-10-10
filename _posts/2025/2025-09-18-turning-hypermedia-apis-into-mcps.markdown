@@ -2,7 +2,7 @@
 layout: post
 title: Turning Hypermedia APIs into MCPs
 date: 2025-09-18 09:00:00
-tags: [ai, mcp, hypermedia]
+tags: [ai, mcp, hypermedia, api]
 ---
 I've [written](https://code.dblock.org/2014/07/18/serving-hypermedia-with-a-grape-api-and-roar.html) and [talked](https://www.slideshare.net/slideshow/designing-a-hypermedia-api-with-grape-roar/41151492) extensively about Hypermedia APIs for about a decade. The [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS) constraints in representing resources for a RESTful API has numerous advantages in API design, readability, discoverability, and performance over a hand-rolled REST API. Unfortunately, adoption of Hypermedia APIs is very low compared to, for example GraphQL, but I find the implementation a lot simpler and continue adding Hypermedia APIs to my pet projects.
 

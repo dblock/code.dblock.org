@@ -3,7 +3,7 @@ layout: post
 title: "Art.sy: Change the World"
 redirect_from: "/artsy-change-the-world/"
 date: 2011-03-01 13:50:57
-tags: [artsy, jobs, people]
+tags: [artsy, jobs, people, startups]
 dblog_post_id: 179
 ---
 ![artsy-logo]({{ site.url }}/images/posts/2011/2011-03-01-artsy-change-the-world/artsy-logo_5.jpg)

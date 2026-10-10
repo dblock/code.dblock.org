@@ -2,7 +2,7 @@
 layout: post
 title: "Working with AWS SDK for C++ and Data Exchange"
 date: "2020-03-06"
-tags: [c++, aws, aws data exchange]
+tags: [c++, aws, aws data exchange, build]
 ---
 I haven't written any C++ since 2009, or [cross-platform C++ since the 90s](https://github.com/dblock/baseclasses). Working with the language in 2020 continues to require a lot of paper and glue (a.k.a. [autoconf and make](https://github.com/edrosten/autoconf_tutorial)). The scissors, however, have become dramatically sharper as the community seems to have adopted [CMake](https://cmake.org/).
 

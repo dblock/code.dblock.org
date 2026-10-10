@@ -3,7 +3,7 @@ layout: post
 title: "VMWare Tasks .NET Library for VixCOM"
 redirect_from: "/vmware-tasks-net-library-for-vixcom/"
 date: 2009-01-03 14:15:00
-tags: [vmware]
+tags: [vmware, dotnet]
 dblog_post_id: 29
 ---
 ![VMWare](https://www.codeproject.com/KB/library/VMWareTasks/VMWareLogo.jpg)

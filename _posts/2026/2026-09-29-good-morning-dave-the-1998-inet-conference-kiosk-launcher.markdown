@@ -2,7 +2,7 @@
 layout: post
 title: "Good Morning, Dave: the 1998 INET Conference Kiosk Launcher"
 date: 2026-09-29
-tags: [ai, open-source, nostalgia]
+tags: [ai, open-source, nostalgia, win32]
 ---
 
 In July 1998, the Internet Society held INET '98, "The Internet Summit", at Palexpo in Geneva. The University of Geneva provided about 250 computers for the conference, and I was a student there. I wrote much of the conference network's website, [www.inet98.ch](https://dblock.github.io/inet98/), and the [launcher](https://github.com/dblock/inet98/tree/master/app) that ran on the public Windows 95 PCs instead of Explorer.

@@ -3,7 +3,7 @@ layout: post
 title: "Open Source, ?, Profit"
 redirect_from: "/open-source-profit/"
 date: 2011-01-27 20:37:47
-tags: [waffle]
+tags: [waffle, open-source]
 dblog_post_id: 163
 ---
 I answered 7 distinct questions from 7 different people about implementing [Waffle](https://github.com/dblock/waffle) this morning. Most are non-trivial configuration issues, but that's not the point.

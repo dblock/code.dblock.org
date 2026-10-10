@@ -3,7 +3,7 @@ layout: post
 title: "Can you believe it? I wrote this code over 10 years ago..."
 redirect_from: "/can-you-believe-it-i-wrote-this-code-over-10-years-ago/"
 date: 2009-09-19 04:45:00
-tags: [dos]
+tags: [dos, nostalgia]
 dblog_post_id: 50
 ---
 I wonder whether it still compiles and runs.

@@ -2,7 +2,7 @@
 layout: post
 title: "Finding a Github User's E-Mail Address"
 date: "2018-08-15"
-tags: [graphql, github]
+tags: [graphql, github, email, hiring]
 ---
 If you are like me, [trying to hire developers](https://www.artsy.net/jobs), you've long mastered the dark art of digging up their e-mail address from social media, LinkedIn and, most importantly, Github for the purposes of reaching out directly. The latter consists of finding an old source repo and running a `git log` on it. Most Github users have used a real e-mail address when making their first commits with git. Privacy be damned.
 

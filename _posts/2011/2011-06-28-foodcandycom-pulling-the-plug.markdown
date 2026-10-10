@@ -3,7 +3,7 @@ layout: post
 title: "FoodCandy.com: Pulling the Plug"
 redirect_from: "/foodcandycom-pulling-the-plug/"
 date: 2011-06-28 07:00:31
-tags: [foodcandy]
+tags: [foodcandy, startups]
 dblog_post_id: 224
 ---
 ![foodcandy-small_thumb[1]]({{ site.url }}/images/posts/2011/2011-06-28-foodcandycom-pulling-the-plug/foodcandy-small_thumb_1__2.jpg)

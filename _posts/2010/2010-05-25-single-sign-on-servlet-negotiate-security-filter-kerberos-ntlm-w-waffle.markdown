@@ -3,7 +3,7 @@ layout: post
 title: "Single Sign-On: Servlet Negotiate Security Filter (Kerberos + NTLM) w/ Waffle"
 redirect_from: "/single-sign-on-servlet-negotiate-security-filter-kerberos-ntlm-w-waffle/"
 date: 2010-05-25 18:03:19
-tags: [tomcat, waffle, security, java, active directory]
+tags: [tomcat, waffle, security, java, active directory, authentication]
 dblog_post_id: 106
 ---
 

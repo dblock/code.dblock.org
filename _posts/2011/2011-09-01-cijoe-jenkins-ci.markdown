@@ -3,7 +3,7 @@ layout: post
 title: "CIJoe => Jenkins CI"
 redirect_from: "/cijoe-jenkins-ci/"
 date: 2011-09-01 15:13:02
-tags: [jenkins, cijoe]
+tags: [jenkins, cijoe, ci, build, deployment]
 dblog_post_id: 253
 ---
 ![image_thumb5]({{ site.url }}/images/posts/2011/2011-09-01-cijoe-jenkins-ci/headshot7.jpg)
