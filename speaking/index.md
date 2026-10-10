@@ -53,22 +53,7 @@ I speak frequently on topics ranging from the intersection of technology and art
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CEkJLhA1R0w?ecver=1" frameborder="0" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=CEkJLhA1R0w&feature=youtu.be">Worlds Fair Nano, San Francisco, January 28th, 2017</a>
 
-<div markdown="0">
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-video" data-href="https://www.facebook.com/NASDAQ/videos/10154582987442429/" data-width="640" data-show-text="false">
-<blockquote cite="https://www.facebook.com/NASDAQ/videos/10154582987442429/" class="fb-xfbml-parse-ignore">
-<a href="https://www.facebook.com/NASDAQ/videos/10154582987442429/">#CTOSummit LIVE: Daniel Doubrovkine, CTO Artsy</a>
-<p>#CTOSummit LIVE: Daniel Doubrovkine, CTO Artsy</p>Posted by <a href="https://www.facebook.com/NASDAQ/">Nasdaq</a> on Tuesday, November 1, 2016
-</blockquote>
-</div></div>
-[CTO Summit @ Nasdaq, Live Interview](https://www.facebook.com/NASDAQ/videos/10154582987442429/), 2016
+CTO Summit @ Nasdaq, Live Interview, 2016. The interview recording is no longer available.
 
 <a href="https://www.ctoconnection.com/topics/scaleup/videos/2016-11-01-inspiring-team-leads-to-give-away-their-legos"><img alt="CTO Summit at NASDAQ" src="/images/about/cto-summit-nasdaq.png"></a><br>
 [CTO Summit @ Nasdaq - Inspiring Team Leads to Give Away Their Legos](https://www.ctoconnection.com/topics/scaleup/videos/2016-11-01-inspiring-team-leads-to-give-away-their-legos), 2016
