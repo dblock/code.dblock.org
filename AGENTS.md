@@ -12,13 +12,7 @@ The live site is built from the `gh-pages` branch, not `master`. Commit and push
 
 ### Generate Tag Pages
 
-After adding or changing tags in a post's front matter, regenerate the tag pages:
-
-```bash
-bundle exec rake tags
-```
-
-This rewrites `tags/*.md` and `_data/tags.yml` from the tags found across all posts.
+Topic pages, counts, post tag links, and `/tags.md` are generated during every Jekyll build by `_plugins/topics.rb`. Do not check in generated tag pages or counts. `bundle exec rake tags` remains a compatibility alias for building the site. Keep editorial tags in post front matter; `_data/topics.yml` optionally defines canonical titles, descriptions and aliases. Alias pages redirect to canonical topics, and alias membership is deduplicated without rewriting posts. Build-time membership follows Jekyll's published/future/draft settings.
 
 ### Spelling
 

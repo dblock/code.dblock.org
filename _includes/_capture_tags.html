@@ -1,12 +1,9 @@
 {% assign tags_ary = "" | split: "" %}
-{% for post_tag in page.tags %}
-  {% assign tag = site.data.tags[post_tag] %}
-  {% if tag %}
+{% for tag in page.topic_links %}
     {% capture tag_content %}
-      <a href='/tags/{{ post_tag }}/'>{{ tag.name }}</a>
+      <a href='{{ tag.url | relative_url }}'>{{ tag.name }}</a>
     {% endcapture %}
     {% assign tags_ary = tags_ary | push: tag_content %}
-  {% endif %}
 {% endfor %}
 {% capture tags_content %}
   {% if tags_ary.size > 1 %}
