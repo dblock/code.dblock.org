@@ -17,7 +17,7 @@ It also had a remote-control server on TCP port 895. Staff could connect from an
 
 This is the launcher running again today, under Wine on macOS. The buttons change icon on hover. The hidden `-stats` command asks for a password and shows the activity counters. A remote session then logs in. It gets the alarm on a wrong password and the greeting on the right one. Then it sends a message, hides and shows the bar, reads machine stats and starts the screen saver.
 
-The conference was also the first time I had access to a T1 line to the US. Once the machines were up and running, there wasn't much left for me to do, so I spent hours on IRC.
+The conference was also the first time I had access to a T1 line to the US. Once the machines were up and running, there wasn't much left for me to do, so I spent hours on IRC. There were incidents. In a reply to a July 29, 1998 email about the conference recordings, I explained that one recording had been interrupted because someone pulled the power cord out of the SGI server in Bureau 4. It resumed five minutes later.
 
 I found the source of both recently. They're now at [dblock/inet98](https://github.com/dblock/inet98).
 
