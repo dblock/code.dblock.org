@@ -6,7 +6,7 @@ date: 2012-07-05 13:51:35
 tags: [rack, grape, ruby, api]
 dblog_post_id: 343
 ---
-[Grape](https://github.com/ruby-grape/grape)'s after blocks don't allow you to modify response text or status code [[#200](https://github.com/ruby-grape/grape/issues/200)]. So how can you wrap an API response?
+[Grape](https://github.com/ruby-grape/grape)'s after blocks don't allow you to modify response text or status code \[[#200](https://github.com/ruby-grape/grape/issues/200)\]. So how can you wrap an API response?
 
 Define a Rack middleware and mount it in the API. Here's an example of a decorator that wraps any body and resets the status code to 200.
 

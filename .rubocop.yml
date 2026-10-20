@@ -1,0 +1,29 @@
+plugins:
+  - rubocop-md
+
+AllCops:
+  DisabledByDefault: true
+  NewCops: disable
+  SuggestExtensions: false
+  Include:
+    - '**/*.md'
+    - '**/*.markdown'
+    - '.github/**/*.md'
+    - '.github/**/*.markdown'
+  Exclude:
+    - '_site/**/*'
+    - '_styles/**/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+
+Markdown:
+  Autodetect: false
+  WarnInvalid: false
+  IgnoreFrontMatter: true
+
+Markdown/MaxLength:
+  Enabled: true
+  Max: false
+
+Markdown/Syntax:
+  Enabled: true

@@ -88,7 +88,7 @@ Database command 'copydbgetnonce' failed: {"assertion"=>"unauthorized db:admin l
   "assertionCode"=>10057, "errmsg"=>"db assertion failure", "ok"=>0.0}
 ```
 
-This is because copyDatabase requires admin privileges, which MongoHQ doesn't give co-located users. Too bad - we have to fall back to the silly _mongodump_ and _mongorestore_. This has two major disadvantages: it requires a local mongo installation and copies a ton of data over the network from MongoHQ, then back to MongoHQ. I hope that either MongoHQ exposes this API one day or there's a non-admin way to do this with MongoDB [[SERVER-2846](https://jira.mongodb.org/browse/SERVER-2846)].
+This is because copyDatabase requires admin privileges, which MongoHQ doesn't give co-located users. Too bad - we have to fall back to the silly _mongodump_ and _mongorestore_. This has two major disadvantages: it requires a local mongo installation and copies a ton of data over the network from MongoHQ, then back to MongoHQ. I hope that either MongoHQ exposes this API one day or there's a non-admin way to do this with MongoDB \[[SERVER-2846](https://jira.mongodb.org/browse/SERVER-2846)\].
 
 #### Using Mongo Dump and Restore
 

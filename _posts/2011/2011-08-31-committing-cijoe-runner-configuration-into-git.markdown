@@ -10,7 +10,7 @@ A nice way of telling CIJoe (or any other CI service) what to do is to commit gi
 
 Here's what a typical _git-config/config_ looks like. It's the same as your usual _.git/config_.
 
-We're going to have a remote [origin] and a [cijoe] section that tells CIJoe what to do.
+We're going to have a remote `[origin]` and a `[cijoe]` section that tells CIJoe what to do.
 
 ```ini
 [remote "origin"]

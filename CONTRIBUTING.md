@@ -143,9 +143,16 @@ It's likely that your change will not be merged and that the nitpicky maintainer
 ### Markdown Linter
 
 ```bash
+bundle install
 npm ci
-npm run lint:markdown
+bundle exec rake lint
 ```
+
+This runs markdownlint for Markdown structure and rubocop-md for single-line prose paragraphs and parser diagnostics. rubocop-md currently uses the `configurable-front-matter` branch stacked on [PR 50](https://github.com/rubocop/rubocop-md/pull/50), preserving the blog's YAML metadata; `Gemfile.lock` pins the revision. `.rubocop.yml` enables `Markdown/MaxLength`, with `Max: false` to unwrap paragraphs rather than enforce a maximum line length, and `Markdown/Syntax` to report parser warnings with filenames and line numbers. Syntax diagnostics are normal warning-severity offenses and can cause lint to fail; they cannot be corrected automatically. Ruby snippet style checks are not enabled.
+
+To develop rubocop-md locally, check out its `configurable-front-matter` branch and run `bundle config set --local local.rubocop-md /path/to/rubocop-md` from this repository. This local override is ignored by Git; CI uses the revision in `Gemfile.lock`.
+
+To correct paragraph wrapping automatically, run `bundle exec rubocop --only Markdown/MaxLength -a`. Review the resulting changes before committing; intentional Markdown hard breaks and `<br>` boundaries are preserved.
 
 ### Spell Checker
 
@@ -182,7 +189,7 @@ Add a pre-commit hook, `.git/hooks/pre-commit`.
 exec bundle exec rake precommit
 ```
 
-`bundle exec rake lint` runs the Markdown linter independently. The existing `bundle exec rake check` remains the full site build and link check. Ruby orchestrates these commands; Node and Python are still required by the Markdown linter and PySpelling respectively.
+`bundle exec rake lint` runs both Markdown linters independently of spelling; `npm run lint:markdown` invokes the same checks. The existing `bundle exec rake check` remains the full site build and link check. Ruby orchestrates these commands; Node and Python are still required by markdownlint and PySpelling respectively.
 
 ## Thank You
 

@@ -12,7 +12,7 @@ I had a nice time today wrapping up the [Idee PixMatch API](http://web.archive.o
 
 The resulting gem is [here](https://github.com/dblock/pixmatch), MIT licensed. I copied the file structure from [skittles](https://github.com/anthonator/skittles) which copied it from [twitter](https://github.com/jnunemaker/twitter). Open-source neatly promotes copy-paste these days – we at [artsy](https://artsy.net) call it collage!
 
-There are two kinds of requests in PixMatch: simple REST GETs and POSTs and multipart posts with image data. I ended up not using the RESTful request wrappers that exist in both and instead switched to [rest-client](https://github.com/archiloque/rest-client), a much simpler and more powerful framework. To upload images we need to be posting a multipart payload where file names are images[0], images[1], etc.  I remember it taking me a week to write multipart client support in C++ ten years ago. Today it's a no-brainer made possible by rest-client.
+There are two kinds of requests in PixMatch: simple REST GETs and POSTs and multipart posts with image data. I ended up not using the RESTful request wrappers that exist in both and instead switched to [rest-client](https://github.com/archiloque/rest-client), a much simpler and more powerful framework. To upload images we need to be posting a multipart payload where file names are `images[0]`, `images[1]`, etc.  I remember it taking me a week to write multipart client support in C++ ten years ago. Today it's a no-brainer made possible by rest-client.
 
 ```ruby
 def add(files)
@@ -28,4 +28,4 @@ Now calling _add_ on a bunch of files is pretty.
 PixMatch.add(Dir.glob("images/\*.jpg"))
 ```
 
-PixMatch is not available publicly, e-mail info[at]ideeinc.com to get started.
+PixMatch is not available publicly, e-mail info\[at\]ideeinc.com to get started.
