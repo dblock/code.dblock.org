@@ -54,7 +54,7 @@ public IEnumerable<object[]> YieldWait(object[] properties, int timeoutInSeconds
 }
 ```
 
-This results in a nice improvement over the previous implementation: we're interating over a resultset rather than calling methods for how many results are available and to fetch each result.
+This results in a nice improvement over the previous implementation: we're iterating over a resultset rather than calling methods for how many results are available and to fetch each result.
 
 ```csharp
 public IEnumerable<VMWareVirtualMachine> RunningVirtualMachines {

@@ -64,7 +64,7 @@ I then exported the public key with `gpg -a --export 3AA5C34371567BD2` and [adde
 
 ### Signing Git Commits
 
-I wanted to enable commit signing globally to avoid having to constantly appenad `-S` to `git commit`, and [added the following settings to my dotfiles](https://github.com/dblock/dotfiles/commit/073adde3335182ce33625951c84a8431adea8256).
+I wanted to enable commit signing globally to avoid having to constantly append `-S` to `git commit`, and [added the following settings to my dotfiles](https://github.com/dblock/dotfiles/commit/073adde3335182ce33625951c84a8431adea8256).
 
 ```bash
 # make GPG work
@@ -124,4 +124,4 @@ If you get an error `gpg: no valid OpenPGP data found.` and `gpg: Total number p
 
 ### Troubleshooting
 
-If you're having trouble with gog, try `echo "test" | gpg --clearsign` to get a better error. If it complains that `gpg-agent` is not started, run `gpgagent` and correct any errors.
+If you're having trouble with gpg, try `echo "test" | gpg --clearsign` to get a better error. If it complains that `gpg-agent` is not started, run `gpgagent` and correct any errors.

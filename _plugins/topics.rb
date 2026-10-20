@@ -3,6 +3,7 @@
 require 'set'
 
 module Jekyll
+  # Builds topic indexes and redirects for topic aliases.
   class TopicPages < Generator
     safe true
     priority :high

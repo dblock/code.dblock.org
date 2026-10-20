@@ -20,11 +20,10 @@ require 'ruby-link-checker'
 # Usage: `LINK_CHECKER=1 bundle exec jekyll build --future`
 #
 
+# Collects and verifies links after rendering the site.
 module Jekyll::LinkChecker
   ##
   # The collection that will get stores as the output
-
-  @urls
 
   ##
   # Pattern to identify documents that should be excluded based on their URL
@@ -59,11 +58,9 @@ module Jekyll::LinkChecker
 
   ##
   # Holds the list of failures
-  @failures
 
   ##
-  # Build flags driven by environment variables
-  @check_links                # Enables the link checker
+  # Build flags driven by environment variables # Enables the link checker
 
   ##
   # Defines the priority of the plugin
@@ -82,9 +79,7 @@ module Jekyll::LinkChecker
     begin
       @check_links = ENV.key?('LINK_CHECKER')
 
-      unless @check_links
-        return Jekyll.logger.info 'LinkChecker:', 'disabled. Enable with LINK_CHECKER=1.'
-      end
+      return Jekyll.logger.info 'LinkChecker:', 'disabled. Enable with LINK_CHECKER=1.' unless @check_links
 
       @external_link_checker = LinkChecker::Typhoeus::Hydra::Checker.new(
         logger: Jekyll.logger,
@@ -113,7 +108,7 @@ module Jekyll::LinkChecker
       end
 
       Jekyll.logger.info 'LinkChecker: [Notice] The build will fail if a dead link is found.'
-    rescue StandardError => e
+    rescue StandardError
       Jekyll.logger.error 'LinkChecker: [Error] Failed to initialize Link Checker.'
       raise
     end
@@ -148,9 +143,9 @@ module Jekyll::LinkChecker
   def self.verify(_site)
     return unless @check_links
 
-    @base_url_matcher = %r{^#{@site.config["url"]}#{@site.baseurl}(/.*)$}.freeze
+    @base_url_matcher = %r{^#{@site.config['url']}#{@site.baseurl}(/.*)$}.freeze
 
-    @urls.sort_by { |url, pages| rand }.each do |url, pages|
+    @urls.sort_by { |_url, _pages| rand }.each do |url, pages|
       location = "./#{pages.to_a.join(', ./')}"
       @failures << "#{url}, linked to in #{location}" unless check(url, location)
     end
@@ -158,14 +153,14 @@ module Jekyll::LinkChecker
     @external_link_checker.run
 
     unless @failures.empty?
-      msg = "Found #{@failures.size} dead link#{@failures.size > 1 ? 's' : ''}:\n#{@failures.join("\n")}"
+      msg = "Found #{@failures.size} dead link#{'s' if @failures.size > 1}:\n#{@failures.join("\n")}"
     end
 
-    if !@failures.empty?
+    if @failures.empty?
+      Jekyll.logger.info "\nLinkChecker: [Success] No broken links!\n".green
+    else
       Jekyll.logger.error "\nLinkChecker: [Error] #{msg}.\n".red
       raise msg
-    else
-      Jekyll.logger.info "\nLinkChecker: [Success] No broken links!\n".green
     end
   end
 
@@ -176,11 +171,9 @@ module Jekyll::LinkChecker
     match = @base_url_matcher.match(url)
     url = match[1] unless match.nil?
 
-    if @external_matcher =~ url
-      return check_external(url, location)
-    else
-      check_internal(url, location)
-    end
+    return check_external(url, location) if @external_matcher =~ url
+
+    check_internal(url, location)
   end
 
   ##
@@ -231,12 +224,12 @@ module Jekyll::LinkChecker
     end
 
     redirect = match[2]
-    redirect << '#' + hash unless hash.nil? || hash.empty?
+    redirect << "##{hash}" unless hash.nil? || hash.empty?
     check(redirect, location)
   end
 end
 
-# Before any Document or Page is processed, initialize the LinkChecker
+# Before any Document or Page is processed, initialize the link checker.
 Jekyll::Hooks.register :site, :pre_render, priority: Jekyll::LinkChecker.priority do |site|
   Jekyll::LinkChecker.init(site)
 end

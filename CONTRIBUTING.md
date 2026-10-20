@@ -149,17 +149,27 @@ npm run lint:markdown
 
 ### Spell Checker
 
-Install [pyspelling](https://facelessuser.github.io/pyspelling/).
+Spelling uses [rubocop-spellcheck](https://github.com/dblock/rubocop-spellcheck), installed through Bundler, with its bundled English dictionary and the project's vocabulary:
 
 ```bash
-pyspelling --config .pyspelling.yml
+bundle exec rake spell:check
 ```
 
-Modify [pyspelling.words](.pyspelling.words) as needed.
+Add legitimate project words to [.spellcheck.txt](.spellcheck.txt), one word per line in alphabetical order. No Python or system spelling dictionary is required.
 
-For an incremental check, run `bundle exec rake spell:staged`. It checks the staged versions of added or modified Markdown files, not edits outside the index. Changing the spelling configuration or dictionary triggers a full check of tracked Markdown files. Generated files and third-party directories remain excluded; CI continues to check the full archive.
+Spelling shares `.rubocop.yml` with Ruby lint and runs as part of `bundle exec rubocop`. Markdown code, destinations, and Liquid template expressions are skipped; front matter spelling is disabled to avoid treating site metadata as prose. Unlike the old checker, raw HTML blocks and their attributes are not inspected.
+
+For an incremental check, run `bundle exec rake spell:staged`. It checks the staged versions of added or modified Markdown files, not edits outside the index. Changing the spelling configuration, dictionary, or dependency manifests triggers a full check of tracked Markdown files. Generated files and third-party directories remain excluded; CI checks the full archive.
 
 ### Style Checker
+
+Ruby lint uses RuboCop and `rubocop-rake`, with new cops enabled in `.rubocop.yml`. Metrics checks are disabled for the existing scripts and plugins.
+
+```bash
+bundle exec rubocop
+```
+
+For prose style, run:
 
 ```bash
 vale .
@@ -170,7 +180,7 @@ vale .
 Install tools.
 
 ```bash
-python3 -m pip install pyspelling
+bundle install
 npm ci
 ```
 
@@ -182,7 +192,7 @@ Add a pre-commit hook, `.git/hooks/pre-commit`.
 exec bundle exec rake precommit
 ```
 
-`bundle exec rake lint` runs the Markdown linter independently. The existing `bundle exec rake check` remains the full site build and link check. Ruby orchestrates these commands; Node and Python are still required by the Markdown linter and PySpelling respectively.
+`bundle exec rake lint` runs the Markdown linter independently of spelling; `npm run lint:markdown` invokes the same check. The existing `bundle exec rake check` remains the full site build and link check. Ruby orchestrates these commands; Node is still required by markdownlint.
 
 ## Thank You
 

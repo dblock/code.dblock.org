@@ -16,7 +16,7 @@ task :cron => :environment do
 end
 ```
 
-We are going ot use [whenever](https://github.com/javan/whenever) to avoid the ugly syntax of cron. Whenever is configured in _config/schedule.rb_.
+We are going to use [whenever](https://github.com/javan/whenever) to avoid the ugly syntax of cron. Whenever is configured in _config/schedule.rb_.
 
 ```ruby
 set :output, "/tmp/cron_log.log"

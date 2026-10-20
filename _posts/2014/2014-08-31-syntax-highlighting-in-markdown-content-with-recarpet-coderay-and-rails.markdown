@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Syntax Highlighting in Markdown Content with Recarpet, Coderay and Rails"
+title: "Syntax Highlighting in Markdown Content with Redcarpet, Coderay and Rails"
 redirect_from: "/syntax-highlighting-in-markdown-content-with-recarpet-coderay-and-rails/"
 date: 2014-08-31 15:08:14
 tags: [artsy, rails, ruby, markdown]
@@ -28,7 +28,7 @@ module MarkdownHelper
 end
 ```
 
-We can use this in a controller, assuming content lives in _app/voews/content_. Bonus: caching.
+We can use this in a controller, assuming content lives in `app/views/content`. Bonus: caching.
 
 ```ruby
 class PagesController < ApplicationController

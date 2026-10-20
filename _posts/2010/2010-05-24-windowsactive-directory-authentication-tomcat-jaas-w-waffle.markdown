@@ -23,7 +23,7 @@ Copy _waffle-jna.jar_, _jna.jar_ and _platform.jar_ to Tomcat's _lib_ directory.
 
 _JAAS Realm_
 
-Add a JAAS realm to the application context. Modify _META-INF\context.xml _of your application.
+Add a JAAS realm to the application context. Modify `META-INF\context.xml` of your application.
 
 ```xml
 <Context>
@@ -38,7 +38,7 @@ Add a JAAS realm to the application context. Modify _META-INF\context.xml _of yo
 
 _Authentication_
 
-Modify _WEB-INF\web.xml_ of your application.
+Modify `WEB-INF\web.xml` of your application.
 
 Enable BASIC, DIGEST or FORMS authentication for this realm.
 
@@ -110,6 +110,6 @@ endlocal
 
 #### Demo Application
 
-A demo application can be found in the Waffle distribution in the _Samples\Tomcat\waffle-jaas_ directory. Copy the entire directory into Tomcat's webapps directory, start Tomcat as explained above, and navigate to https://localhost:8080/waffle-jaas. You will be prompted for your Windows login, enter your Windows credentials and log-in.
+A demo application can be found in the Waffle distribution in the `Samples\Tomcat\waffle-jaas` directory. Copy the entire directory into Tomcat's webapps directory, start Tomcat as explained above, and navigate to https://localhost:8080/waffle-jaas. You will be prompted for your Windows login, enter your Windows credentials and log-in.
 
 ![]({{ site.url }}/images/posts/2010/2010-05-24-windowsactive-directory-authentication-tomcat-jaas-w-waffle/image_5.jpg)

@@ -9,7 +9,7 @@ dblog_post_id: 93
 
 ## The Grey Rat
 
-There's a giant grey rat outside of my window and a bunch of non-union workers laboring in the rain. The union guy who's guarding the rat and giving away flyers got too cold and went inside the building. But I digress, the post is about working with Unions in [Java Native Access (JNA).](https://github.com/twall/jna/)
+There's a giant grey rat outside of my window and a bunch of non-union workers laboring in the rain. The union guy who's guarding the rat and giving away fliers got too cold and went inside the building. But I digress, the post is about working with Unions in [Java Native Access (JNA).](https://github.com/twall/jna/)
 
 ### Preamble
 

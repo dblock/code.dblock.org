@@ -84,7 +84,7 @@ The target website must be in the Intranet Zone.
 2. Choose the _Tools, Internet Options_ menu.
 3. Click the _Local Intranet_ icon.
 4. Click the _Sites_ button.
-5. Check _Autmatically detect intranet network_.
+5. Check _Automatically detect intranet network_.
 6. For localhost, click _Advanced_.
 7. Add _https://localhost_ to the list.
 

@@ -4,7 +4,7 @@ title: "Zooming Out to Give Away Your Legos"
 date: 2015-11-25
 tags: [cto, people, leadership, mentoring]
 ---
-Update: a recoreded talk based on this post at the CTO Summit @ Nasdaq.
+Update: a recorded talk based on this post at the CTO Summit @ Nasdaq.
 
 <a href="https://www.ctoconnection.com/topics/scaleup/videos/2016-11-01-inspiring-team-leads-to-give-away-their-legos"><img src="/images/about/cto-summit-nasdaq.png"></a><br>
 [CTO Summit @ Nasdaq - Inspiring Team Leads to Give Away Their Legos](https://www.ctoconnection.com/topics/scaleup/videos/2016-11-01-inspiring-team-leads-to-give-away-their-legos), 2016

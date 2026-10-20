@@ -24,7 +24,7 @@ Download [Waffle 1.3](https://github.com/dblock/waffle/) and copy _waffle-jna.ja
 
 _Configure Mixed Authenticator Valve_
 
-Add a valve and a realm to the application context. For an application, modify _META-INF\context.xml_.
+Add a valve and a realm to the application context. For an application, modify `META-INF\context.xml`.
 
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
@@ -36,7 +36,7 @@ Add a valve and a realm to the application context. For an application, modify _
 
 _Security Roles and Constraints_
 
-Configure security roles in _WEB-INF\web.xml_. The Waffle Mixed Authenticator adds all user's security groups (including nested and domain groups) as roles during authentication.
+Configure security roles in `WEB-INF\web.xml`. The Waffle Mixed Authenticator adds all user's security groups (including nested and domain groups) as roles during authentication.
 
 ```xml
 <security-role>
@@ -73,7 +73,7 @@ Add a second security constraint that leaves the login page unprotected.
 
 _Configure Form Login_
 
-Configure Form Login parameters with the location of the login page (repeated from the security constraint above) and an error page for failed logins. Modify _WEB-INF\web.xml_.
+Configure Form Login parameters with the location of the login page (repeated from the security constraint above) and an error page for failed logins. Modify `WEB-INF\web.xml`.
 
 ```xml
 <login-config>
@@ -114,7 +114,7 @@ Here's a rudimentary example that lands an authenticated user on _index.jsp_.
 
 ### Demo
 
-A demo application can be found in the Waffle distribution in the _Samples\Tomcat\waffle-mixed_ directory. Copy the entire directory into Tomcat's _webapps_ directory and navigate to https://localhost:8080/waffle-mixed. Pick your method of login.
+A demo application can be found in the Waffle distribution in the `Samples\Tomcat\waffle-mixed` directory. Copy the entire directory into Tomcat's _webapps_ directory and navigate to https://localhost:8080/waffle-mixed. Pick your method of login.
 
 #### How does it Work?
 

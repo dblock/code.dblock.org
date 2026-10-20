@@ -4,18 +4,10 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: tj-actions/changed-files@v46.0.4
-        id: changed_files
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
         with:
-          files: |
-            **/**.md
-            **/**.markdown
-            !_styles/**/*.md
+          ruby-version: '3.4'
+          bundler-cache: true
       - name: Check Spelling
-        uses: rojopolis/spellcheck-github-actions@0.45.0
-        with:
-          task_name: Markdown
-          config_path: .pyspelling.yml
-          source_files: ${{ steps.changed_files.outputs.all_changed_files }}
-
+        run: bundle exec rake spell:check

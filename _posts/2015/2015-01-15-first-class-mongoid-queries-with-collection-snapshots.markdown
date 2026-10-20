@@ -37,7 +37,7 @@ class WidgetAndGadget
 end
 ```
 
-In the example above the collection of _WidgetAndGadget_ has to be destroyed every time before creating new pairs, which leaves it in an incomplete and unusuable state until the operation is finished. Let's attempt to rewrite this implementation in a more incremental manner.
+In the example above the collection of _WidgetAndGadget_ has to be destroyed every time before creating new pairs, which leaves it in an incomplete and unusable state until the operation is finished. Let's attempt to rewrite this implementation in a more incremental manner.
 
 ```ruby
 class WidgetAndGadget

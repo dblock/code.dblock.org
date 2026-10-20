@@ -122,7 +122,7 @@ Finally, define the Spring-Security Waffle filter that uses the collection of se
 
 #### Demo Application
 
-A demo application with the complete configuration file can be found in the Waffle distribution in the _Samples\waffle-spring-filter_ directory. Copy the entire directory into Tomcat's webapps directory and navigate to https://localhost:8080/waffle-spring-filter. You should be automatically logged-in under your current Windows account.
+A demo application with the complete configuration file can be found in the Waffle distribution in the `Samples\waffle-spring-filter` directory. Copy the entire directory into Tomcat's webapps directory and navigate to https://localhost:8080/waffle-spring-filter. You should be automatically logged-in under your current Windows account.
 
 #### Links
 

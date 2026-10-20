@@ -34,7 +34,7 @@ Add the linter to scripts.
 }
 ```
 
-Run the linter with `npm run lint`. My first run resulted in a lot of violations. I exctracted the list of them with `jq` and pasted it into `rules`.
+Run the linter with `npm run lint`. My first run resulted in a lot of violations. I extracted the list of them with `jq` and pasted it into `rules`.
 
 ```bash
 $ npm run --silent lint -- --format json | jq '.[].messages[] | select(.line != null) .ruleId' | sort | uniq
@@ -79,7 +79,7 @@ export default [
 ]
 ```
 
-Now run `npm run lint -- --fix`. Not all rules have an autofixer, but if yours does it will make the code changes, and you can now remove if rom the config and finally turn back all other rules to `warn`.
+Now run `npm run lint -- --fix`. Not all rules have an autofixer, but if yours does it will make the code changes, and you can now remove it from the config and finally turn back all other rules to `warn`.
 
 Here's my [second pull request](https://github.com/opensearch-project/opensearch-api-specification/pull/265) that fixed most self-correcting violations.
 

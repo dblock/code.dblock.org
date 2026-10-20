@@ -18,6 +18,6 @@ The iterative method is based on how disks move. There's a number of 2^n - 1 ste
 - disk 2 will move by 1 all the time (one step rotation)
 - disk 1 will move by 2 all the time (two steps rotation)
 
-With an example of 3 disks containing the disk number you move and knowing the step "length", you can easilly see that all the information for the move is included in the move number itself! This is just the general idea.
+With an example of 3 disks containing the disk number you move and knowing the step "length", you can easily see that all the information for the move is included in the move number itself! This is just the general idea.
 
 - [Source Code](https://github.com/dblock/hanoi)

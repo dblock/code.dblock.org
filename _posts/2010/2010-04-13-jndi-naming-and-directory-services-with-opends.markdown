@@ -19,7 +19,7 @@ By using a directory service, you can simplify applications and their administra
 
 ## Client & Server
 
-I picked up [OpenDS](http://web.archive.org/web/20100413222900/http://www.opends.org/), on open-source server from Sun. After a straightforward installation (set _OPENDS_JAVA_HOME_ to a JRE location and run _setup.bat_) I had an LDAP server running as a Windows Service (OpenDS) on port 389. There's a handy _bat\control-panel.bat_ that launches a schema and object browser.
+I picked up [OpenDS](http://web.archive.org/web/20100413222900/http://www.opends.org/), on open-source server from Sun. After a straightforward installation (set _OPENDS_JAVA_HOME_ to a JRE location and run _setup.bat_) I had an LDAP server running as a Windows Service (OpenDS) on port 389. There's a handy `bat\control-panel.bat` that launches a schema and object browser.
 
 We can now access this server with JNDI, which comes standard with Java Platform 1.1.2 or later.
 
@@ -52,7 +52,7 @@ Let's create a directory for our SOAP services. The goal is to be able to store 
 
 #### Extending the Schema
 
-The OpenDS schema is stored in .ldif files in the config\schema directory. The directory schema can be extended by importing LDIF files, modifying those in the schema directory or programmatically with JNDI. I'll write an import an .ldif file.
+The OpenDS schema is stored in .ldif files in the `config\schema` directory. The directory schema can be extended by importing LDIF files, modifying those in the schema directory or programmatically with JNDI. I'll write an import an .ldif file.
 
 There are several RFCs with various well-known attribute types, such as _name_ or _uid_. We're only missing _serviceUri_, which we can define as a custom attribute.
 

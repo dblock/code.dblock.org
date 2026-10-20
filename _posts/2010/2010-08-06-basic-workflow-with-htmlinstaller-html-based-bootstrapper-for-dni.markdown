@@ -29,7 +29,7 @@ This is what you're going to see.
 
 ![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image_9.jpg)
 
-Looks familiar? Unlike the dotNetInstaller.exe UI, this is a UI written in HTML rendered in an embedded browser. You get some new features, such as minimizing, maximizing and resizing of the window, right out of the box. And because the renderer is HTLM, controls flow and sizes adjust normally as in your browser. And because it's HTML you will be able to skin the bootstrapper completely – those top bar buttons and the resize grip are also rendered by the HTML engine.
+Looks familiar? Unlike the dotNetInstaller.exe UI, this is a UI written in HTML rendered in an embedded browser. You get some new features, such as minimizing, maximizing and resizing of the window, right out of the box. And because the renderer is HTML, controls flow and sizes adjust normally as in your browser. And because it's HTML you will be able to skin the bootstrapper completely – those top bar buttons and the resize grip are also rendered by the HTML engine.
 
 Here's a resized window.
 
@@ -121,7 +121,7 @@ We must now embed the picture with the bootstrapper. This can be done with a new
 InstallerLinker.exe /Output:Setup.exe /Template:htmlInstaller.exe /Configuration:Configuration.xml /EmbedHtml:Samples\HtmlSetup\Picture /Verbose+
 ```
 
-This produces Setup.exe that includes all the HTML files and our picture in the _Samples\HtmlSetup\Picture_ folder. Note that the HTML UI resized the component selector automatically to insert the picture, as expected.
+This produces Setup.exe that includes all the HTML files and our picture in the `Samples\HtmlSetup\Picture` folder. Note that the HTML UI resized the component selector automatically to insert the picture, as expected.
 
 ![]({{ site.url }}/images/posts/2010/2010-08-06-basic-workflow-with-htmlinstaller-html-based-bootstrapper-for-dni/image_25.jpg)
 

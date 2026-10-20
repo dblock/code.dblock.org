@@ -1,0 +1,44 @@
+plugins:
+  - rubocop-rake
+  - rubocop-spellcheck
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  Include:
+    - '**/*.rb'
+    - '**/*.rake'
+    - '**/Gemfile'
+    - '**/Rakefile'
+    - '**/*.md'
+    - '**/*.markdown'
+    - '.github/**/*.md'
+    - '.github/**/*.markdown'
+  Exclude:
+    - '_site/**/*'
+    - '_styles/**/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+
+Metrics:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - '_plugins/link-checker.rb'
+
+Naming/FileName:
+  Exclude:
+    - '_plugins/link-checker.rb'
+
+Spellcheck:
+  DictionaryFiles:
+    en:
+      - gem:rubocop-spellcheck/data/en/en.dic
+      - .spellcheck.txt
+
+Spellcheck/Spelling:
+  Enabled: true
+  Markdown:
+    FrontMatter:
+      Enabled: false

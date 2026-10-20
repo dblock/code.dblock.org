@@ -22,14 +22,14 @@ Since writing this I have also published a [mongoid-compatibility gem](https://g
 - [Kaminari](https://github.com/kaminari/kaminari): Paginator for modern web app frameworks and ORMs, including Mongoid.
 - [Mongoid::Autoinc](https://github.com/suweller/mongoid-autoinc): Adds auto incrementing fields to your documents.
 - [Mongoid::CachedJson](https://github.com/dblock/mongoid-cached-json): Effective caching for nested JSON models.
-- [Mongoid::CollectionSnapshot](https://github.com/aaw/mongoid_collection_snapshot): Easy maintenence of collections of processed data.
+- [Mongoid::CollectionSnapshot](https://github.com/aaw/mongoid_collection_snapshot): Easy maintenance of collections of processed data.
 - [Mongoid::Enum](https://github.com/thetron/mongoid-enum): Sweet enum sugar for Mongoid documents.
 - [Mongoid::Fulltext](https://github.com/artsy/mongoid_fulltext): An n-gram based full text search.
 - [Mongoid::Geospatial](https://github.com/nofxx/mongoid-geospatial): GeoRuby/RGeo support.
 - [Mongoid::GridFs](https://github.com/ahoward/mongoid-grid_fs): A pure Mongoid/Moped implementation of the MongoDB GridFS specification.
 - [Mongoid::History](https://github.com/aq1018/mongoid-history): Creates an audit trail for all changes in a model.
 - [Mongoid::Locker](https://github.com/afeld/mongoid-locker): Document-level locking.
-- [Mongoid::Multinenancy](https://github.com/PerfectMemory/mongoid-multitenancy): Adds the ability to scope Mongoid models to a tenant in a shared database strategy.
+- [`Mongoid::Multitenancy`](https://github.com/PerfectMemory/mongoid-multitenancy): Adds the ability to scope Mongoid models to a tenant in a shared database strategy.
 - [Mongoid::Orderable](https://github.com/pyromaniac/mongoid_orderable): Ordered list implementation.
 - [Mongoid::Paranoia](https://github.com/simi/mongoid_paranoia): Enables a "soft delete" of Mongoid documents.
 - [Mongoid::RSpec](https://github.com/mongoid-rspec/mongoid-rspec): RSpec matchers and macros for Mongoid.
