@@ -6,8 +6,7 @@ require 'rubocop-spellcheck'
 
 root = File.expand_path('../..', __dir__)
 paths = IO.popen(['git', '-C', root, 'ls-files', '-z'], &:read).split("\0").select do |path|
-  %w[.md .markdown].include?(File.extname(path)) &&
-    (path.split('/') & %w[_site _styles node_modules vendor]).empty?
+  %w[.md .markdown].include?(File.extname(path))
 end
 start = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 words = paths.flat_map do |path|

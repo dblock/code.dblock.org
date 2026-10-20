@@ -1,8 +1,32 @@
 # Spelling benchmarks
 
-Measurements taken locally on macOS with Ruby 3.3.5 against blog commit `e273fe0940d6052afb3658d0d549c09db148dc4f` on October 20, 2026. Dependencies were already installed. All checks passed. These are different benchmark layers, not four interchangeable end-to-end tools.
+Measurements taken locally on macOS with Ruby 3.3.5 on October 20, 2026. Dependencies were already installed. These are different benchmark layers, not four interchangeable end-to-end tools.
 
-## Full-archive tools
+## PR 14: dictionary reuse
+
+The benchmark branch pins [rubocop-spellcheck PR #14](https://github.com/dblock/rubocop-spellcheck/pull/14) at `42c6e60f7c2be0c4f253385c7e8731833a816170`. The fix reuses dictionaries and word verdicts across files instead of rebuilding them for each file.
+
+These runs used the blog files from `c76c7a6` before adding this results section. Both full tools checked all **618 tracked Markdown files**, including hidden paths, the benchmark README, and `_styles/proselint/README.md`. All runs passed with zero spelling findings. Earlier benchmark discovery excluded `_styles`, so those historical counts are lower.
+
+| Full-archive tool | Run 1 | Run 2 | Run 3 | Average |
+| --- | ---: | ---: | ---: | ---: |
+| PySpelling / Aspell | 77.662s | 77.003s | 66.806s | 73.824s |
+| rubocop-spellcheck PR #14 | 3.294s | 3.577s | 3.321s | 3.397s |
+
+The PR implementation was approximately **21.73 times faster** than PySpelling on the same files. The RuboCop result cache was disabled. Compared with the historical 0.1.0 average of 209.845s below, this is approximately 61.77 times faster, though that older run used a smaller corpus.
+
+Direct-engine extraction took **1.136s** for 201,517 tokens and 14,145 distinct case-sensitive words. Both engines reported zero misspelled tokens or words.
+
+| Engine | Load, runs 1 / 2 / 3 | Distinct-word check, runs 1 / 2 / 3 | Average distinct-word check |
+| --- | --- | --- | ---: |
+| `Kotoshu` 1.0.8, pure Ruby | 0.267315 / 0.202550 / 0.199191s | 0.319022 / 0.354248 / 0.377021s | 0.350097s |
+| `kotoshu-rs` 0.2.3, native extension | 0.026594 / 0.025025 / 0.024154s | 0.048733 / 0.048772 / 0.047611s | 0.048372s |
+
+Cached replay took 0.014–0.015 seconds per run. The direct-engine methodology and limitations below still apply; these dictionary timings exclude full-tool overhead.
+
+## Historical full-archive tools
+
+The original measurements used blog commit `e273fe0940d6052afb3658d0d549c09db148dc4f`. All checks passed.
 
 | Tool | Run 1 | Run 2 | Run 3 | Average |
 | --- | ---: | ---: | ---: | ---: |
@@ -13,7 +37,7 @@ Both ran in an isolated temporary snapshot using the current project vocabulary.
 
 PySpelling checked 614 files. Its original glob omitted `.github/ISSUE_TEMPLATE/broken_links.md` and `tags/.net.md`; RuboCop checked 616. RuboCop took approximately 3.24 times as long. This is not a dictionary-engine-only comparison.
 
-## Direct `Kotoshu` engine checks
+## Historical direct `Kotoshu` engine checks
 
 Extracted the 616 files once using rubocop-spellcheck's Markdown extractor and English word pattern: 200,770 tokens, 14,038 distinct case-sensitive words. Front matter, code, destinations, and addresses were excluded. Both implementations used rubocop-spellcheck's bundled English dictionary and the same case-insensitive project vocabulary.
 
@@ -35,7 +59,7 @@ python3 benchmarks/spelling/tools.py
 bundle exec ruby benchmarks/spelling/kotoshu.rb
 ```
 
-The scripts discover all tracked `.md` and `.markdown` files, including dotfiles, files under `.github`, and this benchmark documentation. Only generated/third-party directories (`_site`, `_styles`, `node_modules`, and `vendor`) are excluded. PySpelling receives an explicit source list instead of the old glob so it cannot omit hidden paths. Both full-tool checks must report exactly the discovered file count or the benchmark fails.
+The scripts discover all tracked `.md` and `.markdown` files, including dotfiles, files under `.github`, tracked files under `_styles`, and this benchmark documentation. No tracked Markdown paths are excluded. PySpelling receives an explicit source list instead of the old glob so it cannot omit hidden paths. Both full-tool checks must report exactly the discovered file count or the benchmark fails.
 
 The scripts print measurements and write ignored JSON results alongside themselves. The full-tool script also writes ignored logs. Temporary snapshots are automatically removed. The engine script additionally records extraction time on subsequent runs. The historical measurements above predate this explicit-source correction; rerun the scripts for a strict same-file comparison.
 

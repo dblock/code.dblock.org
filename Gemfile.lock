@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/dblock/rubocop-spellcheck.git
+  revision: 42c6e60f7c2be0c4f253385c7e8731833a816170
+  ref: 42c6e60f7c2be0c4f253385c7e8731833a816170
+  specs:
+    rubocop-spellcheck (0.1.1)
+      commonmarker (~> 2.0)
+      kotoshu (~> 1.0.8)
+      lint_roller (~> 1.1)
+      rubocop (~> 1.72, >= 1.72.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -179,11 +190,6 @@ GEM
     rubocop-rake (0.7.1)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1)
-    rubocop-spellcheck (0.1.0)
-      commonmarker (~> 2.0)
-      kotoshu (~> 1.0.8)
-      lint_roller (~> 1.1)
-      rubocop (~> 1.72, >= 1.72.1)
     ruby-link-checker (0.4.0)
     ruby-progressbar (1.13.0)
     rubyzip (2.4.1)
@@ -219,7 +225,7 @@ DEPENDENCIES
   jekyll-sitemap (~> 1.4)
   rake
   rubocop-rake
-  rubocop-spellcheck (~> 0.1.0)
+  rubocop-spellcheck!
   ruby-link-checker
   typhoeus
   webrick

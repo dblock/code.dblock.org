@@ -25,7 +25,6 @@ def main():
     markdown = [
         path for path in paths
         if Path(path).suffix in {".md", ".markdown"}
-        and not set(Path(path).parts) & {"_site", "_styles", "node_modules", "vendor"}
     ]
     results = []
     with tempfile.TemporaryDirectory(prefix="blog-spelling-benchmark-") as directory:
