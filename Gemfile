@@ -12,3 +12,9 @@ gem 'webrick'
 gem 'typhoeus'
 gem 'ruby-link-checker'
 gem 'jekyll-md', '~> 0.2.0'
+
+# https://github.com/rubocop/rubocop-md/pull/50
+gem 'rubocop-md',
+    git: 'https://github.com/dblock/rubocop-md.git',
+    branch: 'configurable-front-matter',
+    require: false

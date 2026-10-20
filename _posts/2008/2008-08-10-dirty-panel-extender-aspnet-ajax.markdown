@@ -14,4 +14,4 @@ FoodCandy is (was) a rich social network that offers users many web forms to fil
 
 This is a Panel Extender for ASP.NET AJAX 1.0 that automatically detects if any input control inside it was changed and shows an alert if the user tries to leave the page before saving the data. The extender supports most HTML input controls and can detect whether either data, selection or both have changed.
 
-[[CodeProject Article](https://www.codeproject.com/Articles/19973/Dirty-Panel-Extender-ASP-NET-AJAX)]
+\[[CodeProject Article](https://www.codeproject.com/Articles/19973/Dirty-Panel-Extender-ASP-NET-AJAX)\]

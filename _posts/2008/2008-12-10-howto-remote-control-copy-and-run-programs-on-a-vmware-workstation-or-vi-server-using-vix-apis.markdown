@@ -59,7 +59,7 @@ private void Connect(int hostType, string hostName, int hostPort, string usernam
 
 #### Locating a Virtual Machine
 
-A virtual machine on a VMWare Workstation is a file with a standard path (eg. _C:\Virtual Machines\myvirtualmachine.vmx_). Unsurprisingly it is the same thing on an ESX server, but with a relative storage path. The latter can be found in the VMWare Infrastructure Client: right click on a virtual machine, choose _Edit Settings_, click the _Options_ tab and note the _Virtual Machine Configuration File_ (eg. _[storage] virtualmachine/virtualmachine.vmx_).
+A virtual machine on a VMWare Workstation is a file with a standard path (eg. _C:\Virtual Machines\myvirtualmachine.vmx_). Unsurprisingly it is the same thing on an ESX server, but with a relative storage path. The latter can be found in the VMWare Infrastructure Client: right click on a virtual machine, choose _Edit Settings_, click the _Options_ tab and note the _Virtual Machine Configuration File_ (eg. `[storage] virtualmachine/virtualmachine.vmx`).
 
 ```csharp
 public void OpenFile(string fileName)

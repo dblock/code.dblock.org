@@ -26,9 +26,9 @@ A pre-commit hook runs `bundle exec rake precommit`, including `spell:staged` to
 
 ### Style
 
-A pre-commit hook also runs `markdownlint-cli2` using `.markdownlint.yaml`. Fix any reported issues before committing.
+A pre-commit hook also runs `bundle exec rake lint`, combining `markdownlint-cli2` using `.markdownlint.yaml` with rubocop-md using `.rubocop.yml`. Fix any reported issues before committing.
 
-Pushes and pull requests run the full Markdown checker, including `markdownlint-rule-single-line-paragraphs`, across all Markdown files. Keep each prose paragraph on one source line; intentional Markdown hard breaks and `<br>` boundaries remain supported. A separate workflow checks spelling.
+Pushes and pull requests run both Markdown checkers across all Markdown files. rubocop-md's `Markdown/MaxLength` cop uses `Max: false` to keep each prose paragraph on one source line; intentional Markdown hard breaks and `<br>` boundaries remain supported. `Markdown/Syntax` reports parser diagnostics as normal offenses with source locations. Ruby snippet style checks are not enabled. A separate workflow checks spelling.
 
 ### Images and Screenshots
 

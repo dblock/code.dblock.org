@@ -5,11 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-      - name: Install Markdown linter
+      - name: Install markdownlint
         run: npm ci --ignore-scripts
       - name: Check Markdown
         run: npm run lint:markdown

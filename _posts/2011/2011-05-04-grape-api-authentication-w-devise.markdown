@@ -170,7 +170,7 @@ match '/oauth2/authorize'    => 'oauth#authorize',    :via => [:get, :post]
 match '/oauth2/access_token' => 'oauth#access_token', :via => [:get, :post]
 ```
 
-OAuth2 starts by redirecting users to _/oauth2/authorize?client_id=[client id]&redirect_uri=[redirect url]&response_type=code_. This should render a login page. If the user chooses to login, he will be redirected back to the redirect url specified with the authorization code. The application should make a request to _/oauth2/access_token?client_id=[client id]&client_secret=[client secret]&redirect_uri=[redirect url]&grant_type=[authorization code]&code=code_ which will return the JSON `{ "access_token": [access token], "refresh_token": [refresh token], "expires_in": "yyyy-mm-ddThh:mm:ss TZ" }`.
+OAuth2 starts by redirecting users to `/oauth2/authorize?client_id=[client id]&redirect_uri=[redirect url]&response_type=code`. This should render a login page. If the user chooses to login, he will be redirected back to the redirect url specified with the authorization code. The application should make a request to `/oauth2/access_token?client_id=[client id]&client_secret=[client secret]&redirect_uri=[redirect url]&grant_type=[authorization code]&code=code` which will return the JSON `{ "access_token": [access token], "refresh_token": [refresh token], "expires_in": "yyyy-mm-ddThh:mm:ss TZ" }`.
 
 ```ruby
 class OauthController < ApplicationController

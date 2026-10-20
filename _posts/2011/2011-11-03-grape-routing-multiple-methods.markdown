@@ -27,7 +27,7 @@ def route(methods, paths = ['/'], route_options = {}, &block)
 end
 ```
 
-The Array construct will take anything and make it into an array, unless it's already one. Which means that we can pass an array of methods to _route_. This is definitely part of Ruby magic, a C# or Java developer would strangle you for accepting _object_ as a parameter and then transforming it into _[object] _– but this is completely kosher in Ruby. But I digress, in order to route multiple methods for a single API we can invoke _route_ directly instead of _get_ or _post_.
+The Array construct will take anything and make it into an array, unless it's already one. Which means that we can pass an array of methods to _route_. This is definitely part of Ruby magic, a C# or Java developer would strangle you for accepting _object_ as a parameter and then transforming it into `[object]` – but this is completely kosher in Ruby. But I digress, in order to route multiple methods for a single API we can invoke _route_ directly instead of _get_ or _post_.
 
 ```ruby
 route ['GET', 'POST'], "foo/bar" do

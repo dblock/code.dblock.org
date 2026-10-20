@@ -34,7 +34,7 @@ end
 
 ### Importing Data
 
-Importing data is the inverse operation. We have to clear the model data – I couldn't figure out how to instantiate an object that exists and resave it with changes [[thread](https://groups.google.com/group/mongoid/browse_thread/thread/0c28c14d0c1c48cd#)].
+Importing data is the inverse operation. We have to clear the model data – I couldn't figure out how to instantiate an object that exists and resave it with changes \[[thread](https://groups.google.com/group/mongoid/browse_thread/thread/0c28c14d0c1c48cd#)\].
 
 ```ruby
 task :import, [:model, :filename] => :environment do |t, args|
