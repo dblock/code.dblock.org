@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 desc 'Build the site, including dynamic topic pages.'
 task :tags do
   sh 'bundle exec jekyll build'
@@ -9,6 +11,11 @@ task :lint do
 end
 
 namespace :spell do
+  desc 'Check spelling in all Markdown files.'
+  task :check do
+    sh 'bundle exec rubocop --only Spellcheck/Spelling'
+  end
+
   desc 'Check spelling in staged Markdown; check all tracked Markdown when spelling settings change.'
   task :staged do
     require_relative '_lib/staged_spelling'

@@ -14,7 +14,7 @@ Finally, the part that had my classroom most engaged was about non-traditional m
 
 ![]({{ site.url }}/images/posts/2011/2011-07-06-non-traditional-methods-of-choosing-technology-for-a-software-project/image_2.jpg)
 
-Most experienced engineers that I get a chance to talk to believe that traditional approaches yield about the same quality of results as flipping a coin. Committee-type technology decisions that evaluate many angles often make poor choices that produce average outcomes. For instance, after eliminating all the dumb and inapplicable choices for a web project, can you really choose between Ruby-on-Rails, Pythonon-Django or Lift-on-Scala? It's a matter of preference and experience and good developers can make almost any of these work.
+Most experienced engineers that I get a chance to talk to believe that traditional approaches yield about the same quality of results as flipping a coin. Committee-type technology decisions that evaluate many angles often make poor choices that produce average outcomes. For instance, after eliminating all the dumb and inapplicable choices for a web project, can you really choose between Ruby-on-Rails, Python-on-Django or Lift-on-Scala? It's a matter of preference and experience and good developers can make almost any of these work.
 
 Flip a coin. See which way the wind blows.
 

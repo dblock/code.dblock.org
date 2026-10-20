@@ -43,7 +43,7 @@ location {
 }
 ```
 
-This needs to be wired to our MongoDB storage. I'm using [mongoid-geospatial](https://github.com/mongoid/mongoid-geospatial) and saving locations as a [Point](https://github.com/mongoid/mongoid-geospatial/blob/master/lib/mongoid/geospatial/fields/point.rb). The latter can accept latitude and logitude but then stores these as `x` and `y`. The location type specifies `property: :x` and `property :y` where appropriate, which is used when converting a `Point` into a `LocationType`, while the mutation converts input to a hash that is fed into `Point.new` automatically.
+This needs to be wired to our MongoDB storage. I'm using [mongoid-geospatial](https://github.com/mongoid/mongoid-geospatial) and saving locations as a [Point](https://github.com/mongoid/mongoid-geospatial/blob/master/lib/mongoid/geospatial/fields/point.rb). The latter can accept latitude and longitude but then stores these as `x` and `y`. The location type specifies `property: :x` and `property :y` where appropriate, which is used when converting a `Point` into a `LocationType`, while the mutation converts input to a hash that is fed into `Point.new` automatically.
 
 You can see this code in [33-minutes-server@c1fb00](https://github.com/33-minutes/33-minutes-server/commit/c1fb0098348d1833d9acc00c3c5a4347db1e2ebe), in which I confused `:x` and `:y` coordinates of `Point`. This was fixed in [33-minutes-server@9fc79d](https://github.com/33-minutes/33-minutes-server/commit/9fc79daebd43f9488d68fd5259c86f95954afd97).
 

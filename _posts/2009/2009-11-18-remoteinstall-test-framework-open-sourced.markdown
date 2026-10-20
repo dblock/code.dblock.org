@@ -27,7 +27,7 @@ Simple enough? That's all RemoteInstall was at its inception. You can get this b
 
 ![CruiseControl.jpg](https://raw.githubusercontent.com/dblock/remoteinstall/master/Screenshots/CruiseControl.jpg)
 
-The results were superb. We have virtually zero deployment failure in production for thousands of custommers. Then, eventually we got pretty good at this adding lots of useful features. If you have more than one VM you can do this in parallel. RI integrates with build automation. It can pickup your latest installers from network shares. Etc. Next, we thought: why not run some tests after each successful installation? So we added tasks and some simple integration. So you can execute JUnit or NUnit tests on the remote machine post-installation.
+The results were superb. We have virtually zero deployment failure in production for thousands of customers. Then, eventually we got pretty good at this adding lots of useful features. If you have more than one VM you can do this in parallel. RI integrates with build automation. It can pickup your latest installers from network shares. Etc. Next, we thought: why not run some tests after each successful installation? So we added tasks and some simple integration. So you can execute JUnit or NUnit tests on the remote machine post-installation.
 
 ![NUnit.jpg](https://raw.githubusercontent.com/dblock/remoteinstall/master/Screenshots/NUnit.jpg)
 

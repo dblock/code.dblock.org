@@ -38,7 +38,7 @@ Before setting a versioning scheme I must outline several ingredients of success
 
 1. Versioning must be completely hands-off on a daily basis. That is nobody should have to do anything manually or semi-automatically for versioning every day.
 2. It should be quick and easy to implement.
-3. Developer builds, qa builds, official builds, blue and yellow biulds should be versioned in the same manner.
+3. Developer builds, qa builds, official builds, blue and yellow builds should be versioned in the same manner.
 4. Versioning should uniformly target the platforms you ship your product on.
 5. It should be possible to quickly trace back from a version number to the source code that produced the build.
 6. Versioning should apply to every kind of artifact that is produced: binaries, web pages, documents, etc.
@@ -114,11 +114,11 @@ This sets the build.number property. The build files may then use the version.fu
 
 ### Implementation in CruiseControl
 
-CruiseControl supports the concept of build publishers and labellers that work together to pickup built artifacts and deposit then in a destination folder. With my versioning scheme it's easy to create matching folder names and build numbers. None of the built-in CruiseControl.NET labellers fully support our versioning scheme but there is a [Google code project](https://code.google.com/p/svnrevisionlabeller/) available that implements an SVN Revision Labeller that works nicely with this versioning. To install this plug-in, just download [the latest version of SvnRevisionLabeller plugin](https://code.google.com/archive/p/svnrevisionlabeller/downloads), unzip it and drop ccnet.SvnRevisionLabeller.dll into your CruiseControl.NET server directory (for example, C:\Program Files\CruiseControl.NET\server).
+CruiseControl supports the concept of build publishers and labelers that work together to pickup built artifacts and deposit then in a destination folder. With my versioning scheme it's easy to create matching folder names and build numbers. None of the built-in CruiseControl.NET labelers fully support our versioning scheme but there is a [Google code project](https://code.google.com/p/svnrevisionlabeller/) available that implements an SVN revision labeler that works nicely with this versioning. To install this plug-in, just download [the latest version of SvnRevisionLabeller plugin](https://code.google.com/archive/p/svnrevisionlabeller/downloads), unzip it and drop ccnet.SvnRevisionLabeller.dll into your CruiseControl.NET server directory (for example, `C:\Program Files\CruiseControl.NET\server`).
 
-Now you can add the SVN version labeller to your CruiseControl config file. Here's a sample config file:
+Now you can add the SVN version labeler to your CruiseControl config file. Here's a sample config file:
 
-Each build's artifacts (the entire C:\source\myproject\target\Release directory) will be published under the publishDir to the directory Major.Minor.SVNRev.Bump, where Major and Minor correspond to the text in the project/labeller/major and project/labeller/minor tags from the XML above, SVNRev is the revision of HEAD in the SVN repository at project/labeller/url in the XML above, and Bump is a number that increments by 1 on each build and resets to 0 each time the SVN revision changes between builds. This means that any build triggered by the SVN commit of revision X will be published to a directory labelled Major.Minor.X.0. If builds are triggered manually or on a schedule before revision X+1 is committed, those builds will be published to Major.Minor.X.1, Major.Minor.X.2, etc.
+Each build's artifacts (the entire `C:\source\myproject\target\Release` directory) will be published under the publishDir to the directory Major.Minor.SVNRev.Bump, where Major and Minor correspond to the text in the `project/labeller/major` and `project/labeller/minor` tags from the XML above, SVNRev is the revision of HEAD in the SVN repository at `project/labeller/url` in the XML above, and Bump is a number that increments by 1 on each build and resets to 0 each time the SVN revision changes between builds. This means that any build triggered by the SVN commit of revision X will be published to a directory labeled Major.Minor.X.0. If builds are triggered manually or on a schedule before revision X+1 is committed, those builds will be published to Major.Minor.X.1, Major.Minor.X.2, etc.
 
 ### Unit Testing
 

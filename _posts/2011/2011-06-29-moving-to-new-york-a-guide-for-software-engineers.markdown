@@ -14,7 +14,7 @@ A couple of my friends have been interviewing in New York for the last ten years
 
 As a software engineer you're very privileged. You will always have a job in any city, state or country. Even if you suck, there will always be someone to hire you because the market of software engineers is hot and the numbers play in your favor. So there, unless you're nearing retirement, you have job security – take some risks.
 
-![pricess]({{ site.url }}/images/posts/2011/2011-06-29-moving-to-new-york-a-guide-for-software-engineers/pricess_11.jpg)
+![Pink shoe with the caption "Just move it."]({{ site.url }}/images/posts/2011/2011-06-29-moving-to-new-york-a-guide-for-software-engineers/pricess_11.jpg)
 
 New York is an incredible place to grow up, live and retire. It's a dense city of millions of people with the best theatres and museums. You'll hear ten different languages spoken at any playground. Beautiful people, physically and intellectually, surround you. One can easily choose to be anonymous here or compete for a place amongst those that aspire for greatness. I've lived in Russia, Europe, the Pacific Northwest and New York is the place where I feel truly at home. If your goal is to move to New York, you should find the best offer for you and just move.
 

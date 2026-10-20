@@ -76,7 +76,7 @@ Note that I am all for giving hungry grads a job, especially those without an ov
 
 #### Spelling: Attention to Detail
 
-I've recently gotten a resume for a tester position with the term "attention to detail" misspelled (three t's). Funny every time.
+I've recently gotten a resume for a tester position with the term "attention to detail" misspelled (three `t`s). Funny every time.
 
 There are more complicated cases. Being a foreign language engineer myself, I find the need to be extra careful about my resume and always ask a native English speaker to re-read it. Not this guy.
 

@@ -171,7 +171,7 @@ You can run the source code from this article with OpenDS and Eclipse.
 
 1. Check out the source code from [here](https://github.com/dblock/codeproject/tree/master/JndiDemo).
 2. Install OpenDS from [https://web.archive.org/web/20111001105032/https://www.opends.org](https://web.archive.org/web/20111001105032/https://www.opends.org).
-3. Copy _schema\Services.ldif_ into _OpenDS\config\schema\100-Services.ldif_ and restart OpenDS.
+3. Copy `schema\Services.ldif` into `OpenDS\config\schema\100-Services.ldif` and restart OpenDS.
 4. Import the _JndiDemo_ project into Eclipse and run JUnit tests in the _src-test_ package.
 
 #### Links

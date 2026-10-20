@@ -12,7 +12,7 @@ Jetty is just another servlet container, so the setup is very similar to [Tomcat
 
 1. Download an extract Jetty. I used Jetty 6.1.26.
 2. Download the latest Waffle, I used a 1.5 beta from [GitHub](https://github.com/waffle/waffle).
-3. Place the **waffle-filter** demo app contents into **webapps\waffle-filter**.
+3. Place the **waffle-filter** demo app contents into `webapps\waffle-filter`.
 4. Place all Waffle JARs into Jetty's **lib** directory.
 5. Start Jetty with **java -jar start.jar**.
 6. In Internet Explorer, choose **Tools** , **Internet Options** and add https://localhost to **Local Intranet** in the **Security** tab.

@@ -23,7 +23,7 @@ Copy _waffle-jna.jar_, _jna.jar_ and _platform.jar_ to Tomcat's _lib_ directory.
 
 _Security Filter_
 
-Add the security filter to _WEB-INF\web.xml_.
+Add the security filter to `WEB-INF\web.xml`.
 
 ```xml
 <filter>
@@ -40,7 +40,7 @@ That's it.
 
 #### Demo Application
 
-A demo application can be found in the Waffle distribution in the _Samples\Tomcat\waffle-filter_ directory. Copy the entire directory into Tomcat's webapps directory and navigate to https://localhost:8080/waffle-filter.
+A demo application can be found in the Waffle distribution in the `Samples\Tomcat\waffle-filter` directory. Copy the entire directory into Tomcat's webapps directory and navigate to https://localhost:8080/waffle-filter.
 
 #### Retrieving User Principal
 
