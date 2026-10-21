@@ -2,9 +2,33 @@
 
 Measurements taken locally on macOS with Ruby 3.3.5 on October 20, 2026. Dependencies were already installed. These are different benchmark layers, not four interchangeable end-to-end tools.
 
-## PR 14: dictionary reuse
+## Released 0.2.0: full-tool benchmarks
 
-The benchmark branch pins [rubocop-spellcheck PR #14](https://github.com/dblock/rubocop-spellcheck/pull/14) at `42c6e60f7c2be0c4f253385c7e8731833a816170`. The fix reuses dictionaries and word verdicts across files instead of rebuilding them for each file.
+The branch now uses released `rubocop-spellcheck` 0.2.0 with title front matter and embedded Ruby string checking enabled. Identifiers remain disabled. Full-tool timings include process startup, parsing, dictionary loading, and spelling checks, with RuboCop caching disabled.
+
+### Earlier blog-worktree measurement
+
+The October 21 blog-worktree benchmark used development commit `ac24948`, whose runtime code was subsequently released as 0.2.0. It checked 618 tracked Markdown files in 3.699 / 3.784 / 3.684 seconds, averaging **3.722 seconds**, with no findings. That corpus included the draft introduction but not this benchmark README. This is not the fresh released-gem branch run.
+
+### Reproducing the released-gem branch measurement
+
+Measured October 21, 2026 on macOS with Ruby 3.3.5 and released `rubocop-spellcheck` 0.2.0. All three runs checked 618 tracked Markdown files with zero findings.
+
+| Full-archive tool | Run 1 | Run 2 | Run 3 | Average |
+| --- | ---: | ---: | ---: | ---: |
+| Released `rubocop-spellcheck` 0.2.0 | 3.695s | 3.719s | 3.656s | **3.690s** |
+
+Run only the Ruby tool without installing PySpelling, Aspell, or PyYAML:
+
+```sh
+python3 benchmarks/spelling/tools.py --tool rubocop-spellcheck
+```
+
+Branch runs include this README, not the uncommitted draft introduction. PySpelling and direct dictionary engines are separate benchmarks; the historical results below must not be interpreted as fresh 0.2.0 measurements.
+
+## Historical PR 14: full-tool and direct-engine benchmarks
+
+These historical runs pinned [rubocop-spellcheck PR #14](https://github.com/dblock/rubocop-spellcheck/pull/14) at `42c6e60f7c2be0c4f253385c7e8731833a816170`. The fix reuses dictionaries and word verdicts across files instead of rebuilding them for each file.
 
 These runs used the blog files from `c76c7a6` before adding this results section. Both full tools checked all **618 tracked Markdown files**, including hidden paths, the benchmark README, and `_styles/proselint/README.md`. All runs passed with zero spelling findings. Earlier benchmark discovery excluded `_styles`, so those historical counts are lower.
 
