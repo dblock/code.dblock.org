@@ -34,11 +34,13 @@ Naming/FileName:
 Spellcheck:
   DictionaryFiles:
     en:
-      - gem:rubocop-spellcheck/data/en/en.dic
-      - .spellcheck.txt
-
+    - gem:rubocop-spellcheck/data/en/en.dic
+    - ".spellcheck.txt"
 Spellcheck/Spelling:
   Enabled: true
+  Ruby:
+    Identifiers: false
   Markdown:
     FrontMatter:
-      Enabled: false
+      Include:
+        - title

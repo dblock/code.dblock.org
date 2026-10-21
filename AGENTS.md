@@ -24,7 +24,7 @@ A pre-commit hook runs `bundle exec rake precommit`, including `spell:staged` to
 - **Add a legitimate word** (acronym, proper noun, technical term): add it to `.spellcheck.txt`, one word per line, in alphabetical order.
 - **Suppress a word inline**: wrap it in backticks (inline code) to exclude it from spell checking.
 
-Spelling uses `rubocop-spellcheck` with its bundled English dictionary and `.spellcheck.txt`. Run `bundle exec rubocop` for Ruby lint and spelling, or `bundle exec rake spell:check` for spelling only. Configuration is in `.rubocop.yml`; front matter spelling is disabled.
+Spelling uses `rubocop-spellcheck` with its bundled English dictionary and `.spellcheck.txt`. Run `bundle exec rubocop` for Ruby lint and spelling, or `bundle exec rake spell:check` for spelling only. Configuration is in `.rubocop.yml`; front matter spelling checks the `title` field.
 
 ### Style
 

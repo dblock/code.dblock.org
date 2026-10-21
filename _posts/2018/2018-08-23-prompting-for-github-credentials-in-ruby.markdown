@@ -20,7 +20,7 @@ def username
 end
 
 def get_username
-  print 'Enter GithHub username: '
+  print 'Enter GitHub username: '
   $stdin.gets.chomp
 rescue Interrupt => e
   raise e, 'ctrl + c'

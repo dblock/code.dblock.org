@@ -16,4 +16,4 @@ gem 'ruby-link-checker'
 gem 'typhoeus'
 gem 'webrick'
 
-gem 'rubocop-spellcheck', '~> 0.1.0', require: false
+gem 'rubocop-spellcheck', '~> 0.2.0', require: false
