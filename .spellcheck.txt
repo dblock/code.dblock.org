@@ -336,6 +336,7 @@ cryptographic
 cryptprotectdata
 cryptunprotectdata
 création
+cspell
 css
 csv
 cto
