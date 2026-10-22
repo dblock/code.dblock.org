@@ -473,6 +473,7 @@ dtf
 dup
 durations
 durran
+dylint
 dyno
 dzt
 déjà
@@ -1411,6 +1412,7 @@ runnable
 runprograminguest
 runtimeerror
 russeth
+rustdoc
 rustup
 rvm
 rxsl
