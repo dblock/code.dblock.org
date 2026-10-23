@@ -58,6 +58,8 @@ Titles can be blunt and specific. Prefer "Don't Tell Engineers What to Do" over 
 ## Tone
 
 - Be direct and opinionated, but not academic.
+- Say what things are. Avoid defensive explanations of what they aren't, such as "proposed work, not shipped features."
+- Avoid formulaic good-versus-bad contrasts, especially paired sentences like "X is useful. Y is not." Describe the concrete work and results without appending a moral.
 - Prefer "here is what I did and what I learned" over abstract advice.
 - Use humor, dry sarcasm, and cultural references sparingly but confidently.
 - Allow self-deprecation: admit obsession, mistakes, broken production features, burnout, confusion, and changed opinions.

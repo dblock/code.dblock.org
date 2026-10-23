@@ -1,0 +1,296 @@
+workstream,repository,number,title,state_at_snapshot,created_at,url
+"Upstream integrations, examples and blog",codegram/hyperclient,327,Remove macOS metadata and add basic agent guidance,merged,2026-10-14T21:26:55Z,https://github.com/codegram/hyperclient/pull/327
+"Upstream integrations, examples and blog",codegram/hyperclient,328,Replace retired Splines demo with a local Oxford HAL example,merged,2026-10-14T21:32:52Z,https://github.com/codegram/hyperclient/pull/328
+"Upstream integrations, examples and blog",codenamev/get-up-offa-that-markdown,1,Add spellchecking and conservative autocorrection with Kotoshu,open,2026-10-22T17:23:46Z,https://github.com/codenamev/get-up-offa-that-markdown/pull/1
+"Upstream integrations, examples and blog",codenamev/scarpe,1,Support spelling underlines and checked replacements in native edit boxes,open,2026-10-22T17:22:00Z,https://github.com/codenamev/scarpe/pull/1
+Danger and maintainer automation,danger/danger,1558,Detect CI in danger init and offer GitHub Actions without personal access tokens,open,2026-10-20T12:35:07Z,https://github.com/danger/danger/pull/1558
+Email libraries,dblock/actionmailer-text,11,Modernize CI and test Rails 6.1 through 8.1,merged,2026-10-19T20:49:23Z,https://github.com/dblock/actionmailer-text/pull/11
+Email libraries,dblock/actionmailer-text,12,Avoid backtracking when wrapping long plaintext tokens,merged,2026-10-19T21:35:35Z,https://github.com/dblock/actionmailer-text/pull/12
+Email libraries,dblock/actionmailer-text,13,Parse HTML with Nokogiri while preserving plaintext formatting,merged,2026-10-19T21:37:25Z,https://github.com/dblock/actionmailer-text/pull/13
+Email libraries,dblock/actionmailer-text,14,Allow plaintext generation for selected mailer actions,merged,2026-10-19T21:40:56Z,https://github.com/dblock/actionmailer-text/pull/14
+Email libraries,dblock/actionmailer-text,15,Require Ruby 3.1 and current RuboCop 1.92 baseline,merged,2026-10-19T21:42:21Z,https://github.com/dblock/actionmailer-text/pull/15
+Email libraries,dblock/actionmailer-text,16,Prepare version 0.2.0 and add AGENTS.md,merged,2026-10-19T21:43:14Z,https://github.com/dblock/actionmailer-text/pull/16
+Email libraries,dblock/actionmailer-text,17,Add maintainer release guide,merged,2026-10-19T22:07:23Z,https://github.com/dblock/actionmailer-text/pull/17
+Email libraries,dblock/actionmailer-text,18,Prepare release 0.2.0,merged,2026-10-19T22:09:24Z,https://github.com/dblock/actionmailer-text/pull/18
+Email libraries,dblock/actionmailer-text,19,Prepare next development version 0.2.1,merged,2026-10-19T22:11:21Z,https://github.com/dblock/actionmailer-text/pull/19
+Email libraries,dblock/actionmailer-text,20,Add SimpleCov coverage reporting and Coveralls,merged,2026-10-19T22:12:38Z,https://github.com/dblock/actionmailer-text/pull/20
+Email libraries,dblock/actionmailer-text,21,Add Danger with danger-changelog,merged,2026-10-19T22:13:24Z,https://github.com/dblock/actionmailer-text/pull/21
+Email libraries,dblock/canonical-emails,4,"Modernize CI, RuboCop and current Mail compatibility",merged,2026-10-20T10:08:08Z,https://github.com/dblock/canonical-emails/pull/4
+Email libraries,dblock/canonical-emails,5,Canonicalize Gmail plus-address tags,merged,2026-10-20T10:09:01Z,https://github.com/dblock/canonical-emails/pull/5
+Email libraries,dblock/canonical-emails,6,Prepare 0.2.0 and add AGENTS.md and RELEASING.md,merged,2026-10-20T10:11:59Z,https://github.com/dblock/canonical-emails/pull/6
+Email libraries,dblock/canonical-emails,7,Add SimpleCov and Coveralls with full behavioral coverage,merged,2026-10-20T10:12:38Z,https://github.com/dblock/canonical-emails/pull/7
+Email libraries,dblock/canonical-emails,8,Add Danger with danger-changelog,merged,2026-10-20T10:13:42Z,https://github.com/dblock/canonical-emails/pull/8
+Email libraries,dblock/canonical-emails,9,Bring coverage changes from #7 onto master,merged,2026-10-20T10:23:18Z,https://github.com/dblock/canonical-emails/pull/9
+Email libraries,dblock/canonical-emails,10,Compose provider normalization from opt-in address mixins,merged,2026-10-20T10:46:50Z,https://github.com/dblock/canonical-emails/pull/10
+Email libraries,dblock/canonical-emails,11,Replace transform with provider-aware parse and explicit type selection,merged,2026-10-20T10:57:57Z,https://github.com/dblock/canonical-emails/pull/11
+Email libraries,dblock/canonical-emails,12,Add explicit provider registration for automatic parsing,merged,2026-10-20T11:04:19Z,https://github.com/dblock/canonical-emails/pull/12
+Email libraries,dblock/canonical-emails,13,Document and test multiple canonical email fields per model,merged,2026-10-20T11:26:20Z,https://github.com/dblock/canonical-emails/pull/13
+Email libraries,dblock/canonical-emails,14,Support custom canonical email accessor names with as:,merged,2026-10-20T11:29:05Z,https://github.com/dblock/canonical-emails/pull/14
+Email libraries,dblock/canonical-emails,15,Cache canonical model readers and remove address reassignment,merged,2026-10-20T11:38:35Z,https://github.com/dblock/canonical-emails/pull/15
+Email libraries,dblock/canonical-emails,16,Document valid_email as a separate validation option,merged,2026-10-20T11:39:18Z,https://github.com/dblock/canonical-emails/pull/16
+Email libraries,dblock/canonical-emails,17,Simplify README and focus upgrading guide on before/after,merged,2026-10-20T11:51:33Z,https://github.com/dblock/canonical-emails/pull/17
+Email libraries,dblock/canonical-emails,18,Prepare release 0.2.0,merged,2026-10-20T11:58:20Z,https://github.com/dblock/canonical-emails/pull/18
+"Upstream integrations, examples and blog",dblock/code.dblock.org,174,Use rubocop-md for Markdown paragraph and syntax checks,open,2026-10-20T20:40:14Z,https://github.com/dblock/code.dblock.org/pull/174
+"Upstream integrations, examples and blog",dblock/code.dblock.org,175,Replace PySpelling with rubocop-spellcheck,merged,2026-10-20T20:59:27Z,https://github.com/dblock/code.dblock.org/pull/175
+GitHub issue action,dblock/create-a-github-issue,200,Support template variables in assignees,merged,2026-10-19T01:34:51Z,https://github.com/dblock/create-a-github-issue/pull/200
+GitHub issue action,dblock/create-a-github-issue,201,Support creating and updating issues in another repository,merged,2026-10-19T01:59:46Z,https://github.com/dblock/create-a-github-issue/pull/201
+GitHub issue action,dblock/create-a-github-issue,202,Support issue types in template front matter,merged,2026-10-19T02:00:55Z,https://github.com/dblock/create-a-github-issue/pull/202
+GitHub issue action,dblock/create-a-github-issue,203,Retry GitHub API rate limits with bounded delays,merged,2026-10-19T02:03:54Z,https://github.com/dblock/create-a-github-issue/pull/203
+GitHub issue action,dblock/create-a-github-issue,204,Support opt-in reopening of existing closed issues,merged,2026-10-19T02:05:07Z,https://github.com/dblock/create-a-github-issue/pull/204
+GitHub issue action,dblock/create-a-github-issue,205,Quote and paginate exact-title duplicate searches,merged,2026-10-19T02:16:58Z,https://github.com/dblock/create-a-github-issue/pull/205
+GitHub issue action,dblock/create-a-github-issue,206,Add issues to Projects v2 from template project URLs,merged,2026-10-19T02:25:10Z,https://github.com/dblock/create-a-github-issue/pull/206
+GitHub issue action,dblock/create-a-github-issue,207,Document YAML quoting and literal Nunjucks syntax,merged,2026-10-19T10:22:34Z,https://github.com/dblock/create-a-github-issue/pull/207
+GitHub issue action,dblock/create-a-github-issue,208,Support workspace report files through Nunjucks includes,merged,2026-10-19T10:35:16Z,https://github.com/dblock/create-a-github-issue/pull/208
+GitHub issue action,dblock/create-a-github-issue,209,"Simplify issue orchestration, validation, and tests",merged,2026-10-19T16:29:21Z,https://github.com/dblock/create-a-github-issue/pull/209
+GitHub issue action,dblock/create-a-github-issue,210,Exercise the built action with live workflow integration tests,merged,2026-10-19T17:08:09Z,https://github.com/dblock/create-a-github-issue/pull/210
+GitHub issue action,dblock/create-a-github-issue,213,Remove unreleased Projects v2 support,merged,2026-10-19T17:46:38Z,https://github.com/dblock/create-a-github-issue/pull/213
+GitHub issue action,dblock/create-a-github-issue,224,Fix project references and consolidate contribution guidance,merged,2026-10-19T17:58:16Z,https://github.com/dblock/create-a-github-issue/pull/224
+Danger and maintainer automation,dblock/danger-changelog,72,Accept GitHub bot logins in changelog author links,merged,2026-10-14T15:41:12Z,https://github.com/dblock/danger-changelog/pull/72
+Danger and maintainer automation,dblock/danger-changelog,73,"Modernize Ruby compatibility, packaging, and CI",merged,2026-10-20T16:19:23Z,https://github.com/dblock/danger-changelog/pull/73
+Danger and maintainer automation,dblock/danger-changelog,74,Improve changelog diagnostics and document conditional reminders,merged,2026-10-20T16:21:37Z,https://github.com/dblock/danger-changelog/pull/74
+Danger and maintainer automation,dblock/danger-changelog,75,Support per-check overrides for every global changelog option,merged,2026-10-20T16:42:30Z,https://github.com/dblock/danger-changelog/pull/75
+Danger and maintainer automation,dblock/danger-changelog,76,Allow uncased scripts and emoji in changelog descriptions,merged,2026-10-20T16:50:04Z,https://github.com/dblock/danger-changelog/pull/76
+Danger and maintainer automation,dblock/danger-changelog,77,Support Markdown references for PR and author links,merged,2026-10-20T16:52:34Z,https://github.com/dblock/danger-changelog/pull/77
+Danger and maintainer automation,dblock/danger-changelog,78,Support GitLab.com links and provider-aware reminders,merged,2026-10-20T17:12:10Z,https://github.com/dblock/danger-changelog/pull/78
+Danger and maintainer automation,dblock/danger-changelog,79,Allow opt-in relaxed numeric versions in both formats,merged,2026-10-20T17:13:35Z,https://github.com/dblock/danger-changelog/pull/79
+Danger and maintainer automation,dblock/danger-changelog,80,Keep invalid changelog reports safely fenced,merged,2026-10-20T17:14:45Z,https://github.com/dblock/danger-changelog/pull/80
+Danger and maintainer automation,dblock/danger-changelog,81,Require added changelog entries in unreleased sections by default,merged,2026-10-20T17:16:39Z,https://github.com/dblock/danger-changelog/pull/81
+Danger and maintainer automation,dblock/danger-changelog,82,Add opt-in intent-word and verb-family consistency checks,merged,2026-10-20T17:17:35Z,https://github.com/dblock/danger-changelog/pull/82
+Danger and maintainer automation,dblock/danger-changelog,83,Add optional added-only scope for format checks,merged,2026-10-20T17:40:15Z,https://github.com/dblock/danger-changelog/pull/83
+Danger and maintainer automation,dblock/danger-changelog,84,Add configurable unreleased header labels,merged,2026-10-21T09:10:51Z,https://github.com/dblock/danger-changelog/pull/84
+Danger and maintainer automation,dblock/danger-changelog,85,Fix regression rejecting multiple issue and PR links,merged,2026-10-23T17:12:28Z,https://github.com/dblock/danger-changelog/pull/85
+Danger and maintainer automation,dblock/danger-toc,19,"Modernize Ruby compatibility, dependencies and CI",merged,2026-10-20T13:06:52Z,https://github.com/dblock/danger-toc/pull/19
+Danger and maintainer automation,dblock/danger-toc,20,Configure TOC generation and add opt-in diff reports,merged,2026-10-20T13:13:14Z,https://github.com/dblock/danger-toc/pull/20
+Danger and maintainer automation,dblock/danger-toc,21,Support per-check overrides for every global TOC option,merged,2026-10-20T15:21:43Z,https://github.com/dblock/danger-toc/pull/21
+Bot application upgrades,dblock/discord-strava,134,Upgrade Ruby to 4.0.9 and refresh dependencies,merged,2026-10-23T16:48:23Z,https://github.com/dblock/discord-strava/pull/134
+New spelling tools,dblock/dylint-spellcheck,1,Bundle English dictionaries and support project vocabulary files,merged,2026-10-21T18:52:01Z,https://github.com/dblock/dylint-spellcheck/pull/1
+New spelling tools,dblock/dylint-spellcheck,2,Collect vocabulary candidates automatically for missing declared files,merged,2026-10-21T19:02:09Z,https://github.com/dblock/dylint-spellcheck/pull/2
+New spelling tools,dblock/dylint-spellcheck,3,Move development instructions into CONTRIBUTING.md,merged,2026-10-21T19:29:08Z,https://github.com/dblock/dylint-spellcheck/pull/3
+New spelling tools,dblock/dylint-spellcheck,4,Parse Markdown prose in Rust comments,merged,2026-10-21T19:59:32Z,https://github.com/dblock/dylint-spellcheck/pull/4
+New spelling tools,dblock/dylint-spellcheck,5,Select standalone files with include/exclude patterns and parse Markdown,merged,2026-10-21T20:15:07Z,https://github.com/dblock/dylint-spellcheck/pull/5
+New spelling tools,dblock/dylint-spellcheck,6,Avoid duplicate CI runs on pull request branches,merged,2026-10-21T21:19:17Z,https://github.com/dblock/dylint-spellcheck/pull/6
+New spelling tools,dblock/dylint-spellcheck,7,Run Dylint and self-hosted spelling in a separate workflow,merged,2026-10-21T21:21:32Z,https://github.com/dblock/dylint-spellcheck/pull/7
+New spelling tools,dblock/dylint-spellcheck,8,Speed up CI with shared lint builds and driver caching,merged,2026-10-21T21:34:43Z,https://github.com/dblock/dylint-spellcheck/pull/8
+New spelling tools,dblock/dylint-spellcheck,9,Configure dictionaries with optional languages and local crate resources,merged,2026-10-21T21:42:58Z,https://github.com/dblock/dylint-spellcheck/pull/9
+New spelling tools,dblock/dylint-spellcheck,10,Respect scoped spelling suppression in Rust and Markdown,merged,2026-10-21T22:21:13Z,https://github.com/dblock/dylint-spellcheck/pull/10
+New spelling tools,dblock/dylint-spellcheck,11,Check selected plain-text documents,merged,2026-10-21T22:25:59Z,https://github.com/dblock/dylint-spellcheck/pull/11
+New spelling tools,dblock/dylint-spellcheck,22,Document releases and add coverage reporting and badges,merged,2026-10-21T22:33:40Z,https://github.com/dblock/dylint-spellcheck/pull/22
+New spelling tools,dblock/dylint-spellcheck,23,Check Rustdoc attributes and included documentation,merged,2026-10-21T22:43:58Z,https://github.com/dblock/dylint-spellcheck/pull/23
+New spelling tools,dblock/dylint-spellcheck,24,Exclude Liquid templates from Markdown spelling checks,merged,2026-10-21T22:51:29Z,https://github.com/dblock/dylint-spellcheck/pull/24
+New spelling tools,dblock/dylint-spellcheck,25,Improve prose tokenization and Unicode word boundaries,merged,2026-10-21T22:53:53Z,https://github.com/dblock/dylint-spellcheck/pull/25
+New spelling tools,dblock/dylint-spellcheck,26,Check YAML front matter string values safely,merged,2026-10-21T22:59:20Z,https://github.com/dblock/dylint-spellcheck/pull/26
+New spelling tools,dblock/dylint-spellcheck,27,Consolidate integration tests and improve coverage,merged,2026-10-22T03:59:34Z,https://github.com/dblock/dylint-spellcheck/pull/27
+New spelling tools,dblock/dylint-spellcheck,28,Release v0.1.0,merged,2026-10-22T04:08:51Z,https://github.com/dblock/dylint-spellcheck/pull/28
+"Upstream integrations, examples and blog",dblock/excalc-rs,3,Add pinned general-purpose Dylint checks,merged,2026-10-21T17:29:50Z,https://github.com/dblock/excalc-rs/pull/3
+"Upstream integrations, examples and blog",dblock/excalc-rs,4,Enable comment spelling checks with dylint-spellcheck,merged,2026-10-21T17:48:16Z,https://github.com/dblock/excalc-rs/pull/4
+New spelling tools,dblock/markdownlint-rule-spellcheck,1,Add CSpell-backed spelling checks for Markdown prose,merged,2026-10-22T21:03:49Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/1
+New spelling tools,dblock/markdownlint-rule-spellcheck,2,Add linting in a separate workflow,merged,2026-10-22T21:16:49Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/2
+New spelling tools,dblock/markdownlint-rule-spellcheck,3,Publish Coveralls coverage and add CLI integration tests,merged,2026-10-22T21:20:35Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/3
+New spelling tools,dblock/markdownlint-rule-spellcheck,4,Support installed CSpell dictionary packages,merged,2026-10-22T21:30:10Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/4
+New spelling tools,dblock/markdownlint-rule-spellcheck,5,Unify dictionaries and add collect/add workflow,merged,2026-10-22T21:36:50Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/5
+New spelling tools,dblock/markdownlint-rule-spellcheck,6,Spellcheck project documentation,merged,2026-10-22T21:43:10Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/6
+New spelling tools,dblock/markdownlint-rule-spellcheck,7,Speed up vocabulary collection by skipping suggestions,merged,2026-10-22T21:44:34Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/7
+New spelling tools,dblock/markdownlint-rule-spellcheck,8,Reduce CLI startup and reuse bounded dictionary suggestions,merged,2026-10-22T21:49:43Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/8
+New spelling tools,dblock/markdownlint-rule-spellcheck,9,Improve Unicode prose word boundaries,merged,2026-10-22T21:54:32Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/9
+New spelling tools,dblock/markdownlint-rule-spellcheck,10,Exclude Liquid expressions and tags from Markdown spelling,merged,2026-10-22T21:54:57Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/10
+New spelling tools,dblock/markdownlint-rule-spellcheck,11,Check YAML front matter by default with nested field selection,merged,2026-10-22T22:15:05Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/11
+New spelling tools,dblock/markdownlint-rule-spellcheck,12,Group dictionaries by language and scope Markdown options,merged,2026-10-22T22:23:11Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/12
+New spelling tools,dblock/markdownlint-rule-spellcheck,14,Use native markdownlint front matter support,merged,2026-10-22T23:23:12Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/14
+New spelling tools,dblock/markdownlint-rule-spellcheck,15,Collect vocabulary through normal linting without configuration edits,merged,2026-10-22T23:39:46Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/15
+New spelling tools,dblock/markdownlint-rule-spellcheck,16,Move runtime modules into src and improve test coverage,merged,2026-10-22T23:52:03Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/16
+New spelling tools,dblock/markdownlint-rule-spellcheck,17,Inline vocabulary formatter in collect,merged,2026-10-23T00:08:48Z,https://github.com/dblock/markdownlint-rule-spellcheck/pull/17
+New spelling tools,dblock/rubocop-spellcheck,1,Bundle English dictionary for zero-setup spelling checks,merged,2026-10-20T19:06:47Z,https://github.com/dblock/rubocop-spellcheck/pull/1
+New spelling tools,dblock/rubocop-spellcheck,2,Automate Kotoshu and bundled dictionary update PRs,merged,2026-10-20T19:09:33Z,https://github.com/dblock/rubocop-spellcheck/pull/2
+New spelling tools,dblock/rubocop-spellcheck,3,Enable spellchecking for the gem's own Ruby comments,merged,2026-10-20T19:34:44Z,https://github.com/dblock/rubocop-spellcheck/pull/3
+New spelling tools,dblock/rubocop-spellcheck,4,Enable rubocop-rake and rubocop-rspec,merged,2026-10-20T19:40:09Z,https://github.com/dblock/rubocop-spellcheck/pull/4
+New spelling tools,dblock/rubocop-spellcheck,5,Unify spelling checks and add Markdown prose support,merged,2026-10-20T19:53:38Z,https://github.com/dblock/rubocop-spellcheck/pull/5
+New spelling tools,dblock/rubocop-spellcheck,6,Include plain text while excluding spelling dictionaries,merged,2026-10-20T19:57:10Z,https://github.com/dblock/rubocop-spellcheck/pull/6
+New spelling tools,dblock/rubocop-spellcheck,7,"Separate lint, test, and package workflows",merged,2026-10-20T19:59:03Z,https://github.com/dblock/rubocop-spellcheck/pull/7
+New spelling tools,dblock/rubocop-spellcheck,8,Spellcheck YAML front matter string values,merged,2026-10-20T20:08:59Z,https://github.com/dblock/rubocop-spellcheck/pull/8
+New spelling tools,dblock/rubocop-spellcheck,9,Handle Liquid destinations and English word boundaries,merged,2026-10-20T20:50:19Z,https://github.com/dblock/rubocop-spellcheck/pull/9
+New spelling tools,dblock/rubocop-spellcheck,12,Prepare spelling for rubocop-md interoperability,merged,2026-10-20T21:35:11Z,https://github.com/dblock/rubocop-spellcheck/pull/12
+New spelling tools,dblock/rubocop-spellcheck,14,Reuse spelling dictionaries across file investigations,merged,2026-10-20T23:48:23Z,https://github.com/dblock/rubocop-spellcheck/pull/14
+New spelling tools,dblock/rubocop-spellcheck,15,Add spelling autocorrection for 0.2.0,merged,2026-10-21T00:06:12Z,https://github.com/dblock/rubocop-spellcheck/pull/15
+New spelling tools,dblock/rubocop-spellcheck,16,Support Markdown spelling suppression directives,merged,2026-10-21T00:37:22Z,https://github.com/dblock/rubocop-spellcheck/pull/16
+New spelling tools,dblock/rubocop-spellcheck,17,Select front matter spelling with dotted inclusion and exclusion paths,merged,2026-10-21T00:40:01Z,https://github.com/dblock/rubocop-spellcheck/pull/17
+New spelling tools,dblock/rubocop-spellcheck,18,Check RDoc files and parse RDoc markup in Ruby comments,merged,2026-10-21T00:52:52Z,https://github.com/dblock/rubocop-spellcheck/pull/18
+New spelling tools,dblock/rubocop-spellcheck,19,Check AsciiDoc prose with Asciidoctor,merged,2026-10-21T01:04:02Z,https://github.com/dblock/rubocop-spellcheck/pull/19
+New spelling tools,dblock/rubocop-spellcheck,20,Generate project vocabulary with rubocop --auto-gen-config,merged,2026-10-21T09:42:08Z,https://github.com/dblock/rubocop-spellcheck/pull/20
+New spelling tools,dblock/rubocop-spellcheck,21,Check Ruby strings and identifiers,merged,2026-10-21T10:00:29Z,https://github.com/dblock/rubocop-spellcheck/pull/21
+New spelling tools,dblock/rubocop-spellcheck,22,Check strings and identifiers in Markdown Ruby fences,merged,2026-10-21T10:40:03Z,https://github.com/dblock/rubocop-spellcheck/pull/22
+New spelling tools,dblock/rubocop-spellcheck,23,Reduce CI matrix and simplify documentation,merged,2026-10-21T10:44:58Z,https://github.com/dblock/rubocop-spellcheck/pull/23
+New spelling tools,dblock/rubocop-spellcheck,24,Fix spelling crashes on __FILE__ in Ruby source,merged,2026-10-21T13:17:49Z,https://github.com/dblock/rubocop-spellcheck/pull/24
+New spelling tools,dblock/rubocop-spellcheck,25,Speed up vocabulary generation by skipping suggestions,merged,2026-10-21T13:30:27Z,https://github.com/dblock/rubocop-spellcheck/pull/25
+New spelling tools,dblock/rubocop-spellcheck,26,Make spelling autocorrection more conservative,merged,2026-10-21T13:39:08Z,https://github.com/dblock/rubocop-spellcheck/pull/26
+New spelling tools,dblock/rubocop-spellcheck,27,Allow close first suggestions and title-case autocorrection,merged,2026-10-21T14:13:35Z,https://github.com/dblock/rubocop-spellcheck/pull/27
+New spelling tools,dblock/rubocop-spellcheck,28,Skip dependency names and paths in Ruby string spelling checks,merged,2026-10-21T14:32:51Z,https://github.com/dblock/rubocop-spellcheck/pull/28
+New spelling tools,dblock/rubocop-spellcheck,29,Use relative paths in vocabulary generation messages,merged,2026-10-21T14:35:24Z,https://github.com/dblock/rubocop-spellcheck/pull/29
+Bot application upgrades,dblock/slack-arena,101,Upgrade Ruby to 4.0.9 and refresh dependencies,merged,2026-10-23T16:48:34Z,https://github.com/dblock/slack-arena/pull/101
+Bot application upgrades,dblock/slack-gamebot,252,Upgrade Ruby to 4.0.9 and refresh dependencies,merged,2026-10-23T16:54:23Z,https://github.com/dblock/slack-gamebot/pull/252
+Bot application upgrades,dblock/slack-gamebot2,138,Upgrade Ruby to 4.0.9 and refresh dependencies,merged,2026-10-23T16:48:39Z,https://github.com/dblock/slack-gamebot2/pull/138
+Bot application upgrades,dblock/slack-moji,84,Upgrade Ruby to 4.0.9 and refresh dependencies,merged,2026-10-23T16:48:50Z,https://github.com/dblock/slack-moji/pull/84
+Bot application upgrades,dblock/slack-strava,294,Upgrade Ruby to 4.0.9 and refresh dependencies,merged,2026-10-23T16:48:18Z,https://github.com/dblock/slack-strava/pull/294
+Bot application upgrades,dblock/slack-sup,199,Upgrade Ruby to 4.0.9 and refresh dependencies,merged,2026-10-23T16:54:28Z,https://github.com/dblock/slack-sup/pull/199
+Bot application upgrades,dblock/slack-sup2,148,Upgrade Ruby to 4.0.9 and refresh dependencies,merged,2026-10-23T16:48:44Z,https://github.com/dblock/slack-sup2/pull/148
+Bot application upgrades,dblock/teams-strava,3,Upgrade Ruby to 4.0.9 and refresh dependencies,merged,2026-10-23T16:48:29Z,https://github.com/dblock/teams-strava/pull/3
+Hashie,hashie/hashie,615,Reduce array conversion and symbol lookup allocations,merged,2026-10-22T23:19:12Z,https://github.com/hashie/hashie/pull/615
+Hashie,hashie/hashie,616,Fix indifferent Trash sources translated into multiple properties,merged,2026-10-22T23:59:05Z,https://github.com/hashie/hashie/pull/616
+Hashie,hashie/hashie,617,Document nil coercion versus Dash defaults with regression coverage,merged,2026-10-23T00:00:49Z,https://github.com/hashie/hashie/pull/617
+Hashie,hashie/hashie,618,Add DeepGrep for nested hash and array pattern searches,merged,2026-10-23T00:17:36Z,https://github.com/hashie/hashie/pull/618
+Hashie,hashie/hashie,619,Add a nested hash factory hook to DeepMerge,merged,2026-10-23T00:20:46Z,https://github.com/hashie/hashie/pull/619
+Hashie,hashie/hashie,620,Add configurable Mash::TransformKeys normalization,merged,2026-10-23T00:24:19Z,https://github.com/hashie/hashie/pull/620
+Hashie,hashie/hashie,621,Add Mash::UnderscoreKeys using TransformKeys,merged,2026-10-23T00:25:16Z,https://github.com/hashie/hashie/pull/621
+Hashie,hashie/hashie,622,Drop Ruby 2.7 support and obsolete compatibility branches,merged,2026-10-23T00:55:53Z,https://github.com/hashie/hashie/pull/622
+Hashie,hashie/hashie,623,Document Dash validations with ActiveModel,merged,2026-10-23T01:07:06Z,https://github.com/hashie/hashie/pull/623
+Hashie,hashie/hashie,624,Prevent DeepLocate from consuming IO objects,closed,2026-10-23T01:07:10Z,https://github.com/hashie/hashie/pull/624
+Hashie,hashie/hashie,625,Add opt-in YAML parser without ERB,merged,2026-10-23T01:07:42Z,https://github.com/hashie/hashie/pull/625
+Hashie,hashie/hashie,626,Document every public API with executable YARD examples,merged,2026-10-23T01:12:28Z,https://github.com/hashie/hashie/pull/626
+Hashie,hashie/hashie,627,Add opt-in YARD documentation for Dash properties,closed,2026-10-23T01:13:09Z,https://github.com/hashie/hashie/pull/627
+Hashie,hashie/hashie,628,Manage integration bundles with Appraisal,closed,2026-10-23T01:14:01Z,https://github.com/hashie/hashie/pull/628
+Hashie,hashie/hashie,629,Add an opt-in DeepMerge value copy policy,closed,2026-10-23T01:15:22Z,https://github.com/hashie/hashie/pull/629
+Hashie,hashie/hashie,630,Enable project-wide RuboCop and frozen string literals,merged,2026-10-23T01:36:46Z,https://github.com/hashie/hashie/pull/630
+Hashie,hashie/hashie,631,[BREAKING] Default Mash.load to YAML without ERB,merged,2026-10-23T01:49:03Z,https://github.com/hashie/hashie/pull/631
+Hashie,hashie/hashie,632,[BREAKING] Preserve incoming DeepMerge hash subclasses by default,merged,2026-10-23T01:49:03Z,https://github.com/hashie/hashie/pull/632
+Hashie,hashie/hashie,633,[BREAKING] Use consistent container copying in DeepMerge,merged,2026-10-23T01:49:03Z,https://github.com/hashie/hashie/pull/633
+Hashie,hashie/hashie,634,Revert DeepMerge factory hook in favor of #632,merged,2026-10-23T01:56:31Z,https://github.com/hashie/hashie/pull/634
+Hashie,hashie/hashie,635,Run README Ruby examples in CI,merged,2026-10-23T02:23:33Z,https://github.com/hashie/hashie/pull/635
+Hashie,hashie/hashie,636,Add lazy property loading for Dash and Trash,merged,2026-10-23T02:46:55Z,https://github.com/hashie/hashie/pull/636
+Hashie,hashie/hashie,637,[BREAKING] Preserve custom Hash values in Mash,merged,2026-10-23T02:51:48Z,https://github.com/hashie/hashie/pull/637
+Hashie,hashie/hashie,638,Fix Dash required? property validation collision,merged,2026-10-23T02:54:57Z,https://github.com/hashie/hashie/pull/638
+Hashie,hashie/hashie,639,[BREAKING] Standardize internal helpers and prevent property collisions,merged,2026-10-23T13:28:13Z,https://github.com/hashie/hashie/pull/639
+Hashie,hashie/hashie,640,Exclude specs and scripts from coverage reports,merged,2026-10-23T13:37:53Z,https://github.com/hashie/hashie/pull/640
+Hashie,hashie/hashie,641,[BREAKING] Return empty arrays for missing DeepFind matches,merged,2026-10-23T13:40:35Z,https://github.com/hashie/hashie/pull/641
+Hashie,hashie/hashie,642,Fix Clash Marshal serialization on MRI,merged,2026-10-23T13:46:45Z,https://github.com/hashie/hashie/pull/642
+Hashie,hashie/hashie,643,Simplify and organize the README for readers,merged,2026-10-23T13:49:27Z,https://github.com/hashie/hashie/pull/643
+Hashie,hashie/hashie,644,Add rubocop-spellcheck for Ruby and documentation,merged,2026-10-23T14:06:43Z,https://github.com/hashie/hashie/pull/644
+Hashie,hashie/hashie,645,Normalize breaking change notes and link migration PRs,merged,2026-10-23T16:17:29Z,https://github.com/hashie/hashie/pull/645
+Mongoid ecosystem,mongoid/mongo_session_store,51,"Modernize CI through Ruby 4.0, Mongoid 9 and MongoDB 8",merged,2026-10-14T22:41:44Z,https://github.com/mongoid/mongo_session_store/pull/51
+Mongoid ecosystem,mongoid/mongo_session_store,52,Replace retired coverage integration with Coveralls,closed,2026-10-14T23:24:16Z,https://github.com/mongoid/mongo_session_store/pull/52
+Mongoid ecosystem,mongoid/mongo_session_store,53,Complete CI coverage and modernize Danger workflows,merged,2026-10-17T03:49:37Z,https://github.com/mongoid/mongo_session_store/pull/53
+Mongoid ecosystem,mongoid/mongo_session_store,54,Document safe session serialization of Rails parameters,merged,2026-10-17T11:26:05Z,https://github.com/mongoid/mongo_session_store/pull/54
+Mongoid ecosystem,mongoid/mongo_session_store,55,Add explicit opt-in stale-session cleanup,merged,2026-10-17T11:27:39Z,https://github.com/mongoid/mongo_session_store/pull/55
+Mongoid ecosystem,mongoid/mongo_session_store,56,Standardize changelog and fill historical release dates,merged,2026-10-17T11:54:52Z,https://github.com/mongoid/mongo_session_store/pull/56
+Mongoid ecosystem,mongoid/mongo_session_store,57,Cover legacy decoding and fix private decoder delegation,merged,2026-10-17T12:08:40Z,https://github.com/mongoid/mongo_session_store/pull/57
+Mongoid ecosystem,mongoid/mongo_session_store,58,Simplify public version assertions,merged,2026-10-18T13:29:20Z,https://github.com/mongoid/mongo_session_store/pull/58
+Mongoid ecosystem,mongoid/mongoid-cached-json,30,"Modernize CI through Ruby 4, Mongoid 9, and MongoDB 8",merged,2026-10-14T22:51:59Z,https://github.com/mongoid/mongoid-cached-json/pull/30
+Mongoid ecosystem,mongoid/mongoid-cached-json,31,Add schema cache version namespaces,merged,2026-10-16T23:14:57Z,https://github.com/mongoid/mongoid-cached-json/pull/31
+Mongoid ecosystem,mongoid/mongoid-cached-json,32,Support json_fields :all,merged,2026-10-16T23:14:57Z,https://github.com/mongoid/mongoid-cached-json/pull/32
+Mongoid ecosystem,mongoid/mongoid-cached-json,33,Allow cache bypass for individual models,merged,2026-10-16T23:14:57Z,https://github.com/mongoid/mongoid-cached-json/pull/33
+Mongoid ecosystem,mongoid/mongoid-cached-json,34,Support cache: false on individual fields,merged,2026-10-16T23:17:14Z,https://github.com/mongoid/mongoid-cached-json/pull/34
+Mongoid ecosystem,mongoid/mongoid-cached-json,35,Omit hidden child references from JSON,merged,2026-10-16T23:17:14Z,https://github.com/mongoid/mongoid-cached-json/pull/35
+Mongoid ecosystem,mongoid/mongoid-cached-json,36,Document cache invalidation boundaries,merged,2026-10-16T23:18:26Z,https://github.com/mongoid/mongoid-cached-json/pull/36
+Mongoid ecosystem,mongoid/mongoid-cached-json,37,Upgrade RuboCop and refresh lint baseline,merged,2026-10-16T23:25:50Z,https://github.com/mongoid/mongoid-cached-json/pull/37
+Mongoid ecosystem,mongoid/mongoid-cached-json,38,Fix reference field returning nil instead of false for false-y values,merged,2026-10-17T01:45:03Z,https://github.com/mongoid/mongoid-cached-json/pull/38
+Mongoid ecosystem,mongoid/mongoid-cached-json,39,Add Danger changelog checks and PR comments,merged,2026-10-17T02:03:48Z,https://github.com/mongoid/mongoid-cached-json/pull/39
+Mongoid ecosystem,mongoid/mongoid-cached-json,40,Cover JSON boundary contracts and legacy association reporting,merged,2026-10-17T12:46:30Z,https://github.com/mongoid/mongoid-cached-json/pull/40
+Mongoid ecosystem,mongoid/mongoid-cached-json,41,Simplify public version assertions,merged,2026-10-18T13:29:26Z,https://github.com/mongoid/mongoid-cached-json/pull/41
+Mongoid ecosystem,mongoid/mongoid-collection-snapshot,17,"Modernize CI through Ruby 4, Mongoid 9, and MongoDB 8",merged,2026-10-14T22:52:03Z,https://github.com/mongoid/mongoid-collection-snapshot/pull/17
+Mongoid ecosystem,mongoid/mongoid-collection-snapshot,18,Migrate Danger to danger-pr-comment workflows,merged,2026-10-16T22:52:24Z,https://github.com/mongoid/mongoid-collection-snapshot/pull/18
+Mongoid ecosystem,mongoid/mongoid-collection-snapshot,19,Discover existing collections belonging to a snapshot,merged,2026-10-16T22:53:07Z,https://github.com/mongoid/mongoid-collection-snapshot/pull/19
+Mongoid ecosystem,mongoid/mongoid-collection-snapshot,20,Measure snapshot coverage across real legacy and modern drivers,merged,2026-10-17T12:10:52Z,https://github.com/mongoid/mongoid-collection-snapshot/pull/20
+Mongoid ecosystem,mongoid/mongoid-compatibility,22,"Modernize CI through Ruby 4.0, Mongoid 9 and MongoDB 8",merged,2026-10-14T22:36:22Z,https://github.com/mongoid/mongoid-compatibility/pull/22
+Mongoid ecosystem,mongoid/mongoid-compatibility,23,Report real SimpleCov coverage to Coveralls and fix status badges,merged,2026-10-14T23:25:45Z,https://github.com/mongoid/mongoid-compatibility/pull/23
+Mongoid ecosystem,mongoid/mongoid-compatibility,24,Cover public require aliases and version entry point,merged,2026-10-17T12:10:51Z,https://github.com/mongoid/mongoid-compatibility/pull/24
+Mongoid ecosystem,mongoid/mongoid-geospatial,75,Report real SimpleCov coverage to Coveralls and fix badges,merged,2026-10-14T23:38:50Z,https://github.com/mongoid/mongoid-geospatial/pull/75
+Mongoid ecosystem,mongoid/mongoid-geospatial,77,Handle persisted empty Point arrays,open,2026-10-15T12:30:06Z,https://github.com/mongoid/mongoid-geospatial/pull/77
+Mongoid ecosystem,mongoid/mongoid-geospatial,78,Correct polygon and bounding-box query examples,open,2026-10-15T12:31:08Z,https://github.com/mongoid/mongoid-geospatial/pull/78
+Mongoid ecosystem,mongoid/mongoid-geospatial,79,Cover remaining geospatial behavior and reach 100% line coverage,merged,2026-10-17T12:29:32Z,https://github.com/mongoid/mongoid-geospatial/pull/79
+Mongoid ecosystem,mongoid/mongoid-geospatial,80,Honor the configured RGeo factory,open,2026-10-18T15:13:51Z,https://github.com/mongoid/mongoid-geospatial/pull/80
+Mongoid ecosystem,mongoid/mongoid-geospatial,81,Read persisted GeoJSON Point coordinates,open,2026-10-18T15:14:15Z,https://github.com/mongoid/mongoid-geospatial/pull/81
+Mongoid ecosystem,mongoid/mongoid-grid_fs,84,Migrate Danger to danger-pr-comment workflows,merged,2026-10-14T22:25:04Z,https://github.com/mongoid/mongoid-grid_fs/pull/84
+Mongoid ecosystem,mongoid/mongoid-grid_fs,85,Report test coverage to Coveralls and update badges,merged,2026-10-14T23:22:26Z,https://github.com/mongoid/mongoid-grid_fs/pull/85
+Mongoid ecosystem,mongoid/mongoid-grid_fs,86,Expand persisted GridFS coverage to 99%,merged,2026-10-17T12:09:41Z,https://github.com/mongoid/mongoid-grid_fs/pull/86
+Mongoid ecosystem,mongoid/mongoid-grid_fs,87,Encode file bytes in Base64 and data URIs,merged,2026-10-18T15:00:15Z,https://github.com/mongoid/mongoid-grid_fs/pull/87
+Mongoid ecosystem,mongoid/mongoid-grid_fs,88,Detect concrete legacy BSON classes,merged,2026-10-18T15:01:05Z,https://github.com/mongoid/mongoid-grid_fs/pull/88
+Mongoid ecosystem,mongoid/mongoid-grid_fs,89,Expose GridFS queries and document storage configuration,open,2026-10-18T15:06:51Z,https://github.com/mongoid/mongoid-grid_fs/pull/89
+Mongoid ecosystem,mongoid/mongoid-history,260,"Modernize CI through Ruby 4.0, Mongoid 9 and MongoDB 8",merged,2026-10-14T22:41:49Z,https://github.com/mongoid/mongoid-history/pull/260
+Mongoid ecosystem,mongoid/mongoid-history,261,Replace retired coverage integration with Coveralls,merged,2026-10-14T23:24:20Z,https://github.com/mongoid/mongoid-history/pull/261
+Mongoid ecosystem,mongoid/mongoid-history,262,Document and test callback auditing and storage boundaries,merged,2026-10-15T14:01:43Z,https://github.com/mongoid/mongoid-history/pull/262
+Mongoid ecosystem,mongoid/mongoid-history,263,Add an opt-in name for the history_tracks association,open,2026-10-15T14:01:47Z,https://github.com/mongoid/mongoid-history/pull/263
+Mongoid ecosystem,mongoid/mongoid-history,264,Tag history writes with explicit reporting groups,merged,2026-10-15T14:04:43Z,https://github.com/mongoid/mongoid-history/pull/264
+Mongoid ecosystem,mongoid/mongoid-history,265,Return typed history values in 1.0 with explicit database snapshots,open,2026-10-15T14:04:53Z,https://github.com/mongoid/mongoid-history/pull/265
+Mongoid ecosystem,mongoid/mongoid-history,266,Add automatic and explicit per-document count-based history retention,open,2026-10-15T14:05:14Z,https://github.com/mongoid/mongoid-history/pull/266
+Mongoid ecosystem,mongoid/mongoid-history,267,Document and test custom history change pairs,merged,2026-10-15T14:06:45Z,https://github.com/mongoid/mongoid-history/pull/267
+Mongoid ecosystem,mongoid/mongoid-history,268,Fix repeated history configuration and tracker loading diagnostics,merged,2026-10-15T14:07:29Z,https://github.com/mongoid/mongoid-history/pull/268
+Mongoid ecosystem,mongoid/mongoid-history,269,Reconstruct recorded attributes by version or time,open,2026-10-15T14:07:29Z,https://github.com/mongoid/mongoid-history/pull/269
+Mongoid ecosystem,mongoid/mongoid-history,270,Add scoped modifier attribution and controller integration,open,2026-10-15T14:08:01Z,https://github.com/mongoid/mongoid-history/pull/270
+Mongoid ecosystem,mongoid/mongoid-history,271,Add model-specific attributes before history tracker creation,open,2026-10-15T14:08:19Z,https://github.com/mongoid/mongoid-history/pull/271
+Mongoid ecosystem,mongoid/mongoid-history,272,Track saved HABTM IDs by association name without monkeypatching Mongoid,merged,2026-10-15T14:08:40Z,https://github.com/mongoid/mongoid-history/pull/272
+Mongoid ecosystem,mongoid/mongoid-history,273,Add opt-in history obfuscation and prevent unsafe replay,open,2026-10-15T14:20:40Z,https://github.com/mongoid/mongoid-history/pull/273
+Mongoid ecosystem,mongoid/mongoid-history,274,Fix embedded audit tracking and creation/destruction undo,merged,2026-10-15T14:30:49Z,https://github.com/mongoid/mongoid-history/pull/274
+Mongoid ecosystem,mongoid/mongoid-history,275,Support stable trackable identities with the :as option,open,2026-10-15T14:31:11Z,https://github.com/mongoid/mongoid-history/pull/275
+Mongoid ecosystem,mongoid/mongoid-history,276,Support explicit unaudited undo selections,open,2026-10-16T22:18:02Z,https://github.com/mongoid/mongoid-history/pull/276
+Mongoid ecosystem,mongoid/mongoid-history,277,Add opt-in anonymous history suppression,open,2026-10-16T22:32:31Z,https://github.com/mongoid/mongoid-history/pull/277
+Mongoid ecosystem,mongoid/mongoid-history,278,Prepare 0.10.0 and complete changelog PR references,merged,2026-10-16T22:37:15Z,https://github.com/mongoid/mongoid-history/pull/278
+Mongoid ecosystem,mongoid/mongoid-history,279,Cover historical ancestry and fix parent-chain slicing,merged,2026-10-17T12:57:35Z,https://github.com/mongoid/mongoid-history/pull/279
+Mongoid ecosystem,mongoid/mongoid-locker,110,"Modernize CI through Ruby 4.0, Mongoid 9 and MongoDB 8",merged,2026-10-14T22:41:53Z,https://github.com/mongoid/mongoid-locker/pull/110
+Mongoid ecosystem,mongoid/mongoid-locker,111,Replace retired coverage integration with Coveralls,merged,2026-10-14T23:24:24Z,https://github.com/mongoid/mongoid-locker/pull/111
+Mongoid ecosystem,mongoid/mongoid-locker,112,Verify locking on collections sharded by _id,merged,2026-10-15T13:48:29Z,https://github.com/mongoid/mongoid-locker/pull/112
+Mongoid ecosystem,mongoid/mongoid-locker,113,Document safe embedded document updates under a parent lock,merged,2026-10-15T13:51:34Z,https://github.com/mongoid/mongoid-locker/pull/113
+Mongoid ecosystem,mongoid/mongoid-locker,114,Attempt sharding reproduction with September 2013 dependencies,open,2026-10-18T16:45:48Z,https://github.com/mongoid/mongoid-locker/pull/114
+Mongoid ecosystem,mongoid/mongoid-observers,8,"Modernize CI, Ruby 4 support, and coverage reporting",merged,2026-10-15T12:39:09Z,https://github.com/mongoid/mongoid-observers/pull/8
+Mongoid ecosystem,mongoid/mongoid-observers,9,Add historical changelog and Danger enforcement,merged,2026-10-15T12:48:06Z,https://github.com/mongoid/mongoid-observers/pull/9
+Mongoid ecosystem,mongoid/mongoid-observers,11,Cover real Rails observer initialization and reload lifecycle,merged,2026-10-17T12:40:17Z,https://github.com/mongoid/mongoid-observers/pull/11
+Mongoid ecosystem,mongoid/mongoid-rspec,250,"Modernize CI through Ruby 4.0, Mongoid 9 and MongoDB 8",merged,2026-10-14T22:36:26Z,https://github.com/mongoid/mongoid-rspec/pull/250
+Mongoid ecosystem,mongoid/mongoid-rspec,251,Report real SimpleCov coverage to Coveralls and fix status badges,merged,2026-10-14T23:25:50Z,https://github.com/mongoid/mongoid-rspec/pull/251
+Mongoid ecosystem,mongoid/mongoid-rspec,252,Complete historical changelog entries,merged,2026-10-15T11:57:17Z,https://github.com/mongoid/mongoid-rspec/pull/252
+Mongoid ecosystem,mongoid/mongoid-rspec,253,Match length options across multiple validators,merged,2026-10-15T12:15:49Z,https://github.com/mongoid/mongoid-rspec/pull/253
+Mongoid ecosystem,mongoid/mongoid-rspec,254,Cover compound indexes on aliased fields,merged,2026-10-15T12:20:13Z,https://github.com/mongoid/mongoid-rspec/pull/254
+Mongoid ecosystem,mongoid/mongoid-rspec,255,Remove deprecated RubyForge gemspec metadata,merged,2026-10-15T12:31:46Z,https://github.com/mongoid/mongoid-rspec/pull/255
+Mongoid ecosystem,mongoid/mongoid-rspec,256,Add nonconflicting many-to-many association matcher name,merged,2026-10-15T13:00:59Z,https://github.com/mongoid/mongoid-rspec/pull/256
+Mongoid ecosystem,mongoid/mongoid-rspec,257,Add readonly field matcher chain,merged,2026-10-15T13:06:24Z,https://github.com/mongoid/mongoid-rspec/pull/257
+Mongoid ecosystem,mongoid/mongoid-rspec,258,Add with_primary_key association matcher,merged,2026-10-15T13:06:35Z,https://github.com/mongoid/mongoid-rspec/pull/258
+Mongoid ecosystem,mongoid/mongoid-rspec,259,Support nil and blank options on length matchers,merged,2026-10-15T13:06:40Z,https://github.com/mongoid/mongoid-rspec/pull/259
+Mongoid ecosystem,mongoid/mongoid-rspec,260,Add matcher for covered MongoDB queries,merged,2026-10-15T13:08:50Z,https://github.com/mongoid/mongoid-rspec/pull/260
+Mongoid ecosystem,mongoid/mongoid-rspec,261,Add execute_mongodb_command matcher,merged,2026-10-15T13:09:26Z,https://github.com/mongoid/mongoid-rspec/pull/261
+Mongoid ecosystem,mongoid/mongoid-rspec,262,Document and verify scoped matchers for mixed ORM applications,merged,2026-10-15T13:39:37Z,https://github.com/mongoid/mongoid-rspec/pull/262
+Mongoid ecosystem,mongoid/mongoid-rspec,263,Expand matcher behavior coverage to 99.56% with combined Mongoid 6/9 CI reporting,merged,2026-10-17T12:10:45Z,https://github.com/mongoid/mongoid-rspec/pull/263
+Mongoid ecosystem,mongoid/mongoid-scroll,50,"Modernize CI through Ruby 4.0, Mongoid 9 and MongoDB 8",merged,2026-10-14T22:41:57Z,https://github.com/mongoid/mongoid-scroll/pull/50
+Mongoid ecosystem,mongoid/mongoid-scroll,51,Replace retired coverage integration with Coveralls,merged,2026-10-14T23:24:28Z,https://github.com/mongoid/mongoid-scroll/pull/51
+Mongoid ecosystem,mongoid/mongoid-scroll,52,Raise NoSuchFieldError for missing sort and cursor fields,merged,2026-10-15T12:13:18Z,https://github.com/mongoid/mongoid-scroll/pull/52
+Mongoid ecosystem,mongoid/mongoid-scroll,53,Cover cursor boundary contracts and floating-point round trips,merged,2026-10-17T12:33:24Z,https://github.com/mongoid/mongoid-scroll/pull/53
+Mongoid ecosystem,mongoid/mongoid-shell,24,"Modernize CI through Ruby 4.0, Mongoid 9 and MongoDB 8",merged,2026-10-14T22:36:30Z,https://github.com/mongoid/mongoid-shell/pull/24
+Mongoid ecosystem,mongoid/mongoid-shell,25,Report real SimpleCov coverage to Coveralls and fix status badges,merged,2026-10-14T23:25:54Z,https://github.com/mongoid/mongoid-shell/pull/25
+Mongoid ecosystem,mongoid/mongoid-shell,26,Fix Extended JSON query serialization and shell escaping,merged,2026-10-15T11:59:51Z,https://github.com/mongoid/mongoid-shell/pull/26
+Mongoid ecosystem,mongoid/mongoid-shell,27,Exercise shell commands and aggregate supported-driver coverage,merged,2026-10-17T12:16:46Z,https://github.com/mongoid/mongoid-shell/pull/27
+Mongoid ecosystem,mongoid/mongoid-slug,282,"Modernize CI through Ruby 4.0, Mongoid 9 and MongoDB 8",merged,2026-10-14T22:36:34Z,https://github.com/mongoid/mongoid-slug/pull/282
+Mongoid ecosystem,mongoid/mongoid-slug,283,Report real SimpleCov coverage to Coveralls and fix status badges,merged,2026-10-14T23:25:58Z,https://github.com/mongoid/mongoid-slug/pull/283
+Mongoid ecosystem,mongoid/mongoid-slug,284,Cover slug boundary contracts and supported-version coverage union,merged,2026-10-17T13:00:37Z,https://github.com/mongoid/mongoid-slug/pull/284
+Mongoid ecosystem,mongoid/mongoid-slug,285,Preserve localized slug history across fallbacks,open,2026-10-18T15:16:52Z,https://github.com/mongoid/mongoid-slug/pull/285
+Mongoid ecosystem,mongoid/mongoid-slug,286,"Clarify slug indexing, scoped routes and historical URLs",open,2026-10-18T15:17:26Z,https://github.com/mongoid/mongoid-slug/pull/286
+Mongoid ecosystem,mongoid/mongoid-tag-collectible,3,"Modernize CI through Ruby 4, Mongoid 9, and MongoDB 8",merged,2026-10-14T22:52:06Z,https://github.com/mongoid/mongoid-tag-collectible/pull/3
+Mongoid ecosystem,mongoid/mongoid-tag-collectible,4,Cover tag replacements and real legacy/modern driver paths,merged,2026-10-17T12:19:38Z,https://github.com/mongoid/mongoid-tag-collectible/pull/4
+Mongoid ecosystem,mongoid/mongoid.github.io,23,Build community site in CI through Ruby 4.0,closed,2026-10-14T22:34:00Z,https://github.com/mongoid/mongoid.github.io/pull/23
+Mongoid ecosystem,mongoid/mongoid_fulltext,50,Migrate Danger to danger-pr-comment workflows,closed,2026-10-14T22:25:05Z,https://github.com/mongoid/mongoid_fulltext/pull/50
+Mongoid ecosystem,mongoid/mongoid_fulltext,51,"Modernize CI, Mongoid compatibility, and Danger workflows",merged,2026-10-17T02:31:16Z,https://github.com/mongoid/mongoid_fulltext/pull/51
+Mongoid ecosystem,mongoid/mongoid_fulltext,52,Fix index creation on an empty database,merged,2026-10-17T02:45:15Z,https://github.com/mongoid/mongoid_fulltext/pull/52
+Mongoid ecosystem,mongoid/mongoid_fulltext,53,Support indexing arrays of strings,merged,2026-10-17T02:46:45Z,https://github.com/mongoid/mongoid_fulltext/pull/53
+Mongoid ecosystem,mongoid/mongoid_fulltext,54,Bulk insert ngrams when updating document indexes,merged,2026-10-17T02:47:41Z,https://github.com/mongoid/mongoid_fulltext/pull/54
+Mongoid ecosystem,mongoid/mongoid_fulltext,55,Correct bounded ngram query sampling,merged,2026-10-17T02:48:57Z,https://github.com/mongoid/mongoid_fulltext/pull/55
+Mongoid ecosystem,mongoid/mongoid_fulltext,56,Support Unicode-aware regular expressions for alphabets,merged,2026-10-17T02:50:17Z,https://github.com/mongoid/mongoid_fulltext/pull/56
+Mongoid ecosystem,mongoid/mongoid_fulltext,57,Respect criteria and inheritance in search results,merged,2026-10-17T02:51:57Z,https://github.com/mongoid/mongoid_fulltext/pull/57
+Mongoid ecosystem,mongoid/mongoid_fulltext,58,Support localized fields with locale-tagged ngrams,merged,2026-10-17T02:54:12Z,https://github.com/mongoid/mongoid_fulltext/pull/58
+Mongoid ecosystem,mongoid/mongoid_fulltext,59,Document and cover class-level indexing timeout options,merged,2026-10-17T03:00:58Z,https://github.com/mongoid/mongoid_fulltext/pull/59
+Mongoid ecosystem,mongoid/mongoid_fulltext,60,Extract ngram calculation and index-definition planning,merged,2026-10-17T03:42:59Z,https://github.com/mongoid/mongoid_fulltext/pull/60
+Mongoid ecosystem,mongoid/mongoid_fulltext,61,Support weighted fields with configurable score aggregation,merged,2026-10-17T11:40:50Z,https://github.com/mongoid/mongoid_fulltext/pull/61
+Mongoid ecosystem,mongoid/mongoid_fulltext,67,Add search results with complete highlighted fields,open,2026-10-17T12:00:26Z,https://github.com/mongoid/mongoid_fulltext/pull/67
+Mongoid ecosystem,mongoid/mongoid_fulltext,68,Cover candidate budgets and combine real legacy/current coverage,merged,2026-10-17T12:40:10Z,https://github.com/mongoid/mongoid_fulltext/pull/68
+Mongoid ecosystem,mongoid/mongoid_fulltext,69,Simplify public version assertions,merged,2026-10-18T13:29:32Z,https://github.com/mongoid/mongoid_fulltext/pull/69
+Mongoid ecosystem,mongoid/mongoid_orderable,90,"Modernize CI through Ruby 4, Mongoid 9, and MongoDB 8",merged,2026-10-14T22:52:09Z,https://github.com/mongoid/mongoid_orderable/pull/90
+Mongoid ecosystem,mongoid/mongoid_orderable,91,Report real SimpleCov coverage to Coveralls and fix badges,merged,2026-10-14T23:38:46Z,https://github.com/mongoid/mongoid_orderable/pull/91
+Mongoid ecosystem,mongoid/mongoid_orderable,92,Fix direct position assignment for embedded documents,merged,2026-10-17T02:26:33Z,https://github.com/mongoid/mongoid_orderable/pull/92
+Mongoid ecosystem,mongoid/mongoid_orderable,93,Cover ordering helpers and transaction failure contracts,merged,2026-10-17T12:48:46Z,https://github.com/mongoid/mongoid_orderable/pull/93
+Mongoid ecosystem,mongoid/mongoid_search,154,"Modernize CI through Ruby 4.0, Mongoid 9 and MongoDB 8",merged,2026-10-14T22:36:39Z,https://github.com/mongoid/mongoid_search/pull/154
+Mongoid ecosystem,mongoid/mongoid_search,155,Report real SimpleCov coverage to Coveralls and fix status badges,merged,2026-10-14T23:26:02Z,https://github.com/mongoid/mongoid_search/pull/155
+Mongoid ecosystem,mongoid/mongoid_search,156,Cover relevance search and Rails indexing; fix relevance scores,merged,2026-10-17T12:21:03Z,https://github.com/mongoid/mongoid_search/pull/156
+Danger and maintainer automation,numbata/danger-pr-comment,10,Automate release preparation and workflow version references,open,2026-10-21T17:08:53Z,https://github.com/numbata/danger-pr-comment/pull/10
+"Upstream integrations, examples and blog",rubocop/rubocop,16130,Add rubocop-spellcheck to third-party plugins,open,2026-10-20T21:52:14Z,https://github.com/rubocop/rubocop/pull/16130
+"Upstream integrations, examples and blog",rubocop/rubocop-md,50,Add Markdown/MaxLength for wrapping and unwrapping prose,open,2026-10-18T16:45:36Z,https://github.com/rubocop/rubocop-md/pull/50
+"Upstream integrations, examples and blog",rubocop/rubocop-md,51,Replace regex snippet extraction with a reusable Markdown parser,open,2026-10-18T17:14:10Z,https://github.com/rubocop/rubocop-md/pull/51
+"Upstream integrations, examples and blog",rubocop/rubocop-md,52,Fix hidden RuboCop directives in Markdown,open,2026-10-18T17:37:32Z,https://github.com/rubocop/rubocop-md/pull/52
+"Upstream integrations, examples and blog",rubocop/rubocop-md,53,Add configurable Markdown front matter handling,open,2026-10-19T00:29:12Z,https://github.com/rubocop/rubocop-md/pull/53
+"Upstream integrations, examples and blog",rubocop/rubocop-md,55,Preserve Markdown prose buffers alongside Ruby corrections,open,2026-10-21T10:24:47Z,https://github.com/rubocop/rubocop-md/pull/55
+"Upstream integrations, examples and blog",ruby-grape/grape-swagger-rails,183,Upgrade danger-changelog to 0.9.0 and remove bot attribution workaround,merged,2026-10-14T15:57:51Z,https://github.com/ruby-grape/grape-swagger-rails/pull/183
+"Upstream integrations, examples and blog",scarpe-team/scarpe,649,Support spelling underlines and checked replacements in native edit boxes,closed,2026-10-22T17:21:45Z,https://github.com/scarpe-team/scarpe/pull/649
+Bot application upgrades,slack-ruby/slack-shellbot,84,Upgrade Ruby to 4.0.9 and refresh dependencies,merged,2026-10-23T17:17:22Z,https://github.com/slack-ruby/slack-shellbot/pull/84
+Bot application upgrades,vestris/slack-invite,80,Upgrade Ruby to 4.0.9 and refresh dependencies,merged,2026-10-23T16:48:54Z,https://github.com/vestris/slack-invite/pull/80

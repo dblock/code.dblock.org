@@ -32,6 +32,10 @@ A pre-commit hook also runs `markdownlint-cli2` using `.markdownlint.yaml`. Fix 
 
 Pushes and pull requests run the full Markdown checker, including `markdownlint-rule-single-line-paragraphs`, across all Markdown files. Keep each prose paragraph on one source line; intentional Markdown hard breaks and `<br>` boundaries remain supported. A separate workflow checks spelling.
 
+### Downloads
+
+Place new post downloads under `downloads/posts/YYYY-MM-DD-post-slug/`, with descriptive filenames such as `pull-requests.csv`. Link to those paths from the post.
+
 ### Images and Screenshots
 
 Optimize all images and screenshots with `pngquant` before adding them to the repo. macOS screenshot filenames contain a narrow no-break space (U+202F) before AM/PM, so use Python to handle them:
