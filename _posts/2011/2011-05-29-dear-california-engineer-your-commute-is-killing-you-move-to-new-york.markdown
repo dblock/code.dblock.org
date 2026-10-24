@@ -5,7 +5,6 @@ redirect_from: "/dear-california-engineer-your-commute-is-killing-you-move-to-ne
 date: 2011-05-29 23:50:53
 tags: [artsy, jobs, people, nyc, time]
 dblog_post_id: 1588
-pinned: true
 disqus_shortname: dblockdotorg
 ---
 
