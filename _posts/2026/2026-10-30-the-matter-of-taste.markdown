@@ -7,7 +7,7 @@ tags: [ai, api, open-source]
 
 While working on [`Svet`](https://github.com/dblock/svet), a Git and filesystem linter, I had a conversation with GitHub Copilot CLI about a flag.
 
-The tool checks files. We were adding automatic fixes. Naturally, I wanted to preview changes before allowing the tool to write them.
+The tool checks files. We were [adding automatic fixes](https://github.com/dblock/svet/pull/27). Naturally, I wanted to preview changes before allowing the tool to write them.
 
 The first suggestion was `--fix-dry-run`. I preferred a global `--dry-run` that could apply to both checking and fixing.
 
