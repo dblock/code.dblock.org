@@ -5,7 +5,7 @@ date: 2026-10-29
 tags: [ai, open-source, testing]
 ---
 
-I've built four spell-checking plugins in the last week. This is not an unhealthy interest in spelling. The cost of rolling tools out is the cost of tokens + my time supervising AI. So, before adding another language runtime, package manager, configuration file, and CI job to your project, consider spending an hour vibe coding the missing plugin.
+I've built five spell-checking plugins in the last week. This is not an unhealthy interest in spelling. The cost of rolling tools out is the cost of tokens + my time supervising AI. So, before adding another language runtime, package manager, configuration file, and CI job to your project, consider spending an hour vibe coding the missing plugin.
 
 This blog used to run a Python spell checker that took more than three minutes. It's a Jekyll blog, which is Ruby. Why was I maintaining a Python environment to tell me that I misspelled "hello"? I [replaced it with a RuboCop plugin](/2026/10/21/introducing-rubocop-spellcheck.html). Spelling became another cop, with the same configuration, exclusions, command, and CI integration as the rest of the checks.
 
@@ -21,6 +21,7 @@ Here's my recent zoo.
 - [dylint-spellcheck](https://github.com/dblock/dylint-spellcheck) adds spelling to Dylint for Rust comments, Rustdoc attributes, Markdown, and plain text.
 - [markdownlint-rule-spellcheck](https://github.com/dblock/markdownlint-rule-spellcheck) adds spelling to the Markdown linter you might already be running.
 - [prettier-plugin-spellcheck](https://github.com/dblock/prettier-plugin-spellcheck) adds spelling to Prettier for Markdown, HTML, plain text, and JavaScript/TypeScript prose.
+- [@dblock/oxlint-plugin-spellcheck](https://github.com/dblock/oxlint-plugin-spellcheck) adds native spelling diagnostics to Oxlint for JavaScript/TypeScript comments, JSX text, and human-facing attributes, with opt-in strings and identifiers.
 - [markdownlint-rule-single-line-paragraphs](https://github.com/dblock/markdownlint-rule-single-line-paragraphs) keeps Markdown paragraphs on one source line.
 
 Everything builds on top of simple and powerful platforms. The Prettier version is a good example. Prettier already parses Markdown, HTML, JavaScript, and TypeScript. I used its syntax trees to distinguish prose from program structure instead of inventing another parser. Comments and visible text are reasonable things to spellcheck, too.
