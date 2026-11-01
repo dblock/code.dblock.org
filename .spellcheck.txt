@@ -325,6 +325,7 @@ createmeeting
 createsnapshot
 createuser
 crispr
+crlf
 cron
 crontab
 crossy
@@ -506,6 +507,7 @@ erb
 ericproulx
 erp
 eslint
+eslint's
 estella
 esx
 esxi
@@ -528,6 +530,7 @@ expandcollapsepattern
 expecta
 explique
 expmatchers
+extensionless
 extjs
 eyeandmind
 faang
@@ -1144,6 +1147,7 @@ nteventlogappenders
 ntlm
 nucliadb
 nuget
+nul
 nunit
 nunitbindir
 nvm
@@ -1573,6 +1577,7 @@ stty
 stubbs
 stucks
 stuxnet
+stylelint
 stylesheet
 stylesheets
 subclass's
@@ -1583,6 +1588,7 @@ subdirectories
 subfolder
 subfolders
 submodule
+submodules
 suboptimal
 subprojects
 substrings
@@ -1598,6 +1604,7 @@ superclass
 superrare
 supervisord
 sur
+svet
 svm
 svn
 svnrev
@@ -1607,6 +1614,8 @@ swissnex
 sxs
 sy
 sy's
+symlinks
+syntaxes
 sys
 tac
 tagcollectible
@@ -1728,7 +1737,9 @@ unpartitioned
 unpunctuated
 unreviewed
 unsatisfiedlinkerror
+unscoped
 unstaged
+untracked
 unturned
 unversioned
 unwieldily
@@ -1811,12 +1822,14 @@ webdriver
 webhook
 webhooks
 webmachine
+webp
 webpack
 webrtc
 websocket
 weiwei
 wf
 whiteboarding
+whitespace
 whitespaces
 whoaboard
 wi
