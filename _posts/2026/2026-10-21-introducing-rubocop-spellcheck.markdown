@@ -7,6 +7,8 @@ tags: [ruby, open-source, testing, blog]
 
 I replaced this blog's Python spell checker that took more than three minutes to run with the new [rubocop-spellcheck](https://github.com/dblock/rubocop-spellcheck).
 
+<img src="/images/posts/2026/2026-10-21-introducing-rubocop-spellcheck/logo.png" alt="RuboCop Spellcheck logo" width="160">
+
 I really love [RuboCop](https://github.com/rubocop/rubocop) for its standard approach to linting and auto-correction, which solves the difficult problem of deciding between tabs and spaces (use defaults). My typical implementation in Ruby projects is to add a standard `.rubocop.yml`, run `rubocop -a`, ask an AI to fix easy fixable violations, then run `rubocop --auto-gen-config` to mark all remaining ones as an exception. Why should spelling be any different?
 
 Introducing [rubocop-spellcheck](https://github.com/dblock/rubocop-spellcheck), a RuboCop plugin for checking spelling in Ruby comments, strings, identifiers, Markdown, RDoc, AsciiDoc, and plain text. It uses [Kotoshu](https://github.com/kotoshu/kotoshu) with its pure Ruby backend and ships an American English dictionary. No separate dictionary download, environment, or system spelling package is required.
