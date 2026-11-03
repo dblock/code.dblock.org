@@ -10,13 +10,11 @@ dblog_post_id: 344
 ```ruby
 module Mongoid
   class Criteria
-    def sample(n = 1)
-      indexes = (0..self.count-1).sort_by{ rand }.slice(0,n).collect!
-      if n == 1
-        return self.skip(indexes.first).first
-      else
-        return indexes.map{ |index| self.skip(index).first }
-      end
+    def sample(sample_size = 1)
+      indexes = (0..(count - 1)).sort_by { rand }.slice(0, sample_size).collect!
+      return skip(indexes.first).first if sample_size == 1
+
+      indexes.map { |index| skip(index).first }
     end
   end
 end

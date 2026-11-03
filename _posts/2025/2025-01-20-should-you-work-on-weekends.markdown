@@ -50,15 +50,15 @@ We can conclude that only 2% of my paid work was accomplished on weekends.
 
 Here's the distribution of PRs into opensearch-project (aka work) by day of week.
 
-| Day       | Count |
-|-----------|-------|
-| Monday    | 221   |
-| Tuesday   | 331   |
-| Wednesday | 193   |
-| Thursday  | 321   |
-| Friday    | 168   |
-| Saturday  | 17    |
-| Sunday    | 13    |
+| Day         | Count   |
+| ----------- | ------- |
+| Monday      | 221     |
+| Tuesday     | 331     |
+| Wednesday   | 193     |
+| Thursday    | 321     |
+| Friday      | 168     |
+| Saturday    | 17      |
+| Sunday      | 13      |
 
 It looks like Tuesdays and Thursdays are the busiest with fewer results on Friday, which is consistent with my opinion about the benefits of _finishing earlier or doing other types of work than code on Fridays_. Work is not just pull requests, it's also attending meetings, and I [participated in 2882 meetings in 5 years](/2024/12/20/i-participated-in-2882-meetings-in-5-years.html).
 

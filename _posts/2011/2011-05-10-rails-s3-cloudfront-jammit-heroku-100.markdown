@@ -52,46 +52,45 @@ stylesheets:
 We use a simple Rake task to generate assets heavily inspired by [this gist](https://gist.github.com/613114/ce0b64979eb020b33c6668e61ddacad8bba0a377) (bonus clean task included). I can run rake assets and get output in public/assets that is a mix of checked in (eg. _public/assets/images_) and generated (eg. _public/assets/common.js_ and _common.js.gz_) files.
 
 ```ruby
-desc "Compiles CoffeeScript using Barista (but only if they changed)"
+desc 'Compiles CoffeeScript using Barista (but only if they changed)'
 task 'coffee:compile' => :environment do
   abort "'#{Barista::Compiler.bin_path}' is unavailable." unless Barista::Compiler.available?
   Barista.compile_all! false, false
 end
 
-desc "Compiles SASS using Compass"
+desc 'Compiles SASS using Compass'
 task 'sass:compile' do
   system 'compass compile'
 end
 
 namespace :assets do
-  desc "Compiles all assets (CSS/JS)"
-  task :compile => ['coffee:compile', 'sass:compile']
+  desc 'Compiles all assets (CSS/JS)'
+  task compile: ['coffee:compile', 'sass:compile']
 
-  desc "Bundles all assets with Jammit"
-  task :bundle => :environment do
+  desc 'Bundles all assets with Jammit'
+  task bundle: :environment do
     system "cd #{Rails.root} && jammit"
   end
 
-  desc "Removes all compiled and bundled assets"
-  task :clean => :environment do
+  desc 'Removes all compiled and bundled assets'
+  task clean: :environment do
     files = []
     files << ['assets']
-    files << ['javascripts', 'compiled']
-    files << ['stylesheets', 'compiled']
-    files = files.map { |path| Dir[Rails.root.join('public', \*path, '\*.\*')] }.flatten
+    files << %w[javascripts compiled]
+    files << %w[stylesheets compiled]
+    files = files.map { |path| Dir[Rails.root.join('public', *path, '*.*')] }.flatten
 
-    puts "Removing:"
+    puts 'Removing:'
     files.each do |file|
-      puts "  #{file.gsub(Rails.root.to_s + '/', '')}"
+      puts "  #{file.gsub("#{Rails.root}/", '')}"
     end
 
-    File.delete \*files
+    File.delete(*files)
   end
-
 end
 
-desc "Compiles and bundles all assets"
-task :assets => ['assets:compile', 'assets:bundle']
+desc 'Compiles and bundles all assets'
+task assets: ['assets:compile', 'assets:bundle']
 ```
 
 #### Amazon Simple Storage Service (S3) + CloudFront
@@ -104,17 +103,15 @@ Distributing to CloudFront has one major caveat: data is cached for at least 24 
 
 ```ruby
 Example::Application.configure do
-
-  cloudfront_url = ENV["CLOUDFRONT_URL"]
-  s3_bucket = ENV["S3_BUCKET"]
+  cloudfront_url = ENV.fetch('CLOUDFRONT_URL', nil)
+  s3_bucket = ENV.fetch('S3_BUCKET', nil)
 
   if cloudfront_url
     config.action_controller.asset_host = cloudfront_url
   elsif s3_bucket
     # Serve assets from Amazon S3
-    config.action_controller.asset_host = "https://" + s3_bucket + ".s3.amazonaws.com"
+    config.action_controller.asset_host = "https://#{s3_bucket}.s3.amazonaws.com"
   end
-
 end
 ```
 
@@ -144,40 +141,42 @@ Instead of uploading _assets/common.css_ we'll upload _assets/50fd3fcfa592eaac16
 task :uploadToS3, [:to] => :environment do |t, args|
   from = File.join(Rails.root, 'public/assets')
   to = args[:to]
-  hash = (`git rev-parse HEAD` || "").chomp
+  hash = (`git rev-parse HEAD` || '').chomp
 
   logger.info("[#{Time.now}] fetching keys from #{to}")
   existing_objects_hash = {}
   s3i.incrementally_list_bucket(to) do |response|
     response[:contents].each do |existing_object|
-      next unless existing_object[:key].start_with?("assets/")
+      next unless existing_object[:key].start_with?('assets/')
+
       existing_objects_hash[existing_object[:key]] = existing_object
     end
   end
 
   logger.info("[#{Time.now}] copying from #{from} to s3:#{to} @ #{hash}")
-  Dir.glob(from + "/\*\*/\*").each do |entry|
-    next if File::directory?(entry)
+  Dir.glob("#{from}/**/*").each do |entry|
+    next if File.directory?(entry)
+
     key = 'assets/'
-    key += (hash + '/') if hash
+    key += ("#{hash}/") if hash
     key += entry.slice(from.length + 1, entry.length - from.length - 1)
     existing_objects_hash.delete(key)
     logger.info("[#{Time.now}] uploading #{key}")
     s3i.put(to, key, File.open(entry), { 'x-amz-acl' => 'public-read' })
   end
 
-  existing_objects_hash.keys.each do |key|
+  existing_objects_hash.each_key do |key|
     puts "deleting #{key}"
     s3i.delete(to, key)
   end
 end
 
 namespace :push do
-  task :to_staging => [:environment, :assets] do
-    Rake::Task["assets:uploadToS3"].execute({ to: 'example-staging' })
+  task to_staging: %i[environment assets] do
+    Rake::Task['assets:uploadToS3'].execute({ to: 'example-staging' })
   end
-  task :to_production => [:environment, :assets] do
-    Rake::Task["assets:uploadToS3"].execute({ to: 'example-production' })
+  task to_production: %i[environment assets] do
+    Rake::Task['assets:uploadToS3'].execute({ to: 'example-production' })
   end
 end
 ```
@@ -185,10 +184,10 @@ end
 We now need to tell our Rails application about this hash. We'll adjust our _config/environment.rb_ as follows.
 
 ```ruby
-asset_hash = ENV["ASSET_HASH"]
+asset_hash = ENV.fetch('ASSET_HASH', nil)
 if asset_hash
   config.action_controller.asset_path = proc { |asset_path|
-    asset_path.gsub("assets/", "assets/#{asset_hash}/")
+    asset_path.gsub('assets/', "assets/#{asset_hash}/")
   }
 end
 ```
@@ -197,30 +196,28 @@ Let's set `ASSET_HASH` on Heroku with the hash value before every deployment.
 
 ```ruby
 namespace :heroku do
-
   namespace :hash do
-    task :to_production => [:environment, :assets] do
-      Rake::Task["heroku:hash:addHashToEnvironment"].execute({ app: 'example-production' })
+    task to_production: %i[environment assets] do
+      Rake::Task['heroku:hash:addHashToEnvironment'].execute({ app: 'example-production' })
     end
-    task :to_staging => [:environment] do
-      Rake::Task["heroku:hash:addHashToEnvironment"].execute({ app: 'example-staging' })
+    task to_staging: [:environment] do
+      Rake::Task['heroku:hash:addHashToEnvironment'].execute({ app: 'example-staging' })
     end
-    task :addHashToEnvironment, [:app]  => [:environment] do |t, args|
-      hash = (`git rev-parse HEAD` || "").chomp
-      Rake::Task["heroku:config:add"].execute({ app: args[:app], value: "ASSET_HASH=#{hash}" })
+    task :addHashToEnvironment, [:app] => [:environment] do |t, args|
+      hash = (`git rev-parse HEAD` || '').chomp
+      Rake::Task['heroku:config:add'].execute({ app: args[:app], value: "ASSET_HASH=#{hash}" })
     end
   end
 
   namespace :config do
-    desc "Set a configuration parameter on Heroku"
-    task :add, [:app, :value] => :environment do |t, args|
+    desc 'Set a configuration parameter on Heroku'
+    task :add, %i[app value] => :environment do |t, args|
       app = "--app #{args[:app]}" if args[:app]
       value = args[:value]
       logger.debug("[#{Time.now}] running 'heroku config:add #{app} #{value}'")
       `heroku config:add #{app} #{value}`
     end
   end
-
 end
 ```
 

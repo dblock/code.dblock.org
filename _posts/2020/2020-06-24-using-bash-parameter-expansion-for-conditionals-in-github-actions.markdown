@@ -121,7 +121,7 @@ jobs:
 I find this pattern quite elegant. To summarize.
 
 1. Set a variable in `matrix`, e.g. `bundler-version: 1.17.3`.
-1. Assign it to an environment variable via `env`, e.g. `BUNDLER: ${{ matrix.bundler-version }}`.
-1. Use it with a default value in `run`, e.g. `gem install bundler -v ${BUNDLER:-2.1.4}`.
+2. Assign it to an environment variable via `env`, e.g. `BUNDLER: ${{ matrix.bundler-version }}`.
+3. Use it with a default value in `run`, e.g. `gem install bundler -v ${BUNDLER:-2.1.4}`.
 
 See [radar/distance_of_time_in_words#104](https://github.com/radar/distance_of_time_in_words/pull/104) for more details.

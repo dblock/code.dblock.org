@@ -14,12 +14,12 @@ You can now do this in [Grape](https://github.com/ruby-grape/grape) with _desc_ 
 
 ```ruby
 # DELETE /api/v1/thing/:id
-desc "Delete an existing thing.", {
-  :params => {
-    "id" => { :description => "Thing id.", :required => true }
+desc 'Delete an existing thing.', {
+  params: {
+    'id' => { description: 'Thing id.', required: true }
   }
 }
-delete ":id" do
+delete ':id' do
   thing = Thing.find(params[:id])
   error!('Thing Not Found', 404) unless thing
   thing.destroy
@@ -33,21 +33,21 @@ We can introspect the API at runtime, adding a Rake task, for example, that list
 
 ```ruby
 namespace :api do
-  desc "Displays all API methods."
+  desc 'Displays all API methods.'
   task 'routes' => :environment do
     Api.routes.each do |route|
       route_path = route.route_path.gsub('(.:format)', '').gsub(':version', route.route_version)
       puts "#{route.route_method} #{route_path}"
       puts " #{route.route_description}" if route.route_description
-      if route.route_params.is_a?(Hash)
-        params = route.route_params.map do |name, desc|
-          required = desc.is_a?(Hash) ? desc[:required] : false
-          description = desc.is_a?(Hash) ? desc[:description] : desc.to_s
-          [name, required, "   * #{name}: #{description} #{required ? '(required)' : ''}"]
-        end
-        puts "  parameters:"
-        params.each { |p| puts p[2] }
+      next unless route.route_params.is_a?(Hash)
+
+      params = route.route_params.map do |name, desc|
+        required = desc.is_a?(Hash) ? desc[:required] : false
+        description = desc.is_a?(Hash) ? desc[:description] : desc.to_s
+        [name, required, "   * #{name}: #{description} #{'(required)' if required}"]
       end
+      puts '  parameters:'
+      params.each { |p| puts p[2] }
     end
   end
 end

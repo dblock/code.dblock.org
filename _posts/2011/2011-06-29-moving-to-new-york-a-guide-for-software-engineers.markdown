@@ -86,6 +86,6 @@ _The idea that all of New York lives the life of the kids in Gossip Girl is simp
 
 #### Famous Last Words
 
-Of course this is an interested post: we are [hiring at art.sy](https://artsy.net/jobs). We are at the amazing [GeneralAssemb.ly](https://generalassemb.ly) office space in Union Square and definitely fall into that "craftsmanship" category. If you like what you read, don't hesitate to drop me a note at dblock[at]dblock[dot]org. And if a startup is too much for your stomach, I'd be more than happy to introduce you to a good recruiter that knows about all tech jobs in the city and is not a sweatshop and will treat you as the engineering princess slash rare animal that you are.
+Of course this is an interested post: we are [hiring at art.sy](https://artsy.net/jobs). We are at the amazing [GeneralAssemb.ly](https://generalassemb.ly) office space in Union Square and definitely fall into that "craftsmanship" category. If you like what you read, don't hesitate to drop me a note at dblock\[at\]dblock\[dot\]org. And if a startup is too much for your stomach, I'd be more than happy to introduce you to a good recruiter that knows about all tech jobs in the city and is not a sweatshop and will treat you as the engineering princess slash rare animal that you are.
 
 See you in NYC!

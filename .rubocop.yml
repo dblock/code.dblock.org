@@ -1,4 +1,10 @@
+inherit_mode:
+  merge:
+    - Exclude
+
 plugins:
+  - rubocop-md
+  - rubocop-prose
   - rubocop-rake
   - rubocop-spellcheck
 
@@ -23,6 +29,93 @@ AllCops:
 Metrics:
   Enabled: false
 
+Markdown:
+  # Only explicitly Ruby-tagged examples should be interpreted as Ruby.
+  Autodetect: false
+  WarnInvalid: true
+
+Text:
+  Include: []
+
+Markdown/HeadingStyle:
+  Enabled: true
+
+Markdown/DuplicateHeadings:
+  Scope: document
+
+Markdown/SingleTopLevelHeading:
+  Enabled: true
+
+Markdown/OrderedListNumbering:
+  Enabled: true
+  Style: sequential
+
+Markdown/FenceBlankLines:
+  ListItems: false
+
+Markdown/CodeBlockStyle:
+  Enabled: true
+
+Markdown/LinkFragment:
+  Enabled: true
+
+Markdown/ReferenceDefinitions:
+  Unused: true
+
+# Preserve the archive's existing Markdown style choices.
+Markdown/HardTabs:
+  Enabled: false
+
+Markdown/ReversedLink:
+  Enabled: false
+
+Markdown/BlockquoteSpacing:
+  Enabled: false
+
+Markdown/BlockquoteBlankLines:
+  Enabled: false
+
+Markdown/EmphasisSpacing:
+  Enabled: false
+
+Markdown/FenceLanguage:
+  Enabled: false
+
+Markdown/ImageAltText:
+  Enabled: false
+
+Markdown/EmphasisStyle:
+  Enabled: false
+
+Markdown/StrongStyle:
+  Enabled: false
+
+Markdown/DescriptiveLinkText:
+  Enabled: false
+
+Style/OneClassPerFile:
+  Exclude:
+    - '**/*.md'
+    - '**/*.markdown'
+
+# A post can show independent alternatives, rather than one executable program.
+Lint/ConstantReassignment:
+  Exclude:
+    - '**/*.md'
+    - '**/*.markdown'
+
+Lint/UnreachableCode:
+  Exclude:
+    - '**/*.md'
+    - '**/*.markdown'
+
+Style/FormatStringToken:
+  EnforcedStyle: unannotated
+  Mode: conservative
+
+Style/ModuleFunction:
+  EnforcedStyle: extend_self
+
 Style/ClassAndModuleChildren:
   Exclude:
     - '_plugins/link-checker.rb'
@@ -38,6 +131,8 @@ Spellcheck:
     - ".spellcheck.txt"
 Spellcheck/Spelling:
   Enabled: true
+  Exclude:
+    - 'test/lint_test.rb' # Intentional misspellings and cop-name fixtures.
   Ruby:
     Identifiers: false
   Markdown:

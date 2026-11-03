@@ -50,7 +50,7 @@ Delayed::Worker.delay_job?(job) ? job.save : job.invoke_job
 ```ruby
 RSpec.configure do |config|
   config.before do
-    Delayed::Worker.delay_jobs = ->(job) {
+    Delayed::Worker.delay_jobs = lambda { |job|
       job.run_at && job.run_at > Time.now.utc
     }
   end

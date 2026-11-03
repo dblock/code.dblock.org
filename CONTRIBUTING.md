@@ -38,10 +38,10 @@ git remote add upstream https://github.com/dblock/code.dblock.org.git
 
 ### Install Ruby
 
-Install Ruby. We recommend [rvm](https://rvm.io/). Use Ruby 2.7+.
+Install Ruby. We recommend [rvm](https://rvm.io/). Use Ruby 3.4, as in CI.
 
 ```bash
-rvm use 2.7.7
+rvm use 3.4
 ```
 
 Install bundler.
@@ -142,10 +142,15 @@ It's likely that your change will not be merged and that the nitpicky maintainer
 
 ### Markdown Linter
 
+Markdown lint uses released [rubocop-prose](https://github.com/dblock/rubocop-prose) 0.2.x, and released [rubocop-md](https://github.com/rubocop/rubocop-md) 3.x applies Ruby checks to explicitly Ruby-tagged code fences. Dependency versions are pinned in `Gemfile.lock`. Update them with `bundle update rubocop-prose rubocop-md`. Unlabeled and non-Ruby code blocks are not interpreted as Ruby.
+
 ```bash
-npm ci
-npm run lint:markdown
+bundle exec rake lint
 ```
+
+Configuration is in `.rubocop.yml`. Prose paragraphs stay on one source line by default (`Prose/MaxLength`, with `Max: false`), preserving intentional hard breaks. The configuration retains the archive's existing Markdown style choices while adding table checks, sequential ordered-list numbering, and Ruby snippet linting. For safe autocorrection, run `bundle exec rubocop -a --except Spellcheck/Spelling` and review the changes, especially historical code examples.
+
+CI runs `bundle exec rake test` before building the blog in the deployment workflow, not in the Markdown lint workflow.
 
 ### Spell Checker
 
@@ -157,13 +162,15 @@ bundle exec rake spell:check
 
 Add legitimate project words to [.spellcheck.txt](.spellcheck.txt), one word per line in alphabetical order. No Python or system spelling dictionary is required.
 
-Spelling shares `.rubocop.yml` with Ruby lint and runs as part of `bundle exec rubocop`. Markdown code, destinations, and Liquid template expressions are skipped; front matter spelling is disabled to avoid treating site metadata as prose. Unlike the old checker, raw HTML blocks and their attributes are not inspected.
+Spelling shares `.rubocop.yml` with prose and Ruby lint and runs as part of `bundle exec rubocop`. Markdown code, destinations, and Liquid template expressions are skipped, except that Ruby snippets have their comments and string literals checked with the same settings as Ruby files; Ruby identifiers are not checked. Front matter spelling checks the `title` field. Raw HTML blocks and their attributes are not inspected.
 
 For an incremental check, run `bundle exec rake spell:staged`. It checks the staged versions of added or modified Markdown files, not edits outside the index. Changing the spelling configuration, dictionary, or dependency manifests triggers a full check of tracked Markdown files. Generated files and third-party directories remain excluded; CI checks the full archive.
 
 ### Style Checker
 
-Ruby lint uses RuboCop and `rubocop-rake`, with new cops enabled in `.rubocop.yml`. Metrics checks are disabled for the existing scripts and plugins.
+Ruby lint uses RuboCop and `rubocop-rake`, with new cops enabled in `.rubocop.yml`. Ruby code fences are also checked through `rubocop-md`. Metrics checks are disabled for the existing scripts and plugins.
+
+Posts can contain independent examples, so Markdown is excluded from file-wide class-count, constant-reassignment, and unreachable-code checks. Scoped RuboCop directives preserve intentionally historical or broken examples.
 
 ```bash
 bundle exec rubocop
@@ -181,7 +188,6 @@ Install tools.
 
 ```bash
 bundle install
-npm ci
 ```
 
 Add a pre-commit hook, `.git/hooks/pre-commit`.
@@ -192,7 +198,7 @@ Add a pre-commit hook, `.git/hooks/pre-commit`.
 exec bundle exec rake precommit
 ```
 
-`bundle exec rake lint` runs the Markdown linter independently of spelling; `npm run lint:markdown` invokes the same check. The existing `bundle exec rake check` remains the full site build and link check. Ruby orchestrates these commands; Node is still required by markdownlint.
+`bundle exec rake lint` runs prose and Ruby lint independently of spelling. The existing `bundle exec rake check` remains the full site build and link check. Node is not required.
 
 ## Thank You
 

@@ -18,13 +18,13 @@ The really annoying part of RSpec is that tests can run in any order. This depen
 require 'rspec/core/rake_task'
 
 SPEC_SUITES = [
-  { :id => :models, :title => 'model tests', :pattern => "spec/models/\*\*/\*_spec.rb" },
-  { :id => :api, :title => 'api tests', :pattern => "spec/api/\*\*/\*_spec.rb" },
-  { :id => :controllers, :title => 'controller tests', :pattern => "spec/controllers/\*\*/\*_spec.rb" },
-  { :id => :views, :title => 'view tests', :pattern => "spec/views/\*\*/\*_spec.rb" },
-  { :id => :misc, :title => 'misc tests',
-      :pattern => ["spec/lib/\*\*/\*_spec.rb", "spec/mailers/\*\*/\*_spec.rb"] },
-]
+  { id: :models, title: 'model tests', pattern: 'spec/models/**/*_spec.rb' },
+  { id: :api, title: 'api tests', pattern: 'spec/api/**/*_spec.rb' },
+  { id: :controllers, title: 'controller tests', pattern: 'spec/controllers/**/*_spec.rb' },
+  { id: :views, title: 'view tests', pattern: 'spec/views/**/*_spec.rb' },
+  { id: :misc, title: 'misc tests',
+    pattern: ['spec/lib/**/*_spec.rb', 'spec/mailers/**/*_spec.rb'] }
+].freeze
 
 namespace :spec do
   namespace :suite do
@@ -35,8 +35,8 @@ namespace :spec do
         t.verbose = false
       end
     end
-    desc "Run all spec suites"
-    task :all => :environment do
+    desc 'Run all spec suites'
+    task all: :environment do
       SPEC_SUITES.each do |suite|
         logger.info "Running #{suite[:title]} ..."
         Rake::Task["spec:suite:#{suite[:id]}"].execute

@@ -8,10 +8,10 @@ date: 2008-08-10 18:08:51
 tags: [asp.net, ux ui]
 dblog_post_id: 3
 ---
-![ASP.NET Ajax Dirty Panel Extender in Action](https://cloudfront.codeproject.com/ajax/ajaxdirtypanelextender/screenshot.jpg)
+![ASP.NET Ajax Dirty Panel Extender in Action](https://web.archive.org/web/20070923015628im_/http://www.codeproject.com/Ajax/ajaxdirtypanelextender/screenshot.jpg)
 
 FoodCandy is (was) a rich social network that offers users many web forms to fill. For example, users can post articles and edit lengthy profiles. Often they click on a link that takes them away from the page or press the wrong key (e.g. backspace that navigates to the previous page). In both cases their changes get lost. And it is always frustrating to have to re-enter the same text twice. Wouldn't it be nice to warn the user that he has unsaved data and give him an opportunity to cancel, then save his data?
 
 This is a Panel Extender for ASP.NET AJAX 1.0 that automatically detects if any input control inside it was changed and shows an alert if the user tries to leave the page before saving the data. The extender supports most HTML input controls and can detect whether either data, selection or both have changed.
 
-[[CodeProject Article](https://www.codeproject.com/Articles/19973/Dirty-Panel-Extender-ASP-NET-AJAX)]
+[Read the CodeProject article](https://web.archive.org/web/20081101015455/http://www.codeproject.com:80/KB/ajax/ajaxdirtypanelextender.aspx?).

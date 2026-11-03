@@ -33,7 +33,7 @@ yellow open security-auditlog-2024.05.30 7yBZpI7HS22-6mZtPrVg2g 1 1   62 0  78.8
 You can ask for JSON, `application/json`. Pipe it with [jq](https://jqlang.github.io/jq/).
 
 ```bash
-$ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?format=json | jq
+curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?format=json | jq
 ```
 
 ```json
@@ -68,7 +68,7 @@ $ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?form
 You can ask for YAML, `application/yaml`.
 
 ```bash
-$ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?format=yaml
+curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?format=yaml
 ```
 
 ```yaml
@@ -99,7 +99,7 @@ yaml
 Or for [CBOR](https://cbor.io/), which stands for "Concise Binary Object Representation". Pipe it using [cbor2](https://pypi.org/project/cbor2/).
 
 ```bash
-$ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?format=cbor
+curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?format=cbor
 ```
 
 ```json
@@ -109,7 +109,7 @@ $ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?form
 Finally, [SMILE](https://github.com/FasterXML/smile-format-specification) is another binary data format that defines a binary equivalent of standard JSON data format.
 
 ```bash
-$ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?format=smile
+curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?format=smile
 ```
 
 ```text
@@ -121,7 +121,7 @@ $ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?form
 Yes, the data is prefixed with `:)`. Use [smile-tool](https://www.npmjs.com/package/smile-tool) to decode the data.
 
 ```bash
-$ curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?format=smile | smile-tool -d
+curl -k -u admin:$OPENSEARCH_PASSWORD https://localhost:9200/_cat/indices?format=smile | smile-tool -d
 ```
 
 ```json

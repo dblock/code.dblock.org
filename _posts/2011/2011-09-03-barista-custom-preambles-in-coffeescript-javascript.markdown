@@ -16,7 +16,7 @@ This will be supported in the next release of Barista, since [pull request #54](
 
 ```ruby
 Barista.add_preamble do |location|
-  "/\* : DO NOT MODIFY - compiled from #{Pathname.new(location).relative_path_from(Rails.root).to_s}\n\n"
+  "/* : DO NOT MODIFY - compiled from #{Pathname.new(location).relative_path_from(Rails.root)}\n\n"
 end
 ```
 

@@ -15,7 +15,7 @@ module Mongo
   class Collection
     def find_all(query = {}, by = 1000, &block)
       idx = 0
-      while ((results = find(query, { :limit => by, :skip => idx })) && results.count(true) > 0)
+      while (results = find(query, { limit: by, skip: idx })) && results.count(true).positive?
         results.each do |result|
           yield result
           idx += 1
@@ -35,9 +35,10 @@ module Mongoid
     def each_by(by = 1000, &block)
       idx = 0
       set_limit = options[:limit]
-      while ((results = clone.limit(by).skip(idx)) && results.any?)
+      while (results = clone.limit(by).skip(idx)) && results.any?
         results.each do |result|
-          return self if set_limit and set_limit >= total
+          return self if set_limit && (set_limit >= total)
+
           yield result
           idx += 1
         end

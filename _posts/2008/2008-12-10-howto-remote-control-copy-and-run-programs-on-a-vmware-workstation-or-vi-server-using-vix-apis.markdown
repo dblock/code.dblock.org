@@ -17,7 +17,6 @@ We (at my [day job](https://web.archive.org/web/20131111165225/https://www.appse
 There are two types of APIs.
 
 - **VMWare Virtual Infrastructure SDK** : a set of tools and APIs to manage a VMWare Infrastructure environment. A toolkit has also been released that contains managed wrappers on top of the SOAP interface provided by a VMWare deployment. It's focused on VMWare ESX or VirtualCenter management and is beyond the scope of this post.
-
 - **VMWare VIX API**. The VIX API allows you to write programs and scripts that automate virtual machine operations, as well as the guests within virtual machines. It runs on both Windows and Linux and supports management of VMware Server, Workstation, and Virtual Infrastructure (both ESX and vCenter). Bindings are provided for C, Perl, and COM (Visual Basic, VBscript, C#). In this post I'll focus on the C# implementation.
 
 #### What do you need?

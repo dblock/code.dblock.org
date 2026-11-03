@@ -27,7 +27,7 @@ For server-side implementations the [graphql-ruby doc on errors](https://github.
 You can return a `GraphQL::ExecutionError` inside a `resolve` function, see [@027d75cf](https://github.com/dblock/graphql-invoices/commit/027d75cf5ca5bebc2fdb1b1dcb329430e417049e) for an example.
 
 ```ruby
-resolve ->(_object, _inputs, _ctx) {
+resolve lambda { |_object, _inputs, _ctx|
   GraphQL::ExecutionError.new('This has not been implemented yet.')
 }
 ```
@@ -66,7 +66,7 @@ This is used with `resolve` as follows.
 ```ruby
 field :findInvoiceById, InvoiceType do
   argument :id, !types.Int
-  resolve Rescuable.new ->(_object, args, _ctx) {
+  resolve Rescuable.new lambda { |_object, args, _ctx|
     Invoice.where(id: args[:id]).first
   }
 end

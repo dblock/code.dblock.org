@@ -10,12 +10,12 @@ There are two kinds of developers: those who use _should_ in RSpec examples and 
 
 ```ruby
 describe Fridge do
-  when "plugged in" do
+  context 'when plugged in' do
     before do
       subject.plug!
     end
 
-    it "should keep food cold" do
+    it 'should keep food cold' do
       subject.temperature.should be between(35).and(38).degrees
     end
   end
@@ -24,12 +24,12 @@ end
 
 ```ruby
 describe Fridge do
-  when "plugged in" do
+  context 'when plugged in' do
     before do
       subject.plug!
     end
 
-    it "keeps food cold" do
+    it 'keeps food cold' do
       subject.temperature.should be between(35).and(38).degrees
     end
   end

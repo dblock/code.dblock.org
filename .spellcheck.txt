@@ -132,6 +132,7 @@ authprovider
 autocomplete
 autoconf
 autoconf's
+autocorrection
 autocorrects
 autocut
 autofix
@@ -926,6 +927,7 @@ lenovo
 letsencrypt
 lf
 lgpl
+li
 libffi
 libsass
 lifecycle
@@ -1627,6 +1629,7 @@ sxs
 sy
 sy's
 symlinks
+syncobjects
 syntaxes
 sys
 tac
@@ -1725,6 +1728,7 @@ uid
 uimenu
 uimenuitem
 uiview
+ul
 ultrasaurus
 uml
 un

@@ -16,13 +16,13 @@ How does all this come together?
 
 ```ruby
 # poncho
-get "/users", & UsersListMethod
+get '/users', & UsersListMethod
 ```
 
 ```ruby
 # grape
-get "/users" do
-   ...
+get '/users' do
+   # ...
 end
 ```
 

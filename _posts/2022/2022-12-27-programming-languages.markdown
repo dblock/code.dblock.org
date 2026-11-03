@@ -10,13 +10,13 @@ All these do the same operation: make an instance of a client, query and display
 
 My only conclusion from this exercise is that the Go programming language is [objectively insane](https://jesseduffield.com/Gos-Shortcomings-1/).
 
-| client                                                            | lines of code |
-|-------------------------------------------------------------------|---------------|
-| [go](https://github.com/dblock/opensearch-go-client-demo)         | 89            |
-| [java](https://github.com/dblock/opensearch-java-client-demo)     | 80            |
-| [rust](https://github.com/dblock/opensearch-rust-client-demo)     | 75            |
-| [dotnet](https://github.com/dblock/opensearch-dotnet-client-demo) | 68            |
-| [python](https://github.com/dblock/opensearch-python-client-demo) | 50            |
-| [php](https://github.com/dblock/opensearch-php-client-demo)       | 50            |
-| [node](https://github.com/dblock/opensearch-node-client-demo)     | 45            |
-| [ruby](https://github.com/dblock/opensearch-ruby-client-demo)     | 44            |
+| client                                                              | lines of code   |
+| ------------------------------------------------------------------- | --------------- |
+| [go](https://github.com/dblock/opensearch-go-client-demo)           | 89              |
+| [java](https://github.com/dblock/opensearch-java-client-demo)       | 80              |
+| [rust](https://github.com/dblock/opensearch-rust-client-demo)       | 75              |
+| [dotnet](https://github.com/dblock/opensearch-dotnet-client-demo)   | 68              |
+| [python](https://github.com/dblock/opensearch-python-client-demo)   | 50              |
+| [php](https://github.com/dblock/opensearch-php-client-demo)         | 50              |
+| [node](https://github.com/dblock/opensearch-node-client-demo)       | 45              |
+| [ruby](https://github.com/dblock/opensearch-ruby-client-demo)       | 44              |

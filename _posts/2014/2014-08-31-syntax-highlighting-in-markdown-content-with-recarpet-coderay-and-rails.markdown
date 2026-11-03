@@ -15,16 +15,16 @@ require 'redcarpet'
 require 'coderay'
 
 module MarkdownHelper
- def render_markdown(text)
-   renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, fenced_code_blocks: true)
-   doc = Nokogiri::HTML::DocumentFragment.parse(renderer.render(text))
-   doc.css('code[@class]').each do |code|
-     div = CodeRay.scan(code.text.rstrip, code[:class].to_sym).div
-     code = code.replace(div)
-     code.first.parent.swap(code.first)
-   end
-   doc.to_s
- end
+  def render_markdown(text)
+    renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, fenced_code_blocks: true)
+    doc = Nokogiri::HTML::DocumentFragment.parse(renderer.render(text))
+    doc.css('code[@class]').each do |code|
+      div = CodeRay.scan(code.text.rstrip, code[:class].to_sym).div
+      code = code.replace(div) # rubocop:disable Style/RedundantSelfAssignment -- Nokogiri returns replacement nodes.
+      code.first.parent.swap(code.first)
+    end
+    doc.to_s
+  end
 end
 ```
 
@@ -32,16 +32,17 @@ We can use this in a controller, assuming content lives in `app/views/content`. 
 
 ```ruby
 class PagesController < ApplicationController
- include MarkdownHelper
+  include MarkdownHelper
 
- def show
-   fail 'Invalid Id' unless params[:id] =~ /^[\w\/]\*$/
-   filename = Rails.root.join("app/views/content/#{params[:id]}.md")
-   @content = Rails.cache.fetch "content/#{params[:id]}/#{File.mtime(filename)}" do
-     text = File.read(filename)
-     render_markdown text
-   end
- end
+  def show
+    raise 'Invalid Id' unless params[:id] =~ %r{^[\w/]\*$}
+
+    filename = Rails.root.join("app/views/content/#{params[:id]}.md")
+    @content = Rails.cache.fetch "content/#{params[:id]}/#{File.mtime(filename)}" do
+      text = File.read(filename)
+      render_markdown text
+    end
+  end
 end
 ```
 

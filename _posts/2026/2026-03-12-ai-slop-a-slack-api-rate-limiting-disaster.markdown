@@ -12,7 +12,7 @@ I needed a cleanup job to close old Slack group DM conversations in my [slack-su
 ```ruby
 def close_old_sups!
   return 0 unless sup_close
-  
+
   old_sups = sups.where(conditions)
   old_sups.each(&:close!)
   old_sups.count
@@ -21,7 +21,7 @@ end
 def close!
   return unless conversation_id
   return if closed_at
-  
+
   logger.info "Closing DM channel #{conversation_id}..."
   slack_client.conversations_close(channel: conversation_id)
   update_attributes!(closed_at: Time.now.utc)
@@ -35,13 +35,13 @@ I asked AI to address this. It made the fix catastrophically worse.
 ```ruby
 def close!
   # ... existing code ...
-  begin
-    slack_client.conversations_close(channel: conversation_id)
-  rescue Slack::Web::Api::Errors::TooManyRequests => e
-    sleep_time = e.retry_after || 60
-    sleep(sleep_time)
-    retry
-  end
+
+  slack_client.conversations_close(channel: conversation_id)
+rescue Slack::Web::Api::Errors::TooManyRequests => e
+  sleep_time = e.retry_after || 60
+  sleep(sleep_time)
+  retry
+
   # ... rest of method ...
 end
 ```

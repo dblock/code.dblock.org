@@ -96,7 +96,7 @@ Installing RDoc documentation for bundler-1.3.5...
 Create a Gemfile. For now it just says where to get other gems from.
 
 ```ruby
-source "https://rubygems.org"
+source 'https://rubygems.org'
 ```
 
 Run `bundle install`.
@@ -122,8 +122,10 @@ Create _lib/ruby-enum.rb _and _lib/ruby-enum/version.rb_.
 ```ruby
 require 'ruby-enum/version'
 
-module Ruby::Enum
-  VERSION = '0.1.0'
+module Ruby
+  module Enum
+    VERSION = '0.1.0'.freeze
+  end
 end
 ```
 
@@ -134,7 +136,7 @@ You. Must. Test.
 Add RSpec to _Gemfile_.
 
 ```ruby
-gem "rspec"
+gem 'rspec'
 ```
 
 Tests need some setup, specifically to load the code in _lib_. Create _spec/spec_helper.rb_.
@@ -152,7 +154,7 @@ Create a test in _spec/ruby-enum/version.rb_.
 ```ruby
 require 'spec_helper'
 describe Ruby::Enum do
-  it "has a version" do
+  it 'has a version' do
     Ruby::Enum::VERSION.should_not be_nil
   end
 end
@@ -170,27 +172,27 @@ Add .rspec to pretty-print test output.
 A _ruby-enum.gemspec_ is a gem declaration.
 
 ```ruby
-$:.push File.expand_path("../lib", __FILE__)
-require "ruby-enum/version"
+$LOAD_PATH.push File.expand_path('lib', __dir__)
+require 'ruby-enum/version'
 Gem::Specification.new do |s|
-  s.name = "ruby-enum"
+  s.name = 'ruby-enum'
   s.version = Ruby::Enum::VERSION
-  s.authors = ["Daniel Doubrovkine"]
-  s.email = "dblock@dblock.org"
+  s.authors = ['Daniel Doubrovkine']
+  s.email = 'dblock@dblock.org'
   s.platform = Gem::Platform::RUBY
   s.required_rubygems_version = '>= 1.3.6'
   s.files = `git ls-files`.split("\n")
-  s.require_paths = ["lib"]
-  s.homepage = "https://github.com/dblock/ruby-enum"
-  s.licenses = ["MIT"]
-  s.summary = "Enum-like Behavior for Ruby"
+  s.require_paths = ['lib']
+  s.homepage = 'https://github.com/dblock/ruby-enum'
+  s.licenses = ['MIT']
+  s.summary = 'Enum-like Behavior for Ruby'
 end
 ```
 
 The declaration can be loaded in _Gemfile_, so that we can list dependencies in one place.
 
 ```ruby
-source "https://rubygems.org"
+source 'https://rubygems.org'
 gemspec
 ```
 
@@ -209,7 +211,7 @@ $ bundle exec irb
 Bundler comes with a number of Rake tasks to release a gem. Add Rake to Gemfile.
 
 ```ruby
-gem "rake"
+gem 'rake'
 ```
 
 Create a _Rakefile_.
@@ -242,7 +244,7 @@ RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
 end
 
-task :default => :spec
+task default: :spec
 ```
 
 #### Travis-CI

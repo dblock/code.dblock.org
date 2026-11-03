@@ -12,7 +12,7 @@ Let's make all our controllers support sorting with the _sort_by_ parameter. Add
 
 ```ruby
 handles_sortable_columns do |conf|
-  conf.sort_param = "sort_by"
+  conf.sort_param = 'sort_by'
 end
 ```
 
@@ -50,9 +50,10 @@ module Mongoid
   module Document
     module ClassMethods
       def sort_by(sort_column, sort_direction)
-        return nil unless ! sort_direction.blank? and [:asc, :desc].include?(sort_direction)
-        return nil unless ! sort_column.blank? and self.fields.has_key?(sort_column.to_s)
-        return self.send(sort_direction, sort_column)
+        return nil unless !sort_direction.blank? && %i[asc desc].include?(sort_direction)
+        return nil unless !sort_column.blank? && fields.key?(sort_column.to_s)
+
+        send(sort_direction, sort_column)
       end
     end
   end
@@ -65,12 +66,12 @@ Since `sort_by_column` returns `nil` if no sorting has been done, we can use it 
 class TagsController < ApplicationController
   def index
     sortable_column_order do |column, direction|
-        @tags = Tag.sort_by(column, direction)
+      @tags = Tag.sort_by(column, direction)
     end
-    @tags ||= Tag.desc(:count)
-    ...
+    @tags ||= Tag.desc(:count) # rubocop:disable Naming/MemoizedInstanceVariableName -- Rails view state, not an accessor.
+    # ...
   end
-  ...
+  # ...
 end
 ```
 

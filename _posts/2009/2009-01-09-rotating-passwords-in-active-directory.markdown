@@ -8,7 +8,5 @@ dblog_post_id: 31
 ---
 I posted a CodeProject article entitled "Rotating Passwords in Active Directory", or how to "change" your password to the same one when those annoying IT guys force you to. It's basically a tool that lets you cycle through many passwords before settling back on your original.
 
-- [CodeProject Article](https://www.codeproject.com/Articles/32403/Rotating-Passwords-in-Active-Directory)
+- [CodeProject Article](https://web.archive.org/web/20090113102758/http://www.codeproject.com:80/KB/system/rotatepassword.aspx)
 - [Browse Source Code](https://github.com/dblock/codeproject/tree/master/RotatePassword)
-
-![](https://www.codeproject.com/KB/system/rotatepassword/RotatePassword.jpg)

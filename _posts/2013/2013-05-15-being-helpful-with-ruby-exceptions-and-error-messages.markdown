@@ -28,7 +28,7 @@ First, add a dependency on [i18n](https://rubygems.org/gems/i18n) and _require "
 
 ```ruby
 require 'i18n'
-I18n.load_path << File.join(File.dirname(__FILE__), "config", "locales", "en.yml")
+I18n.load_path << File.join(File.dirname(__FILE__), 'config', 'locales', 'en.yml')
 ```
 
 Error descriptions inside _en.yml_ contain the problem, summary and resolution. The YAML format supports multi-lines with `\_\_` and can include values from parameters using the `%{name}` syntax.
@@ -55,31 +55,29 @@ The base error class, [Ruby::Enum::Errors::Base](https://github.com/dblock/ruby-
 
 ```ruby
 module Ruby
- module Enum
-   module Errors
-     class Base < StandardError
+  module Enum
+    module Errors
+      class Base < StandardError
+        attr_reader :problem, :summary, :resolution
 
-       attr_reader :problem, :summary, :resolution
+        def compose_message(key, attributes = {})
+          @problem = create_problem(key, attributes)
+          @summary = create_summary(key, attributes)
+          @resolution = create_resolution(key, attributes)
 
-       def compose_message(key, attributes = {})
-         @problem = create_problem(key, attributes)
-         @summary = create_summary(key, attributes)
-         @resolution = create_resolution(key, attributes)
+          "\nProblem:\n  #{@problem}" \
+            "\nSummary:\n  #{@summary}" \
+            "\nResolution:\n  #{@resolution}"
+        end
 
-         "\nProblem:\n  #{@problem}" +
-         "\nSummary:\n  #{@summary}" +
-         "\nResolution:\n  #{@resolution}"
-       end
+        BASE_KEY = 'ruby.enum.errors.messages'.freeze #:nodoc:
 
-       private
+        private
 
-         BASE_KEY = "ruby.enum.errors.messages" #:nodoc:
-
-         # implementation of create_problem, summary and resolution
-
-     end
-   end
- end
+          # implementation of create_problem, summary and resolution
+      end
+    end
+  end
 end
 ```
 
@@ -87,15 +85,15 @@ Specific errors derive from this class.
 
 ```ruby
 module Ruby
- module Enum
-   module Errors
-     class UninitializedConstantError < Base
-       def initialize(attrs)
-         super(compose_message("uninitialized_constant", attrs))
-       end
-     end
-   end
- end
+  module Enum
+    module Errors
+      class UninitializedConstantError < Base
+        def initialize(attrs)
+          super(compose_message('uninitialized_constant', attrs))
+        end
+      end
+    end
+  end
 end
 ```
 
@@ -103,9 +101,9 @@ When raising an `UninitializedConstantError`, pass the values of _key_ and _name
 
 ```ruby
 raise Ruby::Enum::Errors::UninitializedConstantError.new({
-  :name => "Class",
-  :key => "CONSTANT"
-})
+                                                           name: 'Class',
+                                                           key: 'CONSTANT'
+                                                         })
 ```
 
 Here's the result.

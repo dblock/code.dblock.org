@@ -10,7 +10,7 @@ En route to Boston, speaking at [Mongo Boston](https://www.mongodb.com/events/mo
 
 ![]({{ site.url }}/images/posts/2011/2011-10-02-mongo-boston-2011/image_3.jpg)
 
-If you're in Boston today or going to the conference tomorrow and want to meet, drop me a note (dblock[at]dblock[dot]org).
+If you're in Boston today or going to the conference tomorrow and want to meet, drop me a note (dblock\[at\]dblock\[dot\]org).
 
 ## Update
 

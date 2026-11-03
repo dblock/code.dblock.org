@@ -21,15 +21,15 @@ We are editing a _Widget_ that has a dropdown for _size _on the page with values
 The test code is pretty straightforward too.
 
 ```ruby
-context "capybara", :driver => :selenium do
+context 'capybara', driver: :selenium do
   before(:each) do
-    @widget = Fabricate(:widget, :size => 3)
+    @widget = Fabricate(:widget, size: 3)
   end
-  it "saves 5 to widget.size" do
+  it 'saves 5 to widget.size' do
     visit "/widget/#{@widget.id}/edit"
-    page.select("5", :from => "widget_size")
-    click_button "Save"
-    current_path.should == "/widgets"
+    page.select('5', from: 'widget_size')
+    click_button 'Save'
+    current_path.should == '/widgets'
     @widget.reload.size.should == 2
   end
 end

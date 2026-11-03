@@ -13,16 +13,16 @@ It was pretty easy to add a set of no-cache headers with [Grape](https://github.
 ```ruby
 class ApiCacheBuster < Grape::Middleware::Base
   def after
-    @app_response[1]["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
-    @app_response[1]["Pragma"] = "no-cache"
-    @app_response[1]["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
+    @app_response[1]['Cache-Control'] = 'no-cache, no-store, max-age=0, must-revalidate'
+    @app_response[1]['Pragma'] = 'no-cache'
+    @app_response[1]['Expires'] = 'Fri, 01 Jan 1990 00:00:00 GMT'
     @app_response
   end
 end
 
 class Api < Grape::API
   use ApiCacheBuster
-  ...
+  # ...
 end
 ```
 
@@ -32,12 +32,12 @@ And, trying to get muscle memory for good habits, a test.
 require 'spec_helper'
 
 describe ApiCacheBuster do
-  it "sets cache headers" do
-    get "/api/v1/ping"
-    response.body.should == "pong".to_json
-    response.headers["Cache-Control"].should == "no-cache, no-store, max-age=0, must-revalidate"
-    response.headers["Pragma"].should == "no-cache"
-    response.headers["Expires"].should == "Fri, 01 Jan 1990 00:00:00 GMT"
+  it 'sets cache headers' do
+    get '/api/v1/ping'
+    response.body.should == 'pong'.to_json
+    response.headers['Cache-Control'].should == 'no-cache, no-store, max-age=0, must-revalidate'
+    response.headers['Pragma'].should == 'no-cache'
+    response.headers['Expires'].should == 'Fri, 01 Jan 1990 00:00:00 GMT'
   end
 end
 ```

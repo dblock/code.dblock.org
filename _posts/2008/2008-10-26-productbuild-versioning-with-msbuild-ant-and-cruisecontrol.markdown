@@ -96,7 +96,7 @@ And the version.rc file to include in every other .rc file.
 <p>#ifndef</p></font></font><font color="#0000ff" size="2"><font color="#0000ff" size="2">#endif
 <p>#ifndef</p></font></font><font color="#0000ff" size="2"><font color="#0000ff" size="2">#endif
 <p>#ifndef</p></font></font>
-<p>VS_VERSION_INFO VERSIONINFO<br>FILEVERSION VERSION_FILEVERSION<br>PRODUCTVERSION VERSION_PRODUCTVERSION<br>FILEFLAGSMASK 0x3fL<br></p></font>
+<p>VS_VERSION_INFO VERSIONINFO<br>FILEVERSION VERSION_FILEVERSION<br>PRODUCTVERSION VERSION_PRODUCTVERSION<br>FILEFLAGSMASK 0x3fL<br></p>
 
 #### Versioning Other Targets
 

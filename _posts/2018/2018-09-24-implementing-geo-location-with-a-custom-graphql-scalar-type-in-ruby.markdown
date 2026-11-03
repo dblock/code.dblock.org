@@ -90,7 +90,7 @@ Types::GeoCoordinates = GraphQL::ScalarType.define do
   name 'GeoCoordinates'
 
   coerce_input ->(value, _ctx) { Geo::Coord.parse(value) }
-  coerce_result ->(value, _ctx) { [value.y, value.x].map(&:to_s).join(',') }
+  coerce_result ->(value, _ctx) { [value.y, value.x].join(',') }
 end
 ```
 
@@ -100,7 +100,7 @@ We can do better and just return an array, as well as allow multiple kinds of lo
 Types::GeoCoordinates = GraphQL::ScalarType.define do
   name 'GeoCoordinates'
 
-  coerce_input ->(value, _ctx) {
+  coerce_input lambda { |value, _ctx|
     case value
     when Array
       Geo::Coord.new(value[0], value[1])

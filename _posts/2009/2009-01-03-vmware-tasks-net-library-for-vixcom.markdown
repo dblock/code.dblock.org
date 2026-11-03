@@ -6,14 +6,14 @@ date: 2009-01-03 14:15:00
 tags: [vmware, dotnet]
 dblog_post_id: 29
 ---
-![VMWare](https://www.codeproject.com/KB/library/VMWareTasks/VMWareLogo.jpg)
+![VMWare](https://web.archive.org/web/20160118032012im_/http://www.codeproject.com/KB/library/VMWareTasks/VMWareLogo.jpg)
 
 The **VMWare Tasks Library** is a managed C# wrapper with an improved object model on top of VMWare COM ViX API (VixCOM) that makes it really easy to use.
 
 Due to growing demand this project is now located on CodePlex at www.codeplex.com/vmwaretasks (Update: moved to [GitHub](https://github.com/dblock/vmwaretasks)). Please update your bookmarks.
 
 - CodePlex ... Update: now on [GitHub](https://github.com/dblock/vmwaretasks)
-- [CodeProject Article](https://www.codeproject.com/articles/31961/automating-vmware-tasks-in-c-with-the-vix-api)
+- [CodeProject Article](https://web.archive.org/web/20081225090238/http://www.codeproject.com:80/KB/library/VMWareTasks.aspx)
 
 Features:
 

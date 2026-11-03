@@ -17,14 +17,14 @@ Here's how we do it, and so should you.
 Use [spreadsheet 0.6.5.8](https://rubygems.org/gems/spreadsheet) with [this monkey-patch](https://gist.github.com/1187549) added as _initializers/spreadsheet_encodings.rb_ and [to_xls 1.0](https://rubygems.org/gems/to_xls) from my [to-xls-on-models branch](https://github.com/dblock/to_xls/tree/to-xls-on-models).
 
 ```ruby
-gem "spreadsheet", "0.6.5.8"
-gem "to_xls", :git => "https://github.com/dblock/to_xls.git", :branch => "to-xls-on-models"
+gem 'spreadsheet', '0.6.5.8'
+gem 'to_xls', git: 'https://github.com/dblock/to_xls.git', branch: 'to-xls-on-models'
 ```
 
 Register the Excel MIME type in _config/initializers/mime_types.rb_.
 
 ```ruby
-Mime::Type.register "application/vnd.ms-excel", :xls
+Mime::Type.register 'application/vnd.ms-excel', :xls
 ```
 
 Add a _as_xls_ method to any model that you want to export that contains the fields of interest. Here's what I added to _app/models/user.rb_.
@@ -32,12 +32,12 @@ Add a _as_xls_ method to any model that you want to export that contains the fie
 ```ruby
 def as_xls(options = {})
   {
-      "Id" => id.to_s,
-      "Name" => name,
-      "E-Mail" => email,
-      "Joined" => created_at,
-      "Last Signed In" => last_sign_in_at,
-      "Sign In Count" => sign_in_count
+    'Id' => id.to_s,
+    'Name' => name,
+    'E-Mail' => email,
+    'Joined' => created_at,
+    'Last Signed In' => last_sign_in_at,
+    'Sign In Count' => sign_in_count
   }
 end
 ```
@@ -58,7 +58,7 @@ end
 
 Add a link on the users view. Here's what I added to _app/views/users.html.haml_. The parameter merging lets you reuse whatever parameters were passed in the page.
 
-```ruby
+```haml
 = link_to 'Export', users_path(request.parameters.merge({:format => :xls}))
 ```
 
@@ -71,18 +71,18 @@ You get real XLS documents, book & al.
 We can write a spec for this controller too.
 
 ```ruby
-describe "GET index.xls" do
-  it "creates an Excel spreadsheet with all users" do
+describe 'GET index.xls' do
+  it 'creates an Excel spreadsheet with all users' do
     user = Fabricate :user
-    get :index, :format => :xls
-    response.headers['Content-Type'].should == "application/vnd.ms-excel"
+    get :index, format: :xls
+    response.headers['Content-Type'].should == 'application/vnd.ms-excel'
     s = Spreadsheet.open(StringIO.new(response.body))
     s.worksheets.count.should == 1
     w = s.worksheet(0)
     w.should_not be_nil
-    w.row(0)[0].should == "Id"
+    w.row(0)[0].should == 'Id'
     w.row(1)[0].should == user.id.to_s
-    w.row(0)[1].should == "Name"
+    w.row(0)[1].should == 'Name'
     w.row(1)[1].should == user.name
   end
 end

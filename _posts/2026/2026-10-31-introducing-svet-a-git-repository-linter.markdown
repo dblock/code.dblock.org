@@ -9,16 +9,16 @@ The idea for [Svet](https://github.com/dblock/svet) came from a private reposito
 
 I went looking for an existing tool.
 
-| Tool | Why it isn't enough here |
-| --- | --- |
-| [ESLint](https://eslint.org/docs/latest/use/configure/configuration-files) | Can check filenames with a processor; byte-level checks and Git snapshots need custom plumbing. |
-| [Oxlint](https://oxc.rs/docs/guide/usage/linter/js-plugins.html) | Arbitrary non-JS/TS files don't reach its lint rules. |
-| [Biome](https://biomejs.dev/reference/configuration/) | Checks supported languages, not arbitrary repository files. |
-| [Stylelint](https://stylelint.io/user-guide/configure/) | Built for stylesheet rules; repository-wide checks need custom code. |
-| [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2#command-line) | Can check filenames, but Markdown parsing isn't a byte-level checking API. |
-| [HTML-validate](https://html-validate.org/usage/index.html) | Requires HTML or template transformations, not a general file-checking API. |
-| [Prettier](https://prettier.io/docs/cli#file-patterns) | Skips or rejects unsupported formats; doesn't check repository-wide path rules. |
-| [lint-staged](https://github.com/lint-staged/lint-staged#--all) | Can run the checks, but doesn't supply rules or Git-index snapshots itself. |
+| Tool                                                                              | Why it isn't enough here                                                                        |
+| ---                                                                               | ---                                                                                             |
+| [ESLint](https://eslint.org/docs/latest/use/configure/configuration-files)        | Can check filenames with a processor; byte-level checks and Git snapshots need custom plumbing. |
+| [Oxlint](https://oxc.rs/docs/guide/usage/linter/js-plugins.html)                  | Arbitrary non-JS/TS files don't reach its lint rules.                                           |
+| [Biome](https://biomejs.dev/reference/configuration/)                             | Checks supported languages, not arbitrary repository files.                                     |
+| [Stylelint](https://stylelint.io/user-guide/configure/)                           | Built for stylesheet rules; repository-wide checks need custom code.                            |
+| [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2#command-line) | Can check filenames, but Markdown parsing isn't a byte-level checking API.                      |
+| [HTML-validate](https://html-validate.org/usage/index.html)                       | Requires HTML or template transformations, not a general file-checking API.                     |
+| [Prettier](https://prettier.io/docs/cli#file-patterns)                            | Skips or rejects unsupported formats; doesn't check repository-wide path rules.                 |
+| [lint-staged](https://github.com/lint-staged/lint-staged#--all)                   | Can run the checks, but doesn't supply rules or Git-index snapshots itself.                     |
 
 Prettier is a formatter, and lint-staged is a task runner. They're in this list because they also appear in development and CI workflows.
 

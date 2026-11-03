@@ -18,17 +18,17 @@ Let's add a _MailTemplate_ that can render itself to HTML using [Sanitize](https
 class MailTemplate
   include Mongoid::Document
 
-  field :class_name, :type => String
-  field :method_name, :type => String
-  field :subject, :type => String
-  field :content, :type => String
+  field :class_name, type: String
+  field :method_name, type: String
+  field :subject, type: String
+  field :content, type: String
 
   attr_accessible :content, :subject
 
   def to_html(context)
-    template = ERB.new(content, 0, "%<>")
+    template = ERB.new(content, trim_mode: '%<>')
     template_result = template.result(context)
-    Sanitize.clean(RDiscount.new(template_result).to_html.encode("UTF-8", undef: :replace), Sanitize::Config::RELAXED)
+    Sanitize.clean(RDiscount.new(template_result).to_html.encode('UTF-8', undef: :replace), Sanitize::Config::RELAXED)
   end
 end
 ```
@@ -56,20 +56,20 @@ There are a lot of mailers, so having to create each template by hand doesn't ma
 
 ```ruby
 module Mailers
-
   ALL = {
-    "Devise::Mailer" => [
-      "confirmation_instructions",
-      "reset_password_instructions",
-      "unlock_instructions",
-      "invitation_instructions"
+    'Devise::Mailer' => %w[
+      confirmation_instructions
+      reset_password_instructions
+      unlock_instructions
+      invitation_instructions
     ]
-  }
+  }.freeze
 
   def self.template_for(klass, method_name)
-    method_name = method_name.to_s.gsub("_email", "")
-    path = "#{Rails.root}/app/views/#{klass.to_s.underscore}/#{method_name.to_s}.md"
+    method_name = method_name.to_s.gsub('_email', '')
+    path = "#{Rails.root}/app/views/#{klass.to_s.underscore}/#{method_name}.md"
     raise "missing #{path}" unless File.exist?(path)
+
     File.read(path)
   end
 
@@ -97,7 +97,6 @@ module Mailers
       end
     end
   end
-
 end
 ```
 
@@ -122,17 +121,16 @@ We want to override the Devise mailer and fetch the mail template, if available.
 
 ```ruby
 class DeviseMailer < Devise::Mailer
-
   def template_paths
-    "devise/mailer"
+    'devise/mailer'
   end
 
   def devise_mail(record, action)
     initialize_from_record(record)
     @context = binding
-    @mail_template = Mailers.load("Devise::Mailer", action)
+    @mail_template = Mailers.load('Devise::Mailer', action)
     headers = headers_for(action)
-    template_view = "mail_templates/show.html.haml"
+    template_view = 'mail_templates/show.html.haml'
     headers[:subject] = @mail_template.subject unless @mail_template.subject.blank?
     mail headers do |format|
       format.html do
@@ -140,7 +138,6 @@ class DeviseMailer < Devise::Mailer
       end
     end
   end
-
 end
 ```
 
@@ -148,8 +145,8 @@ Declare the mailer in _config/initializers/devise.rb_.
 
 ```ruby
 Devise.setup do |config|
-  config.mailer = "DeviseMailer"
-  ...
+  config.mailer = 'DeviseMailer'
+  # ...
 end
 ```
 
@@ -158,21 +155,21 @@ end
 A simple test is to make sure we can actually render an e-mail. Here's what my _spec/mailers/devise_mailer_spec.rb_ looks like.
 
 ```ruby
-require "spec_helper"
+require 'spec_helper'
 
 describe DeviseMailer do
   before(:each) do
     @user = Fabricate(:user)
-    @user.stub!(:confirmation_token).and_return("confirmation-token")
-    @user.stub!(:unlock_token).and_return("unlock-token")
+    @user.stub!(:confirmation_token).and_return('confirmation-token')
+    @user.stub!(:unlock_token).and_return('unlock-token')
   end
-  Mailers::ALL["Devise::Mailer"].each do |method_name|
+  Mailers::ALL['Devise::Mailer'].each do |method_name|
     it "should respond to #{method_name}" do
       DeviseMailer.should respond_to method_name
     end
     it "#{method_name} should attempt to load a MailTemplate" do
       mail_template = Fabricate(:mail_template)
-      Mailers.should_receive(:load).with("Devise::Mailer", method_name.to_sym).and_return(mail_template)
+      Mailers.should_receive(:load).with('Devise::Mailer', method_name.to_sym).and_return(mail_template)
       DeviseMailer.send(method_name, @user)
     end
     it "#{method_name} should have a proper body" do

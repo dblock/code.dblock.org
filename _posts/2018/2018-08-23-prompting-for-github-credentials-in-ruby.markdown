@@ -14,12 +14,12 @@ Reading a username is fairly straightforward with `$stdin.gets.chomp`. We can im
 def username
   @username ||= begin
     username = `git config github.user`.chomp
-    username = get_username if username.empty?
+    username = prompt_username if username.empty?
     username
   end
 end
 
-def get_username
+def prompt_username
   print 'Enter GitHub username: '
   $stdin.gets.chomp
 rescue Interrupt => e
@@ -30,16 +30,18 @@ end
 We don't want to echo passwords.
 
 ```ruby
+require 'English'
+
 def password
-  @password ||= get_password
+  @password ||= prompt_password
 end
 
-def get_password
+def prompt_password
   print "Enter #{username}'s GitHub password (never stored): "
-  get_secure
+  read_secure_input
 end
 
-def get_secure
+def read_secure_input
   current_tty = `stty -g`
   system 'stty raw -echo -icanon isig' if $CHILD_STATUS.success?
   input = ''
@@ -102,17 +104,17 @@ end
 We recurse with 2FA until a token can be successfully created with `auth.create` or an error occurs. One such interesting error is when trying to create a token that already exists. Since token values cannot be obtained after creation, we must tell the user to delete the token manually. And we don't want to delete the token automatically because it will possibly break another app instance that has created it.
 
 ```ruby
-def get_code
+def prompt_code
   print 'Enter GitHub 2FA code: '
-  get_secure
+  read_secure_input
 end
 
 def github_token(code = nil)
   github(code).auth.create(scopes: ['public_repo'], note: note).token
 rescue Github::Error::Unauthorized => e
   case e.response_headers['X-GitHub-OTP']
-  when /required/ then
-    github_token(get_code)
+  when /required/
+    github_token(prompt_code)
   else
     raise e
   end

@@ -9,40 +9,40 @@ dblog_post_id: 401
 I've written my share of RSpec tests that look for specific meta tags in a web page under Capybara. It would be nice to be able to spell the following.
 
 ```ruby
-visit "/"
-page.should have_meta {
- "keywords" => "spline, reticulating",
- "description" => "Splines are being reticulated here."
-}
+visit '/'
+page.should have_meta({
+                        'keywords' => 'spline, reticulating',
+                        'description' => 'Splines are being reticulated here.'
+                      })
 ```
 
 Easy. This is my _spec/support/matchers/have_meta.rb_.
 
 ```ruby
 class HaveMeta
- attr_accessor :expected_val, :actual_val, :attribute
+  attr_accessor :expected_val, :actual_val, :attribute
 
- def initialize(expected)
-   @expected = expected
- end
+  def initialize(expected)
+    @expected = expected
+  end
 
- def matches?(page)
-   @expected.all? do |key, val|
-     meta = page.find(:xpath, "//head/meta[@property='#{key}' or @name='#{key}']")
-     self.actual_val = meta ? meta.native.attribute("content") : nil
-     self.expected_val = val
-     self.attribute = key
-     actual_val.include? expected_val
-   end
- end
+  def matches?(page)
+    @expected.all? do |key, val|
+      meta = page.find(:xpath, "//head/meta[@property='#{key}' or @name='#{key}']")
+      self.actual_val = meta&.native&.attribute('content')
+      self.expected_val = val
+      self.attribute = key
+      actual_val.include? expected_val
+    end
+  end
 
- def failure_message_for_should
-   "expected '#{attribute}' to contain '#{expected_val}' in '#{actual_val}'"
- end
+  def failure_message_for_should
+    "expected '#{attribute}' to contain '#{expected_val}' in '#{actual_val}'"
+  end
 end
 
-def have_meta(expected)
- HaveMeta.new(expected)
+def have_meta(expected) # rubocop:disable Naming/PredicatePrefix -- RSpec matcher factory.
+  HaveMeta.new(expected)
 end
 ```
 

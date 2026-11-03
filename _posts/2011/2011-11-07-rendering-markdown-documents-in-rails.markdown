@@ -15,31 +15,31 @@ We use the following code to render API documentation, which is written in [Mark
 Add a route that will capture the document filename in _config/routes.rb_. Bonus features: a namespaced controller and a redirect to _/api/v1/docs_ for _/api/v1_.
 
 ```ruby
-scope 'api', :module => 'api' do
+scope 'api', module: 'api' do
   match '/:version' => redirect('/api/%{version}/docs')
-  match '/:version/docs/(/:page)' => "docs#show"
+  match '/:version/docs/(/:page)' => 'docs#show'
 end
 ```
 
 Create a _controllers/api/docs_controller.rb_.
 
 ```ruby
-class Api::DocsController < ApplicationController
-
+module Api
+  class DocsController < ApplicationController
   # GET /api/docs/:version/:page
-  def show
-    @version = params[:version]
-    @page = (params[:page] || "index").downcase.gsub(/[^a-z0-9]/, '') # strip any non-alpha-numeric characters
-    filename = File.join(Rails.root, 'public/api/' + @version + "/docs/" + @page + '.md')
-    begin
-      file = File.open(filename, "rb")
-      @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
-      render :text => @markdown.render(file.read), :layout => true
-    rescue Errno::ENOENT
-      render :file => "public/404.html", :status => 404
+    def show
+      @version = params[:version]
+      @page = (params[:page] || 'index').downcase.gsub(/[^a-z0-9]/, '') # strip any non-alpha-numeric characters
+      filename = File.join(Rails.root, "public/api/#{@version}/docs/#{@page}.md")
+      begin
+        content = File.binread(filename)
+        @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true)
+        render text: @markdown.render(content), layout: true
+      rescue Errno::ENOENT
+        render file: 'public/404.html', status: 404
+      end
     end
   end
-
 end
 ```
 

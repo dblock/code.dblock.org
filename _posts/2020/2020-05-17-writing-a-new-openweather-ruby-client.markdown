@@ -9,7 +9,7 @@ I have been writing Ruby clients for various services for a few years now using 
 A couple of weeks ago I took to [OpenWeatherMap.org](https://openweathermap.org/api)'s with [open-weather-ruby-client](https://github.com/dblock/open-weather-ruby-client). I'm now [using it](https://github.com/dblock/slack-strava/pull/88) in [Slava](https://slava.playplay.io) to fetch weather during a Strava activity.
 
 ```ruby
-client = OpenWeather::Client.new(api_key: "...")
+client = OpenWeather::Client.new(api_key: '...')
 
 data = client.current_weather(city: 'London')
 # => OpenWeather::Models::City::Weather
@@ -39,7 +39,7 @@ And can return some weather history via the [OneCall API](https://openweathermap
 data = client.one_call(
   lat: 33.441792,
   lon: -94.037689,
-  dt: Time.now - 24 * 60 * 60
+  dt: Time.now - (24 * 60 * 60)
 ) # => OpenWeather::Models::OneCall::Weather
 
 data.lat # => 33.44

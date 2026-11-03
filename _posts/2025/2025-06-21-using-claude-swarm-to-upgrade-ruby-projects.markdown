@@ -22,7 +22,7 @@ $ claude "Say hello."
 Install the [claude_swarm](http://github.com/parruda/claude-swarm) gem. Note that the gem name has an `_`.
 
 ```bash
-$ gem install claude_swarm
+gem install claude_swarm
 ```
 
 ```bash

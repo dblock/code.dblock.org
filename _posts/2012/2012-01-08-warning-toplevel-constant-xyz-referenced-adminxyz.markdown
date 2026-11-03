@@ -15,7 +15,7 @@ This was only happening under Spork, so I posted [a similar question](https://gr
 I also found a workaround, to require the Admin controllers first in _spec/spec_helper.rb_.
 
 ```ruby
-Dir[File.expand_path("app/controllers/admin/\*.rb")].each do |file|
+Dir[File.expand_path('app/controllers/admin/*.rb')].sort.each do |file|
   require file
 end
 ```

@@ -13,37 +13,35 @@ Our image upload pipeline has gotten a bit too long and no longer fits in the He
 
 So, here's a slightly hacky solution to delay-processing of select [CarrierWave](https://github.com/jnicklas/carrierwave) image versions.
 
-Let's make all processing conditional upon _:is_processing_delayed?_ and _:is_processing_immediate?_. You see where this is going.
+Let's make all processing conditional upon _:processing_delayed?_ and _:processing_immediate?_. You see where this is going.
 
 ```ruby
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
 
-  def is_processing_delayed?(img = nil)
-    !! @is_processing_delayed
+  def processing_delayed?(img = nil)
+    !!@processing_delayed
   end
 
-  def is_processing_immediate?(img = nil)
-    ! is_processing_delayed?
+  def processing_immediate?(img = nil)
+    !processing_delayed?
   end
 
-  def is_processing_delayed=(value)
-    @is_processing_delayed = value
+  attr_writer :processing_delayed
+
+  version :small, if: :processing_immediate? do
+    process resize_to_limit: [200, 200]
   end
 
-  version :small, :if => :is_processing_immediate? do
-    process :resize_to_limit => [200, 200]
+  version :medium, if: :processing_immediate? do
+    process resize_to_limit: [260, 260]
   end
 
-  version :medium, :if => :is_processing_immediate? do
-    process :resize_to_limit => [260, 260]
-  end
-
-  version :watermarked, :if => :is_processing_delayed? do
+  version :watermarked, if: :processing_delayed? do
     process :watermark
   end
 
-  ...
+  # ...
 end
 ```
 
@@ -51,8 +49,8 @@ By default processing is immediate, there's nothing to do. Add the following to 
 
 ```ruby
 def recreate_delayed_versions!
-    image.is_processing_delayed = true
-    image.recreate_versions!
+  image.processing_delayed = true
+  image.recreate_versions!
 end
 ```
 

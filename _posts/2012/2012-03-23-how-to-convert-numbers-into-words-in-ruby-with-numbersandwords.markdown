@@ -22,7 +22,7 @@ These produce "forty-two" and "сорок два".
 And a fun one.
 
 ```ruby
-2935174315119654654654654654.to_words
+2_935_174_315_119_654_654_654_654_654.to_words
 ```
 
 This is obviously _"two octillion nine hundred thirty-five septillion one hundred seventy-four sextillion three hundred fifteen quintillion one hundred nineteen quadrillion six hundred fifty-four trillion six hundred fifty-four billion six hundred fifty-four million six hundred fifty-four thousand six hundred fifty-four"_.

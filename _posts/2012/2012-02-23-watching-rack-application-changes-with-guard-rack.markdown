@@ -14,9 +14,9 @@ For a typical Rack application, including one that uses Grape, add _guard_, _gua
 
 ```ruby
 group :development do
-  gem "guard"
-  gem "guard-bundler"
-  gem "guard-rack"
+  gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-rack'
 end
 ```
 

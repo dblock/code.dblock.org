@@ -13,10 +13,12 @@ We also need to upload images to different S3 buckets for different Heroku appli
 I needed to change the directory structure and the naming of the files. We started with defining _paperclip_path - _CarrierWave is an improvement over [Paperclip](https://github.com/thoughtbot/paperclip), a system to attach files to ActiveRecord records and has some backward compatibility elements. We use the same uploader for two related models, so it was convenient to define a single template path.
 
 ```ruby
-include CarrierWave::Compatibility::Paperclip
+class ImageUploader < CarrierWave::Uploader::Base
+  include CarrierWave::Compatibility::Paperclip
 
-def paperclip_path
-   ":class/:id/:basename_:style.:extension"
+  def paperclip_path
+    ':class/:id/:basename_:style.:extension'
+  end
 end
 ```
 
@@ -26,6 +28,6 @@ CarrierWave recommends [overriding store_dir in the uploader](https://groups.goo
 
 ```ruby
 def store_path(for_file = filename)
-  self.model.class.name.underscore.pluralize + "/" + self.model.slug + "/" + (version_name || :original).to_s + ".jpg"
+  "#{model.class.name.underscore.pluralize}/#{model.slug}/#{(version_name || :original)}.jpg"
 end
 ```

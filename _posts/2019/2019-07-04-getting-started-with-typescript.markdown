@@ -154,7 +154,7 @@ returned from f after a second
 ### Adding Lodash
 
 ```bash
-$ npm install --save lodash @types/lodash
+npm install --save lodash @types/lodash
 ```
 
 Better, create a `package.json` and run `npm install`.

@@ -12,10 +12,10 @@ The server-side JavaScript is almost like a stored procedure and is documented [
 
 ```ruby
 def self.install_javascript
-  getWeekJs = Rails.root.join("lib/javascript/getWeek.js")
-  if collection.master['system.js'].find_one({'_id' => "getWeek"}).nil?
-    collection.master.db.add_stored_function("getWeek", File.new(getWeekJs).read)
-  end
+  get_week_js = Rails.root.join('lib/javascript/getWeek.js')
+  return unless collection.master['system.js'].find_one({ '_id' => 'getWeek' }).nil?
+
+  collection.master.db.add_stored_function('getWeek', File.new(get_week_js).read)
 end
 ```
 
@@ -25,12 +25,12 @@ Let's now map/reduce our _widgets_ into _widgets_weekly_ using the created_at ti
 
 ```ruby
 def self.rollup_weekly
-  map = <<-EOS
+  map = <<-JAVASCRIPT
     function() {
         emit({'ts': this.created_at.getFullYear() + '-' + getWeek(this.created_at) }, {count: 1})
     }
-  EOS
-  reduce = <<-EOS
+  JAVASCRIPT
+  reduce = <<-JAVASCRIPT
     function(key, values) {
       var count = 0;
       values.forEach(function(value) {
@@ -38,8 +38,8 @@ def self.rollup_weekly
       });
       return({ count: count });
     }
-  EOS
-  collection.map_reduce(map, reduce, :out => "widgets_weekly", :query => {})
+  JAVASCRIPT
+  collection.map_reduce(map, reduce, out: 'widgets_weekly', query: {})
 end
 ```
 

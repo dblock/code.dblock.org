@@ -40,7 +40,7 @@ The bot starts from [config.ru](https://github.com/dblock/slack-gamebot2/blob/ma
 
 ### Bot Installation
 
-Users that click "Add to Slack" on the public website are redirected to a Slack OAuth v2 workflow, allow the bot to be installed, and are redirected back with a `code`parameter that is then [`POSTed`](https://github.com/dblock/slack-gamebot2/blob/main/public/js/register.js) to the bot API, which [creates](https://github.com/dblock/slack-gamebot2/blob/main/lib/api/endpoints/teams_endpoint.rb#L41) a `Team`. Slack then begins sending events to the API endpoints.
+Users that click "Add to Slack" on the public website are redirected to a Slack OAuth v2 workflow, allow the bot to be installed, and are redirected back with a `code` parameter that is then [`POSTed`](https://github.com/dblock/slack-gamebot2/blob/main/public/js/register.js) to the bot API, which [creates](https://github.com/dblock/slack-gamebot2/blob/main/lib/api/endpoints/teams_endpoint.rb#L41) a `Team`. Slack then begins sending events to the API endpoints.
 
 ### Slack Interactions
 

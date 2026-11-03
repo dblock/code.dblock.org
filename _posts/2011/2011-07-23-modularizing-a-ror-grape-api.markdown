@@ -11,27 +11,25 @@ A lot of people ask me whether we use Rails controllers for our API. We don't, w
 Here's our current code from API v1.
 
 ```ruby
-class Api_v1 < Grape::API
-    prefix 'api'
-    version 'v1'
-    rescue_from :all, :backtrace => true
-    error_format :json
-    helpers do
-        def authenticated
-            if warden.authenticated?
-                return true
-            else
-                error!('401 Unauthorized', 401)
-            end
-        end
+class ApiV1 < Grape::API
+  prefix 'api'
+  version 'v1'
+  rescue_from :all, backtrace: true
+  error_format :json
+  helpers do
+    def authenticated
+      return true if warden.authenticated?
+
+      error!('401 Unauthorized', 401)
     end
-    namespace :me do
-        # GET /api/v1/me/info
-        get "info" do
-            authenticated
-            current_user.as_json({properties: :self})
-        end
+  end
+  namespace :me do
+      # GET /api/v1/me/info
+    get 'info' do
+      authenticated
+      current_user.as_json({ properties: :self })
     end
+  end
 end
 ```
 
@@ -40,7 +38,7 @@ We want a separate file for helpers and for the _me_ API. We can move the helper
 ```ruby
 module ApiAuth
   def authenticated
-    ...
+    # ...
   end
 end
 ```
@@ -48,12 +46,12 @@ end
 The namespace DSL is a bit tricky. Those _namespace_ and _get_ are actually namespace functions in _Grape::API_. Fortunately Ruby calls _included(module)_ for every included module. We can call the public methods on a _namespace_ function ourselves.
 
 ```ruby
-module Api_v1_Me
+module ApiV1Me
   def self.included(api)
     api.namespace :me do
       # GET /api/v1/me/info
-      get "info" do
-        ...
+      get 'info' do
+        # ...
       end
     end
   end
@@ -63,29 +61,30 @@ end
 Let's combine all of this into an API class.
 
 ```ruby
-class Api_v1 < Grape::API
+class ApiV1 < Grape::API
   prefix 'api'
   version 'v1'
-  rescue_from :all, :backtrace => true
+  rescue_from :all, backtrace: true
   error_format :json
   helpers do
     include ApiAuth
   end
-  include Api_v1_Me
+  include ApiV1Me
 end
 ```
 
 The nice thing about this implementation is that we can now compose an API v2 with a bunch of v1 modules and some v2 ones. The not-so-nice part is the _included_ construct. I'd like to write the following.
 
 ```ruby
-module Api_v1_Me
-    include Grape::APIModule
-    namespace :me do
-        # GET /api/v1/me/info
-        get "info" do
-        ...
-        end
+module ApiV1Me
+  include Grape::APIModule
+
+  namespace :me do
+      # GET /api/v1/me/info
+    get 'info' do
+    # ...
     end
+  end
 end
 ```
 

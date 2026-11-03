@@ -21,7 +21,7 @@ I created an app on Strava and noted the access token from [strava.com/settings/
 Note that this token expires quickly. See [this post](/2018/11/17/dealing-with-strava-api-token-migration.html) for how to refresh it, in general, and below for how to make this process work in Travis-CI.
 
 ```ruby
-client = Strava::Api::V3::Client.new(access_token: ENV['STRAVA_API_TOKEN'])
+client = Strava::Api::V3::Client.new(access_token: ENV.fetch('STRAVA_API_TOKEN', nil))
 
 client.athlete_activities do |activity|
   activity.start_date_local # => ...
@@ -72,28 +72,28 @@ end
 I wrote a Rake task that iterates over Strava activities and outputs a `.md` file for each run.
 
 ```ruby
-filename = [
+filename_parts = [
   "_posts/#{activity.start_date_local.year}/#{activity.start_date_local.strftime('%Y-%m-%d')}",
   activity.type.downcase,
   activity.distance_in_miles,
   activity.time_in_hours
-].join('-') + '.md'
+]
+filename = "#{filename_parts.join('-')}.md"
 
-FileUtils::mkdir_p "_posts/#{activity.start_date_local.year}"
+FileUtils.mkdir_p "_posts/#{activity.start_date_local.year}"
 
-File.open filename, "w" do |file|
-  file.write <<-EOS
----
-layout: post
-title: "#{activity.name}"
-date: "#{activity.start_date_local.strftime('%F %T')}"
----
-<ul>
- <li>Distance: #{activity.distance_in_miles}</li>
- <li>Time: #{activity.time_in_hours}</li>
- <li>Pace: #{activity.pace_per_mile}</li>
-</ul>
-EOS
+File.write(filename, <<~MARKDOWN)
+  ---
+  layout: post
+  title: "#{activity.name}"
+  date: "#{activity.start_date_local.strftime('%F %T')}"
+  ---
+  <ul>
+   <li>Distance: #{activity.distance_in_miles}</li>
+   <li>Time: #{activity.time_in_hours}</li>
+   <li>Pace: #{activity.pace_per_mile}</li>
+  </ul>
+MARKDOWN
 ```
 
 For example, [2018/2018-01-21-run-13.34mi-1h47m18s.md](https://github.com/dblock/run.dblock.org/blob/gh-pages/_posts/2018/2018-01-21-run-13.34mi-1h47m18s.md) is generated for a post titled [#FLMH](https://run.dblock.org/2018/01/21/run-13.34mi-1h47m18s.html).

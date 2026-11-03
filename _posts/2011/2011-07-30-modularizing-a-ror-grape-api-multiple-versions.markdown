@@ -6,17 +6,17 @@ date: 2011-07-30 06:12:01
 tags: [grape, rails, ruby, api, architecture, testing]
 dblog_post_id: 239
 ---
-We made some progress with modularizing our Grape API in the [last post](/modularizing-a-ror-grape-api). But we only had one version and declared _Api_v1_ as our main API entry. Unless you're Netflix and need an API per device family (I know, [wow!](https://web.archive.org/web/20111126224934/https://blog.programmableweb.com/2011/07/28/redesigning-the-netflix-api-no-versions-many-endpoints/), 18'000 different devices use the Netflix API), you might want to make a Grape API with two versions.
+We made some progress with modularizing our Grape API in the [last post](/modularizing-a-ror-grape-api). But we only had one version and declared _ApiV1_ as our main API entry. Unless you're Netflix and need an API per device family (I know, [wow!](https://web.archive.org/web/20111126224934/https://blog.programmableweb.com/2011/07/28/redesigning-the-netflix-api-no-versions-many-endpoints/), 18'000 different devices use the Netflix API), you might want to make a Grape API with two versions.
 
 We'll start by declaring an API class the way we would like to see it.
 
 ```ruby
 class Api < Grape::API
   prefix 'api'
-  rescue_from :all, :backtrace => true
+  rescue_from :all, backtrace: true
   error_format :json
-  include Api_v1
-  include Api_v2
+  include ApiV1
+  include ApiV2
 end
 ```
 
@@ -27,14 +27,14 @@ match '/api/v1/\*other' => Api
 match '/api/v2/\*other' => Api
 ```
 
-What does _Api_v1_ or _Api_v2_ look like? It's  a little tricky. We need to include api modules into the parent Grape API, like this.
+What does _ApiV1_ or _ApiV2_ look like? It's  a little tricky. We need to include api modules into the parent Grape API, like this.
 
 ```ruby
-module Api_v1
+module ApiV1
   def self.included(api)
     api.version 'v1'
-    api.include Api_v1_Me
-    ...
+    api.include ApiV1Me
+    # ...
   end
 end
 ```
@@ -55,18 +55,19 @@ end
 
 class Api < Grape::API
   include ApiModule
+
   prefix 'api'
-  ...
+  # ...
 end
 ```
 
-The Api_v1 will use _module_ instead of _include_.
+The ApiV1 will use _module_ instead of _include_.
 
 ```ruby
-module Api_v1
+module ApiV1
   def self.included(api)
     api.version 'v1'
-    api.module Api_v1_Me
+    api.module ApiV1Me
   end
 end
 ```
@@ -77,9 +78,9 @@ Don't forget to write some tests. I've made [a pull request](https://github.com/
 require 'spec_helper'
 
 describe Api do
-  describe "version" do
-    it "includes version 1 and 2" do
-      Api::versions.should == ['v1', 'v2']
+  describe 'version' do
+    it 'includes version 1 and 2' do
+      Api.versions.should == %w[v1 v2]
     end
   end
 end

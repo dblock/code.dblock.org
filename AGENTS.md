@@ -24,13 +24,13 @@ A pre-commit hook runs `bundle exec rake precommit`, including `spell:staged` to
 - **Add a legitimate word** (acronym, proper noun, technical term): add it to `.spellcheck.txt`, one word per line, in alphabetical order.
 - **Suppress a word inline**: wrap it in backticks (inline code) to exclude it from spell checking.
 
-Spelling uses `rubocop-spellcheck` with its bundled English dictionary and `.spellcheck.txt`. Run `bundle exec rubocop` for Ruby lint and spelling, or `bundle exec rake spell:check` for spelling only. Configuration is in `.rubocop.yml`; front matter spelling checks the `title` field.
+Spelling uses `rubocop-spellcheck` with its bundled English dictionary and `.spellcheck.txt`. Run `bundle exec rubocop` for prose, Ruby lint, and spelling, or `bundle exec rake spell:check` for spelling only. Configuration is in `.rubocop.yml`; front matter spelling checks the `title` field.
 
 ### Style
 
-A pre-commit hook also runs `markdownlint-cli2` using `.markdownlint.yaml`. Fix any reported issues before committing.
+A pre-commit hook also runs `bundle exec rake lint`, using released `rubocop-prose` 0.2.x for Markdown and released `rubocop-md` 3.x for Ruby code fences. Dependency versions are pinned in `Gemfile.lock`. Configuration is in `.rubocop.yml`. Run `bundle exec rubocop -a --except Spellcheck/Spelling` for safe autocorrection; review changes to historical examples rather than changing their intended behavior.
 
-Pushes and pull requests run the full Markdown checker, including `markdownlint-rule-single-line-paragraphs`, across all Markdown files. Keep each prose paragraph on one source line; intentional Markdown hard breaks and `<br>` boundaries remain supported. A separate workflow checks spelling.
+Pushes and pull requests check all Markdown, Ruby files, and explicitly Ruby-tagged code fences. Unlabeled code blocks are not guessed to be Ruby. Keep each prose paragraph on one source line (`Prose/MaxLength`, with `Max: false`); intentional Markdown hard breaks and `<br>` boundaries remain supported. A separate workflow checks spelling.
 
 ### Downloads
 

@@ -73,7 +73,7 @@ AI of course still makes mistakes:
 #
 # Fixed by combining every embed into a single card/attachment.
 body = embeds.flat_map { |embed| card_body(embed) }
-activity.add_card(::Teams::Cards::AdaptiveCard.new(*body)) unless body.empty?
+activity.add_card(Teams::Cards::AdaptiveCard.new(*body)) unless body.empty?
 ```
 
 ```ruby

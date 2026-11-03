@@ -8,10 +8,10 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.1'
+        ruby-version: '3.4'
         bundler-cache: true
     - run: |
         LINK_CHECKER=1 bundle exec jekyll build --future

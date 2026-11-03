@@ -9,10 +9,10 @@ dblog_post_id: 238
 Yet again I have to deal with 3rd party licenses, this time in RoR. It's a pretty common thing to do for technical managers and in my last job I ended up creating [3licenses](https://github.com/dblock/3licenses/). For starters, we must know which open-source licenses are used. This can be a daunting exercise for large or complex projects. Then, you have to maintain the list and make sure it's accurate with every release. Figuring out which licenses are used in 3rd party gems is relatively easy, because each gem spec contains a licenses array, we can do something like this.
 
 ```ruby
-Gem.loaded_specs.each do |key, spec|
-    spec.licenses.each do |license|
-        puts "#{spec} => #{license}"
-    end
+Gem.loaded_specs.each_value do |spec|
+  spec.licenses.each do |license|
+    puts "#{spec} => #{license}"
+  end
 end
 ```
 
@@ -27,9 +27,9 @@ require 'gem_licenses'
 
 task :licenses do
   Gem.licenses.each do |license, gems|
-    puts "#{license}"
-    gems.sort_by { |gem| gem.name }.each do |gem|
-      puts "\* #{gem.name} #{gem.version} (#{gem.homepage}) - #{gem.summary}"
+    puts license
+    gems.sort_by(&:name).each do |gem|
+      puts "* #{gem.name} #{gem.version} (#{gem.homepage}) - #{gem.summary}"
     end
   end
 end
@@ -39,13 +39,13 @@ Finally, if you are a gem author, please take the time  to specify which license
 
 ```ruby
 Jeweler::Tasks.new do |gem|
-  gem.name = "gem-licenses"
-  gem.homepage = "https://github.com/dblock/gem-licenses"
-  gem.license = "MIT"
-  gem.summary = "List all gem licenses."
-  gem.description = "Attempts to figure out what licenses various gems use."
-  gem.email = "dblock@dblock.org"
-  gem.authors = ["Daniel Doubrovkine"]
+  gem.name = 'gem-licenses'
+  gem.homepage = 'https://github.com/dblock/gem-licenses'
+  gem.license = 'MIT'
+  gem.summary = 'List all gem licenses.'
+  gem.description = 'Attempts to figure out what licenses various gems use.'
+  gem.email = 'dblock@dblock.org'
+  gem.authors = ['Daniel Doubrovkine']
 end
 ```
 

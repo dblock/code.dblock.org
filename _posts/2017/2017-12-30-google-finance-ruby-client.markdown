@@ -26,7 +26,8 @@ quote.change_in_percent_s # "+0.11%"
 ```ruby
 prices = GoogleFinance::History.get('MSFT')
 
-prices.first # #<GoogleFinance::Price close=85.54 date=#<Date: 2017-12-29> high=86.05 low=85.5 open=85.63 volume=18717406>
+prices.first
+# #<GoogleFinance::Price close=85.54 date=#<Date: 2017-12-29> high=86.05 low=85.5 open=85.63 volume=18717406>
 ```
 
 ### Intraday Prices

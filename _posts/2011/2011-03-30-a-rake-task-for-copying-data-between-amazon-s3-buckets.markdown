@@ -14,11 +14,11 @@ We'll inspire ourselves from [this post](https://web.archive.org/web/20130801073
 
 ```ruby
 def s3i
-  @@s3 ||= s3i_open
+  @s3i ||= s3i_open
 end
 
 def s3i_open
-  s3_config = YAML.load_file(Rails.root.join("config/heroku.yml")).symbolize_keys
+  s3_config = YAML.load_file(Rails.root.join('config/heroku.yml')).symbolize_keys
   s3_key_id = s3_config[:production]['config']['S3_ACCESS_KEY_ID']
   s3_access_key = s3_config[:production]['config']['S3_SECRET_ACCESS_KEY']
   RightAws::S3Interface.new(s3_key_id, s3_access_key, { logger: Rails.logger })
@@ -29,7 +29,7 @@ Once connected we need to fetch all the source keys from the source bucket. You 
 
 ```ruby
 logger.info("[#{Time.now}] fetching keys from #{args[:from]}")
-source_objects_hash = Hash.new
+source_objects_hash = {}
 s3i.incrementally_list_bucket(args[:from]) do |response|
   response[:contents].each do |source_object|
     source_objects_hash[source_object[:key]] = source_object
@@ -45,34 +45,33 @@ Here's the full Rake task. Edit your bucket names and run _rake s3:sync:producti
 require 'logger'
 
 namespace :s3 do
-  namespace :sync
-
+  namespace :sync do
     def s3i
-      @@s3 ||= s3i_open
+      @s3i ||= s3i_open
     end
 
     def s3i_open
-      s3_config = YAML.load_file(Rails.root.join("config/heroku.yml")).symbolize_keys
+      s3_config = YAML.load_file(Rails.root.join('config/heroku.yml')).symbolize_keys
       s3_key_id = s3_config[:production]['config']['S3_ACCESS_KEY_ID']
       s3_access_key = s3_config[:production]['config']['S3_SECRET_ACCESS_KEY']
       RightAws::S3Interface.new(s3_key_id, s3_access_key, { logger: Rails.logger })
     end
 
-    desc "Sync production bucket to staging."
+    desc 'Sync production bucket to staging.'
     namespace :production do
-      desc "Sync production bucket to staging."
-      task :to_staging => :environment do
-        Rake::Task["s3:sync:syncObjects"].execute({ from: "production", to: "staging" })
+      desc 'Sync production bucket to staging.'
+      task to_staging: :environment do
+        Rake::Task['s3:sync:syncObjects'].execute({ from: 'production', to: 'staging' })
       end
     end
 
-    desc "Sync two s3 buckets."
-    task :syncObjects, [:from, :to] => :environment do |t, args|
+    desc 'Sync two s3 buckets.'
+    task :syncObjects, %i[from to] => :environment do |t, args|
       start_time = Time.now
       logger.info("[#{Time.now}] synchronizing from #{args[:from]} to #{args[:to]}")
 
       logger.info("[#{Time.now}] fetching keys from #{args[:from]}")
-      source_objects_hash = Hash.new
+      source_objects_hash = {}
       s3i.incrementally_list_bucket(args[:from]) do |response|
         response[:contents].each do |source_object|
           source_objects_hash[source_object[:key]] = source_object
@@ -80,7 +79,7 @@ namespace :s3 do
       end
 
       logger.info("[#{Time.now}] fetching keys from #{args[:to]}")
-      target_objects_hash = Hash.new
+      target_objects_hash = {}
       s3i.incrementally_list_bucket(args[:to]) do |response|
         response[:contents].each do |target_object|
           target_objects_hash[target_object[:key]] = target_object
@@ -91,10 +90,10 @@ namespace :s3 do
 
       source_objects_hash.each do |key, source_object|
         target_object = target_objects_hash[key]
-        if (target_object.nil?)
+        if target_object.nil?
           logger.info(" #{key}: copy")
           s3i.copy(args[:from], key, args[:to], key)
-        elsif (DateTime.parse(target_object[:last_modified]) < DateTime.parse(source_object[:last_modified]))
+        elsif DateTime.parse(target_object[:last_modified]) < DateTime.parse(source_object[:last_modified])
           logger.info(" #{key}: update")
           s3i.copy(args[:from], key, args[:to], key)
         else
@@ -103,7 +102,7 @@ namespace :s3 do
       end
 
       target_objects_hash.each_key do |key|
-        if (! source_objects_hash.has_key?(key))
+        unless source_objects_hash.key?(key)
           logger.info(" #{key}: delete")
           s3i.delete(args[:to], key)
         end
@@ -132,7 +131,7 @@ end
 Unfortunately, this forces me to have a public bucket, meaning the list of files can be enumerated. That's not what I want. Digging deeper, the S3 interface takes an [x-amz-acl header](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) that allows us to specify a canned target ACL during copy.
 
 ```ruby
-s3i.copy(args[:from], key, args[:to], key, :copy, { 'x-amz-acl' => 'public-read' } )
+s3i.copy(args[:from], key, args[:to], key, :copy, { 'x-amz-acl' => 'public-read' })
 ```
 
 Please suggest any improvements!

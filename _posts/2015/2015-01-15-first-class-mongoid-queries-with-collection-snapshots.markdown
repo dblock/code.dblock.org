@@ -30,6 +30,7 @@ class WidgetAndGadget
     Widget.all.each do |widget|
       Gadget.all.each do |gadget|
         next unless Random.rand(2) == 1
+
         WidgetAndGadget.create!(widget: widget, gadget: gadget)
       end
     end
@@ -46,14 +47,13 @@ class WidgetAndGadget
     Widget.all.each do |widget|
       Gadget.all.each do |gadget|
         next unless Random.rand(2) == 1
+
         widget = WidgetAndGadget.where(widget: widget, gadget: gadget).first
         widget ||= WidgetAndGadget.create!(widget: widget, gadget: gadget)
         widgets_and_gadgets << widget
       end
     end
-    (WidgetAndGadget.all.to_a - widgets_and_gadgets).each do |pair|
-      pair.destroy
-    end
+    (WidgetAndGadget.all.to_a - widgets_and_gadgets).each(&:destroy)
   end
 end
 ```
@@ -70,6 +70,7 @@ class WidgetsAndGadgets
     Widget.all.each do |widget|
       Gadget.all.each do |gadget|
         next unless Random.rand(2) == 1
+
         collection_snapshot.insert(widget_id: widget.id, gadget_id: gadget.id)
       end
     end

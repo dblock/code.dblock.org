@@ -26,6 +26,9 @@ jobs:
           ruby-version: '3.4'
           bundler-cache: true
 
+      - name: Run integration tests
+        run: bundle exec rake test
+
       - name: Build Jekyll site
         run: bundle exec jekyll build
 

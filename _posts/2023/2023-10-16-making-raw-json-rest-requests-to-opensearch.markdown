@@ -211,7 +211,7 @@ The Ruby client added `.http` in 3.1.0.
 A simple `GET`.
 
 ```ruby
-client = OpenSearch::Client.new(...)
+client = OpenSearch::Client.new # connection options omitted
 
 info = client.http.get('/')
 puts info
@@ -221,14 +221,14 @@ Create a document.
 
 ```ruby
 document = { title: 'Moneyball', director: 'Bennett Miller', year: 2011 }
-client.http.post("/movies/_doc/1", body: document)
+client.http.post('/movies/_doc/1', body: document)
 ```
 
 Search for a document.
 
 ```ruby
 results = client.http.post(
-  "/movies/_search", 
+  '/movies/_search',
   body: { query: { match: { director: 'miller' } } }
 )
 
