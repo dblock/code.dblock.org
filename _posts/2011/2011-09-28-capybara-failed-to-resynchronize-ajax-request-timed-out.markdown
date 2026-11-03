@@ -19,11 +19,11 @@ I used to attribute this error to little green elves inside of Capybara, Seleniu
 The spec code is as follows.
 
 ```ruby
-context "capybara", :driver => :selenium do
-  it "should upload and save a pic" do
+context 'capybara', driver: :selenium do
+  it 'should upload and save a pic' do
     visit '/upload/'
     wait_until { find('#upload', visible: true) }
-    attach_file('Drop here', File.join(Rails.root, "/spec/assets/pic.jpg"))
+    attach_file('Drop here', File.join(Rails.root, '/spec/assets/pic.jpg'))
     wait_until { find('.edit_pic', visible: true) }
   end
 end

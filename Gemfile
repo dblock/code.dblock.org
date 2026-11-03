@@ -10,7 +10,10 @@ gem 'jekyll-paginate', '~> 1.1'
 gem 'jekyll-redirect-from', '~> 0.17.0'
 gem 'jekyll-sass-converter', '~> 2.2'
 gem 'jekyll-sitemap', '~> 1.4'
+gem 'minitest', require: false
 gem 'rake'
+gem 'rubocop-md', '~> 3.0', require: false
+gem 'rubocop-prose', '~> 0.2.0', require: false
 gem 'rubocop-rake', require: false
 gem 'ruby-link-checker'
 gem 'typhoeus'

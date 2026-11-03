@@ -11,7 +11,7 @@ In the [previous post](/2018/07/30/add-remove-list-items-react-native.html) I ad
 The React Native ecosystem promises a rich set of components that work seamlessly together, much like the Ruby world. My first timer implementation used [react-timer-machine](https://github.com/yassinedoghri/react-timer-machine), _a fully controllable and customizable timer component_.
 
 ```shell
-$ yarn add react-timer-machine
+yarn add react-timer-machine
 ```
 
 ```jsx

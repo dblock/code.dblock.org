@@ -16,11 +16,10 @@ I called bankruptcy, erased all recurrent 1:1s, and tried to improvise the sched
 
 I then introduced a **tracking spreadsheet** that recorded when I had a 1:1 with anyone.
 
-|---------+-----------------------+--------------------+------------------------+---------------------|
-|  name   |  days since last 1:1  |  date of last 1:1  |  date of previous 1:1  |  date of older 1:1  |
-|:-------:|:---------------------:|:------------------:|:----------------------:|:-------------------:|
-| Bob     |         42            |    2019/01/05      |     2018/09/03         |     2018/04/03      |
-| Jane    |         21            |    2019/02/03      |     2018/05/01         |     2017/01/03      |
+| name      | days since last 1:1     | date of last 1:1     | date of previous 1:1     | date of older 1:1     |
+| :-------: | :---------------------: | :------------------: | :----------------------: | :-------------------: |
+| Bob       | 42                      | 2019/01/05           | 2018/09/03               | 2018/04/03            |
+| Jane      | 21                      | 2019/02/03           | 2018/05/01               | 2017/01/03            |
 
 Sorting by _date of last 1:1_, oldest first, told me who to prioritize. This was a huge win.
 

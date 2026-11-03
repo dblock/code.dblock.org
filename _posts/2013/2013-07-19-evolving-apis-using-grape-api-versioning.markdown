@@ -12,20 +12,20 @@ Starting with the Grape 0.6.0 you can have a third alternative: building a new A
 
 ```ruby
 module Acme
- class V1 < Grape::API
-   format :json
-   version 'v1', using: :header, vendor: 'acme', format: :json
+  class V1 < Grape::API
+    format :json
+    version 'v1', using: :header, vendor: 'acme', format: :json
 
-   desc "Returns the current API version, v1."
-   get do
-     { version: 'v1' }
-   end
+    desc 'Returns the current API version, v1.'
+    get do
+      { version: 'v1' }
+    end
 
-   desc "Returns pong."
-   get "ping" do
-     { ping: "pong" }
-   end
- end
+    desc 'Returns pong.'
+    get 'ping' do
+      { ping: 'pong' }
+    end
+  end
 end
 ```
 
@@ -33,22 +33,22 @@ Define the next API version.
 
 ```ruby
 module Acme
- class V2 < Grape::API
-   format :json
-   version 'v2', using: :header, vendor: 'acme', format: :json
+  class V2 < Grape::API
+    format :json
+    version 'v2', using: :header, vendor: 'acme', format: :json
 
-   desc "Returns the current API version, v2."
-   get do
-     { version: 'v2' }
-   end
- end
+    desc 'Returns the current API version, v2.'
+    get do
+      { version: 'v2' }
+    end
+  end
 end
 ```
 
 At this point we want _v1_ to be identical to _v2_, except for the root method. We'll start by allowing _v1_ to respond to both _v1_ and _v2_ requests.
 
 ```ruby
-version ['v2', 'v1'], using: :header, vendor: 'acme', format: :json
+version %w[v2 v1], using: :header, vendor: 'acme', format: :json
 ```
 
 Mount v2 before v1. The default versioning behavior is to cascade the request to the next Rack middleware.

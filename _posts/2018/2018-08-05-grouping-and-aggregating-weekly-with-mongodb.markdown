@@ -29,19 +29,19 @@ The following aggregation matches any documents that belong to a user, groups an
 
 ```ruby
 user.meetings.collection.aggregate([
-  { '$match' => { user_id: user.id } },
-  {
-    '$group' => {
-      _id: {
-        year: { '$year' => '$started_at' },
-        week: { '$isoWeek' => '$started_at' }
-      },
-      count: { '$sum' => 1 },
-      duration: { '$sum' => { '$subtract' => ['$finished_at', '$started_at'] } }
-    }
-  },
-  { '$sort' => { _id: -1 } }
-])
+                                     { '$match' => { user_id: user.id } },
+                                     {
+                                       '$group' => {
+                                         _id: {
+                                           year: { '$year' => '$started_at' },
+                                           week: { '$isoWeek' => '$started_at' }
+                                         },
+                                         count: { '$sum' => 1 },
+                                         duration: { '$sum' => { '$subtract' => ['$finished_at', '$started_at'] } }
+                                       }
+                                     },
+                                     { '$sort' => { _id: -1 } }
+                                   ])
 ```
 
 ### Filling Gaps
@@ -56,7 +56,7 @@ week_start = Time.now.utc.beginning_of_week.to_date
 last_week_start = data.empty? ? week_start : data.values[-1].week_start
 
 while week_start >= last_week_start
-  results << ... # either from data or a blank entry
+  results << entry # either from data or a blank entry
   week_start -= 1.week
 end
 ```

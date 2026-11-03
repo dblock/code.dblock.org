@@ -10,15 +10,14 @@ This is going to heavily quote [https://www.rubyfleebie.com/enumerations-and-rub
 
 ```ruby
 module Enum
-
-  ... instance methods ...
+  # ... instance methods ...
 
   def self.included(base)
     base.extend(ClassMethods)
   end
 
   module ClassMethods
-    ... class methods ...
+    # ... class methods ...
   end
 end
 ```
@@ -66,17 +65,15 @@ module Enum
   module ClassMethods
     def define(key, value)
       @hash ||= {}
-      @hash[key] = self.new(key, value)
+      @hash[key] = new(key, value)
     end
 
     def const_missing(key)
       @hash[key].value
     end
 
-    def each
-      @hash.each do |key, value|
-        yield key, value
-      end
+    def each(&block)
+      @hash.each(&block)
     end
 
     def all

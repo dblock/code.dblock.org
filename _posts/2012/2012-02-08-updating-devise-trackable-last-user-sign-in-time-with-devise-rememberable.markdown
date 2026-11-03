@@ -9,8 +9,10 @@ dblog_post_id: 315
 [Devise](https://github.com/plataformatec/devise) has a _:trackable _strategy which updates the user's last sign-in time, remote IP and increments a counter in the _User_ model upon successful logon. This is implemented in [Devise::Models::Trackable.update_tracked_fields!](https://github.com/plataformatec/devise/blob/master/lib/devise/models/trackable.rb) and invoked as a Warden callback in [devise/hooks/trackable.rb](https://github.com/plataformatec/devise/blob/master/lib/devise/hooks/trackable.rb).
 
 ```ruby
-Warden::Manager.after_set_user :except => :fetch do |record, warden, options|
-  if record.respond_to?(:update_tracked_fields!) && warden.authenticated?(options[:scope]) && !warden.request.env['devise.skip_trackable']
+Warden::Manager.after_set_user except: :fetch do |record, warden, options|
+  if record.respond_to?(:update_tracked_fields!) &&
+     warden.authenticated?(options[:scope]) &&
+     !warden.request.env['devise.skip_trackable']
     record.update_tracked_fields!(warden.request)
   end
 end
@@ -22,8 +24,10 @@ Of course, we might not see things in the same eye. A user returning 24 hours la
 
 ```ruby
 Warden::Manager.after_set_user do |record, warden, options|
-  if record.respond_to?(:update_tracked_fields!) && warden.authenticated?(options[:scope]) && ! warden.request.env['devise.skip_trackable'] &&
-    (record.last_sign_in_at.nil? || (Date.today - record.last_sign_in_at.to_date).to_i >= 1)
+  if record.respond_to?(:update_tracked_fields!) &&
+     warden.authenticated?(options[:scope]) &&
+     !warden.request.env['devise.skip_trackable'] &&
+     (record.last_sign_in_at.nil? || (Date.today - record.last_sign_in_at.to_date).to_i >= 1)
     record.update_tracked_fields!(warden.request)
   end
 end

@@ -15,16 +15,16 @@ The invariant key access was borrowed from [Merb's Mash](https://github.com/wyca
 This warning was ignored, and became the first thing to be removed from `Hashie::Mash`. A lot of new features, such as method access, were added instead.
 
 ```ruby
-def method_missing(method_name, *args)
+def method_missing(method_name, *args) # rubocop:disable Style/MissingRespondToMissing -- Historical broken implementation.
   if (match = method_name.to_s.match(/(.*)=$/)) && args.size == 1
     self[match[1]] = args.first
-  elsif (match = method_name.to_s.match(/(.*)\?$/)) && args.size == 0
+  elsif (match = method_name.to_s.match(/(.*)\?$/)) && args.empty?
     key?(match[1])
-  elsif (match = method_name.to_s.match(/(.*)!$/)) && args.size == 0
+  elsif (match = method_name.to_s.match(/(.*)!$/)) && args.empty?
     initializing_reader(match[1])
   elsif key?(method_name)
     self[method_name]
-  elsif match = method_name.to_s.match(/^([a-z][a-z0-9A-Z_]+)$/)
+  elsif (match = method_name.to_s.match(/^([a-z][a-z0-9A-Z_]+)$/))
     default(method_name)
   else
     super
@@ -50,7 +50,7 @@ But what could go wrong when you suddenly overrode `id`? Ruby 1.8 had an `Object
 
 We weren't having a Bad Time™ at all. Everyone had their favorite way of fetching values. Some wanted to write `hash[:key]`, others `hash.key` or even `hash.fetch(:key, 123)`. Unfortunately, it didn't always work as one might have expected.
 
-```ruby
+```irb
 1.9.3p392 :001 > require 'hashie'
 true
 1.9.3p392 :002 > h = Hashie::Mash.new
@@ -65,17 +65,22 @@ Whoops. Fixed in [#93](https://github.com/hashie/hashie/issues/93).
 
 Have we dealt with `respond_to?`? Probably not. You were in for a treat.
 
+<!-- # rubocop:disable Style/OptionalBooleanParameter -- Reproduces Ruby's historical respond_to? signature. -->
+
 ```ruby
-def respond_to?(method_name, include_private=false)
+def respond_to?(method_name, include_private = false)
   return true if key?(method_name) || method_name.to_s.slice(/[=?!_]\Z/)
+
   super
 end
 ```
 
+<!-- # rubocop:enable Style/OptionalBooleanParameter -->
+
 Unfortunately this broke [Rails 4 strong_parameters](https://edgeguides.rubyonrails.org/action_controller_overview.html#strong-parameters). Can you see why? This code always responded `true` to `permit?`. Take a look at the following example.
 
 ```ruby
-settings = { foo: "1", attributes: { title: "Value" } }
+settings = { foo: '1', attributes: { title: 'Value' } }
 record.attributes = settings.attributes # raises ActiveModel::ForbiddenAttributes
 ```
 
@@ -85,11 +90,9 @@ Whoops. When a key was a `Hash`, it was automatically converted into a `Mash`. T
 module ForbiddenAttributesProtection
   def sanitize_for_mass_assignment(*options)
     new_attributes = options.first
-    if !new_attributes.respond_to?(:permitted?) || new_attributes.permitted?
-      super
-    else
-      raise ActiveModel::ForbiddenAttributes
-    end
+    raise ActiveModel::ForbiddenAttributes unless !new_attributes.respond_to?(:permitted?) || new_attributes.permitted?
+
+    super
   end
 end
 ```
@@ -131,7 +134,7 @@ Furthermore, when using an `ActiveRecord::HashWithIndifferentAccess` that was ne
 I once was using Hashie for a throwaway project, and noticed this incredibly unexpected and annoying behavior. With a normal Hash, you can specify a default value for newly-accessed keys.
 
 ```ruby
-hsh = Hash.new{|h, k| h[k] = [] }
+hsh = Hash.new { |h, k| h[k] = [] }
 hsh[:hello] << 100
 # => { :hello => [100] }
 ```
@@ -139,7 +142,7 @@ hsh[:hello] << 100
 This was very useful for quick inject operations.
 
 ```ruby
-collection.inject(Hash.new{|h,k| h[k] = [] }) do |h, x|
+collection.inject(Hash.new { |h, k| h[k] = [] }) do |h, x|
   h[x] << somefoo(x) if x > foo(x)
 end
 ```
@@ -147,7 +150,7 @@ end
 I wanted to do this with `Hashie::Mash`. It wasn't possible, sorry.
 
 ```ruby
-hsh = Hashie::Mash.new{|h, k| h[k] = [] }
+hsh = Hashie::Mash.new { |h, k| h[k] = [] }
 hsh[:hello] << 100
 # => {"hello"=>[]}
 ```
@@ -205,8 +208,8 @@ What could possibly go wrong? In [#413](https://github.com/hashie/hashie/issues/
 ```ruby
 foo = Hashie::Mash.new
 
-foo['foobar'] = Array.new
-foo['foobar'] = Array.new
+foo['foobar'] = []
+foo['foobar'] = []
 ```
 
 This was pretty trivial stuff, right? Well, that broke.

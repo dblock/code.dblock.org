@@ -14,7 +14,7 @@ Add the [newrelic_rpm](https://github.com/newrelic/rpm) gem to Gemfile. It will 
 
 ```ruby
 group :production do
-  gem "newrelic_rpm", "3.1.2"
+  gem 'newrelic_rpm', '3.1.2'
 end
 ```
 
@@ -24,10 +24,8 @@ Grape is a Rack-based system. If we wanted to display a bulk metric for Rack mid
 
 ```ruby
 class Api < Grape::API
-  ...
-  if Rails.env.production?
-    extend NewRelic::Agent::Instrumentation::Rack
-  end
+  # ...
+  extend NewRelic::Agent::Instrumentation::Rack if Rails.env.production?
 end
 ```
 

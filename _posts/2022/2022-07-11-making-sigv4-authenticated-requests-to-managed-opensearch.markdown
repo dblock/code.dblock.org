@@ -108,17 +108,17 @@ Use [opensearch-aws-sigv4](https://rubygems.org/gems/opensearch-aws-sigv4) 1.0 o
 signer = Aws::Sigv4::Signer.new(
   service: 'es',
   region: 'us-west-2',
-  access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-  secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-  session_token: ENV['AWS_SESSION_TOKEN']
+  access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID', nil),
+  secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY', nil),
+  session_token: ENV.fetch('AWS_SESSION_TOKEN', nil)
 )
 
 client = OpenSearch::Aws::Sigv4Client.new({
-  host: 'https://...'
-}, signer)
+                                            host: 'https://...'
+                                          }, signer)
 
 info = client.info
-puts info['version']['distribution'] + ': ' + info['version']['number']
+puts "#{info['version']['distribution']}: #{info['version']['number']}"
 ```
 
 Working demo in [opensearch-ruby-client-demo](https://github.com/dblock/opensearch-ruby-client-demo).

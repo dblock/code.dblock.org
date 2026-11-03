@@ -18,17 +18,18 @@ module Acme
     def initialize
       @filenames = ['', '.html', 'index.html', '/index.html']
       @rack_static = ::Rack::Static.new(
-        lambda { [404, {}, []] }, {
-          :root => File.expand_path('../../public', __FILE__),
-          :urls => %w[/]
-        })
+        -> { [404, {}, []] }, {
+          root: File.expand_path('../public', __dir__),
+          urls: %w[/]
+        }
+      )
     end
 
     def call(env)
       request_path = env['PATH_INFO']
       # static files
       @filenames.each do |path|
-        response = @rack_static.call(env.merge({'PATH_INFO' => request_path + path}))
+        response = @rack_static.call(env.merge({ 'PATH_INFO' => request_path + path }))
         return response if response[0] != 404
       end
       # api
@@ -44,11 +45,11 @@ Now that we have an application class, we can add API and Capybara integration t
 
 ```ruby
 group :test do
-  gem "rspec"
-  gem "rack-test"
-  gem "rspec-core"
-  gem "rspec-expectations"
-  gem "rspec-mocks"
+  gem 'rspec'
+  gem 'rack-test'
+  gem 'rspec-core'
+  gem 'rspec-expectations'
+  gem 'rspec-mocks'
 end
 ```
 
@@ -57,10 +58,10 @@ The _spec/spec_helper.rb_ adds Rack::Test.
 ```ruby
 require 'rubygems'
 
-ENV["RACK_ENV"] ||= 'test'
+ENV['RACK_ENV'] ||= 'test'
 
 require 'rack/test'
-require File.expand_path("../../config/environment", __FILE__)
+require File.expand_path('../config/environment', __dir__)
 
 RSpec.configure do |config|
   config.mock_with :rspec
@@ -80,11 +81,11 @@ describe Acme::API do
     Acme::API
   end
 
-  context "v1" do
-    context "system" do
-      it "ping" do
-        get "/api/v1/system/ping"
-        last_response.body.should == { :ping => "pong" }.to_json
+  context 'v1' do
+    context 'system' do
+      it 'ping' do
+        get '/api/v1/system/ping'
+        last_response.body.should == { ping: 'pong' }.to_json
       end
     end
   end
@@ -99,7 +100,7 @@ We start by adding capybara into Gemfile. At the time of the writing we need to 
 
 ```ruby
 group :test do
-  gem "capybara", :git => "https://github.com/jnicklas/capybara.git"
+  gem 'capybara', git: 'https://github.com/jnicklas/capybara.git'
 end
 ```
 
@@ -118,13 +119,13 @@ An integration test can go into _spec/integration_ and must be marked with _requ
 ```ruby
 require 'spec_helper'
 
-describe "Grape on RACK", :js => true, :type => :request do
-  context "homepage" do
+describe 'Grape on RACK', js: true, type: :request do
+  context 'homepage' do
     before :each do
-      visit "/"
+      visit '/'
     end
-    it "displays index.html page" do
-      page.find("title").text.should == "Rack Powers Web APIs"
+    it 'displays index.html page' do
+      page.find('title').text.should == 'Rack Powers Web APIs'
     end
   end
 end

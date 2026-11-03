@@ -6,12 +6,12 @@ date: 2011-09-15 06:41:26
 tags: [rails, ruby, email, markdown, devise]
 dblog_post_id: 267
 ---
-Last time we added custom editable mail templates to our mailers and made them Markdown format [[read first](/rails-custom-and-editable-mailer-templates-in-markdown)]. Awesome. Let's add a preview to the templates with [37-signals mail_view](https://github.com/37signals/mail_view). I don't know how we lived without this before!
+Last time we [added custom editable mail templates to our mailers and made them Markdown format](/rails-custom-and-editable-mailer-templates-in-markdown). Awesome. Let's add a preview to the templates with [37-signals mail_view](https://github.com/37signals/mail_view). I don't know how we lived without this before!
 
 ## Gemfile
 
 ```ruby
-gem "mail_view", :git => "https://github.com/37signals/mail_view"
+gem 'mail_view', git: 'https://github.com/37signals/mail_view'
 ```
 
 ### Routes
@@ -33,20 +33,21 @@ This needs to route somewhere. Let's add a preview into our overridden _DeviseMa
 ```ruby
 class DeviseMailer < Devise::Mailer
   def template_paths
-    "devise/mailer"
+    'devise/mailer'
   end
 
   def devise_mail(record, action)
-    ...
+    # ...
   end
 
   class Preview < MailView
     def invitation_instructions
       DeviseMailer.devise_mail(
-        User.new({email: 'chuck@example.com',
-            name: 'Chuck Norris',
-            invitation_token: 'invitation-token'}),
-        :invitation_instructions)
+        User.new({ email: 'chuck@example.com',
+                   name: 'Chuck Norris',
+                   invitation_token: 'invitation-token' }),
+        :invitation_instructions
+      )
     end
   end
 end

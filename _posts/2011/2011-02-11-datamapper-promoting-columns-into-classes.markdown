@@ -15,18 +15,17 @@ Turns out to be very straightforward with DataMapper.
 ```ruby
 class Color
   include DataMapper::Resource
-  storage_names[:default] = "fruits"
-  property :name, String, :field => "color"
+
+  storage_names[:default] = 'fruits'
+  property :name, String, field: 'color'
 
   class << self
-    alias_method :_all, :all
+    alias _all all
 
     def all
-      coll = []
-      repository(:default).adapter.select("SELECT DISTINCT color FROM fruits").each do |c|
-        coll << Color.new({name: c})
+      coll = repository(:default).adapter.select('SELECT DISTINCT color FROM fruits').map do |c|
+        Color.new({ name: c })
       end
-      coll
     end
   end
 end

@@ -51,8 +51,8 @@ Query = GraphQL::ObjectType.define do
   field :invoice, InvoiceType do
     argument :id, !types.Int
     description 'Get an invoice by ID.'
-    resolve ->(_obj, args, _ctx) {
-      OpenStruct.new(
+    resolve lambda { |_obj, args, _ctx|
+      OpenStruct.new( # rubocop:disable Style/OpenStructUse -- Historical GraphQL example.
         id: args[:id],
         fee_in_cents: 20_000
       )
@@ -70,8 +70,8 @@ CreateInvoiceMutation = GraphQL::Relay::Mutation.define do
   input_field :fee_in_cents, !types.Int
   return_type InvoiceType
 
-  resolve ->(_object, inputs, _ctx) {
-    OpenStruct.new(
+  resolve lambda { |_object, inputs, _ctx|
+    OpenStruct.new( # rubocop:disable Style/OpenStructUse -- Historical GraphQL example.
       id: 1231,
       fee_in_cents: inputs[:fee_in_cents]
     )
@@ -150,7 +150,7 @@ Define a shared client context in [spec/support/graphql/client.rb](https://githu
 ```ruby
 require 'graphlient'
 
-RSpec.shared_context "GraphQL Client", shared_context: :metadata do
+RSpec.shared_context 'GraphQL Client', shared_context: :metadata do
   let(:client) do
     Graphlient::Client.new('https://api.example.org/graphql') do |client|
       client.http do |h|

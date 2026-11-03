@@ -10,7 +10,7 @@ There are several good articles about reading and writing resources from/to a co
 
 This implementation is a framework that enumerates resources and implements both read and write of the file version (`VS_VERSIONINFO`) resources. It can be easily extended to other resource types.
 
-<a href='https://www.codeproject.com/Articles/27373/File-Resource-Management-Library-NET' target='_blank'>CodeProject Article</a>
+[CodeProject Article](https://web.archive.org/web/20080810111317/http://www.codeproject.com:80/KB/library/ResourceLib.aspx)
 
 ## Update (2015)
 

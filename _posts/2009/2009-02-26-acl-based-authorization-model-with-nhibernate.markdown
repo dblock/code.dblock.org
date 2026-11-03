@@ -10,6 +10,6 @@ I've posted a long overdue article describing an ACL-based authorization model w
 
 > _This article introduces a practical and secure model for data access with NHibernate. Specifically, we will produce a discretionary access model intercepted by an NHibernate 2.0 event system. We will examine both usage of interceptors and events. While rather straightforward, this is a very powerful model that provides a robust and secure Data Access Layer (DAL) and a per-class/instance approach with a minimal amount of code._
 
-[**https://www.codeproject.com/Articles/33681/Discretionary-ACL-Authorization-Security-Model-in-**](https://www.codeproject.com/Articles/33681/Discretionary-ACL-Authorization-Security-Model-in-)
+[Read the CodeProject article](https://web.archive.org/web/20090228152850/http://www.codeproject.com:80/KB/web-security/objectlevelsecurity.aspx).
 
-![](https://www.codeproject.com/KB/web-security/objectlevelsecurity/domainmodel.jpg)
+![Authorization domain model](https://web.archive.org/web/20110909142139im_/http://www.codeproject.com/KB/web-security/objectlevelsecurity/domainmodel.jpg)

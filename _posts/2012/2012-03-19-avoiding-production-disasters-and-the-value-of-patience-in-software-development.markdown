@@ -28,12 +28,12 @@ Automation is good, but testing is better. Consider the following task that send
 
 ```ruby
 desc "Send a reminder to all users that haven't been reminded yet."
-  task :remind => :environment do |t, args|
-    User.all.each do |user|
-      next if user.reminded?
-      user.update_attributes!({ reminded_at: Time.now.utc })
-      ReminderMailer.delay.reminder_email(user)
-    end
+task remind: :environment do |t, args|
+  User.all.each do |user|
+    next if user.reminded?
+
+    user.update_attributes!({ reminded_at: Time.now.utc })
+    ReminderMailer.delay.reminder_email(user)
   end
 end
 ```
@@ -49,13 +49,14 @@ We can move this entire logic into the _User_ model and write a test.
 ```ruby
 class User
   def reminded?
-      !! reminded_at
+    !!reminded_at
   end
 
   def remind!
-      raise "reminder already sent" if reminded?
-      update_attributes!({ reminded_at: Time.now.utc })
-      ReminderMailer.delay.reminder_email(self)
+    raise 'reminder already sent' if reminded?
+
+    update_attributes!({ reminded_at: Time.now.utc })
+    ReminderMailer.delay.reminder_email(self)
   end
 end
 ```
@@ -63,25 +64,25 @@ end
 The test can cover other important aspects, such as the actual source and destination of the e-mail.
 
 ```ruby
-describe "remind!" do
+describe 'remind!' do
   before :each do
     @user = Fabricate :user
   end
 
-  it "should send a reminder to a user" do
+  it 'should send a reminder to a user' do
     emails_count = ActionMailer::Base.deliveries.count
     @user.remind!
     ActionMailer::Base.deliveries.count.should == emails_count + 1
     reminder_email = ActionMailer::Base.deliveries.last
-    reminder_email.from.first.should == "support@acme.com"
+    reminder_email.from.first.should == 'support@acme.com'
     reminder_email.to.first.should == @user.email
     @user.reminded?.should be_true
   end
 
-  it "should not send a reminder email more than once" do
+  it 'should not send a reminder email more than once' do
     @user.remind!
     emails_count = ActionMailer::Base.deliveries.count
-    lambda { @invitation.remind! }.should raise_error("reminder already sent")
+    -> { @invitation.remind! }.should raise_error('reminder already sent')
     ActionMailer::Base.deliveries.count.should == emails_count
   end
 end
@@ -91,11 +92,11 @@ And the task is simpler.
 
 ```ruby
 desc "Send a reminder to all users that haven't been reminded yet."
-  task :remind => :environment do |t, args|
-    User.all.each do |user|
-      next if user.reminded?
-      user.remind!
-    end
+task remind: :environment do |t, args|
+  User.all.each do |user|
+    next if user.reminded?
+
+    user.remind!
   end
 end
 ```

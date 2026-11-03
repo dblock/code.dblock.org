@@ -11,7 +11,7 @@ dblog_post_id: 193
 This is the last piece of the dev-ops puzzle. We want our [MongoDB backup](/2011/03/31/a-rake-task-for-backing-up-a-mongodb-database.html) to run nightly. Let's create a _:cron_ task
 
 ```ruby
-task :cron => :environment do
+task cron: :environment do
   Rake::Task['db:production:backup'].invoke
 end
 ```
@@ -19,9 +19,9 @@ end
 We are going to use [whenever](https://github.com/javan/whenever) to avoid the ugly syntax of cron. Whenever is configured in _config/schedule.rb_.
 
 ```ruby
-set :output, "/tmp/cron_log.log"
+set :output, '/tmp/cron_log.log'
 
-every 1.day, :at => '3:30 am' do
+every 1.day, at: '3:30 am' do
   rake 'cron'
 end
 ```

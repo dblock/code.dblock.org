@@ -54,7 +54,7 @@ development:
 Connect to the database.
 
 ```ruby
-dbconfig = YAML::load(File.open('database.yml'))
+dbconfig = YAML.safe_load(File.open('database.yml'))
 ActiveRecord::Base.establish_connection(dbconfig)
 ```
 
@@ -92,16 +92,15 @@ content = ReverseMarkdown.convert(post.Body, github_flavored: true)
 Figure out where to write the post on disk and write the markdown post.
 
 ```ruby
-  File.open "#{post.Slug}.markdown", "w" do |file|
-    file.write <<-EOS
----
-layout: post
-title: "#{post.Title}"
-redirect_from: "/#{post.Slug}"
-date: #{post.Created.strftime('%F %T')}
----
-#{content}
-    EOS
+File.write("#{post.Slug}.markdown", <<~MARKDOWN)
+  ---
+  layout: post
+  title: "#{post.Title}"
+  redirect_from: "/#{post.Slug}"
+  date: #{post.Created.strftime('%F %T')}
+  ---
+  #{content}
+MARKDOWN
 ```
 
 The full script is [here](https://github.com/dblock/dblog-to-jekyll/blob/master/doit.rb).
@@ -132,7 +131,7 @@ Serve Jekyll locally via `bundle exec jekyll serve`.
 
 Github pages don't support syntax highlighting the same way all markdown content does on Github. You can't use backticks. This means ```ruby will not syntax highlight Ruby, you have to use Pygments with one of the [very many lexers](https://pygments.org/docs/lexers) to highlight code.
 
-```
+````
 {% raw %}
 ```ruby
 
@@ -142,7 +141,7 @@ Github pages don't support syntax highlighting the same way all markdown content
 
 {% endraw %}
 
-```
+````
 
 #### Tags and Related Posts
 

@@ -1,15 +1,13 @@
-name: Check Markdown
+name: Check Markdown and Ruby
 on: [push, pull_request]
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: ruby/setup-ruby@v1
         with:
-          node-version: 22
-          cache: npm
-      - name: Install Markdown linter
-        run: npm ci --ignore-scripts
-      - name: Check Markdown
-        run: npm run lint:markdown
+          ruby-version: '3.4'
+          bundler-cache: true
+      - name: Check Markdown and Ruby
+        run: bundle exec rake lint

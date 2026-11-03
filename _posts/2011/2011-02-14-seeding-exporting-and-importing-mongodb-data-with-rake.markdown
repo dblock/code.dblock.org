@@ -19,11 +19,11 @@ I want to do this the "Rails Way" by invoking a single _rake_ command that impor
 Given a set of objects, we can serialize them to a file using JSON. We'll give the model name and a file as a parameter, fetch all objects and write them to a file in JSON format.
 
 ```ruby
-task :export, [:model, :filename] => :environment do |t, args|
+task :export, %i[model filename] => :environment do |t, args|
   model = args[:model].constantize
   filename = args[:filename]
   objects = model.find(:all)
-  File.open(File.join(Rails.root, filename), "w") do |f|
+  File.open(File.join(Rails.root, filename), 'w') do |f|
     objects.each do |object|
       f.write(object.to_json)
       f.write("\r\n")
@@ -34,17 +34,18 @@ end
 
 ### Importing Data
 
-Importing data is the inverse operation. We have to clear the model data – I couldn't figure out how to instantiate an object that exists and resave it with changes [[thread](https://groups.google.com/group/mongoid/browse_thread/thread/0c28c14d0c1c48cd#)].
+Importing data is the inverse operation. We have to clear the model data – I couldn't figure out [how to instantiate an object that exists and resave it with changes](https://groups.google.com/group/mongoid/browse_thread/thread/0c28c14d0c1c48cd#).
 
 ```ruby
-task :import, [:model, :filename] => :environment do |t, args|
+task :import, %i[model filename] => :environment do |t, args|
   model = args[:model].constantize
   model.destroy_all
   filename = args[:filename]
   File.foreach(File.join(Rails.root, filename)) do |line|
-      next if line.blank?
-      object = model.new.from_json line.strip
-      object.save!
+    next if line.blank?
+
+    object = model.new.from_json line.strip
+    object.save!
   end
 end
 ```
@@ -55,32 +56,32 @@ We can call our tasks on several well-known collections. Of course, feel free to
 
 ```ruby
 namespace :db do
-    def collections
+  def collections
     [
-      { model: "Drug", table: "drugs" },
-      { model: "Ingredient", table: "ingredients" },
-      { model: "User", table: "users" }
+      { model: 'Drug', table: 'drugs' },
+      { model: 'Ingredient', table: 'ingredients' },
+      { model: 'User', table: 'users' }
     ]
+  end
+  task export: :environment do
+    collections.each do |collection|
+      table = collection[:table]
+      model = collection[:model]
+      dir = "db/seed/#{Rails.env}"
+      filename = "#{dir}/#{table}.json"
+      FileUtils.mkdir_p dir
+      Rake::Task['db:model:export'].execute({ model: model, filename: filename })
     end
-    task :export => :environment do
-        collections.each do |collection|
-          table = collection[:table]
-          model = collection[:model]
-          dir = "db/seed/" + Rails.env
-          filename = dir + "/" + table + ".json"
-          Dir.mkdir dir unless (Dir.exists? dir)
-          Rake::Task["db:model:export"].execute({model: model, filename: filename})
-        end
+  end
+  task import: :environment do
+    collections.each do |collection|
+      table = collection[:table]
+      model = collection[:model]
+      dir = "db/seed/#{Rails.env}"
+      filename = "#{dir}/#{table}.json"
+      Rake::Task['db:model:import'].execute({ model: model, filename: filename })
     end
-    task :import => :environment do
-        collections.each do |collection|
-          table = collection[:table]
-          model = collection[:model]
-          dir = "db/seed/" + Rails.env
-          filename = dir + "/" + table + ".json"
-          Rake::Task["db:model:import"].execute({model: model, filename: filename})
-        end
-    end
+  end
 end
 ```
 
@@ -92,7 +93,7 @@ The first is that we have a _User_ model that has a username and password. Of co
 
 ```ruby
 object = model.new.from_json line.strip
-object.password = "password" if (object.respond_to? 'password')
+object.password = 'password' if object.respond_to? 'password'
 ```
 
 The second feature is that we don't want real user data to be exported, but we'd like to preserve the relationships in the existing database. We use [faker](http://web.archive.org/web/20110224214823/http://faker.rubyforge.org/) to replace all names, e-mails and websites. This can be further applied to all kinds of properties.

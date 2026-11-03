@@ -11,9 +11,9 @@ A while ago I [wrote](/rails-s3-cloudfront-jammit-heroku-100) about how we packa
 The first problem we have solved is how long it takes to sync contents between a local folder and S3. The old task fetched the entire bucket file list, which grew quite a bit over time. The S3 API supports a _prefix_ option.
 
 ```ruby
-s3i.incrementally_list_bucket(to, prefix: "assets/") do |response|
+s3i.incrementally_list_bucket(to, prefix: 'assets/') do |response|
   response[:contents].each do |existing_object|
-    ...
+    # ...
   end
 end
 ```
@@ -27,12 +27,12 @@ Here's the task with some shortcuts and a [complete task as a gist](https://gist
 task :uploadToS3, [:to] => :environment do |t, args|
   from = File.join(Rails.root, 'public/assets')
   to = args[:to]
-  hash = (`git rev-parse --short HEAD` || "").chomp
+  hash = (`git rev-parse --short HEAD` || '').chomp
 
   logger.info("[#{Time.now}] fetching keys from #{to}")
   existing_objects_hash = {}
   existing_assets_hash = {}
-  s3i.incrementally_list_bucket(to, prefix: "assets/") do |response|
+  s3i.incrementally_list_bucket(to, prefix: 'assets/') do |response|
     response[:contents].each do |existing_object|
       existing_objects_hash[existing_object[:key]] = existing_object
       previous_asset_hash = existing_object[:key].split('/')[1]
@@ -44,19 +44,20 @@ task :uploadToS3, [:to] => :environment do |t, args|
   previous_hash = nil
   existing_assets_hash.each_pair do |asset_hash, last_modified|
     logger.info(" #{asset_hash} => #{last_modified}")
-    previous_hash = asset_hash unless (previous_hash and existing_assets_hash[previous_hash] > last_modified)
+    previous_hash = asset_hash unless previous_hash && (existing_assets_hash[previous_hash] > last_modified)
   end
   logger.info("[#{Time.now}] keeping #{previous_hash}") if previous_hash
 
   logger.info("[#{Time.now}] copying from #{from} to s3:#{to} @ #{hash}")
-  Dir.glob(from + "/\*\*/\*").each do |entry|
-    next if File::directory?(entry)
+  Dir.glob("#{from}/**/*").each do |entry|
+    next if File.directory?(entry)
+
     File.open(entry) do |entry_file|
       content_options = {}
       content_options['x-amz-acl'] = 'public-read'
       content_options['content-type'] = MIME::Types.type_for(entry)[0]
       key = 'assets/'
-      key += (hash + '/') if hash
+      key += ("#{hash}/") if hash
       key += entry.slice(from.length + 1, entry.length - from.length - 1)
       existing_objects_hash.delete(key)
       logger.info("[#{Time.now}]  uploading #{key}")
@@ -64,8 +65,9 @@ task :uploadToS3, [:to] => :environment do |t, args|
     end
   end
 
-  existing_objects_hash.keys.each do |key|
-    next if previous_hash and key.start_with?("assets/#{previous_hash}/")
+  existing_objects_hash.each_key do |key|
+    next if previous_hash && key.start_with?("assets/#{previous_hash}/")
+
     puts "deleting #{key}"
     s3i.delete(to, key)
   end
@@ -75,5 +77,5 @@ end
 Since we're versioning assets with a GIT hash in the URL, another improvement is to set cache expiration to something longer.
 
 ```ruby
-content_options['cache-control'] = "public, max-age=#{365\*24\*60\*60}"
+content_options['cache-control'] = "public, max-age=#{365 * 24 * 60 * 60}"
 ```

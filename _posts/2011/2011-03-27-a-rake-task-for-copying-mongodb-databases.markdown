@@ -26,20 +26,20 @@ We're using [Heroku-san](http://web.archive.org/web/20110704143857/http://jqr.gi
 
 ```ruby
 def db_copy_load_config
-  YAML.load_file(Rails.root.join("config/heroku.yml")).symbolize_keys
+  YAML.load_file(Rails.root.join('config/heroku.yml')).symbolize_keys
 end
 
 def db_copy_config
-  @@config_heroku ||= db_copy_load_config
+  @db_copy_config ||= db_copy_load_config
 end
 
 def get_mongohq_url(env)
-  db_copy_config[env]["config"]["MONGOHQ_URL"]
+  db_copy_config[env]['config']['MONGOHQ_URL']
 end
 
 def parse_mongodb_url(url)
   uri = URI.parse(url)
-  [uri, uri.path.gsub("/", "")]
+  [uri, uri.path.gsub('/', '')]
 end
 ```
 
@@ -50,17 +50,15 @@ I \*heart\* functions that return two values!
 MongoDB has a nifty `copyDatabase` (or clone) feature described [here](https://www.mongodb.com/docs/v2.2/reference/method/db.copyDatabase). It's incremental, so we must drop tables before calling it. We also have to ensure that we don't drop system tables, otherwise our database may be rendered inaccessible.
 
 ```ruby
-desc "MongoDB database to database copy"
-task :copyDatabase, [:from, :to] => :environment do |t, args|
+desc 'MongoDB database to database copy'
+task :copyDatabase, %i[from to] => :environment do |t, args|
   from, from_db_name = parse_mongodb_url(args[:from])
   to, to_db_name = parse_mongodb_url(args[:to])
   to_conn = Mongo::Connection.new(to.host, to.port)
   to_db = to_conn.db(to_db_name)
   to_db.authenticate(to.user, to.password)
-  to_db.collections.select { |c| c.name !~ /system/ }.each do |c|
-    c.drop
-  end
-  to_conn.copy_database(from_db_name, to_db_name, from.host + ":" + from.port.to_s, from.user, from.password)
+  to_db.collections.reject { |c| c.name =~ /system/ }.each(&:drop)
+  to_conn.copy_database(from_db_name, to_db_name, "#{from.host}:#{from.port}", from.user, from.password)
 end
 ```
 
@@ -68,13 +66,14 @@ Easy enough. We can call this to copy a production database to staging or to a l
 
 ```ruby
 namespace :production do
-  desc "Copy production data to staging"
-  task :to_staging => :environment do
-    Rake::Task["db:copy:copyDatabase"].execute({ from: get_mongohq_url(:production), to: get_mongohq_url(:staging) })
+  desc 'Copy production data to staging'
+  task to_staging: :environment do
+    Rake::Task['db:copy:copyDatabase'].execute({ from: get_mongohq_url(:production), to: get_mongohq_url(:staging) })
   end
-  desc "Copy production data to local"
-  task :to_local => :environment do
-    Rake::Task["db:copy:copyDatabase"].execute({ from: get_mongohq_url(:production), to: "mongodb://localhost/development" })
+  desc 'Copy production data to local'
+  task to_local: :environment do
+    Rake::Task['db:copy:copyDatabase'].execute({ from: get_mongohq_url(:production),
+                                                 to: 'mongodb://localhost/development' })
   end
 end
 ```
@@ -88,7 +87,7 @@ Database command 'copydbgetnonce' failed: {"assertion"=>"unauthorized db:admin l
   "assertionCode"=>10057, "errmsg"=>"db assertion failure", "ok"=>0.0}
 ```
 
-This is because copyDatabase requires admin privileges, which MongoHQ doesn't give co-located users. Too bad - we have to fall back to the silly _mongodump_ and _mongorestore_. This has two major disadvantages: it requires a local mongo installation and copies a ton of data over the network from MongoHQ, then back to MongoHQ. I hope that either MongoHQ exposes this API one day or there's a non-admin way to do this with MongoDB [[SERVER-2846](https://jira.mongodb.org/browse/SERVER-2846)].
+This is because copyDatabase requires admin privileges, which MongoHQ doesn't give co-located users. Too bad - we have to fall back to the silly _mongodump_ and _mongorestore_. This has two major disadvantages: it requires a local mongo installation and copies a ton of data over the network from MongoHQ, then back to MongoHQ. I hope that either MongoHQ exposes this API one day or there's a non-admin way to do this with MongoDB (see [SERVER-2846](https://jira.mongodb.org/browse/SERVER-2846)).
 
 #### Using Mongo Dump and Restore
 
@@ -96,72 +95,75 @@ Falling back to mongodump and mongorestore is trivial. It hurts to do it, but it
 
 ```ruby
 namespace :db do
- namespace :copy do
+  namespace :copy do
+    def db_copy_load_config
+      YAML.load_file(Rails.root.join('config/heroku.yml')).symbolize_keys
+    end
 
-  def db_copy_load_config
-   YAML.load_file(Rails.root.join("config/heroku.yml")).symbolize_keys
+    def db_copy_config
+      @db_copy_config ||= db_copy_load_config
+    end
+
+    def get_mongohq_url(env)
+      db_copy_config[env]['config']['MONGOHQ_URL']
+    end
+
+    def parse_mongodb_url(url)
+      uri = URI.parse(url)
+      [uri, uri.path.gsub('/', '')]
+    end
+
+    namespace :production do
+      desc 'Copy production data to staging'
+      task to_staging: :environment do
+        Rake::Task['db:copy:copyDatabase'].execute({ from: get_mongohq_url(:production),
+                                                     to: get_mongohq_url(:staging) })
+      end
+      desc 'Copy production data to local'
+      task to_local: :environment do
+        Rake::Task['db:copy:copyDatabase'].execute({ from: get_mongohq_url(:production),
+                                                     to: 'mongodb://localhost:27017/development' })
+      end
+    end
+
+    namespace :staging do
+      desc 'Copy staging data to local'
+      task to_local: :environment do
+        Rake::Task['db:copy:copyDatabase'].execute({ from: get_mongohq_url(:staging),
+                                                     to: 'mongodb://localhost:27017/development' })
+      end
+    end
+
+    desc 'MongoDB database to database copy'
+    task :copyDatabase, %i[from to] => :environment do |t, args|
+      from, from_db_name = parse_mongodb_url(args[:from])
+      to, to_db_name = parse_mongodb_url(args[:to])
+     # mongodump
+      tmp_db_dir = File.join(Dir.tmpdir, "db/#{from.host}_#{from.port}")
+      tmp_db_name_dir = File.join(tmp_db_dir, from_db_name)
+      FileUtils.rm_rf tmp_db_name_dir if File.directory? tmp_db_name_dir
+      system format('mongodump -h %s:%s -d %s -u %s -p%s -o %s', from.host, from.port, from_db_name, from.user,
+                    from.password, tmp_db_dir)
+      puts "[#{Time.now}] connecting to #{to_db_name} on #{to.host}:#{to.port} as #{to.user}"
+     # clear target database
+      to_conn = Mongo::Connection.new(to.host, to.port)
+      puts "[#{Time.now}] opening #{to_db_name} on #{to.host}:#{to.port}"
+      puts "[#{Time.now}] dropping collections in #{to_db_name} on #{to.host}:#{to.port}"
+      to_db = to_conn.db(to_db_name)
+      to_db.authenticate(to.user, to.password) unless to.user.nil? || to.user.blank?
+      to_db.collections.reject { |c| c.name =~ /system/ }.each do |c|
+        puts " [#{Time.now}] dropping #{c.name}"
+        c.drop
+      end
+     # mongorestore
+      if to.user.nil?
+        system format('mongorestore -h %s:%s -d %s %s', to.host, to.port, to_db_name, tmp_db_name_dir)
+      else
+        system format('mongorestore -h %s:%s -d %s -u %s -p%s %s', to.host, to.port, to_db_name, to.user, to.password,
+                      tmp_db_name_dir)
+      end
+      puts "[#{Time.now}] db:copy complete"
+    end
   end
-
-  def db_copy_config
-   @@config_heroku ||= db_copy_load_config
-  end
-
-  def get_mongohq_url(env)
-   db_copy_config[env]["config"]["MONGOHQ_URL"]
-  end
-
-  def parse_mongodb_url(url)
-   uri = URI.parse(url)
-   [uri, uri.path.gsub("/", "")]
-  end
-
-  namespace :production do
-   desc "Copy production data to staging"
-   task :to_staging => :environment do
-    Rake::Task["db:copy:copyDatabase"].execute({ from: get_mongohq_url(:production), to: get_mongohq_url(:staging) })
-   end
-   desc "Copy production data to local"
-   task :to_local => :environment do
-    Rake::Task["db:copy:copyDatabase"].execute({ from: get_mongohq_url(:production), to: "mongodb://localhost:27017/development" })
-   end
-  end
-
-  namespace :staging do
-   desc "Copy staging data to local"
-   task :to_local => :environment do
-    Rake::Task["db:copy:copyDatabase"].execute({ from: get_mongohq_url(:staging), to: "mongodb://localhost:27017/development" })
-   end
-  end
-
-  desc "MongoDB database to database copy"
-  task :copyDatabase, [:from, :to] => :environment do |t, args|
-   from, from_db_name = parse_mongodb_url(args[:from])
-   to, to_db_name = parse_mongodb_url(args[:to])
-   # mongodump
-   tmp_db_dir = File.join(Dir.tmpdir, 'db/' + from.host + "_" + from.port.to_s)
-   tmp_db_name_dir = File.join(tmp_db_dir, from_db_name)
-   FileUtils.rm_rf tmp_db_name_dir if File.directory? tmp_db_name_dir
-   system "mongodump -h %s:%s -d %s -u %s -p%s -o %s" % [from.host, from.port, from_db_name, from.user, from.password, tmp_db_dir]
-   puts "[#{Time.now}] connecting to #{to_db_name} on #{to.host}:#{to.port} as #{to.user}"
-   # clear target database
-   to_conn = Mongo::Connection.new(to.host, to.port)
-   puts "[#{Time.now}] opening #{to_db_name} on #{to.host}:#{to.port}"
-   puts "[#{Time.now}] dropping collections in #{to_db_name} on #{to.host}:#{to.port}"
-   to_db = to_conn.db(to_db_name)
-   to_db.authenticate(to.user, to.password) unless (to.user.nil? || to.user.blank?)
-   to_db.collections.select { |c| c.name !~ /system/ }.each do |c|
-    puts " [#{Time.now}] dropping #{c.name}"
-    c.drop
-   end
-   # mongorestore
-   if to.user.nil?
-    system "mongorestore -h %s:%s -d %s %s" % [to.host, to.port, to_db_name, tmp_db_name_dir]
-   else
-    system "mongorestore -h %s:%s -d %s -u %s -p%s %s" % [to.host, to.port, to_db_name, to.user, to.password, tmp_db_name_dir]
-   end
-   puts "[#{Time.now}] db:copy complete"
-  end
-
- end
 end
 ```

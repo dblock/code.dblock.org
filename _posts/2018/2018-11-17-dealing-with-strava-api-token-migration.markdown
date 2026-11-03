@@ -29,9 +29,9 @@ The [app settings page](https://www.strava.com/settings/api) no longer carries a
 The first step is to obtain an OAuth token with `activity:read_all` scope. Because mine is not an interactive app I used [strava-oauth-token](https://github.com/dblock/strava-ruby-client/blob/master/bin/strava-oauth-token) that makes the API calls and navigates to a web page using a browser.
 
 ```bash
-$ gem install strava-ruby-client
+gem install strava-ruby-client
 
-$ STRAVA_CLIENT_ID=... STRAVA_CLIENT_SECRET=... strava-oauth-token
+STRAVA_CLIENT_ID=... STRAVA_CLIENT_SECRET=... strava-oauth-token
 ```
 
 Instead of setting `STRAVA_API_TOKEN` we now need `STRAVA_CLIENT_ID` and `STRAVA_CLIENT_SECRET` in the Travis-CI configuration as well as `STRAVA_API_REFRESH_TOKEN` from above to obtain the actual access token each time the website cron runs. However, the result may yield a new refresh token that will need to be rotated, so entering the refresh token in the Travis-CI UI is not going to work.
@@ -39,7 +39,7 @@ Instead of setting `STRAVA_API_TOKEN` we now need `STRAVA_CLIENT_ID` and `STRAVA
 We can encrypt and store the token in `.travis.yml`.
 
 ```bash
-$ travis encrypt STRAVA_API_REFRESH_TOKEN=... --add env
+travis encrypt STRAVA_API_REFRESH_TOKEN=... --add env
 ```
 
 The script that refreshes the token will encrypt a new value if necessary in [run.dblock.org@2af902](https://github.com/dblock/run.dblock.org/commit/2af902f3880900bbe5ac24713d04ca89636f0c27). And we already have code that commits changes to Github.

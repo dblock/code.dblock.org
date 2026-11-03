@@ -36,7 +36,7 @@ Use the token to verify auth via the Web API.
 
 ```ruby
 Slack.configure do |config|
-  config.token = ENV['SLACK_API_TOKEN']
+  config.token = ENV.fetch('SLACK_API_TOKEN', nil)
 end
 
 client = Slack::Web::Client.new
@@ -69,9 +69,9 @@ client.start!
 ```ruby
 client.on :message do |data|
   case data['text']
-  when 'bot hi' then
+  when 'bot hi'
     client.message channel: data['channel'], text: "Hi <@#{data['user']}>!"
-  when /^bot/ then
+  when /^bot/
     client.message channel: data['channel'], text: "Sorry <@#{data['user']}>, what?"
   end
 end

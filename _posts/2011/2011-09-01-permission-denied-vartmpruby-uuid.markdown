@@ -9,13 +9,13 @@ dblog_post_id: 252
 I've been fighting a trivial RoR controller test failure on a new build machine. The spec is rather trivial.
 
 ```ruby
-def mock_widget(stubs={})
+def mock_widget(stubs = {})
   @mock_widget ||= mock_model(Widget, stubs).as_null_object
 end
 
-it "assigns a newly created widget as @widget" do
+it 'assigns a newly created widget as @widget' do
   Widget.stub(:new) { mock_widget }
-  post :create, :widget => {'these' => 'params'}
+  post :create, widget: { 'these' => 'params' }
   assigns(:widget).should be(mock_widget)
 end
 ```
@@ -24,13 +24,11 @@ Exceptions in Rails controllers are eaten in RSpec tests. So whenever I have a c
 
 ```ruby
 def create
-  begin
-    ...
-  rescue Exception => e
-    puts e.message
-    puts e.backtrace
-    raise e
-  end
+    # ...
+rescue Exception => e # rubocop:disable Lint/RescueException -- Diagnostic wrapper.
+  puts e.message
+  puts e.backtrace
+  raise e
 end
 ```
 

@@ -13,7 +13,7 @@ Here's what I had to do to switch from will_paginate to [kaminari](https://githu
 Replace will_paginate with kaminari in Gemfile.
 
 ```ruby
-gem "kaminari", "0.12.4"
+gem 'kaminari', '0.12.4'
 ```
 
 Replace all calls to `.paginate :page => params[:page], :per_page => 20` with the kaminari methods.
@@ -25,7 +25,7 @@ Model.desc(:created_at).page(params[:page]).per(20)
 There may be some loading order issues since kaminari injects methods on load. For delayed jobs I had to do the following in the initializer (see [#10](https://github.com/collectiveidea/delayed_job_mongoid/issues/10)).
 
 ```ruby
-Delayed::Job.send(:include, Kaminari::MongoidExtension::Document)
+Delayed::Job.include Kaminari::MongoidExtension::Document
 ```
 
 If you have a shared pagination block (eg. _app/views/shared/pagination/_pagination.html.haml_) change it to use kaminari layouts.
@@ -40,7 +40,7 @@ There's a pull request [#140](https://github.com/kaminari/kaminari/pull/140/) fo
 If you're paginating arrays you can inject a few methods into a paged result set on-the-fly to make it play nice.
 
 ```ruby
-@paged_result_set.instance_eval <<-EVAL
+@paged_result_set.instance_eval <<-EVAL, __FILE__, __LINE__ + 1 # rubocop:disable Style/DocumentDynamicEvalDefinition -- Expanded code is shown below.
   def current_page
     #{params[:page] || 1}
   end

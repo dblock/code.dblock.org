@@ -11,21 +11,20 @@ The first Capybara integration test always tends to timeout when compiling asset
 ```ruby
 RSpec.configure do |config|
   config.before :all do
-    ENV['PRECOMPILE_ASSETS'] ||= begin
-      case self.class.metadata[:type]
-      when :feature, :view
-        STDOUT.write "Precompiling assets..."
-        Sprockets::StaticCompiler.new(
-          Rails.application.assets,
-          File.join(Rails.public_path, Rails.configuration.assets.prefix),
-          Rails.configuration.assets.precompile,
-          manifest_path: Rails.configuration.assets.manifest,
-          digest: Rails.configuration.assets.digest,
-          manifest: false).compile
-        STDOUT.puts " done."
-        Time.now.to_s
-      end
-    end
+    ENV['PRECOMPILE_ASSETS'] ||= case self.class.metadata[:type]
+                                 when :feature, :view
+                                   $stdout.write 'Precompiling assets...'
+                                   Sprockets::StaticCompiler.new(
+                                     Rails.application.assets,
+                                     File.join(Rails.public_path, Rails.configuration.assets.prefix),
+                                     Rails.configuration.assets.precompile,
+                                     manifest_path: Rails.configuration.assets.manifest,
+                                     digest: Rails.configuration.assets.digest,
+                                     manifest: false
+                                   ).compile
+                                   $stdout.puts ' done.'
+                                   Time.now.to_s
+                                 end
   end
 end
 ```

@@ -21,8 +21,8 @@ If your API returned a an _Object_, it was translated to JSON via _to_json_ or a
 I have fixed this in [@6fa8f59](https://github.com/ruby-grape/grape/commit/6fa8f59e0475f926682168ad4f0bbb2f72df96a3), released with Grape 0.4.0, and it's now possible to return proper JSON representations of _NilClass_ or _String_, as well as to parse any valid JSON, such as _Array_. This means that if your API implementation returned a _String_ or a _nil_, the output will be different.
 
 ```ruby
-get "/" do
- "example"
+get '/' do
+  'example'
 end
 ```
 
@@ -35,8 +35,8 @@ end
 ```
 
 ```ruby
-get "/" do
- nil
+get '/' do
+  nil
 end
 ```
 
@@ -52,17 +52,18 @@ You can monkey-patch back the old behavior as follows.
 
 ```ruby
 module Grape
- module Formatter
-   module Json
-     class << self
-       def call(object, env)
-         return object if ! object || object.is_a?(String)
-         return object.to_json if object.respond_to?(:to_json)
-         raise Grape::Exceptions::InvalidFormatter.new(object.class, 'json')
-       end
-     end
-   end
- end
+  module Formatter
+    module Json
+      class << self
+        def call(object, env)
+          return object if !object || object.is_a?(String)
+          return object.to_json if object.respond_to?(:to_json)
+
+          raise Grape::Exceptions::InvalidFormatter.new(object.class, 'json')
+        end
+      end
+    end
+  end
 end
 ```
 
@@ -70,7 +71,7 @@ Similar changes apply to the XML formatter.
 
 ### Reading Input
 
-With the above changes its now possible to read JSON input that's not a hash. This was reported as a bug in [#347](https://github.com/ruby-grape/grape/issues/347). Hash parameters continue to be merged into _params_, while everything else is now available in _env[‘api.request.body']_, you don't have to parse _env[‘rack.input']_ again, a notable performance optimization.
+With the above changes its now possible to read JSON input that's not a hash. This was reported as a bug in [#347](https://github.com/ruby-grape/grape/issues/347). Hash parameters continue to be merged into _params_, while everything else is now available in `env['api.request.body']`, you don't have to parse `env['rack.input']` again, a notable performance optimization.
 
 #### Default Log Format
 

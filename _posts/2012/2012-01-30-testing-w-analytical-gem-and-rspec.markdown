@@ -25,11 +25,11 @@ development:
 We wrote a few simple tests to make sure the analytical code is being included properly. For example, we can check whether Google Analytics is included on the splash page.
 
 ```ruby
-context "google analytics" do
-  it "should appear on the splash page" do
-    visit "/"
+context 'google analytics' do
+  it 'should appear on the splash page' do
+    visit '/'
     within :css, "script[type='text/javascript']:contains('.google-analytics.com/')" do
-      page.should have_content("UA-12345")
+      page.should have_content('UA-12345')
     end
   end
 end
@@ -38,24 +38,24 @@ end
 Or, more complicated, test whether a user ID is sent to Kissmetrics.
 
 ```ruby
-context "kiss-metrics analytics" do
-  it "should appear on the splash page" do
-    visit "/"
+context 'kiss-metrics analytics' do
+  it 'should appear on the splash page' do
+    visit '/'
     within :css, "script[type='text/javascript']:contains('kissmetrics.com/')" do
-      page.should have_content("12345")
+      page.should have_content('12345')
     end
   end
-  context "logged-in user" do
+  context 'logged-in user' do
     before(:each) do
       login_as @user
-      visit "/"
+      visit '/'
     end
-    it "should appear on the search page" do
+    it 'should appear on the search page' do
       within :css, "script[type='text/javascript']:contains('kissmetrics.com/')" do
-        page.should have_content("12345")
+        page.should have_content('12345')
       end
     end
-    it "should include user id" do
+    it 'should include user id' do
       within :css, "script[type='text/javascript']:contains(\"identify\")" do
         page.should have_content("[\"identify\", \"#{@user.id}\"]);")
       end
@@ -68,16 +68,16 @@ The drawback of this approach is that the Analytical code is included with every
 
 ```ruby
 before :each do
-    @analytical_options = ApplicationController.analytical_options.dup
-    ApplicationController.analytical_options = @analytical_options.merge({
-        :modules => [:google, :kiss_metrics],
-        :google => { :key => "UA-12345" },
-        :kiss_metrics => { :js_url_key => 12345 }
-    })
+  @analytical_options = ApplicationController.analytical_options.dup
+  ApplicationController.analytical_options = @analytical_options.merge({
+                                                                         modules: %i[google kiss_metrics],
+                                                                         google: { key: 'UA-12345' },
+                                                                         kiss_metrics: { js_url_key: 12_345 }
+                                                                       })
 end
 
 after :each do
-    ApplicationController.analytical_options = @analytical_options
+  ApplicationController.analytical_options = @analytical_options
 end
 ```
 

@@ -20,8 +20,7 @@ class Artwork
   field :title, type: String
   slug :title, index: true
 
-  ...
-
+  # ...
 end
 ```
 

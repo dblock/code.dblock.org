@@ -30,7 +30,7 @@ Mutations::CreateMeetingMutation = GraphQL::Relay::Mutation.define do
   return_field :meetingsConnection, Types::MeetingType.connection_type
   return_field :meetingEdge, Types::MeetingType.edge_type
 
-  resolve ->(_object, inputs, ctx) {
+  resolve lambda { |_object, inputs, ctx|
     user = ctx[:current_user]
 
     meeting = user.meetings.create!(
@@ -116,7 +116,7 @@ Mutations::DeleteMeetingMutation = GraphQL::Relay::Mutation.define do
 
   return_field :deletedId, !types.ID
 
-  resolve ->(_object, inputs, ctx) {
+  resolve lambda { |_object, inputs, ctx|
     user = ctx[:current_user]
     meeting = user.meetings.find(inputs[:id])
     meeting.destroy!
@@ -178,11 +178,11 @@ Relay's support for pagination relies on the GraphQL server exposing connections
 
 ```ruby
 Types::UserType = GraphQL::ObjectType.define do
-   name 'User'
-   field :id, types.ID, 'User ID.'
-   field :name, types.String, 'User name.'
+  name 'User'
+  field :id, types.ID, 'User ID.'
+  field :name, types.String, 'User name.'
 
-   connection :meetings, Types::MeetingType.connection_type
+  connection :meetings, Types::MeetingType.connection_type
 end
 ```
 

@@ -19,11 +19,11 @@ Before I talk about what I did or learned, I must apologize to the team for givi
 Initially, I expected to make 2-3 pull requests. Instead, I was able to make 89 (!), broke at least two production features, but also shipped some meaningful improvements. These fell into several categories.
 
 1. Improved developer experience. I fixed several issues in local dev, wrote a new CONTRIBUTING guide, added a script to start and shutdown various services together, and added an AGENTS.md to make the repo AI-agent-ready.
-1. Did batch dependency upgrades to address CVEs. Major upgrades required rework of the actual code. Two of these silently broke features in very subtle ways, showing gaps in integration testing, but also taking a lot of team's time to debug unexpectedly.
-1. Increased test coverage and overall repo quality. I wrote a number of missing unit and integration tests and fixed a few flaky ones. A clear win.
-1. Improved CI/CD pipeline. I was able to bring the CI time down from over an hour to ~30 minutes, mostly by not building projects without code changes, and disabling the many checks and guards that didn't need to run on every pull request.
-1. Executed some overdue modernization. I finished a Webpack to Vite migration that another engineer stalled on because of conflicting priorities, significantly improving local build time, upgraded TypeScript 4 to 5, Node.js 16 to 20, LESS to SCSS, MSTest 2.x to 3.x. All these upgrades were on the team's backlog, but nobody ever had time to do them.
-1. Fixed many minor bugs. Other than bugs reported by users, I paid attention to warnings during build or in the JavaScript console, and asked Copilot to address them. I improved error display, corrected dark mode CSS, addressed sass deprecation warnings and ESLint errors.
+2. Did batch dependency upgrades to address CVEs. Major upgrades required rework of the actual code. Two of these silently broke features in very subtle ways, showing gaps in integration testing, but also taking a lot of team's time to debug unexpectedly.
+3. Increased test coverage and overall repo quality. I wrote a number of missing unit and integration tests and fixed a few flaky ones. A clear win.
+4. Improved CI/CD pipeline. I was able to bring the CI time down from over an hour to ~30 minutes, mostly by not building projects without code changes, and disabling the many checks and guards that didn't need to run on every pull request.
+5. Executed some overdue modernization. I finished a Webpack to Vite migration that another engineer stalled on because of conflicting priorities, significantly improving local build time, upgraded TypeScript 4 to 5, Node.js 16 to 20, LESS to SCSS, MSTest 2.x to 3.x. All these upgrades were on the team's backlog, but nobody ever had time to do them.
+6. Fixed many minor bugs. Other than bugs reported by users, I paid attention to warnings during build or in the JavaScript console, and asked Copilot to address them. I improved error display, corrected dark mode CSS, addressed sass deprecation warnings and ESLint errors.
 
 Here's what I learned.
 

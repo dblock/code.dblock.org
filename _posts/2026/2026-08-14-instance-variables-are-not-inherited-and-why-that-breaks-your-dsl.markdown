@@ -18,7 +18,7 @@ end
 
 This works fine for a single class. It gets interesting the moment subclasses or class reloading show up.
 
-A user opened [#56](https://github.com/dblock/ruby-enum/pull/56), reporting `DuplicateKeyError` from a Rails console after a class that had already `define`d its enums got reloaded. It reproduces without Rails.
+A user opened [#56](https://github.com/dblock/ruby-enum/pull/56), reporting `DuplicateKeyError` from a Rails console after a class that had already called `define` for its enums got reloaded. It reproduces without Rails.
 
 ```ruby
 class_body = proc do
@@ -84,4 +84,4 @@ Same lesson, opposite direction: since `@_enum_hash` isn't automatically inherit
 
 Recomputing that merge on every single call is correct but wasteful - `O(depth)` work per lookup with no caching. I benchmarked it (more on that in a follow-up post) and found a one-level subclass paid a 5x tax on `.value` lookups versus the base class. [#60](https://github.com/dblock/ruby-enum/pull/60) memoized the merged hash, invalidating it only when `define` adds a new entry.
 
-Class-instance-variables in Ruby - `@ivar` set on a class object, as opposed to instance-level `@ivar`s on regular objects - are per-class. They aren't inherited, and reloading a class doesn't reset them for you. If a gem's DSL needs subclass-aware or reload-safe behavior, that has to be built in explicitly: clear state on `include`, default lazily instead of assuming initialization already ran, and walk `superclass` yourself if you want inheritance-like semantics.
+Class-instance-variables in Ruby - `@ivar` set on a class object, as opposed to instance-level variables on regular objects - are per-class. They aren't inherited, and reloading a class doesn't reset them for you. If a gem's DSL needs subclass-aware or reload-safe behavior, that has to be built in explicitly: clear state on `include`, default lazily instead of assuming initialization already ran, and walk `superclass` yourself if you want inheritance-like semantics.

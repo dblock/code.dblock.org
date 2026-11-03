@@ -106,7 +106,7 @@ module Api
   class Client < Strava::Web::Client
     attr_accessor(*Config::ATTRIBUTES)
 
-    def initialize(options = {})
+    def initialize(options = {}) # rubocop:disable Lint/MissingSuper -- Excerpt illustrates option assignment only.
       Config::ATTRIBUTES.each do |key|
         send("#{key}=", options[key] || Api.config.send(key))
       end
@@ -130,7 +130,7 @@ What does this do? It allows global configuration.
 ```ruby
 Api::Client.configure do |config|
   config.access_token = 'token'
-  config.logger = ::Logger.new(STDOUT)
+  config.logger = Logger.new($stdout)
 end
 ```
 
@@ -184,6 +184,7 @@ class Activity < Hashie::Trash
     case type
     when 'Run' then '🏃'
     when 'Ride' then '🚴'
+    end
   end
 end
 ```

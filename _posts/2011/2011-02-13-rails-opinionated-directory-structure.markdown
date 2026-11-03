@@ -12,5 +12,5 @@ This can be easily fixed by telling Rails to load all sub-directories under mode
 
 ```ruby
 # Load all subdirectories of app/models.
-config.autoload_paths += Dir["#{Rails.root}/app/models/\*\*/\*"]
+config.autoload_paths += Dir["#{Rails.root}/app/models/**/*"]
 ```

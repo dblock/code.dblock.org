@@ -21,7 +21,7 @@ Fixing the folder structure and naming is fairly straightforward. You can move t
 ```ruby
 workspace 'ARASCIISwizzle'
 
-pod 'ARASCIISwizzle', :path => 'ARASCIISwizzle.podspec'
+pod 'ARASCIISwizzle', path: 'ARASCIISwizzle.podspec'
 
 xcodeproj 'Demo.xcodeproj'
 ```
@@ -75,7 +75,7 @@ The Podfile must now reference "Demo", "Tests" and the "IntegrationTests" projec
 ```ruby
 workspace 'ARASCIISwizzle'
 
-pod 'ARASCIISwizzle', :path => 'ARASCIISwizzle.podspec'
+pod 'ARASCIISwizzle', path: 'ARASCIISwizzle.podspec'
 
 xcodeproj 'Demo.xcodeproj'
 

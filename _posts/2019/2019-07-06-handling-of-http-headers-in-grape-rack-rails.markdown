@@ -32,18 +32,18 @@ end
 The default headers in a Rack test are `Cookie` and `Host`.
 
 ```ruby
-  it 'returns all headers' do
-    get '/api/headers'
-    expect(JSON.parse(last_response.body)).to eq(
-      'Cookie' => '',
-      'Host' => 'example.org'
-    )
-  end
+it 'returns all headers' do
+  get '/api/headers'
+  expect(JSON.parse(last_response.body)).to eq(
+    'Cookie' => '',
+    'Host' => 'example.org'
+  )
+end
 
-  it 'returns a Host header' do
-    get '/api/headers/Host'
-    expect(JSON.parse(last_response.body)).to eq('Host' => 'example.org')
-  end
+it 'returns a Host header' do
+  get '/api/headers/Host'
+  expect(JSON.parse(last_response.body)).to eq('Host' => 'example.org')
+end
 ```
 
 Curl sends more headers by default.
@@ -83,16 +83,15 @@ curl -H reticulated-spline:42 https://localhost:9292/api/headers/Reticulated-Spl
 Rack stores HTTP headers in `ENV` as all uppercase with an `HTTP_` prefix. You can pass the Rack env as the second parameter in your specs. In the example below `HTTP_RETICULATED_SPLINE` becomes `Reticulated-Spline` and `SOMETHING_ELSE` is only available in `ENV['SOMETHING_ELSE']` and is not a header.
 
 ```ruby
-get '/api/headers', nil, { 
-  'HTTP_RETICULATED_SPLINE' => 42, 
-  'SOMETHING_ELSE' => 1 
+get '/api/headers', nil, {
+  'HTTP_RETICULATED_SPLINE' => 42,
+  'SOMETHING_ELSE' => 1
 }
 expect(JSON.parse(last_response.body)).to eq(
-  'Cookie' => '', 
-  'Host' => 'example.org', 
+  'Cookie' => '',
+  'Host' => 'example.org',
   'Reticulated-Spline' => 42
 )
-end
 ```
 
 To avoid confusion use the `header` helper that behaves as one would expect.

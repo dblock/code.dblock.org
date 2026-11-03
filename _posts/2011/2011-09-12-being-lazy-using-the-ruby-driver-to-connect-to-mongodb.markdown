@@ -24,8 +24,8 @@ This is run in a Rake task. Let's replace this with some Ruby code, the way it's
 
 ```ruby
 db = Mongo::Connection.new(db_host, db_port).db(db_name)
-db.authenticate(db_user, db_password) unless (db.user.nil? || db.user.blank?)
-db.collection("widgets").drop()
+db.authenticate(db_user, db_password) unless db.user.nil? || db.user.blank?
+db.collection('widgets').drop()
 ```
 
 It's actually a lot cleaner, I am not sure why I was hung up on the command line thing. Unfortunately it doesn't fix our problem. In a replica set we need to use a `ReplSetConnection` that will automatically load-balance requests and send writes to the master. It takes a list of hosts, something like
@@ -33,7 +33,7 @@ It's actually a lot cleaner, I am not sure why I was hung up on the command line
 ```ruby
 db_connection = Mongo::ReplSetConnection.new(db_host_list).db(db_name)
 db_connection.authenticate(db_user, db_password)
-db_connection("widgets").drop()
+db_connection('widgets').drop()
 ```
 
 Let's try to write something usable in all of our rake tasks. What I have is a YML file with the Heroku MongoHQ configuration. The first environment is a replica set, while the second is a single MongoDB.
@@ -56,39 +56,38 @@ We can write a basic _connect_  method that picks up the right configuration, as
 
 ```ruby
 namespace :mongohq do
-
   def heroku_config(env = Rails.env)
-    @@config ||= YAML.load_file(Rails.root.join("config/heroku.yml")).symbolize_keys
-    config_env = @@config[env.to_sym]
+    @config ||= YAML.load_file(Rails.root.join('config/heroku.yml')).symbolize_keys
+    config_env = @config[env.to_sym]
     raise "missing '#{env}' section in config/heroku.yml" if config_env.nil?
-    config_env["config"]
+
+    config_env['config']
   end
 
   def parse_mongohq_url(url)
     uri = URI.parse(url)
-    [uri, uri.path.gsub("/", "")]
+    [uri, uri.path.gsub('/', '')]
   end
 
   # connect to a MongoDB
   def mongohq_connect(env = Rails.env)
     config = heroku_config(env)
-    if ! config["MONGOHQ_HOST_LIST"].blank?
-    mongohq_host_list = eval(config["MONGOHQ_HOST_LIST"])
-    puts "[#{Time.now}] connecting to #{config["MONGOHQ_DATABASE"]} on #{eval(config["MONGOHQ_HOST_LIST"])}"
-    db_connection = Mongo::ReplSetConnection.new(\* mongohq_host_list).db(config["MONGOHQ_DATABASE"])
-    db_connection.authenticate(config["MONGOHQ_USER"], config["MONGOHQ_PASSWD"])
-    db_connection
-    elsif ! config["MONGOHQ_URL"].blank?
-    puts "[#{Time.now}] connecting to #{config["MONGOHQ_URL"]}"
-    db, db_name = parse_mongohq_url(config["MONGOHQ_URL"])
-    db_connection = Mongo::Connection.new(db.host, db.port).db(db_name)
-    db_connection.authenticate(db.user, db.password) unless (db.user.nil? || db.user.blank?)
-    db_connection
+    if !config['MONGOHQ_HOST_LIST'].blank?
+      mongohq_host_list = eval(config['MONGOHQ_HOST_LIST']) # rubocop:disable Security/Eval -- Trusted legacy configuration.
+      puts "[#{Time.now}] connecting to #{config['MONGOHQ_DATABASE']} on #{mongohq_host_list}"
+      db_connection = Mongo::ReplSetConnection.new(*mongohq_host_list).db(config['MONGOHQ_DATABASE'])
+      db_connection.authenticate(config['MONGOHQ_USER'], config['MONGOHQ_PASSWD'])
+      db_connection
+    elsif !config['MONGOHQ_URL'].blank?
+      puts "[#{Time.now}] connecting to #{config['MONGOHQ_URL']}"
+      db, db_name = parse_mongohq_url(config['MONGOHQ_URL'])
+      db_connection = Mongo::Connection.new(db.host, db.port).db(db_name)
+      db_connection.authenticate(db.user, db.password) unless db.user.nil? || db.user.blank?
+      db_connection
     else
-    raise "missing MONGOHQ_URL or MONGOHQ_HOST_LIST for #{env} environment"
+      raise "missing MONGOHQ_URL or MONGOHQ_HOST_LIST for #{env} environment"
     end
   end
-
 end
 ```
 

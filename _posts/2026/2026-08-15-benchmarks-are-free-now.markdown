@@ -23,6 +23,7 @@ I only found this because I asked Copilot CLI to add a benchmark script comparin
 ```ruby
 class Colors
   include Ruby::Enum
+
   define :RED, 'red'
   define :GREEN, 'green'
 end

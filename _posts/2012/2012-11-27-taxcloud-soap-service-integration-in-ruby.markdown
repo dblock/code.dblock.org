@@ -17,10 +17,10 @@ This library is also a nice example of a generic SOAP client wrapper in Ruby. I 
 I borrowed error handling from [@modetojoy](https://twitter.com/modetojoy)'s Mongoid. Today someone said: "I had a bug in a spec and Durran told me how to fix it in an error message." True story. To accomplish this we define a base error that holds the problem, summary and resolution. In tax_cloud's case this is  [TaxCloud::Errors::TaxCloudError](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud/errors/tax_cloud_error.rb) paired with [config/locales/en.yml](https://github.com/txcrb/tax_cloud/blob/master/lib/config/locales/en.yml), a locale file that does the error formatting. There are two things to do in order for the error code to find the message: add the locale file to the load path, in [tax_cloud.rb](https://github.com/txcrb/tax_cloud/blob/master/lib/tax_cloud.rb), and do a bit of formatting with I18n.
 
 ```ruby
-I18n.load_path << File.join(File.dirname(__FILE__), "config", "locales", "en.yml")
+I18n.load_path << File.join(File.dirname(__FILE__), 'config', 'locales', 'en.yml')
 
 def translate(key, options)
-    ::I18n.translate("#{BASE_KEY}.#{key}", { :locale => :en }.merge(options)).strip
+  I18n.translate("#{BASE_KEY}.#{key}", { locale: :en }.merge(options)).strip
 end
 ```
 
@@ -54,7 +54,7 @@ The tax_cloud gem uses [Savon](https://github.com/savonrb/savon) to make SOAP re
 module TaxCloud #:nodoc:
   class Client < Savon::Client
     def initialize
-      super 'https://api.taxcloud.net/1.0/?wsdl'
+      super('https://api.taxcloud.net/1.0/?wsdl')
     end
   end
 end
@@ -64,7 +64,7 @@ First, we need to add authentication to every request, which is required by the 
 
 ```ruby
 def request(method, body = {})
-  super method, :body => body.merge(auth_params)
+  super(method, body: body.merge(auth_params))
 end
 
 def auth_params
@@ -80,16 +80,14 @@ Second, we want to handle SOAP errors, and give a detailed explanation for SOAP 
 ```ruby
 def request(method, body = {})
   safe do
-    super method, :body => body.merge(auth_params)
+    super(method, body: body.merge(auth_params))
   end
 end
 
 def safe(&block)
-  begin
-    yield
-  rescue Savon::SOAP::Fault => e
-    raise TaxCloud::Errors::SoapError.new(e)
-  end
+  yield
+rescue Savon::SOAP::Fault => e
+  raise TaxCloud::Errors::SoapError, e
 end
 ```
 
@@ -118,25 +116,25 @@ end
 
 def test_ping_with_invalid_credentials
   assert_raise TaxCloud::Errors::ApiError do
-   VCR.use_cassette('ping_with_invalid_credentials') do
-    TaxCloud.client.ping
-   end
+    VCR.use_cassette('ping_with_invalid_credentials') do
+      TaxCloud.client.ping
+    end
   end
 end
 
 def test_ping_with_invalid_response
   e = assert_raise TaxCloud::Errors::UnexpectedSoapResponse do
-   VCR.use_cassette('ping_with_invalid_response') do
-    TaxCloud.client.ping
-   end
+    VCR.use_cassette('ping_with_invalid_response') do
+      TaxCloud.client.ping
+    end
   end
-  assert_equal "Expected a value for `ping_result`.", e.problem
+  assert_equal 'Expected a value for `ping_result`.', e.problem
 end
 
 def test_ping
   VCR.use_cassette('ping') do
-   response = TaxCloud.client.ping
-   assert_equal "OK", response
+    response = TaxCloud.client.ping
+    assert_equal 'OK', response
   end
 end
 ```

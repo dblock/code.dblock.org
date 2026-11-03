@@ -14,11 +14,11 @@ Build is 1.4.8182.0.
 
 ## Features
 
-- #8559: Added impersonation support on the Servlet security filter.
-- #9353: Allow customization of GrantedAuthority string in Spring Security filter and authentication manager.
-- #8493: Intermediate security contexts of unfinished Negotiate protocol instances expire after ten seconds.
-- #9854: Added support for query strings with multiple parameters to MixedAuthenticator.
-- #243081: Filter providers and protocols specified in configuration can be separated by any type of space.
+- \#8559: Added impersonation support on the Servlet security filter.
+- \#9353: Allow customization of GrantedAuthority string in Spring Security filter and authentication manager.
+- \#8493: Intermediate security contexts of unfinished Negotiate protocol instances expire after ten seconds.
+- \#9854: Added support for query strings with multiple parameters to MixedAuthenticator.
+- \#243081: Filter providers and protocols specified in configuration can be separated by any type of space.
 
 There are Waffle forks for Tomcat 5, 7 and Spring-Security 2.
 

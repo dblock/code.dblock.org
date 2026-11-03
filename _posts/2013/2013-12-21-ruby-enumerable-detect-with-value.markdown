@@ -12,13 +12,13 @@ Consider an example where you have an expensive _Geocoder.search_ operation and 
 
 ```ruby
 addresses = [
- '221B Baker Street, London, UK', # Sherlock Holmes
- '1428 Elm Street, Springwood, Ohio', # Nightmare on Elm Street
- '350 5th Ave, New York, NY' # Empire State Building
+  '221B Baker Street, London, UK', # Sherlock Holmes
+  '1428 Elm Street, Springwood, Ohio', # Nightmare on Elm Street
+  '350 5th Ave, New York, NY' # Empire State Building
 ]
 
 first_real_address = addresses.detect do |address|
- Geocoder.search(address)
+  Geocoder.search(address)
 end
 
 first_real_address # 350 5th Ave, New York, NY
@@ -30,7 +30,7 @@ Instead, using _detect_value_ you can return the geo-location of the first real 
 
 ```ruby
 first_geo_location = addresses.detect_value do |address|
- Geocoder.search(address)
+  Geocoder.search(address)
 end
 
 first_geo_location # lat: 40.74830, lng: -73.98554
@@ -41,13 +41,13 @@ The [implementation for detect_value](https://github.com/dblock/enumerable-detec
 ```ruby
 module Enumerable
  # Returns the first result of the block that is not nil.
- def detect_value(&block)
-   each do |el|
-     result = yield el
-     return result if result
-   end
-   nil
- end
+  def detect_value(&block)
+    each do |el|
+      result = yield el
+      return result if result
+    end
+    nil
+  end
 end
 ```
 

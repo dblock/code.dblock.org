@@ -45,7 +45,7 @@ curl -u admin:admin -k https://localhost:9200 | jq
 Create an ingest pipeline.
 
 ```bash
-$ curl -k -u admin:admin -X PUT -H "Content-type:application/json" --data '{"description":"Extract","processors":[{"attachment":{"field":"data","indexed_chars":-1}}]}' https://localhost:9200/_ingest/pipeline/attachment | jq
+curl -k -u admin:admin -X PUT -H "Content-type:application/json" --data '{"description":"Extract","processors":[{"attachment":{"field":"data","indexed_chars":-1}}]}' https://localhost:9200/_ingest/pipeline/attachment | jq
 ```
 
 ```json
@@ -57,13 +57,13 @@ $ curl -k -u admin:admin -X PUT -H "Content-type:application/json" --data '{"des
 Download a dummy PDF.
 
 ```bash
-$ wget https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+wget https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
 ```
 
 Ingest the PDF.
 
 ```bash
-$ curl -k -u admin:admin -X PUT -H "Content-type:application/json" --data '{"filename":"dummy.pdf","title":"Dummy PDF","data":"'"$(base64 -w 0 dummy.pdf)"'"}' https://localhost:9200/my_index/_doc/1?pipeline=attachment | jq
+curl -k -u admin:admin -X PUT -H "Content-type:application/json" --data '{"filename":"dummy.pdf","title":"Dummy PDF","data":"'"$(base64 -w 0 dummy.pdf)"'"}' https://localhost:9200/my_index/_doc/1?pipeline=attachment | jq
 ```
 
 ```json
@@ -85,7 +85,7 @@ $ curl -k -u admin:admin -X PUT -H "Content-type:application/json" --data '{"fil
 Search.
 
 ```bash
-$ curl -k -u admin:admin -X POST -H "Content-type:application/json" --data '{"query":{"match":{"attachment.content":{"query":"dummy"}}}}' https://localhost:9200/my_index/_search | jq
+curl -k -u admin:admin -X POST -H "Content-type:application/json" --data '{"query":{"match":{"attachment.content":{"query":"dummy"}}}}' https://localhost:9200/my_index/_search | jq
 ```
 
 ```json

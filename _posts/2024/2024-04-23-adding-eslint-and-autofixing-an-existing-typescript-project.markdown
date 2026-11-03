@@ -37,7 +37,7 @@ Add the linter to scripts.
 Run the linter with `npm run lint`. My first run resulted in a lot of violations. I extracted the list of them with `jq` and pasted it into `rules`.
 
 ```bash
-$ npm run --silent lint -- --format json | jq '.[].messages[] | select(.line != null) .ruleId' | sort | uniq
+npm run --silent lint -- --format json | jq '.[].messages[] | select(.line != null) .ruleId' | sort | uniq
 ```
 
 ```javascript

@@ -11,8 +11,8 @@ dblog_post_id: 213
 In a previous article I described how to process an image in the CarrierWave pipeline to extract it's geometry. It all works very well until a large amount of people start uploading high resolution images, including 100 megabyte TIFFs, all at once. I've noticed that this hogs a Heroku dyno for an extra 1 to 30 seconds depending on the image size. Today we'll offload this processing into a queue with [delayed_job](https://github.com/collectiveidea/delayed_job). The latter was originally extracted from Shopify and continued development on [this fork](https://github.com/collectiveidea/delayed_job). We'll throw in [delayed_job_mongoid](https://github.com/collectiveidea/delayed_job_mongoid), since we're a MongoDB shop.
 
 ```ruby
-gem "delayed_job", "2.1.4"
-gem "delayed_job_mongoid", "1.0.2"
+gem 'delayed_job', '2.1.4'
+gem 'delayed_job_mongoid', '1.0.2'
 ```
 
 ## Extracting Image Geometry
@@ -20,31 +20,31 @@ gem "delayed_job_mongoid", "1.0.2"
 We'll use a simple example as our geometry processor. It reads the image and extracts it's width and height.
 
 ```ruby
-def get_geometry
-    himage = ::Magick::Image::read(@file).first
-    begin
-     geometry = [himage.columns, himage.rows]
-    ensure
-      himage.destroy! if himage
-    end
-    geometry
+def read_geometry
+  himage = Magick::Image.read(@file).first
+  begin
+    geometry = [himage.columns, himage.rows]
+  ensure
+    himage&.destroy!
+  end
+  geometry
 end
 ```
 
-Previously we would run this method before saving the image, making our users wait. Now we would like to delay this operation after the image has been saved. With _delayed_job_ this is not quite as simple as calling `.delay.get_geometry`. This method is going to execute asynchronously, so it requires more context, such as the model to update. The following variation is something that can actually be delayed.
+Previously we would run this method before saving the image, making our users wait. Now we would like to delay this operation after the image has been saved. With _delayed_job_ this is not quite as simple as calling `.delay.read_geometry`. This method is going to execute asynchronously, so it requires more context, such as the model to update. The following variation is something that can actually be delayed.
 
 ```ruby
 class ImageGeometryProcessor
   def process(id, file)
-    himage = ::Magick::Image::read(file).first
+    himage = ::Magick::Image.read(file).first
     begin
       image = Image.find(id)
       image.update_attributes!({
-          :best_width => himage.columns,
-          :best_height => himage.rows
-      })
+                                 best_width: himage.columns,
+                                 best_height: himage.rows
+                               })
     ensure
-      himage.destroy! if himage
+      himage&.destroy!
     end
   end
 end
@@ -60,14 +60,14 @@ We will now write a self-contained processor that gets the image url from the im
 class ImageGeometryProcessor
   def process(id)
     image = Image.find(id)
-    himage = ::Magick::Image::read(image.image_url).first
+    himage = ::Magick::Image.read(image.image_url).first
     begin
       image.update_attributes!({
-          :best_width => himage.columns,
-          :best_height => himage.rows
-      })
+                                 best_width: himage.columns,
+                                 best_height: himage.rows
+                               })
     ensure
-      himage.destroy! if himage
+      himage&.destroy!
     end
   end
 end
@@ -80,10 +80,10 @@ class Image
   after_save :saved
 
   def saved
-    if image.file?
+    return unless image.file?
+
       # delay processing of image geometry
-      ImageGeometryProcessor.new.delay.process(id)
-    end
+    ImageGeometryProcessor.new.delay.process(id)
   end
 end
 ```
@@ -96,22 +96,20 @@ Finally, the geometry processor can take some final shape.
 
 ```ruby
 class ImageGeometryProcessor
-
   def process(id)
     image = Image.find(id)
-    himage = ::Magick::Image::read(image.image_url).first
+    himage = ::Magick::Image.read(image.image_url).first
     begin
       Image.without_callbacks([:saved]) do
         image.update_attributes!({
-          :best_width => himage.columns,
-          :best_height => himage.rows
-        })
+                                   best_width: himage.columns,
+                                   best_height: himage.rows
+                                 })
       end
     ensure
-      himage.destroy! if himage
+      himage&.destroy!
     end
   end
-
 end
 ```
 

@@ -10,21 +10,21 @@ Got a chance to play with [Goliath](https://postrank-labs.github.io/goliath/) fo
 
 ```ruby
 module Acme
- class Ping < Grape::API
-   format :json
-   get '/ping' do
-     { ping: "pong" }
-   end
- end
+  class Ping < Grape::API
+    format :json
+    get '/ping' do
+      { ping: 'pong' }
+    end
+  end
 
- class App < Goliath::API
-   use Goliath::Rack::Params
-   use Goliath::Rack::Render
+  class App < Goliath::API
+    use Goliath::Rack::Params
+    use Goliath::Rack::Render
 
-   def response(env)
-     Acme::API.call(env)
-   end
- end
+    def response(env)
+      Acme::API.call(env)
+    end
+  end
 end
 ```
 
@@ -32,13 +32,13 @@ Tests for something like this are a little bit tricky, because Goliath is fully 
 
 ```ruby
 describe Acme::API do
- it "ping" do
-   with_api Acme::App do
-     get_request(path: "/api/ping") do |async|
-       async.response.should == { ping: "pong" }.to_json
-     end
-   end
- end
+  it 'ping' do
+    with_api Acme::App do
+      get_request(path: '/api/ping') do |async|
+        async.response.should == { ping: 'pong' }.to_json
+      end
+    end
+  end
 end
 ```
 

@@ -54,9 +54,9 @@ Create a new iOS Single View Application project and place it into the folder cr
 Inside the Demo folder, create a Podfile. Yes, we're going to write tests, using [Specta](https://github.com/specta/specta) and [Expecta](https://github.com/specta/expecta).
 
 ```ruby
-pod "objc-ngram", :path => "../objc-ngram.podspec"
+pod 'objc-ngram', path: '../objc-ngram.podspec'
 
-target "DemoTests" do
+target 'DemoTests' do
   pod 'Specta', '~> 0.2.1'
   pod 'Expecta', '~> 0.2.3'
 end

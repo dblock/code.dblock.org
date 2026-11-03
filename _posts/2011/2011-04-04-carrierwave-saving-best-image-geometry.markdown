@@ -15,33 +15,31 @@ First, lets define a "best" version of the image. That's one that's not being re
 ```ruby
 class ArtworkUploader < CarrierWave::Uploader::Base
   version :best do
-    process :convert => 'jpg'
+    process convert: 'jpg'
   end
 end
 ```
 
 ### Fetch Geometry on Upload
 
-Notice the process declarations above: both _resize_to_limit_ and _convert_ are methods of the uploader class. We can therefore add a new _get_geometry_ function and store the geometry of the uploaded image with this version.
+Notice the process declarations above: both _resize_to_limit_ and _convert_ are methods of the uploader class. We can therefore add a new _read_geometry_ function and store the geometry of the uploaded image with this version.
 
 ```ruby
 class ArtworkUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
 
   version :best do
-    process :convert => 'jpg'
-    process :get_geometry
+    process convert: 'jpg'
+    process :read_geometry
 
-    def geometry
-      @geometry
-    end
+    attr_reader :geometry
   end
 
-  def get_geometry
-    if (@file)
-      img = ::Magick::Image::read(@file.file).first
-      @geometry = [img.columns, img.rows]
-    end
+  def read_geometry
+    return unless @file
+
+    img = ::Magick::Image.read(@file.file).first
+    @geometry = [img.columns, img.rows]
   end
 end
 ```
@@ -52,20 +50,18 @@ Finally, we would like to store _best_width_ and _best_height_ with the _Image_ 
 
 ```ruby
 class Image
-
   field :best_width
   field :best_height
 
   before_save :saving
 
   def saving
-    geometry = self.image.best.geometry
-    if (! geometry.nil?)
-      self.best_width = geometry[0]
-      self.best_height = geometry[1]
-    end
-  end
+    geometry = image.best.geometry
+    return if geometry.nil?
 
+    self.best_width = geometry[0]
+    self.best_height = geometry[1]
+  end
 end
 ```
 

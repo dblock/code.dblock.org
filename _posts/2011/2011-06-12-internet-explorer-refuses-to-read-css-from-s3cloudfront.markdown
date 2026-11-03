@@ -16,7 +16,7 @@ Examining the HTTP response I quickly found out that the content-type came back 
 content_type = MIME::Types.type_for(entry)[0]
 logger.info("[#{Time.now}] uploading #{key} (#{content_type})")
 s3i.put(to, key, File.open(entry), {
-  'x-amz-acl' => 'public-read',
-  'content-type' => content_type.to_s
-})
+          'x-amz-acl' => 'public-read',
+          'content-type' => content_type.to_s
+        })
 ```

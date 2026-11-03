@@ -10,7 +10,7 @@ dblog_post_id: 237
 
 "What would you call such an animal?", asked someone at work about a future new hire in our engineering team. A rather artsy discussion ensued – working with a bunch of creative people across art and technology disciplines often sparks fun conversations. Next thing you know I am reading [rickwebb's tumble on engineering titles](https://rickwebb.tumblr.com/post/7938077259/whats-the-worse-piece-of-advice-youve-ever-received).
 
-> _"That myth is that titles are bad, and people hate managers [...] then there are titles. Same deal. There are some people who don't care about titles. God bless ‘em. There are, however, many people that do."_
+> _"That myth is that titles are bad, and people hate managers \[...\] then there are titles. Same deal. There are some people who don't care about titles. God bless ‘em. There are, however, many people that do."_
 
 I see Rick occasionally, but he's now in another time zone! How is he reading my mind?
 
@@ -28,6 +28,6 @@ There's something romantic-sounding in the reverse combination of the two words.
 
 I think Rick's advice is pretty good.
 
-> _My thinking now is that it's best to acknowledge this early, and apply titles from the getgo, thus garnering the increased thanks from the employee when a title is given proactively, rather than when they're one foot out the door and you offer it belatedly. [...] Hire and title as if you are already at a 100 people, place them where they would belong based on their merits, and fill in the gaps later._
+> _My thinking now is that it's best to acknowledge this early, and apply titles from the getgo, thus garnering the increased thanks from the employee when a title is given proactively, rather than when they're one foot out the door and you offer it belatedly. \[...\] Hire and title as if you are already at a 100 people, place them where they would belong based on their merits, and fill in the gaps later._
 
 But maybe you want to pitch in? How do you title your new Engineering hires?
