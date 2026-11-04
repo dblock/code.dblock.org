@@ -1837,6 +1837,7 @@ widdis
 widgetandgadget
 wifi
 willpaginatemongoid
+winget
 winhost
 winimage
 winterkorn

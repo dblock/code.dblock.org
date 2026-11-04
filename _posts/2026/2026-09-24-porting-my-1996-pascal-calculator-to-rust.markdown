@@ -102,7 +102,15 @@ calc "sqrt(16) + sin(pi/2)"
 # 5
 ```
 
-Use `brew tap dblock/excalc-rs https://github.com/dblock/excalc-rs` and `brew install excalc` on macOS/Linux, or grab the MSI from the [latest release](https://github.com/dblock/excalc-rs/releases/latest) on Windows.
+Use `brew tap dblock/excalc-rs https://github.com/dblock/excalc-rs`, `brew trust --formula dblock/excalc-rs/excalc`, and `brew install excalc` on macOS/Linux.
+
+On Windows, install with [WinGet](https://github.com/microsoft/winget-pkgs/pull/441253):
+
+```powershell
+winget install --id Vestris.Excalc --exact
+```
+
+Open a new terminal so the updated `PATH` takes effect, then run `excalc "2+2"` to get `4`. You can also download the MSI from the [latest release](https://github.com/dblock/excalc-rs/releases/latest).
 
 ### Links
 
