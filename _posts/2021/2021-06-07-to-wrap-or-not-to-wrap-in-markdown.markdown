@@ -47,23 +47,122 @@ For an argument _for_ wrapping text, see [this comment](https://github.com/opens
 
 ## Update: Enforce It
 
-You can now enforce one source line per paragraph with [markdownlint-rule-single-line-paragraphs](https://github.com/dblock/markdownlint-rule-single-line-paragraphs), a custom `markdownlint` rule. See [code.dblock.org#173](https://github.com/dblock/code.dblock.org/pull/173) for a working example.
+You can enforce one source line per paragraph with a linter, or run a formatter in check mode to reject wrapped paragraphs in CI. Here are configurations for JavaScript, Ruby, and Python projects. Pick the tool you already use.
 
-Here's how to load the custom rule and enable it.
+These settings remove soft line breaks, not intentional Markdown hard breaks. Let your editor wrap long lines visually. Disabling a maximum-line-length rule alone doesn't enforce anything: a paragraph split across several short lines would still pass.
 
-```javascript
-const rule = require("markdownlint-rule-single-line-paragraphs");
+### markdownlint
 
-const options = {
-  customRules: [rule],
-  config: {
-    "single-line-paragraphs": {
-      enabled: true
-    }
-  }
-};
+[markdownlint-rule-single-line-paragraphs](https://github.com/dblock/markdownlint-rule-single-line-paragraphs) is a custom `markdownlint` rule. Install it with the command-line runner:
+
+```sh
+npm install --save-dev markdownlint-cli2 markdownlint-rule-single-line-paragraphs
 ```
 
-The rule checks prose at the document root and inside lists and blockquotes. It preserves intentional Markdown hard breaks and `<br>` boundaries. It can also fix violations by joining continuation text onto the first line and deleting the old continuation lines.
+Create `.markdownlint-cli2.jsonc`:
+
+```json
+{
+  "customRules": ["markdownlint-rule-single-line-paragraphs"],
+  "config": {
+    "default": true,
+    "MD013": false,
+    "single-line-paragraphs": {
+      "enabled": true
+    }
+  }
+}
+```
+
+Disable `MD013`, the line-length rule, so it doesn't complain about the long paragraphs you just asked for. Run the checker locally and in CI:
+
+```sh
+npx markdownlint-cli2 "**/*.md" "**/*.markdown"
+```
+
+Add `--fix` to join continuation lines automatically:
+
+```sh
+npx markdownlint-cli2 --fix "**/*.md" "**/*.markdown"
+```
+
+The rule checks prose at the document root and inside lists and blockquotes. It preserves intentional Markdown hard breaks and `<br>` boundaries. See [code.dblock.org#173](https://github.com/dblock/code.dblock.org/pull/173) for a working example.
 
 I would have preferred this to be built as a new `style: single` in `MD013` as discussed in [markdownlint#298](https://github.com/DavidAnson/markdownlint/issues/298), but the repository doesn't accept AI-generated code and I don't remember how to write code anymore.
+
+### RuboCop
+
+For Ruby projects, [rubocop-prose](https://github.com/dblock/rubocop-prose) provides `Prose/MaxLength`. Add it to your `Gemfile` and run `bundle install`:
+
+```ruby
+gem 'rubocop-prose', '~> 0.1', require: false
+```
+
+Add to `.rubocop.yml`:
+
+```yaml
+plugins:
+  - rubocop-prose
+
+Prose/MaxLength:
+  Enabled: true
+  Max: false
+```
+
+Here, `Max: false` means "one source line per paragraph", not "disable the cop". It's also the default. A positive number asks the same cop to wrap paragraphs to that width instead. The plugin requires Ruby 3.2 or newer and RuboCop 1.72.1 or newer within 1.x.
+
+Check and fix paragraph wrapping with:
+
+```sh
+bundle exec rubocop --only Prose/MaxLength README.md
+bundle exec rubocop --only Prose/MaxLength -a README.md
+```
+
+This works inside lists and blockquotes, preserves hard breaks and `<br>`, and leaves headings, tables, and code blocks alone. Omit `--only Prose/MaxLength` to run the rest of your configured cops too.
+
+### Prettier
+
+[Prettier](https://prettier.io/docs/options#prose-wrap) already knows how to unwrap paragraphs. Install it:
+
+```sh
+npm install --save-dev prettier
+```
+
+Set `proseWrap` in `.prettierrc.json`:
+
+```json
+{
+  "proseWrap": "never"
+}
+```
+
+Check formatting in CI, or rewrite files locally:
+
+```sh
+npx prettier --check "**/*.md" "**/*.markdown"
+npx prettier --write "**/*.md" "**/*.markdown"
+```
+
+Use `"never"`, not the default `"preserve"`: preserving existing wrapping would leave already-wrapped paragraphs alone. You don't need to inflate `printWidth` to some enormous number. This checks all formatting choices enforced by Prettier, not just paragraph wrapping, and the write command applies them too.
+
+### mdformat
+
+For Python projects, [mdformat](https://github.com/executablebooks/mdformat) supports `--wrap no`:
+
+```sh
+pipx install mdformat
+mdformat --check --wrap no README.md
+mdformat --wrap no README.md
+```
+
+The check command fails if the file needs formatting; the second command rewrites it. To make this the project default, add `.mdformat.toml`:
+
+```toml
+wrap = "no"
+```
+
+The default is `"keep"`, which preserves existing line wrapping. Like Prettier, mdformat also enforces its other formatting choices. It parses CommonMark by default; for GitHub Flavored Markdown, install its extension with `pipx inject mdformat mdformat-gfm`.
+
+### ESLint
+
+For [eslint-plugin-markdown-preferences](https://github.com/ota-meshi/eslint-plugin-markdown-preferences), a standalone `single-line-paragraphs` rule is [proposed in #338](https://github.com/ota-meshi/eslint-plugin-markdown-preferences/issues/338), but isn't released yet. Don't copy that proposed rule name into your configuration and expect it to work. Until then, run one of the checkers above alongside ESLint.

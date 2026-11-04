@@ -290,6 +290,7 @@ collectionsnapshot
 collectrium
 colombe
 commenters
+commonmark
 commoditize
 compa
 compizconfig
@@ -1001,6 +1002,7 @@ mcmanus
 mcp
 mcps
 md
+mdformat
 mea
 mediachain
 mediaglobe
