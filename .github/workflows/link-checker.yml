@@ -2,6 +2,7 @@ name: Check Links
 on:
   workflow_dispatch:
   push:
+    branches: [gh-pages]
   schedule:
     - cron: "30 11 * * 0"
 jobs:
