@@ -1,5 +1,8 @@
 name: Check Spelling
-on: [push, pull_request]
+on:
+  push:
+    branches: [gh-pages]
+  pull_request:
 jobs:
   check:
     runs-on: ubuntu-latest
