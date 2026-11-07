@@ -91,10 +91,10 @@ I would have preferred this to be built as a new `style: single` in `MD013` as d
 
 ### RuboCop
 
-For Ruby projects, [rubocop-prose](https://github.com/dblock/rubocop-prose) provides `Prose/MaxLength`. Add it to your `Gemfile` and run `bundle install`:
+For Ruby projects, [rubocop-prose](https://github.com/dblock/rubocop-prose) provides `Prose/MaxLength`. I added it to this Jekyll blog alongside spelling and Ruby code-example checks in [code.dblock.org#176](https://github.com/dblock/code.dblock.org/pull/176); see [Linting Both Prose and Embedded Code with RuboCop](/2026/11/06/linting-both-prose-and-embedded-code-with-rubocop.html). Add it to your `Gemfile` and run `bundle install`:
 
 ```ruby
-gem 'rubocop-prose', '~> 0.1', require: false
+gem 'rubocop-prose', '~> 0.2.0', require: false
 ```
 
 Add to `.rubocop.yml`:
