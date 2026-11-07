@@ -32,15 +32,10 @@ end
 desc 'Run commit-time Markdown linting and staged spelling checks.'
 task precommit: [:lint, 'spell:staged']
 
-desc 'Check links in the already-built site.'
+desc 'Build the site, including future posts, and check links as in CI.'
 task :links do
-  require 'html-proofer'
-  HTMLProofer.check_directory(
-    './_site',
-    alt_ignore: [/.*/],
-    http_status_ignore: [999]
-  ).run
+  sh({ 'LINK_CHECKER' => '1' }, 'bundle exec jekyll build --future')
 end
 
 desc 'Build the site and check for broken links.'
-task check: %i[tags links]
+task check: :links

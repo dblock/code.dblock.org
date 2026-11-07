@@ -3,7 +3,6 @@
 source 'https://rubygems.org'
 
 gem 'csv'
-gem 'html-proofer'
 gem 'jekyll', '~> 4.4'
 gem 'jekyll-md', '~> 0.2.0'
 gem 'jekyll-paginate', '~> 1.1'

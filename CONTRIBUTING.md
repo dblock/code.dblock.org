@@ -143,7 +143,7 @@ It's likely that your change will not be merged and that the nitpicky maintainer
 
 ### Link Checker
 
-Run `bundle exec rake links` to check links in an existing `_site` without rebuilding it. Run `bundle exec rake check` to build the site first, then check its links.
+Run `bundle exec rake links` to build the site with future posts and check links using the same command as CI: `LINK_CHECKER=1 bundle exec jekyll build --future`. The plugin checks content links before layouts add navigation and edit links, using its existing logging and exclusions. `bundle exec rake check` is an alias for the same task.
 
 ### Markdown Linter
 
