@@ -523,4 +523,4 @@ searchRespBody, _ := io.ReadAll(searchResp.Body)
 fmt.Println("search: ", string(searchRespBody))
 ```
 
-See the [updated documentation](https://github.com/opensearch-project/opensearch-go/blob/main/guides/json.md) for more information, and please contribute a working demo to the project or [opensearch-go-client-demo](https://github.com/dblock/opensearch-go-client-demo) as I am too lazy to write [all the error handlers](https://code.dblock.org/2022/12/27/programming-languages.html).
+See the [updated documentation](https://github.com/opensearch-project/opensearch-go/blob/main/guides/usage-json.md) for more information, and please contribute a working demo to the project or [opensearch-go-client-demo](https://github.com/dblock/opensearch-go-client-demo) as I am too lazy to write [all the error handlers](https://code.dblock.org/2022/12/27/programming-languages.html).

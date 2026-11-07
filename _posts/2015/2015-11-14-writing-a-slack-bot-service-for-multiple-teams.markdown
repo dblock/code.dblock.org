@@ -34,7 +34,7 @@ The bot server isn't useful without a bit of UI. I implemented a Grape API with 
 
 ### Slack Button Integration
 
-To enable Slack button integration, I followed [Create a New Application](https://api.slack.com/applications/new) on Slack, noting the client ID and secret. The UI gives you the HTML code for a slack button. When a user clicks on the button they and OAuth completes successfully they are redirected back to your application with a `code` in the query string. That code is POSTed to Slack via the [Web API's oauth.access](https://api.slack.com/methods/oauth.access) which returns an actual API token that can be used with a Real Time API client.
+To enable Slack button integration, I followed [Create a New Application](https://api.slack.com/applications/new) on Slack, noting the client ID and secret. The UI gives you the HTML code for a slack button. When a user clicks on the button they and OAuth completes successfully they are redirected back to your application with a `code` in the query string. That code is POSTed to Slack via the [Web API's oauth.access](https://docs.slack.dev/reference/methods/oauth.access/) which returns an actual API token that can be used with a Real Time API client.
 
 ![register]({{ site.url }}/images/posts/2015/2015-11-14-writing-a-slack-bot-service-for-multiple-teams/new.png)
 

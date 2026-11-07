@@ -160,7 +160,7 @@ export default {
 }
 ```
 
-Note that `NODE_DELETE` empties a node in the local store, but doesn't remove it. Therefore a `if (node)` is needed in the list renderer. This is [relay#2155](https://github.com/facebook/relay/issues/2155).
+Note that `NODE_DELETE` empties a node in the local store, but doesn't remove it. Therefore a `if (node)` is needed in the list renderer. This is [relay#2155](https://github.com/meta/relay/issues/2155).
 
 ```js
 let meetings = this.props.user.meetings.edges.map(({node}) => {
@@ -174,7 +174,7 @@ You can see the complete server-side code in [33-minutes-server@11c324](https://
 
 ### Relay-Style Connections
 
-Relay's support for pagination relies on the GraphQL server exposing connections in a [standardized way](https://facebook.github.io/relay/graphql/connections.htm). To expose user's meetings as a GraphQL field you would write `field :meetings, -> { !types[Types::MeetingType] }`. To enable this to be Relay-style, use `connection`.
+Relay's support for pagination relies on the GraphQL server exposing connections in a [standardized way](https://relay.dev/graphql/connections.htm). To expose user's meetings as a GraphQL field you would write `field :meetings, -> { !types[Types::MeetingType] }`. To enable this to be Relay-style, use `connection`.
 
 ```ruby
 Types::UserType = GraphQL::ObjectType.define do

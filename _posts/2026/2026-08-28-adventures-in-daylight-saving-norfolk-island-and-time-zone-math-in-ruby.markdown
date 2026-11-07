@@ -49,7 +49,7 @@ end
 
 Fixing #63 with `utc_offset` comparisons was more correct, but still baked in an assumption: that any offset change is a ±1 hour DST transition. [#153](https://github.com/radar/distance_of_time_in_words/issues/153) broke that assumption. Running the test suite under `TZ=Pacific/Norfolk` produced a spurious "23 hours and 30 minutes" leaking into results that should have just been a clean calendar distance.
 
-It turns out [Norfolk Island permanently changed its UTC offset from +11:30 to +11:00 on 4 October 2015](https://www.infrastructure.gov.au/territories-regions-cities/territories/norfolk_island/administrator/media/2015/ni-a-mr-201526), announced by the island's Administrator a month earlier — a one-time `tzdata` rule change, not a recurring seasonal transition. The old code's ±1 hour hardcoding had no way to represent a 30-minute, permanent shift.
+It turns out [Norfolk Island permanently changed its UTC offset from +11:30 to +11:00 on 4 October 2015](https://web.archive.org/web/20260519031924/https://www.infrastructure.gov.au/territories-regions-cities/territories/norfolk_island/administrator/media/2015/ni-a-mr-201526), announced by the island's Administrator a month earlier — a one-time `tzdata` rule change, not a recurring seasonal transition. The old code's ±1 hour hardcoding had no way to represent a 30-minute, permanent shift.
 
 Again, a real (non-mocked) reproduction is enough — no `dst?` mismatch involved this time, just a genuine historical offset change baked into `tzdata` itself:
 

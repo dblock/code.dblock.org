@@ -58,7 +58,7 @@ This is a special interaction that happens when a user opens the bot home tab, h
 
 #### Users Mentioning the Bot without @
 
-This is an interesting pattern that is not natively supported by Slack events. I want users to be able to give the bot aliases. For example, instead of always having to type `@gamebot` (a Slack mention), users can type `pongbot` or `pp`. To implement this, I subscribe the bot to [`message` events](https://api.slack.com/events/message) (requires `channels:history`), [parse](https://github.com/dblock/slack-gamebot2/blob/main/lib/events.rb#L71) every message for one of the known bot names or aliases stored in the database, and hand the results back to the command handlers as if they were typical app mentions.
+This is an interesting pattern that is not natively supported by Slack events. I want users to be able to give the bot aliases. For example, instead of always having to type `@gamebot` (a Slack mention), users can type `pongbot` or `pp`. To implement this, I subscribe the bot to [`message` events](https://docs.slack.dev/reference/events/message/) (requires `channels:history`), [parse](https://github.com/dblock/slack-gamebot2/blob/main/lib/events.rb#L71) every message for one of the known bot names or aliases stored in the database, and hand the results back to the command handlers as if they were typical app mentions.
 
 ### Links
 

@@ -22,8 +22,8 @@ I speak frequently on topics ranging from the intersection of technology and art
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UsN7YkCCw-c?si=7yEUnbxGIch1ZFfZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=UsN7YkCCw-c&list=PLzgr9zSpws14zCETcKtCBwcOuTGMccpV9&index=20">OpenSearchCon EU 2024: How to become an OpenSearch Project Repo Maintainer</a>
 
-<a href='https://topenddevs.com/podcasts/ruby-rogues/episodes/understanding-framework-flexibility-ruby-617'>![]({{ site.url }}/images/posts/2023/2023-12-13-ruby-rogues/ruby-rogues.png)</a><br>
-[Understanding Grape Framework Flexibility (RUBY 617)](https://topenddevs.com/podcasts/ruby-rogues/episodes/understanding-framework-flexibility-ruby-617), Ruby Rogues Podcast
+<a href='https://web.archive.org/web/20240206002354/https://topenddevs.com/podcasts/ruby-rogues/episodes/understanding-framework-flexibility-ruby-617'>![]({{ site.url }}/images/posts/2023/2023-12-13-ruby-rogues/ruby-rogues.png)</a><br>
+[Understanding Grape Framework Flexibility (RUBY 617)](https://web.archive.org/web/20240206002354/https://topenddevs.com/podcasts/ruby-rogues/episodes/understanding-framework-flexibility-ruby-617), Ruby Rogues Podcast
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TZy7ViZbbHc?si=3pS7bkbK0hpR_V86" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=TZy7ViZbbHc">OpenSearchCon 2023: Writing OpenSearch Plugins and Extensions (in Python)</a>
 

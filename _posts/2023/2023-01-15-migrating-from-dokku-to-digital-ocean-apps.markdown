@@ -13,7 +13,7 @@ I've got 4 profitable, and 5 money-losing or free Slack apps, all open-source.
 - [www.playplay.io](https://www.playplay.io): A ping-pong/chess/pool/tic-tac-toe leaderboard for Slack.
 - [slava.playplay.io](https://slava.playplay.io/): Strava integration in Slack.
 - [sup.playplay.io](https://sup.playplay.io/): Helps team members meet every week in an informal standup.
-- [market.playplay.io](https://market.playplay.io/): Stock market quotes in Slack.
+- [market.playplay.io](https://web.archive.org/web/20230116204510/https://market.playplay.io/): Stock market quotes in Slack.
 - [moji.playplay.io](https://moji.playplay.io/): More emoji in Slack.
 - [invite.playplay.io](https://invite.playplay.io/): Help your users join your Slack.
 - [arena.playplay.io](https://arena.playplay.io/): Are.na integration with Slack.

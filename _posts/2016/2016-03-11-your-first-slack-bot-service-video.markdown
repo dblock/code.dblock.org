@@ -29,7 +29,7 @@ It contains an overview of Slack APIs and various integration options, including
 #### Apps
 
 * [playplay.io](https://www.playplay.io)
-* [slack-market](https://market.playplay.io)
+* [slack-market](https://web.archive.org/web/20180116005627/https://market.playplay.io/)
 * [api-explorer](https://api-explorer.playplay.io)
 * [shell](https://shell.playplay.io)
 

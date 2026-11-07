@@ -19,7 +19,7 @@ data = web_client.rtm_start(start_options)
 
 The store exposes `users`, `channels`, `teams`, etc.
 
-Every time data changes in Slack, [an event](https://api.slack.com/events) is delivered to every connected client. For example, when a channel is renamed a [channel_rename](https://api.slack.com/events/channel_rename) event is sent.
+Every time data changes in Slack, [an event](https://docs.slack.dev/reference/events/) is delivered to every connected client. For example, when a channel is renamed a [channel_rename](https://docs.slack.dev/reference/events/channel_rename/) event is sent.
 
 ```json
 {

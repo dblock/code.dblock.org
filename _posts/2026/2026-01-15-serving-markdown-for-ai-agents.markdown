@@ -4,7 +4,7 @@ title: Serving Markdown for AI Agents in Jekyll
 date: 2026-01-15
 tags: [ai, jekyll, markdown, blog, github-actions]
 ---
-Dries Buytaert recently wrote about [The Third Audience](https://dri.es/the-third-audience). For decades, websites have targeted two audiences: humans and search engines. AI agents are now the third audience, and most websites aren't optimized for them yet.
+Dries Buytaert recently wrote about [The Third Audience](https://web.archive.org/web/20260115001952/https://dri.es/the-third-audience). For decades, websites have targeted two audiences: humans and search engines. AI agents are now the third audience, and most websites aren't optimized for them yet.
 
 AI agents prefer clean, structured content over HTML. Markdown is ideal - it's readable, semantic, and free of navigation chrome. So I made this blog serve its source markdown files alongside the HTML.
 

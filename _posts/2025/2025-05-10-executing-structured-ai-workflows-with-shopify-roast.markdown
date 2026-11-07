@@ -35,7 +35,7 @@ This should produce a `chat.completion` response.
 
 Check out Roast. You can `gem install roast-ai` from [Rubygems](https://rubygems.org/gems/roast-ai), but I am going to reuse an example workflow, so `git clone git@github.com:Shopify/roast.git` and `cd roast`.
 
-The [test grading workflow](https://github.com/Shopify/roast/blob/main/examples/grading/workflow.md) is a senior software engineer and testing expert that evaluates the quality of a test based on guidelines. It's configured to use `gpt-4.1-mini` to analyze coverage, but `o3`, a more expensive and capable model, to generate recommendations. The free OpenAI tier doesn't have access to these, so I have edited the file to use `gpt-4.1-mini` everywhere (`model: gpt-4.1-mini`). I also told it to use my OpenAI token from `OPENAI_API_KEY` (`api_token: $(echo $OPENAI_API_KEY)`).
+The [test grading workflow](https://github.com/Shopify/roast/blob/b6fe8f213047bc24f06e5cc48dcdbb12eab838cd/examples/grading/workflow.md) is a senior software engineer and testing expert that evaluates the quality of a test based on guidelines. It's configured to use `gpt-4.1-mini` to analyze coverage, but `o3`, a more expensive and capable model, to generate recommendations. The free OpenAI tier doesn't have access to these, so I have edited the file to use `gpt-4.1-mini` everywhere (`model: gpt-4.1-mini`). I also told it to use my OpenAI token from `OPENAI_API_KEY` (`api_token: $(echo $OPENAI_API_KEY)`).
 
 ```
 diff --git a/examples/grading/workflow.yml b/examples/grading/workflow.yml

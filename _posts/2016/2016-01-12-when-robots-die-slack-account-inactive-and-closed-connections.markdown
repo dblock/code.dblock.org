@@ -17,7 +17,7 @@ client.on :close do |_data|
 end
 ```
 
-The next time you invoke [rtm.start](https://api.slack.com/methods/rtm.start), Slack will return `account_inactive`. Other possible errors include `invalid_auth`, which is when someone removes an integration instead of disabling it.
+The next time you invoke [rtm.start](https://docs.slack.dev/reference/methods/rtm.start/), Slack will return `account_inactive`. Other possible errors include `invalid_auth`, which is when someone removes an integration instead of disabling it.
 
 ```bash
 ~/examples/hi_real_time (master)$ ruby hi.rb
@@ -38,7 +38,7 @@ slack-ruby-client-0.5.2/lib/slack/web/faraday/response/raise_error.rb:9:
     from slack-ruby-client-0.5.2/lib/slack/real_time/client.rb:38:in `start!'
 ```
 
-The same thing happens when you _remove_ an application (the _Remove App_ button below) that was setup via [Slack Button Integration](https://api.slack.com/docs/slack-button).
+The same thing happens when you _remove_ an application (the _Remove App_ button below) that was setup via [Slack Button Integration](https://docs.slack.dev/legacy/legacy-slack-button/).
 
 ![remove app]({{ site.url }}/images/posts/2016/2016-01-12-when-robots-die-slack-account-inactive-and-closed-connections/remove.png)
 

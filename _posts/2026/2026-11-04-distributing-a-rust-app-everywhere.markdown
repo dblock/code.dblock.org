@@ -470,7 +470,7 @@ The job waits for successful crate publishing, portable archives, and MSI upload
 
 The [full release workflow](https://github.com/dblock/excalc-rs/blob/master/.github/workflows/release.yml) includes the dependency checks, a concurrency group, an explicit failure when the token is missing, and a job summary linking to the submitted PR. It keeps previous package versions.
 
-Unlike the Homebrew update in the same repository, this needs a [cross-repository credential with `public_repo` and `workflow` scopes]((https://github.com/settings/tokens/new?description=ExCalc%20WinGet&scopes=public_repo,workflow)) to push to a separate `winget-pkgs` fork and open Microsoft's upstream PR. I created the token and stored it with `gh secret set WINGET_TOKEN --repo dblock/excalc-rs`.
+Unlike the Homebrew update in the same repository, this needs a [cross-repository credential with `public_repo` and `workflow` scopes](https://github.com/settings/tokens/new?description=ExCalc%20WinGet&scopes=public_repo,workflow) to push to a separate `winget-pkgs` fork and open Microsoft's upstream PR. I created the token and stored it with `gh secret set WINGET_TOKEN --repo dblock/excalc-rs`.
 
 ## Cut a Release
 

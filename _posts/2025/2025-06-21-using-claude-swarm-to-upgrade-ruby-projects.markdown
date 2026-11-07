@@ -4,7 +4,7 @@ title: Using Claude-Swarm to Upgrade Ruby Projects
 date: 2025-06-21 01:00:00
 tags: [ai, tools, shopify, ruby]
 ---
-[One of my colleagues](https://x.com/parrudanet) wrote a pretty awesome tool called [claude-swarm](http://github.com/parruda/claude-swarm) that orchestrates multiple Claude Code instances as a collaborative AI development team. At Shopify, we are attempting to use it to generate Ruby unit tests at some scale with an army of AI test agents (think a "Ruby Expert" paired with a "TDD Practitioner" and a "Code Review Nitpicker"). But for the purposes of this post, let's just upgrade Ruby in a few projects.
+[One of my colleagues](https://x.com/parrudanet) wrote a pretty awesome tool called [claude-swarm](https://web.archive.org/web/20250630133623/https://github.com/parruda/claude-swarm) that orchestrates multiple Claude Code instances as a collaborative AI development team. At Shopify, we are attempting to use it to generate Ruby unit tests at some scale with an army of AI test agents (think a "Ruby Expert" paired with a "TDD Practitioner" and a "Code Review Nitpicker"). But for the purposes of this post, let's just upgrade Ruby in a few projects.
 
 First, ensure that you have a [working version of command-line Claude code](https://docs.anthropic.com/en/docs/claude-code/overview) with a monthly subscription, since you will be having a lot of tokens for breakfast.
 
@@ -19,7 +19,7 @@ $ claude "Say hello."
 ⏺ Hello! I'm Claude Code, ready to help you with your software engineering tasks. What can I assist you with today?
 ```
 
-Install the [claude_swarm](http://github.com/parruda/claude-swarm) gem. Note that the gem name has an `_`.
+Install the [claude_swarm](https://web.archive.org/web/20250630133623/https://github.com/parruda/claude-swarm) gem. Note that the gem name has an `_`.
 
 ```bash
 gem install claude_swarm

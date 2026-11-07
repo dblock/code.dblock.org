@@ -8,7 +8,7 @@ dblog_post_id: 367
 ---
 ![]({{ site.url }}/images/posts/2012/2012-12-23-10-things-engineers-and-non-engineers-can-do-to-make-a-website-faster/image_3.jpg)
 
-> An investor, a startup CEO, and an engineer walk into a bar to discuss [Page Weight Matters](https://blog.chriszacharias.com/page-weight-matters). They naturally end up talking about their own slow website.
+> An investor, a startup CEO, and an engineer walk into a bar to discuss [Page Weight Matters](https://web.archive.org/web/20121224181920/http://blog.chriszacharias.com/page-weight-matters). They naturally end up talking about their own slow website.
 >
 > The CEO's friend works in finance. She invested a bit of cash in her friend's startup. She came home late, made herself dinner and read her personal email (her bank won't let her do that at work). The website's newsletter had something interesting, so she clicked. She stared at a white page for a bit, then it finally loaded after 8 seconds. She was already bored and figured it's not worth it. "Something's wrong with my internet", she thought. Google came up instantly, though, so she emailed her CEO friend.
 >

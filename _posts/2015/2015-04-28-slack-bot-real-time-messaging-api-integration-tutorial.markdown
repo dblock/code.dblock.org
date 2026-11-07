@@ -8,7 +8,7 @@ I've been recently contributing to [slack-pongbot](https://github.com/andrewvy/s
 
 ![]({{ site.url }}/images/posts/2015/2015-04-28-slack-bot-real-time-messaging-api-integration-tutorial/duel.gif)
 
-The endless levels of callback hell and promises have driven me sufficiently crazy to try and rewrite this in Ruby. Let's get a basic Ruby Slack integration going, using the [Slack Real Time Messaging API](https://api.slack.com/rtm) this time.
+The endless levels of callback hell and promises have driven me sufficiently crazy to try and rewrite this in Ruby. Let's get a basic Ruby Slack integration going, using the [Slack Real Time Messaging API](https://docs.slack.dev/legacy/legacy-rtm-api/) this time.
 
 ## Slack-Ruby-Client
 

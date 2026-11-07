@@ -4,7 +4,7 @@ title: "Running Slack Bots on DigitalOcean with Dokku"
 date: 2016-02-08
 tags: [slack, api, digitalocean, dokku, deployment]
 ---
-Slack bot experimentation, especially for not-too-serious purposes, has become a little too expensive on Heroku. There's no free tier for maintaining apps running 24/7, so the dollars add up quickly at 7x12=84$ a year per application. I am currently running [playplay.io](https://www.playplay.io), [shell](https://shell.playplay.io), [api-explorer](https://api-explorer.playplay.io) and [market](https://market.playplay.io). Add another $18x12 = $216 for a non-free-tier MongoDB for one of the apps and it's no longer a coffee-money bill.
+Slack bot experimentation, especially for not-too-serious purposes, has become a little too expensive on Heroku. There's no free tier for maintaining apps running 24/7, so the dollars add up quickly at 7x12=84$ a year per application. I am currently running [playplay.io](https://www.playplay.io), [shell](https://shell.playplay.io), [api-explorer](https://api-explorer.playplay.io) and [market](https://web.archive.org/web/20180116005627/https://market.playplay.io/). Add another $18x12 = $216 for a non-free-tier MongoDB for one of the apps and it's no longer a coffee-money bill.
 
 I've always liked and thought highly of DigitalOcean, but loved the convenience of Heroku and enjoyed having all my apps in one place with a consistent git workflow. Yesterday one of DigitalOcean developers kindly offered me some droplet credits to run one of the bots their team uses. I decided that _free_ beats _convenient_ and that it's time to do some work, save money and learn a few things.
 
@@ -20,7 +20,7 @@ Sign up for a DigitalOcean account. If you haven't, use [my referral link](https
 
 You'll be asked for an SSH key during setup. Use your existing one or generate a new one with `ssh-keygen` (I made `digitalocean_id_rsa` and `digitalocean_id_rsa.pub`), copy-paste the contents of the `.pub` file into the box during signup and save the private and public keys in a vault (I use 1Password).
 
-DigitalOcean boots a droplet and assigns it an IP address. I use [DNSimple](https://dnsimple.com/r/0fd8bf77eef5bd) to give it a name via an A DNS record as well as a wildcard entry.
+DigitalOcean boots a droplet and assigns it an IP address. I use [DNSimple](https://dnsimple.com/) to give it a name via an A DNS record as well as a wildcard entry.
 
 ![dns entry]({{ site.url }}/images/posts/2016/2016-02-08-running-slack-bots-on-digital-ocean-with-dokku/dnsimple.png)
 
@@ -104,7 +104,7 @@ Dokku supports Git workflow. Add a remote and push code to it.
 ...
 ```
 
-The app is now available at _market-bot.dblock-plum.digitalocean.playplay.io_, much like any _herokuapp.com_ applications. I added a DNS CNAME [market.playplay.io](https://market.playplay.io) entry pointing here and told Dokku about it.
+The app is now available at _market-bot.dblock-plum.digitalocean.playplay.io_, much like any _herokuapp.com_ applications. I added a DNS CNAME [market.playplay.io](https://web.archive.org/web/20180116005627/https://market.playplay.io/) entry pointing here and told Dokku about it.
 
 ```bash
 root@dblock-plum:~# dokku domains:add market-bot market.playplay.io

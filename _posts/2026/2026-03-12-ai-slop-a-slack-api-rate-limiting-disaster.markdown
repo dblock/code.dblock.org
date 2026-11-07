@@ -28,7 +28,7 @@ def close!
 end
 ```
 
-This code looks pretty great and completely breaks the app. Slack's API has a [global rate limit of 1 request per second](https://api.slack.com/docs/rate-limits) for the `conversations.close` endpoint. So, when this job runs against a workspace with hundreds of old conversations, it immediately hits the rate limit. Worse, because rate limits are global across all endpoints, it takes down the entire application. Every other API call — posting messages, fetching user info, everything — starts failing.
+This code looks pretty great and completely breaks the app. Slack's API has a [global rate limit of 1 request per second](https://docs.slack.dev/apis/web-api/rate-limits/) for the `conversations.close` endpoint. So, when this job runs against a workspace with hundreds of old conversations, it immediately hits the rate limit. Worse, because rate limits are global across all endpoints, it takes down the entire application. Every other API call — posting messages, fetching user info, everything — starts failing.
 
 I asked AI to address this. It made the fix catastrophically worse.
 

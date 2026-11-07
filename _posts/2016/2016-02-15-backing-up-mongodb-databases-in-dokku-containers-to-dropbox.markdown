@@ -86,7 +86,7 @@ If you need selective sync, check out [this blog post](https://web.archive.org/w
 
 #### Create an Export Script
 
-Create `Dropbox/bin/dokku-mongo-export.sh`. It enumerates Dokku MongoDB databases and runs `mongo:export` on them. The archive that [mongo:export produces](https://github.com/dokku/dokku-mongo/blob/master/functions#L115) is gzipped archive output of `mongodump`.
+Create `Dropbox/bin/dokku-mongo-export.sh`. It enumerates Dokku MongoDB databases and runs `mongo:export` on them. The archive that [mongo:export produces](https://github.com/dokku/dokku-mongo/blob/5fe00e2321917f87edb8c2b319d770a36231a321/functions) is gzipped archive output of `mongodump`.
 
 Notice I just put the script in my Dropbox ;)
 
@@ -126,7 +126,7 @@ Note that only executables without an extension run from `/etc.cron.*/`, hence t
 
 #### Restoring Data
 
-The archive that [mongo:export produces](https://github.com/dokku/dokku-mongo/blob/master/functions#L115) is gzipped archive output of `mongodump`. To restore in Dokku, use `mongo:import`. To restore locally, run `mongorestore --gzip --archive=filename`.
+The archive that [mongo:export produces](https://github.com/dokku/dokku-mongo/blob/5fe00e2321917f87edb8c2b319d770a36231a321/functions) is gzipped archive output of `mongodump`. To restore in Dokku, use `mongo:import`. To restore locally, run `mongorestore --gzip --archive=filename`.
 
 ### Neat
 

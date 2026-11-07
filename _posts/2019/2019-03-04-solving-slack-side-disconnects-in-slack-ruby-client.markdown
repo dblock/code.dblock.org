@@ -78,7 +78,7 @@ Having no good ideas I ventured into replacing EventMachine and Celluloid with A
 
 We naturally reached the obvious conclusion that there was no bug and that the protocol required an active heartbeat, and that there was none implemented.
 
-[@RodneyU215](https://github.com/RodneyU215) from Slack stepped in and added ping monitoring in [slack-ruby-client#226](https://github.com/slack-ruby/slack-ruby-client/pull/226) following [Slack's RTM guidelines](https://api.slack.com/rtm) (see Ping and Pong). The entire discussion and the evolution of that code is worth a read. I notably learned that Ruby `Time.now` was [not monotonic](https://blog.dnsimple.com/2018/03/elapsed-time-with-ruby-the-right-way/).
+[@RodneyU215](https://github.com/RodneyU215) from Slack stepped in and added ping monitoring in [slack-ruby-client#226](https://github.com/slack-ruby/slack-ruby-client/pull/226) following [Slack's RTM guidelines](https://docs.slack.dev/legacy/legacy-rtm-api/) (see Ping and Pong). The entire discussion and the evolution of that code is worth a read. I notably learned that Ruby `Time.now` was [not monotonic](https://blog.dnsimple.com/2018/03/elapsed-time-with-ruby-the-right-way/).
 
 I found the final code in [slack-ruby-client#226](https://github.com/slack-ruby/slack-ruby-client/pull/226) to be a rather elegant and straightforward example of a complex asynchronous process: a worker sends `ping` messages to Slack, which responds with a `pong` captured by the listening process. We periodically check whether a ping has been received within a reasonable timeframe and forcibly abort the connection, causing a reconnect, if it wasn't.
 

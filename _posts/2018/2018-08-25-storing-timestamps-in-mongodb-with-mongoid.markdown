@@ -27,7 +27,7 @@ Foo.create!
 
 The MongoDB log shows that the time is inserted in UTC, `"updated_at"=>2018-08-25 10:12:58 UTC`.
 
-According to [the documentation](https://www.mongodb.com/developer/products/mongodb/bson-data-types-date/), internally, Date objects are stored as a signed 64-bit integer representing the number of milliseconds since the Unix epoch (Jan 1, 1970). The shell returns an ISO date.
+According to [the documentation](https://web.archive.org/web/20220812093021/https://www.mongodb.com/developer/products/mongodb/bson-data-types-date/), internally, Date objects are stored as a signed 64-bit integer representing the number of milliseconds since the Unix epoch (Jan 1, 1970). The shell returns an ISO date.
 
 ```bash
 $ mongo
