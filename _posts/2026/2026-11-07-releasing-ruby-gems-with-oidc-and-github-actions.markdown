@@ -39,7 +39,9 @@ The `CHANGELOG.md` in this project is in the Intridea style. The gem also suppor
 
 Before publishing `0.5.0` the `CHANGELOG.md` is updated with a date. After publishing, the `VERSION` constant is incremented to `0.5.1`, and `CHANGELOG.md` is updated with a `Next` section.
 
-Add `.github/workflows/release.yml` to call the reusable release workflow. The optional `rubygems-owner` input accepts your numeric RubyGems account ID when publishing a new gem for the first time:
+The release requires actual changelog entries, not just a placeholder or empty headings. It also checks RubyGems for an existing version before publishing and stops if the version lookup fails, rather than guessing that it's safe to release.
+
+Add `.github/workflows/release.yml` to call the reusable release workflow. The optional `version` input selects a different release version, and `rubygems-owner` accepts your numeric RubyGems account ID when publishing a new gem for the first time:
 
 {% raw %}
 
@@ -49,6 +51,10 @@ name: Release
 on:
   workflow_dispatch:
     inputs:
+      version:
+        description: Optional release version overriding the checked-in version.
+        required: false
+        type: string
       rubygems-owner:
         description: RubyGems account ID for first publication; omit for an existing gem.
         required: false
@@ -60,15 +66,18 @@ permissions:
 
 jobs:
   release:
-    uses: dblock/ruby-gem-release/.github/workflows/release.yml@v0.3.1
+    uses: dblock/ruby-gem-release/.github/workflows/release.yml@v0.4.0
     with:
       ruby-version: '3.3'
+      version: ${{ inputs.version }}
       rubygems-owner: ${{ inputs.rubygems-owner }}
 ```
 
 {% endraw %}
 
 There's a bit of work to configure the trusted publisher for the first release. The [setup instructions](https://github.com/dblock/ruby-gem-release#usage) cover that.
+
+You can configure the `release` environment to require [maintainer approval](https://github.com/dblock/ruby-gem-release/blob/master/RELEASING.md#maintainer-approved-publication). Repository writers can still dispatch a release, but the job waits for an approved maintainer before it runs. Creating an environment without protection rules doesn't restrict releases; availability of those rules depends on the repository and GitHub plan.
 
 After validating and reviewing the changes, publish a new gem with the numeric RubyGems account ID shown on the pending trusted publisher page:
 
@@ -81,6 +90,8 @@ For subsequent releases, omit `rubygems-owner`:
 ```sh
 gh workflow run release.yml --repo dblock/ruby-link-checker --ref main
 ```
+
+By default, the workflow releases the checked-in version. To select a different version, pass `-f version=0.6.0`; the standard workflow updates the version file before preparing the changelog and increments from that version for the next development iteration.
 
 ## Advanced: Custom Callbacks
 
@@ -100,9 +111,13 @@ RubyGemRelease::Tasks.install do |tasks|
   git = RubyGemRelease::SourceControl::Git.new
   github = RubyGemRelease::Hosting::GitHubRelease.new
   tasks.before_release do |release|
-    changelog.release!(release.with_version(version.read))
+    git.stage_changes! do
+      version.set!(release.version) unless ENV.fetch('INPUT_VERSION', '').empty?
+      changelog.release!(release.with_version(version.read))
+    end
   end
   tasks.publish do |release|
+    package.check_version!(release.version)
     git.commit!(release)
     package.build!(release)
     git.tag!(release)
@@ -111,8 +126,11 @@ RubyGemRelease::Tasks.install do |tasks|
     github.publish!(release, package: package)
   end
   tasks.after_release do |release|
-    next_release = release.with_next_version(version.increment!)
-    changelog.prepare_next!(next_release)
+    next_release = nil
+    git.stage_changes! do
+      next_release = release.with_next_version(version.increment!)
+      changelog.prepare_next!(next_release)
+    end
     git.commit_next!(next_release)
     git.push!
   end
