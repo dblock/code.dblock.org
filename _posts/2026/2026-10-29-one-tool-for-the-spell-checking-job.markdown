@@ -22,8 +22,11 @@ Here's my recent zoo.
 - [markdownlint-rule-spellcheck](https://github.com/dblock/markdownlint-rule-spellcheck) adds spelling to the Markdown linter you might already be running.
 - [prettier-plugin-spellcheck](https://github.com/dblock/prettier-plugin-spellcheck) adds spelling to Prettier for Markdown, HTML, plain text, and JavaScript/TypeScript prose.
 - [@dblock/oxlint-plugin-spellcheck](https://github.com/dblock/oxlint-plugin-spellcheck) adds native spelling diagnostics to Oxlint for JavaScript/TypeScript comments, JSX text, and human-facing attributes, with opt-in strings and identifiers.
+- [eslint-plugin-prose-spellcheck](https://github.com/dblock/eslint-plugin-prose-spellcheck), released as [0.1.0](https://github.com/dblock/eslint-plugin-prose-spellcheck/releases/tag/v0.1.0), adds offline spelling checks to ESLint's native Markdown support through `@eslint/markdown`. It checks prose, headings, visible link labels, and image descriptions, using CSpell dictionaries and reviewed project vocabulary.
 
 Related, I also made [markdownlint-rule-single-line-paragraphs](https://github.com/dblock/markdownlint-rule-single-line-paragraphs) that keeps Markdown paragraphs on one source line and [eslint-plugin-portable-paths](https://github.com/dblock/eslint-plugin-portable-paths) that adds filename portability checks to ESLint and Oxlint.
+
+For ESLint users, [eslint-plugin-markdown-preferences-paragraph](https://github.com/dblock/eslint-plugin-markdown-preferences-paragraph) also checks and fixes paragraph wrapping. I added its configuration to [To Wrap or Not to Wrap in Markdown?](/2021/06/07/to-wrap-or-not-to-wrap-in-markdown.html).
 
 Everything builds on top of simple platforms. The Prettier version is a good example. Prettier already parses Markdown, HTML, JavaScript, and TypeScript. I used its syntax trees to distinguish prose from program structure instead of inventing another parser. Comments and visible text are reasonable things to spellcheck, too.
 

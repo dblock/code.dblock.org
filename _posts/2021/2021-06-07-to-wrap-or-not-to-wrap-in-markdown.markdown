@@ -164,4 +164,35 @@ The default is `"keep"`, which preserves existing line wrapping. Like Prettier, 
 
 ### ESLint
 
-For [eslint-plugin-markdown-preferences](https://github.com/ota-meshi/eslint-plugin-markdown-preferences), a standalone `single-line-paragraphs` rule is [proposed in #338](https://github.com/ota-meshi/eslint-plugin-markdown-preferences/issues/338), but isn't released yet.
+[eslint-plugin-markdown-preferences-paragraph](https://github.com/dblock/eslint-plugin-markdown-preferences-paragraph), released as [0.1.0](https://github.com/dblock/eslint-plugin-markdown-preferences-paragraph/releases/tag/v0.1.0), checks and safely fixes paragraph wrapping with ESLint's native Markdown support. It's inspired by [eslint-plugin-markdown-preferences#338](https://github.com/ota-meshi/eslint-plugin-markdown-preferences/issues/338).
+
+Install it alongside ESLint and its Markdown language plugin:
+
+```sh
+npm install --save-dev eslint @eslint/markdown eslint-plugin-markdown-preferences-paragraph@0.1.0
+```
+
+In `eslint.config.js`:
+
+```js
+import markdown from "@eslint/markdown";
+import paragraph from "eslint-plugin-markdown-preferences-paragraph";
+
+export default [{
+  files: ["**/*.md", "**/*.markdown"],
+  plugins: { markdown, paragraph },
+  language: "markdown/gfm",
+  rules: {
+    "paragraph/wrap": ["error", { width: "nowrap" }],
+  },
+}];
+```
+
+Check and fix paragraph wrapping:
+
+```sh
+npx eslint "**/*.md" "**/*.markdown"
+npx eslint "**/*.md" "**/*.markdown" --fix
+```
+
+`"nowrap"` joins soft line breaks without a width limit, including paragraphs in lists, blockquotes, and footnotes. Intentional hard breaks remain separate, and unsafe corrections report without a fix. A positive width, such as `80`, wraps paragraphs instead; omitting `width` disables paragraph checks. If you also use `markdown-preferences/max-len`, configure it to ignore paragraphs at the root and in containers so the rules don't compete.
