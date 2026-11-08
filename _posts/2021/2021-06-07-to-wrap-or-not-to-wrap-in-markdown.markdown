@@ -48,46 +48,7 @@ For an argument _for_ wrapping text, see [this comment](https://github.com/opens
 
 ## Enforce It
 
-You can enforce one source line per paragraph with a linter, or run a formatter in check mode to reject wrapped paragraphs in CI. Here are configurations for JavaScript, Ruby, and Python projects. Pick the tool you already use.
-
-### markdownlint
-
-[markdownlint-rule-single-line-paragraphs](https://github.com/dblock/markdownlint-rule-single-line-paragraphs) is a custom `markdownlint` rule.
-
-```sh
-npm install --save-dev markdownlint-cli2 markdownlint-rule-single-line-paragraphs
-```
-
-Create `.markdownlint-cli2.jsonc`:
-
-```json
-{
-  "customRules": ["markdownlint-rule-single-line-paragraphs"],
-  "config": {
-    "default": true,
-    "MD013": false,
-    "single-line-paragraphs": {
-      "enabled": true
-    }
-  }
-}
-```
-
-This disables `MD013`, the line-length rule, so it doesn't complain about the long paragraphs you just asked for.
-
-```sh
-npx markdownlint-cli2 "**/*.md" "**/*.markdown"
-```
-
-Add `--fix` to join continuation lines automatically:
-
-```sh
-npx markdownlint-cli2 --fix "**/*.md" "**/*.markdown"
-```
-
-The rule checks prose at the document root and inside lists and blockquotes. It preserves intentional Markdown hard breaks and `<br>` boundaries. See [code.dblock.org#173](https://github.com/dblock/code.dblock.org/pull/173) for a working example.
-
-I would have preferred this to be built as a new `style: single` in `MD013` as discussed in [markdownlint#298](https://github.com/DavidAnson/markdownlint/issues/298), but the repository doesn't accept AI-generated code and I don't remember how to write code anymore.
+You can enforce one source line per paragraph with a linter, or run a formatter in check mode to reject wrapped paragraphs in CI. Here are configurations for Ruby, JavaScript, and Python projects. Pick the tool you already use.
 
 ### RuboCop
 
@@ -144,6 +105,80 @@ npx prettier --write "**/*.md" "**/*.markdown"
 
 Use `"never"`, not the default `"preserve"`: preserving existing wrapping would leave already-wrapped paragraphs alone. You don't need to inflate `printWidth` to some enormous number. This checks all formatting choices enforced by Prettier, not just paragraph wrapping, and the write command applies them too.
 
+### ESLint
+
+[eslint-plugin-markdown-preferences-paragraph](https://github.com/dblock/eslint-plugin-markdown-preferences-paragraph) checks and safely fixes paragraph wrapping with ESLint's native Markdown support.
+
+Install it alongside ESLint and its Markdown language plugin:
+
+```sh
+npm install --save-dev eslint @eslint/markdown eslint-plugin-markdown-preferences-paragraph
+```
+
+In `eslint.config.js`:
+
+```js
+import markdown from "@eslint/markdown";
+import paragraph from "eslint-plugin-markdown-preferences-paragraph";
+
+export default [{
+  files: ["**/*.md", "**/*.markdown"],
+  plugins: { markdown, paragraph },
+  language: "markdown/gfm",
+  rules: {
+    "paragraph/wrap": ["error", { width: "nowrap" }],
+  },
+}];
+```
+
+Check and fix paragraph wrapping:
+
+```sh
+npx eslint "**/*.md" "**/*.markdown"
+npx eslint "**/*.md" "**/*.markdown" --fix
+```
+
+`"nowrap"` joins soft line breaks without a width limit, including paragraphs in lists, blockquotes, and footnotes. Intentional hard breaks remain separate, and unsafe corrections report without a fix.
+
+### markdownlint
+
+[markdownlint-rule-single-line-paragraphs](https://github.com/dblock/markdownlint-rule-single-line-paragraphs) is a custom `markdownlint` rule.
+
+```sh
+npm install --save-dev markdownlint-cli2 markdownlint-rule-single-line-paragraphs
+```
+
+Create `.markdownlint-cli2.jsonc`:
+
+```json
+{
+  "customRules": ["markdownlint-rule-single-line-paragraphs"],
+  "config": {
+    "default": true,
+    "MD013": false,
+    "single-line-paragraphs": {
+      "enabled": true
+    }
+  }
+}
+```
+
+This disables `MD013`, the line-length rule, so it doesn't complain about the long paragraphs you just asked for.
+
+```sh
+npx markdownlint-cli2 "**/*.md" "**/*.markdown"
+```
+
+Add `--fix` to join continuation lines automatically:
+
+```sh
+npx markdownlint-cli2 --fix "**/*.md" "**/*.markdown"
+```
+
+The rule checks prose at the document root and inside lists and blockquotes. It preserves intentional Markdown hard breaks and `<br>` boundaries. See [code.dblock.org#173](https://github.com/dblock/code.dblock.org/pull/173) for a working example.
+
+I would have preferred this to be built as a new `style: single` in `MD013` as discussed in [markdownlint#298](https://github.com/DavidAnson/markdownlint/issues/298), but the repository doesn't accept AI-generated code and I don't remember how to write code anymore.
+
 ### mdformat
 
 For Python projects, [mdformat](https://github.com/executablebooks/mdformat) supports `--wrap no`:
@@ -161,7 +196,3 @@ wrap = "no"
 ```
 
 The default is `"keep"`, which preserves existing line wrapping. Like Prettier, mdformat also enforces its other formatting choices. It parses CommonMark by default; for GitHub Flavored Markdown, install its extension with `pipx inject mdformat mdformat-gfm`.
-
-### ESLint
-
-For [eslint-plugin-markdown-preferences](https://github.com/ota-meshi/eslint-plugin-markdown-preferences), a standalone `single-line-paragraphs` rule is [proposed in #338](https://github.com/ota-meshi/eslint-plugin-markdown-preferences/issues/338), but isn't released yet.
