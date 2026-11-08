@@ -14,7 +14,7 @@ gem 'rake'
 gem 'rubocop-md', '~> 3.0', require: false
 gem 'rubocop-prose', '~> 0.2.0', require: false
 gem 'rubocop-rake', require: false
-gem 'ruby-link-checker'
+gem 'ruby-link-checker', '~> 0.5.0'
 gem 'typhoeus'
 gem 'webrick'
 

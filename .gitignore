@@ -3,5 +3,6 @@ _site
 .DS_Store
 .jekyll-metadata
 .bundle
+.cache/
 node_modules/
 dictionary.dic

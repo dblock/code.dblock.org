@@ -32,9 +32,12 @@ end
 desc 'Run commit-time Markdown linting and staged spelling checks.'
 task precommit: [:lint, 'spell:staged']
 
-desc 'Build the site, including future posts, and check links as in CI.'
+desc 'Build the site, including future posts, and check links with a 30-day local cache.'
 task :links do
-  sh({ 'LINK_CHECKER' => '1' }, 'bundle exec jekyll build --future')
+  sh(
+    { 'LINK_CHECKER' => '1', 'LINK_CHECKER_CACHE' => File.expand_path('.cache/link-checker.json', __dir__) },
+    'bundle exec jekyll build --future'
+  )
 end
 
 desc 'Build the site and check for broken links.'

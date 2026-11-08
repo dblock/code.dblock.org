@@ -178,7 +178,7 @@ GEM
       lint_roller (~> 1.1)
       rdoc (~> 8.1)
       rubocop (~> 1.72, >= 1.72.1)
-    ruby-link-checker (0.4.0)
+    ruby-link-checker (0.5.1)
     ruby-progressbar (1.13.0)
     rubyzip (2.4.1)
     safe_yaml (1.0.5)
@@ -214,7 +214,7 @@ DEPENDENCIES
   rubocop-prose (~> 0.2.0)
   rubocop-rake
   rubocop-spellcheck (~> 0.2.0)
-  ruby-link-checker
+  ruby-link-checker (~> 0.5.0)
   typhoeus
   webrick
 

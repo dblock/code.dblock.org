@@ -18,6 +18,7 @@ require 'ruby-link-checker'
 #
 # `LINK_CHECKER`, set on the environment, will cause verification of external links
 # Usage: `LINK_CHECKER=1 bundle exec jekyll build --future`
+# Set `LINK_CHECKER_CACHE` to a cache file to reuse successful checks for 30 days.
 #
 
 # Collects and verifies links after rendering the site.
@@ -81,10 +82,12 @@ module Jekyll::LinkChecker
 
       return Jekyll.logger.info 'LinkChecker:', 'disabled. Enable with LINK_CHECKER=1.' unless @check_links
 
+      cache_file = ENV.fetch('LINK_CHECKER_CACHE', nil)
       @external_link_checker = LinkChecker::Typhoeus::Hydra::Checker.new(
         logger: Jekyll.logger,
         hydra: { max_concurrency: 5 },
         retries: 1,
+        cache: cache_file && { file: cache_file, ttl: 30 * 24 * 60 * 60 },
         user_agent: 'dblock.org Link Checker/1.0'
       )
 
