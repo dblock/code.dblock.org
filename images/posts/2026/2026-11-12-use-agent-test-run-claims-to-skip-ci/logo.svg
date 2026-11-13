@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title description">
+  <title id="title">Already Tested</title>
+  <desc id="description">A green rubber stamp reading ALREADY TESTED with a check mark.</desc>
+  <g transform="rotate(-9 128 128)" fill="#28a745">
+    <circle cx="128" cy="128" r="106" fill="none" stroke="#28a745" stroke-width="7" stroke-dasharray="102 3 35 2 77 4 22 3 151 3 42 3"/>
+    <circle cx="128" cy="128" r="96" fill="none" stroke="#28a745" stroke-width="2.5" stroke-dasharray="86 2 56 3 102 2 72 3 90 2"/>
+    <path d="M 115 59 H 141" fill="none" stroke="#28a745" stroke-width="4" stroke-linecap="round"/>
+    <g font-family="Arial, Helvetica, sans-serif" font-weight="900" text-anchor="middle">
+      <text x="128" y="106" font-size="31" textLength="164" lengthAdjust="spacingAndGlyphs">ALREADY</text>
+      <text x="128" y="151" font-size="38" textLength="172" lengthAdjust="spacingAndGlyphs">TESTED</text>
+    </g>
+    <path d="M 105 179 L 121 195 L 153 163" fill="none" stroke="#28a745" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
