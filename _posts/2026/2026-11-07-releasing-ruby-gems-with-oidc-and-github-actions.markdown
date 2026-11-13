@@ -8,7 +8,9 @@ Releasing Ruby gems manually typically involves incrementing a version in a file
 
 As an alternative to both the manual process and scripts, I've been asking AI to follow a hand-crafted `RELEASING.md`. AI can run tests, date `CHANGELOG.md`, ask me for a RubyGems OTP, make the release, increment the version of the next developer iteration. This worked quite well!
 
-Still, AI is a very blunt tool for something that should be mechanized. Therefore, I built [ruby-gem-release](https://github.com/dblock/ruby-gem-release) to automate all release bookkeeping in Ruby in an extensible workflow with near-zero code. While simple to use, it's a completely customizable system that lets you automate a release in Ruby and supports advanced workflows such as semantic releases, allows to [retry and recover failed publications](https://github.com/dblock/ruby-gem-release/blob/v0.5.0/RELEASING.md#verify-and-recover) and preserves artifacts on failure.
+Still, AI is a very blunt tool for something that should be mechanized.
+
+The solution is [Releases as Code](/2026/11/12/releases-as-code.html). For Ruby, I built [ruby-gem-release](https://github.com/dblock/ruby-gem-release) to automate all release bookkeeping in Ruby in an extensible workflow with near-zero code. While simple to use, it's a completely customizable system that lets you automate a release in Ruby and supports advanced workflows such as semantic releases, allows to [retry and recover failed publications](https://github.com/dblock/ruby-gem-release/blob/v0.5.0/RELEASING.md#verify-and-recover) and preserves artifacts on failure.
 
 The release itself runs in GitHub Actions. [RubyGems Trusted Publishing](https://guides.rubygems.org/trusted-publishing/) supplies short-lived credentials, so there is no RubyGems API key to store in GitHub secrets or share with other maintainers. After setup, collaborators with write access can dispatch releases too.
 
@@ -37,6 +39,8 @@ end
 The `CHANGELOG.md` in this project is in the Intridea style. The gem also supports [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 Before publishing `0.5.0` the `CHANGELOG.md` is updated with a date. After publishing, the `VERSION` constant is incremented to `0.5.1`, and `CHANGELOG.md` is updated with a `Next` section.
+
+As a nice side-effect, the workflow also checks that unrelated files don't sneak into the release commit. In [a Hashie release](https://github.com/hashie/hashie/actions/runs/43009356234/job/130484765157), it stopped after dependency installation exposed 13,746 untracked paths under `vendor/bundle`. Dependency artifacts need to be intentionally ignored, and only the intended release edits are staged during preparation. This can also help with supply chain attacks.
 
 Add `.github/workflows/release.yml` to call the reusable release workflow. The optional `version` input selects a different release version, and `rubygems-owner` accepts your numeric RubyGems account ID when publishing a new gem for the first time:
 
