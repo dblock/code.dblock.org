@@ -12,23 +12,20 @@ Of course, anyone who can edit the pull-request description can forge a claim. I
 
 ## Install
 
-Setup takes two project changes: add the gate to the GitHub Actions workflow, then add instructions to `AGENTS.md`.
+Setup takes two project changes: add the gate to the GitHub Actions workflow, then add this to `AGENTS.md` or `.github/copilot-instructions.md`:
 
 ```markdown
 ## Local CI Claims
 
-- Install `already-tested` if needed using the [local CLI instructions](https://github.com/dblock/already-tested#local-cli).
-- Run the complete `./script/ci` check in the job's OS, CPU, and toolchain environment.
-- Commit the tested files and leave the tracked working tree clean.
-- Run `already-tested claim --workflow .github/workflows/test.yml --check test-linux --command './script/ci' --environment '<actual OS, CPU, and toolchain versions>'`.
-- Paste the entire output into the PR description, preserving its hidden claim.
-- After tracked source or workflow changes, retest, commit, and replace the claim.
-- Never claim checks you did not run or other environments; omit the claim and let CI run instead.
+- Install `already-tested` using https://github.com/dblock/already-tested/blob/v0.3.0/docs/cli.md#installation.
+- Run `already-tested agent-instructions show` and follow its guidance before generating or updating claims.
 ```
 
-With this, an AI agent can install the local CLI if needed, run the checks, and add its claim to the pull request. The tool is written in Rust and the CLI ships as prebuilt native binaries; its installer selects and verifies the archive for the agent's OS and CPU. The README includes macOS/Linux and PowerShell installation instructions.
+The agent installs the CLI, reads the instructions bundled with that version, and inspects your CI workflows to find the complete checks and required environments. The guidance covers measured run times, committed source, local verification, and publishing claims in the PR description. Keep project-specific environment exceptions in your own instructions. The tool is written in Rust and ships as prebuilt native binaries; its installer selects and verifies the archive for the agent's OS and CPU.
 
-In your GHA workflows, put the gate immediately after checkout and condition every setup, dependency-install, and test step you want to skip. This is the Linux example from the [current README](https://github.com/dblock/already-tested#github-actions):
+To keep a versioned copy of the guidance in your repository, have the agent run `already-tested agent-instructions update`. If `.github/copilot-instructions.md` exists, this writes `.github/instructions/already-tested.instructions.md` and adds a reference to the Copilot instructions. Otherwise, it writes `.already-tested/agent-instructions.md` and updates or creates `AGENTS.md`. Handwritten policy stays intact. Review and commit the files; repeat the command when upgrading. See [agent setup and upgrades](https://github.com/dblock/already-tested/blob/v0.3.0/docs/agents.md#adopt-in-a-project).
+
+In your GHA workflows, put the gate immediately after checkout and condition every setup, dependency-install, and test step you want to skip. This is the Linux example from the [v0.3.0 README](https://github.com/dblock/already-tested/blob/v0.3.0/README.md#installation):
 
 ```yaml
 name: Test
@@ -46,7 +43,7 @@ jobs:
         with:
           fetch-depth: 2
           persist-credentials: false
-      - uses: dblock/already-tested@v0.1.0
+      - uses: dblock/already-tested@v0.3.0
         id: tested
         with:
           check: test-linux
