@@ -5,6 +5,9 @@ date: 2015-05-07
 tags: [job titles, cto, head of engineering, management]
 pinned: true
 ---
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/DHyQNBH3N-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+
 My job title has recently changed from *Head of Engineering* to *CTO*, and many people outside of Artsy have been asking me to explain the logic behind this. A more important question is *what is the difference between a CTO and a VP or Head of Engineering*? Are these different jobs? Is it all about the title and why do titles matter at all?
 
 > A company has many possible successful outcomes. Organizations iterate and find a business by trial and error. The job of a CTO is to continuously ensure that all possible outcomes are enabled with technology, while the job of a VP or Head of Engineering is to execute on the outcome currently chosen.
