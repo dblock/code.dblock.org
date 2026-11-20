@@ -14,3 +14,6 @@
     gtag('config', '{{ site.owner.google.analytics }}');
 </script>
 {% endif %}
+{% if site.falling_letters_idle_seconds %}
+<script src="{{ site.url }}/assets/js/falling-letters.js" data-idle-seconds="{{ site.falling_letters_idle_seconds }}" defer></script>
+{% endif %}
