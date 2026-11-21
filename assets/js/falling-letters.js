@@ -15,6 +15,20 @@
   var gravity = 2600; // px/s^2
   var skipTags = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1, TEXTAREA: 1, INPUT: 1, SELECT: 1, OPTION: 1, SVG: 1, CANVAS: 1, IFRAME: 1 };
 
+  var copiedProperties = ['font-family', 'font-size', 'font-weight', 'font-style', 'font-stretch',
+    'font-variant', 'font-feature-settings', 'font-variation-settings', 'font-kerning', 'letter-spacing',
+    'color', 'text-shadow', '-webkit-font-smoothing', '-webkit-text-stroke'];
+
+  // Clones are single letters, so apply text-transform to the character itself;
+  // the measured position is of the transformed glyph that is actually on screen.
+  function transformCase(text, i, transform) {
+    var ch = text[i];
+    if (transform === 'uppercase') return ch.toUpperCase();
+    if (transform === 'lowercase') return ch.toLowerCase();
+    if (transform === 'capitalize' && (i === 0 || /[\s\-]/.test(text[i - 1]))) return ch.toUpperCase();
+    return ch;
+  }
+
   if (!(idleSeconds > 0)) return;
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -76,16 +90,20 @@
         range.setEnd(node, i + 1);
         var rect = range.getClientRects()[0];
         if (!rect || !inViewport(rect)) continue;
-        found.push({ ch: text[i], rect: rect });
+        found.push({ ch: transformCase(text, i, style.textTransform), rect: rect });
       }
       if (!found.length) return;
+      // Copy font properties individually: the `font` shorthand can be empty in
+      // some browsers and does not include letter-spacing or ligature settings.
+      var fontStyle = copiedProperties.map(function (prop) {
+        return prop + ':' + style.getPropertyValue(prop) + ';';
+      }).join('');
 
       found.forEach(function (f) {
         var el = document.createElement('span');
         el.textContent = f.ch;
-        el.style.cssText = 'position:absolute;white-space:pre;will-change:transform;' +
-          'left:' + f.rect.left + 'px;top:' + f.rect.top + 'px;line-height:' + f.rect.height + 'px;' +
-          'font:' + style.font + ';color:' + style.color + ';font-feature-settings:' + style.fontFeatureSettings + ';';
+        el.style.cssText = 'position:absolute;white-space:pre;will-change:transform;margin:0;padding:0;' +
+          'left:' + f.rect.left + 'px;top:' + f.rect.top + 'px;line-height:' + f.rect.height + 'px;' + fontStyle;
         overlay.appendChild(el);
         letters.push({
           el: el, x: 0, y: 0, r: 0,
