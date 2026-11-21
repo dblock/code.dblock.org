@@ -102,8 +102,7 @@
       found.forEach(function (f) {
         var el = document.createElement('span');
         el.textContent = f.ch;
-        // Site styles transition every span, which would make letters lag behind the physics.
-        el.style.cssText = 'position:absolute;white-space:pre;will-change:transform;margin:0;padding:0;transition:none;' +
+        el.style.cssText = 'position:absolute;white-space:pre;will-change:transform;margin:0;padding:0;' +
           'left:' + f.rect.left + 'px;top:' + f.rect.top + 'px;line-height:' + f.rect.height + 'px;' + fontStyle;
         overlay.appendChild(el);
         letters.push({
