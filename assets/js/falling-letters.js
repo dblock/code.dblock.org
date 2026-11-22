@@ -10,7 +10,7 @@
 
   var script = document.currentScript;
   var params = new URLSearchParams(window.location.search);
-  var idleSeconds = parseFloat(params.get('idle') || (script && script.dataset.idleSeconds) || '30');
+  var idleSeconds = parseFloat(params.get('idle') || (script && script.dataset.idleSeconds) || '60');
   var maxLetters = 3000;
   var gravity = 2600; // px/s^2
   var skipTags = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1, TEXTAREA: 1, INPUT: 1, SELECT: 1, OPTION: 1, SVG: 1, CANVAS: 1, IFRAME: 1 };
