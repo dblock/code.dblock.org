@@ -32,6 +32,10 @@ A pre-commit hook also runs `bundle exec rake lint`, using released `rubocop-pro
 
 Pushes and pull requests check all Markdown, Ruby files, and explicitly Ruby-tagged code fences. Unlabeled code blocks are not guessed to be Ruby. Keep each prose paragraph on one source line (`Prose/MaxLength`, with `Max: false`); intentional Markdown hard breaks and `<br>` boundaries remain supported. A separate workflow checks spelling.
 
+### Links
+
+Links are checked by the jekyll-ruby-link-checker gem, configured under `link_checker` in `_config.yml`; see [CONTRIBUTING.md](CONTRIBUTING.md#link-checker). Links that bot protection blocks are reported as unverified and don't fail the build, so leave those sites checked. When a site answers with an error, such as a 404, for a page that exists, try a header in `link_checker.host_headers` first, and otherwise add its domain to `link_checker.exclude.domains`, rather than removing the link. Keep the gem's commit in the `Gemfile` and in `.github/workflows/link-checker*.yml` the same.
+
 ### Downloads
 
 Place new post downloads under `downloads/posts/YYYY-MM-DD-post-slug/`, with descriptive filenames such as `pull-requests.csv`. Link to those paths from the post.

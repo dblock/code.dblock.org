@@ -11,6 +11,34 @@ plugins:
   - jekyll-redirect-from
   - jekyll-md
   - jekyll-og-image
+  - jekyll-ruby-link-checker
+link_checker:
+  cache:
+    file: .cache/link-checker.json
+    ttl: 30d
+    # Sites behind bot protection are reported as unverified, and checked again weekly.
+    blocked_ttl: 7d
+    prune: true
+  exclude:
+    # Sites that fail automated requests, with a 404 or a connection error, even when the page exists.
+    domains:
+      - localhost
+      - platform.openai.com
+      - superrare.com
+      - twitter.com
+      - web.archive.org
+      - www.linkedin.com
+      - x.com
+    urls:
+      # GitHub searches answer 404 or ask to sign in without an account.
+      - '/\Ahttps:\/\/github\.com\/(issues|pulls)(\?|\z)/'
+    paths:
+      - '^/tags'
+  user_agent: dblock.org Link Checker/1.0
+  host_headers:
+    # crates.io answers 404 unless it's asked for HTML.
+    crates.io:
+      Accept: text/html
 og_image:
   output_dir: images/og
   domain: code.dblock.org

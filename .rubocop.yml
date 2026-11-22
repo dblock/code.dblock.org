@@ -116,14 +116,6 @@ Style/FormatStringToken:
 Style/ModuleFunction:
   EnforcedStyle: extend_self
 
-Style/ClassAndModuleChildren:
-  Exclude:
-    - '_plugins/link-checker.rb'
-
-Naming/FileName:
-  Exclude:
-    - '_plugins/link-checker.rb'
-
 Spellcheck:
   DictionaryFiles:
     en:
