@@ -4,7 +4,9 @@ on:
   push:
     branches: [gh-pages]
   schedule:
-    - cron: "30 11 * * 0"
+    # Sundays and Wednesdays, so runs are never more than 4 days apart and the link cache
+    # is restored before GitHub evicts caches not accessed in 7 days.
+    - cron: "30 11 * * 0,3"
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -18,8 +20,23 @@ jobs:
       with:
         ruby-version: '3.4'
         bundler-cache: true
-    - run: |
-        LINK_CHECKER=1 bundle exec jekyll build --future
+    - name: Restore Link Checker Cache
+      uses: actions/cache/restore@v6
+      with:
+        path: .cache/link-checker.json
+        key: link-checker-${{ github.run_id }}-${{ github.run_attempt }}
+        restore-keys: link-checker-
+    - name: Check Links
+      run: bundle exec jekyll build --future
+      env:
+        LINK_CHECKER: '1'
+        LINK_CHECKER_CACHE: ${{ github.workspace }}/.cache/link-checker.json
+    - name: Save Link Checker Cache
+      if: ${{ always() && hashFiles('.cache/link-checker.json') != '' }}
+      uses: actions/cache/save@v6
+      with:
+        path: .cache/link-checker.json
+        key: link-checker-${{ github.run_id }}-${{ github.run_attempt }}
     - name: Create Issue On Build Failure
       if: ${{ failure() }}
       uses: dblock/create-a-github-issue@v3
