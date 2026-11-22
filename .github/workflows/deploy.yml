@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - gh-pages
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -12,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: ${{ github.event_name == 'pull_request' && format('pages-pr-{0}', github.event.number) || 'pages' }}
   cancel-in-progress: false
 
 jobs:
@@ -21,10 +22,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install libvips and Fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libvips-tools
+          mkdir -p ~/.local/share/fonts
+          cp _og/fonts/*.ttf ~/.local/share/fonts/
+          fc-cache -f
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.4'
           bundler-cache: true
+
+      - name: Restore Social Cards
+        uses: actions/cache@v6
+        with:
+          path: images/og
+          key: og-images-${{ github.run_id }}
+          restore-keys: og-images-
 
       - name: Run integration tests
         run: bundle exec rake test
@@ -33,11 +49,13 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

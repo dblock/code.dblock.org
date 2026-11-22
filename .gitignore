@@ -6,3 +6,4 @@ _site
 .cache/
 node_modules/
 dictionary.dic
+images/og/

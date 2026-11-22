@@ -57,6 +57,12 @@ Install dependencies.
 bundle install
 ```
 
+Install libvips, which renders the posts' social cards.
+
+```bash
+brew install vips
+```
+
 Start a local Jekyll server.
 
 ```bash

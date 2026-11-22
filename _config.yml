@@ -10,6 +10,37 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-md
+  - jekyll-og-image
+og_image:
+  output_dir: images/og
+  domain: code.dblock.org
+  canvas:
+    width: 1200
+    height: 630
+    background_color: "#FFFFFF"
+  header:
+    font_family: PT Serif, Bold
+    color: "#333332"
+  content:
+    font_family: PT Sans Narrow, Regular
+    color: "#777777"
+  description:
+    source: excerpt
+    sentences: 1
+    font_family: PT Serif, Italic
+    color: "#555555"
+  border_bottom:
+    width: 12
+    fill:
+      - "#333332"
+  image:
+    path: images/default-thumb.jpg
+    width: 150
+    height: 150
+    radius: 75
+  metadata:
+    fields: [date]
+    date_format: "%b %-d, %Y"
 md:
   selector: "#markdown-content"
 highlighter: rouge
