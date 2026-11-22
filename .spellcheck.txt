@@ -264,6 +264,7 @@ clickhouse
 clientapplication
 clientapplications
 clmp
+cloudflare
 cloudfront
 cmake
 cmakelists

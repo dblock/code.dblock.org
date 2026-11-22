@@ -8,6 +8,16 @@ GIT
       ruby-vips (~> 2.2)
       zeitwerk (~> 2.6)
 
+GIT
+  remote: https://github.com/dblock/jekyll-ruby-link-checker.git
+  revision: 2a751b074670ffdd342a38a8764c409f649027ae
+  ref: 2a751b074670ffdd342a38a8764c409f649027ae
+  specs:
+    jekyll-ruby-link-checker (0.1.0)
+      jekyll (>= 4.0, < 5)
+      ruby-link-checker (~> 0.6)
+      typhoeus (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -188,7 +198,8 @@ GEM
       lint_roller (~> 1.1)
       rdoc (~> 8.1)
       rubocop (~> 1.72, >= 1.72.1)
-    ruby-link-checker (0.5.1)
+    ruby-link-checker (0.6.0)
+      logger
     ruby-progressbar (1.13.0)
     ruby-vips (2.3.0)
       ffi (~> 1.12)
@@ -221,6 +232,7 @@ DEPENDENCIES
   jekyll-og-image!
   jekyll-paginate (~> 1.1)
   jekyll-redirect-from (~> 0.17.0)
+  jekyll-ruby-link-checker!
   jekyll-sass-converter (~> 2.2)
   jekyll-sitemap (~> 1.4)
   minitest
@@ -229,8 +241,6 @@ DEPENDENCIES
   rubocop-prose (~> 0.2.0)
   rubocop-rake
   rubocop-spellcheck (~> 0.2.0)
-  ruby-link-checker (~> 0.5.0)
-  typhoeus
   webrick
 
 BUNDLED WITH

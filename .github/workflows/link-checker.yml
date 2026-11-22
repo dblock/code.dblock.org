@@ -1,48 +1,26 @@
 name: Check Links
+
 on:
   workflow_dispatch:
   push:
     branches: [gh-pages]
+  pull_request:
   schedule:
     # Sundays and Wednesdays, so runs are never more than 4 days apart and the link cache
     # is restored before GitHub evicts caches not accessed in 7 days.
     - cron: "30 11 * * 0,3"
+
+permissions:
+  contents: read
+
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Install libvips
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y --no-install-recommends libvips-tools
-    - uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.4'
-        bundler-cache: true
-    - name: Restore Link Checker Cache
-      uses: actions/cache/restore@v6
-      with:
-        path: .cache/link-checker.json
-        key: link-checker-${{ github.run_id }}-${{ github.run_attempt }}
-        restore-keys: link-checker-
-    - name: Check Links
-      run: bundle exec jekyll build --future
-      env:
-        LINK_CHECKER: '1'
-        LINK_CHECKER_CACHE: ${{ github.workspace }}/.cache/link-checker.json
-    - name: Save Link Checker Cache
-      if: ${{ always() && hashFiles('.cache/link-checker.json') != '' }}
-      uses: actions/cache/save@v6
-      with:
-        path: .cache/link-checker.json
-        key: link-checker-${{ github.run_id }}-${{ github.run_attempt }}
-    - name: Create Issue On Build Failure
-      if: ${{ failure() }}
-      uses: dblock/create-a-github-issue@v3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        WORKFLOW_URL: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-      with:
-        update_existing: true
-        filename: .github/ISSUE_TEMPLATE/broken_links.md
+  check-links:
+    # Pinned to master until jekyll-ruby-link-checker's first release; keep in sync with the Gemfile.
+    uses: dblock/jekyll-ruby-link-checker/.github/workflows/check-links.yml@2a751b074670ffdd342a38a8764c409f649027ae # master
+    with:
+      ruby-version: '3.4'
+      # jekyll-og-image renders social cards with libvips.
+      setup-command: sudo apt-get update && sudo apt-get install -y --no-install-recommends libvips-tools
+      build-command: bundle exec jekyll build --future
+      # Pull requests only check the pages they change (the default), and report dead links without failing.
+      fail-on-dead-links: ${{ github.event_name != 'pull_request' }}
