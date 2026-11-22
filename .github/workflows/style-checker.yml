@@ -11,6 +11,7 @@ jobs:
       - uses: tj-actions/changed-files@v46.0.4
         id: changed_files
         with:
+          separator: ","
           files: |
             **/**.md
             **/**.markdown
@@ -21,3 +22,4 @@ jobs:
           version: 3.28.1
           reporter: github-check
           files: ${{ steps.changed_files.outputs.all_changed_files }}
+          separator: ","
