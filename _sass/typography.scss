@@ -127,7 +127,9 @@ tt, code, kbd, samp, pre {
 	font-family: $code-font;
 }
 p,
-li { 
+li,
+td,
+th {
 	code {
 		@include font-rem(12);
 		line-height: 1.5;
