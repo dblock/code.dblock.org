@@ -7,7 +7,7 @@ tags: [ai, open-source]
 
 I use both [GitHub Copilot CLI](https://docs.github.com/copilot/how-tos/copilot-cli) with tokens paid for by Microsoft where I work, and [Claude Code](https://claude.com/claude-code) using my own subscription. I run Claude on a personal laptop and Copilot at work and use both almost every day, occasionally on the same projects, sometimes at the same time. Both read personal instructions and skills from my home directory, and I keep those in [my dotfiles](https://github.com/dblock/dotfiles), linked into `~/.copilot` and `~/.claude`.
 
-Copilot got there first. I am very happy with Copilot, but I want to keep learning, so more recently I have begun using Claude for personal projects almost exclusively. When I added Claude, I took a shortcut in [2f19eb4](https://github.com/dblock/dotfiles/commit/2f19eb4d95aea02e2890fbfd50efaba3afcdbc12): Claude's `CLAUDE.md` imported Copilot's instructions with `@~/...` and then listed exceptions.
+Copilot got there first. I am happy with Copilot, but I want to keep learning, so more recently I have begun using Claude for personal projects almost exclusively. When I added Claude, I took a shortcut in [2f19eb4](https://github.com/dblock/dotfiles/commit/2f19eb4d95aea02e2890fbfd50efaba3afcdbc12): Claude's `CLAUDE.md` imported Copilot's instructions with `@~/...` and then listed exceptions.
 
 ```markdown
 @~/source/dotfiles/.copilot/copilot-instructions.md
@@ -80,7 +80,7 @@ Each tool now gets the same two layers: the shared instructions, then a small fi
 | `~/.claude/skills/<name>`                         | `agents/skills/<name>`                   |
 | `~/.copilot/skills/<name>`                        | `agents/skills/<name>`                   |
 
-The shared file had to stop talking about either tool. "Include `Co-authored-by: Copilot`" became "include the co-author trailer that your tool's instructions specify", and each overrides file spells out its own. A reference to a `pr-stack` skill that was never installed, which Claude had been told to work around, became the actual workflow both tools use: `gh stack link` and a check of the `.stack` field in the GitHub API.
+The shared file had to stop talking about either tool. “Include `Co-authored-by: Copilot`” became “include the co-author trailer that your tool's instructions specify”, and each overrides file spells out its own. A reference to a `pr-stack` skill that was never installed, which Claude had been told to work around, became the actual workflow both tools use: `gh stack link` and a check of the `.stack` field in the GitHub API.
 
 The shared file is called `instructions.md` and not `AGENTS.md` on purpose. Copilot loads `AGENTS.md` files under the working directory as repository instructions, so while I work in the dotfiles repository it would load the same file twice.
 
