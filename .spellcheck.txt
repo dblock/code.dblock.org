@@ -930,6 +930,7 @@ lgpl
 li
 libffi
 libsass
+libvips
 lifecycle
 liftweb
 liker's
@@ -1179,6 +1180,7 @@ odbc
 odbcexecute
 odfe
 odm
+og
 oid
 oidc
 oids
@@ -1510,6 +1512,7 @@ sigar
 signon
 signup
 signups
+sil
 silverlight
 simchowitz
 simplebackups
@@ -1709,6 +1712,7 @@ tretyakov
 triacetin
 trois
 trystatic
+ttf
 ttl
 tuitions
 tumblr
