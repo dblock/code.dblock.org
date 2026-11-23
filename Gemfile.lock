@@ -73,7 +73,7 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.17.0)
       jekyll (>= 3.3, < 5.0)
-    jekyll-ruby-link-checker (0.1.0)
+    jekyll-ruby-link-checker (0.2.0)
       jekyll (>= 4.0, < 5)
       ruby-link-checker (~> 0.6)
       typhoeus (~> 1.4)
@@ -226,7 +226,7 @@ DEPENDENCIES
   jekyll-og-image!
   jekyll-paginate (~> 1.1)
   jekyll-redirect-from (~> 0.17.0)
-  jekyll-ruby-link-checker (~> 0.1.0)
+  jekyll-ruby-link-checker (~> 0.2.0)
   jekyll-sass-converter (~> 2.2)
   jekyll-sitemap (~> 1.4)
   minitest

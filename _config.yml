@@ -32,6 +32,9 @@ link_checker:
     urls:
       # GitHub searches answer 404 or ask to sign in without an account.
       - '/\Ahttps:\/\/github\.com\/(issues|pulls)(\?|\z)/'
+      # Share and edit links on every post, which need an account and answer 429 or a sign-in page.
+      - '/\Ahttps:\/\/www\.facebook\.com\/sharer\//'
+      - '/\Ahttps:\/\/github\.com\/dblock\/code\.dblock\.org\/edit\//'
     paths:
       - '^/tags'
   user_agent: dblock.org Link Checker/1.0

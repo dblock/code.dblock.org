@@ -14,4 +14,4 @@ I had the pleasure of interviewing two New York techies, Serkan Piantino of Face
 
 ![]({{ site.url }}/images/posts/2012/2012-10-02-serkan-piantino-on-scaling-facebook-news-feed-and-ken-little-on-scaling-tumblr/image_3.jpg)
 
-![Recorded at](https://www.infoq.com/resource/interviews/little-scaling-tumblr/en/promoImage/QCon%20NY%202012.jpg)
+![Recorded at]({{ site.url }}/images/posts/2012/2012-10-02-serkan-piantino-on-scaling-facebook-news-feed-and-ken-little-on-scaling-tumblr/qcon-new-york-2012.jpg)
