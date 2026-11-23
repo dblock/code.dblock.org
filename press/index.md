@@ -29,7 +29,7 @@ The interview recording is no longer available.
 
 ### [W Magazine: Who's Who: Internet Art](https://www.wmagazine.com/gallery/internet-art-world)
 
-![Artsy in W Magazine](https://art.dblock.org/images/posts/2015/2015-04-23-artsy-in-w-magazine/artsy.jpg)
+![Artsy in W Magazine](/images/press/artsy-in-w-magazine.jpg)
 
 > The Internet is the ultimate blank canvas. W salutes some of the enterprising teams stretching the boundaries of the art world online.
 

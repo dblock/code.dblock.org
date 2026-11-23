@@ -8,7 +8,7 @@ dblog_post_id: 382
 ---
 *UPDATE*: I did another iteration of live-coding a Ruby gem at Flatiron School in January 2018. The code, a very similar but more complete and up-to-date checklist is [here](https://github.com/dblock/frgom).
 
-![](https://photos1.meetupstatic.com/photos/event/6/5/a/3/global_20906019.jpeg)
+![]({{ site.url }}/images/posts/2013/2013-05-15-your-first-ruby-gem/global_20906019.png)
 
 I live-coded a new gem called [Ruby::Enum](https://github.com/dblock/ruby-enum) at [NYC.rb](https://www.meetup.com/NYC-rb/events/88141492/) on Tuesday. This library adds enum-like functionality to Ruby.
 

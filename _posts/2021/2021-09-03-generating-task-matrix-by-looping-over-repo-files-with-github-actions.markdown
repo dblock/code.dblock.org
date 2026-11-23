@@ -64,7 +64,7 @@ Here's how this works.
 
 This is so awesome that it generates the matrix during the build!
 
-![](https://user-images.githubusercontent.com/542335/132070992-4e9ba64f-a8f4-4459-9102-95684de2cda7.png)
+![]({{ site.url }}/images/posts/2021/2021-09-03-generating-task-matrix-by-looping-over-repo-files-with-github-actions/132070992-4e9ba64f-a8f4-4459-9102-95684de2cda7.png)
 
 ## Profit
 

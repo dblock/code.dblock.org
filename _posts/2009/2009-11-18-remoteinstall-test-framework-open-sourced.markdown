@@ -25,11 +25,11 @@ for each virtual machine {
 
 Simple enough? That's all RemoteInstall was at its inception. You can get this behavior out of the box with a simple config file. Here's what the output looks like in CruiseControl. This tests an application for clean install and upgrade from various known snapshots.
 
-![CruiseControl.jpg](https://raw.githubusercontent.com/dblock/remoteinstall/master/Screenshots/CruiseControl.jpg)
+![CruiseControl.jpg]({{ site.url }}/images/posts/2009/2009-11-18-remoteinstall-test-framework-open-sourced/CruiseControl.jpg)
 
 The results were superb. We have virtually zero deployment failure in production for thousands of customers. Then, eventually we got pretty good at this adding lots of useful features. If you have more than one VM you can do this in parallel. RI integrates with build automation. It can pickup your latest installers from network shares. Etc. Next, we thought: why not run some tests after each successful installation? So we added tasks and some simple integration. So you can execute JUnit or NUnit tests on the remote machine post-installation.
 
-![NUnit.jpg](https://raw.githubusercontent.com/dblock/remoteinstall/master/Screenshots/NUnit.jpg)
+![NUnit.jpg]({{ site.url }}/images/posts/2009/2009-11-18-remoteinstall-test-framework-open-sourced/NUnit.jpg)
 
 This made it into a full blown test framework. We now author tests in C# and Java and remote them via RI to run against multiple configurations.
 

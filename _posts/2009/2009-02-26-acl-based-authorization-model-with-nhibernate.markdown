@@ -12,4 +12,4 @@ I've posted a long overdue article describing an ACL-based authorization model w
 
 [Read the CodeProject article](https://web.archive.org/web/20090228152850/http://www.codeproject.com:80/KB/web-security/objectlevelsecurity.aspx).
 
-![Authorization domain model](https://web.archive.org/web/20110909142139im_/http://www.codeproject.com/KB/web-security/objectlevelsecurity/domainmodel.jpg)
+![Authorization domain model]({{ site.url }}/images/posts/2009/2009-02-26-acl-based-authorization-model-with-nhibernate/domainmodel.jpg)

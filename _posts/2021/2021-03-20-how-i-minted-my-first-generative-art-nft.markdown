@@ -10,7 +10,7 @@ Last week, after listening to a conversation with [Osinachi](https://twitter.com
 
 You can buy one of the works [here](https://opensea.io/collection/generative-sanguines), until they sell out. **Update**: works 1-6 have sold as of March 24th, 2021.
 
-![](https://raw.githubusercontent.com/dblock/p5art/master/shape.gif)
+![]({{ site.url }}/images/posts/2021/2021-03-20-how-i-minted-my-first-generative-art-nft/shape.gif)
 
 Here's the technicalities of how I minted my first NFTs.
 

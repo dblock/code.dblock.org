@@ -113,7 +113,9 @@ xcode_sdk: iphonesimulator
 
 Enable the project to build in [Travis-CI](https://travis-ci.org/profile) and add a build status icon to the README.
 
+```markdown
 [![Build Status](https://travis-ci.org/dblock/objc-ngram.png)](https://travis-ci.org/dblock/objc-ngram)
+```
 
 #### Code & Tests
 

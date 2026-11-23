@@ -6,7 +6,7 @@ date: 2010-01-24 13:53:08
 tags: [dotnetinstaller, msi]
 dblog_post_id: 77
 ---
-[![](https://github.com/dblock/dotnetinstaller/raw/master/Documentation/Images/Logo.gif)](https://github.com/dblock/dotnetinstaller)
+[![]({{ site.url }}/images/posts/2010/2010-01-24-dotnetinstaller-18-released/Logo.gif)](https://github.com/dblock/dotnetinstaller)
 
 dotNetInstaller 1.8 was released today, January 24th, 2010. Build 1.8.7120.0 has been beta, then a release candidate for over a month now with no major issues reported. Here are some highlights.
 

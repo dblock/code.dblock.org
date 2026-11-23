@@ -6,7 +6,7 @@ date: 2008-12-20 05:30:00
 tags: [vmware, dotnet, testing]
 dblog_post_id: 25
 ---
-![VMWare](https://web.archive.org/web/20160118032012im_/http://www.codeproject.com/KB/library/VMWareTasks/VMWareLogo.jpg)
+![VMWare]({{ site.url }}/images/posts/2008/2008-12-20-announcing-the-vmware-tasks-library/VMWareLogo.jpg)
 
 Now that I wrote various tools that interop with VMWare, I started working on a VMWare Tasks Library, a managed C# wrapper on top of VMWare COM ViX API that makes it really easy to use.
 

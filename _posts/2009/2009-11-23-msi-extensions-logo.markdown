@@ -8,4 +8,4 @@ dblog_post_id: 66
 ---
 I thought MSI extensions needs a logo. It should say something about MSI and something about Wix. So here it goes.
 
-![](https://github.com/dblock/msiext/raw/master/msiext.gif)
+![]({{ site.url }}/images/posts/2009/2009-11-23-msi-extensions-logo/msiext.gif)

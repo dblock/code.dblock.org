@@ -7,7 +7,7 @@ tags: [waffle, jna, security, java, active directory, win32, authentication]
 dblog_post_id: 95
 ---
 
-[![](https://github.com/dblock/waffle/raw/master/waffle.jpg)](https://github.com/dblock/waffle/)
+[![]({{ site.url }}/images/posts/2010/2010-04-08-pure-java-waffle/waffle.jpg)](https://github.com/dblock/waffle/)
 
 I finally got to porting [Waffle](https://github.com/dblock/waffle/) to pure java with [JNA](https://github.com/twall/jna/). This means you don't need .NET framework or COM to call Waffle from Java. It's pure Java.
 
