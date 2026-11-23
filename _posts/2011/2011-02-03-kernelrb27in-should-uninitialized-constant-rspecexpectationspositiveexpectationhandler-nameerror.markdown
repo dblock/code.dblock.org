@@ -22,4 +22,4 @@ RSpec.configure do |config|
 end
 ```
 
-You can read more about rspec configuration [here](https://rspec.help/rspec/expectation-framework-integration/).
+You can read more about rspec configuration [here](https://rspec.info/features/3-13/rspec-core/expectation-framework-integration/configure-expectation-framework/).
