@@ -6,7 +6,7 @@ date: 2013-06-29 19:01:05
 tags: [agile, me me, time]
 dblog_post_id: 387
 ---
-![](https://lifeingroup5.com/wp-content/uploads/2010/08/p84_on_time.jpg)
+![]({{ site.url }}/images/posts/2013/2013-06-29-my-pathological-fear-of-deadlines/on-time.jpg)
 
 The first step is to admit you have a problem. In such, I will not be offering any solutions in this post.
 

@@ -16,11 +16,11 @@ permissions:
 jobs:
   check-links:
     # Keep the version in sync with the Gemfile.
-    uses: dblock/jekyll-ruby-link-checker/.github/workflows/check-links.yml@v0.1.0
+    uses: dblock/jekyll-ruby-link-checker/.github/workflows/check-links.yml@v0.2.0
     with:
       ruby-version: '3.4'
       # jekyll-og-image renders social cards with libvips.
       setup-command: sudo apt-get update && sudo apt-get install -y --no-install-recommends libvips-tools
+      # Pull requests only check the pages they change, and only fail on dead links that aren't already dead on
+      # gh-pages; other runs fail on every dead link (the defaults).
       build-command: bundle exec jekyll build --future
-      # Pull requests only check the pages they change (the default), and report dead links without failing.
-      fail-on-dead-links: ${{ github.event_name != 'pull_request' }}

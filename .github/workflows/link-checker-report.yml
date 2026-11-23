@@ -13,6 +13,6 @@ permissions:
 jobs:
   publish:
     # Comments on pull requests, and keeps the broken links issue up to date on gh-pages.
-    uses: dblock/jekyll-ruby-link-checker/.github/workflows/publish-report.yml@v0.1.0
+    uses: dblock/jekyll-ruby-link-checker/.github/workflows/publish-report.yml@v0.2.0
     with:
       issue: '181'

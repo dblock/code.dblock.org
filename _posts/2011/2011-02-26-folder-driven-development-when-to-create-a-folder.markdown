@@ -6,7 +6,7 @@ date: 2011-02-26 20:20:36
 tags: [rails, ruby, architecture, java]
 dblog_post_id: 177
 ---
-![](https://www.clker.com/cliparts/f/a/b/8/11949856441703715891another_folder_icon_01.svg.thumb.png)
+![]({{ site.url }}/images/posts/2011/2011-02-26-folder-driven-development-when-to-create-a-folder/folder.png)
 
 I am a huge fan of the comical version of ["bug-driven development"](https://web.archive.org/web/20100212134923/https://blogs.sun.com/toddfast/entry/bug_driven_development), which I earlier called "bug driven design". Today, I want to propose a new methodology: _folder-driven development_. I cannot take credit for inventing it, a colleague of mine suggested it earlier this week. I found the idea a useful subset of the _"divide to conquer"_ rule, and felt the need to put a bit of structure around it.
 
