@@ -8,7 +8,7 @@ date: 2008-08-10 18:08:51
 tags: [asp.net, ux ui]
 dblog_post_id: 3
 ---
-![ASP.NET Ajax Dirty Panel Extender in Action](https://web.archive.org/web/20070923015628im_/http://www.codeproject.com/Ajax/ajaxdirtypanelextender/screenshot.jpg)
+![ASP.NET Ajax Dirty Panel Extender in Action]({{ site.url }}/images/posts/2008/2008-08-10-dirty-panel-extender-aspnet-ajax/screenshot.jpg)
 
 FoodCandy is (was) a rich social network that offers users many web forms to fill. For example, users can post articles and edit lengthy profiles. Often they click on a link that takes them away from the page or press the wrong key (e.g. backspace that navigates to the previous page). In both cases their changes get lost. And it is always frustrating to have to re-enter the same text twice. Wouldn't it be nice to warn the user that he has unsaved data and give him an opportunity to cancel, then save his data?
 

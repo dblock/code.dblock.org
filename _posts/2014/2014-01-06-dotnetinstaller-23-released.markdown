@@ -8,7 +8,7 @@ dblog_post_id: 404
 ---
 dotNetINstaller 2.3 has been released.
 
-![](https://github.com/dblock/dotnetinstaller/raw/master/Documentation/Images/Logo.gif)
+![]({{ site.url }}/images/posts/2014/2014-01-06-dotnetinstaller-23-released/Logo.gif)
 
 This project is alive and well after a solid 10 years since its first public release in 2003.
 

@@ -278,4 +278,4 @@ Create a `.env` file with `APPSYNC_API_ENDPOINT_URL` and `APPSYNC_API_KEY` and r
 
 See [github.com/dblock/redwood-js-appsync-graphql-demo](https://github.com/dblock/redwood-js-appsync-graphql-demo) for the complete, working code, along with some Google maps.
 
-![](https://github.com/dblock/redwood-js-appsync-graphql-demo/raw/master/demo.png)
+![]({{ site.url }}/images/posts/2020/2020-08-27-calling-a-graphql-api-in-redwood-js/demo.png)

@@ -6,7 +6,7 @@ date: 2010-03-01 18:28:04
 tags: [waffle, java, dotnet, active directory, win32, authentication, open-source]
 dblog_post_id: 85
 ---
-[![](https://github.com/dblock/waffle/raw/master/waffle.jpg)](https://github.com/dblock/waffle/)
+[![]({{ site.url }}/images/posts/2010/2010-03-01-waffle-windows-authentication-functional-framework-le/waffle.jpg)](https://github.com/dblock/waffle/)
 
 I am pleased to announce the open-sourcing of WAFFLE.
 

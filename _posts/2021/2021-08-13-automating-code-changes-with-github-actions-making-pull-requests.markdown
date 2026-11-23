@@ -46,9 +46,9 @@ jobs:
 
 At first I was hard-coding PR titles and commit messages. That's not ideal. Compare the following PRs. The second version is much more specific!
 
-![](https://user-images.githubusercontent.com/542335/129234923-42116ea8-dee6-4247-a904-35862d67919a.png)
+![]({{ site.url }}/images/posts/2021/2021-08-13-automating-code-changes-with-github-actions-making-pull-requests/129234923-42116ea8-dee6-4247-a904-35862d67919a.png)
 
-![](https://user-images.githubusercontent.com/542335/129370221-380b84a1-e65d-4da5-8bb3-83a9277b946f.png)
+![]({{ site.url }}/images/posts/2021/2021-08-13-automating-code-changes-with-github-actions-making-pull-requests/129370221-380b84a1-e65d-4da5-8bb3-83a9277b946f.png)
 
 This can be achieved by setting an environment variable during the workflow execution by piping it into `$GITHUB_ENV`, and reusing it in the PR.
 
