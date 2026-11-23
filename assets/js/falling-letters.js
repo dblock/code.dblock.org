@@ -45,9 +45,48 @@
     idleTimer = setTimeout(fall, idleSeconds * 1000);
   }
 
+  // Mobile Safari's innerHeight stops at its toolbars, but the page stays visible
+  // under them, so letters there are on screen too. The large viewport height,
+  // 100lvh, reaches under the toolbars, and equals innerHeight on the desktop.
+  var bottom = 0;
+
+  function measureBottom() {
+    var probe = document.createElement('div');
+    probe.style.cssText = 'position:fixed;left:0;top:0;width:0;height:100lvh;visibility:hidden;pointer-events:none;';
+    document.body.appendChild(probe);
+    var height = probe.getBoundingClientRect().height;
+    document.body.removeChild(probe);
+    bottom = Math.max(window.innerHeight, height || 0);
+  }
+
+  function screenHeight() {
+    return bottom || window.innerHeight;
+  }
+
   function inViewport(rect) {
     return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.right > 0 &&
-      rect.top < window.innerHeight && rect.left < window.innerWidth;
+      rect.top < screenHeight() && rect.left < window.innerWidth;
+  }
+
+  // The area an element's content can be seen in: the viewport, narrowed by
+  // every ancestor that clips its overflow, such as the collapsed mobile menu,
+  // whose links still have on-screen rects while hidden.
+  function clipRect(el) {
+    var clip = { left: 0, top: 0, right: window.innerWidth, bottom: screenHeight() };
+    for (; el && el !== document.body; el = el.parentElement) {
+      var style = window.getComputedStyle(el);
+      if (style.overflowX === 'visible' && style.overflowY === 'visible') continue;
+      var r = el.getBoundingClientRect();
+      if (style.overflowX !== 'visible') { clip.left = Math.max(clip.left, r.left); clip.right = Math.min(clip.right, r.right); }
+      if (style.overflowY !== 'visible') { clip.top = Math.max(clip.top, r.top); clip.bottom = Math.min(clip.bottom, r.bottom); }
+    }
+    return clip;
+  }
+
+  function insideClip(rect, clip) {
+    var x = rect.left + rect.width / 2;
+    var y = rect.top + rect.height / 2;
+    return x > clip.left && x < clip.right && y > clip.top && y < clip.bottom;
   }
 
   function visibleTextNodes() {
@@ -60,7 +99,11 @@
         }
         var range = document.createRange();
         range.selectNodeContents(node);
-        return inViewport(range.getBoundingClientRect()) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+        var rect = range.getBoundingClientRect();
+        var clip = clipRect(node.parentElement);
+        var shown = inViewport(rect) && rect.left < clip.right && rect.right > clip.left &&
+          rect.top < clip.bottom && rect.bottom > clip.top;
+        return shown ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
       }
     });
     while (walker.nextNode()) nodes.push(walker.currentNode);
@@ -69,12 +112,13 @@
 
   function fall() {
     if (state !== 'idle') return;
+    measureBottom();
     var nodes = visibleTextNodes();
     if (!nodes.length) return;
 
     overlay = document.createElement('div');
     overlay.setAttribute('aria-hidden', 'true');
-    overlay.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:2147483647;overflow:hidden;';
+    overlay.style.cssText = 'position:fixed;left:0;top:0;right:0;height:' + screenHeight() + 'px;pointer-events:none;z-index:2147483647;overflow:hidden;';
     letters = [];
 
     var range = document.createRange();
@@ -83,13 +127,14 @@
       var style = window.getComputedStyle(node.parentElement);
       if (style.visibility === 'hidden' || parseFloat(style.opacity) === 0) return;
       var text = node.nodeValue;
+      var clip = clipRect(node.parentElement);
       var found = [];
       for (var i = 0; i < text.length && letters.length + found.length < maxLetters; i++) {
         if (/\s/.test(text[i])) continue;
         range.setStart(node, i);
         range.setEnd(node, i + 1);
         var rect = range.getClientRects()[0];
-        if (!rect || !inViewport(rect)) continue;
+        if (!rect || !inViewport(rect) || !insideClip(rect, clip)) continue;
         found.push({ ch: transformCase(text, i, style.textTransform), rect: rect });
       }
       if (!found.length) return;
