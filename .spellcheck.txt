@@ -1165,6 +1165,7 @@ nunitbindir
 nvm
 nyctechslack
 nyjavasig
+nyrr
 nyt
 nytm
 nyu
@@ -1311,6 +1312,7 @@ programmatically
 proj
 projectreleaseworkflow
 prolog
+proofer
 protobuf
 provenire
 prs
@@ -1838,6 +1840,7 @@ vw
 walkthrough
 waltzbinaire
 watcom
+wayback
 wcf
 wcs
 weaviate
