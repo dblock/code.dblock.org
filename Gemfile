@@ -5,8 +5,8 @@ source 'https://rubygems.org'
 gem 'csv'
 gem 'jekyll', '~> 4.4'
 gem 'jekyll-md', '~> 0.2.0'
-# Draws the post's first sentence on social cards, https://github.com/igor-alexandrov/jekyll-og-image/pull/33.
-gem 'jekyll-og-image', github: 'dblock/jekyll-og-image', branch: 'dblock/description'
+# Draws the post's first sentence on social cards since 3.1.0.
+gem 'jekyll-og-image', '~> 3.1.0'
 gem 'jekyll-paginate', '~> 1.1'
 gem 'jekyll-redirect-from', '~> 0.17.0'
 # Checks links, images, scripts, and stylesheets with ruby-link-checker.
