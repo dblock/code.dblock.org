@@ -15,8 +15,8 @@ permissions:
 
 jobs:
   check-links:
-    # Pinned to master until jekyll-ruby-link-checker's first release; keep in sync with the Gemfile.
-    uses: dblock/jekyll-ruby-link-checker/.github/workflows/check-links.yml@2a751b074670ffdd342a38a8764c409f649027ae # master
+    # Keep the version in sync with the Gemfile.
+    uses: dblock/jekyll-ruby-link-checker/.github/workflows/check-links.yml@v0.1.0
     with:
       ruby-version: '3.4'
       # jekyll-og-image renders social cards with libvips.

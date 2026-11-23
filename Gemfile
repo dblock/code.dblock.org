@@ -9,9 +9,8 @@ gem 'jekyll-md', '~> 0.2.0'
 gem 'jekyll-og-image', github: 'dblock/jekyll-og-image', branch: 'dblock/description'
 gem 'jekyll-paginate', '~> 1.1'
 gem 'jekyll-redirect-from', '~> 0.17.0'
-# Checks links with ruby-link-checker; pinned to master until its first release.
-gem 'jekyll-ruby-link-checker',
-    github: 'dblock/jekyll-ruby-link-checker', ref: '2a751b074670ffdd342a38a8764c409f649027ae'
+# Checks links with ruby-link-checker.
+gem 'jekyll-ruby-link-checker', '~> 0.1.0'
 gem 'jekyll-sass-converter', '~> 2.2'
 gem 'jekyll-sitemap', '~> 1.4'
 gem 'minitest', require: false

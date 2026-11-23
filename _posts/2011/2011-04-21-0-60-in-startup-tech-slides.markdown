@@ -12,7 +12,7 @@ Revised slides from a later presentation are [here](https://www.slideshare.net/d
 
 Temple of Gravity was built at Burning Man 2003.
 
-The cool git check-in animation was made with [Gource](https://code.google.com/p/gource/).
+The cool git check-in animation was made with [Gource](https://gource.io/).
 
 The Russian hovercraft video is [here](https://www.youtube.com/watch?v=kDd9vlnqRuo).
 

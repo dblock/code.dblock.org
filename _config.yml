@@ -35,6 +35,8 @@ link_checker:
     paths:
       - '^/tags'
   user_agent: dblock.org Link Checker/1.0
+  # Log every link as it is checked, so long runs in CI show progress.
+  verbose: true
   host_headers:
     # crates.io answers 404 unless it's asked for HTML.
     crates.io:

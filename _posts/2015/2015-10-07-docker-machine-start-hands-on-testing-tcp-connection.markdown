@@ -43,4 +43,4 @@ The fix was to properly define `localhost`.
 ::1 localhost
 ```
 
-I opened [docker-machine#1946](https://github.com/docker/machine/issues/1946) to improve the error message here.
+I opened [docker-machine#1946](https://github.com/docker-archive-public/docker.machine/issues/1946) to improve the error message here.

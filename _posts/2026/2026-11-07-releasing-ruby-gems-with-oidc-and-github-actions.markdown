@@ -136,4 +136,4 @@ This keeps the same manually dispatched Actions workflow. It selects a version f
 
 Semantic releases don't bump the development version by default; add `bump: true` if you want that. The [semantic release guide](https://github.com/dblock/ruby-gem-release/blob/v0.5.0/docs/workflow/semantic_ruby_gem.md) covers custom rules, explicit versions, and replacing the history, analysis, version-selection, or notes providers. Install either the manual or semantic configuration, not both.
 
-I also [migrated the custom release workflow in danger-pr-comment](https://github.com/numbata/danger-pr-comment/pull/15). The release YAML went from 172 lines to 42, a 76% reduction, retaining the project's custom checks and updates to references in the README during release.
+I also [migrated the custom release workflow in danger-pr-comment](https://github.com/danger/danger-pr-comment/pull/15). The release YAML went from 172 lines to 42, a 76% reduction, retaining the project's custom checks and updates to references in the README during release.
