@@ -4,6 +4,8 @@ title: "Finding a Github User's E-Mail Address"
 date: "2018-08-15"
 tags: [graphql, github, email, hiring]
 ---
+**Update, November 2026:** fue is now [fue-rs](https://github.com/dblock/fue-rs), a Rust rewrite with prebuilt binaries for macOS, Linux, and Windows. Install it with `brew install dblock/tap/fue`, then run `fue defunkt`. It also searches recent activity and `Signed-off-by` lines. The Ruby gem described below still works.
+
 If you are like me, [trying to hire developers](https://www.artsy.net/jobs), you've long mastered the dark art of digging up their e-mail address from social media, LinkedIn and, most importantly, Github for the purposes of reaching out directly. The latter consists of finding an old source repo and running a `git log` on it. Most Github users have used a real e-mail address when making their first commits with git. Privacy be damned.
 
 ## Fue
