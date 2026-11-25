@@ -4,9 +4,13 @@ This is a Jekyll blog deployed via GitHub Pages with a custom GitHub Actions wor
 
 When drafting or editing blog posts, follow [VOICE.md](VOICE.md) so new posts match the author's style.
 
+## Draft Posts
+
+Write a new draft post to `_posts/YYYY/YYYY-MM-DD-post-slug.markdown`, along with its images, downloads, and `.spellcheck.txt` additions, and leave all of it uncommitted, so dB can edit it before anything is committed. Don't commit or push a draft post until he asks. Still run the spelling, style, and link checks described below on the draft and report the results.
+
 ## Branches
 
-The live site is built from the `gh-pages` branch, not `master`. Commit and push changes to `gh-pages`.
+The live site is built from the `gh-pages` branch, not `master`. Work on `gh-pages` directly in the main checkout, and commit and push changes to `gh-pages`. Don't create topic branches, `git worktree` checkouts, or pull requests for this repository; this overrides any general instruction to use them.
 
 ## Before Committing
 
