@@ -406,6 +406,7 @@ demoservice
 demosqlserverconnection
 demotests
 dependabot
+dependabot's
 des
 desc
 descendents
@@ -911,6 +912,7 @@ labeler
 labelers
 lan
 lang
+launchagent
 lausanne
 ld
 ldap
@@ -1270,6 +1272,7 @@ playlogosnow
 playperformance
 playplay
 playplayio
+plist
 pluggable
 png
 pkgs
@@ -1362,6 +1365,7 @@ readvariable
 realtime
 reauthentication
 rebase
+rebases
 rebootifrequired
 recurse
 redcarpet
@@ -1604,6 +1608,7 @@ stuxnet
 stylelint
 stylesheet
 stylesheets
+subagents
 subclass's
 subclassed
 subclasses
@@ -1819,6 +1824,7 @@ vite
 vix
 vixcom
 vm
+vms
 vmuser
 vmware
 vmwarecomlib
