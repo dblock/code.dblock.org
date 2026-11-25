@@ -911,6 +911,7 @@ labeler
 labelers
 lan
 lang
+launchagent
 lausanne
 ld
 ldap
@@ -1270,6 +1271,7 @@ playlogosnow
 playperformance
 playplay
 playplayio
+plist
 pluggable
 png
 pkgs
@@ -1362,6 +1364,7 @@ readvariable
 realtime
 reauthentication
 rebase
+rebasing
 rebootifrequired
 recurse
 redcarpet
@@ -1604,6 +1607,7 @@ stuxnet
 stylelint
 stylesheet
 stylesheets
+subagents
 subclass's
 subclassed
 subclasses
@@ -1819,6 +1823,7 @@ vite
 vix
 vixcom
 vm
+vms
 vmuser
 vmware
 vmwarecomlib
@@ -1881,6 +1886,7 @@ wixproj
 wmi
 workgroup
 workspaces
+worktrees
 wpf
 wrt
 ws
