@@ -162,25 +162,15 @@ assert!(String::from_utf8_lossy(&fixture.remote_file("master", readme)?)
     .contains("next release, v1.2.3."));
 ```
 
-## Since Then
+## Less Code
 
-All three libraries kept growing after this post.
-
-- [npm-package-release](https://github.com/dblock/npm-package-release) can release without a registry, such as a browser extension zip or a JavaScript GitHub Action published only as a GitHub Release, move floating `vX` tags, and update version references in other files. Version 0.4.0 adds `npr bootstrap`, which reserves a new package name and configures npm Trusted Publishing, so even the first version is published by the release workflow.
-- [ruby-gem-release](https://github.com/dblock/ruby-gem-release) checks before every release that RubyGems Trusted Publishing works and that the workflow can push the release commit and tag, with a `dry-run` input that runs only those checks. It also installs release-only gems from a separate Gemfile, updates version references, publishes platform gems, and can publish already-reviewed source without editing it.
-- [rust-crate-release](https://github.com/dblock/rust-crate-release) validates releases faster with prebuilt tools and dependency caching.
-
-## Adoption
-
-These libraries started as release code in individual projects. As I found myself solving the same release problems again, I extracted the common workflow into Ruby, JavaScript, and Rust libraries, then replaced the project-specific code with those shared implementations.
-
-Across the release-related JavaScript and Ruby files changed in the adoptions of [eslint-plugin-markdown-preferences-paragraph#19](https://github.com/dblock/eslint-plugin-markdown-preferences-paragraph/pull/19), [eslint-plugin-prose-spellcheck#11](https://github.com/dblock/eslint-plugin-prose-spellcheck/pull/11), [Hashie#653](https://github.com/hashie/hashie/pull/653), and [danger-pr-comment#15](https://github.com/danger/danger-pr-comment/pull/15), the code shrank by 66%.
+These libraries started as release code in individual projects. As I found myself solving the same release problems again, I extracted the common workflow into Ruby, JavaScript, and Rust libraries, then replaced the project-specific code with those shared implementations. These libraries now easily remove 2/3 of the custom release script code and add a ton of validation and release safety. See [eslint-plugin-markdown-preferences-paragraph#19](https://github.com/dblock/eslint-plugin-markdown-preferences-paragraph/pull/19), [eslint-plugin-prose-spellcheck#11](https://github.com/dblock/eslint-plugin-prose-spellcheck/pull/11), [Hashie#653](https://github.com/hashie/hashie/pull/653), and [danger-pr-comment#15](https://github.com/danger/danger-pr-comment/pull/15) for some diffs.
 
 ## Projects Adopting "Releases as Code"
 
 In addition to these projects using themselves to make their own releases, other projects are adopting this approach:
 
 - [ruby-link-checker](https://github.com/dblock/ruby-link-checker/blob/main/.github/workflows/release.yml), [Hashie](https://github.com/hashie/hashie/blob/master/.github/workflows/release.yml), [danger-pr-comment](https://github.com/danger/danger-pr-comment/blob/main/.github/workflows/release.yml), [slack-ruby-client](https://github.com/slack-ruby/slack-ruby-client), [hyperclient](https://github.com/codegram/hyperclient), [numbers_and_words](https://github.com/kslazarev/numbers_and_words), [strava-ruby-client](https://github.com/dblock/strava-ruby-client), and a dozen [Mongoid](https://github.com/mongoid) gems, such as [mongoid-history](https://github.com/mongoid/mongoid-history) and [mongoid-slug](https://github.com/mongoid/mongoid-slug), use ruby-gem-release.
-- [eslint-plugin-markdown-preferences-paragraph](https://github.com/dblock/eslint-plugin-markdown-preferences-paragraph), [eslint-plugin-prose-spellcheck](https://github.com/dblock/eslint-plugin-prose-spellcheck), and [eslint-plugin-markdown-links-unlinked](https://github.com/dblock/eslint-plugin-markdown-links-unlinked) use npm-package-release. The latter's first version was published entirely by the release workflow through npm Trusted Publishing.
+- [eslint-plugin-markdown-preferences-paragraph](https://github.com/dblock/eslint-plugin-markdown-preferences-paragraph), [eslint-plugin-prose-spellcheck](https://github.com/dblock/eslint-plugin-prose-spellcheck), and [eslint-plugin-markdown-links-unlinked](https://github.com/dblock/eslint-plugin-markdown-links-unlinked) use npm-package-release.
 - [gmail-toggle](https://github.com/dblock/gmail-toggle/blob/master/.github/workflows/release.yml), a Chrome extension, uses npm-package-release to release a zip as a GitHub Release without publishing to npm.
 - [excalc-rs](https://github.com/dblock/excalc-rs/blob/master/.github/workflows/release.yml), [already-tested](https://github.com/dblock/already-tested/blob/master/.github/workflows/release.yml), and [fue-rs](https://github.com/dblock/fue-rs/blob/master/.github/workflows/release.yml) use rust-crate-release.
