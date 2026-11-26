@@ -61,7 +61,7 @@ export function createReleaseWorkflow(services = {}) {
 export default createReleaseWorkflow();
 ```
 
-Use that same builder with the [local test services](https://github.com/dblock/npm-package-release/blob/v0.1.1/docs/testing.md). Here `project` is a `ReleaseTestProject` containing the committed package and README:
+Use that same builder with the [local test services](https://github.com/dblock/npm-package-release/blob/v0.4.0/docs/testing.md). Here `project` is a `ReleaseTestProject` containing the committed package and README:
 
 ```js
 import assert from "node:assert/strict";
@@ -75,7 +75,7 @@ assert.ok((await project.remoteFile("master", "README.md")).includes("next relea
 
 ### Ruby
 
-With [ruby-gem-release](https://github.com/dblock/ruby-gem-release), add these hooks to the configured `workflow` before calling `workflow.install_tasks`:
+With [ruby-gem-release](https://github.com/dblock/ruby-gem-release) and `commonmarker` in your development dependencies (its Markdown helpers need it), add these hooks to the configured `workflow` before calling `workflow.install_tasks`:
 
 ```ruby
 require 'ruby-gem-release/markdown/section'
@@ -89,7 +89,7 @@ workflow.after(:prepare_next) do |ctx|
 end
 ```
 
-Given a [release test fixture](https://github.com/dblock/ruby-gem-release/blob/v0.6.0/docs/testing.md) containing the project files and its real workflow builder, test the tag and the next development commit:
+Given a [release test fixture](https://github.com/dblock/ruby-gem-release/blob/v0.9.0/docs/testing.md) containing the project files and its real workflow builder, test the tag and the next development commit:
 
 ```ruby
 project.configure_workflow(require: 'release_workflow', builder: 'ProjectReleaseWorkflow.build')
@@ -162,6 +162,14 @@ assert!(String::from_utf8_lossy(&fixture.remote_file("master", readme)?)
     .contains("next release, v1.2.3."));
 ```
 
+## Since Then
+
+All three libraries kept growing after this post.
+
+- [npm-package-release](https://github.com/dblock/npm-package-release) can release without a registry, such as a browser extension zip or a JavaScript GitHub Action published only as a GitHub Release, move floating `vX` tags, and update version references in other files. Version 0.4.0 adds `npr bootstrap`, which reserves a new package name and configures npm Trusted Publishing, so even the first version is published by the release workflow.
+- [ruby-gem-release](https://github.com/dblock/ruby-gem-release) checks before every release that RubyGems Trusted Publishing works and that the workflow can push the release commit and tag, with a `dry-run` input that runs only those checks. It also installs release-only gems from a separate Gemfile, updates version references, publishes platform gems, and can publish already-reviewed source without editing it.
+- [rust-crate-release](https://github.com/dblock/rust-crate-release) validates releases faster with prebuilt tools and dependency caching.
+
 ## Adoption
 
 These libraries started as release code in individual projects. As I found myself solving the same release problems again, I extracted the common workflow into Ruby, JavaScript, and Rust libraries, then replaced the project-specific code with those shared implementations.
@@ -172,6 +180,7 @@ Across the release-related JavaScript and Ruby files changed in the adoptions of
 
 In addition to these projects using themselves to make their own releases, other projects are adopting this approach:
 
-- [ruby-link-checker](https://github.com/dblock/ruby-link-checker/blob/main/.github/workflows/release.yml), [Hashie](https://github.com/hashie/hashie/blob/master/.github/workflows/release.yml), and [danger-pr-comment](https://github.com/danger/danger-pr-comment/blob/main/.github/workflows/release.yml) use ruby-gem-release.
-- [eslint-plugin-markdown-preferences-paragraph](https://github.com/dblock/eslint-plugin-markdown-preferences-paragraph) and [eslint-plugin-prose-spellcheck](https://github.com/dblock/eslint-plugin-prose-spellcheck) use npm-package-release.
-- [excalc-rs](https://github.com/dblock/excalc-rs/blob/master/.github/workflows/release.yml) and [already-tested](https://github.com/dblock/already-tested/blob/master/.github/workflows/release.yml) use rust-crate-release.
+- [ruby-link-checker](https://github.com/dblock/ruby-link-checker/blob/main/.github/workflows/release.yml), [Hashie](https://github.com/hashie/hashie/blob/master/.github/workflows/release.yml), [danger-pr-comment](https://github.com/danger/danger-pr-comment/blob/main/.github/workflows/release.yml), [slack-ruby-client](https://github.com/slack-ruby/slack-ruby-client), [hyperclient](https://github.com/codegram/hyperclient), [numbers_and_words](https://github.com/kslazarev/numbers_and_words), [strava-ruby-client](https://github.com/dblock/strava-ruby-client), and a dozen [Mongoid](https://github.com/mongoid) gems, such as [mongoid-history](https://github.com/mongoid/mongoid-history) and [mongoid-slug](https://github.com/mongoid/mongoid-slug), use ruby-gem-release.
+- [eslint-plugin-markdown-preferences-paragraph](https://github.com/dblock/eslint-plugin-markdown-preferences-paragraph), [eslint-plugin-prose-spellcheck](https://github.com/dblock/eslint-plugin-prose-spellcheck), and [eslint-plugin-markdown-links-unlinked](https://github.com/dblock/eslint-plugin-markdown-links-unlinked) use npm-package-release. The latter's first version was published entirely by the release workflow through npm Trusted Publishing.
+- [gmail-toggle](https://github.com/dblock/gmail-toggle/blob/master/.github/workflows/release.yml), a Chrome extension, uses npm-package-release to release a zip as a GitHub Release without publishing to npm.
+- [excalc-rs](https://github.com/dblock/excalc-rs/blob/master/.github/workflows/release.yml), [already-tested](https://github.com/dblock/already-tested/blob/master/.github/workflows/release.yml), and [fue-rs](https://github.com/dblock/fue-rs/blob/master/.github/workflows/release.yml) use rust-crate-release.
