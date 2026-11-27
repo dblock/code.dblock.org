@@ -15,3 +15,9 @@ Then I check those emails in bulk and never miss anything.
 <img src="{{ site.url }}/images/posts/2022/2022-08-08-managing-github-notifications-in-gmail/labels.gif" />
 
 Click [here](https://twitter.com/dblockdotorg/status/1452985177530064898) for the original tweet-sized version of the above.
+
+**Update, November 2026:** With hundreds of labels, the GMail sidebar became unusable, so I wrote [gmail-toggle](https://github.com/dblock/gmail-toggle), a Chrome extension that hides the labels, categories, and messages you've already read with one click. Install it from the [Chrome Web Store](https://chromewebstore.google.com/detail/toggle-categories-and-lab/ckejkcopppahbffilefogkmhcgepmnog).
+
+<video controls preload="metadata" width="100%" style="display: block; margin-bottom: 1.5em;" poster="/images/posts/2022/2022-08-08-managing-github-notifications-in-gmail/gmail-toggle.png">
+  <source src="/images/posts/2022/2022-08-08-managing-github-notifications-in-gmail/gmail-toggle.mp4" type="video/mp4">
+</video>
