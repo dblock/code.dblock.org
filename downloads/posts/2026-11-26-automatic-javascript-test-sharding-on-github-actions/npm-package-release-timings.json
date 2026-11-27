@@ -1,0 +1,21 @@
+{
+  "test/action.test.js": 14.568,
+  "test/bootstrap.test.js": 1.987,
+  "test/changelog.test.js": 0.563,
+  "test/cli.test.js": 3.921,
+  "test/execution.test.js": 3.195,
+  "test/floating-tags.test.js": 10.554,
+  "test/lifecycle.test.js": 11.516,
+  "test/markdown.test.js": 0.386,
+  "test/package.test.js": 1.693,
+  "test/recovery.test.js": 26.038,
+  "test/references.test.js": 7.324,
+  "test/registry.test.js": 3.869,
+  "test/release.test.js": 28.268,
+  "test/self-release.test.js": 53.63,
+  "test/semantic.test.js": 9.674,
+  "test/testing.test.js": 12.398,
+  "test/workflow-names.test.js": 0.499,
+  "test/workflow.test.js": 9.858,
+  "test/zip.test.js": 3.173
+}

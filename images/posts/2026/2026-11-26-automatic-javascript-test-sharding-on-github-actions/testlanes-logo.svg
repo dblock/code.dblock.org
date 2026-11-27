@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">testlanes: four lanes of differently sized green test blocks that all end at the same edge</title>
+  <rect x="8" y="8" width="240" height="240" rx="40" fill="#F3FBF5"/>
+  <g>
+    <rect x="46" y="52" width="88" height="30" rx="7" fill="#28A745"/>
+    <rect x="138" y="52" width="40" height="30" rx="7" fill="#34D058"/>
+    <rect x="182" y="52" width="28" height="30" rx="7" fill="#85E89D"/>
+    <rect x="46" y="94" width="52" height="30" rx="7" fill="#34D058"/>
+    <rect x="102" y="94" width="108" height="30" rx="7" fill="#28A745"/>
+    <rect x="46" y="136" width="64" height="30" rx="7" fill="#85E89D"/>
+    <rect x="114" y="136" width="64" height="30" rx="7" fill="#28A745"/>
+    <rect x="182" y="136" width="28" height="30" rx="7" fill="#34D058"/>
+    <rect x="46" y="178" width="120" height="30" rx="7" fill="#28A745"/>
+    <rect x="170" y="178" width="40" height="30" rx="7" fill="#85E89D"/>
+  </g>
+</svg>

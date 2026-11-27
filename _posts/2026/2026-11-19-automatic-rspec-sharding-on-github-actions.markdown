@@ -43,3 +43,5 @@ If your specs need a database or other setup, use the workflow's [`setup` input]
 ### How It Works
 
 Without timing history, [`parallel_tests`](https://github.com/grosser/parallel_tests) groups spec files by size. After a [successful run triggered by a push to the default branch](https://github.com/dblock/posebook/actions/runs/44401742212), the workflow saves per-file timings in a [`runtime.log`](/downloads/posts/2026-11-19-automatic-rspec-sharding-on-github-actions/posebook-runtime.log) and uploads it as a GitHub Actions artifact. Before splitting the suite, later runs look for that artifact in recent successful runs of the same workflow on the default branch. They download the newest one still available and use its timings to give each worker roughly the same amount of work. Pull requests can also download the artifact, but cannot update the timing history.
+
+I've since ported this to JavaScript for Vitest, Jest, and node:test, see [Automatic JavaScript Test Sharding on GitHub Actions](/2026/11/26/automatic-javascript-test-sharding-on-github-actions.html).
