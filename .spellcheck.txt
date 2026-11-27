@@ -1671,6 +1671,7 @@ tempelmeyer
 templated
 templating
 testcase
+testlanes
 tetris
 tfs
 theatres
@@ -1771,6 +1772,7 @@ unpunctuated
 unreviewed
 unsatisfiedlinkerror
 unscoped
+unsharded
 unstaged
 untracked
 unturned
@@ -1822,6 +1824,7 @@ virtualized
 visitortimezoneoffset
 visualbasic
 vite
+Vitest
 vix
 vixcom
 vm
