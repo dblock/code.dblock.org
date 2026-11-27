@@ -18,7 +18,7 @@ Each bar shows the slowest worker's RSpec execution time, excluding setup and sp
 With Ruby 3.3 or newer, add the gem to your `Gemfile` and run `bundle install`:
 
 ```ruby
-gem 'parallel_tests-ci', '0.1.0', require: false
+gem 'parallel_tests-ci', '0.3.0', require: false
 ```
 
 In `.github/workflows/test.yml`, call the reusable workflow at the same version:
@@ -33,12 +33,14 @@ permissions:
 
 jobs:
   test:
-    uses: dblock/parallel_tests-ci/.github/workflows/rspec.yml@v0.1.0
+    uses: dblock/parallel_tests-ci/.github/workflows/rspec.yml@v0.3.0
     with:
       shards: 8
 ```
 
-If your specs need a database or other setup, use the workflow's [`setup` input](https://github.com/dblock/parallel_tests-ci/tree/v0.1.0#suite-and-setup) to run those commands on each worker.
+If your specs need a database or other setup, use the workflow's [`setup` input](https://github.com/dblock/parallel_tests-ci/tree/v0.3.0#suite-and-setup) to run those commands on each worker.
+
+It also works with Minitest: require the gem with `require: 'parallel_tests/ci/minitest'` so it records timings, and call [`minitest.yml`](https://github.com/dblock/parallel_tests-ci/tree/v0.3.0#minitest) instead of `rspec.yml`. Use `runs-on` to pick Linux, macOS, or Windows; on Windows, write your [`setup` scripts](https://github.com/dblock/parallel_tests-ci/tree/v0.3.0#suite-and-setup) in PowerShell, the runner's default shell.
 
 ### How It Works
 
